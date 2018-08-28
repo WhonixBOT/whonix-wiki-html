@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Upgrading Whonix 11 to Whonix 12 - Whonix
+ url: ./Upgrading_Whonix_11_to_Whonix_12
+ date: Tue Aug 28 08:13:49 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Upgrading Whonix 11 to Whonix 12 - Whonix</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.0" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="How to Upgrade from Whonix 10.x to Whonix 11.x" name="description"/>
+<meta content="How to Upgrade from Whonix 10.x to Whonix 11.x" name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Upgrading Whonix 11 to Whonix 12" property="og:title"/>
+<meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_11_to_Whonix_12" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="How to Upgrade from Whonix 10.x to Whonix 11.x" property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Upgrading_Whonix_11_to_Whonix_12 rootpage-Upgrading_Whonix_11_to_Whonix_12 skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="./Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Upgrading_Whonix_11_to_Whonix_12" href="./Upgrading_Whonix_11_to_Whonix_12.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=history" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Upgrading Whonix 11 to Whonix 12</h1>
+<h5 class="subtitle" id="siteSub"></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<table class="metadata plainlinks ambox ambox-notice" style="">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">Unfinished! Don't use yet!<span class="hide-when-compact"> </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Before_you_start"><span class="tocnumber">1</span> <span class="toctext">Before you start</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#If_you_want_to_upgrade_Whonix-Gateway_as_well_as_Whonix-Workstation"><span class="tocnumber">1.1</span> <span class="toctext">If you want to upgrade Whonix-Gateway as well as Whonix-Workstation</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#If_you_only_want_to_upgrade_Whonix-Workstation"><span class="tocnumber">1.2</span> <span class="toctext">If you only want to upgrade Whonix-Workstation</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Non-Critical_Errors_.2F_Warnings"><span class="tocnumber">1.3</span> <span class="toctext">Non-Critical Errors / Warnings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Sanity_Tests"><span class="tocnumber">2</span> <span class="toctext">Sanity Tests</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Known_Issues"><span class="tocnumber">3</span> <span class="toctext">Known Issues</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#General"><span class="tocnumber">3.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Qubes_specific"><span class="tocnumber">3.2</span> <span class="toctext">Qubes specific</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#apt-get_not_linked_warning"><span class="tocnumber">3.2.1</span> <span class="toctext">apt-get not linked warning</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#warning:_setlocale:_LC_ALL:"><span class="tocnumber">3.2.2</span> <span class="toctext">warning: setlocale: LC_ALL:</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Configuring_iptables-persistent_dialog"><span class="tocnumber">3.2.3</span> <span class="toctext">Configuring iptables-persistent dialog</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#interactive_dpkg_conflict_resolution_dialog_.2Fetc.2Fxdg.2Fautostart.2Fnm-applet.desktop"><span class="tocnumber">3.2.4</span> <span class="toctext">interactive dpkg conflict resolution dialog /etc/xdg/autostart/nm-applet.desktop</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#interactive_dpkg_conflict_resolution_dialog_.2Fetc.2Fpulse.2Fclient.conf"><span class="tocnumber">3.2.5</span> <span class="toctext">interactive dpkg conflict resolution dialog /etc/pulse/client.conf</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Other_Unlisted"><span class="tocnumber">3.3</span> <span class="toctext">Other Unlisted</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Upgrading"><span class="tocnumber">4</span> <span class="toctext">Upgrading</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Before_you_start">Before you start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=1.html" title="Edit section: Before you start">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="If_you_want_to_upgrade_Whonix-Gateway_as_well_as_Whonix-Workstation">If you want to upgrade Whonix-Gateway as well as Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=2.html" title="Edit section: If you want to upgrade Whonix-Gateway as well as Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>1. Backup your data. (Ideally have a copy of your VM, so you can try again.) <br/>
+2. Consider running the optional <a href="#Sanity_Tests">#Sanity Tests</a>. <br/>
+3. Upgrade Whonix-Workstation. <br/>
+4. Power off Whonix-Workstation. <br/>
+5. Upgrade Whonix-Gatway. <br/>
+6. Restart Whonix-Gateway. <br/>
+7. Restart Whonix-Workstation <br/>
+</p>
+<h2><span class="mw-headline" id="If_you_only_want_to_upgrade_Whonix-Workstation">If you only want to upgrade Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=3.html" title="Edit section: If you only want to upgrade Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>1. Backup your data. (Ideally have a copy of your VM, so you can try again.) <br/>
+2. Consider running the optional <a href="#Sanity_Tests">#Sanity Tests</a>. <br/>
+3. Upgrade Whonix-Workstation. <br/>
+4. Power off Whonix-Workstation. <br/>
+5. <a data-href="/wiki/Download" href="./Download.html" title="Download">Get</a> Whonix-Gatway 9.x. <br/>
+6. Start Whonix-Gateway. <br/>
+7. Start Whonix-Workstation <br/>
+</p><p>You can ignore the following errors.
+</p>
+<h2><span id="Non-Critical_Errors_/_Warnings"></span><span class="mw-headline" id="Non-Critical_Errors_.2F_Warnings">Non-Critical Errors / Warnings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=4.html" title="Edit section: Non-Critical Errors / Warnings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Should be reported if any.
+</p>
+<h1><span class="mw-headline" id="Sanity_Tests">Sanity Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=5.html" title="Edit section: Sanity Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<pre>sudo dpkg --audit ; echo $?
+</pre>
+<p>Expected output.
+</p>
+<pre>0
+</pre>
+<pre>sudo dpkg --configure -a ; echo $?
+</pre>
+<p>Expected output:
+</p>
+<pre>0
+</pre>
+<p><a data-href="/wiki/Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">Get package upgrades.</a>
+</p>
+<pre>sudo apt-get update
+</pre>
+<pre>sudo apt-get dist-upgrade
+</pre>
+<p>Test wise install python-qt4.
+</p>
+<pre>sudo apt-get install python-qt4 ; echo $?
+</pre>
+<pre>## ... successful installation of python-qt4 ...
+0
+</pre>
+<h1><span class="mw-headline" id="Known_Issues">Known Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=6.html" title="Edit section: Known Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="General">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=7.html" title="Edit section: General">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Qubes_specific">Qubes specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=8.html" title="Edit section: Qubes specific">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> specific.
+</p>
+<h3><span class="mw-headline" id="apt-get_not_linked_warning">apt-get not linked warning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=9.html" title="Edit section: apt-get not linked warning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>*** OMINOUS WARNING ***: /usr/bin/apt-get is not linked to either apt-get.anondist or apt-get.anondist-orig
+</pre>
+<p>Can be ignored. (Something we ought to fix for Whonix 12.)
+</p>
+<h3><span class="mw-headline" id="warning:_setlocale:_LC_ALL:">warning: setlocale: LC_ALL:</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=10.html" title="Edit section: warning: setlocale: LC ALL:">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> specific.
+</p>
+<pre>/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+</pre>
+<p><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Configuring_iptables-persistent_dialog">Configuring iptables-persistent dialog</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=11.html" title="Edit section: Configuring iptables-persistent dialog">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> specific. (<a class="external text" data-href="https://github.com/QubesOS/qubes-core-agent-linux/pull/2" href="https://github.com/QubesOS/qubes-core-agent-linux/pull/2" rel="noreferrer noopener" target="_blank">ticket</a>)
+</p>
+<pre>Package configuration                                                                                                 
+ ┌───────────────────────────────────────┤ Configuring iptables-persistent ├───────────────────────────────────────┐  
+ │                                                                                                                 │  
+ │ Current iptables rules can be saved to the configuration file /etc/iptables/rules.v4. These rules will then be  │  
+ │ loaded automatically during system startup.                                                                     │  
+ │                                                                                                                 │  
+ │ Rules are only saved automatically during package installation. See the manual page of iptables-save(8) for     │  
+ │ instructions on keeping the rules file up-to-date.                                                              │  
+ │                                                                                                                 │  
+ │ Save current IPv4 rules?                                                                                        │  
+ │                                                                                                                 │  
+ │                                 &lt;Yes&gt;                                    &lt;No&gt;                                   │  
+ │                                                                                                                 │  
+ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘  
+</pre>
+<p>Say no. (Just keep the default=N. Just press enter.)
+</p>
+<h3><span id="interactive_dpkg_conflict_resolution_dialog_/etc/xdg/autostart/nm-applet.desktop"></span><span class="mw-headline" id="interactive_dpkg_conflict_resolution_dialog_.2Fetc.2Fxdg.2Fautostart.2Fnm-applet.desktop">interactive dpkg conflict resolution dialog /etc/xdg/autostart/nm-applet.desktop</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=12.html" title="Edit section: interactive dpkg conflict resolution dialog /etc/xdg/autostart/nm-applet.desktop">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> specific.
+</p>
+<pre>Configuration file '/etc/xdg/autostart/nm-applet.desktop'
+ ==&gt; Modified (by you or by a script) since installation.
+ ==&gt; Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** nm-applet.desktop (Y/I/N/O/D/Z) [default=N] ? 
+</pre>
+<p>Say yes. Press Y followed by enter. Would not be a big problem if you said no also. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+<h3><span id="interactive_dpkg_conflict_resolution_dialog_/etc/pulse/client.conf"></span><span class="mw-headline" id="interactive_dpkg_conflict_resolution_dialog_.2Fetc.2Fpulse.2Fclient.conf">interactive dpkg conflict resolution dialog /etc/pulse/client.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=13.html" title="Edit section: interactive dpkg conflict resolution dialog /etc/pulse/client.conf">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> specific.
+</p>
+<pre>Configuration file '/etc/pulse/client.conf'
+ ==&gt; Modified (by you or by a script) since installation.
+ ==&gt; Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** client.conf (Y/I/N/O/D/Z) [default=N] ?
+</pre>
+<p>Say yes. Press Y followed by enter. Would not be a big problem if you said no also.
+</p>
+<h2><span class="mw-headline" id="Other_Unlisted">Other Unlisted</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=14.html" title="Edit section: Other Unlisted">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Please post any issues in <a class="external text" data-href="https://www.whonix.org/old-forum/index.php/board,1.0.html" href="https://www.whonix.org/old-forum/index.php/board,1.0.html" rel="noreferrer noopener" target="_blank">Whonix support forums</a>.
+</p>
+<h1><span class="mw-headline" id="Upgrading">Upgrading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=15.html" title="Edit section: Upgrading">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b><a data-href="/wiki/Download" href="./Download.html" title="Download">Downloading</a> a new Whonix-Gateway / Whonix-Workstation will be probably easier than applying the following instructions for upgrading.</b>
+</p><p>Backups are important as noted in above chapter <a href="#Before_you_start">#Before you start</a>. Especially for <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>Consider doing the <a href="#Sanity_Tests">#Sanity Tests</a> described above. They'll check if your system is affected by obvious grave issues, that you must fix before attempting to upgrade. If your package manager is broken, for example because you mixed packages from Debian stable with packages from Debian testing, then the upgrade may fail in the middle leaving your system in a difficult to resolve situation.
+</p><p>Consider keeping the full terminal (Konsole) log. Even if everything apparently worked, there might be issues after reboot. In case of a bug report in the forums you would be asked to share the upgrading log so the issue can be investigated.
+</p><p>Make sure you read <a href="#Known_Issues">#Known Issues</a> above.
+</p><p>Become root.
+</p>
+<pre>sudo su
+</pre>
+<p>Do a usual <a data-href="/wiki/Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">upgrade</a> of your system's packages from Debian.
+</p><p>For <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users, before you proceed, it is strongly recommended that you apply the above <a href="#Qubes_Pre_Fixup">#Qubes Pre Fixup</a>.
+</p><p>Enable Whonix's <i><span style="background-color:#FBFBFB">jessie</span></i> repository. Don't use the <i><span style="background-color:#FBFBFB">testers</span></i> repository just yet. [Wait for new information.]
+</p>
+<pre>whonix_repository --enable --codename jessie
+</pre>
+<p>As a <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> user, note that upgrades are currently only possible using Qubes' testing repository. Otherwise you run into grave issues. <sup class="reference" id="cite_ref-qubes-grave-issues_4-0"><a href="#cite_note-qubes-grave-issues-4">[4]</a></sup> Switch Qubes' sources from <i><span style="background-color:#FBFBFB">wheezy</span></i> to <i><span style="background-color:#FBFBFB">jessie-testing</span></i> in <i><span style="background-color:#FBFBFB">/etc/apt/sources.list.d/qubes-r3.list</span></i>. (Non-Qubes users should skip Qubes specific steps.) <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Once <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1095" href="https://github.com/QubesOS/qubes-issues/issues/1095" rel="noreferrer noopener" target="_blank">the related bug</a> has been fixed, consider removing the "-testing" from /etc/apt/sources.list.d/qubes-r3.list.
+</p>
+<pre>sed -i "s/wheezy/jessie-testing/g" /etc/apt/sources.list.d/qubes-r3.list
+</pre>
+<p>Make the upgrade process less interactive. Optional. (Mostly Qubes specific unless you installed apt-listchanges.)
+</p>
+<pre>export APT_LISTCHANGES_FRONTEND=text
+</pre>
+<p>Enable extensive debugging so reporting eventual bugs becomes easier.
+</p>
+<pre>export DEBDEBUG=1
+</pre>
+<p>Update your package lists.
+</p>
+<pre>apt-get update
+</pre>
+<p>Upgrade.
+</p>
+<pre>apt-get dist-upgrade || apt-get -f install || apt-get dist-upgrade
+</pre>
+<p>It is recommended to have the <i><span style="background-color:#FBFBFB">whonix-gateway</span></i> / <i><span style="background-color:#FBFBFB">whonix-workstation</span></i> package installed to make sure nothing is broken. (If you like to uninstall it later as per <a data-href="/wiki/Whonix_Debian_Packages" href="./Whonix_Debian_Packages.html" title="Whonix Debian Packages">Whonix Debian Packages</a>, you're free to do so. Still, it is recommended to re-install it before removal to make sure you're as close to official package selection as possible.)
+</p><p>If you are upgrading Whonix-Gateway...
+</p>
+<pre>apt-get install whonix-gateway
+</pre>
+<p>If you are upgrading Whonix-Workstation...
+</p>
+<pre>apt-get install whonix-workstation
+</pre>
+<p>Get rid of old packages.
+</p>
+<pre>apt-get autoremove
+</pre>
+<p>Remember to store the terminal (Konsole) log. (File -&gt; Save Output As)
+</p><p>Reboot required.
+</p>
+<pre>reboot
+</pre>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit&amp;section=16.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1055" href="https://github.com/QubesOS/qubes-issues/issues/1055" rel="noreferrer noopener" target="_blank">Debian Template: rely on existing tool for base image creation</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/1095#issuecomment-129236062" href="https://github.com/QubesOS/qubes-issues/issues/1095" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/1095#issuecomment-129236062</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Qubes has some more issues with distribution upgrades.</span>
+</li>
+<li id="cite_note-qubes-grave-issues-4"><span class="mw-cite-backlink"><a href="#cite_ref-qubes-grave-issues_4-0">↑</a></span> <span class="error mw-ext-cite-error" dir="ltr" lang="en">Cite error: Invalid <code>&lt;ref&gt;</code> tag;
+no text was provided for refs named <code>qubes-grave-issues</code></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+Once the fixed packages migrate into stable we can drop the "-testing".
+<pre>sed -i "s/wheezy/jessie/g" /etc/apt/sources.list.d/qubes-r3.list
+</pre></span>
+</li>
+</ol></div></div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="./Upgrading_Whonix_11_to_Whonix_12" href="./Upgrading_Whonix_11_to_Whonix_12" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_11_to_Whonix_12" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_11_to_Whonix_12" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Upgrading_Whonix_11_to_Whonix_12&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Upgrading_Whonix_11_to_Whonix_12&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=./Upgrading_Whonix_11_to_Whonix_12" href="https://facebook.com/sharer.php?u=./Upgrading_Whonix_11_to_Whonix_12">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180825093839
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.088 seconds
+Real time usage: 0.099 seconds
+Preprocessor visited node count: 833/1000000
+Preprocessor generated node count: 4929/1000000
+Post‐expand include size: 5296/2097152 bytes
+Template argument size: 463/2097152 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7316/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   61.984      1 -total
+ 38.72%   24.002      1 Template:Mbox
+ 30.86%   19.129      1 Template:Ambox
+ 27.34%   16.946      1 Template:Footer
+ 18.43%   11.424      1 Template:Category_handler
+ 10.75%    6.661      1 Template:FooterLight
+  9.97%    6.181      1 Template:Reflist
+  8.47%    5.251      1 Template:Ambox/core
+  7.82%    4.850      1 Template:Footer_this_is_a_wiki
+  7.49%    4.645      1 Template:Share
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;oldid=35223" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;oldid=35223">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Upgrading_Whonix_11_to_Whonix_12&amp;oldid=35223</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1.html" title="Category:Pages with reference errors (page does not exist)">Pages with reference errors</a></li><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 1 August 2018, at 07:08.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20180825093839 -->
+</html>

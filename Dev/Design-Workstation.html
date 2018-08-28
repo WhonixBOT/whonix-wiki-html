@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Dev/Design-Workstation - Whonix
+ url: ../Dev/Design-Workstation
+ date: Tue Aug 28 07:42:36 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Dev/Design-Workstation - Whonix</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.0" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Detailed Whonix-Workstation Design Documentation" name="description"/>
+<meta content="Detailed Whonix-Workstation Design Documentation" name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Dev/Design-Workstation" property="og:title"/>
+<meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Workstation" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="Detailed Whonix-Workstation Design Documentation" property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Design-Workstation rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="../Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Design-Workstation" href="../Dev/Design-Workstation.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Design-Workstation&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Design-Workstation&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Dev/Design-Workstation</h1>
+<h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<p><br/>
+<br/>
+</p>
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#"><span class="tocnumber">1</span> <span class="toctext"></span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#List_of_installed_Packages"><span class="tocnumber">2</span> <span class="toctext">List of installed Packages</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Files"><span class="tocnumber">3</span> <span class="toctext">Files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Essential"><span class="tocnumber">3.1</span> <span class="toctext">Essential</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Network_Configuration"><span class="tocnumber">3.1.1</span> <span class="toctext">Network Configuration</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#DummyTor"><span class="tocnumber">3.1.2</span> <span class="toctext">DummyTor</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#KDE_.2F_GNOME_-_application_wide_proxy_settings"><span class="tocnumber">3.1.3</span> <span class="toctext">KDE / GNOME - application wide proxy settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Extra"><span class="tocnumber">3.2</span> <span class="toctext">Extra</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#second.2C_optional.2C_extra_firewall"><span class="tocnumber">3.2.1</span> <span class="toctext">second, optional, extra firewall</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Usability"><span class="tocnumber">3.3</span> <span class="toctext">Usability</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Swap"><span class="tocnumber">3.3.1</span> <span class="toctext">Swap</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Environment_Variables"><span class="tocnumber">3.3.2</span> <span class="toctext">Environment Variables</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#apt.conf"><span class="tocnumber">3.3.3</span> <span class="toctext">apt.conf</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#http_to_socks_converter"><span class="tocnumber">3.3.4</span> <span class="toctext">http to socks converter</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Sending_e-mails_without_registration"><span class="tocnumber">3.3.5</span> <span class="toctext">Sending e-mails without registration</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#GnuPG_Configuration"><span class="tocnumber">3.3.6</span> <span class="toctext">GnuPG Configuration</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Project_News_Notification"><span class="tocnumber">3.3.7</span> <span class="toctext">Project News Notification</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#TorChat_Configuration"><span class="tocnumber">3.3.8</span> <span class="toctext">TorChat Configuration</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#IRC_Client"><span class="tocnumber">3.3.9</span> <span class="toctext">IRC Client</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Web_Browser"><span class="tocnumber">3.3.10</span> <span class="toctext">Web Browser</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#rinetd"><span class="tocnumber">3.3.11</span> <span class="toctext">rinetd</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Marker_file"><span class="tocnumber">3.3.12</span> <span class="toctext">Marker file</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Terminal_Help"><span class="tocnumber">3.3.13</span> <span class="toctext">Terminal Help</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Debugging"><span class="tocnumber">3.4</span> <span class="toctext">Debugging</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Leaktest_script"><span class="tocnumber">3.4.1</span> <span class="toctext">Leaktest script</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Design-Shared"><span class="tocnumber">4</span> <span class="toctext">Design-Shared</span></a></li>
+</ul>
+</div>
+<h5><span class="mw-headline" id=""></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Authoring Notes:
+</p>
+<ul><li>Start with a general description below each headline. Be as general as possible and try to avoid using terms like 'Tor'.</li>
+<li>Next, carefully describe the Whonix Example Implementation. Show exactly how Whonix implements the goals stated above.</li>
+<li>See <a data-href="/wiki/Dev/Documentation_Guidelines" href="../Dev/Documentation_Guidelines.html" title="Dev/Documentation Guidelines">Dev/Documentation_Guidelines</a> for the preferred formatting style and grammatical considerations.</li></ul>
+<p><br/>
+</p>
+<h1><span class="mw-headline" id="List_of_installed_Packages">List of installed Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=2.html" title="Edit section: List of installed Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages" href="https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages</a></li></ul>
+<h1><span class="mw-headline" id="Files">Files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=3.html" title="Edit section: Files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Essential">Essential</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=4.html" title="Edit section: Essential">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Network_Configuration">Network Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=5.html" title="Edit section: Network Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Configure the system resolver to use the Gateway to resolve DNS. (There can be no DNS leaks, because the Gateway firewall prevents that.) It shouldn't get used often, only for applications which are not configured to use <a data-href="/wiki/Stream_Isolation" href="../Stream_Isolation.html" title="Stream Isolation">Stream Isolation</a> (SocksPort). Just as a general catch all for user installed applications to improve usability.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2500_create-vbox-vm" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2500_create-vbox-vm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/2500_create-vbox-vm</a> in function workstation_specific, one virtual network card, type internal</li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/resolv.conf.whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/resolv.conf.whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/resolv.conf.whonix</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/network/interfaces.whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/network/interfaces.whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/network/interfaces.whonix</a></li></ul>
+<h3><span class="mw-headline" id="DummyTor">DummyTor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=6.html" title="Edit section: DummyTor">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since the anonymizer software runs on the Gateway, users could still accidental install the anonymizer software on the Workstation. This would lead into connecting to the anonymity network over the anonymity network itself. In best case it just doesn't work or is very slow and in worst case it leads to unknown consequences. Prevent that.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Banning the Tor package from Whonix-Workstation to prevent Tor over Tor. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor</a></li>
+<li>Install an empty Tor package which does no more than simulating, that Tor is already installed and thus preventing the package manager from installing Tor, see also <a class="mw-redirect" data-href="/wiki/Dev/Dummy_Tor" href="../Dev/Dummy_Tor.html" title="Dev/Dummy Tor">Dev/Dummy Tor</a>.</li>
+<li>DummyTor package description file: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/dummytor/tor" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/dummytor/tor" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/dummytor/tor</a></li>
+<li>rinetd (see below) also prevents Tor from opening the default listener on port 9050. Therefore the Tor service will fail to start.</li></ul>
+<h3><span id="KDE_/_GNOME_-_application_wide_proxy_settings"></span><span class="mw-headline" id="KDE_.2F_GNOME_-_application_wide_proxy_settings">KDE / GNOME - application wide proxy settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=7.html" title="Edit section: KDE / GNOME - application wide proxy settings">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Whether KDE / GNOME will be used or not, in addition to stream isolation wrappers and other preconfigured applications for stream isolation, in addition it is useful to also configure KDE / GNOME - wide proxy settings. In case the user installs KDE or GNOME applications, which connect to the internet, which honor proxy settings, those won't go through Tor's TransPort, but through a dedicated SocksPort for further improved stream isolation. These settings are not system-wide, but KDE-wide / GNOME-wide.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>KDE: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/kioslaverc" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/kioslaverc" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/kioslaverc</a></li>
+<li>GNOME: Not yet implemented. <a data-href="/wiki/Dev/GNOME" href="../Dev/GNOME.html" title="Dev/GNOME">TODO</a></li></ul>
+<h2><span class="mw-headline" id="Extra">Extra</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=8.html" title="Edit section: Extra">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="second,_optional,_extra_firewall"></span><span class="mw-headline" id="second.2C_optional.2C_extra_firewall">second, optional, extra firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=9.html" title="Edit section: second, optional, extra firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Optional second, optional, extra firewall for advanced users as damage protection in case the Whonix-Gateway gets ever compromised (Tor exploit).
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Please read the script comments.</li>
+<li>Firewall script: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix_firewall" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix_firewall" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix_firewall</a></li>
+<li>Configuration file: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/whonix_firewall.d/10_default" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/whonix_firewall.d/10_default" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/whonix_firewall.d/10_default</a></li></ul>
+<h2><span class="mw-headline" id="Usability">Usability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=10.html" title="Edit section: Usability">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Swap">Swap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=11.html" title="Edit section: Swap">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Let the kernel only swap if it is absolutely necessary.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/sysctl.d/whonix-workstation-sysctl.conf" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/sysctl.d/whonix-workstation-sysctl.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/sysctl.d/whonix-workstation-sysctl.conf</a></li></ul>
+<h3><span class="mw-headline" id="Environment_Variables">Environment Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=12.html" title="Edit section: Environment Variables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>It is useful to have an environment variable announcing "I am a Workstation", so applications such as TorButton and TorBirdy can act accordingly. (I.e. not starting Tor/Vidalia on the Workstation; not using 127.0.0.1 as proxy, but therefore the Gateway.)
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_whonix.sh" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_whonix.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_whonix.sh</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh</a></li></ul>
+<h3><span class="mw-headline" id="apt.conf">apt.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=13.html" title="Edit section: apt.conf">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Doesn't do anything by default. Just some comments. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/apt/apt.conf.d/90whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/apt/apt.conf.d/90whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/apt/apt.conf.d/90whonix</a></li>
+<li>(apt is forced though Tor by apt-get uwt wrapper (Design-Shared) and by the firewall running on the Gateway.</li></ul>
+<h3><span class="mw-headline" id="http_to_socks_converter">http to socks converter</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=14.html" title="Edit section: http to socks converter">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Some applications don't support socks, but http. It is useful to have a http to socks converter.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>None required to be installed by default.</li>
+<li>If someone likes to use polipo, the config file from torproject.org is shipped. (Only adapted to use the Whonix-Gateway. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/polipo/config" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/polipo/config" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/polipo/config</a></li></ul>
+<h3><span class="mw-headline" id="Sending_e-mails_without_registration">Sending e-mails without registration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=15.html" title="Edit section: Sending e-mails without registration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Install a tool, which can send e-mails without registration.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Using Mixmaster. (Of course over Tor.)</li>
+<li>Implementation notes: <a data-href="/wiki/Dev/Mixmaster" href="../Dev/Mixmaster.html" title="Dev/Mixmaster">Dev/Mixmaster</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.Mix/mix.cfg" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.Mix/mix.cfg" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.Mix/mix.cfg</a></li>
+<li>Documented on <a data-href="/wiki/Remailer" href="../Remailer.html" title="Remailer">Remailer</a> and <a data-href="/wiki/Mixmaster" href="../Mixmaster.html" title="Mixmaster">Mixmaster</a> page.</li></ul>
+<h3><span class="mw-headline" id="GnuPG_Configuration">GnuPG Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=16.html" title="Edit section: GnuPG Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Using more secure defaults for GnuPG.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Using more secure defaults. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.gnupg/gpg.conf" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.gnupg/gpg.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.gnupg/gpg.conf</a></li></ul>
+<h3><span class="mw-headline" id="Project_News_Notification">Project News Notification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=17.html" title="Edit section: Project News Notification">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Using rawdog, a privacy friendly rss reader to download Whonix News Blogs.</li>
+<li>Privacy friendly as in, once it downloaded the blog's content, there will be no incoming/outgoing traffic. The page can be viewed offline and contains no tracking scripts.</li>
+<li>Non-ideal configuration. In rawdog config is a https link with a sourceforge rss feed, which unfortunately redirects to a non-https page, which rawdog follows. Thus, news is not fetched over https and a man-in-the-middle could spread malicious news.</li>
+<li>rawdog Configuration folder: <a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/home/user/.rawdog/" href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/home/user/.rawdog/" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_workstation/home/user/.rawdog/</a></li>
+<li>Documented on page <a data-href="/wiki/Rss" href="../Rss.html" title="Rss">rss</a> and <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Download (Stay Tuned)</a> page.</li>
+<li>rawdog gets run by whonixcheck. (See <a data-href="/wiki/Dev/Design-Shared" href="../Dev/Design-Shared.html" title="Dev/Design-Shared">Dev/Design-Shared</a>.)</li>
+<li>The user is asked to prefer to start Tor Browser using the Tor Browser Recommended shortcut on the Desktop: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/applications/whonix-tbrecommend.desktop" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/applications/whonix-tbrecommend.desktop" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/applications/whonix-tbrecommend.desktop</a></li></ul>
+<h3><span class="mw-headline" id="TorChat_Configuration">TorChat Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=18.html" title="Edit section: TorChat Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Using TorChat on a already torified Workstation while preventing Tor over Tor is not trivial. Therefore it is useful to ship required configuration files, preconfigured as much as possible by default to ease installation of TorChat.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>TorChat does <b>not</b> get installed by default.</li>
+<li>Due to popular request, Whonix makes it as easy as possible to use TorChat with Whonix.</li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.torchat/torchat.ini" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.torchat/torchat.ini" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.torchat/torchat.ini</a></li>
+<li>Documented on <a data-href="/wiki/Chat" href="../Chat.html" title="Chat">Chat</a> page.</li>
+<li>Banning the Tor package from Whonix-Workstation to prevent Tor over Tor. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_dummytor</a></li></ul>
+<h3><span class="mw-headline" id="IRC_Client">IRC Client</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=19.html" title="Edit section: IRC Client">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Secure IRC Client configuration and script for getting a new IRC identity.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Whonix comes with HexChat configured for privacy.</li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/xchat-reset" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/xchat-reset" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/xchat-reset</a></li>
+<li>Documented on <a data-href="/wiki/HexChat" href="../HexChat.html" title="HexChat">HexChat</a> page.</li>
+<li>Configuration files. <a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/xchat2" href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/xchat2" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/xchat2</a></li>
+<li>Deactivating plugins. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_xchat" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_xchat" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_xchat</a></li></ul>
+<h3><span class="mw-headline" id="Web_Browser">Web Browser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=20.html" title="Edit section: Web Browser">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Secure Web Browser, which doesn't suffer from likability and browser fingerprinting.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Whonix comes with Tor Browser, which is maintained by The Tor Project.</li>
+<li>Reasons for TorBrowser can be found on the <a data-href="/wiki/Tor_Browser" href="../Tor_Browser.html" title="Tor Browser">Tor Browser</a> page.</li>
+<li>Documented on <a data-href="/wiki/Tor_Browser" href="../Tor_Browser.html" title="Tor Browser">Tor Browser</a> page.</li>
+<li>torbrowser update script: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser</a></li>
+<li>Patched torbrowser startup script to make Tor Browser work without the bundled Tor and Vidalia: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/start-tor-browser" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/start-tor-browser" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/start-tor-browser</a> The torbrowser update script <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/torbrowser</a> keeps care to replace the upstream start-tor-browser file.</li>
+<li>Install Tor Browser while building Whonix: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_torbrowser" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_torbrowser" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/chroot-scripts/70_torbrowser</a></li>
+<li>Environment variables: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh</a></li>
+<li>Gpg keys to verify the downloaded Tor Browser:
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/gpg-pubkeys" href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/gpg-pubkeys" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/gpg-pubkeys</a></li>
+<li><a data-href="/wiki/Dev/Source_Code_Intro#OpenPGP_keys" href="../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">Dev/Source_Code_Intro#OpenPGP_keys</a></li></ul></li></ul>
+<h3><span class="mw-headline" id="rinetd">rinetd</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=21.html" title="Edit section: rinetd">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>rinetd is configured to listen on local ports 9050 and 9150.
+<ul><li>rinetd forwards port 127.0.0.1:9050 (Workstation) to 10.152.152.10:9050 (Gateway).</li>
+<li>Forwards port 127.0.0.1:9150 (Workstation) to 10.152.152.10:9150 (Gateway).</li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/rinetd.conf" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/rinetd.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/rinetd.conf</a></li>
+<li>This prevents Tor over Tor by just installing Tor or by using the complete Tor Browser Bundle, which starts Vidalia and Tor. This is because, it listens on port 9050 and 9150 and therefore lets a default Tor or TBB fail to start.</li>
+<li>Should the Tor Browser update script ever break,
+<ul><li>Whonix users can download (and verify) the stock Tor Browser Bundle (TBB) from torproject.org,</li>
+<li>unpack to /home/user/tor-browser_en-US and</li>
+<li>start it from the desktop menu shortcut or from the start menu.</li>
+<li>As long as The Tor Project will still ship Vidalia with TBB: Starting with the stock startup script /home/user/tor-browser_en-US/start-tor-browser will fail closed. Vidalia will report, that Tor won't connect, because port 9150 is already blocked by rinetd. This will be fixed as soon as The Tor Project merges a proposed patch <a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/5611" href="https://trac.torproject.org/projects/tor/ticket/5611" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/5611</a> for the start-tor-browser startup script, which adds an optional environment variable, once set, only starts Tor Browser and not the bundled Tor/Vidalia.</li>
+<li>As soon as The Tor Project moved to tor-launcher and drops Vidalia: Starting stock TBB inside Whonix should work out of the box, because <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/etc/profile.d/20_torbrowser.sh</a> sets the required environment variables to deactivate tor-launcher.</li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Marker_file">Marker file</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=22.html" title="Edit section: Marker file">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Add a marker file so scripts you write can find out, whether they are running on the Gateway or inside the Workstation. There are probably different implementations possible to reach that goal.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/whonix_workstation" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/whonix_workstation" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/whonix_workstation</a></li></ul>
+<h3><span class="mw-headline" id="Terminal_Help">Terminal Help</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=23.html" title="Edit section: Terminal Help">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Add a welcome and help message also to virtual terminals. (Those which can get started in graphical environments such as KDE and Konsole.)
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li>Default Debian .bashrc at the top and Whonix specific additions at the bottom: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.bashrc" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.bashrc" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/home/user/.bashrc</a></li>
+<li>Whonix-Workstation terminal help file: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/whonix</a></li></ul>
+<h2><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=24.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Leaktest_script">Leaktest script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=25.html" title="Edit section: Leaktest script">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Optional.
+</p><p>Have a script to try to produce a leak and check if there are any leaks.
+</p><p>Whonix-Example-Implementation:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/leaktest" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/leaktest" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/bin/leaktest</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/leaktest" href="https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/leaktest" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_workstation/usr/local/share/whonix/leaktest</a></li>
+<li><a data-href="/wiki/Dev/Leak_Tests" href="../Dev/Leak_Tests.html" title="Dev/Leak Tests">Dev/Leak Tests</a></li></ul>
+<h1><span class="mw-headline" id="Design-Shared">Design-Shared</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit&amp;section=26.html" title="Edit section: Design-Shared">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Changes from <a data-href="/wiki/Dev/Design-Shared" href="../Dev/Design-Shared.html" title="Dev/Design-Shared">Dev/Design-Shared</a> also have to be added to the Gateway.
+</p>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Design-Workstation" href="../Dev/Design-Workstation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Workstation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Workstation" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Design-Workstation&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Design-Workstation&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=../Dev/Design-Workstation" href="https://facebook.com/sharer.php?u=../Dev/Design-Workstation">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Design-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Design-Workstation&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180825092652
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.056 seconds
+Real time usage: 0.056 seconds
+Preprocessor visited node count: 166/1000000
+Preprocessor generated node count: 354/1000000
+Post‐expand include size: 3382/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 742/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.993      1 -total
+ 64.63%   13.567      1 Template:Footer
+ 23.40%    4.913      1 Template:FooterLight
+ 19.04%    3.997      1 Template:Footer_this_is_a_wiki
+ 18.14%    3.808      1 Template:Header
+ 16.66%    3.498      1 Template:Share
+ 14.49%    3.042      1 Template:Edit_it
+  8.45%    1.774      1 Template:Foooter_OIN
+  7.24%    1.520      1 Template:RandomNews
+  4.26%    0.895      1 Template:Forkme
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Design-Workstation&amp;oldid=29435" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Design-Workstation&amp;oldid=29435">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Design-Workstation&amp;oldid=29435</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 19 April 2017, at 12:02.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20180825092652 -->
+</html>

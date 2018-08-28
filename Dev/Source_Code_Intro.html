@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Dev/Source Code Intro - Whonix
+ url: ../Dev/Source_Code_Intro
+ date: Tue Aug 28 07:48:20 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Dev/Source Code Intro - Whonix</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.0" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/f/fa/Accept-47587640.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/f/fa/Accept-47587640.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Introduction into Whonix's source code." name="description"/>
+<meta content="Introduction into Whonix's source code." name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Dev/Source Code Intro" property="og:title"/>
+<meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/f/fa/Accept-47587640.png" property="og:image"/>
+<meta content="Introduction into Whonix's source code." property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Source_Code_Intro rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="../Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Source_Code_Intro" href="../Dev/Source_Code_Intro.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Source_Code_Intro&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Source_Code_Intro&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Dev/Source Code Intro</h1>
+<h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#OpenPGP_keys"><span class="tocnumber">2</span> <span class="toctext">OpenPGP keys</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Chroot_Scripts"><span class="tocnumber">3</span> <span class="toctext">Chroot Scripts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#What_are_Chroot_Scripts.3F"><span class="tocnumber">3.1</span> <span class="toctext">What are Chroot Scripts?</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#How_many_chroot-scripts_are_there_and_what_are_they_used_for.3F"><span class="tocnumber">3.2</span> <span class="toctext">How many chroot-scripts are there and what are they used for?</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Introduction_2"><span class="tocnumber">3.2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#run-chroot-scripts-post-d"><span class="tocnumber">3.2.2</span> <span class="toctext">run-chroot-scripts-post-d</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#anon-shared-build-sanity-checks"><span class="tocnumber">3.2.3</span> <span class="toctext">anon-shared-build-sanity-checks</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#anon-shared-build-remember-sources"><span class="tocnumber">3.2.4</span> <span class="toctext">anon-shared-build-remember-sources</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#whonix-initializer"><span class="tocnumber">3.2.5</span> <span class="toctext">whonix-initializer</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Debugging"><span class="tocnumber">4</span> <span class="toctext">Debugging</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Build_Configuration"><span class="tocnumber">4.1</span> <span class="toctext">Build Configuration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Build_Configuration_Folder"><span class="tocnumber">4.1.1</span> <span class="toctext">Build Configuration Folder</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Skipping_Build_Steps"><span class="tocnumber">4.1.2</span> <span class="toctext">Skipping Build Steps</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Skipping_Chroot_and_Postinst_Scripts"><span class="tocnumber">4.1.3</span> <span class="toctext">Skipping Chroot and Postinst Scripts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Building_without_whonix_build_main_script"><span class="tocnumber">4.2</span> <span class="toctext">Building without whonix_build main script</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#most_basic"><span class="tocnumber">4.2.1</span> <span class="toctext">most basic</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#optional"><span class="tocnumber">4.2.2</span> <span class="toctext">optional</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#SSH"><span class="tocnumber">5</span> <span class="toctext">SSH</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Mount_and_inspect_images"><span class="tocnumber">6</span> <span class="toctext">Mount and inspect images</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Interactive_Chroot"><span class="tocnumber">6.1</span> <span class="toctext">Interactive Chroot</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Less_Important_Goodies"><span class="tocnumber">7</span> <span class="toctext">Less Important Goodies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Unpacking_.ova_images"><span class="tocnumber">7.1</span> <span class="toctext">Unpacking <b>.ova</b> images</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Converting_.vmdk_images_to_.raw_images"><span class="tocnumber">7.2</span> <span class="toctext">Converting <b>.vmdk</b> images to <b>.raw</b> images</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Porting"><span class="tocnumber">8</span> <span class="toctext">Porting</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Build_Script_Features"><span class="tocnumber">9</span> <span class="toctext">Build Script Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="#Build_Script_Features_-_Implemented"><span class="tocnumber">9.1</span> <span class="toctext">Build Script Features - Implemented</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Build_Script_Features_-_Missing"><span class="tocnumber">9.2</span> <span class="toctext">Build Script Features - Missing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Automation_and_Speed_up"><span class="tocnumber">10</span> <span class="toctext">Automation and Speed up</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Footnotes"><span class="tocnumber">11</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>This chapter is dedicated to give an introduction into the Whonix source code. <i><b>If you prefer to read and understand the source code just by reading scripts you may skip this optional chapter.</b></i> It can be quite difficult to get started with hacking existing big complex projects.
+</p><p><b>build-steps</b>
+</p><p>This is a high level overview. Whonix-Example-Implementation can currently be build in nine steps. (There is also a whonix_build script, which automates these eight steps for your convenience.)
+</p>
+<ul><li>1100_prepare-build-machine</li>
+<li>1150_export-libvirt-xml</li>
+<li>1200_create-debian-packages</li>
+<li>1300_create-raw-image</li>
+<li>1700_install-packages</li>
+<li>2300_run-chroot-scripts-post-d</li>
+<li>2400_convert-raw-to-qcow2</li>
+<li>2500_convert-raw-to-vdi</li>
+<li>2600_create-vbox-vm</li>
+<li>2700_export-vbox-vm</li>
+<li>2800_create-report</li></ul>
+<p><b>help-steps</b>
+</p><p>Boring methods, which are required by the build-steps above.
+</p>
+<ul><li>delete-vbox-vm</li>
+<li>mount-raw</li>
+<li>mount-vdi</li>
+<li>chroot-raw</li>
+<li>unchroot-raw</li>
+<li>unmount-raw</li>
+<li>unmount-raw-force</li>
+<li>unmount-vdi</li>
+<li>unmount-vdi-force</li>
+<li>pre gets sourced by all other scripts.</li>
+<li>variables gets sourced by all other scripts.</li></ul>
+<p><b>whonix_build</b>
+</p><p>Is a script, which simply runs all other build-steps. Actually it is "optional". It has very little functionality besides running all other steps. You are free to run all steps one by one. That is useful for learning and for debugging purposes. In case you want to fix a bug or in case you want to upgrade the distribution or in case you want to switch the operating system or whatever you are better off running the steps manually. Run it with -help to see available switches. It has also has a --fast1 and --fast2 switch which skips certain steps, which is useful for debugging purposes if these steps were already run.
+</p><p><i><b>Overview</b></i>:
+</p>
+<ol><li>prepare-build-machine: installs build dependencies and applies a few other required settings for building from source.</li>
+<li>export-libvirt-xml: Copies files from <i><span style="background-color:#FBFBFB">libvirt</span></i> folder to <i><span style="background-color:#FBFBFB">~/whonix_binary</span></i> folder and adds version numbers to them.</li>
+<li>create-debian-packages: Recursively works through <i><span style="background-color:#FBFBFB">packages</span></i> folder, builds them one by one and adds them to a local APT repository.</li>
+<li>create-raw-image: <a class="external text" data-href="http://grml.org/grml-debootstrap/" href="http://grml.org/grml-debootstrap/" rel="noreferrer noopener" target="_blank">grml-debootstrap</a> creates virtual machine images in <b>.raw</b> image format. It keeps care of creating the image, the partition table, grub boot manager, minimal system debootstrap and apt-get installing all Whonix packages. This step requires most time in the build process.</li>
+<li>install-packages: Installs meta .deb packages whonix-shared-packages-dependencies/recommended, desktop, desktop-kde, kde-accessibility and whonix-*-packages-dependencies/recommended and whonix-workstation-default-applications. Those only include dependencies and recommended packages which are pulled from Debian's apt repository.</li>
+<li>backup-raw-after-meta-package-install</li>
+<li>run-chroot-scripts-post-d: Post Chroot Scripts are applied.</li>
+<li>convert-raw-to-qcow2: Only having effect when using <i><span style="background-color:#FBFBFB">--qocw2</span></i> switch. The <b>.raw</b> image gets converted to a <b>.qcow2</b> image. Actually not converted, a new file will be created and the old <b>.raw</b> remains available until cleanup is run or manually deleted or grml-debootstrap runs again. The <b>.raw</b> format is more "generic". VirtualBox does not support raw (<b>.raw</b>) images, but <b>.vdi</b> and <b>.vmdk</b> (and others).</li>
+<li>convert-raw-to-vdi: The <b>.raw</b> image gets converted to a <b>.vdi</b> image. (Actually not converted, as explained above.)</li>
+<li>create-vbox-vm: A virtual machine (VirtualBox) will be created and the <b>.vdi</b> image will be attached.</li>
+<li>export-vbox-vm: The virtual machines get exported to a <b>.ova</b> images. (Technically the <b>.ova</b> format seams to require <b>.vmdk</b> files. Therefore VirtualBox automatically creates it. So anyone using or extracting the <b>.ova</b> image will see that it includes a <b>.vmdk</b> image.)</li>
+<li>create-report: Analyses the .ova the the build script created and creates a report for <a data-href="/wiki/Verifiable_Builds" href="../Verifiable_Builds.html" title="Verifiable Builds">Verifiable Builds</a>.</li></ol>
+<p><i><b>Modularity:</b></i>
+</p><p>All steps could be easily replaced to add support for additional virtualizers, operating systems and so on. The numbers before the script names (20_..., 25_..., 30..., ...) are honored by whonix_build (using <a class="external text" data-href="http://manpages.ubuntu.com/manpages/raring/man8/run-parts.8.html" href="http://manpages.ubuntu.com/manpages/raring/man8/run-parts.8.html" rel="noreferrer noopener" target="_blank">run-parts</a>), which runs these steps in lexical order. Therefore you can easily add steps to the beginning or the end or even wretch steps in between.
+</p><p><i><b>File sizes:</b></i>
+</p><p>Do not get shocked by file sized. Initially the .raw is created with a size of 100 GB, but it will actually only take a fraction of that space on the harddrive. This is because .raw .vdi and .vmdk are all <a data-href="/wiki/Sparse_files" href="../Sparse_files.html" title="Sparse files">sparse files</a>, which means they do not take their maximum size, but only as much data as really is inside these images.
+</p><p><b>Chroot Scripts</b>
+</p>
+<ul><li>packages/anon-*-build-*/usr/lib/anon-dist/chroot-scripts-post.d/</li></ul>
+<p><i><b>Summary:</b></i>
+</p><p>Thus, given the nature of the build step orientated scripts, you can easily work on the different aspects of Whonix. For example, once you have created a clean virtual machine with the operating system only, you can make a copy, run either the gateway or the workstation copy routine or Chroot Scripts as often as you need to test your changes and if something goes wrong, go back to backup. You don't have to build everything from scratch again. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p><i><b>Another Introduction:</b></i>
+</p><p>It is really not that difficult after all. If you like, you could read <a data-href="/wiki/Manually_Creating_Whonix" href="../Manually_Creating_Whonix.html" title="Manually Creating Whonix">Manually Creating Whonix</a>, which is a similar topic, which covers part of this in other words.
+</p>
+<h1><span class="mw-headline" id="OpenPGP_keys">OpenPGP keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=2.html" title="Edit section: OpenPGP keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>OpenPGP public keys required for building Whonix are stored inside various packages. These include.
+</p>
+<ul><li>tb-updater: <a class="external text" data-href="https://github.com/Whonix/tb-updater/tree/master/usr/share/torbrowser-updater-keys.d" href="https://github.com/Whonix/tb-updater/tree/master/usr/share/torbrowser-updater-keys.d" rel="noreferrer noopener" target="_blank">/usr/share/torbrowser-updater-keys.d</a>
+<ul><li>erinn.asc - <a class="external text" data-href="https://www.torproject.org/docs/signing-keys.html.en" href="https://www.torproject.org/docs/signing-keys.html.en" rel="noreferrer noopener" target="_blank">obtained from torproject.org</a> - Used to verify downloads of Tor Browser by <i>update-torbrowser</i>.</li>
+<li>sebastian.asc - same as erinn.asc.</li></ul></li>
+<li>anon-shared-build-apt-sources-tpo: <a class="external text" data-href="https://github.com/Whonix/anon-shared-build-apt-sources-tpo/tree/master/usr/share/anon-shared-build-apt-sources-tpo/tpoarchive-keys.d" href="https://github.com/Whonix/anon-shared-build-apt-sources-tpo/tree/master/usr/share/anon-shared-build-apt-sources-tpo/tpoarchive-keys.d" rel="noreferrer noopener" target="_blank">/usr/share/anon-shared-build-apt-sources-tpo/tpoarchive-keys.d</a>
+<ul><li>torprojectarchive.asc - Torproject's archive key <a class="external free" data-href="https://www.torproject.org/docs/debian.html.en" href="https://www.torproject.org/docs/debian.html.en" rel="noreferrer noopener" target="_blank">https://www.torproject.org/docs/debian.html.en</a></li></ul></li>
+<li>whonix-repository:
+<ul><li><a class="external text" data-href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys.d" href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys.d" rel="noreferrer noopener" target="_blank">/master/usr/share/whonix/whonix-keys.d/whonix-keys.d</a>
+<ul><li>patrick.asc</li></ul></li>
+<li><a class="external text" data-href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys-revoked.d" href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys-revoked.d" rel="noreferrer noopener" target="_blank">/usr/share/whonix/whonix-keys-revoked.d</a>
+<ul><li>None yet.</li></ul></li></ul></li>
+<li>whonixcheck: <a class="external text" data-href="https://github.com/Whonix/whonixcheck/tree/master/usr/share/whonix/whonix-news-keys.d" href="https://github.com/Whonix/whonixcheck/tree/master/usr/share/whonix/whonix-news-keys.d" rel="noreferrer noopener" target="_blank">/usr/share/whonix/whonix-news-keys.d</a>
+<ul><li>patrick.asc - Whonix maintainer key - used for <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a>'s W<a data-href="/wiki/Download#Whonix_Version_Check_and_Whonix_News" href="../Download.html" title="Download">honix News</a> v<a class="external text" data-href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news#L84" href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news" rel="noreferrer noopener" target="_blank">erification</a></li></ul></li></ul>
+<p>To find out what the keys are good for, simply grep the source code.
+</p>
+<pre>cd /home/user/Whonix
+grep -r tbb-keys.d *
+grep -r tpoarchive-keys.d *
+grep -r whonix-keys-revoked *
+grep -r whonix-keys.d *
+</pre>
+<p>If you are in luck, you never have to update the keys yourself and the Whonix maintainer will keep them updated. Otherwise and also as a good precaution you can verify these keys manually. Follow the instructions from torproject.org to obtain the key. Then simply check if the keys match or update the old key with the new one.
+</p><p>Torproject's archive key expires on '<i>2018-08-30</i>.
+</p>
+<pre>gpg --fingerprint A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+pub   2048R/886DDD89 2009-09-04 [expires: 2020-08-29]
+      Key fingerprint = A3C4 F0F9 79CA A22C DBA8  F512 EE8C BC9E 886D DD89
+uid       [ unknown] deb.torproject.org archive signing key
+sub   2048R/219EC810 2009-09-04 [expires: 2018-08-30]
+</pre>
+<h1><span class="mw-headline" id="Chroot_Scripts">Chroot Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=3.html" title="Edit section: Chroot Scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="What_are_Chroot_Scripts?"></span><span class="mw-headline" id="What_are_Chroot_Scripts.3F">What are Chroot Scripts?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=4.html" title="Edit section: What are Chroot Scripts?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some operations for building Whonix cannot run as part Debian maintainer scripts (preinst, postinst, prerm, postrm). Those are installed by <a class="external text" data-href="https://github.com/Whonix/whonix-initializer" href="https://github.com/Whonix/whonix-initializer" rel="noreferrer noopener" target="_blank">whonix-initializer</a> to <i><span style="background-color:#FBFBFB">/usr/lib/anon-dist/chroot-scripts-post.d</span></i>. When those scripts are just installed, they do nothing. Those scripts are run in lexical order after package installation by a later build step of Whonix's build script (see <a href="#Introduction">#Introduction</a> for overview).
+</p>
+<h2><span id="How_many_chroot-scripts_are_there_and_what_are_they_used_for?"></span><span class="mw-headline" id="How_many_chroot-scripts_are_there_and_what_are_they_used_for.3F">How many chroot-scripts are there and what are they used for?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=5.html" title="Edit section: How many chroot-scripts are there and what are they used for?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Introduction_2">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=6.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To get an always up to date list of packages that do ship chroot-scripts, you could run <i><span style="background-color:#FBFBFB">find</span></i> from within Whonix's source code folder.
+</p>
+<pre>find . -type f -ipath *chroot-script* | sort
+</pre>
+<p>Here is the result that has been written at time of Whonix git tag <code>13.0.0.1.1</code>.
+</p>
+<pre>./build-steps.d/2300_run-chroot-scripts-post-d
+./packages/whonix-initializer/usr/lib/anon-dist/chroot-scripts-post.d/20_sanity_checks
+./packages/whonix-initializer/usr/lib/anon-dist/chroot-scripts-post.d/75_sources
+./packages/whonix-initializer/usr/lib/anon-dist/chroot-scripts-post.d/80_cleanup
+</pre>
+<p>So let's go through them one by one.
+</p>
+<h3><span class="mw-headline" id="run-chroot-scripts-post-d">run-chroot-scripts-post-d</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=7.html" title="Edit section: run-chroot-scripts-post-d">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>./build-steps.d/2300_run-chroot-scripts-post-d
+</pre>
+<p>This is actually not a chroot-script, it is the <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2300_run-chroot-scripts-post-d" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2300_run-chroot-scripts-post-d" rel="noreferrer noopener" target="_blank">build-steps.d/2300_run-chroot-scripts-post-d</a> build step, which is responsible of running all these chroot-scripts at Whonix build time.
+</p>
+<h3><span class="mw-headline" id="anon-shared-build-sanity-checks">anon-shared-build-sanity-checks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=8.html" title="Edit section: anon-shared-build-sanity-checks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>./packages/anon-shared-build-sanity-checks/usr/lib/anon-dist/chroot-scripts-post.d/20_sanity_checks_2
+./packages/anon-shared-build-sanity-checks/usr/lib/anon-dist/chroot-scripts-pre.d/20_sanity_checks
+</pre>
+<ul><li>Details: Sanity tests that check the integrity of the build. See package description of the <a class="external text" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks" href="https://github.com/Whonix/anon-shared-build-sanity-checks" rel="noreferrer noopener" target="_blank">anon-shared-build-sanity-checks</a> package for a more verbose explanation.</li>
+<li>Used by default in Whonix's build script: Yes.</li>
+<li>Negligible for <a data-href="/wiki/Dev/Installation_from_Repository" href="../Dev/Installation_from_Repository.html" title="Dev/Installation from Repository">Whonix installations from repository</a>: Up to you.</li>
+<li>Convertible into postinst script: Probably not, because some tests such as checking if apt-get/dpkg are in sane states cannot run inside a postinst script because apt-get/dpkg would be still working at that time.</li>
+<li>package: <a class="external free" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks" href="https://github.com/Whonix/anon-shared-build-sanity-checks" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-sanity-checks</a></li>
+<li>script:
+<ul><li><a class="external free" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-pre.d/20_sanity_checks" href="https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-pre.d/20_sanity_checks" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-pre.d/20_sanity_checks</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/20_sanity_checks_2" href="https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/20_sanity_checks_2" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-sanity-checks/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/20_sanity_checks_2</a></li></ul></li></ul>
+<h3><span class="mw-headline" id="anon-shared-build-remember-sources">anon-shared-build-remember-sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=9.html" title="Edit section: anon-shared-build-remember-sources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>./packages/anon-shared-build-remember-sources/usr/lib/anon-dist/chroot-scripts-post.d/75_sources
+</pre>
+<ul><li>Details: Logs GPL sources during build - for better obeying legal requirements.</li>
+<li>Used by default in Whonix's build script: Yes.</li>
+<li>Negligible for Whonix installations from repository: Up to you.</li>
+<li>Convertible into postinst script: Probably not, because for this script to have a chance of being effective, it must run after installation of all packages has finished.</li>
+<li>package: <a class="external free" data-href="https://github.com/Whonix/anon-shared-build-remember-sources" href="https://github.com/Whonix/anon-shared-build-remember-sources" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-remember-sources</a></li>
+<li>script: <a class="external free" data-href="https://github.com/Whonix/anon-shared-build-remember-sources/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/75_sources" href="https://github.com/Whonix/anon-shared-build-remember-sources/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/75_sources" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-remember-sources/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/75_sources</a></li></ul>
+<h3><span class="mw-headline" id="whonix-initializer">whonix-initializer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=10.html" title="Edit section: whonix-initializer">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>./packages/whonix-initializer/usr/lib/anon-dist/chroot-scripts-post.d/80_cleanup
+</pre>
+<ul><li>Details: Cleanup, and required for <a data-href="/wiki/Verifiable_Builds" href="../Verifiable_Builds.html" title="Verifiable Builds">Verifiable Builds</a>, therefore only useful for vm image builds.</li>
+<li>Used by default in Whonix's build script: Yes.</li>
+<li>Negligible for Whonix installations from repository: Yes.</li>
+<li>Convertible into postinst script: Probably not and probably not required. If the image is not supposed to be redistributed, there is no need to clean up. If the image is supposed to be redistributed, it should be cleaned up beforehand.</li>
+<li>package: <a class="external free" data-href="https://github.com/Whonix/whonix-initializer" href="https://github.com/Whonix/whonix-initializer" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-initializer</a></li>
+<li>script: <a class="external free" data-href="https://github.com/Whonix/whonix-initializer/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/80_cleanup" href="https://github.com/Whonix/whonix-initializer/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/80_cleanup" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-initializer/blob/master/usr/lib/anon-dist/chroot-scripts-post.d/80_cleanup</a></li></ul>
+<h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=11.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Stuff you may find helpful for debugging.
+</p>
+<h2><span class="mw-headline" id="Build_Configuration">Build Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=12.html" title="Edit section: Build Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Build_Configuration_Folder">Build Configuration Folder</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=13.html" title="Edit section: Build Configuration Folder">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>You can drop configuration file either in:
+</p>
+<ol><li><span style="border:1px dotted #005cb9">buildconfig.d</span> or in</li>
+<li><span style="border:1px dotted #005cb9">/etc/whonix_buildconfig.d</span></li>
+<li><span style="border:1px dotted #005cb9">../buildconfig.d</span> folder.</li></ol>
+<p>Files should have the extension <i><span style="background-color:#FBFBFB">.conf</span></i>.
+</p><p>Method 2. is recommended for users.
+</p>
+<ol><li>Contains examples. It is more difficult to use, since you would have to git commit your build config files. Rather use.</li>
+<li><span style="border:1px dotted #005cb9">sudo mkdir --parents /etc/whonix_buildconfig.d</span></li>
+<li>When <span style="border:1px dotted #005cb9">/home/user/Whonix</span> is your Whonix source folder, you could use <span style="border:1px dotted #005cb9">/home/user/buildconfig.d</span> as your Whonix build configuration folder. It is easier to use, since you don't have to git commit your build config files.</li></ol>
+<p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>Below is an example how to use method 2.
+</p>
+<pre>sudo mkdir /etc/whonix_buildconfig.d
+</pre>
+<p>Open <i><span style="background-color:#FBFBFB">/etc/whonix_buildconfig.d/50_user.conf</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
+</p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>kdesudo kwrite /etc/whonix_buildconfig.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix_buildconfig.d/50_user.conf</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo nano /etc/whonix_buildconfig.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix_buildconfig.d/50_user.conf</textarea>
+</div>
+</div>
+</div>
+<p>Add. (Replace it with whatever build configuration variable you wish to set.)
+</p>
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'
+export WHONIX_APT_REPOSITORY_OPTS
+</pre>
+<p>Save.
+</p><p>Done.
+</p>
+<h3><span class="mw-headline" id="Skipping_Build_Steps">Skipping Build Steps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=14.html" title="Edit section: Skipping Build Steps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rebuild the .ova images, while skipping the slow <i>prepare-build-machine</i> and <i>create-debian-raw</i> steps. (Of course, this assumes that these steps where run at least once previously.)
+</p><p>The <span style="border:1px dotted #005cb9">sudo ./build-steps/1300_create-debian-raw -tX</span> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> step takes far most of the build creation time. As long as no packages have been added or removed, you can repeat all other steps from a backup, which has been automatically created for you, by using.
+</p>
+<pre>sudo ./whonix_build --tor-gateway --build --fast1
+
+## or --tor-workstation
+</pre>
+<p>There is also <span style="border:1px dotted #005cb9">--fast2</span>, which skips all steps up to and including 1700_install-meta-packages.
+</p>
+<pre>sudo ./whonix_build --tor-gateway --build --fast2
+## or --tor-workstation
+</pre>
+<h3><span class="mw-headline" id="Skipping_Chroot_and_Postinst_Scripts">Skipping Chroot and Postinst Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=15.html" title="Edit section: Skipping Chroot and Postinst Scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some chroot scripts, especially the 70_update_command_not_found and 70_torbrowser take very long, while they are non-critical. You can either run update-command-not-found and the Tor Browser Updater after Whonix has been build and booted, or if you don't wish to use them at all, just don't use it at all. Therefore you can conveniently disable them, to safe some time, which is useful for debug builds.
+</p><p>Create your own build configuration, see <span style="border:1px dotted #005cb9">buildconfig.d</span> folder. For see example <span style="border:1px dotted #005cb9">buildconfig.d/30_skip_torbrowser</span>, which contains
+</p>
+<pre>#export SKIP_SCRIPTS+=" 70_torbrowser "
+</pre>
+<p>You could create a folder file <span style="border:1px dotted #005cb9">../buildconfig.d</span> and a file <span style="border:1px dotted #005cb9">../buildconfig.d/50_skip_torbrowser</span> and add.
+</p>
+<pre>export SKIP_SCRIPTS+=" 70_torbrowser "
+</pre>
+<p>This works for the following folders.
+</p>
+<ul><li>whonix_*/usr/share/whonix/postinst.d</li>
+<li>whonix_*/usr/share/whonix/chroot-scripts-pre.d</li>
+<li>whonix_*/usr/share/whonix/chroot-scripts-post.d</li></ul>
+<p>Look at the file names and add them. <i>export SKIP_SCRIPTS+=" another_file_name "</i>. Don't forget empty spaces (<span style="border:1px dotted #005cb9"> </span>) before and after <span style="border:1px dotted #005cb9">"</span>. <sup class="reference" id="cite_ref-bash-array_4-0"><a href="#cite_note-bash-array-4">[4]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Building_without_whonix_build_main_script">Building without whonix_build main script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=16.html" title="Edit section: Building without whonix build main script">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="most_basic">most basic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=17.html" title="Edit section: most basic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Example using an apt cache (apt-cacher-ng) and building qcow2 images.
+</p>
+<pre>sudo apt-get install apt-cacher-ng
+</pre>
+<pre>cd Whonix
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/1100_prepare-build-machine --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/1150_export-libvirt-xml --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/1200_create-debian-packages --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/1300_create-raw-image --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/1700_install-packages --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2300_run-chroot-scripts-post-d --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2400_convert-raw-to-qcow2 --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2500_convert-raw-to-vdi --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2600_create-vbox-vm --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2700_export-vbox-vm --build --target qcow2 --flavor whonix-gateway
+</pre>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./build-steps.d/2800_create-report --build --target qcow2 --flavor whonix-gateway
+</pre>
+<h3><span class="mw-headline" id="optional">optional</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=18.html" title="Edit section: optional">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For example for a qcow2 build, the following steps can be safely skipped, since these would be doing nothing anyway.
+</p>
+<ul><li>2500_convert-raw-to-vdi</li>
+<li>2700_export-vbox-vm</li>
+<li>2800_create-report (not in use currently)</li></ul>
+<p><br/>
+When first creating a gateway build and then building a workstation build (or vice versa) the following steps do not need to be repeated:
+</p>
+<ul><li>1100_prepare-build-machine</li>
+<li>1200_create-debian-packages</li></ul>
+<h1><span class="mw-headline" id="SSH">SSH</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=19.html" title="Edit section: SSH">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="/wiki/File_Transfer#SSH_into_Whonix-Gateway" href="../File_Transfer.html" title="File Transfer">SSH into Whonix-Gateway</a></li>
+<li><a data-href="/wiki/File_Transfer#SSH_into_Whonix-Workstation" href="../File_Transfer.html" title="File Transfer">SSH into Whonix-Workstation</a></li></ul>
+<h1><span class="mw-headline" id="Mount_and_inspect_images">Mount and inspect images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=20.html" title="Edit section: Mount and inspect images">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a data-href="/wiki/File_Transfer#mount-and-inspect-images" href="../File_Transfer.html" title="File Transfer">Mount and inspect images</a>
+</p>
+<h2><span class="mw-headline" id="Interactive_Chroot">Interactive Chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=21.html" title="Edit section: Interactive Chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="external free" data-href="https://github.com/Whonix/whonix-developer-meta-files/" href="https://github.com/Whonix/whonix-developer-meta-files/" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-developer-meta-files/</a>
+</p>
+<ul><li>Interactively chroot Whonix-Gateway.</li></ul>
+<p>Open a bash shell inside the Whonix-Gateway <b>.raw</b> image.
+</p>
+<pre>sudo ./debug-steps/interactive-chroot-raw -tg
+</pre>
+<ul><li>Interactively chroot Whonix-Workstation.</li></ul>
+<p>Open a bash shell inside the Whonix-Workstation <b>.raw</b> image.
+</p>
+<pre>sudo ./debug-steps/interactive-chroot-raw -tw
+</pre>
+<ul><li>Check Whonix version number.</li></ul>
+<p>Important before building builds for redistribution.
+</p><p>Build config variable.
+</p>
+<pre>anon_dist_build_version
+</pre>
+<pre>cat /usr/share/whonix/build_version
+</pre>
+<h1><span class="mw-headline" id="Less_Important_Goodies">Less Important Goodies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=22.html" title="Edit section: Less Important Goodies">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Unpacking_.ova_images">Unpacking <b>.ova</b> images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=23.html" title="Edit section: Unpacking .ova images">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If you want for some reason to unpack an <b>.ova</b>, for example to get the <b>.vdmk</b> image, you can use tar.
+</p>
+<pre>tar -xvf Whonix-Gateway.ova
+Whonix-Gateway.ovf
+Whonix-Gateway-disk1.vmdk
+</pre>
+<h2><span class="mw-headline" id="Converting_.vmdk_images_to_.raw_images">Converting <b>.vmdk</b> images to <b>.raw</b> images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=24.html" title="Edit section: Converting .vmdk images to .raw images">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>#qemu-img info Whonix-Gateway-disk1.vmdk
+
+qemu-img convert Whonix-Gateway-disk1.vmdk -O raw Whonix-Gateway.raw
+
+#qemu-img info Whonix-Gateway.raw
+</pre>
+<h1><span class="mw-headline" id="Porting">Porting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=25.html" title="Edit section: Porting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>These are some random notes about porting Whonix update debs to rpm.
+</p><p>What would have to be done:
+</p>
+<ul><li>create rpm package</li>
+<li>Find a replacement for config-package-dev, a package which allows third party packages (Whonix) to own files which are owned by other packages. Such as <i><span style="background-color:#FBFBFB">/etc/tor/torrc</span></i> is owned by tor, but anon-gw-anonymizer-config includes its own config file.</li>
+<li>add init scripts (currently done by debhelper)</li>
+<li>add man pages (currently done by debhelper and ronn, see debian/rules)</li>
+<li>minor: replacement for dh_apparmor</li></ul>
+<h1><span class="mw-headline" id="Build_Script_Features">Build Script Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=26.html" title="Edit section: Build Script Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Build_Script_Features_-_Implemented">Build Script Features - Implemented</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=27.html" title="Edit section: Build Script Features - Implemented">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Each item in the following lists (essential, non-essential, undecided) is currently supported by the Whonix build script.
+</p>
+<hr/>
+<p>essential:
+</p>
+<ul><li>does not use non-deterministic binary base boxes (VM images) (which if compromised would compromise the resulting Whonix image)</li>
+<li>does not download anything that does not get gpg verified (apt-get, tb-updater do gpg verify everything)</li>
+<li>prospective support to create deterministic images (once this is generally possible, Whonix build script can also learn this)</li>
+<li>supports using APT Cache to speed up builds</li>
+<li>exit code checking everywhere</li>
+<li>apt-get unreliable exit code checking workaround</li>
+<li>--target virtualbox build VirtualBox ova images
+<ul><li>custom virtualbox VM settings (VBoxManage modifyvm "$VMNAME" --synthcpu on... etc.)</li></ul></li>
+<li>--target qcow2 build KVM images
+<ul><li>xz archive creation</li>
+<li>adding whonix-libvirt xml files to the xz</li></ul></li>
+<li>build Whonix-Gateway</li>
+<li>build Whonix-Workstation</li>
+<li>install Tor Browser by default inside Whonix-Workstation</li>
+<li>default login user account creation, user "user" / password "changeme"</li></ul>
+<hr/>
+<p>non-essential:
+</p>
+<ul><li>step based, build steps case be run manually to speed up development</li>
+<li>injection of custom build steps</li>
+<li>building Whonix images that do not come with a desktop environment</li>
+<li>building Whonix images that do not come with Whonix default applications</li></ul>
+<hr/>
+<p>undecided:
+</p>
+<ul><li>easy to implement creating other image types (raw images etc.)</li>
+<li>creation of hash sum verification and gpg signatures</li>
+<li>automatically installs all required build dependencies on the host system</li>
+<li>cleanup command removing temporary files and/or images</li>
+<li>--arch parameter support (--arch amd64 or --arch i386)</li>
+<li>--kernel and --headers parameter support (--kernel linux-image-amd64 --headers linux-headers-amd64)</li>
+<li>build from local apt repository rather than from deterministic remote repository</li>
+<li>install Whonix packages from own custom remote repository</li>
+<li>interactive error handler to repeat commands, open a shell or ignore them</li>
+<li>optional build step skipping feature</li>
+<li>--target root (for physical isolation)</li>
+<li>--target raw build raw images</li>
+<li>custom VM settings during build (these can of course be manually changed by the user anyhow), supported parameters with examples:
+<ul><li>--vmram 128</li>
+<li>--vram 12</li>
+<li>--vmsize 200G</li></ul></li>
+<li>build image that never had Whonix repository enabled</li>
+<li>build and install all Whonix packages during Whonix image build</li>
+<li>protection from bad build surprises
+<ul><li>break or do not break when uncommitted changes are found</li>
+<li>break or do not break from non-tag</li></ul></li>
+<li>--confdir /path/to/config/dir</li>
+<li>--tb none|closed|open
+<ul><li>none: Do not install Tor Browser.</li>
+<li>closed: Fail closed if Tor Browser cannot be installed.</li>
+<li>open: Fail open if Tor Browser cannot and installed.</li></ul></li>
+<li>use onion apt sources for building</li>
+<li>install different packages for virtualbox (virtualbox-guest-x11) and kvm (spice...)</li></ul>
+<h2><span class="mw-headline" id="Build_Script_Features_-_Missing">Build Script Features - Missing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=28.html" title="Edit section: Build Script Features - Missing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>separate VirtualBox / KVM builds during official builds - <a class="external free" data-href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4</a></li></ul>
+<h1><span class="mw-headline" id="Automation_and_Speed_up">Automation and Speed up</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29.html" title="Edit section: Automation and Speed up">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a data-href="/wiki/Dev/Build_Documentation/14_developers" href="../Dev/Build_Documentation/14_developers.html" title="Dev/Build Documentation/14 developers">Dev/Build_Documentation/14_developers</a>
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">If something would go wrong, you would have to reinstall the whole operating system every time again. That's why we use separate steps.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">This is because <span style="border:1px dotted #005cb9">..</span> means "one level below this folder".</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">(replace X with g or w)</span>
+</li>
+<li id="cite_note-bash-array-4"><span class="mw-cite-backlink"><a href="#cite_ref-bash-array_4-0">↑</a></span> <span class="reference-text">We are expanding a bash array.</span>
+</li>
+</ol></div></div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Source_Code_Intro" href="../Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Source_Code_Intro&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Source_Code_Intro&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=../Dev/Source_Code_Intro" href="https://facebook.com/sharer.php?u=../Dev/Source_Code_Intro">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180825092644
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.120 seconds
+Real time usage: 0.123 seconds
+Preprocessor visited node count: 757/1000000
+Preprocessor generated node count: 2086/1000000
+Post‐expand include size: 5717/2097152 bytes
+Template argument size: 856/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5882/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   56.000      1 -total
+ 28.64%   16.039      1 Template:Footer
+ 18.95%   10.611      1 Template:Open_with_root_rights
+ 16.16%    9.047      1 Template:Box
+ 13.73%    7.690      2 Template:CodeSelect
+ 11.48%    6.428      1 Template:FooterLight
+  9.94%    5.568      1 Template:Footer_this_is_a_wiki
+  9.88%    5.535      1 Template:Reflist
+  8.69%    4.865      1 Template:Header
+  8.33%    4.665      1 Template:Share
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 9 August 2018, at 20:37.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20180825092644 -->
+</html>
