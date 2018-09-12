@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/10 deb - Whonix
  url: ../Dev/Build_Documentation/10_deb
- date: Tue Sep 11 07:38:50 2018
+ date: Wed Sep 12 07:38:56 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -57,7 +57,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -103,7 +103,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -162,68 +162,58 @@ Whonix requires payments to stay alive.
 </p>
 <h2><span class="mw-headline" id="Get_the_Signing_Key">Get the Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b> (See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>)
-</p><p>Download the key.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</pre>
+<pre>gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</textarea>
-</div>
-</div>
-<p>Check fingerprints/owners without importing anything.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg patrick.asc</textarea>
-</div>
-</div>
-<p>Verify it shows the following.
-</p>
-<pre>pub   rsa4096/0x8D66066A2EEACCDA 2014-01-16 [SC] [expires: 2021-04-17]
-      916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
-uid                             Patrick Schleizer &lt;adrelanos@riseup.net&gt;
-sub   rsa4096/0x3B1E6942CE998547 2014-01-16 [E] [expires: 2021-04-17]
-sub   rsa4096/0x10FDAC53119B3FD6 2014-01-16 [A] [expires: 2021-04-17]
-sub   rsa4096/0xCB8D50BB77BB3C48 2014-01-16 [S] [expires: 2021-04-17]
-</pre>
-<p>If it checks out, import the key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg --import patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --import patrick.asc</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>It isn't safe to only get the signing key from one source for the download you want to verify. For better security, <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">learn more about the Whonix Signing Key</a>.
 </p>
 <h2><span class="mw-headline" id="Get_the_Source_Code">Get the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install git and curl.
-</p>
-<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
+</div>
+</div>
 <p>Get source code including git submodules. 
-</p>
-<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+</div>
+</div>
 <p>Note: If using an older version of git (from Debian Jessie, Whonix 13, etc), remove <code>--jobs=4</code>.
 </p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
 </p><p>Shift to the source folder.
-</p>
-<pre>cd Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>cd Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+</div>
+</div>
 <h2><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>Retrieve a list of available git tags.
@@ -398,7 +388,7 @@ Beginning from git tag 9.6 and above.</span>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/10_deb" href="../Dev/Build_Documentation/10_deb" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/10_deb" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/10_deb" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -410,32 +400,32 @@ Beginning from git tag 9.6 and above.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180831053838
+Cached time: 20180911131758
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.112 seconds
-Real time usage: 0.122 seconds
-Preprocessor visited node count: 802/1000000
-Preprocessor generated node count: 4951/1000000
-Post‐expand include size: 13660/2097152 bytes
-Template argument size: 1227/2097152 bytes
+CPU time usage: 0.100 seconds
+Real time usage: 0.109 seconds
+Preprocessor visited node count: 795/1000000
+Preprocessor generated node count: 4913/1000000
+Post‐expand include size: 13488/2097152 bytes
+Template argument size: 1339/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8201/5000000 bytes
+Unstrip post‐expand size: 7522/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   86.635      1 -total
- 52.80%   45.742      1 Template:Build_Documentation_Get_Source_Code
- 26.20%   22.702      1 Template:Gpg_signature_timestamp
- 24.92%   21.587      1 Template:Mbox
- 20.04%   17.363      1 Template:Ambox
- 18.20%   15.770      1 Template:Footer
- 14.71%   12.746      3 Template:CodeSelect
- 11.60%   10.047      1 Template:Reflist
- 10.97%    9.500      1 Template:Category_handler
-  7.80%    6.761      1 Template:FooterLight
+100.00%   77.276      1 -total
+ 52.10%   40.261      1 Template:Build_Documentation_Get_Source_Code
+ 27.46%   21.217      1 Template:Gpg_signature_timestamp
+ 25.56%   19.751      1 Template:Mbox
+ 20.89%   16.146      1 Template:Ambox
+ 17.54%   13.554      1 Template:Footer
+ 12.54%    9.690      4 Template:CodeSelect
+ 11.40%    8.813      1 Template:Reflist
+ 11.35%    8.770      1 Template:Category_handler
+  7.72%    5.964      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/10_deb&amp;oldid=34964" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/10_deb&amp;oldid=34964">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/10_deb&amp;oldid=34964</a>"</div>
@@ -464,5 +454,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20180831053838 -->
+<!-- Cached/compressed 20180911131758 -->
 </html>

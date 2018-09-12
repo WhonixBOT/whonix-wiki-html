@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Control Port Filter Proxy - Whonix
  url: ../Dev/CPFP
- date: Tue Sep 11 07:41:36 2018
+ date: Wed Sep 12 07:41:49 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -61,7 +61,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -107,7 +107,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -383,7 +383,7 @@ Configuration was valid</pre>
 </pre>
 <p>Connect to Tor's ControlPort.
 </p>
-<pre>nc 127.0.0.1 9051
+<pre>sudo --non-interactive -u debian-tor socat - UNIX-CONNECT:/var/run/tor/socks
 </pre>
 <p>Authenticate.
 </p>
@@ -555,11 +555,11 @@ Find out what <i><span style="background-color:#FBFBFB">status/circuit-establish
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180911054132
+Cached time: 20180912054144
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.160 seconds
-Real time usage: 0.190 seconds
+CPU time usage: 0.140 seconds
+Real time usage: 0.231 seconds
 Preprocessor visited node count: 1173/1000000
 Preprocessor generated node count: 5816/1000000
 Post‐expand include size: 14239/2097152 bytes
@@ -567,23 +567,23 @@ Template argument size: 4466/2097152 bytes
 Highest expansion depth: 18/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 6672/5000000 bytes
+Unstrip post‐expand size: 6731/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  124.670      1 -total
- 32.08%   39.998      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 23.50%   29.301      1 Template:Mbox
- 19.54%   24.356      1 Template:Footer
- 18.59%   23.173      1 Template:Ambox
- 14.42%   17.977      2 Template:Box
- 12.03%   14.996      1 Template:Header
- 11.65%   14.530      4 Template:CodeSelect
- 10.51%   13.099      1 Template:Category_handler
-  9.75%   12.156      1 Template:Reload_Tor
+100.00%  169.813      1 -total
+ 55.44%   94.137      2 Template:Box
+ 54.07%   91.812      4 Template:CodeSelect
+ 53.33%   90.568      1 Template:Reload_Tor
+ 18.40%   31.248      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 13.77%   23.375      1 Template:Mbox
+ 10.81%   18.354      1 Template:Ambox
+  8.16%   13.862      1 Template:Footer
+  5.90%   10.011      1 Template:Category_handler
+  4.89%    8.312      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=35814" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=35814">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=35814</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=36778" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=36778">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=36778</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -594,7 +594,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Contr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 15 August 2018, at 12:59.</li>
+<li id="footer-lastmod"> This page was last edited on 11 September 2018, at 20:18.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>

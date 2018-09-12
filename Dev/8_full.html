@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/8 full - Whonix
  url: ../Dev/Build_Documentation/8_full
- date: Tue Sep 11 07:39:37 2018
+ date: Wed Sep 12 07:39:45 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -265,68 +265,58 @@ If you are interested, click on Expand on the right.
 </p>
 <h2><span class="mw-headline" id="Get_the_Signing_Key">Get the Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b> (See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>)
-</p><p>Download the key.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</pre>
+<pre>gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</textarea>
-</div>
-</div>
-<p>Check fingerprints/owners without importing anything.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg patrick.asc</textarea>
-</div>
-</div>
-<p>Verify it shows the following.
-</p>
-<pre>pub   rsa4096/0x8D66066A2EEACCDA 2014-01-16 [SC] [expires: 2021-04-17]
-      916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
-uid                             Patrick Schleizer &lt;adrelanos@riseup.net&gt;
-sub   rsa4096/0x3B1E6942CE998547 2014-01-16 [E] [expires: 2021-04-17]
-sub   rsa4096/0x10FDAC53119B3FD6 2014-01-16 [A] [expires: 2021-04-17]
-sub   rsa4096/0xCB8D50BB77BB3C48 2014-01-16 [S] [expires: 2021-04-17]
-</pre>
-<p>If it checks out, import the key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg --import patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --import patrick.asc</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>It isn't safe to only get the signing key from one source for the download you want to verify. For better security, <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">learn more about the Whonix Signing Key</a>.
 </p>
 <h2><span class="mw-headline" id="Get_the_Source_Code">Get the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install git and curl.
-</p>
-<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
+</div>
+</div>
 <p>Get source code including git submodules. 
-</p>
-<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+</div>
+</div>
 <p>Note: If using an older version of git (from Debian Jessie, Whonix 13, etc), remove <code>--jobs=4</code>.
 </p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
 </p><p>Shift to the source folder.
-</p>
-<pre>cd Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>cd Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+</div>
+</div>
 <h2><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p><p>Retrieve a list of available git tags.
@@ -797,7 +787,7 @@ kFreeBSD (32-bit).
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/8_full" href="../Dev/Build_Documentation/8_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/8_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/8_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -809,32 +799,32 @@ kFreeBSD (32-bit).
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180831045406
+Cached time: 20180911154149
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.228 seconds
-Real time usage: 0.253 seconds
-Preprocessor visited node count: 1980/1000000
-Preprocessor generated node count: 6451/1000000
-Post‐expand include size: 37225/2097152 bytes
-Template argument size: 3409/2097152 bytes
+Real time usage: 0.248 seconds
+Preprocessor visited node count: 1973/1000000
+Preprocessor generated node count: 6413/1000000
+Post‐expand include size: 37053/2097152 bytes
+Template argument size: 3521/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 15195/5000000 bytes
+Unstrip post‐expand size: 14403/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  172.347      1 -total
- 34.03%   58.645      1 Template:Build_Configuration
- 26.33%   45.374      1 Template:Build_Documentation_Get_Source_Code
- 25.82%   44.505      3 Template:Mbox
- 21.82%   37.599      3 Template:Ambox
- 20.61%   35.521      1 Template:Build_Documentation_apt-cache
- 14.08%   24.259      1 Template:Gpg_signature_timestamp
- 12.05%   20.763      3 Template:Category_handler
- 10.43%   17.980      1 Template:Reflist
- 10.03%   17.282      1 Template:Footer
+100.00%  172.207      1 -total
+ 29.48%   50.764      1 Template:Build_Documentation_Get_Source_Code
+ 28.07%   48.343      1 Template:Build_Configuration
+ 26.74%   46.043      3 Template:Mbox
+ 22.41%   38.594      3 Template:Ambox
+ 17.85%   30.747      1 Template:Build_Documentation_apt-cache
+ 15.57%   26.806      1 Template:Gpg_signature_timestamp
+ 12.29%   21.170      3 Template:Category_handler
+ 11.19%   19.270      6 Template:CodeSelect
+ 10.12%   17.421      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/8_full&amp;oldid=34981" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/8_full&amp;oldid=34981">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/8_full&amp;oldid=34981</a>"</div>
@@ -863,5 +853,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 </div>
 
 </body>
-<!-- Cached/compressed 20180831045407 -->
+<!-- Cached/compressed 20180911154149 -->
 </html>

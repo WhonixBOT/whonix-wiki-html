@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Physical Isolation - Whonix
  url: ../Dev/Build_Documentation/Physical_Isolation
- date: Tue Sep 11 07:40:14 2018
+ date: Wed Sep 12 07:40:23 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -661,68 +661,58 @@ You may want to take an image of your installation in case the build script fail
 </p>
 <h2><span class="mw-headline" id="Get_the_Signing_Key">Get the Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b> (See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>)
-</p><p>Download the key.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</pre>
+<pre>gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https -o patrick.asc https://www.whonix.org/patrick.asc</textarea>
-</div>
-</div>
-<p>Check fingerprints/owners without importing anything.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg patrick.asc</textarea>
-</div>
-</div>
-<p>Verify it shows the following.
-</p>
-<pre>pub   rsa4096/0x8D66066A2EEACCDA 2014-01-16 [SC] [expires: 2021-04-17]
-      916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
-uid                             Patrick Schleizer &lt;adrelanos@riseup.net&gt;
-sub   rsa4096/0x3B1E6942CE998547 2014-01-16 [E] [expires: 2021-04-17]
-sub   rsa4096/0x10FDAC53119B3FD6 2014-01-16 [A] [expires: 2021-04-17]
-sub   rsa4096/0xCB8D50BB77BB3C48 2014-01-16 [S] [expires: 2021-04-17]
-</pre>
-<p>If it checks out, import the key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>gpg --import patrick.asc</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --import patrick.asc</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>It isn't safe to only get the signing key from one source for the download you want to verify. For better security, <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">learn more about the Whonix Signing Key</a>.
 </p>
 <h2><span class="mw-headline" id="Get_the_Source_Code">Get the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install git and curl.
-</p>
-<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
+</div>
+</div>
 <p>Get source code including git submodules. 
-</p>
-<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+</div>
+</div>
 <p>Note: If using an older version of git (from Debian Jessie, Whonix 13, etc), remove <code>--jobs=4</code>.
 </p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
 </p><p>Shift to the source folder.
-</p>
-<pre>cd Whonix
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>cd Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+</div>
+</div>
 <h2><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b><sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p><p>Retrieve a list of available git tags.
@@ -1568,7 +1558,7 @@ Then press.
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1841,7 +1831,7 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1853,32 +1843,32 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180831002212
+Cached time: 20180911071835
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.536 seconds
-Real time usage: 0.597 seconds
-Preprocessor visited node count: 3535/1000000
-Preprocessor generated node count: 8232/1000000
-Post‐expand include size: 72390/2097152 bytes
-Template argument size: 8378/2097152 bytes
+CPU time usage: 0.508 seconds
+Real time usage: 0.561 seconds
+Preprocessor visited node count: 3528/1000000
+Preprocessor generated node count: 8194/1000000
+Post‐expand include size: 72221/2097152 bytes
+Template argument size: 8490/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 35456/5000000 bytes
+Unstrip post‐expand size: 35029/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  341.821      1 -total
- 22.62%   77.336     29 Template:CodeSelect
- 21.11%   72.170      1 Template:Stay_tuned
- 20.62%   70.500      5 Template:Mbox
- 17.54%   59.956      5 Template:Ambox
- 16.00%   54.699      1 Template:Build_Configuration
- 12.59%   43.032      2 Template:Reflist
-  9.91%   33.883      1 Template:Build_Documentation_apt-cache
-  9.73%   33.242      5 Template:Category_handler
-  8.89%   30.388      1 Template:Default_Passwords
+100.00%  327.489      1 -total
+ 23.59%   77.260     30 Template:CodeSelect
+ 22.42%   73.429      1 Template:Stay_tuned
+ 20.35%   66.635      5 Template:Mbox
+ 17.49%   57.270      5 Template:Ambox
+ 17.01%   55.720      1 Template:Build_Configuration
+ 12.76%   41.793      2 Template:Reflist
+ 10.55%   34.545      1 Template:Build_Documentation_apt-cache
+  9.83%   32.196      5 Template:Category_handler
+  9.78%   32.031      1 Template:Build_Documentation_Get_Source_Code
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241</a>"</div>
@@ -1907,5 +1897,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20180831002212 -->
+<!-- Cached/compressed 20180911071835 -->
 </html>
