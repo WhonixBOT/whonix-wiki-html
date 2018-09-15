@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Spectre Meltdown - Whonix
  url: ./Spectre_Meltdown
- date: Thu Sep 13 08:07:56 2018
+ date: Sat Sep 15 08:08:01 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -226,7 +226,35 @@ VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</pre>
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</textarea>
 </div>
 </div>
-<p>3. spec-ctrl <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>3. l1d-flush-on-vm-enter on <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</textarea>
+</div>
+</div>
+<p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</textarea>
+</div>
+</div>
+<p>5. spec-ctrl <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -240,19 +268,18 @@ VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</pre>
 VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</textarea>
 </div>
 </div>
-<p><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
-</p><p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p>6. nestedpaging <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched off
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</pre>
+<pre>VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched off
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 </div>
 <p>Above instructions cover only default VM names Whonix-Gateway and Whonix-Workstation. If you are using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> and/or <a data-href="/wiki/Multiple_Whonix-Workstations#Multiple_Whonix-Gateways" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Gateways</a>, you need to repeat these instructions for all custom created VMs as well.
@@ -262,8 +289,8 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 <p>Apply <a href="#Processor_Microcode_Updates">#Processor Microcode Updates</a> on your host operating system. The updated mitigative host CPU instructions are passed through by default. No further action is needed.
 </p>
 <h1><span class="mw-headline" id="Processor_Microcode_Updates">Processor Microcode Updates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=5.html" title="Edit section: Processor Microcode Updates">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>One recent example of a firmware vulnerability is the processor microcode update for modern chips to address <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3620" href="https://security-tracker.debian.org/tracker/CVE-2018-3620" rel="noreferrer noopener" target="_blank">speculative</a> <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3646" href="https://security-tracker.debian.org/tracker/CVE-2018-3646" rel="noreferrer noopener" target="_blank">execution flaws</a>. The <a class="external text" data-href="https://www.debian.org/security/2018/dsa-4279" href="https://www.debian.org/security/2018/dsa-4279" rel="noreferrer noopener" target="_blank">Debian package</a> is non-free software, therefore only available in the Debian nonfree repository, meaning it is not installed by default in all Whonix variants. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Whonix recommends to <a data-href="/wiki/Avoid_nonfree_software" href="./Avoid_nonfree_software.html" title="Avoid nonfree software">avoid nonfree software</a> but in this case idealism would result in insecurity.
-</p><p>It is unnecessary to apply these updates in standard <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> and <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> guest VMs, as they do not have the ability to alter the microcode. However, processor microcode updates <u>should</u> always be applied on the host operating system (for processors by Intel or AMD) <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> and baremetal configurations like <a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+<p>One recent example of a firmware vulnerability is the processor microcode update for modern chips to address <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3620" href="https://security-tracker.debian.org/tracker/CVE-2018-3620" rel="noreferrer noopener" target="_blank">speculative</a> <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3646" href="https://security-tracker.debian.org/tracker/CVE-2018-3646" rel="noreferrer noopener" target="_blank">execution flaws</a>. The <a class="external text" data-href="https://www.debian.org/security/2018/dsa-4279" href="https://www.debian.org/security/2018/dsa-4279" rel="noreferrer noopener" target="_blank">Debian package</a> is non-free software, therefore only available in the Debian nonfree repository, meaning it is not installed by default in all Whonix variants. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Whonix recommends to <a data-href="/wiki/Avoid_nonfree_software" href="./Avoid_nonfree_software.html" title="Avoid nonfree software">avoid nonfree software</a> but in this case idealism would result in insecurity.
+</p><p>It is unnecessary to apply these updates in standard <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> and <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> guest VMs, as they do not have the ability to alter the microcode. However, processor microcode updates <u>should</u> always be applied on the host operating system (for processors by Intel or AMD) <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> and baremetal configurations like <a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
 <h3><span class="mw-headline" id="Microcode_Package_Check">Microcode Package Check</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>In the following checks, the package is not installed if there is no output.
@@ -295,15 +322,15 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 <textarea class="codeBoxArea" readonly="readonly" rows="1">dnf list | grep microcode</textarea>
 </div>
 </div>
-<p>The Qubes check should confirm the <code>microcode_ctl.x86_64</code> package is already installed. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+<p>The Qubes check should confirm the <code>microcode_ctl.x86_64</code> package is already installed. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
 <h3><span class="mw-headline" id="Install_Microcode_Package">Install Microcode Package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <h4><span class="mw-headline" id="Intel">Intel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p><u>For Debian hosts</u>
-</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/intel-microcode" href="https://packages.debian.org/stretch-backports/intel-microcode" rel="noreferrer noopener" target="_blank"><code>intel-microcode</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_10-0"><a href="#cite_note-prefer_stable_apt_sources-10">[10]</a></sup>
+</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/intel-microcode" href="https://packages.debian.org/stretch-backports/intel-microcode" rel="noreferrer noopener" target="_blank"><code>intel-microcode</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_13-0"><a href="#cite_note-prefer_stable_apt_sources-13">[13]</a></sup>
 </p><p>Note: the following instructions apply only to the Debian <code>stretch</code> host operating system using Whonix 14.0.0.7.4. Other host operating systems and other Whonix versions may use a codename different to <code>stretch</code>.
 </p><p>1. Open a terminal on the host.
-</p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -341,7 +368,7 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </div>
 <p>The procedure is now complete.
 </p><p>5. Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> To proceed, run.
+</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> To proceed, run.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -355,10 +382,10 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </div>
 <h4><span class="mw-headline" id="AMD">AMD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-6" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-6.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p><u>For Debian hosts</u>
-</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/amd64-microcode" href="https://packages.debian.org/stretch-backports/amd64-microcode" rel="noreferrer noopener" target="_blank"><code>amd64-microcode</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_10-1"><a href="#cite_note-prefer_stable_apt_sources-10">[10]</a></sup>
+</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/amd64-microcode" href="https://packages.debian.org/stretch-backports/amd64-microcode" rel="noreferrer noopener" target="_blank"><code>amd64-microcode</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_13-1"><a href="#cite_note-prefer_stable_apt_sources-13">[13]</a></sup>
 </p><p>Note: the following instructions apply only to the Debian <code>stretch</code> host operating system using Whonix 14.0.0.7.4. Other host operating systems and other Whonix versions may use a codename different to <code>stretch</code>.
 </p><p>1. Open a terminal on the host.
-</p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -396,7 +423,7 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </div>
 <p>The procedure is now complete.
 </p><p>5. Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> To proceed, run.
+</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> To proceed, run.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -412,7 +439,7 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 <p>It is possible to check if the system is vulnerable to the <a class="external text" data-href="https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" href="https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" rel="noreferrer noopener" target="_blank">Spectre</a> and <a class="external text" data-href="https://meltdownattack.com/" href="https://meltdownattack.com/" rel="noreferrer noopener" target="_blank">Meltdown</a> attacks, which use flaws in modern chip design to bypass system protections.
 </p>
 <h4><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" rel="noreferrer noopener" target="_blank"><code>spectre-meltdown-checker</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_10-2"><a href="#cite_note-prefer_stable_apt_sources-10">[10]</a></sup>
+<p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" rel="noreferrer noopener" target="_blank"><code>spectre-meltdown-checker</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_13-2"><a href="#cite_note-prefer_stable_apt_sources-13">[13]</a></sup>
 </p><p>1. Boot the Whonix-Workstation (<code>whonix-ws</code>) TemplateVM.
 </p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources.
 </p><p>Note: this applies to Whonix 14.0.0.7.4. Later Whonix versions may use a codename different to <code>stretch</code>.
@@ -466,7 +493,7 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </div>
 <p>The procedure is now complete.
 </p><p>5. Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> To proceed, run.
+</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> To proceed, run.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -507,16 +534,13 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </p>
 </span></li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
-<blockquote>
-<p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
-<br/>
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a>
+<blockquote>
+<p>--l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, “CVE-2018-3646”.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><code>--spec-ctrl off</code> should be <code>on</code> or <code>off</code>?</span>
-</li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, “<a class="external text" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">CVE-2018-3646</a>”.
 <br/>
@@ -524,20 +548,57 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">Relevant Debian packages for processor microcode: <a class="external text" data-href="https://packages.debian.org/stretch/intel-microcode" href="https://packages.debian.org/stretch/intel-microcode" rel="noreferrer noopener" target="_blank">Intel</a> and <a class="external text" data-href="https://packages.debian.org/stretch/amd64-microcode" href="https://packages.debian.org/stretch/amd64-microcode" rel="noreferrer noopener" target="_blank">amd64</a>.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646</a>
+<blockquote>
+<p>For users not concerned by this security issue, the default mitigation can be disabled using<br/>
+<br/>
+</p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm name --l1d-flush-on-sched off</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm name --l1d-flush-on-sched off</textarea>
+</div>
+</div>
+</blockquote>
+<p>Since we want to enable the security feature we set <code>--l1d-flush-on-sched on</code>.
+</p>
+</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<blockquote>
+<p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
+<br/>
+<a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a>
+</p>
+</blockquote></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Installing these updates by default would require the Debian nonfree repository, and logically also make Whonix images nonfree.</span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+According to this <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox ticket</a> <code>--spec-ctrl</code> should be set to <code>on</code>.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">ARM is less affected than Intel architecture.</span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<blockquote>
+<p>--nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, “Nested paging and VPIDs” and Section 13.4.1, “CVE-2018-3646”.
+</p>
+</blockquote></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">See: <a class="external free" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739</a></span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">Relevant Debian packages for processor microcode: <a class="external text" data-href="https://packages.debian.org/stretch/intel-microcode" href="https://packages.debian.org/stretch/intel-microcode" rel="noreferrer noopener" target="_blank">Intel</a> and <a class="external text" data-href="https://packages.debian.org/stretch/amd64-microcode" href="https://packages.debian.org/stretch/amd64-microcode" rel="noreferrer noopener" target="_blank">amd64</a>.</span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">This package is installed by default in Qubes to automatically protect users against hardware threats.</span>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">Installing these updates by default would require the Debian nonfree repository, and logically also make Whonix images nonfree.</span>
 </li>
-<li id="cite_note-prefer_stable_apt_sources-10"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-prefer_stable_apt_sources_10-0">10.0</a></sup> <sup><a href="#cite_ref-prefer_stable_apt_sources_10-1">10.1</a></sup> <sup><a href="#cite_ref-prefer_stable_apt_sources_10-2">10.2</a></sup></span> <span class="reference-text">
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">ARM is less affected than Intel architecture.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">See: <a class="external free" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739</a></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">This package is installed by default in Qubes to automatically protect users against hardware threats.</span>
+</li>
+<li id="cite_note-prefer_stable_apt_sources-13"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-prefer_stable_apt_sources_13-0">13.0</a></sup> <sup><a href="#cite_ref-prefer_stable_apt_sources_13-1">13.1</a></sup> <sup><a href="#cite_ref-prefer_stable_apt_sources_13-2">13.2</a></sup></span> <span class="reference-text">
 Users should <a data-href="/wiki/Install_Software#Prefer_Packages_from_Debian_Stable_Repository" href="./Install_Software.html" title="Install Software">Prefer Packages from Debian Stable Repository</a>, but using backports is better than <a data-href="/wiki/Install_Software#Avoid_Manual_Software_Installation" href="./Install_Software.html" title="Install Software">manual software installation</a> or <a data-href="/wiki/Install_Software#Avoid_Third_Party_Package_Managers" href="./Install_Software.html" title="Install Software">using third party package managers</a> since this <a data-href="/wiki/Install_Software#Prefer_APT" href="./Install_Software.html" title="Install Software">prefers APT</a>. To contain the risk, <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users might want to consider using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> and <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> users might want to consider using <a data-href="/wiki/Multiple_Whonix-Workstations#Multiple_Qubes-Whonix_TemplateVMs" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Qubes-Whonix TemplateVMs</a> or <a data-href="/wiki/Install_Software#Install_Software_in_a_TemplateBasedVM" href="./Install_Software.html" title="Install Software">Software Installation in a TemplateBasedVM</a>.</span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 Or alternatively use the <i>.onion</i> mirror. 
 
 <div class="codeContainer">
@@ -551,32 +612,32 @@ Or alternatively use the <i>.onion</i> mirror.
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
 </div>
 </div></span>
-</li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
-</li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
-Or alternatively use the <i>.onion</i> mirror. 
-
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div></span>
-</li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
 </li>
 <li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
+Or alternatively use the <i>.onion</i> mirror. 
+
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
+</div>
+</div></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>Please consider a <a class="external text" data-href="./Payment" href="./Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Spectre_Meltdown" href="./Spectre_Meltdown" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -588,32 +649,32 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180912080237
+Cached time: 20180914112906
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.160 seconds
-Real time usage: 0.184 seconds
-Preprocessor visited node count: 508/1000000
-Preprocessor generated node count: 1437/1000000
-Post‐expand include size: 16385/2097152 bytes
-Template argument size: 1993/2097152 bytes
+CPU time usage: 0.164 seconds
+Real time usage: 0.189 seconds
+Preprocessor visited node count: 558/1000000
+Preprocessor generated node count: 1567/1000000
+Post‐expand include size: 16859/2097152 bytes
+Template argument size: 2286/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8115/5000000 bytes
+Unstrip post‐expand size: 10114/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  145.809      1 -total
- 45.82%   66.813      1 Template:Processor_Microcode_Updates
- 45.29%   66.032     24 Template:CodeSelect
- 24.77%   36.110      2 Template:Install_Backport_Host
- 15.54%   22.656      1 Template:Reflist
- 14.52%   21.177      1 Template:Footer
- 12.23%   17.826      1 Template:Install_Backport
- 10.79%   15.732      1 Template:VirtualBox_Spectre_Meltdown
-  6.13%    8.944      1 Template:FooterLight
-  6.12%    8.927      1 Template:Qubes_upgrade_dom0
+100.00%  148.504      1 -total
+ 47.96%   71.224     27 Template:CodeSelect
+ 44.02%   65.375      1 Template:Processor_Microcode_Updates
+ 22.65%   33.637      2 Template:Install_Backport_Host
+ 16.01%   23.778      1 Template:Reflist
+ 14.72%   21.865      1 Template:VirtualBox_Spectre_Meltdown
+ 12.63%   18.755      1 Template:Footer
+ 12.15%   18.044      1 Template:Install_Backport
+  6.20%    9.214      1 Template:Qubes_upgrade_dom0
+  4.54%    6.746      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755" dir="ltr" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755">https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755</a>"</div>
@@ -642,5 +703,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_M
 </div>
 
 </body>
-<!-- Cached/compressed 20180912080237 -->
+<!-- Cached/compressed 20180914112906 -->
 </html>

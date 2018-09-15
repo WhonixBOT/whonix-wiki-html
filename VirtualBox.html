@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox - Whonix
  url: ./VirtualBox
- date: Thu Sep 13 08:15:36 2018
+ date: Sat Sep 15 08:15:46 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -451,7 +451,35 @@ VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</pre>
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</textarea>
 </div>
 </div>
-<p>3. spec-ctrl <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+<p>3. l1d-flush-on-vm-enter on <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</textarea>
+</div>
+</div>
+<p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</textarea>
+</div>
+</div>
+<p>5. spec-ctrl <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -465,22 +493,21 @@ VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</pre>
 VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</textarea>
 </div>
 </div>
-<p><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
-</p><p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>6. nestedpaging <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched off
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</pre>
+<pre>VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched off
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched off</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 </div>
-<p><sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<p><sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p><p><b>4.Start Whonix</b><br/>
 </p><p>Starting Whonix is simple. 
 </p><p>Start VirtualBox -&gt; Double click on the Whonix-Gateway and Whonix-Workstation.
@@ -571,16 +598,13 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 </span></li>
 <li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
-<blockquote>
-<p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
-<br/>
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a>
+<blockquote>
+<p>--l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, “CVE-2018-3646”.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><code>--spec-ctrl off</code> should be <code>on</code> or <code>off</code>?</span>
-</li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, “<a class="external text" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">CVE-2018-3646</a>”.
 <br/>
@@ -588,14 +612,51 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">Check any difference using <a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a>.</span>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646</a>
+<blockquote>
+<p>For users not concerned by this security issue, the default mitigation can be disabled using<br/>
+<br/>
+</p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>VBoxManage modifyvm name --l1d-flush-on-sched off</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm name --l1d-flush-on-sched off</textarea>
+</div>
+</div>
+</blockquote>
+<p>Since we want to enable the security feature we set <code>--l1d-flush-on-sched on</code>.
+</p>
+</span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<blockquote>
+<p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
+<br/>
+<a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a>
+</p>
+</blockquote></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+According to this <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox ticket</a> <code>--spec-ctrl</code> should be set to <code>on</code>.</span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+<blockquote>
+<p>--nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, “Nested paging and VPIDs” and Section 13.4.1, “CVE-2018-3646”.
+</p>
+</blockquote></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">Check any difference using <a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a>.</span>
 </li>
 </ol></div></div>
 </div>
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="./Design" href="./Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="./Dev/Developer_Portal" href="./Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VirtualBox" href="./VirtualBox" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -607,32 +668,32 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180910064441
+Cached time: 20180914110146
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.248 seconds
-Real time usage: 0.271 seconds
-Preprocessor visited node count: 1857/1000000
-Preprocessor generated node count: 5660/1000000
-Post‐expand include size: 32031/2097152 bytes
-Template argument size: 4407/2097152 bytes
+CPU time usage: 0.280 seconds
+Real time usage: 0.333 seconds
+Preprocessor visited node count: 1904/1000000
+Preprocessor generated node count: 5770/1000000
+Post‐expand include size: 32731/2097152 bytes
+Template argument size: 4700/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8071/5000000 bytes
+Unstrip post‐expand size: 9850/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  206.188      1 -total
- 93.27%  192.307      1 Template:VirtualBox
- 38.41%   79.192      1 Template:DownloadTable
- 25.33%   52.218      4 Template:Mbox
- 21.70%   44.733      4 Template:Ambox
- 12.40%   25.576      4 Template:Category_handler
- 11.42%   23.545      9 Template:CodeSelect
-  8.00%   16.498      1 Template:Reflist
-  7.02%   14.468      4 Template:Ambox/core
-  6.83%   14.082      1 Template:Footer
+100.00%  267.460      1 -total
+ 92.31%  246.884      1 Template:VirtualBox
+ 36.46%   97.505      1 Template:DownloadTable
+ 24.05%   64.337      4 Template:Mbox
+ 20.41%   54.589      4 Template:Ambox
+ 14.01%   37.474     12 Template:CodeSelect
+ 11.25%   30.089      4 Template:Category_handler
+  9.50%   25.421      1 Template:VirtualBox_Spectre_Meltdown
+  9.34%   24.968      1 Template:Reflist
+  6.87%   18.384      4 Template:Ambox/core
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303">https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303</a>"</div>
@@ -661,5 +722,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBo
 </div>
 
 </body>
-<!-- Cached/compressed 20180910064441 -->
+<!-- Cached/compressed 20180914110146 -->
 </html>
