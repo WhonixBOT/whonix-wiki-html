@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Physical Isolation - Whonix
  url: ../Dev/Build_Documentation/Physical_Isolation/12
- date: Sat Sep 15 07:40:58 2018
+ date: Sun Sep 16 07:40:49 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -849,16 +849,62 @@ Removing packages/kde-privacy/
 <div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
 <div class="mw-collapsible-content">
 <p>Do you want to <u>opt-in</u> for <u>Whonix's APT Repository</u>? This is set using an environment variable or <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a>. Below is an example using an environment variable.
-</p>
-<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --codename jessie'
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</textarea>
+</div>
+</div>
 <p>Add an environment variable as one normally does on that specific Linux platform. For example, to enable the Whonix stable repository during build, you could set <code>WHONIX_APT_REPOSITORY_OPTS</code> by interjecting it between <code>sudo</code> and the <code>./whonix_build</code> command. Below is an example. Do not use <code>[...]</code>. Replace it with other chosen build parameters (such as <code>--build</code>, <code>--target</code> etc.) after <code>./whonix_build</code>.
-</p>
-<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
+</div>
+</div>
 </div>
 </div>
 <p><b>APT Onion Build Sources</b>
@@ -1559,7 +1605,7 @@ Then press.
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1832,7 +1878,7 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://www.whonix.org/blog/" href="https://www.whonix.org/blog/" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1844,32 +1890,32 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180915054048
+Cached time: 20180916054038
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.480 seconds
-Real time usage: 0.699 seconds
-Preprocessor visited node count: 3528/1000000
-Preprocessor generated node count: 8194/1000000
-Post‐expand include size: 72221/2097152 bytes
-Template argument size: 8490/2097152 bytes
+CPU time usage: 0.520 seconds
+Real time usage: 0.570 seconds
+Preprocessor visited node count: 3559/1000000
+Preprocessor generated node count: 8228/1000000
+Post‐expand include size: 72930/2097152 bytes
+Template argument size: 8805/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 34955/5000000 bytes
+Unstrip post‐expand size: 34471/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  482.662      1 -total
- 53.36%  257.537     30 Template:CodeSelect
- 37.07%  178.901      1 Template:Build_Documentation_Get_Source_Code
- 13.76%   66.406      5 Template:Mbox
- 12.67%   61.137      1 Template:Stay_tuned
- 11.66%   56.264      5 Template:Ambox
-  9.45%   45.629      1 Template:Build_Configuration
-  8.01%   38.669      2 Template:Reflist
-  6.45%   31.132      5 Template:Category_handler
-  6.23%   30.063      1 Template:Build_Documentation_apt-cache
+100.00%  342.228      1 -total
+ 27.08%   92.675     35 Template:CodeSelect
+ 21.11%   72.230      1 Template:Stay_tuned
+ 20.13%   68.882      5 Template:Mbox
+ 18.29%   62.597      1 Template:Build_Configuration
+ 17.20%   58.879      5 Template:Ambox
+ 12.32%   42.152      2 Template:Reflist
+  9.67%   33.082      5 Template:Category_handler
+  9.28%   31.745      1 Template:Build_Documentation_apt-cache
+  8.91%   30.494      5 Template:Box
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=36241</a>"</div>

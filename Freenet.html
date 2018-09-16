@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Freenet - Whonix
  url: ./Freenet
- date: Sat Sep 15 07:53:57 2018
+ date: Sun Sep 16 07:53:50 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -314,7 +314,7 @@ You should see <b>Good signature from "Florent Daigniere &lt;florent.daigniere@t
 <p>Note that Freenet includes its own secure internal updater that downloads new versions from inside the network. Repeating these steps after initial installation are not necessary.
 </p>
 <h3><span class="mw-headline" id="Prepare_Tor_Browser_for_browsing_Freenet">Prepare Tor Browser for browsing Freenet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Freenet&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Freenet&amp;action=edit&amp;section=8.html" title="Edit section: Prepare Tor Browser for browsing Freenet">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><b>Note: this is no longer required once we release custom Tor Browser for connecting to alternative networks, except in the case of YaCy that needs internet access.</b>
+<p>(Note: the following will be no longer required once Whonix releases a custom Tor Browser for connecting to alternative networks. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>)
 </p><p>Configure <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a> to connect to localhost.
 </p>
 <table class="metadata plainlinks ambox ambox-notice" style="">
@@ -327,12 +327,12 @@ You should see <b>Good signature from "Florent Daigniere &lt;florent.daigniere@t
 <p>Finally, visit <a class="external free" data-href="http://127.0.0.1:8888" href="http://127.0.0.1:8888" rel="noreferrer noopener" target="_blank">http://127.0.0.1:8888</a> in Tor Browser to access Freenet. Further changes to settings and plugin installation is also done through this UI.
 </p>
 <h3><span class="mw-headline" id="Plugins">Plugins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Freenet&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Freenet&amp;action=edit&amp;section=10.html" title="Edit section: Plugins">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Plugins provide much of the rich functionality of the Freenet experience. They act as an abstraction layer that present text in different layouts for different use cases including forums, mail, blogs, code repositories, social networking, IRC and <a class="external text" data-href="https://wiki.freenetproject.org/Projects" href="https://wiki.freenetproject.org/Projects" rel="noreferrer noopener" target="_blank">more</a>. The <a class="external text" data-href="http://freesocial.draketo.de/" href="http://freesocial.draketo.de/" rel="noreferrer noopener" target="_blank">Freenet Social Networking Guide</a> explains how to set them up. Also other relevant guides.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<p>Plugins provide much of the rich functionality of the Freenet experience. They act as an abstraction layer that present text in different layouts for different use cases including forums, mail, blogs, code repositories, social networking, IRC and <a class="external text" data-href="https://wiki.freenetproject.org/Projects" href="https://wiki.freenetproject.org/Projects" rel="noreferrer noopener" target="_blank">more</a>. The <a class="external text" data-href="http://freesocial.draketo.de/" href="http://freesocial.draketo.de/" rel="noreferrer noopener" target="_blank">Freenet Social Networking Guide</a> explains how to set them up. Also other relevant guides.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <h3><span class="mw-headline" id="Tips">Tips</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Freenet&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Freenet&amp;action=edit&amp;section=11.html" title="Edit section: Tips">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>This section documents some Whonix specific tips that you should be aware of for a smoother user experience.
 </p>
-<ul><li>Torbirdy must be disabled for Thunderbird to connect locally to Freemail's SMTP server. As a side-effect HTML emails are rendered by Thunderbird. To disable, go to: <code>Options</code> -&gt; <code>View</code> -&gt; <code>Message Body As</code> -&gt; <code>Plain Text</code>. Freemail takes care of privacy concerns by scrubbing mail headers.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li>
+<ul><li>Torbirdy must be disabled for Thunderbird to connect locally to Freemail's SMTP server. As a side-effect HTML emails are rendered by Thunderbird. To disable, go to: <code>Options</code> -&gt; <code>View</code> -&gt; <code>Message Body As</code> -&gt; <code>Plain Text</code>. Freemail takes care of privacy concerns by scrubbing mail headers.<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup></li>
 <li>Freemail encrypts metadata and subject lines by default. However for extra assurance and to future-proof your mail against quantum computers you may layer E2E on-top of Freemail with <a data-href="/wiki/PQCrypto#Codecrypt" href="./PQCrypto.html" title="PQCrypto">Codecrypt</a>.</li>
 <li>Technically each plugin's generated data is self contained under its own folder under the Freenet directory. For example, to archive your mail spool, copy the /freenet/freemail-wot to your backups.</li>
 <li>The menu layout in Freenet changed slightly since the <a class="external text" data-href="http://freesocial.draketo.de/" href="http://freesocial.draketo.de/" rel="noreferrer noopener" target="_blank">Freenet Social Networking Guide</a> was written. For WoT identities backup the 'Insert URI' to a safe place. This is your identity's private key and should never be shared. This info is under <code>Edit</code> of an existing identity. To restore it  on a new node paste it in: <code>Create an identity</code> -&gt; <code>Use an existing SSK URI key pair for the identity</code></li></ul>
@@ -373,14 +373,16 @@ This is tested. Freenet installs normally, but even with lowest security setting
 </li>
 <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://freenetproject.org/download.html#keyring" href="https://freenetproject.org/download.html" rel="noreferrer noopener" target="_blank">https://freenetproject.org/download.html#keyring</a></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/" href="https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/" rel="noreferrer noopener" target="_blank">https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/</a></span>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">Except in the case of <a data-href="/wiki/YaCy" href="./YaCy.html" title="YaCy">YaCy</a> that needs internet access.</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java" href="https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java" rel="noreferrer noopener" target="_blank">https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java</a></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/" href="https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/" rel="noreferrer noopener" target="_blank">https://d6.gnutella2.info/freenet/USK@xedmmitRTj9-PXJxoPbD7RY1gf9pKi0OcsRmjNPPIU4,AzFWTYV~9-I~eXis14tIkJ4XkF17gIgZrB294LjFXjc,AQACAAE/fmsguide/6/</a></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java" href="https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java" rel="noreferrer noopener" target="_blank">https://github.com/freenet/plugin-Freemail/blob/master/src/org/freenetproject/freemail/MailHeaderFilter.java</a></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Freenet" href="./Freenet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Freenet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Freenet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -392,32 +394,32 @@ This is tested. Freenet installs normally, but even with lowest security setting
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180914063254
+Cached time: 20180915173028
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.124 seconds
-Real time usage: 0.148 seconds
-Preprocessor visited node count: 770/1000000
-Preprocessor generated node count: 4785/1000000
-Post‐expand include size: 6541/2097152 bytes
+Real time usage: 0.141 seconds
+Preprocessor visited node count: 778/1000000
+Preprocessor generated node count: 4807/1000000
+Post‐expand include size: 6535/2097152 bytes
 Template argument size: 1231/2097152 bytes
 Highest expansion depth: 18/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9445/5000000 bytes
+Unstrip post‐expand size: 9489/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  109.696      1 -total
- 25.47%   27.937      1 Template:TBB_localhost
- 23.60%   25.892      9 Template:CodeSelect
- 23.20%   25.453      1 Template:Mbox
- 21.35%   23.424      1 Template:Footer
- 18.71%   20.527      1 Template:Ambox
- 10.73%   11.767      1 Template:Reflist
- 10.55%   11.568      1 Template:Category_handler
-  9.58%   10.510      1 Template:FooterLight
-  6.10%    6.696      1 Template:Footer_this_is_a_wiki
+100.00%  104.004      1 -total
+ 25.28%   26.295      1 Template:TBB_localhost
+ 24.58%   25.563      9 Template:CodeSelect
+ 22.36%   23.259      1 Template:Mbox
+ 19.02%   19.783      1 Template:Footer
+ 17.92%   18.633      1 Template:Ambox
+ 11.14%   11.581      1 Template:Reflist
+ 10.22%   10.627      1 Template:Category_handler
+  8.61%    8.956      1 Template:FooterLight
+  5.15%    5.352      1 Template:Ambox/core
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Freenet&amp;oldid=35190" dir="ltr" href="https://www.whonix.org/w/index.php?title=Freenet&amp;oldid=35190">https://www.whonix.org/w/index.php?title=Freenet&amp;oldid=35190</a>"</div>
@@ -446,5 +448,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Freenet&a
 </div>
 
 </body>
-<!-- Cached/compressed 20180914063254 -->
+<!-- Cached/compressed 20180915173028 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/TimeSync - Whonix
  url: ../Dev/TimeSync
- date: Sat Sep 15 07:49:10 2018
+ date: Sun Sep 16 07:48:56 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -371,7 +371,7 @@ OK: (Full torified network access allowed.)
 </p><p><span id="sclockadj2"></span>
 </p>
 <h1><span id="Adjusting_time_slowly_using_adjtimex/ntp_adjtime"></span><span class="mw-headline" id="Adjusting_time_slowly_using_adjtimex.2Fntp_adjtime">Adjusting time slowly using adjtimex/ntp_adjtime</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=18.html" title="Edit section: Adjusting time slowly using adjtimex/ntp adjtime">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Under <a class="external text" data-href="https://github.com/Whonix/sdwdate/pull/4" href="https://github.com/Whonix/sdwdate/pull/4" rel="noreferrer noopener" target="_blank">consideration</a> is changing the time with <tt>sclockadj2</tt>. The initial drive for this was that calling <tt>clock_settime()</tt> in the original <tt>sclockadj</tt> can result in several thousand entries in <tt>systemd</tt>'s journal per invocation (can be seen with <tt>journalctrl -f</tt>) on Debian <tt>jessie</tt>.
+<p>Under <a class="external text" data-href="https://github.com/Whonix/sdwdate/pull/4" href="https://github.com/Whonix/sdwdate/pull/4" rel="noreferrer noopener" target="_blank">consideration</a> is changing the time with <tt>sclockadj2</tt>. The initial drive for this was that calling <tt>clock_settime()</tt> in the original <tt>sclockadj</tt> can result in several thousand entries in <tt>systemd</tt>'s journal per invocation (can be seen with <tt>journalctrl -f</tt>) on Debian.
 </p><p><tt>sclockadj2</tt> uses <tt>adjtimex</tt> call in libc (als called <tt>ntp_adjtime</tt>) which translates to Linux' kernel system call 124. This is a modal interface that is used by `ntpd` to change the system clock. <tt>adjtimex</tt> supports a mode with "hard" changes to the time, but those generate entries in <tt>systemd</tt> journal, just like with <tt>clock_settime</tt>.
 </p><p>The offset mode for <tt>adjtimex</tt> allows a change of 0.5 seconds per call (used to be ~130 milisec until the 2.6 kernel). The documentation of this call is incomplete, partly resulting from the limited number of clients (<tt>ntpd</tt>, <tt>chronyd</tt>) using this interface, but by tracing the kernel internals (<tt>linux/kernel/time/ntp.c</tt> and <tt>/linux/kernel/time/timekeeping.c</tt>) one can get a more complete picture, including that modern kernels support a NANO mode easier implementation of smaller adjustments than the older μsecond based interface, without the need to do clock tick adjustment calculations.
 </p><p>Based on this interface and mode bit definitions taken from <tt>/usr/include/linux/timex.h</tt> (more complete than the counterparts you typically find online) to form a Python based interface via <tt>ctypes</tt>. Primarily first setting the kernel internals to handle nanoseconds specifications and run in PLL mode. Then using OFFSET  to adjust the time.
@@ -445,7 +445,7 @@ With this call the kernel is instructed to change the time gradually. You can ob
 <h2><span class="mw-headline" id="htpdate">htpdate</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=23.html" title="Edit section: htpdate">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Original.
 </p>
-<ul><li><a class="external text" data-href="http://www.vervest.org/htp/" href="http://www.vervest.org/htp/" rel="noreferrer noopener" target="_blank">htpdate</a> (<a class="external text" data-href="https://packages.debian.org/jessie/htpdate" href="https://packages.debian.org/jessie/htpdate" rel="noreferrer noopener" target="_blank">debian package</a>)</li>
+<ul><li><a class="external text" data-href="http://www.vervest.org/htp/" href="http://www.vervest.org/htp/" rel="noreferrer noopener" target="_blank">htpdate</a> (<a class="external text" data-href="https://packages.debian.org/stretch/htpdate" href="https://packages.debian.org/stretch/htpdate" rel="noreferrer noopener" target="_blank">debian package</a>)</li>
 <li>Detailed Package status in Debian: <a class="external free" data-href="https://packages.qa.debian.org/h/htpdate.html" href="https://packages.qa.debian.org/h/htpdate.html" rel="noreferrer noopener" target="_blank">https://packages.qa.debian.org/h/htpdate.html</a></li>
 <li>unresponsive upstream [tails-dev contact them because of their tails_htp fork - no reply] [no reply to Patrick in past]</li>
 <li>htp=htpdate (same program as the one on rkeene.org)</li></ul>
@@ -768,7 +768,7 @@ Credits: Thanks to <a class="external text" data-href="https://security.stackexc
 <li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/8751" href="https://trac.torproject.org/projects/tor/ticket/8751" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/8751</a></span>
 </li>
 <li id="cite_note-tlsleaktwo-35"><span class="mw-cite-backlink"><a href="#cite_ref-tlsleaktwo_35-0">↑</a></span> <span class="reference-text">
-See <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/4852" href="https://trac.torproject.org/projects/tor/ticket/4852" rel="noreferrer noopener" target="_blank">torproject.org #4852: Clients send NETINFO with time</a>. The ticket says fixed. However, <a class="external text" data-href="https://packages.debian.org/de/wheezy/tor" href="https://packages.debian.org/de/wheezy/tor" rel="noreferrer noopener" target="_blank">Debian wheezy (currently: oldstable) (which Whonix 10 was based on) is using Tor 0.2.3</a> but Nick's <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/4852#comment:20" href="https://trac.torproject.org/projects/tor/ticket/4852" rel="noreferrer noopener" target="_blank">patch appeared first in 0.2.4</a>. It was solved in Whonix 11, because it is based on Debian jessie, that contains <a class="external text" data-href="https://packages.debian.org/de/jessie/tor" href="https://packages.debian.org/de/jessie/tor" rel="noreferrer noopener" target="_blank">a more recent version of Tor</a>.</span>
+See <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/4852" href="https://trac.torproject.org/projects/tor/ticket/4852" rel="noreferrer noopener" target="_blank">torproject.org #4852: Clients send NETINFO with time</a>. The ticket says fixed. However, <a class="external text" data-href="https://packages.debian.org/de/wheezy/tor" href="https://packages.debian.org/de/wheezy/tor" rel="noreferrer noopener" target="_blank">Debian wheezy (which Whonix 10 was based on) was using Tor 0.2.3</a> but Nick's <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/4852#comment:20" href="https://trac.torproject.org/projects/tor/ticket/4852" rel="noreferrer noopener" target="_blank">patch appeared first in 0.2.4</a>. It was solved in Whonix 11, because it was based on Debian jessie, that contained <a class="external text" data-href="https://packages.debian.org/de/jessie/tor" href="https://packages.debian.org/de/jessie/tor" rel="noreferrer noopener" target="_blank">a more recent version of Tor</a>.</span>
 </li>
 <li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text">
 For demonstration, you could use.
@@ -823,35 +823,35 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180914084310
+Cached time: 20180915080212
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.204 seconds
-Real time usage: 0.267 seconds
-Preprocessor visited node count: 1265/1000000
-Preprocessor generated node count: 3128/1000000
-Post‐expand include size: 6283/2097152 bytes
+CPU time usage: 0.216 seconds
+Real time usage: 0.239 seconds
+Preprocessor visited node count: 1269/1000000
+Preprocessor generated node count: 3138/1000000
+Post‐expand include size: 6290/2097152 bytes
 Template argument size: 762/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 23505/5000000 bytes
+Unstrip post‐expand size: 23485/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  161.375      1 -total
- 40.69%   65.657      1 Template:Boot_Clock_Randomization
- 39.48%   63.715      1 Template:Open_File
- 37.17%   59.987      1 Template:Box
- 36.14%   58.326      2 Template:CodeSelect
- 15.87%   25.613      1 Template:Reflist
- 11.91%   19.223      1 Template:Footer
-  5.70%    9.194      1 Template:FooterLight
-  3.50%    5.650      1 Template:Footer_this_is_a_wiki
-  3.26%    5.256      1 Template:Header
+100.00%  129.921      1 -total
+ 20.73%   26.931      1 Template:Reflist
+ 13.47%   17.504      1 Template:Boot_Clock_Randomization
+ 12.52%   16.264      1 Template:Footer
+ 11.86%   15.410      1 Template:Open_File
+  8.69%   11.287      1 Template:Box
+  8.27%   10.742      1 Template:Header
+  7.03%    9.138      2 Template:CodeSelect
+  5.16%    6.703      1 Template:FooterLight
+  3.75%    4.871      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=35986" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=35986">https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=35986</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=36845" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=36845">https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=36845</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -862,7 +862,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeS
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 19 August 2018, at 22:04.</li>
+<li id="footer-lastmod"> This page was last edited on 15 September 2018, at 09:22.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -877,5 +877,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeS
 </div>
 
 </body>
-<!-- Cached/compressed 20180914084310 -->
+<!-- Cached/compressed 20180915080212 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: I2P - Whonix
  url: ./I2P
- date: Sat Sep 15 07:56:02 2018
+ date: Sun Sep 16 07:55:55 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -339,7 +339,7 @@ sudo cp i2p-pubkey.gpg /etc/apt/trusted.gpg.d/i2p-pubkey.gpg</textarea>
 </div>
 </div>
 <p><br/>
-3. <b>Note: this is no longer required once we release custom Tor Browser for connecting to alternative networks, except in the case of YaCy that needs internet access.</b>
+3. (Note: the following will be no longer required once Whonix releases a custom Tor Browser for connecting to alternative networks. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>)
 </p><p>Configure <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a> to connect to localhost.
 </p>
 <table class="metadata plainlinks ambox ambox-notice" style="">
@@ -415,7 +415,7 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 <h2><span class="mw-headline" id="I2P-Bote">I2P-Bote</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=I2P&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=I2P&amp;action=edit&amp;section=10.html" title="Edit section: I2P-Bote">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>I2P-Bote is a serverless, encrypted email plugin that uses <a class="mw-selflink selflink">I2P</a> for anonymity. Messages are stored in the <a class="external text" data-href="https://en.wikipedia.org/wiki/Distributed_hash_table" href="https://en.wikipedia.org/wiki/Distributed_hash_table" rel="noreferrer noopener" target="_blank">distributed hash table (DHT)</a> for 100 days, during which the recipient is able to download them.
 </p><p>To back up I2P-Bote data, copy the i2pbote folder inside the I2P config directory (~/.i2p/i2pbote on Unix systems or /var/lib/i2p/i2p-config when running as a daemon).
-</p><p>Compartmentalize activities and only use the I2P-Bote/Susimail VM snapshot for this purpose. Generally, applications that run with a browser interface are vulnerable to a whole class of bugs, including <a class="external text" data-href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" rel="noreferrer noopener" target="_blank">cross-site request forgery (CSRF)</a>.<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup><sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+</p><p>Compartmentalize activities and only use the I2P-Bote/Susimail VM snapshot for this purpose. Generally, applications that run with a browser interface are vulnerable to a whole class of bugs, including <a class="external text" data-href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" rel="noreferrer noopener" target="_blank">cross-site request forgery (CSRF)</a>.<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup><sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
 </p><p><b>Features:</b>
 </p>
 <ul><li>A webmail interface.</li>
@@ -444,8 +444,8 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 <p><span id="I2PBOX"></span>
 </p>
 <h2><span class="mw-headline" id="Syndie">Syndie</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=I2P&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=I2P&amp;action=edit&amp;section=11.html" title="Edit section: Syndie">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Syndie<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> is I2P's distributed forum software, allowing asynchronous conversations between anonymous participants. It was the focus of I2P's creator shortly before he ceased public activity. It supports single and multiple author modes, adjustable visibility of posts and post moderation. Syndie features its own minimalist and secure reader to protect against browser exploitation.
-</p><p>On the whole, Syndie works at the *content layer* - individual posts are contained in encrypted zip files, and participating in the forum means simply sharing these files. There are no dependencies upon how the files are transferred (over I2P, Tor, Freenet, gnutella, bittorrent, RSS, usenet, email), but simple aggregation and distribution tools are bundled with the standard Syndie release.<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
+<p>Syndie<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> is I2P's distributed forum software, allowing asynchronous conversations between anonymous participants. It was the focus of I2P's creator shortly before he ceased public activity. It supports single and multiple author modes, adjustable visibility of posts and post moderation. Syndie features its own minimalist and secure reader to protect against browser exploitation.
+</p><p>On the whole, Syndie works at the *content layer* - individual posts are contained in encrypted zip files, and participating in the forum means simply sharing these files. There are no dependencies upon how the files are transferred (over I2P, Tor, Freenet, gnutella, bittorrent, RSS, usenet, email), but simple aggregation and distribution tools are bundled with the standard Syndie release.<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
 </p><p>Download Syndie from the official I2P plugin site (echelon.i2p). Its more secure than fetching from HTTPS sites on the clearnet.
 </p><p>After downloading, run it with:
 </p>
@@ -529,18 +529,20 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 <li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">
 <a class="external text" data-href="https://www.i2p2.de/debian.html" href="https://www.i2p2.de/debian.html" rel="noreferrer noopener" target="_blank">I2P .deb Packages installation instructions from I2P's third party repository</a></span>
 </li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/" href="https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/" rel="noreferrer noopener" target="_blank">https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/</a></span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">Except in the case of <a data-href="/wiki/YaCy" href="./YaCy.html" title="YaCy">YaCy</a> that needs internet access.</span>
 </li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/" href="https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/" rel="noreferrer noopener" target="_blank">https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/</a></span>
+<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/" href="https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/" rel="noreferrer noopener" target="_blank">https://chaoswebs.net/blog/2016/12/01/Exploiting-I2P-Bote/</a></span>
 </li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.syndie.de/" href="https://www.syndie.de/" rel="noreferrer noopener" target="_blank">https://www.syndie.de/</a></span>
+<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/" href="https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/" rel="noreferrer noopener" target="_blank">https://chaoswebs.net/blog/2016/10/15/Stealing-Your-I2P-Email/</a></span>
 </li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.syndie.de/features.html" href="https://www.syndie.de/features.html" rel="noreferrer noopener" target="_blank">https://www.syndie.de/features.html</a></span>
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.syndie.de/" href="https://www.syndie.de/" rel="noreferrer noopener" target="_blank">https://www.syndie.de/</a></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.syndie.de/features.html" href="https://www.syndie.de/features.html" rel="noreferrer noopener" target="_blank">https://www.syndie.de/features.html</a></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./I2P" href="./I2P" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/I2P" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/I2P" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -552,32 +554,32 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180914070334
+Cached time: 20180915164139
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.180 seconds
-Real time usage: 0.267 seconds
-Preprocessor visited node count: 1299/1000000
-Preprocessor generated node count: 5291/1000000
-Post‐expand include size: 12289/2097152 bytes
+CPU time usage: 0.200 seconds
+Real time usage: 0.248 seconds
+Preprocessor visited node count: 1307/1000000
+Preprocessor generated node count: 5313/1000000
+Post‐expand include size: 12283/2097152 bytes
 Template argument size: 2965/2097152 bytes
 Highest expansion depth: 18/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 11231/5000000 bytes
+Unstrip post‐expand size: 11672/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  210.629      1 -total
- 35.53%   74.827      1 Template:Header
- 17.28%   36.394     12 Template:CodeSelect
- 15.94%   33.571      2 Template:Mbox
- 13.21%   27.822      2 Template:Ambox
- 11.43%   24.069      1 Template:Third_Party_Repository
-  8.99%   18.931      1 Template:Footer
-  7.81%   16.451      2 Template:Category_handler
-  7.37%   15.515      1 Template:Reflist
-  6.28%   13.236      1 Template:TBB_localhost
+100.00%  184.756      1 -total
+ 23.43%   43.279      2 Template:Mbox
+ 21.03%   38.863     12 Template:CodeSelect
+ 19.82%   36.621      2 Template:Ambox
+ 17.13%   31.657      1 Template:Third_Party_Repository
+ 15.48%   28.592      1 Template:Header
+ 11.47%   21.185      1 Template:Reflist
+ 11.17%   20.629      2 Template:Category_handler
+ 11.09%   20.481      1 Template:Footer
+  8.62%   15.929      1 Template:TBB_localhost
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022" dir="ltr" href="https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022">https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022</a>"</div>
@@ -606,5 +608,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=I2P&amp;o
 </div>
 
 </body>
-<!-- Cached/compressed 20180914070334 -->
+<!-- Cached/compressed 20180915164139 -->
 </html>

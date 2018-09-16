@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/7 - Whonix
  url: ../Dev/BuildDocumentation_7
- date: Sat Sep 15 07:37:48 2018
+ date: Sun Sep 16 07:37:39 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -61,7 +61,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -107,7 +107,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -406,16 +406,62 @@ Removing packages/kde-privacy/
 <div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
 <div class="mw-collapsible-content">
 <p>Do you want to <u>opt-in</u> for <u>Whonix's APT Repository</u>? This is set using an environment variable or <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a>. Below is an example using an environment variable.
-</p>
-<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --codename jessie'
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</textarea>
+</div>
+</div>
 <p>Add an environment variable as one normally does on that specific Linux platform. For example, to enable the Whonix stable repository during build, you could set <code>WHONIX_APT_REPOSITORY_OPTS</code> by interjecting it between <code>sudo</code> and the <code>./whonix_build</code> command. Below is an example. Do not use <code>[...]</code>. Replace it with other chosen build parameters (such as <code>--build</code>, <code>--target</code> etc.) after <code>./whonix_build</code>.
-</p>
-<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
+</div>
+</div>
 </div>
 </div>
 <p><b>APT Onion Build Sources</b>
@@ -694,7 +740,7 @@ kFreeBSD (32-bit).
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/7" href="../Dev/Build_Documentation/7" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/7" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/7" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -706,32 +752,32 @@ kFreeBSD (32-bit).
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180915053743
+Cached time: 20180916053735
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.228 seconds
-Real time usage: 0.256 seconds
-Preprocessor visited node count: 2496/1000000
-Preprocessor generated node count: 6201/1000000
-Post‐expand include size: 41241/2097152 bytes
-Template argument size: 6015/2097152 bytes
+CPU time usage: 0.240 seconds
+Real time usage: 0.269 seconds
+Preprocessor visited node count: 2527/1000000
+Preprocessor generated node count: 6237/1000000
+Post‐expand include size: 41950/2097152 bytes
+Template argument size: 6332/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 10677/5000000 bytes
+Unstrip post‐expand size: 10593/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  183.849      1 -total
- 37.20%   68.400      5 Template:Mbox
- 31.62%   58.138      5 Template:Ambox
- 30.11%   55.355      1 Template:Build_Configuration
- 18.81%   34.586      1 Template:Build_Documentation_Get_Source_Code
- 18.81%   34.584      1 Template:Build_Documentation_apt-cache
- 17.30%   31.799      5 Template:Category_handler
- 10.88%   19.994      5 Template:Ambox/core
-  9.00%   16.550      6 Template:CodeSelect
-  8.19%   15.059      1 Template:Footer
+100.00%  195.535      1 -total
+ 34.44%   67.345      5 Template:Mbox
+ 34.06%   66.601      1 Template:Build_Configuration
+ 29.25%   57.192      5 Template:Ambox
+ 18.08%   35.351      1 Template:Build_Documentation_Get_Source_Code
+ 16.31%   31.901     11 Template:CodeSelect
+ 16.28%   31.835      1 Template:Build_Documentation_apt-cache
+ 15.91%   31.110      5 Template:Category_handler
+ 10.17%   19.890      5 Template:Ambox/core
+  8.95%   17.510      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/7&amp;oldid=35027" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/7&amp;oldid=35027">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/7&amp;oldid=35027</a>"</div>
