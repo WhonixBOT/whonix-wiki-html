@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: AppArmor - Whonix
  url: ../AppArmor/Timesync
- date: Sun Sep 16 07:31:54 2018
+ date: Mon Sep 17 07:31:56 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -162,7 +162,7 @@ Whonix requires payments to stay alive.
 <p>If you are interested, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>The following steps should be completed in dom0 for both <code>whonix-gw</code> and <code>whonix-ws</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
+<p>The following steps should be completed in dom0 for both <code>{{{{whonix-gw}}}}</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
 </p><p><b>Whonix-Gateway</b>
 </p><p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
@@ -173,10 +173,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -g whonix-gw-14 kernelopts</pre>
+<pre>qvm-prefs -g {{{{whonix-gw}}}} kernelopts</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g {{{{whonix-gw}}}} kernelopts</textarea>
 </div>
 </div>
 <p>For Qubes R3.2, and later releases this will show.<br/>
@@ -187,10 +187,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -s whonix-gw-14 kernelopts "nopat apparmor=1 security=apparmor"</pre>
+<pre>qvm-prefs -s {{{{whonix-gw}}}} kernelopts "nopat apparmor=1 security=apparmor"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -s whonix-gw-14 kernelopts "nopat apparmor=1 security=apparmor"</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -s {{{{whonix-gw}}}} kernelopts "nopat apparmor=1 security=apparmor"</textarea>
 </div>
 </div>
 <div class="codeContainer">
@@ -210,10 +210,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -g whonix-gw-14 kernelopts</pre>
+<pre>qvm-prefs -g {{{{whonix-gw}}}} kernelopts</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g {{{{whonix-gw}}}} kernelopts</textarea>
 </div>
 </div>
 <p>The output should show AppArmor is part of the new kernel parameters. For example.<br/>
@@ -564,7 +564,7 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 <p>Advanced users can imitate the method outlined above to resolve similar AppArmor problems impacting full functionality of applications in Whonix. For instance, at the time of writing the <code>whonixcheck</code> AppArmor profile causes continuous "denied" messages in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>. Resolving this is quite simple: <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p>
 <ul><li>Navigate to the <a class="external text" data-href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" rel="noreferrer noopener" target="_blank">raw updated whonixcheck profile</a>.</li>
-<li>In <u>both</u> the Whonix-Gateway (<code>whonix-gw</code>) and Whonix-Workstation (<code>whonix-ws</code>) TemplateVMs, replace the existing content in <i>/etc/apparmor.d/usr.bin.whonixcheck</i> with the updated github content.</li>
+<li>In <u>both</u> the Whonix-Gateway (<code>whonix-gw-14</code>) and Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVMs, replace the existing content in <i>/etc/apparmor.d/usr.bin.whonixcheck</i> with the updated github content.</li>
 <li>Shutdown both TemplateVMs and any running instances of <code>sys-whonix</code> and <code>anon-whonix</code>.</li>
 <li>Restart the <code>sys-whonix</code> and <code>anon-whonix</code> AppVMs.</li></ul>
 <h2><span class="mw-headline" id="Inspecting_and_Disabling_AppArmor_Notifications">Inspecting and Disabling AppArmor Notifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=10.html" title="Edit section: Inspecting and Disabling AppArmor Notifications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -658,7 +658,7 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -670,35 +670,35 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180916053150
+Cached time: 20180917053152
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.220 seconds
-Real time usage: 0.237 seconds
-Preprocessor visited node count: 2270/1000000
-Preprocessor generated node count: 5381/1000000
-Post‐expand include size: 19893/2097152 bytes
-Template argument size: 6109/2097152 bytes
+CPU time usage: 0.240 seconds
+Real time usage: 0.267 seconds
+Preprocessor visited node count: 2293/1000000
+Preprocessor generated node count: 5443/1000000
+Post‐expand include size: 19982/2097152 bytes
+Template argument size: 6124/2097152 bytes
 Highest expansion depth: 17/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4183/5000000 bytes
+Unstrip post‐expand size: 4264/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  184.061      1 -total
- 40.22%   74.037     31 Template:CodeSelect
- 36.01%   66.275      5 Template:Mbox
- 30.93%   56.922      5 Template:Ambox
- 17.00%   31.286      1 Template:Qubes_AppArmor
- 16.87%   31.051      5 Template:Category_handler
- 10.93%   20.121      5 Template:Ambox/core
-  8.94%   16.455      1 Template:Footer
-  6.16%   11.332     10 Template:Namespace_detect
-  5.18%    9.533      5 Template:Category_handler/numbered
+100.00%  215.493      1 -total
+ 36.81%   79.319     31 Template:CodeSelect
+ 36.67%   79.021      5 Template:Mbox
+ 31.48%   67.836      5 Template:Ambox
+ 16.46%   35.471      1 Template:Qubes_AppArmor
+ 16.40%   35.331      5 Template:Category_handler
+ 11.67%   25.155      5 Template:Ambox/core
+  7.50%   16.167      1 Template:Footer
+  5.98%   12.892     10 Template:Namespace_detect
+  4.97%   10.704      1 Template:Header
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=35878" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=35878">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=35878</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=36968" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=36968">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=36968</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -709,7 +709,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 17 August 2018, at 13:35.</li>
+<li id="footer-lastmod"> This page was last edited on 16 September 2018, at 08:52.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>

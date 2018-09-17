@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: OnionShare - Whonix
  url: ./Onionshare
- date: Sun Sep 16 08:01:23 2018
+ date: Mon Sep 17 08:01:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -250,7 +250,7 @@ Whonix requires payments to stay alive.
 </div>
 <p>Qubes-Whonix users should shut down the <code>anon-onionshare</code> AppVM prior to the next step.
 </p><p><b>6.</b> Install OnionShare Dependencies
-</p><p>Several dependencies must be installed in Whonix-Workstation (<code>whonix-ws</code> TemplateVM) for OnionShare to work correctly. Locate the <i><span style="background-color:#FBFBFB">BUILD.md</span></i> file in the OnionShare repository and run the necessary apt-get commands in the "Debian-like distros" section.
+</p><p>Several dependencies must be installed in Whonix-Workstation (<code>whonix-ws-14</code> TemplateVM) for OnionShare to work correctly. Locate the <i><span style="background-color:#FBFBFB">BUILD.md</span></i> file in the OnionShare repository and run the necessary apt-get commands in the "Debian-like distros" section.
 </p><p>For example, for OnionShare 1.3.1 run in a terminal (Konsole).
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
@@ -263,7 +263,7 @@ Whonix requires payments to stay alive.
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt install -y build-essential fakeroot python3-all python3-stdeb dh-python python3-flask python3-stem python3-pyqt5 python-nautilus python3-pytest obfs4proxy</textarea>
 </div>
 </div>
-<p>Qubes-Whonix users should shutdown the <code>whonix-ws</code> TemplateVM after dependencies have installed, and restart the <code>anon-onionshare</code> AppVM.
+<p>Qubes-Whonix users should shutdown the <code>whonix-ws-14</code> TemplateVM after dependencies have installed, and restart the <code>anon-onionshare</code> AppVM.
 </p><p><b>7.</b> Extend the onion-grater Whitelist in Whonix-Gateway (<code>sys-whonix</code> ProxyVM)
 </p><p><b>Extend onion-grater Whitelist</b>
 </p>
@@ -367,7 +367,7 @@ In Whonix-Workstation AppVM.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template: whonix-ws</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-ws-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Workstation</u>, complete these steps.
@@ -497,14 +497,14 @@ The person who is receiving the files doesn't need OnionShare. All they need is 
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tracker.debian.org/pkg/onionshare" href="https://tracker.debian.org/pkg/onionshare" rel="noreferrer noopener" target="_blank">https://tracker.debian.org/pkg/onionshare</a></span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Qubes-Whonix users should note the <code>whonix-ws</code> TemplateVM will pull in over 70Mb of dependencies at step 6. Consider creating a separate, cloned <code>whonix-ws</code> TemplateVM for this purpose beforehand.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Qubes-Whonix users should note the <code>whonix-ws-14</code> TemplateVM will pull in over 70Mb of dependencies at step 6. Consider creating a separate, cloned <code>whonix-ws-14</code> TemplateVM for this purpose beforehand.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The git installation will not persist in Qubes-Whonix following reboot. This method avoids polluting the <code>whonix-ws</code> TemplateVM upon which it is based.</span>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The git installation will not persist in Qubes-Whonix following reboot. This method avoids polluting the <code>whonix-ws-14</code> TemplateVM upon which it is based.</span>
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">OnionShare is developed by Micah Lee and mig5. The key ID has been taken directly from www.micahflee.com</span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
-Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users could also use <code>/etc/onion-grater-merger.d/</code>. Qubes-Whonix users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway TemplateVM (commonly called <code>whonix-gw</code>) and restart their Whonix-Gateway ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ProxyVMs based on the same Whonix-Gateway TemplateVM for lets say one Whonix-Gateway ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ProxyVM with the default more restricted onion-grater whitelist.</span>
+Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users could also use <code>/etc/onion-grater-merger.d/</code>. Qubes-Whonix users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>) and restart their Whonix-Gateway ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ProxyVMs based on the same Whonix-Gateway TemplateVM for lets say one Whonix-Gateway ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ProxyVM with the default more restricted onion-grater whitelist.</span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">As per <a class="external free" data-href="https://labs.riseup.net/code/issues/7870#note-15" href="https://labs.riseup.net/code/issues/7870" rel="noreferrer noopener" target="_blank">https://labs.riseup.net/code/issues/7870#note-15</a> OnionShare uses ports 17600 to 17659.</span>
 </li>
@@ -521,7 +521,7 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./OnionShare" href="./OnionShare" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -533,35 +533,35 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180916060119
+Cached time: 20180917060114
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.168 seconds
-Real time usage: 0.187 seconds
-Preprocessor visited node count: 884/1000000
-Preprocessor generated node count: 5051/1000000
-Post‐expand include size: 16944/2097152 bytes
-Template argument size: 6989/2097152 bytes
+CPU time usage: 0.156 seconds
+Real time usage: 0.184 seconds
+Preprocessor visited node count: 907/1000000
+Preprocessor generated node count: 5117/1000000
+Post‐expand include size: 17100/2097152 bytes
+Template argument size: 7037/2097152 bytes
 Highest expansion depth: 17/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7133/5000000 bytes
+Unstrip post‐expand size: 6963/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  146.635      1 -total
- 40.58%   59.503     21 Template:CodeSelect
- 24.87%   36.471      5 Template:Box
- 15.86%   23.259      1 Template:Mbox
- 12.68%   18.597      1 Template:Ambox
- 12.04%   17.649      1 Template:Footer
- 11.31%   16.586      1 Template:Firewall_Settings_Workstation
-  9.82%   14.402      1 Template:Control_Port_Filter_Python_Profile_Add
-  8.46%   12.401      1 Template:Reflist
-  7.35%   10.777      1 Template:Category_handler
+100.00%  145.472      1 -total
+ 37.27%   54.217     21 Template:CodeSelect
+ 20.90%   30.408      5 Template:Box
+ 14.61%   21.248      1 Template:Mbox
+ 11.88%   17.277      1 Template:Ambox
+ 10.06%   14.637      1 Template:Footer
+  9.54%   13.879      1 Template:Header
+  9.42%   13.708      1 Template:Firewall_Settings_Workstation
+  8.66%   12.598      1 Template:Reflist
+  7.96%   11.580      1 Template:Control_Port_Filter_Python_Profile_Add
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36558" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36558">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36558</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36924" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36924">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=36924</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -572,7 +572,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShar
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 3 September 2018, at 15:28.</li>
+<li id="footer-lastmod"> This page was last edited on 16 September 2018, at 08:33.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>

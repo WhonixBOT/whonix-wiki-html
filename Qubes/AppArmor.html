@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Qubes/AppArmor - Whonix
  url: ../Qubes/AppArmor
- date: Sun Sep 16 08:04:59 2018
+ date: Mon Sep 17 08:04:51 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -127,7 +127,7 @@ Whonix requires payments to stay alive.
 <p>If you are interested, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>The following steps should be completed in dom0 for both <code>whonix-gw</code> and <code>whonix-ws</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
+<p>The following steps should be completed in dom0 for both <code>{{{{whonix-gw}}}}</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
 </p><p><b>Whonix-Gateway</b>
 </p><p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
@@ -138,10 +138,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -g whonix-gw-14 kernelopts</pre>
+<pre>qvm-prefs -g {{{{whonix-gw}}}} kernelopts</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g {{{{whonix-gw}}}} kernelopts</textarea>
 </div>
 </div>
 <p>For Qubes R3.2, and later releases this will show.<br/>
@@ -152,10 +152,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -s whonix-gw-14 kernelopts "nopat apparmor=1 security=apparmor"</pre>
+<pre>qvm-prefs -s {{{{whonix-gw}}}} kernelopts "nopat apparmor=1 security=apparmor"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -s whonix-gw-14 kernelopts "nopat apparmor=1 security=apparmor"</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -s {{{{whonix-gw}}}} kernelopts "nopat apparmor=1 security=apparmor"</textarea>
 </div>
 </div>
 <div class="codeContainer">
@@ -175,10 +175,10 @@ Whonix requires payments to stay alive.
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
-<pre>qvm-prefs -g whonix-gw-14 kernelopts</pre>
+<pre>qvm-prefs -g {{{{whonix-gw}}}} kernelopts</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
+<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -g {{{{whonix-gw}}}} kernelopts</textarea>
 </div>
 </div>
 <p>The output should show AppArmor is part of the new kernel parameters. For example.<br/>
@@ -273,7 +273,7 @@ Whonix requires payments to stay alive.
 </p>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Interested in becoming an author for the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/AppArmor" href="../Qubes/AppArmor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/AppArmor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/AppArmor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -289,32 +289,32 @@ Whonix requires payments to stay alive.
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20180914065907
+Cached time: 20180916194438
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.060 seconds
-Real time usage: 0.077 seconds
-Preprocessor visited node count: 165/1000000
-Preprocessor generated node count: 463/1000000
-Post‐expand include size: 6859/2097152 bytes
-Template argument size: 513/2097152 bytes
+CPU time usage: 0.072 seconds
+Real time usage: 0.138 seconds
+Preprocessor visited node count: 176/1000000
+Preprocessor generated node count: 503/1000000
+Post‐expand include size: 6920/2097152 bytes
+Template argument size: 528/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 880/5000000 bytes
+Unstrip post‐expand size: 890/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   64.161      1 -total
- 53.97%   34.625      1 Template:Qubes_AppArmor
- 41.92%   26.895     10 Template:CodeSelect
- 26.14%   16.771      1 Template:Footer
- 16.79%   10.773      1 Template:Header
- 11.14%    7.146      1 Template:FooterLight
-  7.75%    4.973      1 Template:Footer_this_is_a_wiki
-  5.62%    3.603      1 Template:Share
-  5.29%    3.395      1 Template:Edit_it
-  3.00%    1.923      4 Template:Code2
+100.00%  124.703      1 -total
+ 57.66%   71.902      1 Template:Qubes_AppArmor
+ 45.97%   57.324     10 Template:CodeSelect
+ 25.23%   31.466      1 Template:Header
+ 15.38%   19.181      1 Template:Footer
+  6.16%    7.685      1 Template:FooterLight
+  5.15%    6.427      1 Template:Footer_this_is_a_wiki
+  4.97%    6.202      4 Template:Whonix-ws
+  3.56%    4.442      1 Template:Edit_it
+  3.08%    3.840      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/AppArmor&amp;oldid=19119" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/AppArmor&amp;oldid=19119">https://www.whonix.org/w/index.php?title=Qubes/AppArmor&amp;oldid=19119</a>"</div>
@@ -343,5 +343,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/App
 </div>
 
 </body>
-<!-- Cached/compressed 20180914065907 -->
+<!-- Cached/compressed 20180916194438 -->
 </html>

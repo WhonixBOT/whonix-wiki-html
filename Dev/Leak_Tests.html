@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Leak Tests - Whonix
  url: ../Dev/Leak_Tests
- date: Sun Sep 16 07:46:02 2018
+ date: Mon Sep 17 07:46:11 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -30,12 +30,12 @@
 <link data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Leak Tests" property="og:title"/>
-<meta content="../Dev/Leak_Tests" property="og:url"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Dev/Leak_Tests" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="Testing for IP/DNS Leaks" property="og:description"/>
 
@@ -279,7 +279,7 @@ Address:        10.152.152.10#53
 <pre>sudo apt-get update
 sudo apt-get install tcpdump
 </pre>
-<p>Run tcpdump. Replace <span style="border:1px dotted #005cb9">-i wlan0</span> with your network interface. If you use <span style="border:1px dotted #005cb9">-i any</span>, you will also see transproxied packets (which are not normally leaked).
+<p>Run tcpdump. Replace <code>-i wlan0</code> with your network interface. If you use <code>-i any</code>, you will also see transproxied packets (which are not normally leaked).
 </p>
 <pre>sudo tcpdump -n -i wlan0 host 74.125.28.104 and tcp port 80
 </pre>
@@ -338,15 +338,25 @@ sudo leaktest
 <li>Perhaps useful for similar projects.</li>
 <li>Optional additional tests.</li></ul>
 <h1><span class="mw-headline" id="Integreated_whonixcheck_leaktest">Integreated whonixcheck leaktest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14.html" title="Edit section: Integreated whonixcheck leaktest">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Please also run <span style="border:1px dotted #005cb9"><a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a></span> on Whonix-Gateway and Whonix-Workstation. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <span style="border:1px dotted #005cb9">whonixcheck</span> would report a big warning, if check.torproject.org couldn't detect Tor.
-</p>
+<p>Please also run <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway and Whonix-Workstation. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>whonixcheck --leak-tests</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck --leak-tests</textarea>
+</div>
+</div>
 <h1><span class="mw-headline" id="Other_Leak_Tests">Other Leak Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=15.html" title="Edit section: Other Leak Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://www.whonix.org/blog/corridor-a-clearnet-leak-tester" href="https://www.whonix.org/blog/corridor-a-clearnet-leak-tester" rel="noreferrer noopener" target="_blank">corridor, a Tor traffic whitelisting gateway, a clearnet leak tester</a></li>
 <li><a class="external text" data-href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" rel="noreferrer noopener" target="_blank">Using corridor, a Tor traffic whitelisting gateway with Qubes-Whonix</a></li>
 <li>A similar project published another leak test. Read <a class="external text" data-href="https://github.com/ra--/Tor-gateway/wiki/Faq" href="https://github.com/ra--/Tor-gateway/wiki/Faq" rel="noreferrer noopener" target="_blank">How can I test if there is a leak in the setup respectively all traffic goes through Tor?</a>. Has not been tested with Whonix yet. If you do it, please share your results.</li></ul>
 <h1><span class="mw-headline" id="Qubes_specific">Qubes specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=16.html" title="Edit section: Qubes specific">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="TemplateVM_Update_Proxy_Leak_Test">TemplateVM Update Proxy Leak Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=17.html" title="Edit section: TemplateVM Update Proxy Leak Test">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Start a your Whonix-Gateway TemplateVM (commonly called <i><span style="background-color:#FBFBFB">whonix-gw</span></i>). <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>Start a your Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>). <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>In your TempalteVM.
 </p><p>Start downloading some big<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> package. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> Example.
 </p><p></p><div class="codeContainer">
@@ -360,7 +370,7 @@ sudo leaktest
 <textarea class="codeBoxArea" readonly="readonly" rows="1">apt-get download firefox-esr</textarea>
 </div>
 </div>
-<p>Now switch to your Whonix-Gateway ProxyVM (commonly called <i><span style="background-color:#FBFBFB">sys-whonix</span></i>) and stop Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+<p>Now switch to your Whonix-Gateway ProxyVM (commonly called <code>sys-whonix</code>) and stop Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -391,7 +401,7 @@ E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefo
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default start</textarea>
 </div>
 </div>
-<p>Repeat this test with your Whonix-Workstation TemplateVM (commonly called <i><span style="background-color:#FBFBFB">whonix-ws</span></i>).
+<p>Repeat this test with your Whonix-Workstation TemplateVM (commonly called <code>whonix-ws-14</code>).
 </p>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=18.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Browser_Tests" href="../Browser_Tests.html" title="Browser Tests">Browser Tests</a></li>
@@ -409,7 +419,7 @@ Those are assumed to be torified, i.e. having their NetVM set to sys-whonix.</sp
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">With a small package you would not have a chance to easily and quickly disable Tor while it is downloading.</span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
-Alternatively, you could also run <i><span style="background-color:#FBFBFB">sudo apt-get update</span></i> instead of downloading a big package and interrupt that. However, it would be less conclusive, because then apt-get updating may only break due to broken DNS. A long running transfer that no longer depends on functional DNS resolution would be far easier to spot. (If the download was non-torified, it should not matter if we stop Tor during the transfer.)</span>
+Alternatively, you could also run <code>sudo apt-get update</code> instead of downloading a big package and interrupt that. However, it would be less conclusive, because then apt-get updating may only break due to broken DNS. A long running transfer that no longer depends on functional DNS resolution would be far easier to spot. (If the download was non-torified, it should not matter if we stop Tor during the transfer.)</span>
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 Alternately, although with less conclusive, instead of stopping Tor, you could also stop qubes-updates-proxy during the transfer.
@@ -431,7 +441,7 @@ This should lead to the same <i>expected result</i>.</span>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Leak_Tests" href="../Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -443,35 +453,35 @@ This should lead to the same <i>expected result</i>.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180914073128
+Cached time: 20180916075252
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.092 seconds
-Real time usage: 0.150 seconds
-Preprocessor visited node count: 515/1000000
-Preprocessor generated node count: 1530/1000000
-Post‐expand include size: 5046/2097152 bytes
-Template argument size: 542/2097152 bytes
+Real time usage: 0.129 seconds
+Preprocessor visited node count: 482/1000000
+Preprocessor generated node count: 1405/1000000
+Post‐expand include size: 4679/2097152 bytes
+Template argument size: 479/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4699/5000000 bytes
+Unstrip post‐expand size: 4673/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  115.925      1 -total
- 44.13%   51.154      1 Template:Header
- 17.49%   20.275      6 Template:CodeSelect
- 13.43%   15.567      1 Template:Footer
- 12.50%   14.491      1 Template:Open_with_root_rights
-  9.55%   11.074      1 Template:Reflist
-  9.05%   10.492      1 Template:Box
-  5.68%    6.586      1 Template:FooterLight
-  4.28%    4.959      1 Template:Footer_this_is_a_wiki
-  3.22%    3.730      1 Template:Edit_it
+100.00%   96.939      1 -total
+ 34.88%   33.813      1 Template:Header
+ 19.99%   19.376      7 Template:CodeSelect
+ 16.14%   15.649      1 Template:Footer
+ 13.57%   13.150      1 Template:Open_with_root_rights
+  9.02%    8.745      1 Template:Box
+  8.47%    8.209      1 Template:Reflist
+  6.74%    6.537      1 Template:FooterLight
+  4.96%    4.812      1 Template:Footer_this_is_a_wiki
+  4.13%    3.999      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=35171" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=35171">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=35171</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -482,7 +492,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 August 2018, at 07:08.</li>
+<li id="footer-lastmod"> This page was last edited on 16 September 2018, at 08:52.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -497,5 +507,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 </div>
 
 </body>
-<!-- Cached/compressed 20180914073128 -->
+<!-- Cached/compressed 20180916075252 -->
 </html>
