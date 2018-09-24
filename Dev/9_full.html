@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/9 full - Whonix
  url: ../Dev/Build_Documentation/9_full
- date: Sun Sep 23 07:40:03 2018
+ date: Mon Sep 24 07:38:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -15,7 +15,7 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
-<meta content="MediaWiki 1.31.0" name="generator"/>
+<meta content="MediaWiki 1.31.1" name="generator"/>
 <meta content="noindex,follow" name="robots"/>
 <meta content="" name="google-site-verification"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
@@ -31,12 +31,12 @@
 <link data-href="/w/index.php?title=Dev/Build_Documentation/9_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="https://mail.whonix.org/w/api.php?action=rsd" href="https://mail.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Build Documentation/9 full" property="og:title"/>
-<meta content="https://mail.whonix.org/wiki/Dev/Build_Documentation/9_full" property="og:url"/>
+<meta content="../Dev/Build_Documentation/9_full" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="Complete and Comprehensive Instructions to build Whonix 9 Virtual Machine Images from Source Code. Including build configurations, such as 64 bit buil..." property="og:description"/>
 
@@ -498,16 +498,62 @@ Removing packages/kde-privacy/
 <div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
 <div class="mw-collapsible-content">
 <p>Do you want to <u>opt-in</u> for <u>Whonix's APT Repository</u>? This is set using an environment variable or <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a>. Below is an example using an environment variable.
-</p>
-<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'
-WHONIX_APT_REPOSITORY_OPTS='--enable --codename jessie'
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
+</div>
+</div>
+<div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</textarea>
+</div>
+</div>
 <p>Add an environment variable as one normally does on that specific Linux platform. For example, to enable the Whonix stable repository during build, you could set <code>WHONIX_APT_REPOSITORY_OPTS</code> by interjecting it between <code>sudo</code> and the <code>./whonix_build</code> command. Below is an example. Do not use <code>[...]</code>. Replace it with other chosen build parameters (such as <code>--build</code>, <code>--target</code> etc.) after <code>./whonix_build</code>.
-</p>
-<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]
-</pre>
+</p><p></p><div class="codeContainer">
+<div class="selectBtnDiv">
+<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
+</div>
+<div class="preDiv">
+<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
+</div>
+</div>
 </div>
 </div>
 <p><b>APT Onion Build Sources</b>
@@ -841,7 +887,7 @@ kFreeBSD (32-bit).
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/9_full" href="../Dev/Build_Documentation/9_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/9_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/9_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -853,35 +899,35 @@ kFreeBSD (32-bit).
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180914093213
+Cached time: 20180924053814
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.216 seconds
-Real time usage: 0.255 seconds
-Preprocessor visited node count: 2084/1000000
-Preprocessor generated node count: 6685/1000000
-Post‐expand include size: 37444/2097152 bytes
-Template argument size: 3612/2097152 bytes
+CPU time usage: 0.272 seconds
+Real time usage: 0.314 seconds
+Preprocessor visited node count: 2115/1000000
+Preprocessor generated node count: 6721/1000000
+Post‐expand include size: 38153/2097152 bytes
+Template argument size: 3929/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 14805/5000000 bytes
+Unstrip post‐expand size: 14375/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  168.301      1 -total
- 29.56%   49.743      1 Template:Build_Configuration
- 24.80%   41.739      1 Template:Build_Documentation_Get_Source_Code
- 24.52%   41.271      3 Template:Mbox
- 21.00%   35.349      3 Template:Ambox
- 18.77%   31.590      1 Template:Build_Documentation_apt-cache
- 13.28%   22.353      1 Template:Gpg_signature_timestamp
- 11.79%   19.847      3 Template:Category_handler
- 11.47%   19.312      1 Template:Header
- 10.36%   17.430      1 Template:Reflist
+100.00%  218.661      1 -total
+ 37.60%   82.206      1 Template:Build_Configuration
+ 24.70%   54.019      1 Template:Build_Documentation_Get_Source_Code
+ 20.11%   43.964      3 Template:Mbox
+ 17.16%   37.527      3 Template:Ambox
+ 16.49%   36.067      1 Template:Build_Documentation_apt-cache
+ 14.91%   32.604     11 Template:CodeSelect
+ 12.17%   26.615      1 Template:Gpg_signature_timestamp
+  9.55%   20.875      3 Template:Category_handler
+  9.15%   20.005      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://mail.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031" dir="ltr" href="https://mail.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031">https://mail.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=35031</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Noindexed_pages&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Noindexed_pages&amp;action=edit&amp;redlink=1.html" title="Category:Noindexed pages (page does not exist)">Noindexed pages</a></li><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -907,5 +953,5 @@ Retrieved from "<a data-href="https://mail.whonix.org/w/index.php?title=Dev/Buil
 </div>
 
 </body>
-<!-- Cached/compressed 20180914093213 -->
+<!-- Cached/compressed 20180924053814 -->
 </html>
