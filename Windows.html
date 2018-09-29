@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox - Whonix
  url: ./Windows
- date: Fri Sep 28 08:18:52 2018
+ date: Sat Sep 29 08:19:07 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -423,92 +423,42 @@ Do not continue if verification fails! This risks using infected or erroneous fi
 <b>Experimental spectre/meltdown defenses</b><br/>
 </p><p><a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" rel="noreferrer noopener" target="_blank">Experimental</a> spectre/meltdown defenses.
 </p><p>Related to <a data-href="/wiki/Firmware_Security_and_Updates" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">Firmware Security and Updates</a>.
-</p><p>On the host.
-</p><p>1. ibpb-on-vm-entry<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p><p>On the host. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
 <pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on</textarea>
-</div>
-</div>
-<p>2. ibpb-on-vm-exit
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</textarea>
-</div>
-</div>
-<p>3. l1d-flush-on-vm-enter on <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</textarea>
-</div>
-</div>
-<p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</textarea>
-</div>
-</div>
-<p>5. spec-ctrl <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</textarea>
-</div>
-</div>
-<p>6. nestedpaging <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 </div>
-<p><sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+<p><br/>
+<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p><p><b>4.Start Whonix</b><br/>
 </p><p>Starting Whonix is simple. 
 </p><p>Start VirtualBox -&gt; Double click on the Whonix-Gateway and Whonix-Workstation.
@@ -657,7 +607,7 @@ According to this <a class="external text" data-href="https://www.virtualbox.org
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VirtualBox" href="./VirtualBox" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -669,32 +619,32 @@ According to this <a class="external text" data-href="https://www.virtualbox.org
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180928061846
+Cached time: 20180929061901
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.284 seconds
-Real time usage: 0.328 seconds
-Preprocessor visited node count: 1904/1000000
-Preprocessor generated node count: 5770/1000000
-Post‐expand include size: 32731/2097152 bytes
-Template argument size: 4700/2097152 bytes
+CPU time usage: 0.260 seconds
+Real time usage: 0.296 seconds
+Preprocessor visited node count: 1869/1000000
+Preprocessor generated node count: 5722/1000000
+Post‐expand include size: 31647/2097152 bytes
+Template argument size: 4705/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9830/5000000 bytes
+Unstrip post‐expand size: 9738/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  250.604      1 -total
- 96.80%  242.573      1 Template:VirtualBox
- 34.51%   86.492      1 Template:DownloadTable
- 22.91%   57.406      4 Template:Mbox
- 19.40%   48.613      4 Template:Ambox
- 17.04%   42.712     12 Template:CodeSelect
- 12.74%   31.922      1 Template:Reflist
- 11.31%   28.332      4 Template:Category_handler
-  9.73%   24.383      1 Template:VirtualBox_Spectre_Meltdown
-  7.02%   17.593      1 Template:Footer
+100.00%  229.298      1 -total
+ 92.08%  211.133      1 Template:VirtualBox
+ 35.35%   81.048      1 Template:DownloadTable
+ 23.78%   54.524      4 Template:Mbox
+ 20.16%   46.216      4 Template:Ambox
+ 11.90%   27.290      1 Template:Reflist
+ 11.45%   26.244      4 Template:Category_handler
+  9.83%   22.530      7 Template:CodeSelect
+  7.58%   17.371      1 Template:Footer
+  6.50%   14.911      4 Template:Ambox/core
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303">https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303</a>"</div>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Spectre Meltdown - Whonix
  url: ./Spectre_Meltdown
- date: Fri Sep 28 08:07:56 2018
+ date: Sat Sep 29 08:07:57 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -197,92 +197,42 @@ Whonix requires payments to stay alive.
 </p>
 <ul><li>Apply <a href="#Processor_Microcode_Updates">Processor Microcode Updates</a> on your host operating system.</li>
 <li>Apply the following experimental instructions.</li></ul>
-<p>On the host.
-</p><p>1. ibpb-on-vm-entry<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+<p>On the host. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
 </div>
 <div class="preDiv">
 <pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on</textarea>
-</div>
-</div>
-<p>2. ibpb-on-vm-exit
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on</textarea>
-</div>
-</div>
-<p>3. l1d-flush-on-vm-enter on <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on</textarea>
-</div>
-</div>
-<p>4. l1d-flush-on-sched <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on</textarea>
-</div>
-</div>
-<p>5. spec-ctrl <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on</textarea>
-</div>
-</div>
-<p>6. nestedpaging <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 </div>
-<p>Above instructions cover only default VM names Whonix-Gateway and Whonix-Workstation. If you are using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> and/or <a data-href="/wiki/Multiple_Whonix-Workstations#Multiple_Whonix-Gateways" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Gateways</a>, you need to repeat these instructions for all custom created VMs as well.
+<p><br/>
+Above instructions cover only default VM names Whonix-Gateway and Whonix-Workstation. If you are using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> and/or <a data-href="/wiki/Multiple_Whonix-Workstations#Multiple_Whonix-Gateways" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Gateways</a>, you need to repeat these instructions for all custom created VMs as well.
 </p>
 <ul><li>Check back later for updated instructions. <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">Stay Tuned</a>.</li></ul>
 <h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=4.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -637,7 +587,7 @@ Or alternatively use the <i>.onion</i> mirror.
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Spectre_Meltdown" href="./Spectre_Meltdown" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -649,32 +599,32 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180927121840
+Cached time: 20180929060753
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.208 seconds
-Real time usage: 0.221 seconds
-Preprocessor visited node count: 560/1000000
-Preprocessor generated node count: 1563/1000000
-Post‐expand include size: 16902/2097152 bytes
-Template argument size: 2286/2097152 bytes
+CPU time usage: 0.164 seconds
+Real time usage: 0.195 seconds
+Preprocessor visited node count: 525/1000000
+Preprocessor generated node count: 1515/1000000
+Post‐expand include size: 16151/2097152 bytes
+Template argument size: 2291/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 10214/5000000 bytes
+Unstrip post‐expand size: 10069/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  178.921      1 -total
- 50.73%   90.760     27 Template:CodeSelect
- 44.72%   80.012      1 Template:Processor_Microcode_Updates
- 21.36%   38.219      2 Template:Install_Backport_Host
- 17.91%   32.049      1 Template:VirtualBox_Spectre_Meltdown
- 15.76%   28.191      1 Template:Reflist
- 14.41%   25.777      1 Template:Install_Backport
-  9.86%   17.639      1 Template:Footer
-  5.28%    9.451      1 Template:Qubes_upgrade_dom0
-  3.91%    7.003      1 Template:FooterLight
+100.00%  156.295      1 -total
+ 47.91%   74.878      1 Template:Processor_Microcode_Updates
+ 40.15%   62.746     22 Template:CodeSelect
+ 20.80%   32.517      2 Template:Install_Backport_Host
+ 18.29%   28.579      1 Template:Install_Backport
+ 16.16%   25.254      1 Template:Reflist
+ 10.72%   16.748      1 Template:Footer
+  8.16%   12.754      1 Template:Header
+  7.33%   11.455      1 Template:VirtualBox_Spectre_Meltdown
+  6.22%    9.724      1 Template:Qubes_upgrade_dom0
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755" dir="ltr" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755">https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=36755</a>"</div>
@@ -703,5 +653,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_M
 </div>
 
 </body>
-<!-- Cached/compressed 20180927121840 -->
+<!-- Cached/compressed 20180929060753 -->
 </html>
