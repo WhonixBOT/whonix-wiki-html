@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox - Whonix
  url: ./Windows
- date: Sun Sep 30 08:19:11 2018
+ date: Mon Oct  1 08:18:54 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -421,14 +421,22 @@ Do not continue if verification fails! This risks using infected or erroneous fi
 <span id="meltdown"></span>
 <span id="spectre-meltdown"></span>
 <b>Experimental spectre/meltdown defenses</b><br/>
-</p><p><a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" rel="noreferrer noopener" target="_blank">Experimental</a> spectre/meltdown defenses.
-</p><p>Related to <a data-href="/wiki/Firmware_Security_and_Updates" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">Firmware Security and Updates</a>.
-</p><p>On the host. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
+</p>
+<div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
+<p>Testers only! For more please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p><a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" rel="noreferrer noopener" target="_blank">Experimental</a> spectre/meltdown defenses. Related to <a data-href="/wiki/Firmware_Security_and_Updates" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">Firmware Security and Updates</a>. Possibly not worth it due to huge performance penalty and unclear security benefits. Despite:
+</p>
+<ul><li><a data-href="/wiki/Firmware_Security_and_Updates#Processor_Microcode_Updates" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">host microcode upgrade</a></li>
+<li>host kernel upgrade</li>
+<li>VM kernel upgrade</li>
+<li><a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a> on the host showing "not vulnerable"</li>
+<li>latest VirtualBox version</li>
+<li>all spectre/meltdown related VirtualBox settings tuned for better security as documented below</li></ul>
+<p>VirtualBox is likely still vulnerable to spectre/meltdown. For reference see <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox bug report</a> / <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">forum discussion</a>. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Users can only wait for VirtualBox developers to fix this.
+</p><p>On the host.  <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p>
 <pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
 VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
@@ -440,25 +448,14 @@ VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
 VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
 VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
 VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
-VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
-VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
+</pre>
+<p>These steps have to be repeated for every VirtualBox VM (Whonix or non-Whonix) (including <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">multiple</a> and <a data-href="/wiki/Other_Operating_Systems" href="./Other_Operating_Systems.html" title="Other Operating Systems">custom</a> VM). Above instructions cover only default VM names Whonix-Gateway and Whonix-Workstation. If you are using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> and/or <a data-href="/wiki/Multiple_Whonix-Workstations#Multiple_Whonix-Gateways" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Gateways</a>, you need to repeat these instructions for all custom created VMs as well.
+</p>
 </div>
 </div>
 <p><br/>
-<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p><p><b>4.Start Whonix</b><br/>
 </p><p>Starting Whonix is simple. 
 </p><p>Start VirtualBox -&gt; Double click on the Whonix-Gateway and Whonix-Workstation.
@@ -539,6 +536,11 @@ Or alternatively use the <i>.onion</i> mirror.
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
 </li>
 <li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
+<ul><li>VirtualBox bug report: <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox 5.2.18 vulnerable to spectre/meltdown despite microcode being installed</a></li>
+<li>VirtualBox forum discussion: <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">VirtualBox 5.2.18 vulnerable to spectre/meltdown despite microcode being installed (#17987)</a></li>
+<li>Whonix forum discussion: <a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" rel="noreferrer noopener" target="_blank">Whonix vulerable due to missing processor microcode packages? spectre / meltdown / retpoline / L1 Terminal Fault (L1TF)</a> </li></ul>
+</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--ibpb-on-vm-[enter|exit] on|off: Enables flushing of the indirect branch prediction buffers on every VM enter or exit respectively. This could be enabled by users overly worried about possible spectre attacks by the VM. Please note that these options may have sever impact on performance.
 <br/>
@@ -548,14 +550,14 @@ Or alternatively use the <i>.onion</i> mirror.
 <p>There is a mistake in VirtualBox manual saying <code>enter</code> which does not work. It's <code>entry</code>.
 </p>
 </span></li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a>
 <blockquote>
 <p>--l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, “CVE-2018-3646”.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, “<a class="external text" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">CVE-2018-3646</a>”.
 <br/>
@@ -563,7 +565,7 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646</a>
 <blockquote>
 <p>For users not concerned by this security issue, the default mitigation can be disabled using<br/>
@@ -583,7 +585,7 @@ Or alternatively use the <i>.onion</i> mirror.
 <p>Since we want to enable the security feature we set <code>--l1d-flush-on-sched on</code>.
 </p>
 </span></li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
 <br/>
@@ -591,23 +593,23 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
 According to this <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox ticket</a> <code>--spec-ctrl</code> should be set to <code>on</code>.</span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, “Nested paging and VPIDs” and Section 13.4.1, “CVE-2018-3646”.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">Check any difference using <a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a>.</span>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">Check any difference using <a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a>.</span>
 </li>
 </ol></div></div>
 </div>
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VirtualBox" href="./VirtualBox" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -619,32 +621,32 @@ According to this <a class="external text" data-href="https://www.virtualbox.org
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180930061905
+Cached time: 20181001061847
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.264 seconds
-Real time usage: 0.294 seconds
-Preprocessor visited node count: 1869/1000000
-Preprocessor generated node count: 5722/1000000
-Post‐expand include size: 31647/2097152 bytes
-Template argument size: 4705/2097152 bytes
+CPU time usage: 0.260 seconds
+Real time usage: 0.290 seconds
+Preprocessor visited node count: 1875/1000000
+Preprocessor generated node count: 5748/1000000
+Post‐expand include size: 34620/2097152 bytes
+Template argument size: 3982/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9850/5000000 bytes
+Unstrip post‐expand size: 11706/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  220.391      1 -total
- 91.97%  202.694      1 Template:VirtualBox
- 35.58%   78.419      1 Template:DownloadTable
- 24.41%   53.789      4 Template:Mbox
- 20.85%   45.941      4 Template:Ambox
- 11.86%   26.145      4 Template:Category_handler
- 10.80%   23.811      1 Template:Reflist
-  9.80%   21.594      7 Template:CodeSelect
-  6.86%   15.114      4 Template:Ambox/core
-  6.53%   14.398      1 Template:Header
+100.00%  216.722      1 -total
+ 95.83%  207.691      1 Template:VirtualBox
+ 40.12%   86.957      1 Template:DownloadTable
+ 26.17%   56.726      4 Template:Mbox
+ 22.29%   48.313      4 Template:Ambox
+ 12.52%   27.138      4 Template:Category_handler
+ 11.13%   24.112      1 Template:Reflist
+  9.37%   20.315      6 Template:CodeSelect
+  7.37%   15.979      4 Template:Ambox/core
+  7.30%   15.824      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303">https://www.whonix.org/w/index.php?title=VirtualBox&amp;oldid=36303</a>"</div>
