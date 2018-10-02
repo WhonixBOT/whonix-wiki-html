@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix:Sandbox/Code select - Whonix
  url: ../Whonix:Sandbox/Code_select
- date: Mon Oct  1 08:19:55 2018
+ date: Tue Oct  2 08:20:15 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -21,12 +21,12 @@
 <link data-href="/w/index.php?title=Whonix:Sandbox/Code_select&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Sandbox/Code select" property="og:title"/>
-<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Whonix:Sandbox/Code_select" property="og:url"/>
+<meta content="../Whonix:Sandbox/Code_select" property="og:url"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
@@ -105,26 +105,9 @@ Whonix requires payments to stay alive.
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>MultiLines
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
-VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
-VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
-VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
-VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
 VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
@@ -139,24 +122,18 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 </div>
 <p>Single Line
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
-<div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on</pre>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on</textarea>
 </div>
 </div>
 <!-- 
 NewPP limit report
-Cached time: 20181001013200
+Cached time: 20181001142227
 Cache expiry: 2592000
 Dynamic content: false
 CPU time usage: 0.008 seconds
-Real time usage: 0.011 seconds
+Real time usage: 0.017 seconds
 Preprocessor visited node count: 15/1000000
 Preprocessor generated node count: 60/1000000
 Post‐expand include size: 160/2097152 bytes
@@ -168,14 +145,14 @@ Unstrip post‐expand size: 0/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%    9.319      1 -total
- 98.56%    9.185      2 Template:CodeSelectTest
+100.00%   14.749      1 -total
+ 98.81%   14.573      2 Template:CodeSelectTest
 -->
 </div>
-<!-- Saved in parser cache with key wiki:pcache:idhash:6140-0!canonical and timestamp 20181001013200 and revision id 37314
+<!-- Saved in parser cache with key wiki:pcache:idhash:6140-0!canonical and timestamp 20181001142227 and revision id 37314
  -->
 </div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314">https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -201,5 +178,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Wh
 </div>
 
 </body>
-<!-- Cached/compressed 20181001015741 -->
+<!-- Cached/compressed 20181001142227 -->
 </html>

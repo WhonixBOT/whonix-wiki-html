@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Chat - Whonix
  url: ./Chat
- date: Mon Oct  1 07:34:13 2018
+ date: Tue Oct  2 07:34:19 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -170,8 +170,7 @@ For example:
 <li>Who communicates with whom
 <ul><li>If the recipient knows the sender and the recipient uses a non-anonymous account or the recipient ever logged in without Tor, this can be used as a hint for determining who the sender is.</li></ul></li>
 <li>Content of messages - Can be prevented using end-to-end encryption. This is covered in <a data-href="/wiki/Chat#OTR_encryption" href="./Chat.html" title="Chat">OTR encryption</a> below.</li></ul>
-<p><br/>
-Jabber/XMPP is a server-federation-based protocol designed with openness in mind. Its security depends on you making good use of OTR as you can never be sure if servers are properly encrypted between each other. Privacy with Jabber is limited, as it is visible to various kinds of attackers who your account is talking to. Tor only helps to pseudonymize your account and hide your current location, but your social graph may still expose your identity. For a good operational security guide on chatting anonymously see <a class="external text" data-href="https://theintercept.com/2015/07/14/communicating-secret-watched/" href="https://theintercept.com/2015/07/14/communicating-secret-watched/" rel="noreferrer noopener" target="_blank">The Intercept's</a> <a class="external text" data-href="https://archive.is/n116i" href="https://archive.is/n116i" rel="noreferrer noopener" target="_blank">article</a>.
+<p>Jabber/XMPP is a server-federation-based protocol designed with openness in mind. Its security depends on you making good use of OTR as you can never be sure if servers are properly encrypted between each other. Privacy with Jabber is limited, as it is visible to various kinds of attackers who your account is talking to. Tor only helps to pseudonymize your account and hide your current location, but your social graph may still expose your identity. For a good operational security guide on chatting anonymously see <a class="external text" data-href="https://theintercept.com/2015/07/14/communicating-secret-watched/" href="https://theintercept.com/2015/07/14/communicating-secret-watched/" rel="noreferrer noopener" target="_blank">The Intercept's</a> <a class="external text" data-href="https://archive.is/n116i" href="https://archive.is/n116i" rel="noreferrer noopener" target="_blank">article</a>.
 </p><p>Systems which do not require a server by design, i.e. serverless instant messengers are likely better from a privacy point of view. Such systems are <a href="#RetroShare">#RetroShare</a> and <a href="#Tox">#Tox</a>.
 </p><p>For IRC inside Whonix-Workstation, the <a class="external text" data-href="https://en.wikipedia.org/wiki/Ident" href="https://en.wikipedia.org/wiki/Ident" rel="noreferrer noopener" target="_blank">Ident Protocol</a> is automatically blocked because Whonix-Workstation is firewalled.
 The <a class="external text" data-href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/IrcSilc" href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/IrcSilc" rel="noreferrer noopener" target="_blank">TorifyHOWTO/IrcSilc</a> contains general IRC safety techniques and other tips.
@@ -448,7 +447,7 @@ In Whonix-Workstation AppVM.
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
-<div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
+<div class="toccolours mw-collapsible mw-collapsed">
 <p>For more help, press on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
@@ -538,17 +537,14 @@ In Whonix-Workstation AppVM.
 </p><p>After adding tons of random "friends" from a public forum, connection to a very few people over TCP. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup> <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup> Approximately only 5% were online. Although probably only a very small portion of the network could be seen, the content of the network looked pretty interesting.
 </p><p>RetroShare reports Right click -&gt; DHT Details: NET WARNING No DHT; Behind NAT UNKNOWN NAT STATE MANUAL FORWARD
 </p><p>There still may be some privacy caveats left with RetroShare trying to communicate outside of Tor, but that doesn't matter if Whonix makes any non-Tor traffic impossible.
-</p><p><br/>
 </p>
 <h2><span class="mw-headline" id="Installation_and_Setup">Installation and Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Chat&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Chat&amp;action=edit&amp;section=7.html" title="Edit section: Installation and Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>WARNING: RetroShare packages are signed with <a class="external text" data-href="https://github.com/RetroShare/RetroShare/issues/355" href="https://github.com/RetroShare/RetroShare/issues/355" rel="noreferrer noopener" target="_blank">weak</a> 1024 bit keys. Until this is fixed we recommend using Ricochet IM with OnionShare instead.</b>
 </p>
 <table class="metadata plainlinks ambox ambox-notice" style="">
 <tbody><tr><td class="mbox-image"><div style="width: 52px;"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">Security warning: Adding a third party repository allows the vendor to replace any package on your system. Proceed at your own risk! See <a data-href="/wiki/Install_Software#Foreign_Sources" href="./Install_Software.html" title="Install Software">Foreign Sources</a> for further information. For greater safety, users adding third party repositories should always use <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> to compartmentalize VMs with additional software.<span class="hide-when-compact"> </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
-<p><br/>
-</p><p><i>RetroShare is currently available on Debian 7.0 Wheezy and 6.0 Squeeze for armel, armhf, i386 and amd64 architectures and for 8.0 Jessie.</i>
-</p><p><br/>
-Before adding the repo<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>, fetch the key and verify<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> fingerprints. Always check the fingerprint for yourself. The output at the moment is:
+<p><i>RetroShare is currently available on Debian 7.0 Wheezy and 6.0 Squeeze for armel, armhf, i386 and amd64 architectures and for 8.0 Jessie.</i>
+</p><p>Before adding the repo<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>, fetch the key and verify<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> fingerprints. Always check the fingerprint for yourself. The output at the moment is:
 </p>
 <pre>pub  1024D/0x9418A47921691F91 2011-08-16 home:AsamK OBS Project &lt;home:AsamK@build.opensuse.org&gt;
       Key fingerprint = E2CE 3677 C801 5772 D097  B0AA 9418 A479 2169 1F91
@@ -613,8 +609,7 @@ Before adding the repo<sup class="reference" id="cite_ref-26"><a href="#cite_not
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://download.opensuse.org/repositories/home:/AsamK:/RetroShare/Debian_8.0/ /' &gt; /etc/apt/retroshare06-git.list"</textarea>
 </div>
 </div>
-<p><br/>
-<a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+<p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainer">
 <div class="selectBtnDiv">
 <div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
@@ -638,14 +633,13 @@ Before adding the repo<sup class="reference" id="cite_ref-26"><a href="#cite_not
 <textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install retroshare06</textarea>
 </div>
 </div>
-<p><br/>
-For the latest nightly package name install <code>retroshare06-git</code> instead.
+<p>For the latest nightly package name install <code>retroshare06-git</code> instead.
 </p><p><sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>
 </p><p>RetroShare setup:
 </p>
-<ul><li><ul><li>Pick a pseudonym and password. Don't use real name or location obviously. Move your mouse to generate enough entropy.</li></ul></li></ul>
-<ul><li><ul><li>Check <i>Advanced Options</i> -&gt; <i>Create a hidden node</i></li></ul></li></ul>
-<ul><li><ul><li>Change key-length to 4096 bits for adequate security then generate the new profile.</li></ul></li></ul>
+<ul><li>Pick a pseudonym and password. Don't use real name or location obviously. Move your mouse to generate enough entropy.</li>
+<li>Check <i>Advanced Options</i> -&gt; <i>Create a hidden node</i></li>
+<li>Change key-length to 4096 bits for adequate security then generate the new profile.</li></ul>
 <h2><span class="mw-headline" id="Configure">Configure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Chat&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Chat&amp;action=edit&amp;section=8.html" title="Edit section: Configure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="I2P">I2P</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Chat&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Chat&amp;action=edit&amp;section=9.html" title="Edit section: I2P">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Follow the steps in this <a class="external text" data-href="https://blog.kalrong.net/en/2016/09/23/retroshare-over-i2p/" href="https://blog.kalrong.net/en/2016/09/23/retroshare-over-i2p/" rel="noreferrer noopener" target="_blank">guide</a> to connect to others over I2P.
@@ -919,7 +913,7 @@ under certain conditions; see the wiki source code for details.
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Chat" href="./Chat" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Chat" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Chat" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -931,35 +925,35 @@ under certain conditions; see the wiki source code for details.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180930210525
+Cached time: 20181001210754
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.336 seconds
-Real time usage: 0.375 seconds
+CPU time usage: 0.304 seconds
+Real time usage: 0.901 seconds
 Preprocessor visited node count: 2420/1000000
 Preprocessor generated node count: 6337/1000000
-Post‐expand include size: 42572/2097152 bytes
-Template argument size: 16477/2097152 bytes
+Post‐expand include size: 42532/2097152 bytes
+Template argument size: 16457/2097152 bytes
 Highest expansion depth: 19/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 17183/5000000 bytes
+Unstrip post‐expand size: 17426/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  276.982      1 -total
- 31.56%   87.426     34 Template:CodeSelect
- 21.51%   59.587      4 Template:Mbox
- 18.45%   51.102      8 Template:Box
- 18.15%   50.268      4 Template:Ambox
- 16.70%   46.263      1 Template:Tox
- 10.15%   28.105      4 Template:Category_handler
- 10.07%   27.886      1 Template:PQCrypto
-  9.52%   26.366      1 Template:Reflist
-  8.87%   24.556      2 Template:Third_Party_Repository
+100.00%  818.934      1 -total
+ 70.13%  574.287      1 Template:Header
+ 10.20%   83.517     34 Template:CodeSelect
+  7.02%   57.505      4 Template:Mbox
+  6.15%   50.344      8 Template:Box
+  5.97%   48.866      4 Template:Ambox
+  4.94%   40.468      1 Template:Tox
+  3.34%   27.318      4 Template:Category_handler
+  3.02%   24.768      1 Template:Reflist
+  3.02%   24.702      1 Template:PQCrypto
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=36712" dir="ltr" href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=36712">https://www.whonix.org/w/index.php?title=Chat&amp;oldid=36712</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=37446" dir="ltr" href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=37446">https://www.whonix.org/w/index.php?title=Chat&amp;oldid=37446</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -970,7 +964,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 9 September 2018, at 06:42.</li>
+<li id="footer-lastmod"> This page was last edited on 1 October 2018, at 23:01.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -985,5 +979,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;
 </div>
 
 </body>
-<!-- Cached/compressed 20180930210525 -->
+<!-- Cached/compressed 20181001210755 -->
 </html>
