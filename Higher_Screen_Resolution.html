@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox/Higher Screen Resolution without installing VirtualBox Guest Additions - Whonix
  url: ./Higher_Screen_Resolution
- date: Tue Oct  2 07:54:55 2018
+ date: Wed Oct  3 07:55:04 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -144,50 +144,38 @@ Whonix requires payments to stay alive.
 <p><b>This is still experimental.</b> As in tested by few people. You should always be able to undo these changes. Doesn't hurt to always have a recent backup, just in case. This is an alternative to using <a data-href="/wiki/VirtualBox/Guest_Additions" href="./VirtualBox/Guest_Additions.html" title="VirtualBox/Guest Additions">VirtualBox Guest Additions</a> for higher screen resolution. See also <a href="#Security_Considerations">#Security Considerations</a>.
 </p><p>To get higher screen resolution without installing VirtualBox guest additions, create a file called, say <i><span style="background-color:#FBFBFB">/etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</span></i>.
 </p><p>If there's no such directory, you need to create it first:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /etc/X11/xorg.conf.d</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mkdir -p /etc/X11/xorg.conf.d</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /etc/X11/xorg.conf.d</textarea>
 </div>
 </div>
 <p>Open <i><span style="background-color:#FBFBFB">kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
 </div>
 </div>
 </div>
 <p>With the following contents:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>Section "Device"
   Identifier "VirtualBox-Device"
@@ -213,7 +201,7 @@ Section "Screen"
 EndSection</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">Section "Device"
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">Section "Device"
   Identifier "VirtualBox-Device"
   Option "Monitor-default" "VirtualBox-Monitor"
 EndSection
@@ -241,15 +229,12 @@ EndSection</textarea>
 </p><p>This will make Whonix come up in 1600x1200 mode by default.
 </p><p>You can change the default mode by changing the "<i><span style="background-color:#FBFBFB">PreferredMode</span></i>" option in the "<i><span style="background-color:#FBFBFB">Monitor</span></i>" section. You can dynamically switch modes from the command line with "<i><span style="background-color:#FBFBFB">xrandr --output default --mode [whatever]</span></i>", and you can see a list of available modes with plain "<i><span style="background-color:#FBFBFB">xrandr</span></i>".
 </p><p>You can also change screen resolution using the KDE graphical user interface, go to Start Menu -&gt; System Settings -&gt; Display and Monitor. If you want some screen resolution that is not listed there (e.g. 1440x900), you can can try the next on your host:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>vboxmanage setextradata "VM Name" "CustomVideoMode1" "1440x900x32"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">vboxmanage setextradata "VM Name" "CustomVideoMode1" "1440x900x32"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">vboxmanage setextradata "VM Name" "CustomVideoMode1" "1440x900x32"</textarea>
 </div>
 </div>
 <p>If you do not see your Start Menu button anymore (because it is outside the screen), you can start Konsole and manually start System Settings by running <i><span style="background-color:#FBFBFB">systemsettings</span></i>.
@@ -263,15 +248,12 @@ EndSection</textarea>
 <li>It might also be better not to use the same screen resolution as on your host.</li></ul>
 <h1><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;action=edit&amp;section=4.html" title="Edit section: Troubleshooting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>If this doesn't work for you for some reason or if you want to revert these changes, simply delete <i><span style="background-color:#FBFBFB">/etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</span></i>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo rm /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
 </div>
 </div>
 <p>And <i><span style="background-color:#FBFBFB">restart kdm</span></i><sup class="reference" id="cite_ref-restart-kdm_1-1"><a href="#cite_note-restart-kdm-1">[1]</a></sup> or reboot.
@@ -297,33 +279,27 @@ EndSection</textarea>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-restart-kdm-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-restart-kdm_1-0">1.0</a></sup> <sup><a href="#cite_ref-restart-kdm_1-1">1.1</a></sup></span> <span class="reference-text">
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service kdm stop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service kdm stop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service kdm stop</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service kdm start</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service kdm start</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service kdm start</textarea>
 </div>
 </div></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" href="./VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -335,11 +311,11 @@ EndSection</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002055451
+Cached time: 20181003055500
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.068 seconds
-Real time usage: 0.077 seconds
+CPU time usage: 0.072 seconds
+Real time usage: 0.087 seconds
 Preprocessor visited node count: 316/1000000
 Preprocessor generated node count: 1159/1000000
 Post‐expand include size: 6514/2097152 bytes
@@ -347,20 +323,20 @@ Template argument size: 1643/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1460/5000000 bytes
+Unstrip post‐expand size: 1428/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   57.925      1 -total
- 34.37%   19.907      8 Template:CodeSelect
- 22.78%   13.198      1 Template:Footer
- 16.19%    9.376      1 Template:Header
- 14.27%    8.265      1 Template:Reflist
- 13.51%    7.828      1 Template:Open_with_root_rights
- 10.66%    6.174      1 Template:Box
-  9.76%    5.656      1 Template:FooterLight
-  6.73%    3.900      1 Template:Footer_this_is_a_wiki
-  5.32%    3.082      1 Template:Share
+100.00%   67.321      1 -total
+ 34.33%   23.113      8 Template:CodeSelect
+ 24.12%   16.240      1 Template:Footer
+ 15.56%   10.473      1 Template:Header
+ 14.34%    9.657      1 Template:Open_with_root_rights
+ 14.23%    9.581      1 Template:Reflist
+ 11.06%    7.447      1 Template:Box
+ 10.50%    7.071      1 Template:FooterLight
+  7.16%    4.819      1 Template:Footer_this_is_a_wiki
+  5.42%    3.650      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160">https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160</a>"</div>

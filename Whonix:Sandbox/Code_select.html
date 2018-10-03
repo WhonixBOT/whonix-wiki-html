@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix:Sandbox/Code select - Whonix
  url: ../Whonix:Sandbox/Code_select
- date: Tue Oct  2 08:20:15 2018
+ date: Wed Oct  3 08:20:27 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -106,6 +106,20 @@ Whonix requires payments to stay alive.
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>MultiLines
 </p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</pre>
+</div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on
 VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
@@ -123,17 +137,20 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off</textarea>
 </div>
 <p>Single Line
 </p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on</pre>
+</div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on</textarea>
 </div>
 </div>
 <!-- 
 NewPP limit report
-Cached time: 20181001142227
+Cached time: 20181002114417
 Cache expiry: 2592000
 Dynamic content: false
 CPU time usage: 0.008 seconds
-Real time usage: 0.017 seconds
+Real time usage: 0.014 seconds
 Preprocessor visited node count: 15/1000000
 Preprocessor generated node count: 60/1000000
 Post‐expand include size: 160/2097152 bytes
@@ -145,11 +162,11 @@ Unstrip post‐expand size: 0/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   14.749      1 -total
- 98.81%   14.573      2 Template:CodeSelectTest
+100.00%   11.961      1 -total
+ 98.97%   11.838      2 Template:CodeSelectTest
 -->
 </div>
-<!-- Saved in parser cache with key wiki:pcache:idhash:6140-0!canonical and timestamp 20181001142227 and revision id 37314
+<!-- Saved in parser cache with key wiki:pcache:idhash:6140-0!canonical and timestamp 20181002114417 and revision id 37314
  -->
 </div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314">https://www.whonix.org/w/index.php?title=Whonix:Sandbox/Code_select&amp;oldid=37314</a>"</div>
@@ -178,5 +195,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix:Sa
 </div>
 
 </body>
-<!-- Cached/compressed 20181001142227 -->
+<!-- Cached/compressed 20181002151747 -->
 </html>

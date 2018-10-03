@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/anon-ws-disable-stacked-tor - Whonix
  url: ../Dev/Dummy_Tor
- date: Tue Oct  2 07:42:58 2018
+ date: Wed Oct  3 07:43:04 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -198,15 +198,12 @@ Whonix requires payments to stay alive.
 </p>
 <h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;action=edit&amp;section=10.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>echo "$TOR_SOCKS_IPC_PATH"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">echo "$TOR_SOCKS_IPC_PATH"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "$TOR_SOCKS_IPC_PATH"</textarea>
 </div>
 </div>
 <p>Should show the following.
@@ -215,15 +212,12 @@ Whonix requires payments to stay alive.
 </pre>
 <hr/>
 <p>Run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>echo "$TOR_CONTROL_IPC_PATH"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">echo "$TOR_CONTROL_IPC_PATH"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "$TOR_CONTROL_IPC_PATH"</textarea>
 </div>
 </div>
 <p>Should show the following.
@@ -231,15 +225,12 @@ Whonix requires payments to stay alive.
 <pre>/var/run/anon-ws-disable-stacked-tor/127.0.0.1_9151.sock
 </pre>
 <p>Also please run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9150</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9150</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9150</textarea>
 </div>
 </div>
 <p>Should show the following.
@@ -270,15 +261,12 @@ See &lt;a href="https://www.torproject.org/documentation.html"&gt;https://www.to
 </p>
 <hr/>
 <p>Next one to try.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9151</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9151</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:9151</textarea>
 </div>
 </div>
 <p>Should show the following.
@@ -304,42 +292,33 @@ See &lt;a href="https://www.torproject.org/documentation.html"&gt;https://www.to
 <p><br/>
 In Whonix-Gateway or <code>sys-whonix</code> <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>
 </p><p><b>1.</b> Change to user <code>clearnet</code>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su clearnet</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su clearnet</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su clearnet</textarea>
 </div>
 </div>
 <p><b>2.</b> Circumvent <code>uwt</code> stream isolation wrapper by appending <code>.anondist-orig</code> to <code>curl</code>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl.anondist-orig &lt;your_url&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl.anondist-orig &lt;your_url&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl.anondist-orig &lt;your_url&gt;</textarea>
 </div>
 </div>
 <h4><span class="mw-headline" id="Using_curl_in_Whonix_14">Using curl in Whonix 14</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;action=edit&amp;section=13.html" title="Edit section: Using curl in Whonix 14">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>In the following examples, the <code>exec</code> calls from the command output shows the difference between running <code>curl</code> with the <code>uwtwrapper</code> both enabled and disabled. 
 </p><p><b><i>Example 1</i></b>
 </p><p><code>curl</code> is run with the <code>uwtwrapper</code> enabled. 
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>uwtwrapper_verbose=1 curl &lt;your_url&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">uwtwrapper_verbose=1 curl &lt;your_url&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">uwtwrapper_verbose=1 curl &lt;your_url&gt;</textarea>
 </div>
 </div>
 <p>This results in the following <code>exec</code> calls. Only the latest (most recent) call matters which shows <code>torsocks</code> is prepended before running <code>curl</code>. 
@@ -349,15 +328,12 @@ exec -a /usr/bin/curl /usr/bin/curl.anondist-orig &lt;your_url&gt;
 </pre>
 <p><b><i>Example 2</i></b>
 </p><p><code>curl</code> is run with the <code>uwtwrapper</code> disabled.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>uwtwrapper_verbose=1 UWT_DEV_PASSTHROUGH=1 curl &lt;your_url&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">uwtwrapper_verbose=1 UWT_DEV_PASSTHROUGH=1 curl &lt;your_url&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">uwtwrapper_verbose=1 UWT_DEV_PASSTHROUGH=1 curl &lt;your_url&gt;</textarea>
 </div>
 </div>
 <p>This command results in the following <code>exec</code> calls which show <code>torsocks</code> does not get prepended before <code>curl</code>. Since <code>curl</code> does not run under <code>torsocks</code>, local connections are not hindered and there is no stream isolation.
@@ -391,7 +367,7 @@ Users can either circumvent the <code>uwt</code> stream isolation wrapper or dis
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/anon-ws-disable-stacked-tor" href="../Dev/anon-ws-disable-stacked-tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/anon-ws-disable-stacked-tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/anon-ws-disable-stacked-tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -403,11 +379,11 @@ Users can either circumvent the <code>uwt</code> stream isolation wrapper or dis
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002054254
+Cached time: 20181003054300
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.080 seconds
-Real time usage: 0.090 seconds
+Real time usage: 0.096 seconds
 Preprocessor visited node count: 383/1000000
 Preprocessor generated node count: 1224/1000000
 Post‐expand include size: 4508/2097152 bytes
@@ -415,20 +391,20 @@ Template argument size: 383/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3513/5000000 bytes
+Unstrip post‐expand size: 3402/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   56.445      1 -total
- 38.09%   21.500      8 Template:CodeSelect
- 30.24%   17.067      1 Template:Footer
- 12.61%    7.115      1 Template:FooterLight
-  9.33%    5.267      1 Template:Footer_this_is_a_wiki
-  8.77%    4.951      1 Template:Reflist
-  8.20%    4.628      1 Template:Share
-  7.60%    4.292      1 Template:Header
-  7.13%    4.024      1 Template:Edit_it
-  4.60%    2.598      9 Template:Code
+100.00%   62.681      1 -total
+ 36.33%   22.774      8 Template:CodeSelect
+ 26.17%   16.405      1 Template:Footer
+ 15.91%    9.975      1 Template:Header
+ 11.09%    6.951      1 Template:FooterLight
+  7.67%    4.807      1 Template:Footer_this_is_a_wiki
+  7.02%    4.398      1 Template:Reflist
+  6.79%    4.259      1 Template:Share
+  5.75%    3.601      1 Template:Edit_it
+  3.96%    2.484      9 Template:Code
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;oldid=37448" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;oldid=37448">https://www.whonix.org/w/index.php?title=Dev/anon-ws-disable-stacked-tor&amp;oldid=37448</a>"</div>

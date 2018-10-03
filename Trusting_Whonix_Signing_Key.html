@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Signing Key - Whonix
  url: ./Trusting_Whonix_Signing_Key
- date: Tue Oct  2 08:12:35 2018
+ date: Wed Oct  3 08:12:48 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -143,42 +143,33 @@ Whonix requires payments to stay alive.
 <h1><span class="mw-headline" id="Download_the_key">Download the key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Signing_Key&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Signing_Key&amp;action=edit&amp;section=2.html" title="Edit section: Download the key">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><i>Optional:</i> Complete the steps below if unfamiliar with GnuPG or if they haven't already been performed. This will fix eventual <i><span style="background-color:#FBFBFB">gpg: WARNING: unsafe ownership</span></i> warnings.
 </p><p>Have GnuPG initialize your user data folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --fingerprint</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --fingerprint</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --fingerprint</textarea>
 </div>
 </div>
 <p>Set warning free permissions.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>chmod --recursive og-rwx ~/.gnupg</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">chmod --recursive og-rwx ~/.gnupg</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chmod --recursive og-rwx ~/.gnupg</textarea>
 </div>
 </div>
 <p>1. Download <a data-href="/wiki/Patrick_Schleizer" href="./Patrick_Schleizer.html" title="Patrick Schleizer">Patrick Schleizer</a>'s (adrelanos') <a data-href="/wiki/OpenPGP" href="./OpenPGP.html" title="OpenPGP">OpenPGP</a> key:<br/>
 <i><span style="background-color:#FBFBFB"><u><b><a class="link-https" data-href="/patrick.asc" download="" href="https://www.whonix.org/patrick.asc">patrick.asc</a></b></u></span></i>
 </p><p>2. Store it as <i><span style="background-color:#FBFBFB">~/patrick.asc</span></i>.
 </p><p>3. Check fingerprints/owners without importing anything.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --keyid-format long --with-fingerprint patrick.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint patrick.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint patrick.asc</textarea>
 </div>
 </div>
 <p>4. Verify it shows the following. 
@@ -190,15 +181,12 @@ sub  4096R/10FDAC53119B3FD6 2014-01-16 [expires: 2021-04-17]
 sub  4096R/CB8D50BB77BB3C48 2014-01-16 [expires: 2021-04-17]
 </pre>
 <p>5. Import the key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --import patrick.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --import patrick.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --import patrick.asc</textarea>
 </div>
 </div>
 <p>The output should tell you that the key was imported:
@@ -231,51 +219,39 @@ gpg:              unchanged: 1
 </p><p><i><span style="background-color:#FBFBFB">Jan Dittberner</span></i><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> (<i><span style="background-color:#FBFBFB">Debian Developer</span></i><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>) signed Patrick's key. So did intrigeri (Tails developer, <i><span style="background-color:#FBFBFB">Debian Developer</span></i>); Peter Palfrader (<i><span style="background-color:#FBFBFB">Debian Developer</span></i>); Richard King; Michael Carbone (accessnow.org).
 </p><p>If you are a user of Debian or many Debian derivatives, such as Ubuntu, you already trust apt-get, the APT repository of your distribution. So you can install Debian keyring to have a trusted source to obtain Jan's, intrigeri's or Peter's key, to check their signature on Patrick's key.
 </p><p>Install the Debian keyring.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install debian-keyring</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install debian-keyring</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install debian-keyring</textarea>
 </div>
 </div>
 <p>Extract a signer's key from Debian keyring and import it into your own keyring. Here is an example using Jan's key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --no-default-keyring --keyring /usr/share/keyrings/debian-keyring.gpg --armor --export B2FF1D95CE8F7A22DF4CF09BA73E0055558FB8DD | gpg --import</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --no-default-keyring --keyring /usr/share/keyrings/debian-keyring.gpg --armor --export B2FF1D95CE8F7A22DF4CF09BA73E0055558FB8DD | gpg --import</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --no-default-keyring --keyring /usr/share/keyrings/debian-keyring.gpg --armor --export B2FF1D95CE8F7A22DF4CF09BA73E0055558FB8DD | gpg --import</textarea>
 </div>
 </div>
 <p>Optionally try to establish a better trust path to the signer by checking signatures on the signer's key.
 </p><p>Check signatures on Patrick's key.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --check-sigs 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --check-sigs 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --check-sigs 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>The output of the above command should show signatures on Patrick's key, which should include the signer's signature.
@@ -298,7 +274,7 @@ under certain conditions; see the wiki source code for details.
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix_Signing_Key" href="./Whonix_Signing_Key" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Signing_Key" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Signing_Key" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -315,11 +291,11 @@ under certain conditions; see the wiki source code for details.
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20181002061232
+Cached time: 20181003061244
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.072 seconds
-Real time usage: 0.088 seconds
+CPU time usage: 0.064 seconds
+Real time usage: 0.084 seconds
 Preprocessor visited node count: 279/1000000
 Preprocessor generated node count: 786/1000000
 Post‐expand include size: 4608/2097152 bytes
@@ -327,20 +303,20 @@ Template argument size: 543/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2508/5000000 bytes
+Unstrip post‐expand size: 2170/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   66.320      1 -total
- 34.49%   22.871      8 Template:CodeSelect
- 28.48%   18.890      1 Template:Footer
- 19.31%   12.805      1 Template:Header
- 17.83%   11.827      1 Template:Gpg_init
- 11.59%    7.684      1 Template:FooterLight
-  9.57%    6.349      1 Template:Footer_this_is_a_wiki
-  7.60%    5.043      1 Template:Edit_it
-  6.79%    4.506      7 Template:Code2
-  6.29%    4.170      1 Template:Share
+100.00%   63.294      1 -total
+ 34.47%   21.818      8 Template:CodeSelect
+ 25.83%   16.348      1 Template:Footer
+ 21.06%   13.330      1 Template:Header
+ 17.51%   11.082      1 Template:Gpg_init
+ 11.37%    7.197      1 Template:FooterLight
+  7.59%    4.804      1 Template:Footer_this_is_a_wiki
+  6.69%    4.234      7 Template:Code2
+  5.88%    3.722      1 Template:Share
+  5.69%    3.601      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Signing_Key&amp;oldid=33531" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Signing_Key&amp;oldid=33531">https://www.whonix.org/w/index.php?title=Whonix_Signing_Key&amp;oldid=33531</a>"</div>

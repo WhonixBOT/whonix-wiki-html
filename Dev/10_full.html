@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/10 full - Whonix
  url: ../Dev/Build_Documentation/10_full
- date: Tue Oct  2 07:39:01 2018
+ date: Wed Oct  3 07:39:04 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -311,56 +311,44 @@ If you are interested, click on Expand on the right.
 </p>
 <h2><span class="mw-headline" id="Get_the_Signing_Key">Get the Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b> (See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>)
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>It isn't safe to only get the signing key from one source for the download you want to verify. For better security, <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">learn more about the Whonix Signing Key</a>.
 </p>
 <h2><span class="mw-headline" id="Get_the_Source_Code">Get the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install git and curl.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
 </div>
 </div>
 <p>Get source code including git submodules. 
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
 </div>
 </div>
 <p>Note: If using an older version of git (from Debian Jessie, Whonix 13, etc), remove <code>--jobs=4</code>.
 </p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
 </p><p>Shift to the source folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd Whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd Whonix</textarea>
 </div>
 </div>
 <h2><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -384,8 +372,7 @@ tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 gpg: Signature made Thu 13 Feb 2014 07:34:55 PM UTC using RSA key ID 77BB3C48
 gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultimate]
 </pre>
-<table class="metadata plainlinks ambox ambox-notice" style="">
-<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">Check the GPG signature timestamp makes sense. For example, if you previously saw a signature from 2018 and  now see a signature from 2017, then this might be a targeted rollback (downgrade) or indefinite freeze attack. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup><span class="hide-when-compact"> </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Check the GPG signature timestamp makes sense. For example, if you previously saw a signature from 2018 and  now see a signature from 2017, then this might be a targeted rollback (downgrade) or indefinite freeze attack. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></div></td></tr></tbody></table>
 <p>The warning.
 </p>
 <pre>gpg: WARNING: This key is not certified with a trusted signature!
@@ -498,60 +485,45 @@ Removing packages/kde-privacy/
 <div class="toccolours mw-collapsible mw-collapsed">
 <div class="mw-collapsible-content">
 <p>Do you want to <u>opt-in</u> for <u>Whonix's APT Repository</u>? This is set using an environment variable or <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a>. Below is an example using an environment variable.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename stretch'</textarea>
 </div>
 </div>
 <p>Add an environment variable as one normally does on that specific Linux platform. For example, to enable the Whonix stable repository during build, you could set <code>WHONIX_APT_REPOSITORY_OPTS</code> by interjecting it between <code>sudo</code> and the <code>./whonix_build</code> command. Below is an example. Do not use <code>[...]</code>. Replace it with other chosen build parameters (such as <code>--build</code>, <code>--target</code> etc.) after <code>./whonix_build</code>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
 </div>
 </div>
 </div>
@@ -583,10 +555,8 @@ Removing packages/kde-privacy/
 </p><p>The following torified apt-cacher-ng setup only has to be applied, if you are building using onion apt sources using <code>--connection onion</code>. In that case, please click Expand on the right. Howeverif you are building behind a Tor transparent proxy such as Whonix-Gateway, you can use the simpler clearnet apt-cacher-ng instructions below instead. 
 </p>
 <div class="mw-collapsible-content">
-<table class="metadata plainlinks ambox ambox-notice" style="">
-<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Ambox notice.png" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">If you skip these steps of setting up a torified apt-cacher-ng, you must below drop and not use  <code>REPO_PROXY=<a class="external free" data-href="http://127.0.0.1:3142" href="http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">http://127.0.0.1:3142</a></code>.<span class="hide-when-compact"> </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
-<table class="metadata plainlinks ambox ambox-notice" style="">
-<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">Note, this neither torifies all of the build script's connections nor hides Tor from your ISP!<span class="hide-when-compact"> </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Ambox notice.png" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAKaUlEQVR42u2YW2xcx3nHf9+cs0sub+KSlEjdbItS4kQ3K7akKk2TkKbiSELToICBAg0QJC9B0iJIUiAPBYpW6EuBPLVpXcCuYRS5ug7iJnXjuKEVC2JkJa1r2bIcxTZpUbYpkuJ1ednbmZmvD+fs2aVIFXac9KkHOCAWPDPzm+/y/74Z+P/n3T3y6w786iPj75ucrw6sFO2HV6t+f7Hit0ReWhUkE2i5rVmW8m0ysaNLLr+n2559T8fs+aGhoYnfKuBXHx4PC0V7//h0+bNLRTcQZMNsVz5HvrOJttYMTRmDCFQjz3LRMleoMD1foVK1vr9H3zxyu/70nt7Co6FW/vv48eNzv1HArzx49eMvXV09vVzxx/r62ujftYm+La20toQEgRCIIAIGMCIYUVShWLZM3Cjy0miB0YkVdnb6hd/fa/99f9fid0ql0rOnTp1aeleAf/mNN7KvT5a/9upE6Uu9W9vYu28zm3taMAbUK5JMIhK/pvYiGIHACJlQEBGm50qcvTjDlWvLnNqrY5/Ys/CguPLwfffd98KvBfj1H17vefIXC99dKvvjew/2ckd/J4EIznsEwRgIGuAgtmJoYkhBCCRexAhkMwYjcGmswI8uTLGnO1r5k6Or38pq8V+HhoZ+8o4Ah59f6Pn7H0w+MV/WY3cf20l3Tw5nfbqYScCMiafwHvK52L3LVSU0QmDib4LE7bWxuSbD5FyZbw+/xR2dUfSlY0vfw5Yeu/fee3/4tgB//qvl7D/84PpTr89Gg0c+fDttHc1461NLNVql5t7juwPu6gsQ4JcznrNXHSRWNjX3N4DmMobFlSr/9OQ1DvRa+7lDs99VZ783NDT0RCOL2Qjw8ZHZv3n1emVw/5EdZFubKFcczpO+1oPV+C1aONRnOLYjIBdCcwh3bzUc2mooWcV5xblkrIL1ilNlNfJ0tGX51PGdXHjThD+b6rk/CIITZ86c+d3/FfDhH08NnLtU+LP+/VtoybdQqXish8gni90E6hR25dfvc1enxN84sBqPtY0b9Mpq1dHX1cwnP9jHPz5LbsF1fNIY87Gnn366d0PAJ34+Hw4/t/C1lu5WurZ3Uq04nCo+mThSkoXqoJGDqRVdB3hjVeNNaQxmXd16TknnXKk69u3q4P23tfPQc03bPeajYRjetyHgxdGVP7g2Gx3ZursHqwmQkkyqOJcslljAecWIcm7cMTbv03neKChnx+OEijcSQzkPUfpbUwtHTvnIwW4uTQvXy+0fUtWjIyMj/QBhI+ArbxY/l8vnyHbkiKI4KbwkwqtxsHtVjICKJP+DQkV56LmI/i5DIHCtoEQOskEcp0ZBRdOEUlPL6HiuSqRs6Wxmz7Y2fvSaZj9/0NwdRdHvAa+nFvznn0z3T8xWBzp6O9KYqcebYlXTxHAax2TVKhUXW6do4dKU58Upz2oVFOrWXuMNcE5TqzZ65MCuDs6/YViymYPGmH3Dw8ObUgteHi8OVjFNmY4ckVVEIRBFRNBEJlQ0tqoK2QByGUn1UNZIiaJA1UlibVJvBIBPYss7jSuSCuVI6e1qJpMJuLacazuQr+7JZrP9KeCNxeqHgpYshAHOxZUidqEm5Sv5DVS8cs+2gM8cysYirXHdTWVV4LU5zyPPRzQFcThIusm6eAugHjyKV6UpE7Cls4mXZyvs79TbVHVfCri4bN8b5lpxCOIVkdiK9VjT1BrOSwIUP7mMrFP8XBhnuDFgVGNxX+ONxOJJbKvGlu1qz/L6vABsVdVtKWCp6vtkU0CkiXs1cctNSRHXWuW/JiyXbzgiJ3zhSIYPbA3WAPpa9rtkbAK6xhu1JEysGXhozYWMTYOIdAH5FLBitS00Ac6BqCYD4xhTQFWTbiW2QtFDMVKqTqm69dXINySFoojb2BsiggJi4kQKA0MxEoCcqraGayeNM0t84gYUNeAS0KABVEQ2rpPJo8RCHRipewPFKHiRelsmGoO62MrxhpJQFsmkgJlAVivOI14JfD17va9nZW3igLqVnWdNPNYB6xKVekMTq2kMVZsvbkBi8a5EnuZMPKGqagrY0hxMr1Rsv3GK1xgqHpgENiCydmKTaJ1nPaGmZTGRGjSOw4awqYFK4vrAQ6EY0dcmJGpUTr2Ubw9es6UoEeiGWuuVyNVraFq6kppsU4lZb8F6SUwEPvltVdcKdzJf5JT55YjbNilAQUSWUsDeruwFLVeJqg4Ha0E1lgzXUOxtQ5XRjWKw4RvbOJerj4t8HdQDq2XH3HKFA5stwAxwNQXcvS13psVo5FbLRCr1HfqGsuTiYt+4oL1FDKJrN1lr2WzSdDhf62hiUEW4sVjGWkd/RxngLVW9nAJ+/mTfa9u6syN2fqVu8lqTqQ3Wc7EVrNZ6RLgF3zoXrmnbXL2jqXlp7PoKv7NdaQvKqOpVERlboxR39DU/xGoZLVZwSD3OGkGT1qtqlZWqslTx2A100CosVz3LVaXsb/JGrYFwYF28vYVCheuzRe5/fxVVHQNeGBwcXFyjg3fuyD3+yluly2M3CvvZuTnONq1nryTZqx56W4Vd+YDIKV0t6482m7LC0e0h2QAmlj1zxeQgdVP2KmBUeHl8kbv6lJ25JUTlknPuxxsemh54curjDz114ynb143f1EaoHqkdyhPNKkXKH+1v4q8Gcm/r0P/Af1Z47OUq7VlJN1mTqWxomJ5b5fkrMzz8iTI9QWEUeGBgYODvRETXFYM/PdX3Hx/d1/aInZyHUoUIqbfqDWeKjSPv1o+7yc3WK16EwmqVF16d44sfFHqCggXOA4+KiK7rqGvPHw9s+eJ0YeLwxYnZg7JzCzYTYpym4h0aeHHK8bcXysmBPekHG//GpSo+SkxajMTZb0TwCmEglMqWF6/M8JHblOPbZsHLT51z3xgaGpqqsWwIeOzOtuKZl5ZOfP2J68/+amLmDtnag2/K4r1Pz8W/nHG8MOkwpg5W61Rq39Sa2eZQaAoF6yAwShgYVosRr4zOcmc+4sv3LIJzF1T1sZGRkbNv++rjweGZHY+fnx4eX5L3yeY8vrUlVeE19zBJ4yANh3Sp3c00HPKNEYwRVgol3nhzgQ/0Wr5yuECzVC+o6nfa29sfPHz4cPSOLo9OPzbRfm2q8P1fXHUfsy0tSL4DzWZStUsXr4FK3c2NUAawlYiF2WUKi0Xu3+v4w90LLmv8Ge/9v3R0dHzzZrh3dP32199++c9/NsqXry6yRVtzmPYWaMpS8/GtQPEeW4koFoqsLpe4s9vz6QMldrctjwLnVfWb586de+b06dP+XV9gfuvfzvdfWej4i8uTcvKVWemLJMBnM5hsBgkDMCaF8s5hqw5biRDvONTnGLi9wl3dq+MZ4y8CI+Vy+dETJ05M/savgJ955pk9VxbaP3WtEN47uRzumV4hv1iWbDFSA0guI3TmlO2blD1dtvzefHVmc1NpFLiqqheBpwYGBsZqUvJbuaNOQDvDMNxtrd0PbBWRvKq2JuqgQFlEloBxVX0JGB0cHFz8P7lEX5dMp0+bo0ePZnK5XMZaG+RyOb+0tFQ9efJk9e1Y6lbP/wA2kHvWfUY55wAAAABJRU5ErkJggg==" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">If you skip these steps of setting up a torified apt-cacher-ng, you must below drop and not use  <code>REPO_PROXY=<a class="external free" data-href="http://127.0.0.1:3142" href="http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">http://127.0.0.1:3142</a></code>.</div></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Note, this neither torifies all of the build script's connections nor hides Tor from your ISP!</div></td></tr></tbody></table>
 <p>Install apt-cacher-ng-, torsocks and tor.
 </p>
 <pre>sudo apt-get install apt-cacher-ng torsocks tor
@@ -599,27 +569,21 @@ Removing packages/kde-privacy/
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -902,7 +866,7 @@ kFreeBSD (32-bit).
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/10_full" href="../Dev/Build_Documentation/10_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/10_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/10_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -914,32 +878,35 @@ kFreeBSD (32-bit).
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181001230406
+Cached time: 20181002231940
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.264 seconds
-Real time usage: 0.307 seconds
-Preprocessor visited node count: 2245/1000000
-Preprocessor generated node count: 7081/1000000
-Post‐expand include size: 38803/2097152 bytes
-Template argument size: 4124/2097152 bytes
-Highest expansion depth: 19/40
+CPU time usage: 0.252 seconds
+Real time usage: 0.314 seconds
+Preprocessor visited node count: 1294/1000000
+Preprocessor generated node count: 3673/1000000
+Post‐expand include size: 35018/2097152 bytes
+Template argument size: 2019/2097152 bytes
+Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 14638/5000000 bytes
+Unstrip post‐expand size: 14897/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
+Lua virtual size: 14.8 MB/50 MB
+Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  219.305      1 -total
- 40.53%   88.877      1 Template:Build_Configuration
- 24.16%   52.976      1 Template:Build_Documentation_apt-cache
- 23.47%   51.471      3 Template:Mbox
- 22.40%   49.127      1 Template:Build_Documentation_Get_Source_Code
- 20.07%   44.008      3 Template:Ambox
- 19.49%   42.740     11 Template:CodeSelect
- 12.50%   27.416      1 Template:Gpg_signature_timestamp
- 11.08%   24.291      3 Template:Category_handler
- 10.72%   23.505      1 Template:Open_with_root_rights
+100.00%  223.676      1 -total
+ 34.80%   77.848      1 Template:Build_Documentation_Get_Source_Code
+ 30.30%   67.778      3 Template:Mbox
+ 26.21%   58.630      1 Template:Build_Configuration
+ 25.97%   58.083      1 Template:Gpg_signature_timestamp
+ 15.95%   35.683      1 Template:Reflist
+ 15.17%   33.928     11 Template:CodeSelect
+ 11.08%   24.780      1 Template:Build_Documentation_apt-cache
+  7.87%   17.597      1 Template:Build_Documentation_Whonix_APT_Repository
+  6.97%   15.595      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/10_full&amp;oldid=37408" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/10_full&amp;oldid=37408">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Build_Documentation/10_full&amp;oldid=37408</a>"</div>
@@ -968,5 +935,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 </div>
 
 </body>
-<!-- Cached/compressed 20181001230406 -->
+<!-- Cached/compressed 20181002231940 -->
 </html>
