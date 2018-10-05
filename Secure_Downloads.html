@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Secure Downloads - Whonix
  url: ./Secure_Downloads
- date: Thu Oct  4 08:07:08 2018
+ date: Fri Oct  5 08:07:43 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -154,83 +154,65 @@ Whonix requires payments to stay alive.
 <p>Note: In the examples below, the file will be saved in the user's current working directory. If the file should be saved elsewhere, change the current working directory before running scurl.
 </p><p>Also, if the <code>--remote-name</code> parameter is used, scurl will <a class="external text" data-href="https://curl.haxx.se/docs/manpage.html#-O" href="https://curl.haxx.se/docs/manpage.html" rel="noreferrer noopener" target="_blank">write output to a local file with the same name as the remote file retrieved</a>. Only the file part of the remote file is used and the path is cut off.
 </p><p>To invoke scurl to download a file, simply run (replace the https:// example with the actual file location).
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl --remote-name https://dist.torproject.org/torbrowser/7.5.6/tor-browser-linux64-7.5.6_en-US.tar.xz</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl --remote-name https://dist.torproject.org/torbrowser/7.5.6/tor-browser-linux64-7.5.6_en-US.tar.xz</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl --remote-name https://dist.torproject.org/torbrowser/7.5.6/tor-browser-linux64-7.5.6_en-US.tar.xz</textarea>
 </div>
 </div>
 <p>This will download <i>tor-browser-linux64-7.5.6_en-US.tar.xz</i> to the user's current working directory.
 </p><p>To invoke scurl to download a web page, run (replace the https:// example with the actual webpage).
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl https://check.torproject.org</textarea>
 </div>
 </div>
 <p>All other curl/Linux features continue to work, such as storing the input inside of a file (change <i>index.html</i> to the desired file name).
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl https://check.torproject.org &gt; index.html</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl https://check.torproject.org &gt; index.html</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl https://check.torproject.org &gt; index.html</textarea>
 </div>
 </div>
 <h3><span class="mw-headline" id="scurl_Errors">scurl Errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secure_Downloads&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Secure_Downloads&amp;action=edit&amp;section=4.html" title="Edit section: scurl Errors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>As expected, attempting scurl with plain HTTP will fail. 
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl http://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl http://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl http://check.torproject.org</textarea>
 </div>
 </div>
 <p>This will result in the following output.
 </p>
 <pre>curl: (1) Protocol http not supported or disabled in libcurl</pre>
 <p>Similarly, scurl fails with the following attempt.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl check.torproject.org</textarea>
 </div>
 </div>
 <p>Returning the following output.
 </p>
 <pre>curl: (1) Protocol http not supported or disabled in libcurl</pre>
 <p>Running scurl against a self-signed or invalid SSL certificate also fails.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl https://www.debian-administration.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl https://www.debian-administration.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl https://www.debian-administration.org</textarea>
 </div>
 </div>
 <p>This results in an error, for example.
@@ -279,7 +261,7 @@ Users often mistakenly believe that a secure, green padlock and a <code>http<b>s
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Secure_Downloads" href="./Secure_Downloads" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Secure_Downloads" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Secure_Downloads" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -291,11 +273,11 @@ Users often mistakenly believe that a secure, green padlock and a <code>http<b>s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002100514
+Cached time: 20181005052918
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.088 seconds
-Real time usage: 0.141 seconds
+CPU time usage: 0.104 seconds
+Real time usage: 0.159 seconds
 Preprocessor visited node count: 277/1000000
 Preprocessor generated node count: 1039/1000000
 Post‐expand include size: 7662/2097152 bytes
@@ -303,23 +285,23 @@ Template argument size: 368/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3851/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 3788/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  115.447      1 -total
- 54.91%   63.391      1 Template:Secure_tor_browser_downloads
- 52.16%   60.212      1 Template:Mbox
- 15.49%   17.878      1 Template:Footer
- 14.58%   16.835      6 Template:CodeSelect
-  6.83%    7.883      1 Template:FooterLight
-  4.82%    5.566      1 Template:Reflist
-  4.24%    4.892      1 Template:Footer_this_is_a_wiki
-  3.70%    4.274      1 Template:Header
-  3.66%    4.224      1 Template:Share
+100.00%  134.444      1 -total
+ 57.34%   77.094      1 Template:Secure_tor_browser_downloads
+ 55.27%   74.312      1 Template:Mbox
+ 16.86%   22.664      1 Template:Footer
+ 11.88%   15.970      6 Template:CodeSelect
+  7.78%   10.455      1 Template:FooterLight
+  4.96%    6.666      1 Template:Footer_this_is_a_wiki
+  4.64%    6.244      1 Template:Reflist
+  4.33%    5.827      1 Template:Share
+  3.70%    4.975      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Secure_Downloads&amp;oldid=35641" dir="ltr" href="https://www.whonix.org/w/index.php?title=Secure_Downloads&amp;oldid=35641">https://www.whonix.org/w/index.php?title=Secure_Downloads&amp;oldid=35641</a>"</div>
@@ -348,5 +330,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Secure_Do
 </div>
 
 </body>
-<!-- Cached/compressed 20181002100514 -->
+<!-- Cached/compressed 20181005052918 -->
 </html>

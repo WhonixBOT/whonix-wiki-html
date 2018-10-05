@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: I2P - Whonix
  url: ./I2P
- date: Thu Oct  4 07:55:42 2018
+ date: Fri Oct  5 07:56:10 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -239,102 +239,78 @@ Whonix requires payments to stay alive.
       Key fingerprint = 7840 E761 0F28 B904 7535  49D7 67EC E560 5BCF 1346
 </pre>
 <p>Download key with scurl to home folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl -o i2p-pubkey.asc https://geti2p.net/_static/i2p-debian-repo.key.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl -o i2p-pubkey.asc https://geti2p.net/_static/i2p-debian-repo.key.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl -o i2p-pubkey.asc https://geti2p.net/_static/i2p-debian-repo.key.asc</textarea>
 </div>
 </div>
 <p>Check fingerprints/owners without importing anything.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --keyid-format long --with-fingerprint i2p-pubkey.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint i2p-pubkey.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint i2p-pubkey.asc</textarea>
 </div>
 </div>
 <p>If it looks good import into trusted.gpg.d.<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --no-default-keyring --keyring ./i2p-pubkey.gpg --import i2p-pubkey.asc
 sudo cp i2p-pubkey.gpg /etc/apt/trusted.gpg.d/i2p-pubkey.gpg</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --no-default-keyring --keyring ./i2p-pubkey.gpg --import i2p-pubkey.asc
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --no-default-keyring --keyring ./i2p-pubkey.gpg --import i2p-pubkey.asc
 sudo cp i2p-pubkey.gpg /etc/apt/trusted.gpg.d/i2p-pubkey.gpg</textarea>
 </div>
 </div>
 <p>For default Whonix using Debian stable:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb http://deb.i2p2.no/ stretch main\ndeb-src http://deb.i2p2.no/ stretch main' &gt; /etc/apt/sources.list.d/i2p-release.list"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://deb.i2p2.no/ stretch main\ndeb-src http://deb.i2p2.no/ stretch main' &gt; /etc/apt/sources.list.d/i2p-release.list"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://deb.i2p2.no/ stretch main\ndeb-src http://deb.i2p2.no/ stretch main' &gt; /etc/apt/sources.list.d/i2p-release.list"</textarea>
 </div>
 </div>
 <p>For Whonix build using Debian Testing or Unstable (Sid):
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb http://deb.i2p2.no/ unstable main\ndeb-src http://deb.i2p2.no/ unstable main' &gt; /etc/apt/sources.list.d/i2p-release.list"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://deb.i2p2.no/ unstable main\ndeb-src http://deb.i2p2.no/ unstable main' &gt; /etc/apt/sources.list.d/i2p-release.list"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://deb.i2p2.no/ unstable main\ndeb-src http://deb.i2p2.no/ unstable main' &gt; /etc/apt/sources.list.d/i2p-release.list"</textarea>
 </div>
 </div>
 <p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>Install I2P and dependencies.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install i2p i2p-keyring</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install i2p i2p-keyring</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install i2p i2p-keyring</textarea>
 </div>
 </div><sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
 <p><br/>
 2. Configure I2P as a service that automatically runs when your system boots, set the amount of Ram to your needs and leave the User as i2psvc
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo dpkg-reconfigure i2p</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo dpkg-reconfigure i2p</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo dpkg-reconfigure i2p</textarea>
 </div>
 </div>
 <p><br/>
@@ -350,56 +326,44 @@ sudo cp i2p-pubkey.gpg /etc/apt/trusted.gpg.d/i2p-pubkey.gpg</textarea>
 </p>
 <pre>Start the I2P service
 </pre>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl start i2p</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl start i2p</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl start i2p</textarea>
 </div>
 </div>
 <pre>Stop the I2P service
 </pre>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop i2p</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl stop i2p</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop i2p</textarea>
 </div>
 </div>
 <pre>Status of the I2P service
 </pre>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl status i2p</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl status i2p</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl status i2p</textarea>
 </div>
 </div>
 <p><b>OPTIONAL</b>
 </p><p>To run I2P manually as User:
 </p>
 <ul><li>Note: The config folder changes to /home/user/.i2p/</li></ul>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>i2prouter start</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">i2prouter start</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">i2prouter start</textarea>
 </div>
 </div>
 <p><br/>
@@ -540,7 +504,7 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Interested in becoming an author for the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./I2P" href="./I2P" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/I2P" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/I2P" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -552,11 +516,11 @@ Please review and adjust the bandwidth settings on the configuration page, as th
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002095724
+Cached time: 20181005023242
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.160 seconds
-Real time usage: 0.218 seconds
+CPU time usage: 0.188 seconds
+Real time usage: 0.290 seconds
 Preprocessor visited node count: 673/1000000
 Preprocessor generated node count: 1909/1000000
 Post‐expand include size: 9687/2097152 bytes
@@ -564,23 +528,23 @@ Template argument size: 877/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 11528/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 11629/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  164.467      1 -total
- 36.71%   60.383      2 Template:Mbox
- 34.86%   57.336      1 Template:Third_Party_Repository
- 18.34%   30.168     12 Template:CodeSelect
-  9.55%   15.712      1 Template:Reflist
-  9.23%   15.173      1 Template:Footer
-  7.87%   12.943      1 Template:Header
-  4.59%    7.545      1 Template:TBB_localhost
-  3.97%    6.526      1 Template:FooterLight
-  2.65%    4.357      1 Template:Footer_this_is_a_wiki
+100.00%  228.797      1 -total
+ 36.17%   82.762      2 Template:Mbox
+ 34.83%   79.688      1 Template:Third_Party_Repository
+ 28.95%   66.241     12 Template:CodeSelect
+  8.73%   19.973      1 Template:Reflist
+  7.67%   17.550      1 Template:Footer
+  3.44%    7.874      1 Template:TBB_localhost
+  3.39%    7.756      1 Template:FooterLight
+  3.25%    7.437      1 Template:Header
+  2.03%    4.654      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022" dir="ltr" href="https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022">https://www.whonix.org/w/index.php?title=I2P&amp;oldid=36022</a>"</div>
@@ -609,5 +573,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=I2P&amp;o
 </div>
 
 </body>
-<!-- Cached/compressed 20181002095724 -->
+<!-- Cached/compressed 20181005023242 -->
 </html>

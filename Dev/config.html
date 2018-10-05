@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Control Port Filter Proxy/tor-controlport-filter/config - Whonix
  url: ../Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config
- date: Thu Oct  4 07:42:01 2018
+ date: Fri Oct  5 07:42:17 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -292,10 +292,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
 <hr/>
 <h4><span class="mw-headline" id="proposal_on_yml_config_file_merging">proposal on yml config file merging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config&amp;action=edit&amp;section=13.html" title="Edit section: proposal on yml config file merging">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Perhaps the following will become Whonix minimal config file. It white lists everything required by Tor Browser and whonixcheck. Perhaps we name it <a class="external text" data-href="https://github.com/Whonix/control-port-filter-python/blob/master/etc/tor-controlport-filter-merger.d/30_whonix.yml" href="https://github.com/Whonix/control-port-filter-python/blob/master/etc/tor-controlport-filter-merger.d/30_whonix.yml" rel="noreferrer noopener" target="_blank">30_whonix.conf</a>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>---
 - match-exe-paths:
@@ -323,7 +320,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
       suppress: true</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">---
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">---
 - match-exe-paths:
     - '*'
   match-users:
@@ -351,10 +348,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
 </div>
 <hr/>
 <p>Most likely the following config file allows all stuff that is required for onionshare. Perhaps we name it <a class="external text" data-href="https://github.com/Whonix/control-port-filter-python/blob/master/usr/share/tor-controlport-filter-merger/examples/40_onionshare.yml" href="https://github.com/Whonix/control-port-filter-python/blob/master/usr/share/tor-controlport-filter-merger/examples/40_onionshare.yml" rel="noreferrer noopener" target="_blank">40_onionshare.conf</a>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>---
 - match-exe-paths:
@@ -390,7 +384,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
           replacement: ''</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">---
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">---
 - match-exe-paths:
     - '*'
   match-users:
@@ -426,10 +420,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
 </div>
 <hr/>
 <p>Now, ideally, once tor-controlport-filter start it would read both (or any number) config files and for internal use merge them to the following. It still does everything that 30_whonix.conf is white listing and goes beyond that, also allows everything 40_onionshare.conf is white listing.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>---
 - match-exe-paths:
@@ -472,7 +463,7 @@ But in case of #5, what we do with "replacement"s value depends on the value of 
         replacement: ''</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">---
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">---
 - match-exe-paths:
     - '*'
   match-users:
@@ -761,7 +752,7 @@ Jan 12 01:07:41 host tor-controlport-filter[4115]: 10.137.11.80:52642 (filter: m
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config" href="../Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -773,11 +764,11 @@ Jan 12 01:07:41 host tor-controlport-filter[4115]: 10.137.11.80:52642 (filter: m
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924054022
+Cached time: 20181005054213
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.064 seconds
-Real time usage: 0.114 seconds
+CPU time usage: 0.056 seconds
+Real time usage: 0.068 seconds
 Preprocessor visited node count: 248/1000000
 Preprocessor generated node count: 630/1000000
 Post‐expand include size: 3762/2097152 bytes
@@ -785,20 +776,20 @@ Template argument size: 2517/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 32141/5000000 bytes
+Unstrip post‐expand size: 32084/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   82.441      1 -total
- 43.07%   35.504      1 Template:Header
- 27.82%   22.936      3 Template:CodeSelect
- 24.67%   20.335      1 Template:Footer
- 10.29%    8.481      1 Template:FooterLight
-  7.34%    6.049      1 Template:Footer_this_is_a_wiki
-  5.67%    4.676      1 Template:Edit_it
-  5.25%    4.329      1 Template:Share
-  2.82%    2.328      1 Template:RandomNews
-  2.47%    2.037      1 Template:Whonix_onion
+100.00%   45.973      1 -total
+ 42.35%   19.471      1 Template:Footer
+ 41.54%   19.098      3 Template:CodeSelect
+ 19.24%    8.846      1 Template:FooterLight
+ 12.16%    5.592      1 Template:Footer_this_is_a_wiki
+ 11.69%    5.375      1 Template:Share
+  8.71%    4.005      1 Template:Edit_it
+  8.69%    3.997      1 Template:Header
+  4.35%    1.999      1 Template:RandomNews
+  3.01%    1.383      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config&amp;oldid=29100" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config&amp;oldid=29100">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy/tor-controlport-filter/config&amp;oldid=29100</a>"</div>
@@ -827,5 +818,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Contr
 </div>
 
 </body>
-<!-- Cached/compressed 20180924054022 -->
+<!-- Cached/compressed 20181005054213 -->
 </html>

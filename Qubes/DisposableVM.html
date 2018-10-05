@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Qubes/DisposableVM - Whonix
  url: ../Qubes/DisposableVM
- date: Thu Oct  4 08:05:08 2018
+ date: Fri Oct  5 08:05:41 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -305,15 +305,12 @@ The solution to the first problem is only allowing <a class="external text" data
 </p><p>Step 1: Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Konsole or Xfce Terminal</code>
 </p><p>Step 2: Create <code><a class="new" data-href="/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1.html" title="Template:Whonix-ws-14-dvm (page does not exist)">Template:Whonix-ws-14-dvm</a></code> DVM Template.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo qubesctl state.sls qvm.whonix-ws-14-dvm</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo qubesctl state.sls qvm.whonix-ws-14-dvm</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qubesctl state.sls qvm.whonix-ws-14-dvm</textarea>
 </div>
 </div>
 <p>Step 3: Enable DVM Template presentation in the Qubes VM Manager (QVMM).
@@ -326,26 +323,20 @@ The solution to the first problem is only allowing <a class="external text" data
 <p>For most users: not required, skip.
 </p><p>Do NOT include <code>-dvm</code> into the names of DispVMs! That would result in Tor Browser not being inherited from Whonix-Workstation TemplateVM (<code>{{{{whonix-ws}}}}</code>).
 </p><p>TODO: what is the following useful for?
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-create -C DispMV -l red --template [[:Template:Whonix-ws-14-dvm]] anon-whonix-disp</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-create -C DispMV -l red --template [[:Template:Whonix-ws-14-dvm]] anon-whonix-disp</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-create -C DispMV -l red --template [[:Template:Whonix-ws-14-dvm]] anon-whonix-disp</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-run -a anon-whonix-disp konsole</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-run -a anon-whonix-disp konsole</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-run -a anon-whonix-disp konsole</textarea>
 </div>
 </div>
 <h4><span class="mw-headline" id="Deleting_a_DVM_Template">Deleting a DVM Template</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=16.html" title="Edit section: Deleting a DVM Template">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
@@ -368,15 +359,12 @@ The solution to the first problem is only allowing <a class="external text" data
 </p><p>As stated earlier, customization is completely optional.
 </p><p><b>1. Launch the app in the DVM template</b>
 </p><p>Either open dom0 terminal and run
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-run -a [[:Template:Whonix-ws-14-dvm]] &lt;app&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-run -a [[:Template:Whonix-ws-14-dvm]] &lt;app&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-run -a [[:Template:Whonix-ws-14-dvm]] &lt;app&gt;</textarea>
 </div>
 </div>
 <p>Or from GUI: open Qubes manager, right click <a class="new" data-href="/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1.html" title="Template:Whonix-ws-14-dvm (page does not exist)">Template:Whonix-ws-14-dvm</a> &gt; Run command in qube, type name of &lt;app&gt;
@@ -386,15 +374,12 @@ The solution to the first problem is only allowing <a class="external text" data
 </p><p>Save settings if required in the application, exit the application so settings get stored on the disk.
 </p><p><b>5. Shutdown the DVM Template</b>
 </p><p>Either use a dom0 terminal
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-shutdown [[:Template:Whonix-ws-14-dvm]]</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-shutdown [[:Template:Whonix-ws-14-dvm]]</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-shutdown [[:Template:Whonix-ws-14-dvm]]</textarea>
 </div>
 </div>
 <p>or use Qubes manager
@@ -408,40 +393,31 @@ The solution to the first problem is only allowing <a class="external text" data
 <p>To obtain the latest Tor Browser, the simplest method is to use Whonix's built-in Tor Browser downloader functionality. Simply update using <a data-href="/wiki/Tor_Browser#Tor_Browser_Downloader_by_Whonix" href="../Tor_Browser.html" title="Tor Browser">Tor Browser Downloader by Whonix (tb-updater)</a> in Whonix-Workstation TemplateVM (<code>{{{{whonix-ws}}}}</code>) when performing your usual maintenance <a class="external text" data-href="https://www.qubes-os.org/doc/whonix/update/" href="https://www.qubes-os.org/doc/whonix/update/" rel="noreferrer noopener" target="_blank">upgrading</a>.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>{{{{whonix-ws}}}}</code> -&gt; <code>Konsole</code> <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>
 </p><p><a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>Upgrade.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
 <p>If it's not upgraded, use <i><span style="background-color:#FBFBFB">update-torbrowser</span></i> to download a new copy of Tor Browser.
 </p><p>Launch Tor Browser Downloader by Whonix and follow the instructions. <sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>update-torbrowser --input gui</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">update-torbrowser --input gui</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">update-torbrowser --input gui</textarea>
 </div>
 </div>
 <p>Shutdown the DVM Template. <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>
@@ -471,15 +447,12 @@ The solution to the first problem is only allowing <a class="external text" data
 <p>Using the GUI:
 <code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Disposable: <a class="new" data-href="/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Whonix-ws-14-dvm&amp;action=edit&amp;redlink=1.html" title="Template:Whonix-ws-14-dvm (page does not exist)">Template:Whonix-ws-14-dvm</a></code> -&gt; <code>Tor Browser (AnonDist)</code>
 </p><p>Using the dom0 command line:
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-run --dispvm=[[:Template:Whonix-ws-14-dvm]] torbrowser</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-run --dispvm=[[:Template:Whonix-ws-14-dvm]] torbrowser</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-run --dispvm=[[:Template:Whonix-ws-14-dvm]] torbrowser</textarea>
 </div>
 </div>
 <p>After launch, do not forget to <a data-href="/wiki/Qubes/DisposableVM#Warning:_Check_the_Tor_Browser_Version" href="../Qubes/DisposableVM.html" title="Qubes/DisposableVM">check the Tor Browser version</a>!
@@ -523,38 +496,29 @@ Apart from <a class="external text" data-href="https://www.qubes-os.org/doc/dom0
 Because each VM is assigned a unique internal IP address.</span>
 </li>
 <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">DisposableVMs are created in one of two ways: 
-<ul><li><code>Open in DisposableVM</code>. On the command line (domU), run. <div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<ul><li><code>Open in DisposableVM</code>. On the command line (domU), run. <div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-open-in-dvm</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-open-in-dvm</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-open-in-dvm</textarea>
 </div>
 </div></li>
-<li><code>Run in DisposableVM</code>. On the command line (domU), run. <div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<li><code>Run in DisposableVM</code>. On the command line (domU), run. <div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-run --dispvm</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-run --dispvm</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-run --dispvm</textarea>
 </div>
 </div> </li></ul>
 </span></li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"> On the command line (dom0), run. <div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"> On the command line (dom0), run. <div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-prefs -s vmname dispvm_netvm sys-whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-prefs -s vmname dispvm_netvm sys-whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-prefs -s vmname dispvm_netvm sys-whonix</textarea>
 </div>
 </div> </span>
 </li>
@@ -593,15 +557,12 @@ These references might not apply (to the same degree) to Qubes R4 and above with
 </li>
 <li id="cite_note-28"><span class="mw-cite-backlink"><a href="#cite_ref-28">↑</a></span> <span class="reference-text">The reason is there are both malicious and benign guards in the Tor network. The more often the user "rolls the dice" (changes guards), the greater the chance of striking out.</span>
 </li>
-<li id="cite_note-29"><span class="mw-cite-backlink"><a href="#cite_ref-29">↑</a></span> <span class="reference-text">On the command line (dom0), run. <div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<li id="cite_note-29"><span class="mw-cite-backlink"><a href="#cite_ref-29">↑</a></span> <span class="reference-text">On the command line (dom0), run. <div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-remove &lt;vmname&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-remove &lt;vmname&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-remove &lt;vmname&gt;</textarea>
 </div>
 </div></span>
 </li>
@@ -612,54 +573,42 @@ These references might not apply (to the same degree) to Qubes R4 and above with
 </li>
 <li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text">
 On the command line (dom0), run.
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-run -a {{{{whonix-ws}}}} konsole</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-run -a {{{{whonix-ws}}}} konsole</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-run -a {{{{whonix-ws}}}} konsole</textarea>
 </div>
 </div></span>
 </li>
 <li id="cite_note-33"><span class="mw-cite-backlink"><a href="#cite_ref-33">↑</a></span> <span class="reference-text">
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>update-torbrowser</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">update-torbrowser</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">update-torbrowser</textarea>
 </div>
 </div></span>
 </li>
 <li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text">
 On the command line (dom0), run.
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-shutdown {{{{whonix-ws}}}}</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-shutdown {{{{whonix-ws}}}}</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-shutdown {{{{whonix-ws}}}}</textarea>
 </div>
 </div>
 or<br/>
-DVM Template command line (domU), run. <div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+DVM Template command line (domU), run. <div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo poweroff</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo poweroff</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo poweroff</textarea>
 </div>
 </div></span>
 </li>
@@ -674,7 +623,7 @@ DVM Template command line (domU), run. <div class="codeContainer">
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="../Payment" href="../Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/DisposableVM" href="../Qubes/DisposableVM" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/DisposableVM" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/DisposableVM" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -686,35 +635,35 @@ DVM Template command line (domU), run. <div class="codeContainer">
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002113704
+Cached time: 20181005030944
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.276 seconds
-Real time usage: 0.404 seconds
-Preprocessor visited node count: 1083/1000000
-Preprocessor generated node count: 3150/1000000
+CPU time usage: 0.248 seconds
+Real time usage: 0.454 seconds
+Preprocessor visited node count: 1080/1000000
+Preprocessor generated node count: 3130/1000000
 Post‐expand include size: 16103/2097152 bytes
 Template argument size: 809/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 15134/5000000 bytes
+Unstrip post‐expand size: 15105/5000000 bytes
 Lua time usage: 0.060/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  306.915      1 -total
- 42.13%  129.296      7 Template:Mbox
- 22.94%   70.394     17 Template:CodeSelect
- 15.24%   46.780      1 Template:Reflist
-  7.10%   21.806      1 Template:Footer
-  4.59%   14.097      1 Template:Header
-  2.62%    8.029      1 Template:Footer_this_is_a_wiki
-  2.53%    7.767      1 Template:FooterLight
-  1.87%    5.745      1 Template:Edit_it
-  1.54%    4.716      1 Template:Share
+100.00%  369.211      1 -total
+ 47.57%  175.628     17 Template:CodeSelect
+ 36.13%  133.389      1 Template:Reflist
+ 27.50%  101.521      7 Template:Mbox
+  5.01%   18.512      1 Template:Footer
+  2.13%    7.874      1 Template:FooterLight
+  1.49%    5.490      1 Template:Header
+  1.35%    4.978      1 Template:Footer_this_is_a_wiki
+  1.19%    4.379      1 Template:Share
+  1.15%    4.249      1 Template:Maintainer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=37317" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=37317">https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=37317</a>"</div>
@@ -743,5 +692,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Dis
 </div>
 
 </body>
-<!-- Cached/compressed 20181002113704 -->
+<!-- Cached/compressed 20181005030944 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: JonDonym - Whonix
  url: ./JonDonym
- date: Thu Oct  4 07:56:50 2018
+ date: Fri Oct  5 07:57:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -231,29 +231,23 @@ Whonix requires payments to stay alive.
 </p>
 <h4><span class="mw-headline" id="JonDo_Https_Proxy_Test">JonDo Https Proxy Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=JonDonym&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=JonDonym&amp;action=edit&amp;section=5.html" title="Edit section: JonDo Https Proxy Test">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>This works also with JonDo free accounts.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</textarea>
 </div>
 </div>
 <h4><span class="mw-headline" id="JonDo_Socks_Proxy_Test">JonDo Socks Proxy Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=JonDonym&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=JonDonym&amp;action=edit&amp;section=6.html" title="Edit section: JonDo Socks Proxy Test">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>This requires JonDo premium, a paid account.
 </p><p>Try this test command.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</textarea>
 </div>
 </div>
 <p>If you see the following, it indicates, that the local JonDo has not opened a listener. Probably you have not started JonDo yet or configured it to use a non-default port?
@@ -287,15 +281,12 @@ Whonix requires payments to stay alive.
 </p><p>Install JonDo in your new JonDo-Gateway ProxyVM. To do that, the following instructions will install JonDo from JonDo's Debian APT repository:<br/>
 <a class="external free" data-href="https://anonymous-proxy-servers.net/en/help/firststeps2.html" href="https://anonymous-proxy-servers.net/en/help/firststeps2.html" rel="noreferrer noopener" target="_blank">https://anonymous-proxy-servers.net/en/help/firststeps2.html</a> Installation method using chapter <i><span style="background-color:#FBFBFB">Using the repository at command line</span></i> is recommended.
 </p><p>After you installed JonDo in your JonDo-Gateway ProxyVM, test if JonDo's https proxy is functional.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:4001 https://check.torproject.org</textarea>
 </div>
 </div>
 <p><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
@@ -317,27 +308,21 @@ sudo systemctl stop qubes-firewall
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical environment</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kwrite ~/fw-unload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kwrite ~/fw-unload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kwrite ~/fw-unload</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal (Konsole)</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano ~/fw-unload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano ~/fw-unload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano ~/fw-unload</textarea>
 </div>
 </div>
 </div>
@@ -437,15 +422,12 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -472,27 +454,21 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -501,15 +477,12 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -520,15 +493,12 @@ Configuration was valid</pre>
 </div>
 </div>
 <p>In sys-whonix, test if Tor is able to the https proxy that JonDo is providing.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:9050 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:9050 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:9050 https://check.torproject.org</textarea>
 </div>
 </div>
 <p>Done. Tor will use JonDo as proxy.
@@ -560,15 +530,12 @@ Configuration was valid</pre>
 <li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
 Socks proxy test - premium only.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:4001 https://check.torproject.org</textarea>
 </div>
 </div></span>
 </li>
@@ -578,7 +545,7 @@ Socks proxy test - premium only.
 </p>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./JonDonym" href="./JonDonym" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/JonDonym" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/JonDonym" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -593,11 +560,11 @@ Socks proxy test - premium only.
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20181002123639
+Cached time: 20181005055713
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.152 seconds
-Real time usage: 0.220 seconds
+CPU time usage: 0.156 seconds
+Real time usage: 0.219 seconds
 Preprocessor visited node count: 553/1000000
 Preprocessor generated node count: 1690/1000000
 Post‐expand include size: 13728/2097152 bytes
@@ -605,23 +572,23 @@ Template argument size: 3314/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7095/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 7111/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  173.094      1 -total
- 49.49%   85.659      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 38.06%   65.881      1 Template:Mbox
- 28.62%   49.536     11 Template:CodeSelect
- 18.85%   32.622      3 Template:Box
-  8.78%   15.200      1 Template:Footer
-  7.32%   12.670      1 Template:Firewall_Unload_Home_Folder
-  6.59%   11.411      1 Template:Reflist
-  6.14%   10.621      1 Template:Reload_Tor
-  4.96%    8.593      1 Template:Open_File
+100.00%  172.043      1 -total
+ 48.06%   82.683      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 44.72%   76.930      1 Template:Mbox
+ 20.96%   36.054     11 Template:CodeSelect
+ 12.15%   20.907      3 Template:Box
+  9.28%   15.973      1 Template:Footer
+  7.61%   13.090      1 Template:Firewall_Unload_Home_Folder
+  6.96%   11.976      1 Template:Reload_Tor
+  6.59%   11.339      1 Template:Reflist
+  5.29%    9.097      1 Template:Open_File
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=JonDonym&amp;oldid=35526" dir="ltr" href="https://www.whonix.org/w/index.php?title=JonDonym&amp;oldid=35526">https://www.whonix.org/w/index.php?title=JonDonym&amp;oldid=35526</a>"</div>
@@ -650,5 +617,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=JonDonym&
 </div>
 
 </body>
-<!-- Cached/compressed 20181002123639 -->
+<!-- Cached/compressed 20181005055713 -->
 </html>

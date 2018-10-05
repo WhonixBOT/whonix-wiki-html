@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tunnel UDP over Tor - Whonix
  url: ./Tunnel_UDP_over_Tor
- date: Thu Oct  4 08:12:36 2018
+ date: Fri Oct  5 08:13:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -138,108 +138,81 @@ If UDP is urgently required in Whonix, a limited workaround is provided. For the
 </p><p>This tutorial uses OpenVPN. <font size="-3">Other VPN implementations, such as PPTP, might be useful as well, but we haven't researched that yet. Maybe there are other VPN implementations, which also support UDP, and which are free and allow UDP. We haven't researched that yet.</font>
 </p><p>Before setting up the VPN, you should make yourself familiar with curl and rdate. The rdate command line switch -p results in just showing the date and time, without setting it. -u uses UDP instead of TCP (default).
 </p><p>Test if your Whonix setup is working in general. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https https://check.torproject.org</textarea>
 </div>
 </div>
 <p><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p>Which should show "Congratulations. Your browser is configured to use Tor.".
 </p><p>Install rdate for UDP and TCP testing.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install rdate</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install rdate</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install rdate</textarea>
 </div>
 </div>
 <p>Commands for TCP testing are.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -p time.u.washington.edu</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -p time.u.washington.edu</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -p time.u.washington.edu</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -p time.nist.gov</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -p time.nist.gov</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -p time.nist.gov</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -p ptbtime1.ptb.de</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -p ptbtime1.ptb.de</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -p ptbtime1.ptb.de</textarea>
 </div>
 </div>
 <p>Commands for UDP testing are.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -u -p time.u.washington.edu</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -u -p time.u.washington.edu</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -u -p time.u.washington.edu</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -u -p time.nist.gov</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -u -p time.nist.gov</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -u -p time.nist.gov</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>rdate -u -p ptbtime1.ptb.de</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rdate -u -p ptbtime1.ptb.de</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rdate -u -p ptbtime1.ptb.de</textarea>
 </div>
 </div>
 <p>Your tests should reveal, that without a VPN, you can run TCP over Tor, but not UDP.
@@ -261,22 +234,19 @@ If UDP is urgently required in Whonix, a limited workaround is provided. For the
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Alternatively, not enforcing SSL, because some VPN services seem to block SSL.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl http://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl http://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl http://check.torproject.org</textarea>
 </div>
 </div></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Interested in becoming an author for the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Tunnel_UDP_over_Tor" href="./Tunnel_UDP_over_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnel_UDP_over_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnel_UDP_over_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -288,11 +258,11 @@ If UDP is urgently required in Whonix, a limited workaround is provided. For the
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002093502
+Cached time: 20181005043619
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.100 seconds
-Real time usage: 0.166 seconds
+CPU time usage: 0.104 seconds
+Real time usage: 0.173 seconds
 Preprocessor visited node count: 257/1000000
 Preprocessor generated node count: 982/1000000
 Post‐expand include size: 5569/2097152 bytes
@@ -300,23 +270,23 @@ Template argument size: 340/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2018/5000000 bytes
+Unstrip post‐expand size: 1970/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  148.763      1 -total
- 54.68%   81.351      1 Template:Tor_UDP
- 52.66%   78.338      1 Template:Mbox
- 18.08%   26.900     10 Template:CodeSelect
- 10.47%   15.581      1 Template:Footer
-  9.85%   14.654      1 Template:Header
-  4.87%    7.247      1 Template:Reflist
-  4.59%    6.823      1 Template:FooterLight
-  3.15%    4.683      1 Template:Footer_this_is_a_wiki
-  2.50%    3.720      1 Template:Share
+100.00%  154.348      1 -total
+ 52.54%   81.088      1 Template:Tor_UDP
+ 51.00%   78.717      1 Template:Mbox
+ 20.59%   31.774     10 Template:CodeSelect
+ 10.63%   16.410      1 Template:Footer
+  9.51%   14.679      1 Template:Header
+  5.19%    8.017      1 Template:Reflist
+  4.44%    6.852      1 Template:FooterLight
+  3.02%    4.667      1 Template:Footer_this_is_a_wiki
+  2.40%    3.704      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnel_UDP_over_Tor&amp;oldid=34998" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnel_UDP_over_Tor&amp;oldid=34998">https://www.whonix.org/w/index.php?title=Tunnel_UDP_over_Tor&amp;oldid=34998</a>"</div>
@@ -345,5 +315,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnel_UD
 </div>
 
 </body>
-<!-- Cached/compressed 20181002093502 -->
+<!-- Cached/compressed 20181005043619 -->
 </html>

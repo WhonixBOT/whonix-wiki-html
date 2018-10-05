@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Debian Packages - Whonix
  url: ./Whonix_Debian_Packages
- date: Thu Oct  4 08:17:42 2018
+ date: Fri Oct  5 08:18:31 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -167,15 +167,12 @@ Advanced users only!</div></td></tr></tbody></table>
 <p>Use apt-cache to see the package description.
 </p>
 <ul><li>Replace <code>package-name</code> with the package you actually want to install.</li></ul>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-cache package-name</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-cache package-name</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-cache package-name</textarea>
 </div>
 </div>
 <p>It will include either:
@@ -187,15 +184,12 @@ Advanced users only!</div></td></tr></tbody></table>
 <h2><span id="Which_packages_do_Whonix_meta_packages_install?"></span><span class="mw-headline" id="Which_packages_do_Whonix_meta_packages_install.3F">Which packages do Whonix meta packages install?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5.html" title="Edit section: Which packages do Whonix meta packages install?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>See <i><span style="background-color:#FBFBFB">debian/control</span></i> in Whonix <a class="external text" data-href="https://github.com/Whonix/anon-meta-packages" href="https://github.com/Whonix/anon-meta-packages" rel="noreferrer noopener" target="_blank">anon-meta-packages</a> source code folder or <a class="external text" data-href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" rel="noreferrer noopener" target="_blank">on github</a> (choose the correct branch!).
 </p><p>Or use for example.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-cache show whonix-workstation-default-applications-gui</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-cache show whonix-workstation-default-applications-gui</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-cache show whonix-workstation-default-applications-gui</textarea>
 </div>
 </div>
 <p><span id="Which_packages_should_never_be_removed.3F"></span>
@@ -215,28 +209,22 @@ Advanced users only!</div></td></tr></tbody></table>
 <a data-href="/wiki/Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">Upgrade your system.</a>
 </p><p><b>2. Cleanup</b><br/>
 When you installed and uninstalled some custom packages or dependencies changed in meanwhile, get rid of unneeded dependencies first.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get autoremove</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get autoremove</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get autoremove</textarea>
 </div>
 </div>
 <p><b>3. Uninstall</b><br/>
 Let's see how for example the <a class="external text" data-href="https://github.com/Whonix/uwt" href="https://github.com/Whonix/uwt" rel="noreferrer noopener" target="_blank"><i><span style="background-color:#FBFBFB">uwt</span></i></a> package could be uninstalled.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get purge uwt</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get purge uwt</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get purge uwt</textarea>
 </div>
 </div>
 <p>You will see something like this.
@@ -255,15 +243,12 @@ Do you want to continue [Y/n]?
 </pre>
 <p><b>4. Keep</b><br/>
 Now, there is a small issue. Next time you were to run <i><span style="background-color:#FBFBFB">sudo apt-get autoremove</span></i>, you would also uninstall all packages listed under "<i><span style="background-color:#FBFBFB">The following packages were automatically installed and are no longer required:</span></i>". (Such as <i><span style="background-color:#FBFBFB"><a class="external text" data-href="https://github.com/Whonix/rads" href="https://github.com/Whonix/rads" rel="noreferrer noopener" target="_blank">rads</a></span></i> and others.) Since you most likely want to keep the other packages which were installed by the <i><span style="background-color:#FBFBFB">anon-shared-packages-recommended</span></i> and the <i><span style="background-color:#FBFBFB">whonix-shared-packages-recommended</span></i> meta packages, mark them as manually installed, so they do not get removed. You can conveniently do this using <i><span style="background-color:#FBFBFB">aptitude</span></i>. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo aptitude keep-all</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo aptitude keep-all</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo aptitude keep-all</textarea>
 </div>
 </div>
 <p><b>5. Done</b><br/>
@@ -347,7 +332,7 @@ Function <i><span style="background-color:#FBFBFB">pkg-install-maybe</span></i> 
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix_Debian_Packages" href="./Whonix_Debian_Packages" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Debian_Packages" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Debian_Packages" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -359,11 +344,11 @@ Function <i><span style="background-color:#FBFBFB">pkg-install-maybe</span></i> 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002123759
+Cached time: 20181005061827
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.132 seconds
-Real time usage: 0.183 seconds
+CPU time usage: 0.124 seconds
+Real time usage: 0.178 seconds
 Preprocessor visited node count: 580/1000000
 Preprocessor generated node count: 1928/1000000
 Post‐expand include size: 7060/2097152 bytes
@@ -371,23 +356,23 @@ Template argument size: 987/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 6266/5000000 bytes
+Unstrip post‐expand size: 6134/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  138.069      1 -total
- 51.94%   71.716      1 Template:Mbox
- 11.88%   16.405      5 Template:CodeSelect
- 11.35%   15.674      1 Template:Footer
-  6.12%    8.456      1 Template:Reflist
-  4.46%    6.155      1 Template:FooterLight
-  4.33%    5.981     38 Template:Code2
-  4.26%    5.880      1 Template:Header
-  3.39%    4.676      1 Template:Footer_this_is_a_wiki
-  2.63%    3.628      1 Template:Share
+100.00%  136.782      1 -total
+ 49.59%   67.836      1 Template:Mbox
+ 11.95%   16.344      5 Template:CodeSelect
+ 10.69%   14.619      1 Template:Footer
+  6.88%    9.410      1 Template:Header
+  6.17%    8.445      1 Template:Reflist
+  4.67%    6.391      1 Template:FooterLight
+  4.43%    6.056     38 Template:Code2
+  3.07%    4.204      1 Template:Footer_this_is_a_wiki
+  2.75%    3.761      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=37189" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=37189">https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=37189</a>"</div>
@@ -416,5 +401,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_De
 </div>
 
 </body>
-<!-- Cached/compressed 20181002123759 -->
+<!-- Cached/compressed 20181005061827 -->
 </html>

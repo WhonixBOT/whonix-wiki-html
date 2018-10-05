@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Leak Tests - Whonix
  url: ../Dev/Leak_Tests
- date: Thu Oct  4 07:45:57 2018
+ date: Fri Oct  5 07:46:20 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -183,27 +183,21 @@ Whonix requires payments to stay alive.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/resolv.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/resolv.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/resolv.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/resolv.conf</textarea>
 </div>
 </div>
 </div>
@@ -339,15 +333,12 @@ sudo leaktest
 <li>Optional additional tests.</li></ul>
 <h1><span class="mw-headline" id="Integreated_whonixcheck_leaktest">Integreated whonixcheck leaktest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14.html" title="Edit section: Integreated whonixcheck leaktest">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Please also run <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway and Whonix-Workstation. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck --leak-tests</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck --leak-tests</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck --leak-tests</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Other_Leak_Tests">Other Leak Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=15.html" title="Edit section: Other Leak Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -359,27 +350,21 @@ sudo leaktest
 <p>Start a your Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>). <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>In your TempalteVM.
 </p><p>Start downloading some big<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> package. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> Example.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-get download firefox-esr</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-get download firefox-esr</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get download firefox-esr</textarea>
 </div>
 </div>
 <p>Now switch to your Whonix-Gateway ProxyVM (commonly called <code>sys-whonix</code>) and stop Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default stop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default stop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default stop</textarea>
 </div>
 </div>
 <p>The <i>expected result</i> in the TemplateVM a functional download, that stops as soon as Tor is stopped.
@@ -390,15 +375,12 @@ Err http://security.debian.org/ jessie/updates/main firefox-esr amd64 52.5.2esr-
 E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefox-esr amd64 52.5.2esr-1~deb8u1_amd64.deb  500  Unable to connect
 </pre>
 <p>You can now start Tor in your Whonix-Gateway ProxyVM again. 
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default start</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default start</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default start</textarea>
 </div>
 </div>
 <p>Repeat this test with your Whonix-Workstation TemplateVM (commonly called <code>whonix-ws-14</code>).
@@ -424,15 +406,12 @@ Alternatively, you could also run <code>sudo apt-get update</code> instead of do
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 Alternately, although with less conclusive, instead of stopping Tor, you could also stop qubes-updates-proxy during the transfer.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service qubes-updates-proxy stop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service qubes-updates-proxy stop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service qubes-updates-proxy stop</textarea>
 </div>
 </div>
 
@@ -441,7 +420,7 @@ This should lead to the same <i>expected result</i>.</span>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://www.whonix.org/blog/" href="https://www.whonix.org/blog/" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Leak_Tests" href="../Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -453,11 +432,11 @@ This should lead to the same <i>expected result</i>.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924054436
+Cached time: 20181005054506
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.124 seconds
-Real time usage: 0.156 seconds
+CPU time usage: 0.084 seconds
+Real time usage: 0.110 seconds
 Preprocessor visited node count: 482/1000000
 Preprocessor generated node count: 1405/1000000
 Post‐expand include size: 4679/2097152 bytes
@@ -465,20 +444,20 @@ Template argument size: 479/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4817/5000000 bytes
+Unstrip post‐expand size: 4673/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  105.082      1 -total
- 30.08%   31.613      7 Template:CodeSelect
- 20.83%   21.890      1 Template:Footer
- 18.10%   19.019      1 Template:Open_with_root_rights
- 14.94%   15.696      1 Template:Whonix-gw
- 13.05%   13.711      1 Template:Box
-  9.93%   10.432      1 Template:Reflist
-  8.20%    8.614      1 Template:Footer_this_is_a_wiki
-  7.24%    7.609      1 Template:FooterLight
-  4.41%    4.635      1 Template:Share
+100.00%   79.400      1 -total
+ 27.04%   21.467      1 Template:Header
+ 23.72%   18.837      7 Template:CodeSelect
+ 18.28%   14.511      1 Template:Footer
+ 14.97%   11.890      1 Template:Open_with_root_rights
+ 10.87%    8.634      1 Template:Box
+  9.75%    7.745      1 Template:Reflist
+  7.76%    6.159      1 Template:FooterLight
+  5.35%    4.248      1 Template:Footer_this_is_a_wiki
+  4.57%    3.629      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=36973</a>"</div>
@@ -507,5 +486,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 </div>
 
 </body>
-<!-- Cached/compressed 20180924054436 -->
+<!-- Cached/compressed 20181005054506 -->
 </html>

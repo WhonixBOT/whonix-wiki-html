@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Onion Services - Whonix
  url: ./Onion_Services
- date: Thu Oct  4 08:00:53 2018
+ date: Fri Oct  5 08:01:24 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -204,15 +204,12 @@ Whonix requires payments to stay alive.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -228,30 +225,24 @@ Whonix requires payments to stay alive.
 To do that, add the following two lines.
 </p><p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a>: 
 </p><p>The <i><span style="background-color:#FBFBFB">IP-of-Qubes-Whonix-Workstation-AppVM</span></i> needs to be replaced with the actual IP address. To find out the IP address of the Qubes-Whonix-Workstation AppVM, the following command can be run within the Qubes-Whonix-Workstation AppVM: <code>qubesdb-read /qubes-ip</code>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 IP-of-Qubes-Whonix-Workstation-AppVM:80</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 IP-of-Qubes-Whonix-Workstation-AppVM:80</textarea>
 </div>
 </div>
 <p><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a>:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 10.152.152.11:80</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 10.152.152.11:80</textarea>
 </div>
 </div>
@@ -276,27 +267,21 @@ HiddenServicePort 80 10.152.152.11:80</textarea>
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -305,15 +290,12 @@ HiddenServicePort 80 10.152.152.11:80</textarea>
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -325,15 +307,12 @@ Configuration was valid</pre>
 </div>
 <h6><span class="mw-headline" id="Step_4:_get_your_onion_hostname">Step 4: get your onion hostname</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=8.html" title="Edit section: Step 4: get your onion hostname">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>To get your Tor onion service url.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo cat /var/lib/tor/hidden_service/hostname</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo cat /var/lib/tor/hidden_service/hostname</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo cat /var/lib/tor/hidden_service/hostname</textarea>
 </div>
 </div>
 <h6><span class="mw-headline" id="Step_5:_backup_your_Tor_onion_service_private_key">Step 5: backup your Tor onion service private key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=9.html" title="Edit section: Step 5: backup your Tor onion service private key">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
@@ -345,27 +324,21 @@ Configuration was valid</pre>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>
 </p><p>Use the usual Qubes tools. The following example shows how to copy the <i><span style="background-color:#FBFBFB">/var/lib/tor/hidden_service/private_key</span></i> from the <i><span style="background-color:#FBFBFB">sys-whonix</span></i> VM to the <i><span style="background-color:#FBFBFB">vault</span></i> VM (which should be started beforehand) using <i><span style="background-color:#FBFBFB">qvm-copy-to-vm</span></i>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/private_key</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/private_key</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/private_key</textarea>
 </div>
 </div>
 <p>The above step copies the Tor onion service private key file to the <i><span style="background-color:#FBFBFB">QubesIncoming</span></i> folder of the <i><span style="background-color:#FBFBFB">vault</span></i> VM.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>/home/user/QubesIncoming/sys-whonix/private_key</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">/home/user/QubesIncoming/sys-whonix/private_key</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">/home/user/QubesIncoming/sys-whonix/private_key</textarea>
 </div>
 </div>
 <p>Consider moving the file from the <i><span style="background-color:#FBFBFB">QubesIncoming</span></i> folder to another preferred location.
@@ -380,26 +353,20 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 </p>
 <h5><span class="mw-headline" id="Step_1:_Install_Server_Software">Step 1: Install Server Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=11.html" title="Edit section: Step 1: Install Server Software">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Run the following commands to install lighttpd.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install lighttpd</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install lighttpd</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install lighttpd</textarea>
 </div>
 </div>
 <h5><span class="mw-headline" id="Step_2:_Open_Whonix-Workstation_Firewall_Port">Step 2: Open Whonix-Workstation Firewall Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=12.html" title="Edit section: Step 2: Open Whonix-Workstation Firewall Port">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
@@ -410,41 +377,32 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 </p><p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.<br/>
 In Whonix-Workstation AppVM.
 </p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
 <p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Workstation</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -467,15 +425,12 @@ In Whonix-Workstation AppVM.
 </p><p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Workstation</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -484,15 +439,12 @@ In Whonix-Workstation AppVM.
 </div>
 </div>
 <p>Add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>EXTERNAL_OPEN_PORTS+=" 80 "</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">EXTERNAL_OPEN_PORTS+=" 80 "</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">EXTERNAL_OPEN_PORTS+=" 80 "</textarea>
 </div>
 </div>
 <p>Save.
@@ -504,15 +456,12 @@ In Whonix-Workstation AppVM.
 </p><p><u>If you are using a graphical Whonix-Workstation</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Workstation</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonix_firewall</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
 </div>
 </div>
 </div>
@@ -525,69 +474,54 @@ Local connections are no longer possible due to a <a class="external text" data-
 <h3><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>On Whonix-Gateway.
 </p><p>Check permissions.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo ls -la /var/lib/tor/hidden_service/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo ls -la /var/lib/tor/hidden_service/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ls -la /var/lib/tor/hidden_service/</textarea>
 </div>
 </div>
 <p>In case you manually restored your hidden_service keys as root, Tor will fail to start. The folder must be owned by debian-tor. In that case, fix the permissions.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo chown debian-tor:debian-tor /var/lib/tor/hidden_service/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo chown debian-tor:debian-tor /var/lib/tor/hidden_service/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown debian-tor:debian-tor /var/lib/tor/hidden_service/</textarea>
 </div>
 </div>
 <p>In Whonix-Workstation. 
 </p><p>Check if the service is available on 127.0.0.1:80.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:80</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl 127.0.0.1:80</textarea>
 </div>
 </div>
 <p><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a>: In Qubes-Whonix-Workstation, check if the service is available on Qubes-Whonix-Workstation IP, port 80.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl $(qubesdb-read /qubes-ip):80</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl $(qubesdb-read /qubes-ip):80</textarea>
 </div>
 </div>
 <p><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a>: In Whonix-Workstation, check if the service is available on 10.152.152.11:80.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl 10.152.152.11:80</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Circumventing Whonix curl stream isolation wrapper.
 UWT_DEV_PASSTHROUGH=1 curl 10.152.152.11:80</textarea>
 </div>
 </div>
@@ -665,23 +599,17 @@ one of the TARGETs from those lines will be chosen at random.</pre>
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>See the following example. Adjust it for your purposes and add it.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 22 127.0.0.1:22
@@ -693,7 +621,7 @@ HiddenServicePort 5900 127.0.0.1:5900
 HiddenServiceAuthorizeClient stealth 1234567890123456</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 22 127.0.0.1:22
 HiddenServicePort 5900 127.0.0.1:5900
 ## syntax:
@@ -721,27 +649,21 @@ HiddenServiceAuthorizeClient stealth 1234567890123456</textarea>
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -750,15 +672,12 @@ HiddenServiceAuthorizeClient stealth 1234567890123456</textarea>
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -769,15 +688,12 @@ Configuration was valid</pre>
 </div>
 </div>
 <p>To get your Tor onion service url and password, run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo cat /var/lib/tor/hidden_service/hostname</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo cat /var/lib/tor/hidden_service/hostname</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo cat /var/lib/tor/hidden_service/hostname</textarea>
 </div>
 </div>
 <p>Should show something like this.
@@ -801,27 +717,21 @@ Configuration was valid</pre>
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>HidServAuth &lt;onion-address&gt; &lt;auth-cookie&gt;</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">HidServAuth &lt;onion-address&gt; &lt;auth-cookie&gt;</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">HidServAuth &lt;onion-address&gt; &lt;auth-cookie&gt;</textarea>
 </div>
 </div>
 <p>Reload Tor.
@@ -841,27 +751,21 @@ Configuration was valid</pre>
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -870,15 +774,12 @@ Configuration was valid</pre>
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -931,15 +832,12 @@ Application Layer]</span>
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.esat.kuleuven.be/cosic/?p=6743" href="https://www.esat.kuleuven.be/cosic/?p=6743" rel="noreferrer noopener" target="_blank">https://www.esat.kuleuven.be/cosic/?p=6743</a></span>
 </li>
 <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install libapache2-mod-removeip</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install libapache2-mod-removeip</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install libapache2-mod-removeip</textarea>
 </div>
 </div></span>
 </li>
@@ -962,15 +860,12 @@ ServerName localhost
 <p>Start Apache.
 </p><p>Now Apache is not listening on <span style="border:1px dotted #005cb9">10.152.152.10</span>, but only on <span style="border:1px dotted #005cb9">127.0.0.1</span>. So now we somehow need to redirect <span style="border:1px dotted #005cb9">10.152.152.10:80</span> to <span style="border:1px dotted #005cb9">127.0.0.1:80</span>.
 </p><p>It can be done with a firewall rule or netcat:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo ncat -l 10.152.152.10 80 -c 'ncat 127.0.0.1 80'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo ncat -l 10.152.152.10 80 -c 'ncat 127.0.0.1 80'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ncat -l 10.152.152.10 80 -c 'ncat 127.0.0.1 80'</textarea>
 </div>
 </div>
 </span></li>
@@ -996,7 +891,7 @@ ServerName localhost
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="./Design" href="./Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="./Dev/Developer_Portal" href="./Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Onion_Services" href="./Onion_Services" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1008,11 +903,11 @@ ServerName localhost
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002092902
+Cached time: 20181005025517
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.268 seconds
-Real time usage: 0.346 seconds
+CPU time usage: 0.272 seconds
+Real time usage: 0.356 seconds
 Preprocessor visited node count: 1072/1000000
 Preprocessor generated node count: 2869/1000000
 Post‐expand include size: 36971/2097152 bytes
@@ -1020,23 +915,23 @@ Template argument size: 10812/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 12907/5000000 bytes
+Unstrip post‐expand size: 12936/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  259.823      1 -total
- 33.43%   86.865      2 Template:Mbox
- 28.56%   74.195     27 Template:CodeSelect
- 24.93%   64.773      7 Template:Box
-  9.80%   25.460      1 Template:Reflist
-  8.11%   21.071      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  8.07%   20.974      1 Template:Firewall_Settings_Workstation
-  7.44%   19.322      1 Template:Footer
-  3.81%    9.899      3 Template:Reload_Tor
-  3.59%    9.325      1 Template:FooterLight
+100.00%  263.069      1 -total
+ 28.79%   75.732     27 Template:CodeSelect
+ 28.60%   75.240      2 Template:Mbox
+ 21.62%   56.886      7 Template:Box
+  9.09%   23.909      1 Template:Reflist
+  7.69%   20.218      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  6.78%   17.823      1 Template:Footer
+  6.69%   17.598      1 Template:Firewall_Settings_Workstation
+  6.64%   17.466      1 Template:Header
+  4.13%   10.853      3 Template:Reload_Tor
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=35866" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=35866">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=35866</a>"</div>
@@ -1065,5 +960,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Ser
 </div>
 
 </body>
-<!-- Cached/compressed 20181002092902 -->
+<!-- Cached/compressed 20181005025517 -->
 </html>

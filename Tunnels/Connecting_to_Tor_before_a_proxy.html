@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tunnels/Connecting to Tor before a proxy - Whonix
  url: ../Tunnels/Connecting_to_Tor_before_a_proxy
- date: Thu Oct  4 08:13:00 2018
+ date: Fri Oct  5 08:13:43 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -306,41 +306,32 @@ See also: <a data-href="/wiki/Comparison_Of_Tor_with_CGI_Proxies,_Proxy_Chains,_
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Paste. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</textarea>
 </div>
 </div>
@@ -371,40 +362,31 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>uwtwrapper_global="0"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
 </div>
 </div>
 <p>Save and exit.
@@ -438,27 +420,21 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 <p>&lt;span id="<br/>od"&gt;
 <b>Command Line Method</b><br/>
 </p><p>Navigate to the Tor Browser folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~/tor-browser_en-US</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
 </div>
 </div>
 <p>Every time Tor Browser is started, run the following command to set the <code>TOR_TRANSPROXY=1</code> environment variable.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1 ./start-tor-browser.desktop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
 </div>
 </div>
 <p><span id="start-tor-browser_Method"></span>
@@ -467,15 +443,12 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 </p><p>Find and open <span style="border:1px dotted #005cb9">start-tor-browser</span> in the Tor Browser folder in an editor.
 </p><p>This is most likely in <span style="border:1px dotted #005cb9">~/tor-browser_en-US/Browser/start-tor-browser</span> below <span style="border:1px dotted #005cb9">#!/usr/bin/env bash</span>.
 </p><p>Set.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>export TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 </div>
@@ -487,40 +460,31 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
 </div>
 </div>
 </div>
 <p>Add the following line.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 <p>Save and reboot.
@@ -542,41 +506,32 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Paste. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</textarea>
 </div>
 </div>
@@ -607,40 +562,31 @@ These applications can only talk to Tor <a data-href="/wiki/Onion_Services" href
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>uwtwrapper_global="0"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
 </div>
 </div>
 <p>Save and exit.
@@ -682,27 +628,21 @@ uwt -t 5 -i 10.152.152.10 -p 9156 /usr/bin/wget -c <a class="external free" data
 <p>&lt;span id="<br/>od"&gt;
 <b>Command Line Method</b><br/>
 </p><p>Navigate to the Tor Browser folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~/tor-browser_en-US</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
 </div>
 </div>
 <p>Every time Tor Browser is started, run the following command to set the <code>TOR_TRANSPROXY=1</code> environment variable.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1 ./start-tor-browser.desktop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
 </div>
 </div>
 <p><span id="start-tor-browser_Method"></span>
@@ -711,15 +651,12 @@ uwt -t 5 -i 10.152.152.10 -p 9156 /usr/bin/wget -c <a class="external free" data
 </p><p>Find and open <span style="border:1px dotted #005cb9">start-tor-browser</span> in the Tor Browser folder in an editor.
 </p><p>This is most likely in <span style="border:1px dotted #005cb9">~/tor-browser_en-US/Browser/start-tor-browser</span> below <span style="border:1px dotted #005cb9">#!/usr/bin/env bash</span>.
 </p><p>Set.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>export TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 </div>
@@ -731,40 +668,31 @@ uwt -t 5 -i 10.152.152.10 -p 9156 /usr/bin/wget -c <a class="external free" data
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
 </div>
 </div>
 </div>
 <p>Add the following line.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 <p>Save and reboot.
@@ -795,27 +723,21 @@ sudo apt-get install proxychains
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/proxychains.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/proxychains.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/proxychains.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/proxychains.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/proxychains.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/proxychains.conf</textarea>
 </div>
 </div>
 </div>
@@ -862,27 +784,21 @@ proxychains /usr/bin/wget <a class="external free" data-href="https://check.torp
 <p>&lt;span id="<br/>od"&gt;
 <b>Command Line Method</b><br/>
 </p><p>Navigate to the Tor Browser folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~/tor-browser_en-US</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
 </div>
 </div>
 <p>Every time Tor Browser is started, run the following command to set the <code>TOR_TRANSPROXY=1</code> environment variable.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1 ./start-tor-browser.desktop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
 </div>
 </div>
 <p><span id="start-tor-browser_Method"></span>
@@ -891,15 +807,12 @@ proxychains /usr/bin/wget <a class="external free" data-href="https://check.torp
 </p><p>Find and open <span style="border:1px dotted #005cb9">start-tor-browser</span> in the Tor Browser folder in an editor.
 </p><p>This is most likely in <span style="border:1px dotted #005cb9">~/tor-browser_en-US/Browser/start-tor-browser</span> below <span style="border:1px dotted #005cb9">#!/usr/bin/env bash</span>.
 </p><p>Set.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>export TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 </div>
@@ -911,40 +824,31 @@ proxychains /usr/bin/wget <a class="external free" data-href="https://check.torp
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
 </div>
 </div>
 </div>
 <p>Add the following line.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 <p>Save and reboot.
@@ -1008,40 +912,31 @@ Disabling stream isolation will prevent bypassing of the tunnel-link. By default
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/uwt.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/uwt.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>uwtwrapper_global="0"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">uwtwrapper_global="0"</textarea>
 </div>
 </div>
 <p>Save and exit.
@@ -1065,27 +960,21 @@ Disabling stream isolation will prevent bypassing of the tunnel-link. By default
 <p>&lt;span id="<br/>od"&gt;
 <b>Command Line Method</b><br/>
 </p><p>Navigate to the Tor Browser folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~/tor-browser_en-US</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~/tor-browser_en-US</textarea>
 </div>
 </div>
 <p>Every time Tor Browser is started, run the following command to set the <code>TOR_TRANSPROXY=1</code> environment variable.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1 ./start-tor-browser.desktop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1 ./start-tor-browser.desktop</textarea>
 </div>
 </div>
 <p><span id="start-tor-browser_Method"></span>
@@ -1094,15 +983,12 @@ Disabling stream isolation will prevent bypassing of the tunnel-link. By default
 </p><p>Find and open <span style="border:1px dotted #005cb9">start-tor-browser</span> in the Tor Browser folder in an editor.
 </p><p>This is most likely in <span style="border:1px dotted #005cb9">~/tor-browser_en-US/Browser/start-tor-browser</span> below <span style="border:1px dotted #005cb9">#!/usr/bin/env bash</span>.
 </p><p>Set.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>export TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">export TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 </div>
@@ -1114,40 +1000,31 @@ Disabling stream isolation will prevent bypassing of the tunnel-link. By default
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/environment</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/environment</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/environment</textarea>
 </div>
 </div>
 </div>
 <p>Add the following line.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TOR_TRANSPROXY=1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TOR_TRANSPROXY=1</textarea>
 </div>
 </div>
 <p>Save and reboot.
@@ -1171,41 +1048,32 @@ Disabling stream isolation will prevent bypassing of the tunnel-link. By default
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/torbrowser.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/torbrowser.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Paste. <sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> <sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK=1
 CURL_PROXY="--fail"</textarea>
 </div>
 </div>
@@ -1236,27 +1104,21 @@ sudo apt-get install redsocks
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/default/redsocks</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/default/redsocks</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/default/redsocks</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/default/redsocks</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/default/redsocks</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/default/redsocks</textarea>
 </div>
 </div>
 </div>
@@ -1273,27 +1135,21 @@ START=yes
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/redsocks.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/redsocks.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/redsocks.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/redsocks.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/redsocks.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/redsocks.conf</textarea>
 </div>
 </div>
 </div>
@@ -1529,7 +1385,7 @@ By using a curl parameter we are using anyhow, i.e. <code>CURL_PROXY="--fail"</c
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_Tor_before_a_proxy" href="../Tunnels/Connecting_to_Tor_before_a_proxy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_proxy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_proxy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1541,11 +1397,11 @@ By using a curl parameter we are using anyhow, i.e. <code>CURL_PROXY="--fail"</c
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002102245
+Cached time: 20181005024727
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.396 seconds
-Real time usage: 0.519 seconds
+CPU time usage: 0.432 seconds
+Real time usage: 0.531 seconds
 Preprocessor visited node count: 1931/1000000
 Preprocessor generated node count: 3480/1000000
 Post‐expand include size: 114036/2097152 bytes
@@ -1553,23 +1409,23 @@ Template argument size: 40777/2097152 bytes
 Highest expansion depth: 16/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 23817/5000000 bytes
-Lua time usage: 0.050/7.000 seconds
+Unstrip post‐expand size: 23926/5000000 bytes
+Lua time usage: 0.060/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  389.306      1 -total
- 93.12%  362.540     29 Template:Box
- 39.05%  152.024     45 Template:CodeSelect
- 28.54%  111.108     12 Template:Open_with_root_rights
- 22.64%   88.132      6 Template:Mbox
- 22.25%   86.627      4 Template:Tor_Browser_Remove_Proxy_Settings
- 16.40%   63.849      1 Template:Tunnels_Introduction
- 15.07%   58.664      1 Template:Prevent_Bypassing_the_Tunnel-Link
- 12.19%   47.464      1 Template:Disable_Stream_Isolation_Easy
-  9.13%   35.544      3 Template:Deactivate_Misc_Proxy_Settings
+100.00%  399.806      1 -total
+ 92.78%  370.952     29 Template:Box
+ 33.47%  133.813     45 Template:CodeSelect
+ 25.95%  103.748      6 Template:Mbox
+ 24.52%   98.033      4 Template:Tor_Browser_Remove_Proxy_Settings
+ 22.20%   88.768     12 Template:Open_with_root_rights
+ 19.81%   79.213      1 Template:Tunnels_Introduction
+ 15.90%   63.562      1 Template:Prevent_Bypassing_the_Tunnel-Link
+ 13.34%   53.330      1 Template:Disable_Stream_Isolation_Easy
+ 11.76%   47.008      3 Template:Deactivate_Misc_Proxy_Settings
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_proxy&amp;oldid=35147" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_proxy&amp;oldid=35147">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_proxy&amp;oldid=35147</a>"</div>
@@ -1598,5 +1454,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20181002102245 -->
+<!-- Cached/compressed 20181005024727 -->
 </html>

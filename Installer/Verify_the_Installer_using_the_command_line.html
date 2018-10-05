@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Installer/Verify the Installer using the command line - Whonix
  url: ../Installer/Verify_the_Installer_using_the_command_line
- date: Thu Oct  4 07:56:32 2018
+ date: Fri Oct  5 07:56:59 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -141,27 +141,21 @@ Whonix requires payments to stay alive.
 </p><p>2. Store ego.asc in a folder you will remember.
 </p><p>3. Open the command line by pressing the Windows-Key and R simultaneously and executing cmd.exe.
 </p><p>4. Change into the folder you stored ego.asc in by typing the following into the window you just opened:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd /Foldername/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd /Foldername/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd /Foldername/</textarea>
 </div>
 </div>
 <p>5. Check fingerprints/owners without importing anything by using the following.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --keyid-format long --with-fingerprint ego.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint ego.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --keyid-format long --with-fingerprint ego.asc</textarea>
 </div>
 </div>
 <p>6. Verify it shows the following. 
@@ -171,15 +165,12 @@ Key fingerprint = 2B72 83C9 D382 4D7F 9D11  8364 584A 8DF9 FBB8 E862
 sub  4096R/B63EEBBFD6D1BAA7 2016-08-12
 </pre>
 <p>7. Import the key by typing.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --import ego.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --import ego.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --import ego.asc</textarea>
 </div>
 </div>
 <p>The output should tell you that the key was imported:
@@ -247,7 +238,7 @@ under certain conditions; see the wiki source code for details.
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Installer/Verify_the_Installer_using_the_command_line" href="../Installer/Verify_the_Installer_using_the_command_line" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Installer/Verify_the_Installer_using_the_command_line" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Installer/Verify_the_Installer_using_the_command_line" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -259,11 +250,11 @@ under certain conditions; see the wiki source code for details.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924055542
+Cached time: 20181005043513
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.040 seconds
-Real time usage: 0.042 seconds
+CPU time usage: 0.036 seconds
+Real time usage: 0.054 seconds
 Preprocessor visited node count: 193/1000000
 Preprocessor generated node count: 544/1000000
 Post‐expand include size: 3690/2097152 bytes
@@ -271,20 +262,20 @@ Template argument size: 85/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3198/5000000 bytes
+Unstrip post‐expand size: 3067/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   28.168      1 -total
- 51.07%   14.385      1 Template:Footer
- 28.14%    7.928      3 Template:CodeSelect
- 21.71%    6.116      1 Template:FooterLight
- 15.33%    4.318      1 Template:Footer_this_is_a_wiki
- 12.18%    3.432      1 Template:Share
- 12.05%    3.395      1 Template:Header
- 11.86%    3.342      1 Template:Edit_it
-  5.70%    1.606      1 Template:RandomNews
-  4.38%    1.234      1 Template:Whonix_onion
+100.00%   40.531      1 -total
+ 38.33%   15.534      1 Template:Footer
+ 32.13%   13.023      1 Template:Header
+ 23.15%    9.384      3 Template:CodeSelect
+ 16.37%    6.636      1 Template:FooterLight
+ 11.78%    4.773      1 Template:Footer_this_is_a_wiki
+  9.04%    3.663      1 Template:Edit_it
+  8.82%    3.573      1 Template:Share
+  4.13%    1.675      1 Template:RandomNews
+  3.77%    1.530      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Installer/Verify_the_Installer_using_the_command_line&amp;oldid=32322" dir="ltr" href="https://www.whonix.org/w/index.php?title=Installer/Verify_the_Installer_using_the_command_line&amp;oldid=32322">https://www.whonix.org/w/index.php?title=Installer/Verify_the_Installer_using_the_command_line&amp;oldid=32322</a>"</div>
@@ -313,5 +304,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Installer
 </div>
 
 </body>
-<!-- Cached/compressed 20180924055542 -->
+<!-- Cached/compressed 20181005043513 -->
 </html>

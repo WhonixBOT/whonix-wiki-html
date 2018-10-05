@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix-Gateway Security Hardening - Whonix
  url: ./Whonix-Gateway_Security_Hardening
- date: Thu Oct  4 08:17:06 2018
+ date: Fri Oct  5 08:17:54 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -169,15 +169,12 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -200,15 +197,12 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -217,15 +211,12 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </div>
 </div>
 <p>Add the following content.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>CONTROL_PORT_FILTER_PROXY_ENABLE=0</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">CONTROL_PORT_FILTER_PROXY_ENABLE=0</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">CONTROL_PORT_FILTER_PROXY_ENABLE=0</textarea>
 </div>
 </div>
 <p>Save.
@@ -237,54 +228,42 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonix_firewall</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
 </div>
 </div>
 </div>
 <h4><span class="mw-headline" id="Deactivate_onion-grater">Deactivate onion-grater</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=6.html" title="Edit section: Deactivate onion-grater">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Stop onion-grater.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service onion-grater stop</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service onion-grater stop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service onion-grater stop</textarea>
 </div>
 </div>
 <p>Disable autostart of onion-grater.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl mask onion-grater</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl mask onion-grater</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl mask onion-grater</textarea>
 </div>
 </div>
 <p>Reboot.
 </p><p>Check if onion-grater is still running or disabled.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ps aux | grep onion-grater</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">ps aux | grep onion-grater</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ps aux | grep onion-grater</textarea>
 </div>
 </div>
 <p>If output similar to the following appears, then disabling did not work.
@@ -296,40 +275,31 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/whonix.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add the following content.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck_skip_functions+=" check_control_port_filter_running "</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck_skip_functions+=" check_control_port_filter_running "</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck_skip_functions+=" check_control_port_filter_running "</textarea>
 </div>
 </div>
 <p>Save.
@@ -341,40 +311,31 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/whonix.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add the following content.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck_skip_functions+=" check_tor_bootstrap "</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck_skip_functions+=" check_tor_bootstrap "</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck_skip_functions+=" check_tor_bootstrap "</textarea>
 </div>
 </div>
 <p>Save.
@@ -385,55 +346,43 @@ If onion-grater is disabled, users will no longer receive helpful Whonix notific
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/lib/anon-shared-helper-scripts/te_pe_tb_check</textarea>
 </div>
 </div>
 </div>
 <p>Replace the existing content with the following text.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>#!/bin/bash
 exit 0</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">#!/bin/bash
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">#!/bin/bash
 exit 0</textarea>
 </div>
 </div>
 <p>Save.
 </p><p>Restart sdwdate.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl restart sdwdate</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl restart sdwdate</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart sdwdate</textarea>
 </div>
 </div>
 <p>Done.
@@ -441,27 +390,21 @@ exit 0</textarea>
 </p>
 <h4><span class="mw-headline" id="Tor_Browser_Updater">Tor Browser Updater</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=11.html" title="Edit section: Tor Browser Updater">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>If a user wants to update <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a> using <a data-href="/wiki/Tor_Browser#Update_Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser Updater by Whonix developers</a> while onion-grater is disabled, then follow the steps below. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>update-torbrowser --no-tor-con-check</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">update-torbrowser --no-tor-con-check</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">update-torbrowser --no-tor-con-check</textarea>
 </div>
 </div>
 <p>Or create a file <i>/etc/torbrowser.d/50_user.conf</i> with the following content.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>TB_NO_TOR_CON_CHECK="1"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK="1"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">TB_NO_TOR_CON_CHECK="1"</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Static_VirtualBox_IP">Static VirtualBox IP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=12.html" title="Edit section: Static VirtualBox IP">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -487,7 +430,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 </blockquote>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix-Gateway_Security_Hardening" href="./Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -499,11 +442,11 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002125541
+Cached time: 20181005061544
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.140 seconds
-Real time usage: 0.190 seconds
+Real time usage: 0.194 seconds
 Preprocessor visited node count: 481/1000000
 Preprocessor generated node count: 1370/1000000
 Post‐expand include size: 17625/2097152 bytes
@@ -511,23 +454,23 @@ Template argument size: 6531/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2209/5000000 bytes
+Unstrip post‐expand size: 1939/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  157.766      1 -total
- 42.01%   66.282      1 Template:Mbox
- 27.96%   44.109     19 Template:CodeSelect
- 23.57%   37.190      7 Template:Box
- 10.44%   16.477      1 Template:Firewall_Settings
- 10.35%   16.333      3 Template:Open_with_root_rights
-  8.44%   13.311      1 Template:Footer
-  4.92%    7.757      1 Template:Header
-  3.25%    5.121      1 Template:Reflist
-  3.04%    4.800      1 Template:FooterLight
+100.00%  161.951      1 -total
+ 38.42%   62.221      1 Template:Mbox
+ 31.18%   50.489     19 Template:CodeSelect
+ 26.59%   43.063      7 Template:Box
+ 11.99%   19.425      1 Template:Firewall_Settings
+ 11.56%   18.721      3 Template:Open_with_root_rights
+  8.55%   13.850      1 Template:Footer
+  3.32%    5.377      1 Template:FooterLight
+  3.30%    5.343      1 Template:Reflist
+  2.85%    4.616      1 Template:Header
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=36377" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=36377">https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=36377</a>"</div>
@@ -556,5 +499,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Ga
 </div>
 
 </body>
-<!-- Cached/compressed 20181002125541 -->
+<!-- Cached/compressed 20181005061544 -->
 </html>

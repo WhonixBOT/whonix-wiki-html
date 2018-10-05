@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Debian - Whonix
  url: ./Debian
- date: Thu Oct  4 07:35:31 2018
+ date: Fri Oct  5 07:35:39 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -150,28 +150,22 @@ Whonix requires payments to stay alive.
 <li>SHA512SUMS.sign</li>
 <li>debian-7.6.0-i386-netinst.iso</li></ul>
 <p>(3) Install the debian-keyring package, which contains the signing key. This is because the <a class="external text" data-href="http://www.debian.org/CD/verify" href="http://www.debian.org/CD/verify" rel="noreferrer noopener" target="_blank">Debian Verify</a> instructions are not accessible over SSL, neither the debian-keyring package can be downloaded over SSL. Downloading the debian-keyring package from the repository, let's apt-get verify its integrity.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install debian-keyring</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install debian-keyring</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install debian-keyring</textarea>
 </div>
 </div>
 <p>(4) Open a terminal and get into the folder where you downloaded SHA512SUMS and SHA512SUMS.sign (and debian-7.6.0-i386-netinst.iso ).
 </p><p>(5) Verify the SHA512SUMS file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --no-default-keyring --keyring /usr/share/keyrings/debian-role-keys.gpg --verify SHA512SUMS.sign</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --no-default-keyring --keyring /usr/share/keyrings/debian-role-keys.gpg --verify SHA512SUMS.sign</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --no-default-keyring --keyring /usr/share/keyrings/debian-role-keys.gpg --verify SHA512SUMS.sign</textarea>
 </div>
 </div>
 <p>(6) Must show.
@@ -186,15 +180,12 @@ gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>This doesn't alter the validity of the signature according to the key you downloaded. This warning rather has to do with the trust that you put in key.
 </p><p>(7) Verify that the .iso matches the signed SHA512SUMS file:
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sha512sum -c SHA512SUMS</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sha512sum -c SHA512SUMS</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sha512sum -c SHA512SUMS</textarea>
 </div>
 </div>
 must show:
@@ -224,95 +215,71 @@ Feel free to choose:
 <h1><span class="mw-headline" id="Configure">Configure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Debian&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Debian&amp;action=edit&amp;section=3.html" title="Edit section: Configure">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><b>UNFINISHED!</b>
 Check open ports.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>su</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">su</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">su</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>netstat -anltp</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">netstat -anltp</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">netstat -anltp</textarea>
 </div>
 </div>
 <p>Must should be none, i.e no reply.
 </p><p>Remove services, which open ports. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>su</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">su</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">su</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-get remove dovecot-core openbsd-inetd bind9 samba cups cups-daemon apache2 postgres*</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-get remove dovecot-core openbsd-inetd bind9 samba cups cups-daemon apache2 postgres*</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get remove dovecot-core openbsd-inetd bind9 samba cups cups-daemon apache2 postgres*</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-get remove exim4 exim4-daemon-light rpcbind openssh-server apache2.2-bin avahi*</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-get remove exim4 exim4-daemon-light rpcbind openssh-server apache2.2-bin avahi*</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get remove exim4 exim4-daemon-light rpcbind openssh-server apache2.2-bin avahi*</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-get autoremove</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">apt-get autoremove</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get autoremove</textarea>
 </div>
 </div>
 <p>Check open ports again.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>su</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">su</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">su</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>netstat -anltp</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">netstat -anltp</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">netstat -anltp</textarea>
 </div>
 </div>
 <p>Must should be none, i.e no reply.
@@ -341,39 +308,30 @@ Check open ports.
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>Optional! First consider whether this change is desirable. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>Become root.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>su</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">su</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">su</textarea>
 </div>
 </div>
 <p>Add the <i><span style="background-color:#FBFBFB">user</span></i> account to the sudoer's group. Replace <i><span style="background-color:#FBFBFB">user</span></i> with the actual operating system user name.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo adduser user sudo</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo adduser user sudo</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo adduser user sudo</textarea>
 </div>
 </div>
 <p>Reboot so group changes take effect.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>reboot</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">reboot</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">reboot</textarea>
 </div>
 </div>
 </div>
@@ -432,7 +390,7 @@ You could drop the virtualbox if you don't want it installed.</span>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Debian" href="./Debian" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Debian" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Debian" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -444,11 +402,11 @@ You could drop the virtualbox if you don't want it installed.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002100715
+Cached time: 20181005044338
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.124 seconds
-Real time usage: 0.264 seconds
+CPU time usage: 0.132 seconds
+Real time usage: 0.233 seconds
 Preprocessor visited node count: 459/1000000
 Preprocessor generated node count: 1473/1000000
 Post‐expand include size: 6512/2097152 bytes
@@ -456,23 +414,23 @@ Template argument size: 898/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3766/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 3880/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  235.190      1 -total
- 57.35%  134.891     14 Template:CodeSelect
- 23.19%   54.552      1 Template:Mbox
- 14.52%   34.156      1 Template:Sudo_Setup
- 13.48%   31.714      1 Template:Box
-  6.86%   16.123      1 Template:Footer
-  3.01%    7.074      1 Template:FooterLight
-  2.95%    6.932      1 Template:Reflist
-  1.96%    4.603      1 Template:Footer_this_is_a_wiki
-  1.69%    3.963      1 Template:Header
+100.00%  203.144      1 -total
+ 37.15%   75.478      1 Template:Mbox
+ 20.17%   40.982      1 Template:Header
+ 19.56%   39.732     14 Template:CodeSelect
+  9.55%   19.392      1 Template:Footer
+  7.02%   14.258      1 Template:Sudo_Setup
+  6.16%   12.510      1 Template:Box
+  4.09%    8.317      1 Template:FooterLight
+  3.63%    7.370      1 Template:Reflist
+  2.68%    5.451      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Debian&amp;oldid=36027" dir="ltr" href="https://www.whonix.org/w/index.php?title=Debian&amp;oldid=36027">https://www.whonix.org/w/index.php?title=Debian&amp;oldid=36027</a>"</div>
@@ -501,5 +459,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Debian&am
 </div>
 
 </body>
-<!-- Cached/compressed 20181002100715 -->
+<!-- Cached/compressed 20181005044338 -->
 </html>

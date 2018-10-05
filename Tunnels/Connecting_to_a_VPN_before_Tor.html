@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tunnels/Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Thu Oct  4 08:13:04 2018
+ date: Fri Oct  5 08:13:47 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -311,15 +311,12 @@ Setup the VPN-Gateway as per <a class="external text" data-href="https://www.qub
 </p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -342,15 +339,12 @@ Setup the VPN-Gateway as per <a class="external text" data-href="https://www.qub
 </p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -390,15 +384,12 @@ VPN_FIREWALL=1
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonix_firewall</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
 </div>
 </div>
 </div>
@@ -407,27 +398,21 @@ VPN_FIREWALL=1
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/sudoers.d/tunnel_unpriv</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/sudoers.d/tunnel_unpriv</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/sudoers.d/tunnel_unpriv</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/sudoers.d/tunnel_unpriv</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/sudoers.d/tunnel_unpriv</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/sudoers.d/tunnel_unpriv</textarea>
 </div>
 </div>
 </div>
@@ -447,15 +432,12 @@ Defaults:tunnel !requiretty
 <h6><span class="mw-headline" id="Get_VPN_Certificate">Get VPN Certificate</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=17.html" title="Edit section: Get VPN Certificate">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>TODO: Documentation bug fix required. Won't work without Tor being enabled. You need to get the certificate elsewhere and then <a data-href="/wiki/File_Transfer" href="../File_Transfer.html" title="File Transfer">File Transfer</a> it into Whonix-Gateway.
 </p><p>Look at the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and (right-click) <a class="external text" data-href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" rel="noreferrer noopener" target="_blank">download</a> it. Store the certificate in <i><span style="background-color:#FBFBFB">/etc/openvpn/RiseupCA.pem</span></i>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</textarea>
 </div>
 </div>
 <h6><span class="mw-headline" id="VPN_Credentials">VPN Credentials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=18.html" title="Edit section: VPN Credentials">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
@@ -464,27 +446,21 @@ Defaults:tunnel !requiretty
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/auth.txt</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/auth.txt</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/auth.txt</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/openvpn/auth.txt</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/openvpn/auth.txt</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/openvpn/auth.txt</textarea>
 </div>
 </div>
 </div>
@@ -505,27 +481,21 @@ vpnsecret
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/openvpn.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/openvpn.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/openvpn.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/openvpn/openvpn.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/openvpn/openvpn.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/openvpn/openvpn.conf</textarea>
 </div>
 </div>
 </div>
@@ -599,15 +569,12 @@ iproute /usr/bin/ip_unpriv
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonixsetup</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
 </div>
 </div>
 </div>
@@ -714,27 +681,21 @@ Always refer to the connection scheme when requesting support: <i><span style="b
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -743,15 +704,12 @@ Always refer to the connection scheme when requesting support: <i><span style="b
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -773,27 +731,21 @@ sudo mkdir /etc/systemd/system/tor.service.d
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/systemd/system/tor.service.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/systemd/system/tor.service.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/systemd/system/tor.service.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/systemd/system/tor.service.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/systemd/system/tor.service.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/systemd/system/tor.service.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -887,7 +839,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Please consider a <a class="external text" data-href="../Payment" href="../Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_VPN_before_Tor" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -899,35 +851,35 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002102036
+Cached time: 20181005022801
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.244 seconds
-Real time usage: 0.327 seconds
-Preprocessor visited node count: 1052/1000000
-Preprocessor generated node count: 2734/1000000
+Real time usage: 0.333 seconds
+Preprocessor visited node count: 1055/1000000
+Preprocessor generated node count: 2754/1000000
 Post‐expand include size: 37337/2097152 bytes
 Template argument size: 9564/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9343/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 14.8 MB/50 MB
+Unstrip post‐expand size: 9388/5000000 bytes
+Lua time usage: 0.050/7.000 seconds
+Lua virtual size: 14.93 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  247.999      1 -total
- 32.05%   79.485      1 Template:Tunnels_Introduction
- 30.35%   75.269      2 Template:Mbox
- 25.10%   62.258     10 Template:Box
- 20.08%   49.809     16 Template:CodeSelect
- 11.14%   27.633      4 Template:Open_with_root_rights
-  7.16%   17.767      1 Template:Firewall_Settings
-  6.26%   15.530      1 Template:Footer
-  5.02%   12.461      1 Template:Reload_Tor
-  4.80%   11.907      1 Template:Reflist
+100.00%  249.250      1 -total
+ 35.81%   89.264      1 Template:Tunnels_Introduction
+ 34.11%   85.027      2 Template:Mbox
+ 21.13%   52.679     10 Template:Box
+ 17.22%   42.909     16 Template:CodeSelect
+  9.64%   24.039      4 Template:Open_with_root_rights
+  7.86%   19.579      1 Template:Header
+  5.85%   14.579      1 Template:Footer
+  5.11%   12.741      1 Template:Firewall_Settings
+  4.55%   11.352      1 Template:Tunnel_Automation_Sale
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423</a>"</div>
@@ -956,5 +908,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20181002102036 -->
+<!-- Cached/compressed 20181005022801 -->
 </html>

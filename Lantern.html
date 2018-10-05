@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Lantern - Whonix
  url: ./Lantern
- date: Thu Oct  4 07:57:50 2018
+ date: Fri Oct  5 07:58:19 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -158,27 +158,21 @@ sudo systemctl stop qubes-firewall
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical environment</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kwrite ~/fw-unload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kwrite ~/fw-unload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kwrite ~/fw-unload</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal (Konsole)</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano ~/fw-unload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano ~/fw-unload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano ~/fw-unload</textarea>
 </div>
 </div>
 </div>
@@ -274,15 +268,12 @@ COMMIT
 <pre>sudo apt-get install libappindicator3-1
 </pre>
 <p>Check if the downloaded deb file is still the right file. Go to <a class="external free" data-href="https://getlantern.org/" href="https://getlantern.org/" rel="noreferrer noopener" target="_blank">https://getlantern.org/</a> and check for desktop, linux downloads.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https https://s3.amazonaws.com/lantern/lantern-installer-beta-64-bit.deb --output ~/lantern-installer-beta-64-bit.deb</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://s3.amazonaws.com/lantern/lantern-installer-beta-64-bit.deb --output ~/lantern-installer-beta-64-bit.deb</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://s3.amazonaws.com/lantern/lantern-installer-beta-64-bit.deb --output ~/lantern-installer-beta-64-bit.deb</textarea>
 </div>
 </div>
 <p>Install lantern. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
@@ -312,15 +303,12 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -349,27 +337,21 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -378,15 +360,12 @@ In sys-whonix. </p><table class="plainlinks metadata ambox ambox-notice" role="p
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -413,58 +392,46 @@ Configuration was valid</pre>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
 In Lantern-Gateway, check if lantern's http port is functional.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:8788 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:8788 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --proxytunnel --proxy 127.0.0.1:8788 https://check.torproject.org</textarea>
 </div>
 </div>
 
 In Lantern-Gateway, check if lantern's socks port is functional.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:8788 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:8788 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --socks5-hostname socks5h://127.0.0.1:8788 https://check.torproject.org</textarea>
 </div>
 </div></span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
 In sys-whonix, test if Tor is able to the http proxy that Lantern is providing.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 10.137.11.1:8788 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 10.137.11.1:8788 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --proxytunnel --proxy 10.137.11.1:8788 https://check.torproject.org</textarea>
 </div>
 </div>
 
 In sys-whonix, test if Tor is able to the socks proxy that Lantern is providing.
 
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://10.137.11.1:8788 https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://10.137.11.1:8788 https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https --socks5-hostname socks5h://10.137.11.1:8788 https://check.torproject.org</textarea>
 </div>
 </div></span>
 </li>
@@ -479,7 +446,7 @@ Setup will become easier with less need for IP changes as soon as Qubes implemen
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Lantern" href="./Lantern" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Lantern" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Lantern" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -491,11 +458,11 @@ Setup will become easier with less need for IP changes as soon as Qubes implemen
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002133240
+Cached time: 20181005055815
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.136 seconds
-Real time usage: 0.203 seconds
+Real time usage: 0.204 seconds
 Preprocessor visited node count: 460/1000000
 Preprocessor generated node count: 1527/1000000
 Post‐expand include size: 13301/2097152 bytes
@@ -503,23 +470,23 @@ Template argument size: 3321/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 7232/5000000 bytes
+Unstrip post‐expand size: 6980/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  174.448      1 -total
- 46.98%   81.959      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 43.18%   75.335      1 Template:Mbox
- 22.56%   39.360     11 Template:CodeSelect
- 14.59%   25.448      3 Template:Box
- 12.60%   21.973      1 Template:Reflist
- 11.46%   19.988      1 Template:Firewall_Unload_Home_Folder
-  9.69%   16.912      1 Template:Footer
-  8.71%   15.188      1 Template:Open_File
-  7.72%   13.474      1 Template:Reload_Tor
+100.00%  173.113      1 -total
+ 45.34%   78.482      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 42.02%   72.745      1 Template:Mbox
+ 20.38%   35.281     11 Template:CodeSelect
+ 13.26%   22.961      3 Template:Box
+ 12.00%   20.765      1 Template:Reflist
+ 10.23%   17.716      1 Template:Footer
+ 10.07%   17.433      1 Template:Firewall_Unload_Home_Folder
+  8.04%   13.916      1 Template:Header
+  7.71%   13.345      1 Template:Open_File
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Lantern&amp;oldid=35506" dir="ltr" href="https://www.whonix.org/w/index.php?title=Lantern&amp;oldid=35506">https://www.whonix.org/w/index.php?title=Lantern&amp;oldid=35506</a>"</div>
@@ -548,5 +515,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Lantern&a
 </div>
 
 </body>
-<!-- Cached/compressed 20181002133240 -->
+<!-- Cached/compressed 20181005055815 -->
 </html>

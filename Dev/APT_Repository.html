@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/APT Repository - Whonix
  url: ../Dev/APT_Repository
- date: Thu Oct  4 07:36:30 2018
+ date: Fri Oct  5 07:36:42 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -135,113 +135,86 @@ Whonix requires payments to stay alive.
 </p>
 <h1><span class="mw-headline" id="Maintenance">Maintenance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/APT_Repository&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/APT_Repository&amp;action=edit&amp;section=2.html" title="Edit section: Maintenance">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Update <a class="external text" data-href="http://blog.ganneff.de/blog/2008/09/23/valid-until-field-in-release-f.html" href="http://blog.ganneff.de/blog/2008/09/23/valid-until-field-in-release-f.html" rel="noreferrer noopener" target="_blank">Valid-Until</a> field.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./release/resign_repository</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./release/resign_repository</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./release/resign_repository</textarea>
 </div>
 </div>
 <hr/>
 <p>Upload repository to sourceforge.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./release/upload_repository</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./release/upload_repository</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./release/upload_repository</textarea>
 </div>
 </div>
 <hr/>
 <p>Migrate from developers APT repository to testers APT repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./release/migrate_to_testers_repository</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./release/migrate_to_testers_repository</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./release/migrate_to_testers_repository</textarea>
 </div>
 </div>
 <hr/>
 <p>Migrate from testers APT repository to stretch APT repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./release/migrate_to_stretch_repository</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./release/migrate_to_stretch_repository</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./release/migrate_to_stretch_repository</textarea>
 </div>
 </div>
 <hr/>
 <p>Manually add package to developers repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./debug-steps/reprepro-wrapper includedeb developers ../Whonix/packages/*.deb</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper includedeb developers ../Whonix/packages/*.deb</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper includedeb developers ../Whonix/packages/*.deb</textarea>
 </div>
 </div>
 <hr/>
 <p>Copy package-name from developers to testers repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./debug-steps/reprepro-wrapper copy testers developers package-name</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copy testers developers package-name</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copy testers developers package-name</textarea>
 </div>
 </div>
 <hr/>
 <p>Copy package-name from stretch-proposed-updates to stretch repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./debug-steps/reprepro-wrapper copy stretch stretch-proposed-updates package-name</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copy stretch stretch-proposed-updates package-name</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copy stretch stretch-proposed-updates package-name</textarea>
 </div>
 </div>
 <hr/>
 <p>Migrate all packages matching <span style="border:1px dotted #005cb9">apparmor-profile-*</span> from stretch-proposed-updates to stretch repository.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./debug-steps/reprepro-wrapper copymatched stretch stretch-proposed-updates "apparmor-profile-*"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copymatched stretch stretch-proposed-updates "apparmor-profile-*"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./debug-steps/reprepro-wrapper copymatched stretch stretch-proposed-updates "apparmor-profile-*"</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Misc">Misc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/APT_Repository&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/APT_Repository&amp;action=edit&amp;section=3.html" title="Edit section: Misc">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>pkg_name=corridor
 ./debug-steps/reprepro-wrapper copy testers developers "$pkg_name"
@@ -249,7 +222,7 @@ Whonix requires payments to stay alive.
 ./debug-steps/reprepro-wrapper copy stretch stretch-proposed-updates "$pkg_name"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">pkg_name=corridor
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">pkg_name=corridor
 ./debug-steps/reprepro-wrapper copy testers developers "$pkg_name"
 ./debug-steps/reprepro-wrapper copy stretch-proposed-updates testers "$pkg_name"
 ./debug-steps/reprepro-wrapper copy stretch stretch-proposed-updates "$pkg_name"</textarea>
@@ -263,7 +236,7 @@ Whonix requires payments to stay alive.
 <ul><li><a data-href="/wiki/Dev/Maintenance" href="../Dev/Maintenance.html" title="Dev/Maintenance">Dev/Maintenance</a></li></ul>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/APT_Repository" href="../Dev/APT_Repository" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/APT_Repository" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/APT_Repository" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -275,11 +248,11 @@ Whonix requires payments to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924093414
+Cached time: 20181005053638
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.064 seconds
-Real time usage: 0.076 seconds
+Real time usage: 0.096 seconds
 Preprocessor visited node count: 192/1000000
 Preprocessor generated node count: 603/1000000
 Post‐expand include size: 3914/2097152 bytes
@@ -287,20 +260,20 @@ Template argument size: 717/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 983/5000000 bytes
+Unstrip post‐expand size: 828/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   61.311      1 -total
- 41.44%   25.406      9 Template:CodeSelect
- 35.17%   21.562      1 Template:Footer
- 15.15%    9.290      1 Template:FooterLight
-  9.97%    6.113      1 Template:Footer_this_is_a_wiki
-  9.92%    6.083      1 Template:Header
-  7.87%    4.824      1 Template:Share
-  7.49%    4.590      1 Template:Edit_it
-  4.67%    2.864      1 Template:RandomNews
-  3.16%    1.938      1 Template:Whonix_onion
+100.00%   83.730      1 -total
+ 56.93%   47.664      9 Template:CodeSelect
+ 20.32%   17.018      1 Template:Footer
+ 12.01%   10.053      1 Template:Header
+  8.76%    7.338      1 Template:FooterLight
+  6.05%    5.069      1 Template:Footer_this_is_a_wiki
+  4.69%    3.926      1 Template:Edit_it
+  4.51%    3.777      1 Template:Share
+  2.56%    2.140     13 Template:Stable_Whonix_based_on_Debian_codename
+  2.30%    1.929      1 Template:Forkme
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/APT_Repository&amp;oldid=36026" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/APT_Repository&amp;oldid=36026">https://www.whonix.org/w/index.php?title=Dev/APT_Repository&amp;oldid=36026</a>"</div>
@@ -329,5 +302,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/APT_R
 </div>
 
 </body>
-<!-- Cached/compressed 20180924093414 -->
+<!-- Cached/compressed 20181005053638 -->
 </html>

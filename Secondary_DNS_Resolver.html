@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Secondary DNS Resolver - Whonix
  url: ./Secondary_DNS_Resolver
- date: Thu Oct  4 08:07:04 2018
+ date: Fri Oct  5 08:07:38 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -187,34 +187,25 @@ Whonix requires payments to stay alive.
 <h5><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=6.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Everything inside your Whonix-Workstation. 
 </p><p>Install <a class="external text" data-href="https://unbound.net/" href="https://unbound.net/" rel="noreferrer noopener" target="_blank">unbound</a> and <a class="external text" data-href="http://www.dest-unreach.org/socat/" href="http://www.dest-unreach.org/socat/" rel="noreferrer noopener" target="_blank">socat</a>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install unbound socat</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install unbound socat</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install unbound socat</textarea>
 </div>
 </div>
 <p>Open <i>/etc/unbound/unbound.conf</i>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/unbound/unbound.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/unbound/unbound.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/unbound/unbound.conf</textarea>
 </div>
 </div>
 <p><i>Add</i> the following lines.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>#tcp-upstream goes under "server:" section
     tcp-upstream: yes
@@ -225,7 +216,7 @@ forward-zone:
     forward-addr: 0.0.0.0@5353</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">#tcp-upstream goes under "server:" section
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">#tcp-upstream goes under "server:" section
     tcp-upstream: yes
 
 #put forward-zone somewhere at the end of file
@@ -236,40 +227,31 @@ forward-zone:
 </div>
 <h5><span class="mw-headline" id="Starting">Starting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=7.html" title="Edit section: Starting">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Open a terminal and start socat.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>socat TCP4-LISTEN:5353,bind=localhost,reuseaddr,fork SOCKS4A:10.152.152.10:217.31.204.130:53,socksport=9150</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">socat TCP4-LISTEN:5353,bind=localhost,reuseaddr,fork SOCKS4A:10.152.152.10:217.31.204.130:53,socksport=9150</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">socat TCP4-LISTEN:5353,bind=localhost,reuseaddr,fork SOCKS4A:10.152.152.10:217.31.204.130:53,socksport=9150</textarea>
 </div>
 </div>
 <p>Open another terminal tab and restart unbound.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service unbound restart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service unbound restart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service unbound restart</textarea>
 </div>
 </div>
 <h5><span class="mw-headline" id="Using">Using</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=8.html" title="Edit section: Using">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Test with dig.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>dig +dnssec nic.cz @localhost</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">dig +dnssec nic.cz @localhost</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">dig +dnssec nic.cz @localhost</textarea>
 </div>
 </div>
 <p>Please refer to upstream documentation on how to interpret the DNSSEC test results.
@@ -289,15 +271,12 @@ forward-zone:
 </p><p>These instructions completely replace Tor's DNS resolver with a dnscrypt-enabled resolver for all users and the whole system. Not recommended for a longer amount of time, see warning above. Some hints are included how to do it only for a specific user account.
 </p><p>(1). Download the <a class="external text" data-href="http://dnscrypt.org" href="http://dnscrypt.org" rel="noreferrer noopener" target="_blank">dnscrypt source code</a> and unpack. You have to install <a class="external text" data-href="http://doc.libsodium.org/" href="http://doc.libsodium.org/" rel="noreferrer noopener" target="_blank">libsodium</a> before compiling it. Then, get into the dnscrypt directory <i>cd dnscrypt-proxy-...</i>. Configure <i>./configure</i>, make "make, and install <i>make install</i>.
 </p><p>(2). Start dnscrypt-proxy. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo dnscrypt-proxy --tcp-only</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo dnscrypt-proxy --tcp-only</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo dnscrypt-proxy --tcp-only</textarea>
 </div>
 </div>
 <p>(3). Edit your /etc/resolv.conf <i>nano /etc/resolv.conf</i>, comment out everything and add <i>nameserver 127.0.0.1</i>.
@@ -311,39 +290,30 @@ forward-zone:
 <h4><span class="mw-headline" id="Installation_2">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=14.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Everything inside your Whonix-Workstation.
 </p><p>Install dependencies.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install libnet-ssleay-perl libnet-server-perl libnet-dns-perl libxml-simple-perl liblog-log4perl-perl</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install libnet-ssleay-perl libnet-server-perl libnet-dns-perl libxml-simple-perl liblog-log4perl-perl</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install libnet-ssleay-perl libnet-server-perl libnet-dns-perl libxml-simple-perl liblog-log4perl-perl</textarea>
 </div>
 </div>
 <p>Download httpsdnsd. (See source above in case download link changed.)
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</textarea>
 </div>
 </div>
 <p>Or manually run <i>curl</i> with these parameters. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --remote-name https://anonymous-proxy-servers.net/downloads/httpsdnsd.tar.bz2</textarea>
 </div>
 </div>
 <p><br/>
@@ -351,59 +321,44 @@ Unpack.
 </p>
 <pre>.    </pre>
 <p>Go into the httpsdnsd folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd httpsdnsd</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd httpsdnsd</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd httpsdnsd</textarea>
 </div>
 </div>
 <p>Install httpsdnsd. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo install.sh</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo install.sh</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo install.sh</textarea>
 </div>
 </div>
 <p>Add a new user for httpsdnsd.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo adduser --system --disabled-password --group httpsdns_daemon</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo adduser --system --disabled-password --group httpsdns_daemon</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo adduser --system --disabled-password --group httpsdns_daemon</textarea>
 </div>
 </div>
 <p>Editing /etc/resolv.conf is not required. (You still could out comment everything against DNS leaks.)
 </p><p>Create a firewall script.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano dns-fw.sh</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano dns-fw.sh</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano dns-fw.sh</textarea>
 </div>
 </div>
 <p>Insert these firewall rules.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre># Flush old rules
 iptables -F
@@ -420,7 +375,7 @@ iptables -t filter -A OUTPUT -p udp -m owner --uid-owner anonuser --dport 4053 -
 iptables -t filter -A OUTPUT ! -o lo -m owner --uid-owner anonuser -j REJECT</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1"># Flush old rules
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1"># Flush old rules
 iptables -F
 iptables -t nat -F
 iptables -X
@@ -436,34 +391,25 @@ iptables -t filter -A OUTPUT ! -o lo -m owner --uid-owner anonuser -j REJECT</te
 </div>
 </div>
 <p>Install Privoxy. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install privoxy</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install privoxy</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install privoxy</textarea>
 </div>
 </div>
 <p>Open the privoxy configuration file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/privoxy/config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nano /etc/privoxy/config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/privoxy/config</textarea>
 </div>
 </div>
 <p>Add the following to your privoxy configuration file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre># Theoretically you can tunnel through any
 # http or socks proxy. Local or remote proxy.
@@ -479,7 +425,7 @@ forward-socks5 / 10.152.152.10:9112 .
 # forward / 127.0.0.1:4001</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1"># Theoretically you can tunnel through any
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1"># Theoretically you can tunnel through any
 # http or socks proxy. Local or remote proxy.
 # Inside Whonix-Workstation, due to design,
 # everything will be tunneled through Tor first.
@@ -494,67 +440,52 @@ forward-socks5 / 10.152.152.10:9112 .
 </div>
 </div>
 <p>Restart privoxy to enable the changes.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo /etc/init.d/privoxy restart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo /etc/init.d/privoxy restart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo /etc/init.d/privoxy restart</textarea>
 </div>
 </div>
 <p>Privoxy is now listening on 127.0.0.1:8118. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <h4><span class="mw-headline" id="Starting_2">Starting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=15.html" title="Edit section: Starting">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Run httpsdnsd. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo httpsdnsd --https_proxy_port=8118 --runasdaemon</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo httpsdnsd --https_proxy_port=8118 --runasdaemon</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo httpsdnsd --https_proxy_port=8118 --runasdaemon</textarea>
 </div>
 </div>
 <p>Activate the firewall. Shouldn't show any errors.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo ./dns-fw.sh</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo ./dns-fw.sh</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ./dns-fw.sh</textarea>
 </div>
 </div>
 <h4><span class="mw-headline" id="Using_2">Using</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=16.html" title="Edit section: Using">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Open a console and switch to anonuser.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>su anonuser</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">su anonuser</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">su anonuser</textarea>
 </div>
 </div>
 <p>Resolve DNS.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nslookup check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nslookup check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup check.torproject.org</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -599,7 +530,7 @@ forward-socks5 / 10.152.152.10:9112 .
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://www.whonix.org/blog/" href="https://www.whonix.org/blog/" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>Please consider a <a class="external text" data-href="./Payment" href="./Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Secondary_DNS_Resolver" href="./Secondary_DNS_Resolver" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Secondary_DNS_Resolver" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Secondary_DNS_Resolver" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -611,35 +542,35 @@ forward-socks5 / 10.152.152.10:9112 .
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002094350
+Cached time: 20181005025616
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.172 seconds
-Real time usage: 0.250 seconds
-Preprocessor visited node count: 641/1000000
-Preprocessor generated node count: 1851/1000000
+CPU time usage: 0.196 seconds
+Real time usage: 0.240 seconds
+Preprocessor visited node count: 644/1000000
+Preprocessor generated node count: 1871/1000000
 Post‐expand include size: 7224/2097152 bytes
 Template argument size: 2091/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8946/5000000 bytes
+Unstrip post‐expand size: 8898/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  207.428      1 -total
- 39.93%   82.826     23 Template:CodeSelect
- 30.97%   64.248      1 Template:Mbox
-  9.06%   18.796      1 Template:Footer
-  7.61%   15.789      1 Template:Reflist
-  4.05%    8.397      1 Template:Scurl
-  3.99%    8.277      1 Template:FooterLight
-  2.46%    5.113      1 Template:Footer_this_is_a_wiki
-  2.32%    4.809      1 Template:TorifiedGateway
-  2.05%    4.246      1 Template:Share
+100.00%  191.573      1 -total
+ 35.62%   68.229     23 Template:CodeSelect
+ 29.45%   56.416      1 Template:Mbox
+  8.91%   17.072      1 Template:Reflist
+  7.83%   15.009      1 Template:Footer
+  6.09%   11.662      1 Template:Scurl
+  3.76%    7.208      1 Template:TorifiedGateway
+  3.28%    6.286      1 Template:FooterLight
+  3.14%    6.023      1 Template:Header
+  2.26%    4.337      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;oldid=35180" dir="ltr" href="https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;oldid=35180">https://www.whonix.org/w/index.php?title=Secondary_DNS_Resolver&amp;oldid=35180</a>"</div>
@@ -668,5 +599,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Secondary
 </div>
 
 </body>
-<!-- Cached/compressed 20181002094350 -->
+<!-- Cached/compressed 20181005025616 -->
 </html>

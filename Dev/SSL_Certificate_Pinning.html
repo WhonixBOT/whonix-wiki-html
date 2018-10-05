@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/SSL Certificate Pinning - Whonix
  url: ../Dev/SSL_Certificate_Pinning
- date: Thu Oct  4 07:47:50 2018
+ date: Fri Oct  5 07:48:15 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -198,27 +198,21 @@ Whonix requires payments to stay alive.
 <pre>sudo apt-get install ca-certificates curl
 </pre>
 <p>Test, expected to work.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt https://check.torproject.org</textarea>
 </div>
 </div>
 <p>Test, expected to fail.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/AddTrust_External_Root.crt https://check.torproject.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/AddTrust_External_Root.crt https://check.torproject.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --verbose --tlsv1.2 --proto =https --capath /invalid/ --cacert /usr/share/ca-certificates/mozilla/AddTrust_External_Root.crt https://check.torproject.org</textarea>
 </div>
 </div>
 <h2><span class="mw-headline" id="PIN_Certificate_Directly">PIN Certificate Directly</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit&amp;section=6.html" title="Edit section: PIN Certificate Directly">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -278,15 +272,12 @@ Whonix requires payments to stay alive.
 <p>Download with curl and the pinned certificate:
 </p><p><b>Broken!</b>
 </p><p>This needs curl 7.39.0 or above, because older versions do not support --pinnedpubkey.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --cacert ./torproject.pem https://check.torproject.org/ &gt; check.html</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --cacert ./torproject.pem https://check.torproject.org/ &gt; check.html</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --cacert ./torproject.pem https://check.torproject.org/ &gt; check.html</textarea>
 </div>
 </div>
 <p>Eventually undo.
@@ -326,7 +317,7 @@ if (!defined($server_cert) || ($server_cert == 0)) {
 </font><li><font size="-3"><a class="external text" data-href="http://www.madboa.com/geek/openssl/" href="http://www.madboa.com/geek/openssl/" rel="noreferrer noopener" target="_blank">OpenSSL Command-Line HOWTO</a> </font></li></ul>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/SSL_Certificate_Pinning" href="../Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -338,11 +329,11 @@ if (!defined($server_cert) || ($server_cert == 0)) {
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924054635
+Cached time: 20181005054811
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.052 seconds
-Real time usage: 0.061 seconds
+CPU time usage: 0.056 seconds
+Real time usage: 0.060 seconds
 Preprocessor visited node count: 295/1000000
 Preprocessor generated node count: 733/1000000
 Post‐expand include size: 3735/2097152 bytes
@@ -350,20 +341,20 @@ Template argument size: 561/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3182/5000000 bytes
+Unstrip post‐expand size: 3042/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   34.719      1 -total
- 43.25%   15.017      1 Template:Footer
- 30.51%   10.593      3 Template:CodeSelect
- 18.67%    6.483      1 Template:FooterLight
- 12.44%    4.319      1 Template:Footer_this_is_a_wiki
- 11.92%    4.140      1 Template:Header
- 10.41%    3.614      1 Template:Share
-  9.44%    3.279      1 Template:Edit_it
-  4.99%    1.734      1 Template:RandomNews
-  4.21%    1.460      3 Template:Code2
+100.00%   34.668      1 -total
+ 44.13%   15.298      1 Template:Footer
+ 29.27%   10.147      3 Template:CodeSelect
+ 19.45%    6.744      1 Template:FooterLight
+ 12.78%    4.431      1 Template:Header
+ 12.43%    4.310      1 Template:Footer_this_is_a_wiki
+ 11.00%    3.813      1 Template:Share
+  9.40%    3.259      1 Template:Edit_it
+  5.23%    1.814      1 Template:RandomNews
+  3.84%    1.332      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=28591" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=28591">https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=28591</a>"</div>
@@ -392,5 +383,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/SSL_C
 </div>
 
 </body>
-<!-- Cached/compressed 20180924054635 -->
+<!-- Cached/compressed 20181005054811 -->
 </html>

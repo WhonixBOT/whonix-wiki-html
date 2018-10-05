@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Qubes/Update - Whonix
  url: ../Qubes/Update
- date: Thu Oct  4 08:05:32 2018
+ date: Fri Oct  5 08:06:06 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -149,22 +149,16 @@ Qubes App Menu(blue/grey "Q") -&gt; Template: whonix-<u>ws</u> -&gt; Konsole
 </p><p>The following steps should be applied in both TemplateVM terminals.
 </p><p><b>1. Update the Package Lists</b>
 </p><p>At least once a day users should update the system package lists with the latest information on new and updated packages that are available for download. To update Whonix-Gateway and Whonix-Workstation packages lists, run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>The output should look similar to this.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>Hit http://security.debian.org stretch/updates Release.gpg                                                                                                    
 Hit http://security.debian.org stretch/updates Release                                                                                                        
@@ -190,7 +184,7 @@ Ign http://deb.torproject.org stretch/main Translation-en
 Reading package lists... Done</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">Hit http://security.debian.org stretch/updates Release.gpg                                                                                                    
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">Hit http://security.debian.org stretch/updates Release.gpg                                                                                                    
 Hit http://security.debian.org stretch/updates Release                                                                                                        
 Hit http://deb.torproject.org stretch Release.gpg                           
 Hit http://ftp.us.debian.org stretch Release.gpg
@@ -215,10 +209,7 @@ Reading package lists... Done</textarea>
 </div>
 </div>
 <p>If you see something like this.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>W: Failed to fetch http://ftp.us.debian.org/debian/dist/stretch/contrib/binary-amd64/Packages 404 Not Found
 
@@ -242,7 +233,7 @@ W: Failed to fetch http://deb.torproject.org/torproject.org/dists/stretch/Releas
 W: Some index files failed to download. They have been ignored, or old ones used instead.</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">W: Failed to fetch http://ftp.us.debian.org/debian/dist/stretch/contrib/binary-amd64/Packages 404 Not Found
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">W: Failed to fetch http://ftp.us.debian.org/debian/dist/stretch/contrib/binary-amd64/Packages 404 Not Found
 
 W: Failed to fetch http://ftp.us.debian.org/debian/dist/stretch/non-free/binary-amd64/Packages 404 Not Found
 
@@ -265,70 +256,55 @@ W: Some index files failed to download. They have been ignored, or old ones used
 </div>
 </div>
 <p>Or this.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>500  Unable to connect</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">500  Unable to connect</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">500  Unable to connect</textarea>
 </div>
 </div>
 <p>Then something went wrong. It could be a temporary Tor exit relay or server failure that should resolve itself. Check if the network connection is functional by <a class="mw-redirect" data-href="/wiki/Arm" href="../Arm.html" title="Arm">changing the Tor circuit</a> and trying again. Running <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> might also help to diagnose the problem.
 </p><p>Sometimes a message like this will appear.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>Could not resolve 'security.debian.org'</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">Could not resolve 'security.debian.org'</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">Could not resolve 'security.debian.org'</textarea>
 </div>
 </div>
 <p>It that case, it helps to run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nslookup security.debian.org</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">nslookup security.debian.org</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup security.debian.org</textarea>
 </div>
 </div>
 <p>And then try again.
 </p><p><b>2. Upgrade</b>
 </p><p>To install the newest versions of the current packages installed on the system, run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
 <p>Please note that if the Whonix APT Repository was disabled (see <a data-href="/wiki/Whonix-APT-Repository#Disable_Whonix_APT_Repository" href="../Whonix-APT-Repository.html" title="Whonix-APT-Repository">Disable Whonix APT Repository</a>), then manual checks are required for new Whonix releases and <a data-href="/wiki/Dev/Build_Documentation" href="../Dev/Build_Documentation.html" title="Dev/Build Documentation">manual installation from source code</a>.
 </p><p><b>3. Never Install Unsigned Packages!</b>
 </p><p>If a message like this appears.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>WARNING: The following packages cannot be authenticated!
   thunderbird
 Install these packages without verification [y/N]?</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">WARNING: The following packages cannot be authenticated!
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WARNING: The following packages cannot be authenticated!
   thunderbird
 Install these packages without verification [y/N]?</textarea>
 </div>
@@ -338,15 +314,12 @@ Install these packages without verification [y/N]?</textarea>
 <span id="signature_verification_warnings"></span>
 </p><p><b>4. Signature Verification Warnings</b>
 </p><p>There should be no signature verification warnings at the moment. If such a warning appears, it will look like this.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681</textarea>
 </div>
 </div>
 <p>Caution is required in this case, even though apt-get will automatically ignore repositories with expired keys or signatures, and the user will not receive upgrades from that repository. Unless the issue is already known or documented, it should be reported so it can be further investigated.
@@ -357,10 +330,7 @@ Install these packages without verification [y/N]?</textarea>
 </p>
 <div class="mw-collapsible-content">
 <p>For instance, the <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/12994" href="https://trac.torproject.org/projects/tor/ticket/12994" rel="noreferrer noopener" target="_blank">Tor Project's apt repository key had expired</a> and the following warning appeared.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681
 
@@ -369,7 +339,7 @@ W: Failed to fetch http://deb.torproject.org/torproject.org/dists/stable/Release
 W: Some index files failed to download. They have been ignored, or old ones used instead.</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">W: A error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://deb.torproject.org stable Release: The following signatures were invalid: KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681 KEYEXPIRED 1409325681
 
 W: Failed to fetch http://deb.torproject.org/torproject.org/dists/stable/Release  
 
@@ -384,10 +354,7 @@ W: Some index files failed to download. They have been ignored, or old ones used
 </div>
 <p><b>5. Changed Configuration Files</b>
 </p><p>If a message like this appears.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>Setting up ifupdown ...
 Configuration file `/etc/network/interfaces'
@@ -402,7 +369,7 @@ Configuration file `/etc/network/interfaces'
 *** interfaces (Y/I/N/O/D/Z) [default=N] ? N</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">Setting up ifupdown ...
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">Setting up ifupdown ...
 Configuration file `/etc/network/interfaces'
  ==&gt; Modified (by you or by a script) since installation.
  ==&gt; Package distributor has shipped an updated version.
@@ -424,15 +391,12 @@ Configuration file `/etc/network/interfaces'
 <span id="Restart_Services_after_Upgrading"></span>
 <b>6. Restart Services After Upgrading</b>
 </p><p>To restart services after upgrading, either simply reboot.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo reboot</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo reboot</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo reboot</textarea>
 </div>
 </div>
 <p>Or to omit rebooting, use the <i><span style="background-color:#FBFBFB">needrestart</span></i> method (harder). For users interested in the latter method, please click on Expand on the right side.
@@ -440,53 +404,41 @@ Configuration file `/etc/network/interfaces'
 <div class="toccolours mw-collapsible mw-collapsed">
 <div class="mw-collapsible-content">
 <p>Do this once. Install <i><span style="background-color:#FBFBFB">needrestart</span></i>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update
 sudo apt-get install needrestart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update
 sudo apt-get install needrestart</textarea>
 </div>
 </div>
 <p>Run <i><span style="background-color:#FBFBFB">needrestart</span></i>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo needrestart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo needrestart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo needrestart</textarea>
 </div>
 </div>
 <p>The program will provide some advice. Run it again after applying the advice.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo needrestart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo needrestart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo needrestart</textarea>
 </div>
 </div>
 <p>If nothing else has to be restarted, it should show.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>No services need to be restarted.</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">No services need to be restarted.</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">No services need to be restarted.</textarea>
 </div>
 </div>
 <p>This feature might become more usable and automated in the future. (<a class="external text" data-href="https://phabricator.whonix.org/T324" href="https://phabricator.whonix.org/T324" rel="noreferrer noopener" target="_blank">T324</a>)
@@ -510,7 +462,7 @@ Qubes VM Manager -&gt; right click on TemplateVM -&gt; Shutdown VM
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/Update" href="../Qubes/Update" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Update" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Update" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -522,11 +474,11 @@ Qubes VM Manager -&gt; right click on TemplateVM -&gt; Shutdown VM
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181001204404
+Cached time: 20181005024732
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.104 seconds
-Real time usage: 0.124 seconds
+CPU time usage: 0.100 seconds
+Real time usage: 0.114 seconds
 Preprocessor visited node count: 353/1000000
 Preprocessor generated node count: 1196/1000000
 Post‐expand include size: 13042/2097152 bytes
@@ -534,20 +486,20 @@ Template argument size: 4843/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1582/5000000 bytes
+Unstrip post‐expand size: 1811/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  103.928      1 -total
- 61.79%   64.219      1 Template:Operating_System_Updates
- 47.55%   49.415     16 Template:CodeSelect
- 21.20%   22.037      1 Template:Footer
-  9.22%    9.578      1 Template:FooterLight
-  6.20%    6.445      1 Template:Footer_this_is_a_wiki
-  5.85%    6.079      1 Template:Reflist
-  5.59%    5.805      1 Template:Header
-  5.07%    5.274      1 Template:Share
-  4.74%    4.922      1 Template:Edit_it
+100.00%   94.547      1 -total
+ 64.51%   60.995      1 Template:Operating_System_Updates
+ 50.67%   47.911     16 Template:CodeSelect
+ 18.05%   17.070      1 Template:Footer
+  7.77%    7.347      1 Template:FooterLight
+  6.38%    6.036      1 Template:Reflist
+  5.33%    5.043      1 Template:Header
+  5.02%    4.751      1 Template:Footer_this_is_a_wiki
+  4.59%    4.340      1 Template:Share
+  3.77%    3.564      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Update&amp;oldid=37177" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Update&amp;oldid=37177">https://www.whonix.org/w/index.php?title=Qubes/Update&amp;oldid=37177</a>"</div>
@@ -576,5 +528,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Upd
 </div>
 
 </body>
-<!-- Cached/compressed 20181001204404 -->
+<!-- Cached/compressed 20181005024732 -->
 </html>

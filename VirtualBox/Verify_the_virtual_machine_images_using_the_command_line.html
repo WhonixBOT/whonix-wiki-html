@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox/Verify the virtual machine images using the command line - Whonix
  url: ../VirtualBox/Verify_the_virtual_machine_images_using_the_command_line
- date: Thu Oct  4 08:16:06 2018
+ date: Fri Oct  5 08:16:54 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -126,33 +126,24 @@ Whonix requires payments to stay alive.
 </p><p>Now, <b>download the cryptographic (OpenPGP) signature</b> corresponding to the virtual machine images you want to verify and save it in the same folder as the virtual machine images:
 </p><p>[[<a data-href="/wiki/VirtualBox#Whonix_signature" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a>|Download Whonix Signature]]
 </p><p>Then, <b>start the cryptographic verification</b>, it can take several minutes.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd [the directory in which you downloaded the .ova and the .asc]</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd [the directory in which you downloaded the .ova and the .asc]</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd [the directory in which you downloaded the .ova and the .asc]</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --verify-options show-notations --verify Whonix-Gateway-*.ova.asc Whonix-Gateway-*.ova</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --verify-options show-notations --verify Whonix-Gateway-*.ova.asc Whonix-Gateway-*.ova</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --verify-options show-notations --verify Whonix-Gateway-*.ova.asc Whonix-Gateway-*.ova</textarea>
 </div>
 </div>
 <p><b>If the Virtual Machine image is correct</b> the output will tell you that the signature is good:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg: Signature made Mon 19 Jan 2015 11:45:41 PM CET using RSA key ID 77BB3C48
 gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [unknown]
@@ -164,7 +155,7 @@ Primary key fingerprint: 916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA
      Subkey fingerprint: 6E97 9B28 A6F3 7C43 BE30  AFA1 CB8D 50BB 77BB 3C48</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg: Signature made Mon 19 Jan 2015 11:45:41 PM CET using RSA key ID 77BB3C48
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg: Signature made Mon 19 Jan 2015 11:45:41 PM CET using RSA key ID 77BB3C48
 gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [unknown]
 gpg: Signature notation: issuer-fpr@notations.openpgp.fifthhorseman.net=6E979B28A6F37C43BE30AFA1CB8D50BB77BB3C48
 gpg: Signature notation: file@name=Whonix-Gateway-9.6.ova
@@ -188,15 +179,12 @@ gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAYAAADmOUiuAAAHT0lEQVRYw82XCVBTVxSGQwyIuMCAwUgQkM2wJAGiAYxSRUFwG0brnjJQqmIEgYJWx22qWJSWCmLB0aqtFpC27uIuYEUtAoJaxLogSAVcEBAVMYXTc5+89BFZFKj2zvyTmfdu3vvy33v+c8NiddOYp6sbf0ksboiTSFL8/f2NLCwsOKz/y7Bjs73KR4+G5xMnwsOxY2G1j8/OwMBAga6uLvuDwyGBVpKFRSGBo5UulT4PDwlZ5OXlpfd6Spff0Xl59OwZVD1uHDybMEGlWm9v+NrT8/yiRYuG8/l8Thff0fkv67BY+pkiURUTjtZlFxfl4sDAtdOnTzfU0ND4MIAB/frF1bUCR2uLm1tRaGiol0Ag0OoKYKeGIYslKHJ1VTL3Hi0CVzd+PNwcPhyW+vom+vn5mWlpab3fglnH46W1BfYU92AN7ssnHh6QLJVWfB4WNlMqleq8NzhbRqyoNGUKvExIgFofH6j29IQqjJtHY8ZAsasrrJwyZS/Gjm3fvn3Z7yNWOMxYoV1rSEoCMupTUuAxgj10d4cHo0ZBhZsbHBaL68JDQxUeHh79uiN22h1jtbSoWGmxpHI5NL54AQ8ePIC/8fPxzJlQ+dFHUD5yJPw1YgQUOzvDV56eZ4ODg114PB7nP8vBXoxYYe612zt2ALY2wDlgZmYG+fHxcB/hymQyKMUlLkHA0zY2ysUKxYqpU6e+a+y8PeCnJFYQjKjWy4vaa7UKBUSuWUPB0ZLPmQOVAQFQ6uICd6VSuDNsGNySSGCjTHYNY8fTyspKq9tjhsTKdWdnJbNCH2MhvCoogCVLlrQAHI8/oD4/H4oR7vbQoXDTyQluODjAOSsr+MLfP97X19dEU1Oze/fi2gED0mjX6AqtWbmSKox4XFIm4MKFC6nr5RER8KejI9wQi+G6SAR/2NvDVrG4LCws7GOJRKLdrbFSinuKco2uUIRUlpVRIJmZmS0At27dSl1vKC2FIlzaQqEQrtnZwRUbG7hgbg7Lp01LnT9/vqB3797sLhcJiZVdZmaFtGsPMf9Ihdaia01NTZSePn0KPXr0UAFevXpVda98/Xq4amsLBQh3ecgQyMNl3m1pWR0eFvaZu7t7vy7vwTEYKxWYZ8xcq8AqbqytBeZwxKUkcHp6etDY2Ki6rqyuhmu4Fy9bW0OupSVcQgezTE3hy3HjzgQFBQ3lcrmcTjtIYuWkQFBFu0bnWl1qqsohWphxFOAEhFe/V7l9O+RgDGUj3EWMofMmJpBqZNQQERS01MfHp3+nY8avT584AkZcu49gJNfKZ8yAplev3oDYs2cPBRgVFfXGvcaGBijA51xA584PGgTn+HzIHDgQ1ru65oeEhLibm5tz3nmJSazkicVK2rV7eDIpwVx7fvYstDZKsSAIYHp6eqv3Hx05AlnGxvBbM1z6gAGwV1+/cUlAQIxcLjfGPcx+pyVebWCQRrtGd4PyBQsoR1ob5LqBgQFUVla2eT9/8mTI4PHgjKEhnOZy4STOj7W1vYux4+Pg4KD91g7aaGh4knigXaO6AeplURG0N7Aq2/wBZNTk5FBwp/r3hxMIdxy1H4tq2YwZu+fOnWvdq1cvdocOklj5ns8vpF2ju0Hl6tVv7C11ZWRkdDjnCrZAAnZcXx+OoY6iEk1MqvDM6Ofm5tanQwfdNTUVt7B3MnvoLXRSiSeV7hjPS0rgBO7BowiZhjqCOoCQq7y9T2AHcsJtwm7TQRIrhwcPripGMGYPfZSY2KEzycnJgCcViIyMBKVS2e7colWrVHCHUYdQ2w0N6yOCgyMmTZqk36aDn+joxBEw4hrpoUXYQ29iByFnvfZeqN7qYmJi2p3/qqYGTmBwH8K9eBB1ALUPISNlshyMHTdTU1NOq7GSZW2tpF0jcKSHPtm/v8Nli46ObgFInOxoFGO/puH2E0DUjyR25s3bMGvWLCM2m81uscTL9fTSaNfok8dN/H/RxGhbbY3c3FzA56kAY2NjO/xOI4b9SVwtArYX9SvGzi/4GS0S3cHYmSwUCrVVS0xiJQ+bOe0affK4gblVf+cOvLx3j1K9uvA0Q2vftm3gj/O3rFsHL8i1+/f/VXn5a1VUqPQMg/0UZuxeBKPgUD+jdmPBLJ09e2dAQICltrY2m/oTlMDlFtKuUScPgUB18lDvoerdgASuKtcY0ZGGYhbBQVKtJPeal5NyDUVcI2CpqD2oFNRGc/NHGDtymUymwxrN4SgKEIp2LZ/AMU4evw8eTPXQrOYeetbISNUNCNjJ5sA91ixmfFBwjEJQwam5RsHh81JQyahdOGfFxImHFQqFiJXE41W06hqCvU/XklFJqJ8QcDdqk7FxXXh4+DzWD1xuGXEtrzOuMeE6cq01OIZrSSgabhcB5PPrIyIioliDWKyhG+zskhIkkgzUxQQnp4vfETk6Zm92cMjeLBZnxxOJRNnxQmH2JiJ7++w4e/scdcUS2dnRytuopm9bKj/G1lalbxiKFgpzlsnl29HB2f8AQvkHoInKWyIAAAAASUVORK5CYII=" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Note: OpenPGP signatures sign files, but <i>not</i> file names. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></div></td></tr></tbody></table>
 <p>To help you check, that the file name has not been tampered with, beginning from Whonix version 9.6 and above, by convention, the <i><span style="background-color:#FBFBFB">file@name</span></i> OpenPGP notation includes the file name. See example below.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg: Signature notation: file@name=Whonix-Gateway-9.6.ova</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg: Signature notation: file@name=Whonix-Gateway-9.6.ova</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg: Signature notation: file@name=Whonix-Gateway-9.6.ova</textarea>
 </div>
 </div>
 <p><b>If the Virtual Machine image is not correct</b> the output will tell you that the signature is bad:
@@ -206,26 +194,20 @@ gpg:                using RSA key 77BB3C48
 gpg: BAD signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;"
 </pre>
 <p><b>Repeat these steps for Whonix-Workstation as well.</b>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd [the directory in which you downloaded the .ova and the .asc]</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd [the directory in which you downloaded the .ova and the .asc]</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd [the directory in which you downloaded the .ova and the .asc]</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --verify-options show-notations --verify Whonix-Workstation-*.ova.asc Whonix-Workstation-*.ova</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --verify-options show-notations --verify Whonix-Workstation-*.ova.asc Whonix-Workstation-*.ova</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --verify-options show-notations --verify Whonix-Workstation-*.ova.asc Whonix-Workstation-*.ova</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:GnuPG-Troubleshooting&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:GnuPG-Troubleshooting&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -257,7 +239,7 @@ under certain conditions; see the wiki source code for details.
 </blockquote>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="../Payment" href="../Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../VirtualBox/Verify_the_virtual_machine_images_using_the_command_line" href="../VirtualBox/Verify_the_virtual_machine_images_using_the_command_line" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Verify_the_virtual_machine_images_using_the_command_line" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Verify_the_virtual_machine_images_using_the_command_line" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -269,35 +251,35 @@ under certain conditions; see the wiki source code for details.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002102431
+Cached time: 20181005043506
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.104 seconds
-Real time usage: 0.173 seconds
-Preprocessor visited node count: 220/1000000
-Preprocessor generated node count: 946/1000000
+Real time usage: 0.228 seconds
+Preprocessor visited node count: 217/1000000
+Preprocessor generated node count: 926/1000000
 Post‐expand include size: 12938/2097152 bytes
 Template argument size: 2041/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2392/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
+Unstrip post‐expand size: 2363/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.93 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  155.105      1 -total
-100.00%  155.105      1 Template:Verify_the_virtual_machine_images_using_the_command_line
- 53.82%   83.471      2 Template:Mbox
- 49.83%   77.287      1 Template:Gpg_signature_timestamp
- 15.02%   23.294      1 Template:Footer
- 13.03%   20.216      6 Template:CodeSelect
-  6.82%   10.581      1 Template:GnuPG_file_names
-  6.43%    9.975      1 Template:FooterLight
-  4.45%    6.908      1 Template:Footer_this_is_a_wiki
-  3.87%    5.997      1 Template:Header
+100.00%  206.078      1 -total
+100.00%  206.078      1 Template:Verify_the_virtual_machine_images_using_the_command_line
+ 38.18%   78.682      1 Template:Header
+ 31.14%   64.181      2 Template:Mbox
+ 28.90%   59.556      1 Template:Gpg_signature_timestamp
+ 10.47%   21.574      6 Template:CodeSelect
+  9.57%   19.729      1 Template:Footer
+  4.07%    8.389      1 Template:FooterLight
+  4.02%    8.278      1 Template:GnuPG_file_names
+  3.50%    7.206      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox/Verify_the_virtual_machine_images_using_the_command_line&amp;oldid=31520" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/Verify_the_virtual_machine_images_using_the_command_line&amp;oldid=31520">https://www.whonix.org/w/index.php?title=VirtualBox/Verify_the_virtual_machine_images_using_the_command_line&amp;oldid=31520</a>"</div>
@@ -326,5 +308,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBo
 </div>
 
 </body>
-<!-- Cached/compressed 20181002102431 -->
+<!-- Cached/compressed 20181005043506 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Replicating whonix.org - Whonix
  url: ../Dev/Replicating_whonix.org
- date: Thu Oct  4 07:47:46 2018
+ date: Fri Oct  5 07:48:11 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -139,85 +139,64 @@ Whonix requires payments to stay alive.
 </p><p>(Due to no instructions available on how to get mediawiki's <span style="border:1px dotted #005cb9">maintenance/install.php</span> to work, we must do a normal install of mediawiki first. Then we upgrade it to replicate whonix.org.)
 </p><p>Open a terminal. As normal, not root user!
 </p><p>Get into your home folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~</textarea>
 </div>
 </div>
 <p>Install web software:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install git apache2 libapache2-mod-removeip php5-mysql php5 libapache2-mod-php5 php-apc mysql-client mysql-server firefox-esr php5-dev liblua5.1-dev lua5.1 curl</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install git apache2 libapache2-mod-removeip php5-mysql php5 libapache2-mod-php5 php-apc mysql-client mysql-server firefox-esr php5-dev liblua5.1-dev lua5.1 curl</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install git apache2 libapache2-mod-removeip php5-mysql php5 libapache2-mod-php5 php-apc mysql-client mysql-server firefox-esr php5-dev liblua5.1-dev lua5.1 curl</textarea>
 </div>
 </div>
 <p>You will be asked for a mysql root password. Remember it.
 </p><p>Get our wiki images and content database backup:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone --depth=1 https://github.com/WhonixBOT/WhonixWikiBackups.git</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --depth=1 https://github.com/WhonixBOT/WhonixWikiBackups.git</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --depth=1 https://github.com/WhonixBOT/WhonixWikiBackups.git</textarea>
 </div>
 </div>
 <p>Get and install the mediawiki web app:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz &gt; mediawiki-1.26.2.tar.gz</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz &gt; mediawiki-1.26.2.tar.gz</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz &gt; mediawiki-1.26.2.tar.gz</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>tar -xvzf mediawiki-*.tar.gz</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">tar -xvzf mediawiki-*.tar.gz</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">tar -xvzf mediawiki-*.tar.gz</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>rm mediawiki-*.tar.gz</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">rm mediawiki-*.tar.gz</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">rm mediawiki-*.tar.gz</textarea>
 </div>
 </div>
-<div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv mediawiki-* /var/www/wiki</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv mediawiki-* /var/www/wiki</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv mediawiki-* /var/www/wiki</textarea>
 </div>
 </div>
 <p>Start Firefox-ESR.
@@ -231,54 +210,42 @@ Otherwise use the defaults.
 Name of wiki: Whonix
 </pre>
 <p>Download LocalSettings.php, save as in your home folder as <span style="border:1px dotted #005cb9">~/LocalSettings.php</span>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv ~/LocalSettings.php /var/www/wiki/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv ~/LocalSettings.php /var/www/wiki/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/LocalSettings.php /var/www/wiki/</textarea>
 </div>
 </div>
 <p>Go to <a class="external free" data-href="http://127.0.0.1/wiki" href="http://127.0.0.1/wiki" rel="noreferrer noopener" target="_blank">http://127.0.0.1/wiki</a>, see if you see a fresh wiki, log in, see if that works as well.
 </p><p>Move the dummy wiki out of the way:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Maybe rm when this instructions are finished.
 sudo mv /var/www /var/www_dummy</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Maybe rm when this instructions are finished.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Maybe rm when this instructions are finished.
 sudo mv /var/www /var/www_dummy</textarea>
 </div>
 </div>
 <p>Replicate Whonix's <span style="border:1px dotted #005cb9">/var/www</span> folder from git:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo git clone --depth=1 https://github.com/Whonix/www.git /var/www</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo git clone --depth=1 https://github.com/Whonix/www.git /var/www</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git clone --depth=1 https://github.com/Whonix/www.git /var/www</textarea>
 </div>
 </div>
 <p>Create a file <span style="border:1px dotted #005cb9">/etc/apache2/wikiSecrets.php</span>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/apache2/wikiSecrets.php</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/apache2/wikiSecrets.php</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/apache2/wikiSecrets.php</textarea>
 </div>
 </div>
 <p>With the following content. Make sure you replace xxxxxx with your actual you remembered password. (You need to replace xxxxxx with your actual password 3 times, for wgDBpassword, wgSecretKey and wgUpgradeKey.)
@@ -319,15 +286,12 @@ foreach ( $arr as $key =&gt; $value ) {
 }
 </pre>
 <p>Edit <span style="border:1px dotted #005cb9">/etc/apache2/sites-enabled/000-default</span>:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/apache2/sites-enabled/000-default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/apache2/sites-enabled/000-default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/apache2/sites-enabled/000-default</textarea>
 </div>
 </div>
 <p>Insert the following at the end of the file, but before &lt;/VirtualHost&gt;:
@@ -345,34 +309,25 @@ RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
 RewriteRule ^/?w/images/thumb/archive/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ %{DOCUMENT_ROOT}/w/thumb.php?f=$1&amp;width=$2&amp;archived=1 [L,QSA,B]
 </pre>
 <p>Run:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir /var/www/w/cache</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mkdir /var/www/w/cache</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir /var/www/w/cache</textarea>
 </div>
 </div>
 <p>Your webserver must have read/write access to your /var/www folder. Run:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo chown --recursive www-data:www-data /var/www</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo chown --recursive www-data:www-data /var/www</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown --recursive www-data:www-data /var/www</textarea>
 </div>
 </div>
 <p>Run:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u www-data php /var/www/wiki/maintenance/update.php --quick
 sudo -u www-data php /var/www/wiki/maintenance/importImages.php ~/WhonixWikiBackups/mediafiles/
@@ -380,36 +335,30 @@ sudo -u www-data php /var/www/wiki/maintenance/importDump.php ~/WhonixWikiBackup
 sudo -u www-data php /var/www/wiki/maintenance/rebuildrecentchanges.php</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u www-data php /var/www/wiki/maintenance/update.php --quick
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u www-data php /var/www/wiki/maintenance/update.php --quick
 sudo -u www-data php /var/www/wiki/maintenance/importImages.php ~/WhonixWikiBackups/mediafiles/
 sudo -u www-data php /var/www/wiki/maintenance/importDump.php ~/WhonixWikiBackups/dumpContentCurrent.xml
 sudo -u www-data php /var/www/wiki/maintenance/rebuildrecentchanges.php</textarea>
 </div>
 </div>
 <p>Run:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo a2enmod rewrite
 sudo a2enmod removeip</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo a2enmod rewrite
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo a2enmod rewrite
 sudo a2enmod removeip</textarea>
 </div>
 </div>
 <p>Run:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service apache2 restart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service apache2 restart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service apache2 restart</textarea>
 </div>
 </div>
 <p>You should now be able to visit <a class="external free" data-href="http://127.0.0.1" href="http://127.0.0.1" rel="noreferrer noopener" target="_blank">http://127.0.0.1</a> and/or <a class="external free" data-href="http://127.0.0.1/wiki/Main_Page" href="http://127.0.0.1/wiki/Main_Page" rel="noreferrer noopener" target="_blank">http://127.0.0.1/wiki/Main_Page</a>.
@@ -427,23 +376,17 @@ sudo a2enmod removeip</textarea>
 <p>In that case, something is wrong with shorturl / rewrite.
 </p>
 <h2><span class="mw-headline" id="Apache_Error_Log">Apache Error Log</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=4.html" title="Edit section: Apache Error Log">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>tail -f /var/log/apache2/error.log</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">tail -f /var/log/apache2/error.log</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">tail -f /var/log/apache2/error.log</textarea>
 </div>
 </div>
 <h2><span class="mw-headline" id="Mediawiki_Debug_Log">Mediawiki Debug Log</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=5.html" title="Edit section: Mediawiki Debug Log">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Run.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Replace "user" with your actual operating system user name.
 touch /home/user/wgdebuglog
@@ -451,71 +394,59 @@ chmod o+w /home/user/wgdebuglog
 chmod g+w /home/user/wgdebuglog</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
 touch /home/user/wgdebuglog
 chmod o+w /home/user/wgdebuglog
 chmod g+w /home/user/wgdebuglog</textarea>
 </div>
 </div>
 <p>Edit /var/www/wiki/LocalSettings.php.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /var/www/wiki/LocalSettings.php</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /var/www/wiki/LocalSettings.php</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /var/www/wiki/LocalSettings.php</textarea>
 </div>
 </div>
 <p>And add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Replace "user" with your actual operating system user name.
 $wgDebugLogFile = "/home/user/wgdebuglog";</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
 $wgDebugLogFile = "/home/user/wgdebuglog";</textarea>
 </div>
 </div>
 <p>Watch the log while trying to access the wiki in Firefox-ESR.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>## Replace "user" with your actual operating system user name.
 tail -f /home/user/wgdebuglog</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">## Replace "user" with your actual operating system user name.
 tail -f /home/user/wgdebuglog</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Alternative_Backup">Alternative Backup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;action=edit&amp;section=6.html" title="Edit section: Alternative Backup">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Maybe it would be simpler if we shared a mysql backup without passwords.
 </p><p>mediawiki irc channel:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>mysqldump --ignore-table=wiki.user</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">mysqldump --ignore-table=wiki.user</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mysqldump --ignore-table=wiki.user</textarea>
 </div>
 </div>
 <p>although it would result in a broken database if you restore it
 </p>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Replicating_whonix.org" href="../Dev/Replicating_whonix.org" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Replicating_whonix.org" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Replicating_whonix.org" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -527,11 +458,11 @@ tail -f /home/user/wgdebuglog</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20180924054630
+Cached time: 20181005054807
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.088 seconds
-Real time usage: 0.095 seconds
+CPU time usage: 0.092 seconds
+Real time usage: 0.114 seconds
 Preprocessor visited node count: 348/1000000
 Preprocessor generated node count: 907/1000000
 Post‐expand include size: 5351/2097152 bytes
@@ -539,20 +470,20 @@ Template argument size: 1804/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2561/5000000 bytes
+Unstrip post‐expand size: 2466/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   77.106      1 -total
- 68.10%   52.508     23 Template:CodeSelect
- 18.96%   14.623      1 Template:Footer
-  7.87%    6.070      1 Template:FooterLight
-  5.66%    4.366      1 Template:Footer_this_is_a_wiki
-  4.57%    3.525      1 Template:Header
-  4.44%    3.427      1 Template:Share
-  4.40%    3.391      1 Template:Edit_it
-  2.30%    1.774      1 Template:RandomNews
-  1.76%    1.361      5 Template:Code
+100.00%   94.710      1 -total
+ 59.74%   56.582     23 Template:CodeSelect
+ 16.19%   15.332      1 Template:Footer
+ 15.92%   15.082      1 Template:Header
+  7.05%    6.676      1 Template:FooterLight
+  4.55%    4.307      1 Template:Footer_this_is_a_wiki
+  3.89%    3.687      1 Template:Share
+  3.40%    3.225      1 Template:Edit_it
+  2.12%    2.003      5 Template:Code
+  2.09%    1.981      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;oldid=31646" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;oldid=31646">https://www.whonix.org/w/index.php?title=Dev/Replicating_whonix.org&amp;oldid=31646</a>"</div>
@@ -581,5 +512,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Repli
 </div>
 
 </body>
-<!-- Cached/compressed 20180924054630 -->
+<!-- Cached/compressed 20181005054807 -->
 </html>

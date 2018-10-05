@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tor Entry Guards - Whonix
  url: ./Tor_Entry_Guards
- date: Thu Oct  4 08:11:45 2018
+ date: Fri Oct  5 08:12:27 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -300,88 +300,67 @@ Create a Whonix-Gateway (<code>sys-whonix</code>) clone and name it Whonix-Gatew
 <p><br/>
 Before arriving at the remote location, the Whonix-Gateway Tor state folder is moved to the <code>$HOME</code> directory and the Tor state file is regenerated. Perform all the following steps in Whonix-Gateway konsole.
 </p><p><b>1.</b> Stop Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
 </div>
 </div>
 <p><b>2.</b> Remove the temporary Tor state folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm -r /var/lib/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo rm -r /var/lib/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm -r /var/lib/tor</textarea>
 </div>
 </div>
 <p><b>3.</b> Restore the Tor state folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv ~/tor /var/lib</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv ~/tor /var/lib</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/tor /var/lib</textarea>
 </div>
 </div>
 <p><b>4.</b> Restart Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl restart tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
 </div>
 </div>
 <p>Before returning home, the Tor state folder is restored to its original settings.
 </p><p><b>1.</b> Stop Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
 </div>
 </div>
 <p><b>2.</b> Move the Tor state folder to the <code>$HOME</code> directory.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv /var/lib/tor ~/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv /var/lib/tor ~/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv /var/lib/tor ~/</textarea>
 </div>
 </div>
 <p><b>3.</b> Restart Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl restart tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
 </div>
 </div>
 <h4><span class="mw-headline" id="Alternating_Bridges">Alternating Bridges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=9.html" title="Edit section: Alternating Bridges">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
@@ -396,15 +375,12 @@ Before arriving at the remote location, the Whonix-Gateway Tor state folder is m
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonixsetup</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
 </div>
 </div>
 </div>
@@ -422,65 +398,50 @@ Sometimes <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Wh
 <h5><span class="mw-headline" id="Copy_Tor_State_Files_to_Another_sys-whonix_Instance">Copy Tor State Files to Another sys-whonix Instance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=11.html" title="Edit section: Copy Tor State Files to Another sys-whonix Instance">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>The following instructions copy the Tor state from <code>sys-whonix-old</code> to <code>sys-whonix-new</code>.
 </p><p><b>1.</b> In <code>sys-whonix-new</code>, stop Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
 </div>
 </div>
 <p><b>2.</b> In <code>sys-whonix-new</code>, remove the Tor state file.
 </p>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b>  Care is required when removing files so extra spaces are not added to the file path! For example, if a space is accidentally placed before the asterisk in the command to remove the Tor state file, the <code>/</code> (root directory) and all system data would be lost.</div></td></tr></tbody></table>
 <p><br/>
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo su</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm /var/lib/tor/*</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo rm /var/lib/tor/*</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /var/lib/tor/*</textarea>
 </div>
 </div>
 <p><b>3.</b> In <code>sys-whonix-old</code>, stop Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
 </div>
 </div>
 <p><b>4.</b> In <code>sys-whonix-old</code>, copy the Tor state file across to <code>sys-whonix-new</code>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo qvm-copy /var/lib/tor sys-whonix-new</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo qvm-copy /var/lib/tor sys-whonix-new</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qvm-copy /var/lib/tor sys-whonix-new</textarea>
 </div>
 </div>
 <p>If the following error appears, it can be safely ignored (hit "OK" when prompted).
@@ -488,15 +449,12 @@ Sometimes <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Wh
 <pre>qfile-agent: Fatal error: stat “VM” (error type: No such file or directory)
 </pre>
 <p><b>5.</b> In <code>sys-whonix-new</code>, list the QubesIncoming directory to ensure the Tor state file was copied over successfully.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ls ~/QubesIncoming/sys-whonix-old/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">ls ~/QubesIncoming/sys-whonix-old/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ls ~/QubesIncoming/sys-whonix-old/tor</textarea>
 </div>
 </div>
 <p>The output should include the files below.
@@ -505,51 +463,39 @@ Sometimes <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Wh
   <code>cached-microdesc-consensus cached-microdescs.new state</code>
 </pre>
 <p><b>6.</b> In <code>sys-whonix-new</code>, move the newly copied Tor state file to <i>/var/lib/tor</i>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv ~/QubesIncoming/sys-whonix-old/tor/* /var/lib/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/tor/* /var/lib/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/tor/* /var/lib/tor</textarea>
 </div>
 </div>
 <p><b>7.</b> In <code>sys-whonix-new</code>, change ownership of all files in the Tor state folder to <code>debian-tor</code>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo chown -R debian-tor:debian-tor /var/lib/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo chown -R debian-tor:debian-tor /var/lib/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R debian-tor:debian-tor /var/lib/tor</textarea>
 </div>
 </div>
 <p><b>8.</b> In <code>sys-whonix-new</code>, start Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl start tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl start tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl start tor@default</textarea>
 </div>
 </div>
 <p><b>9.</b> In <code>sys-whonix-new</code>, run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> to verify Tor is functioning properly. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck</textarea>
 </div>
 </div>
 <h5><span id="Copy_Tor_Configuration_Options_(torrc)_to_Another_sys-whonix"></span><span class="mw-headline" id="Copy_Tor_Configuration_Options_.28torrc.29_to_Another_sys-whonix">Copy Tor Configuration Options (torrc) to Another sys-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=12.html" title="Edit section: Copy Tor Configuration Options (torrc) to Another sys-whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
@@ -564,15 +510,12 @@ For migration between Whonix 14 based <code>sys-whonix</code> VMs, use <code>/us
 <p><br/>
 These instructions copy custom Tor configuration options (torrc) from <code>sys-whonix-old</code> to <code>sys-whonix-new</code>.
 </p><p><b>1.</b>  In <code>sys-whonix-old</code>, copy the <i>torrc</i> options across to <code>sys-whonix-new</code>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</textarea>
 </div>
 </div>
 <p>If the following error appears, it can be safely ignored (hit "OK" when prompted).
@@ -580,63 +523,48 @@ These instructions copy custom Tor configuration options (torrc) from <code>sys-
 <pre> qfile-agent: Fatal error: stat “VM” (error type: No such file or directory)
 </pre>
 <p><b>2.</b> In <code>sys-whonix-new</code>, list the <i>QubesIncoming</i> directory to ensure the <i>torrc</i> options were copied over successfully.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cat ~/QubesIncoming/sys-whonix-old/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cat ~/QubesIncoming/sys-whonix-old/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cat ~/QubesIncoming/sys-whonix-old/50_user.conf</textarea>
 </div>
 </div>
 <p><b>3.</b> In <code>sys-whonix-new</code>, move the <i>50_user.conf</i> options from the <i>QubesIncoming</i> directory to the <i>50_user.conf</i> file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 <p><b>4.</b> In <code>sys-whonix-new</code>, change ownership of the Tor configuration file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo chown -R root:root /etc/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo chown -R root:root /etc/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R root:root /etc/tor</textarea>
 </div>
 </div>
 <p><b>5.</b> In <code>sys-whonix-new</code>, restart Tor so the newly copied Tor config options take effect.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl restart tor@default</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
 </div>
 </div>
 <p><b>6.</b> In <code>sys-whonix-new</code>, run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> to verify Tor is functioning properly. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">whonixcheck</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck</textarea>
 </div>
 </div>
 <h3><span class="mw-headline" id="Unsafe_Guard_Rotation_Methods">Unsafe Guard Rotation Methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=13.html" title="Edit section: Unsafe Guard Rotation Methods">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
@@ -654,29 +582,23 @@ The following instructions manually change a user's Tor entry guards. One use ca
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonixsetup</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
 </div>
 </div>
 </div>
 <p>Choose the <i><span style="background-color:#FBFBFB">Disable Tor</span></i> option. Press next.
 </p><p><b>2.</b> Delete Tor's state file.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm /var/lib/tor/state</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo rm /var/lib/tor/state</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /var/lib/tor/state</textarea>
 </div>
 </div>
 <p><b>3.</b> Enable Tor using whonixsetup / whonix-setup-wizard at the new location.
@@ -698,15 +620,12 @@ The following instructions manually change a user's Tor entry guards. One use ca
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonixsetup</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
 </div>
 </div>
 </div>
@@ -723,28 +642,22 @@ The following instructions manually change a user's Tor entry guards. One use ca
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
 <p>Add.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>DataDirectory /var/run/tor</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">DataDirectory /var/run/tor</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">DataDirectory /var/run/tor</textarea>
 </div>
 </div>
 <p>Save.
@@ -827,7 +740,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 </blockquote>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Tor_Entry_Guards" href="./Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -839,11 +752,11 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002101351
+Cached time: 20181005061223
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.304 seconds
-Real time usage: 0.669 seconds
+CPU time usage: 0.292 seconds
+Real time usage: 0.434 seconds
 Preprocessor visited node count: 919/1000000
 Preprocessor generated node count: 2635/1000000
 Post‐expand include size: 34320/2097152 bytes
@@ -851,23 +764,23 @@ Template argument size: 4706/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 10123/5000000 bytes
-Lua time usage: 0.090/7.000 seconds
-Lua virtual size: 15.18 MB/50 MB
+Unstrip post‐expand size: 9942/5000000 bytes
+Lua time usage: 0.100/7.000 seconds
+Lua virtual size: 15.31 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  579.573      1 -total
- 58.92%  341.457     27 Template:CodeSelect
- 27.67%  160.391     13 Template:Mbox
- 15.50%   89.844      1 Template:Persistent_Tor_Entry_Guards_Introduction
-  5.44%   31.535      3 Template:Box
-  4.69%   27.165      3 Template:Disable_Tor
-  4.27%   24.739      1 Template:Whonixsetup
-  2.83%   16.408      1 Template:Footer
-  2.83%   16.373      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  2.29%   13.268      1 Template:Reflist
+100.00%  343.011      1 -total
+ 51.83%  177.785     13 Template:Mbox
+ 27.88%   95.619      1 Template:Persistent_Tor_Entry_Guards_Introduction
+ 23.02%   78.952     27 Template:CodeSelect
+  5.06%   17.362      1 Template:Footer
+  4.76%   16.341      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  3.98%   13.657      1 Template:Header
+  3.93%   13.474      1 Template:Reflist
+  3.17%   10.881      3 Template:Box
+  2.09%    7.178      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=37428" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=37428">https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=37428</a>"</div>
@@ -896,5 +809,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry
 </div>
 
 </body>
-<!-- Cached/compressed 20181002101351 -->
+<!-- Cached/compressed 20181005061223 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: ZeroNet - Whonix
  url: ./ZeroNet
- date: Thu Oct  4 08:19:25 2018
+ date: Fri Oct  5 08:20:14 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -147,39 +147,30 @@ Whonix requires payments to stay alive.
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>On Whonix-Gateway.</b>
 </p><p>Create a new directory. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /usr/local/etc/onion-grater-merger.d/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo mkdir -p /usr/local/etc/onion-grater-merger.d/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /usr/local/etc/onion-grater-merger.d/</textarea>
 </div>
 </div>
 <p>Symlink the onion-grater profile to the onion-grater settings folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo ln -s /usr/share/onion-grater-merger/examples/40_zeronet.yml /usr/local/etc/onion-grater-merger.d/</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo ln -s /usr/share/onion-grater-merger/examples/40_zeronet.yml /usr/local/etc/onion-grater-merger.d/</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ln -s /usr/share/onion-grater-merger/examples/40_zeronet.yml /usr/local/etc/onion-grater-merger.d/</textarea>
 </div>
 </div>
 <p>Restart onion-grater.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service onion-grater restart</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service onion-grater restart</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service onion-grater restart</textarea>
 </div>
 </div>
 </div>
@@ -189,104 +180,80 @@ Whonix requires payments to stay alive.
 </p><p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>:
 If the ZeroNet qube is based on a Qubes TemplateVM, complete this action in the TemplateVM.
 </p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>Install <code>git python-msgpack python-gevent</code>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install git python-msgpack python-gevent</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install git python-msgpack python-gevent</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install git python-msgpack python-gevent</textarea>
 </div>
 </div>
 <p><b>Install ZeroNet:</b>
 </p><p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>:
 The actual install can be done in the ZeroNet qube.
 </p><p>Retrieve ZeroNet's signing key. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --recv-keys "960F FF2D 6C14 5AA6 13E8 491B 5B63 BAE6 CB96 13AE"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --recv-keys "960F FF2D 6C14 5AA6 13E8 491B 5B63 BAE6 CB96 13AE"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --recv-keys "960F FF2D 6C14 5AA6 13E8 491B 5B63 BAE6 CB96 13AE"</textarea>
 </div>
 </div>
 <p>Download ZeroNet.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone https://github.com/HelloZeroNet/ZeroNet.git</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone https://github.com/HelloZeroNet/ZeroNet.git</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone https://github.com/HelloZeroNet/ZeroNet.git</textarea>
 </div>
 </div>
 <p>Change into the ZeroNet folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ZeroNet</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ZeroNet</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ZeroNet</textarea>
 </div>
 </div>
 <p>Check the ZeroNet signature.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git log --show-signature</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git log --show-signature</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git log --show-signature</textarea>
 </div>
 </div>
 <hr/>
 <p><b>Start ZeroNet:</b>
 </p><p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./zeronet.py --tor always --fileserver_ip $(qubesdb-read /qubes-ip)</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./zeronet.py --tor always --fileserver_ip $(qubesdb-read /qubes-ip)</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./zeronet.py --tor always --fileserver_ip $(qubesdb-read /qubes-ip)</textarea>
 </div>
 </div>
 <p><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a>:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>./zeronet.py --tor always --fileserver_ip 10.152.152.11</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">./zeronet.py --tor always --fileserver_ip 10.152.152.11</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">./zeronet.py --tor always --fileserver_ip 10.152.152.11</textarea>
 </div>
 </div>
 <hr/>
@@ -307,15 +274,12 @@ The actual install can be done in the ZeroNet qube.
 </p><p><u>If you are using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>.
 </p><p><code>Start Menu</code> -&gt; <code>Tor Browser</code>
 </p><p><u>If you are using a terminal (Konsole)</u>.<br/>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>torbrowser</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">torbrowser</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">torbrowser</textarea>
 </div>
 </div>
 </div>
@@ -345,7 +309,7 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./ZeroNet" href="./ZeroNet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -357,11 +321,11 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002111315
+Cached time: 20181005025300
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.108 seconds
-Real time usage: 0.153 seconds
+CPU time usage: 0.124 seconds
+Real time usage: 0.178 seconds
 Preprocessor visited node count: 327/1000000
 Preprocessor generated node count: 1152/1000000
 Post‐expand include size: 7708/2097152 bytes
@@ -369,23 +333,23 @@ Template argument size: 1328/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4267/5000000 bytes
+Unstrip post‐expand size: 4038/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  125.953      1 -total
- 45.56%   57.383      1 Template:TBB_localhost
- 44.19%   55.658      1 Template:Mbox
- 20.63%   25.983     12 Template:CodeSelect
- 10.77%   13.562      1 Template:Footer
- 10.65%   13.415      2 Template:Box
-  9.00%   11.330      1 Template:Control_Port_Filter_Python_Profile_Add
-  7.76%    9.772      1 Template:Reflist
-  4.77%    6.005      1 Template:Header
-  4.43%    5.574      1 Template:FooterLight
+100.00%  149.607      1 -total
+ 44.08%   65.952      1 Template:TBB_localhost
+ 42.15%   63.053      1 Template:Mbox
+ 22.29%   33.355     12 Template:CodeSelect
+ 12.17%   18.204      2 Template:Box
+ 10.51%   15.729      1 Template:Control_Port_Filter_Python_Profile_Add
+ 10.36%   15.501      1 Template:Footer
+  7.35%   10.998      1 Template:Reflist
+  5.02%    7.511      1 Template:Tor_Browser_Start
+  4.42%    6.616      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=36865" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=36865">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=36865</a>"</div>
@@ -414,5 +378,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 </div>
 
 </body>
-<!-- Cached/compressed 20181002111315 -->
+<!-- Cached/compressed 20181005025300 -->
 </html>

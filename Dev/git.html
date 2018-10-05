@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/git - Whonix
  url: ../Dev/git
- date: Thu Oct  4 07:50:18 2018
+ date: Fri Oct  5 07:50:44 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -210,21 +210,15 @@ Whonix requires payments to stay alive.
 <p>If you prefer Twitter, use the <a class="external text" data-href="https://twitter.com/WhonixSource" href="https://twitter.com/WhonixSource" rel="noreferrer noopener" target="_blank">Secondary Twitter Account for Source Code Commit Notification</a>.
 </p>
 <h1><span class="mw-headline" id="grep_Whonix_source_code">grep Whonix source code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=19.html" title="Edit section: grep Whonix source code">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>mkdir ~/bin</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">mkdir ~/bin</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mkdir ~/bin</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>#!/bin/bash
 set -x
@@ -244,7 +238,7 @@ grep \
 --exclude-dir=chroot-jessie "$@"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">#!/bin/bash
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">#!/bin/bash
 set -x
 exec \
 grep \
@@ -262,137 +256,104 @@ grep \
 --exclude-dir=chroot-jessie "$@"</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd Whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd Whonix</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>mygrep -r grub-pc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">mygrep -r grub-pc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mygrep -r grub-pc</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Put_folder_under_Git_Version_Control">Put folder under Git Version Control</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=20.html" title="Edit section: Put folder under Git Version Control">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Setup">Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=21.html" title="Edit section: Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>Install <code>git</code>.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install git</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install git</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install git</textarea>
 </div>
 </div>
 <p>Unless you want to use git for pushing changes to remotes which you probably won't in a testing VM you can use the following git config without using any real names or pseudonyms. (These are the git suggested defaults. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>)
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git config --global user.email "you@example.com"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git config --global user.email "you@example.com"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git config --global user.email "you@example.com"</textarea>
 </div>
 </div>
-<p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git config --global user.name "Your Name"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git config --global user.name "Your Name"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git config --global user.name "Your Name"</textarea>
 </div>
 </div>
 <h2><span class="mw-headline" id="Enable_Git_Version_Control_for_Folder">Enable Git Version Control for Folder</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=22.html" title="Edit section: Enable Git Version Control for Folder">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Go to the folder you want to set under git version control.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd ~</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd ~</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~</textarea>
 </div>
 </div>
 <p>Initialize git version control.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git init</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git init</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git init</textarea>
 </div>
 </div>
 <p>Add all files to git version control.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git add -A</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git add -A</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git add -A</textarea>
 </div>
 </div>
 <p>Commit all files to git. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git commit -a -m .</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git commit -a -m .</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git commit -a -m .</textarea>
 </div>
 </div>
 <p>Do changes such as changing KDE settings.
 </p><p>See what changed.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git diff</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git diff</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git diff</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Goodies">Goodies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=23.html" title="Edit section: Goodies">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -436,11 +397,11 @@ Without any useful commit message. <code>.</code> is the commit message here.</s
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20180924054910
+Cached time: 20181005055040
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.076 seconds
-Real time usage: 0.091 seconds
+Real time usage: 0.084 seconds
 Preprocessor visited node count: 315/1000000
 Preprocessor generated node count: 734/1000000
 Post‐expand include size: 3983/2097152 bytes
@@ -452,16 +413,16 @@ Unstrip post‐expand size: 1196/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   64.672      1 -total
- 47.73%   30.866     13 Template:CodeSelect
- 25.08%   16.222      1 Template:Footer
- 14.46%    9.353      1 Template:Header
- 11.03%    7.136      1 Template:FooterLight
-  7.64%    4.942      1 Template:Footer_this_is_a_wiki
-  6.19%    4.004      1 Template:Share
-  5.74%    3.711      1 Template:Edit_it
-  2.45%    1.586      1 Template:RandomNews
-  2.27%    1.471      1 Template:Whonix_onion
+100.00%   56.997      1 -total
+ 52.55%   29.951     13 Template:CodeSelect
+ 26.50%   15.102      1 Template:Footer
+ 11.16%    6.359      1 Template:FooterLight
+  8.11%    4.625      1 Template:Footer_this_is_a_wiki
+  7.31%    4.164      1 Template:Header
+  6.16%    3.512      1 Template:Edit_it
+  6.03%    3.435      1 Template:Share
+  2.77%    1.580      1 Template:RandomNews
+  2.49%    1.421      1 Template:Update
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=36074" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=36074">https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=36074</a>"</div>
@@ -490,5 +451,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/git&a
 </div>
 
 </body>
-<!-- Cached/compressed 20180924054910 -->
+<!-- Cached/compressed 20181005055040 -->
 </html>

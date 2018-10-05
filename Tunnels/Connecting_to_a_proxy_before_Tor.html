@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tunnels/Connecting to a proxy before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_proxy_before_Tor
- date: Thu Oct  4 08:13:09 2018
+ date: Fri Oct  5 08:13:52 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -217,15 +217,12 @@ Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (co
 Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Anon Connection Wizard
 </code>
 </p><p><u>If you are using a terminal Whonix-Gateway</u>, type.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo anon-connection-wizard</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo anon-connection-wizard</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo anon-connection-wizard</textarea>
 </div>
 </div>
 </div>
@@ -259,15 +256,12 @@ If the username and password are unknown, they should be left blank to see if th
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -307,27 +301,21 @@ ReachableORAddresses ADDR[/MASK][:PORT]…
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
 </p><p>Reload Tor.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default reload</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default reload</textarea>
 </div>
 </div>
 <p>Check Tor's daemon status.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default status</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo service tor@default status</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default status</textarea>
 </div>
 </div>
 <p>It should include a a message saying.
@@ -336,15 +324,12 @@ ReachableORAddresses ADDR[/MASK][:PORT]…
 </pre>
 <p>In case of issues, try the following debugging steps.
 </p><p>Check Tor's config.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo -u debian-tor tor --verify-config</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u debian-tor tor --verify-config</textarea>
 </div>
 </div>
 <p>The output should be similar to the following.
@@ -372,7 +357,7 @@ Configuration was valid</pre>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_proxy_before_Tor" href="../Tunnels/Connecting_to_a_proxy_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_proxy_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_proxy_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -384,11 +369,11 @@ Configuration was valid</pre>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002124338
+Cached time: 20181005031649
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.156 seconds
-Real time usage: 0.296 seconds
+CPU time usage: 0.160 seconds
+Real time usage: 0.245 seconds
 Preprocessor visited node count: 420/1000000
 Preprocessor generated node count: 1363/1000000
 Post‐expand include size: 24661/2097152 bytes
@@ -396,23 +381,23 @@ Template argument size: 4375/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3083/5000000 bytes
-Lua time usage: 0.070/7.000 seconds
+Unstrip post‐expand size: 3151/5000000 bytes
+Lua time usage: 0.060/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  245.083      1 -total
- 50.09%  122.752      6 Template:Mbox
- 37.28%   91.369      1 Template:Tunnels_Introduction
- 31.95%   78.310      4 Template:Box
- 27.07%   66.337      5 Template:CodeSelect
- 24.52%   60.084      1 Template:Reload_Tor
-  7.55%   18.508      1 Template:Footer
-  6.00%   14.700      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  4.71%   11.544      1 Template:Tunnel_Automation_Sale
-  4.28%   10.494      1 Template:Anon_Connection_Wizard_Use_Proxy
+100.00%  193.199      1 -total
+ 60.38%  116.647      6 Template:Mbox
+ 47.51%   91.783      1 Template:Tunnels_Introduction
+ 14.52%   28.054      4 Template:Box
+ 10.85%   20.966      1 Template:Footer
+  9.26%   17.887      5 Template:CodeSelect
+  7.89%   15.244      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  6.24%   12.056      1 Template:Reload_Tor
+  5.03%    9.718      1 Template:Tunnel_Automation_Sale
+  4.78%    9.243      1 Template:Start_Anon_Connection_Wizard
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_proxy_before_Tor&amp;oldid=35486" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_proxy_before_Tor&amp;oldid=35486">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_proxy_before_Tor&amp;oldid=35486</a>"</div>
@@ -441,5 +426,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20181002124338 -->
+<!-- Cached/compressed 20181005031649 -->
 </html>

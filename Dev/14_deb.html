@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/14 deb - Whonix
  url: ../Dev/Build_Documentation/14_deb
- date: Thu Oct  4 07:39:13 2018
+ date: Fri Oct  5 07:39:26 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -161,56 +161,44 @@ Whonix requires payments to stay alive.
 </p>
 <h2><span class="mw-headline" id="Get_the_Signing_Key">Get the Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>This chapter is recommended for better security, but is not strictly required.</b> (See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>)
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
 </div>
 </div>
 <p>It isn't safe to only get the signing key from one source for the download you want to verify. For better security, <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">learn more about the Whonix Signing Key</a>.
 </p>
 <h2><span class="mw-headline" id="Get_the_Source_Code">Get the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install git and curl.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update &amp;&amp; sudo apt-get install git curl</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install git curl</textarea>
 </div>
 </div>
 <p>Get source code including git submodules. 
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
 </div>
 </div>
 <p>Note: If using an older version of git (from Debian Jessie, Whonix 13, etc), remove <code>--jobs=4</code>.
 </p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
 </p><p>Shift to the source folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd Whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">cd Whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd Whonix</textarea>
 </div>
 </div>
 <h2><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Get_Source_Code&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -393,7 +381,7 @@ Beginning from git tag 9.6 and above.</span>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/14_deb" href="../Dev/Build_Documentation/14_deb" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_deb" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_deb" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -405,11 +393,11 @@ Beginning from git tag 9.6 and above.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002115828
+Cached time: 20181005053922
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.124 seconds
-Real time usage: 0.235 seconds
+Real time usage: 0.185 seconds
 Preprocessor visited node count: 486/1000000
 Preprocessor generated node count: 1533/1000000
 Post‐expand include size: 12106/2097152 bytes
@@ -417,23 +405,23 @@ Template argument size: 319/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8131/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
+Unstrip post‐expand size: 8104/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  202.202      1 -total
- 74.30%  150.242      1 Template:Build_Documentation_Get_Source_Code
- 33.90%   68.554      4 Template:CodeSelect
- 33.67%   68.072      1 Template:Gpg_signature_timestamp
- 32.82%   66.361      1 Template:Mbox
-  8.26%   16.693      1 Template:Footer
-  6.32%   12.770      1 Template:Header
-  4.95%   10.017      1 Template:Reflist
-  3.58%    7.232      1 Template:FooterLight
-  2.79%    5.640      1 Template:Build_Documentation_Choose_Version
+100.00%  151.366      1 -total
+ 67.55%  102.249      1 Template:Build_Documentation_Get_Source_Code
+ 49.87%   75.493      1 Template:Gpg_signature_timestamp
+ 48.77%   73.815      1 Template:Mbox
+ 12.38%   18.745      1 Template:Footer
+  9.50%   14.379      4 Template:CodeSelect
+  6.79%   10.278      1 Template:Reflist
+  5.70%    8.630      1 Template:FooterLight
+  5.12%    7.752      1 Template:Header
+  3.76%    5.690      1 Template:Build_Documentation_Choose_Version
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050</a>"</div>
@@ -462,5 +450,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20181002115828 -->
+<!-- Cached/compressed 20181005053922 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VPN-Firewall - Whonix
  url: ./VPN-Firewall
- date: Thu Oct  4 08:14:33 2018
+ date: Fri Oct  5 08:15:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -240,15 +240,12 @@ sudo rm /etc/init.d/vpn-firewall
 </p>
 <h6><span class="mw-headline" id="Get_VPN_Certificate">Get VPN Certificate</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=10.html" title="Edit section: Get VPN Certificate">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Look at the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and (right-click) <a class="external text" data-href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" rel="noreferrer noopener" target="_blank">download</a> it. Store the certificate in <i><span style="background-color:#FBFBFB">/etc/openvpn/RiseupCA.pem</span></i>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem | sudo tee /etc/openvpn/RiseupCA.pem</textarea>
 </div>
 </div>
 <h6><span class="mw-headline" id="VPN_Credentials">VPN Credentials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=11.html" title="Edit section: VPN Credentials">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
@@ -257,27 +254,21 @@ sudo rm /etc/init.d/vpn-firewall
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/auth.txt</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/auth.txt</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/auth.txt</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/openvpn/auth.txt</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/openvpn/auth.txt</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/openvpn/auth.txt</textarea>
 </div>
 </div>
 </div>
@@ -298,27 +289,21 @@ vpnsecret
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/openvpn.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/openvpn.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/openvpn.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/openvpn/openvpn.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/openvpn/openvpn.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/openvpn/openvpn.conf</textarea>
 </div>
 </div>
 </div>
@@ -372,27 +357,21 @@ down "/etc/openvpn/update-resolv-conf script_type=down dev=tun0"
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/resolvconf/run/interface/original.resolvconf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/resolvconf/run/interface/original.resolvconf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/resolvconf/run/interface/original.resolvconf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/resolvconf/run/interface/original.resolvconf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/resolvconf/run/interface/original.resolvconf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/resolvconf/run/interface/original.resolvconf</textarea>
 </div>
 </div>
 </div>
@@ -452,27 +431,21 @@ down "/etc/openvpn/update-resolv-conf script_type=down dev=tun0"
 <pre>nslookup google.com
 </pre>
 <p>Test DNS and output IP address. Remember these results so you can compare it to what you get later after VPN-Firewall is installed and running.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>scurl --remote-name myip.is</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">scurl --remote-name myip.is</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl --remote-name myip.is</textarea>
 </div>
 </div>
 <p>Or manually run <i>curl</i> with these parameters. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>curl --tlsv1.2 --proto =https --remote-name myip.is</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --remote-name myip.is</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --remote-name myip.is</textarea>
 </div>
 </div>
 <p><br/>
@@ -687,27 +660,21 @@ When using a TemplateBasedVM, to persist these changes use the Qubes bind dirs m
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /rw/config/qubes-bind-dirs.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /rw/config/qubes-bind-dirs.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /rw/config/qubes-bind-dirs.d/50_user.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /rw/config/qubes-bind-dirs.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /rw/config/qubes-bind-dirs.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /rw/config/qubes-bind-dirs.d/50_user.conf</textarea>
 </div>
 </div>
 </div>
@@ -745,27 +712,21 @@ down "/etc/openvpn/update-resolv-conf script_type=down dev=tun0"
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/resolv.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/resolv.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo nano /etc/resolv.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/resolv.conf</textarea>
 </div>
 </div>
 </div>
@@ -804,7 +765,7 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="./Design" href="./Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="./Dev/Developer_Portal" href="./Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VPN-Firewall" href="./VPN-Firewall" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -816,11 +777,11 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002123225
+Cached time: 20181005061514
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.204 seconds
-Real time usage: 0.377 seconds
+CPU time usage: 0.216 seconds
+Real time usage: 0.285 seconds
 Preprocessor visited node count: 991/1000000
 Preprocessor generated node count: 2575/1000000
 Post‐expand include size: 20045/2097152 bytes
@@ -828,23 +789,23 @@ Template argument size: 2626/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 12002/5000000 bytes
+Unstrip post‐expand size: 11675/5000000 bytes
 Lua time usage: 0.050/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  309.777      1 -total
- 45.01%  139.417     13 Template:CodeSelect
- 42.63%  132.068      5 Template:Open_with_root_rights
- 41.51%  128.588      5 Template:Box
- 35.14%  108.843      1 Template:VPN/Setup/DNS_Configuration
- 27.11%   83.986      4 Template:Mbox
-  7.43%   23.009      1 Template:Reflist
-  4.92%   15.234      1 Template:Footer
-  3.61%   11.174      1 Template:VPN/Setup/Get_VPN_Certificate
-  3.23%   10.018      1 Template:VPN/Setup/VPN_Credentials
+100.00%  214.209      1 -total
+ 36.49%   78.166      4 Template:Mbox
+ 20.97%   44.920     13 Template:CodeSelect
+ 19.40%   41.547      5 Template:Open_with_root_rights
+ 17.44%   37.349      5 Template:Box
+ 11.59%   24.836      1 Template:Reflist
+  7.80%   16.716      1 Template:Footer
+  6.66%   14.269      1 Template:VPN/Setup/DNS_Configuration
+  5.14%   11.015      1 Template:VPN/Setup/VPN_Credentials
+  4.02%    8.615      1 Template:Scurl
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=36023" dir="ltr" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=36023">https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=36023</a>"</div>
@@ -873,5 +834,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firew
 </div>
 
 </body>
-<!-- Cached/compressed 20181002123225 -->
+<!-- Cached/compressed 20181005061514 -->
 </html>

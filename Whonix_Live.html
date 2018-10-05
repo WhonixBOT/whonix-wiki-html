@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Live - Whonix
  url: ./Whonix_Live
- date: Thu Oct  4 08:17:51 2018
+ date: Fri Oct  5 08:18:40 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -190,54 +190,42 @@ When Whonix is run as a live system, all changes are written to RAM by default. 
 <h3><span class="mw-headline" id="Live-mode_Configuration">Live-mode Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4.html" title="Edit section: Live-mode Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Create a snapshot of your VM.
 </p><p>Alternatively backup the <code>/boot</code> folder.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo cp -a /boot /boot.back</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo cp -a /boot /boot.back</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo cp -a /boot /boot.back</textarea>
 </div>
 </div>
 <p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get update</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
 <p>Upgrade the system.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
 <p>Choose <u>either</u> <code>ro-mode-init</code> method <u>or</u> <code>grub-live</code> method.
 </p>
 <h4><span class="mw-headline" id="grub-live_Method">grub-live Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5.html" title="Edit section: grub-live Method">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Install the <code>grub-live</code> package.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install grub-live</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install grub-live</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install grub-live</textarea>
 </div>
 </div>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Since live mode makes each write go to RAM, the user might want to increase the memory assigned to the VM to improve performance; for example, if large files are regularly downloaded.</div></td></tr></tbody></table>
@@ -246,15 +234,12 @@ When Whonix is run as a live system, all changes are written to RAM by default. 
 </p>
 <h4><span class="mw-headline" id="ro-mode-init_method">ro-mode-init method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6.html" title="Edit section: ro-mode-init method">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Install the <code>ro-mode-init</code> package.
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install ro-mode-init</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">sudo apt-get install ro-mode-init</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install ro-mode-init</textarea>
 </div>
 </div>
 <p>For this option the VM disk needs to be set to read-only, otherwise it will always boot into persistent mode.
@@ -268,27 +253,21 @@ When Whonix is run as a live system, all changes are written to RAM by default. 
 <h4><span class="mw-headline" id="read-only_Method">read-only Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9.html" title="Edit section: read-only Method">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>The easiest way to set a VirtualBox VM to read-only is to use:
 </p><p>Note: replace <code>vmname</code> with the actual name of the VM! (For example <code>Whonix-Workstation</code>.)
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly" 1</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly" 1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly" 1</textarea>
 </div>
 </div>
 <p>to revert the change use:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly"</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly"</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">VBoxManage setextradata vmname "VBoxInternal/Devices/lsilogicsas/0/LUN#0/AttachedDriver/Config/Readonly"</textarea>
 </div>
 </div>
 <p>Note that this option is not the official way for setting VM's to read-only in VirtualBox. In contrast to the second option it works similar to the read-only option for KVM and won't create a snapshot.
@@ -316,15 +295,12 @@ The user can now boot the VM and select Live-mode.
 <h3><span id="Debugging/Errors"></span><span class="mw-headline" id="Debugging.2FErrors">Debugging/Errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=11.html" title="Edit section: Debugging/Errors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>An inconsistent filesystem will likely result in errors during live-boot. For instance, inconsistencies can arise when the VM is killed instead of performing a normal shutdown in persistent mode. Therefore, to make sure it is consistent, run <code>fsck</code> in persistent mode. Debian automatically does this during boot. VMs running in live mode can be killed without problems.
 </p><p>In the case of non-<code>fsck</code> related errors using <code>ro-mode-init</code> (like dropping to an initramfs shell), add the following to the kernel command line/GRUB menu for easier debugging:
-</p><p></p><div class="codeContainer">
-<div class="selectBtnDiv">
-<div class="smallText"><a class="selectLink" href="#" onclick="SelectText(this.parentNode.parentNode.parentNode.children[2].children[0]); return false;">[select code]</a></div>
-</div>
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>debug=1 break=init-premount</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxArea" readonly="readonly" rows="1">debug=1 break=init-premount</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">debug=1 break=init-premount</textarea>
 </div>
 </div>
 <h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=12.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -347,7 +323,7 @@ The user can now boot the VM and select Live-mode.
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix_Live" href="./Whonix_Live" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -359,11 +335,11 @@ The user can now boot the VM and select Live-mode.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181002095326
+Cached time: 20181005022305
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.120 seconds
-Real time usage: 0.189 seconds
+CPU time usage: 0.116 seconds
+Real time usage: 0.179 seconds
 Preprocessor visited node count: 348/1000000
 Preprocessor generated node count: 1251/1000000
 Post‐expand include size: 5996/2097152 bytes
@@ -371,23 +347,23 @@ Template argument size: 546/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2552/5000000 bytes
+Unstrip post‐expand size: 2615/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 14.8 MB/50 MB
+Lua virtual size: 14.92 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  155.308      1 -total
- 49.20%   76.419      2 Template:Mbox
- 16.58%   25.743      8 Template:CodeSelect
- 10.87%   16.884      1 Template:Footer
-  9.09%   14.110      1 Template:Header
-  4.55%    7.067      1 Template:FooterLight
-  4.00%    6.215      1 Template:Reflist
-  3.33%    5.172      1 Template:Footer_this_is_a_wiki
-  2.97%    4.609      1 Template:Maintainer
-  2.65%    4.119      1 Template:Share
+100.00%  145.027      1 -total
+ 52.94%   76.772      2 Template:Mbox
+ 17.40%   25.228      8 Template:CodeSelect
+ 11.75%   17.035      1 Template:Footer
+  5.28%    7.657      1 Template:Reflist
+  4.88%    7.075      1 Template:FooterLight
+  3.28%    4.751      1 Template:Footer_this_is_a_wiki
+  3.23%    4.680      1 Template:Header
+  2.74%    3.980      1 Template:Share
+  2.51%    3.647      1 Template:Maintainer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=36769" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=36769">https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=36769</a>"</div>
@@ -416,5 +392,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 </div>
 
 </body>
-<!-- Cached/compressed 20181002095326 -->
+<!-- Cached/compressed 20181005022305 -->
 </html>
