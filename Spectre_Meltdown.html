@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Spectre Meltdown - Whonix
  url: ./Spectre_Meltdown
- date: Fri Oct  5 08:08:24 2018
+ date: Sat Oct  6 08:08:27 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -351,10 +351,10 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 </p>
 <h4><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" href="https://packages.debian.org/stretch-backports/spectre-meltdown-checker" rel="noreferrer noopener" target="_blank"><code>spectre-meltdown-checker</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_14-2"><a href="#cite_note-prefer_stable_apt_sources-14">[14]</a></sup>
-</p><p>1. Boot the Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM.
-</p><p>2. Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources.
+</p><p><b>1.</b> Boot Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM.
+</p><p><b>2.</b> Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources.
 </p><p>Note: this applies to Whonix 14.0.0.7.4. Later Whonix versions may use a codename different to <code>stretch</code>.
-</p><p>In the Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM, run.
+</p><p>In Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb http://http.debian.net/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
@@ -363,7 +363,7 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb http://http.debian.net/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
 </div>
 </div>
-<p>Or alternatively if you are into <a data-href="/wiki/Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a> use the <i>.onion</i> mirror. 
+<p>Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a> can set the <i>.onion</i> mirror. 
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
@@ -372,7 +372,7 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
 </div>
 </div>
-<p>3. <a data-href="/wiki/Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
+<p><b>3.</b> <a data-href="/wiki/Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -381,7 +381,7 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>4. Install the selected software.
+<p><b>4.</b> Install the select software.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get -t stretch-backports install spectre-meltdown-checker</pre>
@@ -391,7 +391,7 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 </div>
 </div>
 <p>The procedure is now complete.
-</p><p>5. Undo.
+</p><p><b>5.</b> Undo.
 </p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> To proceed, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -521,12 +521,12 @@ Or alternatively use the <i>.onion</i> mirror.
 </li>
 <li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
 </li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">stay tuned</a>).</span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="/wiki/Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">Stay Tuned</a>).</span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Spectre_Meltdown" href="./Spectre_Meltdown" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -538,32 +538,32 @@ Or alternatively use the <i>.onion</i> mirror.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181005054830
+Cached time: 20181006060823
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.144 seconds
-Real time usage: 0.178 seconds
+CPU time usage: 0.172 seconds
+Real time usage: 0.193 seconds
 Preprocessor visited node count: 531/1000000
 Preprocessor generated node count: 1541/1000000
-Post‐expand include size: 17669/2097152 bytes
+Post‐expand include size: 17711/2097152 bytes
 Template argument size: 1568/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 12033/5000000 bytes
+Unstrip post‐expand size: 11882/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  135.574      1 -total
- 44.43%   60.238      1 Template:Processor_Microcode_Updates
- 37.25%   50.503     21 Template:CodeSelect
- 21.20%   28.738      2 Template:Install_Backport_Host
- 17.00%   23.047      1 Template:Reflist
- 16.00%   21.695      1 Template:Header
- 13.96%   18.931      1 Template:Install_Backport
-  9.48%   12.846      1 Template:Footer
-  5.08%    6.881      1 Template:VirtualBox_Spectre_Meltdown
-  5.04%    6.836      1 Template:Qubes_upgrade_dom0
+100.00%  150.700      1 -total
+ 54.04%   81.441      1 Template:Processor_Microcode_Updates
+ 44.02%   66.343     21 Template:CodeSelect
+ 27.40%   41.287      2 Template:Install_Backport_Host
+ 16.86%   25.402      1 Template:Reflist
+ 16.54%   24.928      1 Template:Install_Backport
+ 10.70%   16.124      1 Template:Footer
+  5.99%    9.027      1 Template:VirtualBox_Spectre_Meltdown
+  5.06%    7.618      1 Template:Qubes_upgrade_dom0
+  4.56%    6.879      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=37305" dir="ltr" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=37305">https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;oldid=37305</a>"</div>
@@ -592,5 +592,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Spectre_M
 </div>
 
 </body>
-<!-- Cached/compressed 20181005054830 -->
+<!-- Cached/compressed 20181006060823 -->
 </html>
