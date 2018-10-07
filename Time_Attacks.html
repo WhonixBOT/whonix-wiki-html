@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Time Attacks - Whonix
  url: ./Time_Attacks
- date: Sat Oct  6 08:10:51 2018
+ date: Sun Oct  7 08:10:37 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -143,36 +143,28 @@ Whonix requires payments to stay alive.
 <p>Insecure time synchronization and the leaking of time data exposes the user to a subset of <a class="mw-redirect" data-href="/wiki/Advanced_Attacks" href="./Advanced_Attacks.html" title="Advanced Attacks">advanced deanonymization attacks</a>. The attack vectors and possible mitigations are described below.
 </p>
 <h2><span class="mw-headline" id="Attack_Vectors">Attack Vectors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=2.html" title="Edit section: Attack Vectors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><b>Application-level Traffic</b>
-</p><p>Unlike privacy software developed by The Tor Project, Internet-facing applications can leak clock information in their traffic; for example, JavaScript in browsers and timestamps in emails.
-</p><p><b>Denial of Service</b>
-</p><p>The UDP-based NTP protocol can be abused to cause much larger replies than normal, causing systems to be overwhelmed. These are known as amplification attacks. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
-</p><p><b>Locating Onion Services</b>
-</p><p>Timers can leak CPU data. Under some circumstances, related activity data can lead to deanonymization of an onion service. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
-</p><p><b>Remote Code Execution</b>
-</p><p>NTP is a buggy and ancient protocol. Flaws in NTP clients can be remotely exploited to allow an adversary control over the system. The unencrypted and unauthenticated nature of NTP makes this attack trivial for network adversaries of any size. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
-</p><p><b>Remote Device Fingerprinting</b>
-</p><p>Clock leaks arising from either software on the host or application-level protocols on Whonix-Workstation (<code>anon-whonix</code>) allow a passive adversary to easily link anonymous and non-anonymous traffic to the same machine. Active clock skew attacks can be trivially mounted to deanonymize users. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
-</p><p><b>Replay Attacks</b>
-</p><p>Replaying an older time allows an adversary to:
-</p>
-<ul><li>Feed an old Tor consensus. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup></li>
-<li>Provide updates and (https) certificates which are old, outdated, or have known vulnerabilities.</li></ul>
-<p>This is possible because cryptographic verification depends on an accurate system clock. For example, a clock set to two years in the past will accept certificates or updates which have already expired or been revoked.
-</p>
+<ul><li><b>Application-level Traffic:</b> Unlike privacy software developed by The Tor Project, Internet-facing applications can leak clock information in their traffic; for example, JavaScript in browsers and timestamps in emails.</li>
+<li><b>Denial of Service:</b> The UDP-based NTP protocol can be abused to cause much larger replies than normal, causing systems to be overwhelmed. These are known as amplification attacks. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
+<li><b>Locating Onion Services:</b> Timers can leak CPU data. Under some circumstances, related activity data can lead to deanonymization of an onion service: <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li>
+<li><b>Remote Code Execution:</b> NTP is a buggy and ancient protocol. Flaws in NTP clients can be remotely exploited to allow an adversary control over the system. The unencrypted and unauthenticated nature of NTP makes this attack trivial for network adversaries of any size. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></li>
+<li><b>Remote Device Fingerprinting:</b> Clock leaks arising from either software on the host or application-level protocols on Whonix-Workstation (<code>anon-whonix</code>) allow a passive adversary to easily link anonymous and non-anonymous traffic to the same machine. Active clock skew attacks can be trivially mounted to deanonymize users. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup></li>
+<li><b>Replay Attacks:</b> Replaying an older time allows an adversary to: <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+<ul><li>Feed an old Tor consensus. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup></li>
+<li>Provide updates and (https) certificates which are old, outdated, or have known vulnerabilities.</li></ul></li></ul>
 <h2><span class="mw-headline" id="Clock_Leak_Vectors">Clock Leak Vectors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=3.html" title="Edit section: Clock Leak Vectors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Certain properties of protocols leak clock information: <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+<p>Certain properties of protocols leak clock information: <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p>
-<ul><li><b>ICMP Timestamps:</b> Leak host time in query replies. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li></ul>
-<ul><li><b>NTP Clients:</b> Leak host time <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> and expose the system to every attack outlined above.</li></ul>
-<ul><li><b>TCP Initial Sequence Numbers (ISNs):</b> Even when timers do not fully leak the host's clock, they can allow side-channel attacks because sensitive information about a system's CPU activity is leaked. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> This information is leaked in any traffic sent over clearnet. It can therefore be linked to maliciously induced load patterns on an onion site, resulting in deanonymization. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></li></ul>
-<ul><li><b>TCP Timestamps:</b> Included in every TCP packet, these leak system information down to the millisecond, as well as system uptime. They also permit fingerprinting of devices behind a router. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li></ul>
+<ul><li><b>ICMP Timestamps:</b> Leak host time in query replies. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup></li>
+<li><b>NTP Clients:</b> Leak host time <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> and expose the system to every attack outlined above.</li>
+<li><b>TCP Initial Sequence Numbers (ISNs):</b> Even when timers do not fully leak the host's clock, they can allow side-channel attacks because sensitive information about a system's CPU activity is leaked. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> This information is leaked in any traffic sent over clearnet. It can therefore be linked to maliciously induced load patterns on an onion site, resulting in deanonymization. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li>
+<li><b>TCP Timestamps:</b> Included in every TCP packet, these leak system information down to the millisecond, as well as system uptime. They also permit fingerprinting of devices behind a router. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li></ul>
 <h2><span class="mw-headline" id="Mitigations">Mitigations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=4.html" title="Edit section: Mitigations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>It is practically possible to block all of the clock leak vectors in the preceding section. Users running onion services or those who require very high-level security are strongly recommended to apply the measures below.
 </p>
 <h3><span id="GNU/Linux_Host"></span><span class="mw-headline" id="GNU.2FLinux_Host">GNU/Linux Host</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=5.html" title="Edit section: GNU/Linux Host">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <div class="toccolours mw-collapsible mw-collapsed">
-<ul><li>Uninstall any NTP clients and disable systemd's timdatectl NTP synchronization feature. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li></ul>
+<p><b>1.</b> Uninstall any NTP clients and disable systemd's timdatectl NTP synchronization feature. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p>
 <div class="mw-collapsible-content">
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -194,7 +186,9 @@ Whonix requires payments to stay alive.
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
-<ul><li>Disable TCP timestamps via kernel sysctl. This boolean disables both IPv4 and IPv6 TCP timestamps since they are controlled by the same sysctl option.</li></ul>
+<p><b>2.</b> Disable TCP timestamps via kernel sysctl. 
+</p><p>This boolean disables both IPv4 and IPv6 TCP timestamps since they are controlled by the same sysctl option.
+</p>
 <div class="mw-collapsible-content">
 <p>Become root.
 </p><p></p><div class="codeContainerNew">
@@ -244,7 +238,8 @@ Whonix requires payments to stay alive.
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
-<ul><li>Block incoming ICMP messages and any other incoming traffic with iptables or any of its frontends, such as ufw. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li></ul>
+<p><b>3.</b> Block incoming ICMP messages and any other incoming traffic with iptables or any of its frontends, such as ufw. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</p>
 <div class="mw-collapsible-content">
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -270,8 +265,7 @@ Whonix requires payments to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ufw default deny incoming</textarea>
 </div>
 </div>
-<p><br/>
-To check the status of ufw, run.
+<p>To check the status of ufw, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo ufw status</pre>
@@ -283,21 +277,23 @@ To check the status of ufw, run.
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
-<ul><li>TCP Initial Sequence Numbers mitigation.</li></ul>
+<p><b>4.</b> TCP Initial Sequence Numbers mitigation.
+</p>
 <div class="mw-collapsible-content">
-<p>An artificially induced CPU-load temperature influences the timer crystal and skews its frequency. TCP ISNs are a permanent feature and are necessary from a security standpoint to prevent arbitrary TCP connection hijacking by non-global network adversaries. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> See the following reference about removing the timer output function from Linux's TCP ISN code. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+<p>An artificially induced CPU-load temperature influences the timer crystal and skews its frequency. TCP ISNs are a permanent feature and are necessary from a security standpoint to prevent arbitrary TCP connection hijacking by non-global network adversaries. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> See the following reference about removing the timer output function from Linux's TCP ISN code. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
-<ul><li>Application-level  mitigation.</li></ul>
+<p><b>5.</b> Application-level mitigation.
+</p>
 <div class="mw-collapsible-content">
 <p>For application-level leak mitigation, avoid sending any clearnet traffic. Without clock information leaking from the host, network adversaries do not have non-anonymous timestamp sources to match this data with, even if software on Whonix-Workstation (<code>anon-whonix</code>) misbehaves.
 </p>
 </div>
 </div>
 <h3><span class="mw-headline" id="Whonix_Solutions_and_Limitations">Whonix Solutions and Limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;action=edit&amp;section=6.html" title="Edit section: Whonix Solutions and Limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Whonix has implemented <a data-href="/wiki/Sdwdate" href="./Sdwdate.html" title="Sdwdate">sdwdate</a> as a secure time synchronization mechanism to replace NTP. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> sdwdate-gui <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> is the GUI front-end. sdwdate was written with safety in mind and to avoid the many security pitfalls in NTP. Furthermore, NTP is UDP-based and cannot work over Tor, and onion services must have an accurate clock to be reachable.
+<p>Whonix has implemented <a data-href="/wiki/Sdwdate" href="./Sdwdate.html" title="Sdwdate">sdwdate</a> as a secure time synchronization mechanism to replace NTP. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> sdwdate-gui <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> is the GUI front-end. sdwdate was written with safety in mind and to avoid the many security pitfalls in NTP. Furthermore, NTP is UDP-based and cannot work over Tor, and onion services must have an accurate clock to be reachable.
 </p><p>sdwdate fetches its time exclusively from reputable sources -- whistle-blowing and privacy-friendly onion sites -- that are very likely to be hosted on different hardware. sdwdate also benefits from the security of Tor's end-to-end encryption.
 </p><p>sdwdate can only protect against passive timestamp linkage of data leaking from both the host and Whonix-Workstation (<code>anon-whonix</code>). It cannot defend against a skilled adversary that is able to compromise Whonix-Workstation (<code>anon-whonix</code>). Via a <a data-href="/wiki/Dev/TimeSync#Clock_Correlation_Attack" href="./Dev/TimeSync.html" title="Dev/TimeSync">clock correlation attack</a>, the adversary would discover the host clock when the VM is rebooted, and then link the time readings with any host clock leaks. The only way to prevent this and similar attacks is to stop the leaks in the first place.
 </p>
@@ -321,38 +317,41 @@ To check the status of ufw, run.
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">See <a class="external free" data-href="http://www.caida.org/publications/papers/2005/fingerprinting/" href="http://www.caida.org/publications/papers/2005/fingerprinting/" rel="noreferrer noopener" target="_blank">http://www.caida.org/publications/papers/2005/fingerprinting/</a> and Tor Browser upstream bug #3059 for the kind of application-level leaks that can happen: <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/3059" href="https://trac.torproject.org/projects/tor/ticket/3059" rel="noreferrer noopener" target="_blank">Find some way to deal with time-based fingerprints</a>.</span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tails.boum.org/contribute/design/Time_syncing/" href="https://tails.boum.org/contribute/design/Time_syncing/" rel="noreferrer noopener" target="_blank">https://tails.boum.org/contribute/design/Time_syncing/</a></span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+This is possible because cryptographic verification depends on an accurate system clock. For example, a clock set to two years in the past will accept certificates or updates which have already expired or been revoked.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf" href="http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf" rel="noreferrer noopener" target="_blank">http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf</a></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tails.boum.org/contribute/design/Time_syncing/" href="https://tails.boum.org/contribute/design/Time_syncing/" rel="noreferrer noopener" target="_blank">https://tails.boum.org/contribute/design/Time_syncing/</a></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://www.networksorcery.com/enp/protocol/icmp/msg13.htm" href="http://www.networksorcery.com/enp/protocol/icmp/msg13.htm" rel="noreferrer noopener" target="_blank">http://www.networksorcery.com/enp/protocol/icmp/msg13.htm</a></span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf" href="http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf" rel="noreferrer noopener" target="_blank">http://caia.swin.edu.au/talks/CAIA-TALK-080728A.pdf</a></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/16659#comment:13" href="https://trac.torproject.org/projects/tor/ticket/16659" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/16659#comment:13</a></span>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://www.networksorcery.com/enp/protocol/icmp/msg13.htm" href="http://www.networksorcery.com/enp/protocol/icmp/msg13.htm" rel="noreferrer noopener" target="_blank">http://www.networksorcery.com/enp/protocol/icmp/msg13.htm</a></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
-<a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/16659#comment:10" href="https://trac.torproject.org/projects/tor/ticket/16659" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/16659#comment:10</a></span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/16659#comment:13" href="https://trac.torproject.org/projects/tor/ticket/16659" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/16659#comment:13</a></span>
 </li>
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/16659#comment:10" href="https://trac.torproject.org/projects/tor/ticket/16659" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/16659#comment:10</a></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/16659" href="https://trac.torproject.org/projects/tor/ticket/16659" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/16659</a></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html" href="https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html" rel="noreferrer noopener" target="_blank">https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html</a></span>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html" href="https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html" rel="noreferrer noopener" target="_blank">https://mailman.boum.org/pipermail/tails-dev/2013-December/004520.html</a></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://www.freedesktop.org/software/systemd/man/timedatectl.html" href="http://www.freedesktop.org/software/systemd/man/timedatectl.html" rel="noreferrer noopener" target="_blank">http://www.freedesktop.org/software/systemd/man/timedatectl.html</a></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://www.freedesktop.org/software/systemd/man/timedatectl.html" href="http://www.freedesktop.org/software/systemd/man/timedatectl.html" rel="noreferrer noopener" target="_blank">http://www.freedesktop.org/software/systemd/man/timedatectl.html</a></span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server" href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server" rel="noreferrer noopener" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server</a></span>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server" href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server" rel="noreferrer noopener" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server</a></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html" href="https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html" rel="noreferrer noopener" target="_blank">https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html</a></span>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html" href="https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html" rel="noreferrer noopener" target="_blank">https://blog.patternsinthevoid.net/cve-2016-5696-and-its-effects-on-tor.html</a></span>
 </li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external text" data-href="http://sec.cs.ucl.ac.uk/users/smurdoch/talks/eurobsdcon07hotornot.pdf" href="http://sec.cs.ucl.ac.uk/users/smurdoch/talks/eurobsdcon07hotornot.pdf" rel="noreferrer noopener" target="_blank">- slide 9</a></span>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external text" data-href="http://sec.cs.ucl.ac.uk/users/smurdoch/talks/eurobsdcon07hotornot.pdf" href="http://sec.cs.ucl.ac.uk/users/smurdoch/talks/eurobsdcon07hotornot.pdf" rel="noreferrer noopener" target="_blank">- slide 9</a></span>
 </li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/sdwdate" href="https://github.com/Whonix/sdwdate" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate</a></span>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/sdwdate" href="https://github.com/Whonix/sdwdate" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate</a></span>
 </li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/sdwdate-gui" href="https://github.com/Whonix/sdwdate-gui" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate-gui</a></span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/sdwdate-gui" href="https://github.com/Whonix/sdwdate-gui" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate-gui</a></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Time_Attacks" href="./Time_Attacks" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Time_Attacks" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Time_Attacks" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -364,35 +363,35 @@ To check the status of ufw, run.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181005061045
+Cached time: 20181006120424
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.104 seconds
-Real time usage: 0.120 seconds
-Preprocessor visited node count: 496/1000000
-Preprocessor generated node count: 1510/1000000
+Real time usage: 0.188 seconds
+Preprocessor visited node count: 510/1000000
+Preprocessor generated node count: 1542/1000000
 Post‐expand include size: 4146/2097152 bytes
 Template argument size: 329/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9601/5000000 bytes
+Unstrip post‐expand size: 9896/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   90.357      1 -total
- 34.49%   31.162     11 Template:CodeSelect
- 16.45%   14.867      1 Template:Footer
- 13.70%   12.377      1 Template:Reflist
- 12.04%   10.875      1 Template:Header
-  6.38%    5.765      1 Template:FooterLight
-  5.37%    4.849      1 Template:Footer_this_is_a_wiki
-  3.87%    3.501      1 Template:Share
-  3.87%    3.495      1 Template:Edit_it
-  2.12%    1.917      1 Template:RandomNews
+100.00%  158.783      1 -total
+ 48.72%   77.352      1 Template:Header
+ 18.89%   29.995     11 Template:CodeSelect
+ 10.41%   16.523      1 Template:Footer
+  8.36%   13.267      1 Template:Reflist
+  4.16%    6.603      1 Template:FooterLight
+  2.95%    4.677      1 Template:Footer_this_is_a_wiki
+  2.33%    3.701      1 Template:Share
+  2.23%    3.536      1 Template:Edit_it
+  1.35%    2.148      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37409" dir="ltr" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37409">https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37409</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37962" dir="ltr" href="https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37962">https://www.whonix.org/w/index.php?title=Time_Attacks&amp;oldid=37962</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -403,7 +402,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Time_Atta
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 October 2018, at 22:38.</li>
+<li id="footer-lastmod"> This page was last edited on 6 October 2018, at 09:19.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -418,5 +417,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Time_Atta
 </div>
 
 </body>
-<!-- Cached/compressed 20181005061045 -->
+<!-- Cached/compressed 20181006120424 -->
 </html>

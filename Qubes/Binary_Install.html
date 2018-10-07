@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Qubes/Install - Whonix
  url: ../Qubes/Binary_Install
- date: Sat Oct  6 08:05:21 2018
+ date: Sun Oct  7 08:05:06 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -366,11 +366,11 @@ Qubes App Launcher (blue/grey "Q") -&gt; <i><span style="background-color:#FBFBF
 <ul><li>Read and apply the <a data-href="/wiki/Post_Install_Advice" href="../Post_Install_Advice.html" title="Post Install Advice">Post Installation Security Advice</a>.</li>
 <li><a href="#Stay_tuned">Stay tuned</a>!</li></ul>
 <h2><span class="mw-headline" id="Known_Bugs">Known Bugs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=13.html" title="Edit section: Known Bugs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="All_Platforms">All Platforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<h4><span id='"apt-get_source_package"_will_show_"dpkg-source:_warning:_failed_to_verify_signature"'></span><span class="mw-headline" id=".22apt-get_source_package.22_will_show_.22dpkg-source:_warning:_failed_to_verify_signature.22">"apt-get source package" will show "dpkg-source: warning: failed to verify signature"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h1><span class="mw-headline" id="All_Platforms">All Platforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id='"apt-get_source_package"_will_show_"dpkg-source:_warning:_failed_to_verify_signature"'></span><span class="mw-headline" id=".22apt-get_source_package.22_will_show_.22dpkg-source:_warning:_failed_to_verify_signature.22">"apt-get source package" will show "dpkg-source: warning: failed to verify signature"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This is not a security issue, but only a warning. Read the entire thread <a class="external text" data-href="http://lists.debian.org/debian-derivatives/2013/08/msg00000.html" href="http://lists.debian.org/debian-derivatives/2013/08/msg00000.html" rel="noreferrer noopener" target="_blank">here</a> for more information.
 </p><p>This warning message can be removed with the following workaround below.
-</p><p>1. Modify <i>/etc/dpkg/origins/default</i>
+</p><p><b>1.</b> Modify <i>/etc/dpkg/origins/default</i>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo unlink /etc/dpkg/origins/default</pre>
@@ -387,7 +387,7 @@ Qubes App Launcher (blue/grey "Q") -&gt; <i><span style="background-color:#FBFBF
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ln -s /etc/dpkg/origins/debian /etc/dpkg/origins/default</textarea>
 </div>
 </div>
-<p>2. Download the source package
+<p><b>2.</b> Download the source package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>apt-get source package</pre>
@@ -396,7 +396,7 @@ Qubes App Launcher (blue/grey "Q") -&gt; <i><span style="background-color:#FBFBF
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get source package</textarea>
 </div>
 </div>
-<p>3. Undo afterwards to prevent unexpected issues
+<p><b>3.</b> Undo afterwards to prevent unexpected issues.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo unlink /etc/dpkg/origins/default</pre>
@@ -413,18 +413,18 @@ Qubes App Launcher (blue/grey "Q") -&gt; <i><span style="background-color:#FBFBF
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ln -s /etc/dpkg/origins/whonix /etc/dpkg/origins/default</textarea>
 </div>
 </div>
-<h4><span class="mw-headline" id="Proxychains_Tor_Browser_Issue">Proxychains Tor Browser Issue</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span class="mw-headline" id="Proxychains_Tor_Browser_Issue">Proxychains Tor Browser Issue</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Using Tor Browser in conjunction with proxychains for the connection scheme: <code>User</code> -&gt; <code>Tor</code> -&gt; <code>Proxy</code> -&gt; <code>Internet</code> <br/>
 does not currently work. For more information, see <a data-href="/wiki/Tunnels/Connecting_to_Tor_before_a_proxy#Tor_Browser_Notes_2" href="../Tunnels/Connecting_to_Tor_before_a_proxy.html" title="Tunnels/Connecting to Tor before a proxy">here</a>.
 </p>
-<h3><span class="mw-headline" id="Non-Qubes-Whonix">Non-Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h1><span class="mw-headline" id="Non-Qubes-Whonix">Non-Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Non-Qubes-Whonix means all Whonix platforms except <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a>. This includes <a data-href="/wiki/KVM" href="../KVM.html" title="KVM">KVM</a>, <a data-href="/wiki/VirtualBox" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a> and <a data-href="/wiki/Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation.html" title="Dev/Build Documentation/Physical Isolation">Physical Isolation</a>.
 </p>
-<h4><span id="Suspend_/_Hibernate_Issues"></span><span class="mw-headline" id="Suspend_.2F_Hibernate_Issues">Suspend / Hibernate Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span id="Suspend_/_Hibernate_Issues"></span><span class="mw-headline" id="Suspend_.2F_Hibernate_Issues">Suspend / Hibernate Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Short: Avoid suspending or hilbernating the computer or Whonix VMs while Whonix is running.
 </p><p>Long: <a data-href="/wiki/Post_Install_Advice#Network_Time_Syncing" href="../Post_Install_Advice.html" title="Post Install Advice">Network Time Syncing</a>, <a data-href="/wiki/Troubleshooting#Clock_Fix" href="../Troubleshooting.html" title="Troubleshooting">Troubleshooting#Clock Fix</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p>
-<h4><span id="Mounting_(CD_/_DVD)_Devices"></span><span class="mw-headline" id="Mounting_.28CD_.2F_DVD.29_Devices">Mounting (CD / DVD) Devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span id="Mounting_(CD_/_DVD)_Devices"></span><span class="mw-headline" id="Mounting_.28CD_.2F_DVD.29_Devices">Mounting (CD / DVD) Devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If the device auto mounter is broken, see if <code>Start menu</code> -&gt; <code>System Settings</code> -&gt; <code>Removable Media</code> helps.
 </p><p>The following workaround can be used.
 </p><p></p><div class="codeContainerNew">
@@ -448,22 +448,22 @@ does not currently work. For more information, see <a data-href="/wiki/Tunnels/C
 <a class="external free" data-href="https://forums.whonix.org/t/workstation11-doesnt-mount-hdds/1313" href="https://forums.whonix.org/t/workstation11-doesnt-mount-hdds/1313" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/workstation11-doesnt-mount-hdds/1313</a>
 </p><p>Help fixing this bug is welcome! (<a class="external text" data-href="https://phabricator.whonix.org/T139" href="https://phabricator.whonix.org/T139" rel="noreferrer noopener" target="_blank">ticket</a>)
 </p>
-<h4><span id="VLC_/_Video_Player_Crash"></span><span class="mw-headline" id="VLC_.2F_Video_Player_Crash">VLC / Video Player Crash</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span id="VLC_/_Video_Player_Crash"></span><span class="mw-headline" id="VLC_.2F_Video_Player_Crash">VLC / Video Player Crash</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The following workaround can be used.
 </p><p><code>VLC</code> -&gt; <code>Tools</code> -&gt; <code>Preferences</code> -&gt; <code>Video</code> -&gt; <code>Output</code> -&gt; <code>X11</code> -&gt; <code>Save</code>
 </p>
-<h4><span class="mw-headline" id="Network_Manager_Systray_Unmanaged_Devices">Network Manager Systray Unmanaged Devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span class="mw-headline" id="Network_Manager_Systray_Unmanaged_Devices">Network Manager Systray Unmanaged Devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Non-Qubes-Whonix_Known_bugs&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="image" data-href="/w/index.php?title=File:Network_manger_question_mark.png&amp;filetimestamp=20150818010349&amp;" href="https://www.whonix.org/w/index.php?title=File:Network_manger_question_mark.png&amp;filetimestamp=20150818010349&amp;"><img alt="Network manger question mark.png" data-src="/w/images/2/2f/Network_manger_question_mark.png" height="28" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAMAAACTisy7AAABU1BMVEVbW1tcXFxhYWFlY15mZmZnZ2d7e3t8fHx/f3+Fe16FhYWMgV+ShmCUlJSXl5eYl5SYmJiZmZmampqbm5ucnJydnZ2fn5+hnZOjo6OkpKSln5Kmpqarq6utra2vr6+xsbG2tra4uLi6urq7u7u8vLy9vb2+vr6/v7/AwMDCwsLDto/Ft47FxcXHuI7IyMjMzMzQv4vRv4vSwY/Swo/S0tLU1NTXtE3YtlHZxYbb29vc3Nzdv2Xd3d3ev2Pmw1fqv0Lq6urtwkTtz3jt7e3u7u7v7+/wyVnwy1jw8PDx8fHy1Xzy8vLz03Pz8/P00Wz01Xj0137014H09PT19fX29vb313339/f42Hn4+Pj5+fn61mb62XP6+vr712v71237+/v81mP8/Pz901n91Fr91WP91mH91mP912X912f912v9/f3+1FT+1Vr+1Vz+1V7+/v7///8OiQowAAABPklEQVQoz6XS91PCMBQH8LpwRluCG1E6FBfOOnCgUhRUHK3GRKO1buuo//9PptfqlcLhD35/epfP5V0u73FfNcIVauTfmBMF4IcXcyEUU8iybcexLdNQpBAKhmkxcxzLpLoQQkBNxesqUQwq0ALrbpEB1fGnqoWkCpreUT4Sh3X9U1oYM27R1354nz2ajmtBJHTEfWtL697H2/bd42Q6gLxOqckyvP+509uw8nQ8GMCkwpSl+/Z9IJHoer7pDODWkNuUkPrlpSZ5ZuLlii+biqbJAOO2SM9qcvbydUEqH5k8WkKoKCrpuYfr+fG8j4vQ+9XiGcsBaNzc7WiGqo+wQDBGCDFCCGN4cR7FOvxFSjxmRIggRKGtx3xU/ba6SwbgNtY4EFNDDxorMUsp8OQ0VrFgmsTWSJA1FXrX/tq+b++Wu1gLLBo0AAAAAElFTkSuQmCC" width="30"/></a>
 Short answer: Unmanaged devices are unrelated to Whonix functioning and should not concern the user.<br/>
 Long answer: <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p>
-<h3><span class="mw-headline" id="Qubes-Whonix">Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<h4><span class="mw-headline" id="Missing_Qubes_Appmenu_Entries_in_anon-whonix">Missing Qubes Appmenu Entries in anon-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-6" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-6.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h1><span class="mw-headline" id="Qubes-Whonix">Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Missing_Qubes_Appmenu_Entries_in_anon-whonix">Missing Qubes Appmenu Entries in anon-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-6" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-6.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In Qubes R3.2, <code>anon-whonix</code> in Whonix 14 does not have Qubes appmenus (start menu) entries by default. These must be manually added: 
 </p><p><code>Qubes appmenu</code> -&gt; <code>anon-whonix</code> -&gt; <code>Add more shortcuts</code>
 </p><p>This issue has been fixed in Qubes R4. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p>
-<h4><span class="mw-headline" id="Template_Installation_qubesctl_Error">Template Installation qubesctl Error</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-7" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-7.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span class="mw-headline" id="Template_Installation_qubesctl_Error">Template Installation qubesctl Error</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-7" href="https://www.whonix.org/w/index.php?title=Template:Known_bugs&amp;action=edit&amp;section=T-7.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The following qubesctl error message can be safely ignored: <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
 <pre>[user@dom0 ~]$ sudo qubesctl state.sls qvm.anon-whonix
@@ -647,7 +647,7 @@ Then press.
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><font size="-1"><a class="external text" data-href="../Qubes/Install" href="../Qubes/Install" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -664,7 +664,7 @@ Then press.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/Install" href="../Qubes/Install" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -676,35 +676,35 @@ Then press.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181006060516
+Cached time: 20181007060501
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.264 seconds
-Real time usage: 0.356 seconds
+CPU time usage: 0.252 seconds
+Real time usage: 0.330 seconds
 Preprocessor visited node count: 809/1000000
 Preprocessor generated node count: 2150/1000000
-Post‐expand include size: 33576/2097152 bytes
+Post‐expand include size: 33536/2097152 bytes
 Template argument size: 1857/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 12758/5000000 bytes
+Unstrip post‐expand size: 12867/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  283.824      1 -total
- 28.40%   80.616     27 Template:CodeSelect
- 27.73%   78.715      2 Template:Mbox
- 26.01%   73.833      1 Template:First_Time_User
- 21.13%   59.980      1 Template:Stay_tuned
- 13.40%   38.036      1 Template:Qubes_AppArmor
- 10.32%   29.302      1 Template:Known_bugs
-  9.36%   26.559      2 Template:Reflist
-  7.27%   20.627      2 Template:Footer
-  5.33%   15.126      1 Template:Header
+100.00%  262.359      1 -total
+ 30.63%   80.350      2 Template:Mbox
+ 28.69%   75.270      1 Template:First_Time_User
+ 27.30%   71.618     27 Template:CodeSelect
+ 21.92%   57.521      1 Template:Stay_tuned
+ 12.13%   31.832      1 Template:Qubes_AppArmor
+  9.81%   25.738      2 Template:Reflist
+  9.72%   25.494      1 Template:Known_bugs
+  8.11%   21.273      2 Template:Footer
+  4.07%   10.670      1 Template:Qubes_upgrade_dom0
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=37434" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=37434">https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=37434</a>"</div>
