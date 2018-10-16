@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Deprecated - Whonix
  url: ./Deprecated
- date: Mon Oct 15 07:35:55 2018
+ date: Tue Oct 16 07:36:06 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -574,7 +574,12 @@ Whonix requires payments to stay alive.
 <li class="toclevel-2 tocsection-274"><a href="#Timesync"><span class="tocnumber">87.11</span> <span class="toctext">Timesync</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-275"><a href="#Qubes-Whonix_Manual_Installation"><span class="tocnumber">88</span> <span class="toctext">Qubes-Whonix Manual Installation</span></a></li>
+<li class="toclevel-1 tocsection-275"><a href="#Qubes-Whonix_Manual_Installation"><span class="tocnumber">88</span> <span class="toctext">Qubes-Whonix Manual Installation</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Whonix-Gateway"><span class="tocnumber">88.1</span> <span class="toctext">Whonix-Gateway</span></a></li>
+<li class="toclevel-2"><a href="#Whonix-Workstation"><span class="tocnumber">88.2</span> <span class="toctext">Whonix-Workstation</span></a></li>
+</ul>
+</li>
 <li class="toclevel-1 tocsection-276"><a href="#Why_is_KDE_.28big.29_the_default_desktop_environment.3F_Why_not_use_a_minimal_DE.3F"><span class="tocnumber">89</span> <span class="toctext">Why is KDE (big) the default desktop environment? Why not use a minimal DE?</span></a></li>
 <li class="toclevel-1 tocsection-277"><a href="#Tor_Messenger"><span class="tocnumber">90</span> <span class="toctext">Tor Messenger</span></a></li>
 <li class="toclevel-1 tocsection-278"><a href="#Qubes-Whonix_Build"><span class="tocnumber">91</span> <span class="toctext">Qubes-Whonix Build</span></a>
@@ -2179,7 +2184,7 @@ editing its configuration file:
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Deprecated" href="./Deprecated" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -5967,9 +5972,11 @@ true $?
 <p>If you are interested, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>The following steps should be completed in dom0 for both <code>whonix-gw-14</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-141"><a href="#cite_note-141">[58]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
-</p><p><b>Whonix-Gateway</b>
-</p><p>Open a dom0 terminal.
+<p>The following steps should be completed in dom0 for <u>both</u> <code>whonix-gw-14</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. 
+</p><p>It is unnecessary to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from the new kernel parameters.<sup class="reference" id="cite_ref-141"><a href="#cite_note-141">[58]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
+</p>
+<h3><span class="mw-headline" id="Whonix-Gateway">Whonix-Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
@@ -5981,7 +5988,7 @@ true $?
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
 </div>
 </div>
-<p>For Qubes R3.2, and later releases this will show.<br/>
+<p>Qubes R3.2 and later releases will show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">nopat</span></i>
 </p><p>Keep the existing kernel parameters and add 'apparmor=1 security=apparmor'. For example.
 </p><p></p><div class="codeContainerNew">
@@ -6022,8 +6029,9 @@ true $?
 </div>
 <p>The output should show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">0</span></i>
-</p><p><b>Whonix-Workstation</b>
-</p><p>Open a dom0 terminal.
+</p>
+<h3><span class="mw-headline" id="Whonix-Workstation">Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
@@ -6035,7 +6043,7 @@ true $?
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-prefs -g whonix-ws-14 kernelopts</textarea>
 </div>
 </div>
-<p>For Qubes R3.2, and later releases this will show.<br/>
+<p>Qubes R3.2 and later releases will show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">nopat</span></i>
 </p><p>Keep the existing kernel parameters and add 'apparmor=1 security=apparmor'. For example.
 </p><p></p><div class="codeContainerNew">
@@ -6929,8 +6937,7 @@ Source:
 </li>
 <li id="cite_note-140"><span class="mw-cite-backlink"><a href="#cite_ref-140">↑</a></span> <span class="reference-text">Tor control protocol command add_onion</span>
 </li>
-<li id="cite_note-141"><span class="mw-cite-backlink"><a href="#cite_ref-141">↑</a></span> <span class="reference-text">
-<a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, TemplateBasedVMs inherit the kernelopts setting of their TemplateVM</a>.</span>
+<li id="cite_note-141"><span class="mw-cite-backlink"><a href="#cite_ref-141">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, TemplateBasedVMs inherit the kernelopts setting of their TemplateVM</a>.</span>
 </li>
 <li id="cite_note-142"><span class="mw-cite-backlink"><a href="#cite_ref-142">↑</a></span> <span class="reference-text">
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAKaUlEQVR42u2YW2xcx3nHf9+cs0sub+KSlEjdbItS4kQ3K7akKk2TkKbiSELToICBAg0QJC9B0iJIUiAPBYpW6EuBPLVpXcCuYRS5ug7iJnXjuKEVC2JkJa1r2bIcxTZpUbYpkuJ1ednbmZmvD+fs2aVIFXac9KkHOCAWPDPzm+/y/74Z+P/n3T3y6w786iPj75ucrw6sFO2HV6t+f7Hit0ReWhUkE2i5rVmW8m0ysaNLLr+n2559T8fs+aGhoYnfKuBXHx4PC0V7//h0+bNLRTcQZMNsVz5HvrOJttYMTRmDCFQjz3LRMleoMD1foVK1vr9H3zxyu/70nt7Co6FW/vv48eNzv1HArzx49eMvXV09vVzxx/r62ujftYm+La20toQEgRCIIAIGMCIYUVShWLZM3Cjy0miB0YkVdnb6hd/fa/99f9fid0ql0rOnTp1aeleAf/mNN7KvT5a/9upE6Uu9W9vYu28zm3taMAbUK5JMIhK/pvYiGIHACJlQEBGm50qcvTjDlWvLnNqrY5/Ys/CguPLwfffd98KvBfj1H17vefIXC99dKvvjew/2ckd/J4EIznsEwRgIGuAgtmJoYkhBCCRexAhkMwYjcGmswI8uTLGnO1r5k6Or38pq8V+HhoZ+8o4Ah59f6Pn7H0w+MV/WY3cf20l3Tw5nfbqYScCMiafwHvK52L3LVSU0QmDib4LE7bWxuSbD5FyZbw+/xR2dUfSlY0vfw5Yeu/fee3/4tgB//qvl7D/84PpTr89Gg0c+fDttHc1461NLNVql5t7juwPu6gsQ4JcznrNXHSRWNjX3N4DmMobFlSr/9OQ1DvRa+7lDs99VZ783NDT0RCOL2Qjw8ZHZv3n1emVw/5EdZFubKFcczpO+1oPV+C1aONRnOLYjIBdCcwh3bzUc2mooWcV5xblkrIL1ilNlNfJ0tGX51PGdXHjThD+b6rk/CIITZ86c+d3/FfDhH08NnLtU+LP+/VtoybdQqXish8gni90E6hR25dfvc1enxN84sBqPtY0b9Mpq1dHX1cwnP9jHPz5LbsF1fNIY87Gnn366d0PAJ34+Hw4/t/C1lu5WurZ3Uq04nCo+mThSkoXqoJGDqRVdB3hjVeNNaQxmXd16TknnXKk69u3q4P23tfPQc03bPeajYRjetyHgxdGVP7g2Gx3ZursHqwmQkkyqOJcslljAecWIcm7cMTbv03neKChnx+OEijcSQzkPUfpbUwtHTvnIwW4uTQvXy+0fUtWjIyMj/QBhI+ArbxY/l8vnyHbkiKI4KbwkwqtxsHtVjICKJP+DQkV56LmI/i5DIHCtoEQOskEcp0ZBRdOEUlPL6HiuSqRs6Wxmz7Y2fvSaZj9/0NwdRdHvAa+nFvznn0z3T8xWBzp6O9KYqcebYlXTxHAax2TVKhUXW6do4dKU58Upz2oVFOrWXuMNcE5TqzZ65MCuDs6/YViymYPGmH3Dw8ObUgteHi8OVjFNmY4ckVVEIRBFRNBEJlQ0tqoK2QByGUn1UNZIiaJA1UlibVJvBIBPYss7jSuSCuVI6e1qJpMJuLacazuQr+7JZrP9KeCNxeqHgpYshAHOxZUidqEm5Sv5DVS8cs+2gM8cysYirXHdTWVV4LU5zyPPRzQFcThIusm6eAugHjyKV6UpE7Cls4mXZyvs79TbVHVfCri4bN8b5lpxCOIVkdiK9VjT1BrOSwIUP7mMrFP8XBhnuDFgVGNxX+ONxOJJbKvGlu1qz/L6vABsVdVtKWCp6vtkU0CkiXs1cctNSRHXWuW/JiyXbzgiJ3zhSIYPbA3WAPpa9rtkbAK6xhu1JEysGXhozYWMTYOIdAH5FLBitS00Ac6BqCYD4xhTQFWTbiW2QtFDMVKqTqm69dXINySFoojb2BsiggJi4kQKA0MxEoCcqraGayeNM0t84gYUNeAS0KABVEQ2rpPJo8RCHRipewPFKHiRelsmGoO62MrxhpJQFsmkgJlAVivOI14JfD17va9nZW3igLqVnWdNPNYB6xKVekMTq2kMVZsvbkBi8a5EnuZMPKGqagrY0hxMr1Rsv3GK1xgqHpgENiCydmKTaJ1nPaGmZTGRGjSOw4awqYFK4vrAQ6EY0dcmJGpUTr2Ubw9es6UoEeiGWuuVyNVraFq6kppsU4lZb8F6SUwEPvltVdcKdzJf5JT55YjbNilAQUSWUsDeruwFLVeJqg4Ha0E1lgzXUOxtQ5XRjWKw4RvbOJerj4t8HdQDq2XH3HKFA5stwAxwNQXcvS13psVo5FbLRCr1HfqGsuTiYt+4oL1FDKJrN1lr2WzSdDhf62hiUEW4sVjGWkd/RxngLVW9nAJ+/mTfa9u6syN2fqVu8lqTqQ3Wc7EVrNZ6RLgF3zoXrmnbXL2jqXlp7PoKv7NdaQvKqOpVERlboxR39DU/xGoZLVZwSD3OGkGT1qtqlZWqslTx2A100CosVz3LVaXsb/JGrYFwYF28vYVCheuzRe5/fxVVHQNeGBwcXFyjg3fuyD3+yluly2M3CvvZuTnONq1nryTZqx56W4Vd+YDIKV0t6482m7LC0e0h2QAmlj1zxeQgdVP2KmBUeHl8kbv6lJ25JUTlknPuxxsemh54curjDz114ynb143f1EaoHqkdyhPNKkXKH+1v4q8Gcm/r0P/Af1Z47OUq7VlJN1mTqWxomJ5b5fkrMzz8iTI9QWEUeGBgYODvRETXFYM/PdX3Hx/d1/aInZyHUoUIqbfqDWeKjSPv1o+7yc3WK16EwmqVF16d44sfFHqCggXOA4+KiK7rqGvPHw9s+eJ0YeLwxYnZg7JzCzYTYpym4h0aeHHK8bcXysmBPekHG//GpSo+SkxajMTZb0TwCmEglMqWF6/M8JHblOPbZsHLT51z3xgaGpqqsWwIeOzOtuKZl5ZOfP2J68/+amLmDtnag2/K4r1Pz8W/nHG8MOkwpg5W61Rq39Sa2eZQaAoF6yAwShgYVosRr4zOcmc+4sv3LIJzF1T1sZGRkbNv++rjweGZHY+fnx4eX5L3yeY8vrUlVeE19zBJ4yANh3Sp3c00HPKNEYwRVgol3nhzgQ/0Wr5yuECzVC+o6nfa29sfPHz4cPSOLo9OPzbRfm2q8P1fXHUfsy0tSL4DzWZStUsXr4FK3c2NUAawlYiF2WUKi0Xu3+v4w90LLmv8Ge/9v3R0dHzzZrh3dP32199++c9/NsqXry6yRVtzmPYWaMpS8/GtQPEeW4koFoqsLpe4s9vz6QMldrctjwLnVfWb586de+b06dP+XV9gfuvfzvdfWej4i8uTcvKVWemLJMBnM5hsBgkDMCaF8s5hqw5biRDvONTnGLi9wl3dq+MZ4y8CI+Vy+dETJ05M/savgJ955pk9VxbaP3WtEN47uRzumV4hv1iWbDFSA0guI3TmlO2blD1dtvzefHVmc1NpFLiqqheBpwYGBsZqUvJbuaNOQDvDMNxtrd0PbBWRvKq2JuqgQFlEloBxVX0JGB0cHFz8P7lEX5dMp0+bo0ePZnK5XMZaG+RyOb+0tFQ9efJk9e1Y6lbP/wA2kHvWfUY55wAAAABJRU5ErkJggg==" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Note on platform support:
@@ -6965,7 +6972,7 @@ Source:
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><font size="-1"><a class="external text" data-href="./Deprecated" href="./Deprecated" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -6977,35 +6984,35 @@ Source:
 </p></div>
 <!-- 
 NewPP limit report
-Cached time: 20181008212629
+Cached time: 20181015213300
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 1.828 seconds
-Real time usage: 2.161 seconds
-Preprocessor visited node count: 9531/1000000
-Preprocessor generated node count: 21178/1000000
-Post‐expand include size: 121832/2097152 bytes
+CPU time usage: 1.776 seconds
+Real time usage: 2.960 seconds
+Preprocessor visited node count: 9533/1000000
+Preprocessor generated node count: 21182/1000000
+Post‐expand include size: 121862/2097152 bytes
 Template argument size: 36989/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 120452/5000000 bytes
-Lua time usage: 0.150/7.000 seconds
+Unstrip post‐expand size: 120727/5000000 bytes
+Lua time usage: 0.140/7.000 seconds
 Lua virtual size: 15.31 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00% 1321.772      1 -total
- 39.40%  520.844    202 Template:CodeSelect
- 17.91%  236.712     21 Template:Mbox
- 11.98%  158.375      4 Template:Reflist
- 10.11%  133.624     23 Template:Box
-  2.82%   37.266      6 Template:Open_with_root_rights
-  2.24%   29.655      1 Template:Qubes_AppArmor
-  2.05%   27.035      1 Template:Header
-  1.37%   18.051      2 Template:Footer
-  1.28%   16.884      2 Template:Backups_Tor_Onion_Service_private_key
+100.00% 2200.560      1 -total
+ 56.59% 1245.303    202 Template:CodeSelect
+ 16.55%  364.264     23 Template:Box
+  9.80%  215.765     21 Template:Mbox
+  9.27%  204.022      1 Template:Mirror_nyud_net
+  7.44%  163.615      6 Template:Open_with_root_rights
+  6.53%  143.680      4 Template:Reflist
+  4.10%   90.291      1 Template:Firewall_Settings
+  1.41%   31.126      1 Template:Header
+  1.21%   26.727      1 Template:Qubes_AppArmor
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=37424" dir="ltr" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=37424">https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=37424</a>"</div>
@@ -7034,5 +7041,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecate
 </div>
 
 </body>
-<!-- Cached/compressed 20181008212629 -->
+<!-- Cached/compressed 20181015213300 -->
 </html>

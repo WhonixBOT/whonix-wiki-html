@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: HowTo: Install the Stable Version of Qubes-Whonix 14 - Whonix
  url: ../Qubes/Binary_Install
- date: Mon Oct 15 08:04:56 2018
+ date: Tue Oct 16 08:05:18 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -236,9 +236,11 @@ Then read the <a data-href="/wiki/About" href="../About.html" title="About">Abou
 <p>If you are interested, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>The following steps should be completed in dom0 for both <code>whonix-gw-14</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the  <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. It is unnecessary for users to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from these new kernel parameters.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
-</p><p><b>Whonix-Gateway</b>
-</p><p>Open a dom0 terminal.
+<p>The following steps should be completed in dom0 for <u>both</u> <code>whonix-gw-14</code> and <code>whonix-ws-14</code> TemplateVMs. After these settings have been applied to the Whonix templates, the <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (AppVM) will inherit the AppArmor kernel settings. 
+</p><p>It is unnecessary to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> TemplateBasedVMs to benefit from the new kernel parameters.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> It is also important for users to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
+</p>
+<h3><span class="mw-headline" id="Whonix-Gateway">Whonix-Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
@@ -250,7 +252,7 @@ Then read the <a data-href="/wiki/About" href="../About.html" title="About">Abou
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-prefs -g whonix-gw-14 kernelopts</textarea>
 </div>
 </div>
-<p>For Qubes R3.2, and later releases this will show.<br/>
+<p>Qubes R3.2 and later releases will show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">nopat</span></i>
 </p><p>Keep the existing kernel parameters and add 'apparmor=1 security=apparmor'. For example.
 </p><p></p><div class="codeContainerNew">
@@ -291,8 +293,9 @@ Then read the <a data-href="/wiki/About" href="../About.html" title="About">Abou
 </div>
 <p>The output should show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">0</span></i>
-</p><p><b>Whonix-Workstation</b>
-</p><p>Open a dom0 terminal.
+</p>
+<h3><span class="mw-headline" id="Whonix-Workstation">Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
@@ -304,7 +307,7 @@ Then read the <a data-href="/wiki/About" href="../About.html" title="About">Abou
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-prefs -g whonix-ws-14 kernelopts</textarea>
 </div>
 </div>
-<p>For Qubes R3.2, and later releases this will show.<br/>
+<p>Qubes R3.2 and later releases will show.<br/>
 </p><p><i><span style="background-color:#FBFBFB">nopat</span></i>
 </p><p>Keep the existing kernel parameters and add 'apparmor=1 security=apparmor'. For example.
 </p><p></p><div class="codeContainerNew">
@@ -568,8 +571,7 @@ If you want to change this, use:
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA" href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA</a></span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
-<a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, TemplateBasedVMs inherit the kernelopts setting of their TemplateVM</a>.</span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, TemplateBasedVMs inherit the kernelopts setting of their TemplateVM</a>.</span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/1764" href="https://github.com/QubesOS/qubes-issues/issues/1764" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/1764</a></span>
@@ -663,7 +665,7 @@ Then press.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/Install" href="../Qubes/Install" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -675,35 +677,35 @@ Then press.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181015060451
+Cached time: 20181016060513
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.236 seconds
-Real time usage: 0.309 seconds
-Preprocessor visited node count: 817/1000000
-Preprocessor generated node count: 2160/1000000
-Post‐expand include size: 33476/2097152 bytes
+CPU time usage: 0.248 seconds
+Real time usage: 0.377 seconds
+Preprocessor visited node count: 819/1000000
+Preprocessor generated node count: 2164/1000000
+Post‐expand include size: 33504/2097152 bytes
 Template argument size: 1857/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 12968/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 12702/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  239.008      1 -total
- 30.14%   72.042     27 Template:CodeSelect
- 25.76%   61.566      2 Template:Mbox
- 23.23%   55.515      1 Template:First_Time_User
- 23.12%   55.256      1 Template:Stay_tuned
- 14.14%   33.807      1 Template:Qubes_AppArmor
- 10.65%   25.450      1 Template:Known_bugs
- 10.28%   24.576      2 Template:Reflist
-  8.39%   20.054      2 Template:Footer
-  4.73%   11.308      1 Template:Header
+100.00%  307.434      1 -total
+ 40.10%  123.270     27 Template:CodeSelect
+ 26.65%   81.920      2 Template:Mbox
+ 24.95%   76.698      1 Template:First_Time_User
+ 17.00%   52.278      1 Template:Stay_tuned
+ 11.47%   35.264      1 Template:Qubes_AppArmor
+  8.41%   25.849      1 Template:Known_bugs
+  7.63%   23.456      2 Template:Reflist
+  6.08%   18.687      2 Template:Footer
+  3.26%   10.019      1 Template:Header
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=38283" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=38283">https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=38283</a>"</div>
