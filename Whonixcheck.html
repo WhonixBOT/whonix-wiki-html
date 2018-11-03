@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonixcheck - Whonix
  url: ./Whonixcheck
- date: Fri Nov  2 08:19:57 2018
+ date: Sat Nov  3 08:18:57 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -166,11 +166,17 @@ Whonix requires payments to stay alive.
 </li>
 <li class="toclevel-1 tocsection-17"><a href="#Development"><span class="tocnumber">8</span> <span class="toctext">Development</span></a>
 <ul>
-<li class="toclevel-2 tocsection-18"><a href="#Use_Cases"><span class="tocnumber">8.1</span> <span class="toctext">Use Cases</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#Planned_Features"><span class="tocnumber">8.2</span> <span class="toctext">Planned Features</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Use_Cases"><span class="tocnumber">8.1</span> <span class="toctext">Use Cases</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Automated_Tests"><span class="tocnumber">8.1.1</span> <span class="toctext">Automated Tests</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Auto-start_Following_Boot"><span class="tocnumber">8.1.2</span> <span class="toctext">Auto-start Following Boot</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Manual_User_Start"><span class="tocnumber">8.1.3</span> <span class="toctext">Manual User Start</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-20"><a href="#Footnotes"><span class="tocnumber">9</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Planned_Features"><span class="tocnumber">8.2</span> <span class="toctext">Planned Features</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Footnotes"><span class="tocnumber">9</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -214,71 +220,112 @@ If you want to change this, use:
 </pre>
 <h1><span class="mw-headline" id="System_Checks">System Checks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=2.html" title="Edit section: System Checks">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>In all the checks below, whonixcheck warnings appear if a problem is detected. Conversely, whonixcheck output is otherwise quiet unless using the <code>--verbose</code> option. Any operating system updates, downloads or other network activity are <a data-href="/wiki/Stream_Isolation" href="./Stream_Isolation.html" title="Stream Isolation">stream-isolated</a> by default.
-</p><p><b>Clock Source</b>
+</p><p><b>Table:</b> <i>whonixcheck System Checks</i>
 </p>
-<ul><li>Check if the clock source is KVMClock and warn if that is the case. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li></ul>
-<p><b>Control Port Filter Proxy</b>
-</p>
-<ul><li>Check if <a class="mw-redirect" data-href="/wiki/Dev/CPFP" href="./Dev/CPFP.html" title="Dev/CPFP">Control Port Filter Proxy</a> is running.</li></ul>
-<p><b>Entropy Test</b>
-</p>
-<ul><li>An entropy availability check confirms <span style="border:1px dotted #005cb9">/proc/sys/kernel/random/entropy_avail</span> contains no less than 112 bytes.</li></ul>
-<p><b>Hostname</b>
-</p>
-<ul><li>Check if:
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Check</b>
+</th>
+<th scope="col"><b>Description</b>
+</th></tr>
+<tr>
+<th scope="row">Clock Source
+</th>
+<td>Check if the clock source is KVMClock and warn if that is the case. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</td></tr>
+<tr>
+<th scope="row">Control Port Filter Proxy
+</th>
+<td>Check if <a class="mw-redirect" data-href="/wiki/Dev/CPFP" href="./Dev/CPFP.html" title="Dev/CPFP">Control Port Filter Proxy</a> is running.
+</td></tr>
+<tr>
+<th scope="row">Entropy Test
+</th>
+<td>An entropy availability check confirms <span style="border:1px dotted #005cb9">/proc/sys/kernel/random/entropy_avail</span> contains no less than 112 bytes.
+</td></tr>
+<tr>
+<th scope="row">Hostname
+</th>
+<td>Check if:
 <ul><li><span style="border:1px dotted #005cb9">hostname --fqdn</span> outputs <span style="border:1px dotted #005cb9">host.localdomain</span>.</li>
 <li><span style="border:1px dotted #005cb9">hostname </span> outputs <span style="border:1px dotted #005cb9">host</span>.</li>
 <li><span style="border:1px dotted #005cb9">hostname --ip-address </span> outputs <span style="border:1px dotted #005cb9">127.0.0.1</span>.</li>
-<li><span style="border:1px dotted #005cb9">hostname --domain </span> outputs <span style="border:1px dotted #005cb9">localdomain</span>.</li></ul></li>
-<li>Inform if <a data-href="/wiki/Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix-APT-Repository</a> is enabled, and if so, which repository has been selected.</li></ul>
-<p><b>IP Address Routing</b>
+<li><span style="border:1px dotted #005cb9">hostname --domain </span> outputs <span style="border:1px dotted #005cb9">localdomain</span>.</li></ul>
+<p>Also inform if <a data-href="/wiki/Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix-APT-Repository</a> is enabled, and if so, which repository has been selected.
 </p>
-<ul><li>Check if IP forwarding is disabled on Whonix-Gateway (<code>sys-whonix</code>).</li></ul>
-<p><b>Log Inspection</b>
+</td></tr>
+<tr>
+<th scope="row">IP Address Routing
+</th>
+<td>Check if IP forwarding is disabled on Whonix-Gateway (<code>sys-whonix</code>).
+</td></tr>
+<tr>
+<th scope="row">Log Inspection
+</th>
+<td>When using the <code>--verbose</code> option, check if <span style="border:1px dotted #005cb9">~/.whonix/msgdispatcher-error.log</span> or <span style="border:1px dotted #005cb9">~/.whonix/whonix_torbrowser_updater_error.log</span> exist and report this if confirmed.
+</td></tr>
+<tr>
+<th scope="row">Meta-package Check
+</th>
+<td>Check if the relevant meta-packages <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> are installed on Whonix-Gateway (<code>sys-whonix</code>) or Whonix-Workstation (<code>anon-whonix</code>). Also see: <a data-href="/wiki/Whonix_Debian_Packages" href="./Whonix_Debian_Packages.html" title="Whonix Debian Packages">Whonix Debian Packages</a>.
+</td></tr>
+<tr>
+<th scope="row">Network Connection
+</th>
+<td>Check whonixsetup has properly configured networking.
+</td></tr>
+<tr>
+<th scope="row">Operating System Updates
+</th>
+<td><i>apt-get update</i> is run through a separate apt-get SocksPort for stream isolation. A notification is provided whether the system is up-to-date or requires updating.
+</td></tr>
+<tr>
+<th scope="row">Package Manager
+</th>
+<td>Check if a package manager is currently running and wait until the process is finished. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> This prevents connection failures during concurrent upgrades of the Tor or <a class="mw-redirect" data-href="/wiki/Dev/CPFP" href="./Dev/CPFP.html" title="Dev/CPFP">Control Port Filter Proxy</a> packages.
+</td></tr>
+<tr>
+<th scope="row">Tor
+</th>
+<td>Check:
+<ul><li>If Tor has been enabled by inspecting if <span style="border:1px dotted #005cb9">DisableNetwork 1</span> has been commented out from <span style="border:1px dotted #005cb9">/usr/local/etc/torrc.d/50_user.conf</span> either manually or via whonixsetup.</li>
+<li>If the Tor process (pid) is running on Whonix-Gateway (<code>sys-whonix</code>).</li>
+<li>The validity of Tor configuration files in Whonix-Gateway (<code>sys-whonix</code>) by using <span style="border:1px dotted #005cb9">sudo tor --verify-config</span>.</li></ul>
+<p>Notify about the Tor connection / IP address. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
-<ul><li>When using the <code>--verbose</code> option, check if <span style="border:1px dotted #005cb9">~/.whonix/msgdispatcher-error.log</span> or <span style="border:1px dotted #005cb9">~/.whonix/whonix_torbrowser_updater_error.log</span> exist and report this if confirmed.</li></ul>
-<p><b>Meta-package Check</b>
+</td></tr>
+<tr>
+<th scope="row">Tor Bootstrap and Browser Version
+</th>
+<td>Tor Bootstrap Status:
+<ol><li>Download <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a> with curl through an extra SocksPort.</li>
+<li>Download <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a> with curl through TransPort.</li></ol>
+<p>On Whonix-Workstation (<code>anon-whonix</code>), a <a data-href="/wiki/Stream_Isolation" href="./Stream_Isolation.html" title="Stream Isolation">Stream Isolation</a> test checks the IP addresses from (1) and (2) differ. <br/><br/>
+Tor Browser version:
 </p>
-<ul><li>Check if the relevant meta-packages <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> are installed on Whonix-Gateway (<code>sys-whonix</code>) or Whonix-Workstation (<code>anon-whonix</code>). Also see: <a data-href="/wiki/Whonix_Debian_Packages" href="./Whonix_Debian_Packages.html" title="Whonix Debian Packages">Whonix Debian Packages</a>.</li></ul>
-<p><b>Network Connection</b>
+<ul><li>Download <a class="external free" data-href="https://check.torproject.org/RecommendedTBBVersions" href="https://check.torproject.org/RecommendedTBBVersions" rel="noreferrer noopener" target="_blank">https://check.torproject.org/RecommendedTBBVersions</a> with curl through an extra SocksPort.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Virtualization Platform
+</th>
+<td>Check Whonix is being run on one of the supported virtualizer platforms, including bare metal (<a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>), <a data-href="/wiki/VirtualBox" href="./VirtualBox.html" title="VirtualBox">VirtualBox</a>, <a data-href="/wiki/KVM" href="./KVM.html" title="KVM">KVM</a> or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a>.
+</td></tr>
+<tr>
+<th scope="row">Whonix Version and News
+</th>
+<td><a data-href="/wiki/Download#Whonix_Version_Check_and_Whonix_News" href="./Download.html" title="Download">Download the Whonix version and Whonix news</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+<p>Download Whonix News Files with curl through an extra Whonix news SocksPort. This check is designed to be functional:
 </p>
-<ul><li>Check whonixsetup has properly configured networking.</li></ul>
-<p><b>Operating System Updates</b>
-</p>
-<ul><li><i>apt-get update</i> is run through a separate apt-get SocksPort for stream isolation. A notification is provided whether the system is up-to-date or requires updating.</li></ul>
-<p><b>Package Manager</b>
-</p>
-<ul><li>Check if a package manager is currently running and wait until the process is finished. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> This prevents connection failures during concurrent upgrades of the Tor or <a class="mw-redirect" data-href="/wiki/Dev/CPFP" href="./Dev/CPFP.html" title="Dev/CPFP">Control Port Filter Proxy</a> packages.</li></ul>
-<p><b>Tor</b>
-</p>
-<ul><li>Check if Tor has been enabled by inspecting if <span style="border:1px dotted #005cb9">DisableNetwork 1</span> has been commented out from <span style="border:1px dotted #005cb9">/usr/local/etc/torrc.d/50_user.conf</span> either manually or via whonixsetup.</li>
-<li>Check if the Tor process (pid) is running on Whonix-Gateway (<code>sys-whonix</code>).</li>
-<li>Check the validity of Tor configuration files in Whonix-Gateway (<code>sys-whonix</code>) by using <span style="border:1px dotted #005cb9">sudo tor --verify-config</span>.</li>
-<li>Notify about the Tor connection / IP address. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup></li></ul>
-<p><b>Tor Bootstrap and Browser Version</b>
-</p>
-<ul><li>Tor Bootstrap Status:
-<ul><li>(1) Download <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a> with curl through an extra SocksPort.</li>
-<li>(2) Download <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a> with curl through TransPort.</li></ul></li>
-<li>On Whonix-Workstation (<code>anon-whonix</code>), a <a data-href="/wiki/Stream_Isolation" href="./Stream_Isolation.html" title="Stream Isolation">Stream Isolation</a> test checks the IP addresses from (1) and (2) differ.</li>
-<li>Tor Browser version:
-<ul><li>Download <a class="external free" data-href="https://check.torproject.org/RecommendedTBBVersions" href="https://check.torproject.org/RecommendedTBBVersions" rel="noreferrer noopener" target="_blank">https://check.torproject.org/RecommendedTBBVersions</a> with curl through an extra SocksPort.</li></ul></li></ul>
-<p><b>Virtualization Platform</b>
-</p>
-<ul><li>Check Whonix is being run on one of the supported virtualizer platforms, including bare metal (<a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>), <a data-href="/wiki/VirtualBox" href="./VirtualBox.html" title="VirtualBox">VirtualBox</a>, <a data-href="/wiki/KVM" href="./KVM.html" title="KVM">KVM</a> or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a>.</li></ul>
-<p><b>Whonix Version and News</b>
-</p>
-<ul><li><a data-href="/wiki/Download#Whonix_Version_Check_and_Whonix_News" href="./Download.html" title="Download">Download the Whonix version and Whonix news</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
-<ul><li>Download Whonix News Files with curl through an extra Whonix news SocksPort.</li></ul></li>
-<li>This check is designed to be functional:
 <ul><li>If the Whonix repository is down or has changed.</li>
-<li>For users who have disabled <a data-href="/wiki/Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix-APT-Repository</a> permanently or only enable it intermittently.</li></ul></li>
-<li>News features:
+<li>For users who have disabled <a data-href="/wiki/Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix-APT-Repository</a> permanently or only enable it intermittently.</li></ul>
+<p>News features:
+</p>
 <ul><li>The <a data-href="/wiki/Dev/News" href="./Dev/News.html" title="Dev/News">Whonix News Format</a> only reports the most important news for those not following Whonix developments. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li>
 <li>The Whonix version and news file is cryptographically signed by lead Whonix developer Patrick Schleizer.</li>
 <li>Patrick's GPG key is copied to <span style="border:1px dotted #005cb9">whonix_shared/usr/share/whonix/keys/whonix-keys.d/</span> at build time.</li>
 <li>A warning appears if the file can not be GPG-verified with Patrick's OpenPGP key. In that instance the version information and news is ignored.</li>
-<li>Messages signed more than one month in the past are rejected and the user is informed the message is no longer valid.</li></ul></li></ul>
+<li>Messages signed more than one month in the past are rejected and the user is informed the message is no longer valid.</li></ul>
+</td></tr></tbody></table>
 <h1><span class="mw-headline" id="Version_Numbers">Version Numbers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=3.html" title="Edit section: Version Numbers">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Whonix_Build_Version">Whonix Build Version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=4.html" title="Edit section: Whonix Build Version">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The version number of the Whonix build never changes. This is acceptable because at build time <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> the current Whonix version number is added to the image itself. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> 
@@ -366,23 +413,23 @@ $output ${output_opts[@]} --messagecli --typecli "warning" --message "$MSG"
 <h1><span class="mw-headline" id="Silent_Mode">Silent Mode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=15.html" title="Edit section: Silent Mode">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><b>Table:</b> <i>whonixcheck Default Operation</i>
 </p>
-<table class="wikitable" style="background-color: #fff;text-align: center">
+<table class="wikitable">
 <tbody><tr>
-<th>
+<th scope="col"><b>Category</b>
 </th>
-<th>Whonix-Gateway
+<th scope="col"><b>Whonix-Gateway</b>
 </th>
-<th>Whonix-Workstation
+<th scope="col"><b>Whonix-Workstation</b>
 </th></tr>
 <tr>
-<th>Runs after boot (autostart mode)
+<th scope="row">Runs after boot (autostart mode)
 </th>
 <td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </td>
 <td style="background-color: #FF9090">No  <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </td></tr>
 <tr>
-<th>Runs regularly during Whonix operation (daemon mode)
+<th scope="row">Runs regularly during Whonix operation (daemon mode)
 </th>
 <td style="background-color: #FF9090">No <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
 </td>
@@ -390,51 +437,50 @@ $output ${output_opts[@]} --messagecli --typecli "warning" --message "$MSG"
 </td></tr></tbody></table>
 <p><b>Table:</b> <i>whonixcheck Notification Matrix</i>
 </p>
-<table class="wikitable" style="background-color: #fff;text-align: center">
+<table class="wikitable">
 <tbody><tr>
-<th><u>Circumstance</u>
+<th scope="col"><b>Circumstance</b>
 </th>
-<th><u>Notification</u>
+<th scope="col"><b>Notification</b>
 </th></tr>
 <tr>
-<th>Tor bootstrapping completes promptly <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+<th scope="row">Tor bootstrapping completes promptly <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
 </th>
-<th>"Connected to Tor" passive popup only
-</th></tr>
+<td>"Connected to Tor" passive popup only
+</td></tr>
 <tr>
-<th>Tor bootstrapping is incomplete
+<th scope="row">Tor bootstrapping is incomplete
 </th>
-<th>"Connecting to Tor" passive popup and successful "Connected to Tor" passive popup when finished, or an active error popup with advice when it fails
-</th></tr>
+<td>"Connecting to Tor" passive popup and successful "Connected to Tor" passive popup when finished, or an active error popup with advice when it fails
+</td></tr>
 <tr>
-<th>Grave issue <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> found
+<th scope="row">Grave issue <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> found
 </th>
-<th>Active error popup with advice
-</th></tr>
+<td>Active error popup with advice
+</td></tr>
 <tr>
-<th>No grave issue found
+<th scope="row">No grave issue found
 </th>
-<th>No GUI output
-</th></tr>
+<td>No GUI output
+</td></tr>
 <tr>
-<th>Manual run of whonixcheck
+<th scope="row">Manual run of whonixcheck
 </th>
-<th>Then <code>silent</code> is set to <code>0</code>, resulting in a progress bar and run of all tests <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> and active popup with results when complete
-</th></tr></tbody></table>
+<td>Then <code>silent</code> is set to <code>0</code>, resulting in a progress bar and run of all tests <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> and active popup with results when complete
+</td></tr></tbody></table>
 <h2><span class="mw-headline" id="Other_Silent_Mode_Settings">Other Silent Mode Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=16.html" title="Edit section: Other Silent Mode Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>whonixcheck was specifically made more silent to suit the Qubes AppVM design:
 </p>
 <ul><li>When autostarted (after boot): <code>silent=3</code></li>
 <li>Daemon mode (planed iteration during run): <code>silent=3</code></li>
 <li>Silent only applies to autostart and daemon mode. When it is manually run, all messages are shown. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup></li></ul>
-<p><br/>
-<b>Table:</b> <i>Silent Level Overview</i>
+<p><b>Table:</b> <i>Silent Level Overview</i>
 </p>
 <table class="wikitable">
 <tbody><tr>
-<th>Silent Level
+<th><b>Silent Level</b>
 </th>
-<th>Action
+<th><b>Action</b>
 </th></tr>
 <tr>
 <td>Silent &lt;= 0
@@ -484,29 +530,28 @@ $output ${output_opts[@]} --messagecli --typecli "warning" --message "$MSG"
 <h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=17.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Use_Cases">Use Cases</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=18.html" title="Edit section: Use Cases">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>whonixcheck has specific use cases when it should be run either manually or automatically.
-</p><p><b>Automated Tests</b>
 </p>
-<ul><li>Run after automatic boot by an automated test suite.</li></ul>
-<p><b>Auto-start Following Boot</b>
+<h3><span class="mw-headline" id="Automated_Tests">Automated Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=19.html" title="Edit section: Automated Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Run after automatic boot by an automated test suite.
 </p>
-<ul><li>To provide connectivity progress information (Tor bootstrap check), with the familiar "in progress...", "done" (or failed) messages.</li>
-<li>As a general sanity check, for instance: the gateway is a ProxyVM and not an AppVM, IP forwarding is disabled, the clock is sane, and much more.</li></ul>
-<p><b>Manual User Start</b>
-</p>
-<ul><li>Connection functionality test.</li>
+<h3><span class="mw-headline" id="Auto-start_Following_Boot">Auto-start Following Boot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=20.html" title="Edit section: Auto-start Following Boot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ol><li>To provide connectivity progress information (Tor bootstrap check), with the familiar "in progress...", "done" (or failed) messages.</li>
+<li>As a general sanity check, for instance: the gateway is a ProxyVM and not an AppVM, IP forwarding is disabled, the clock is sane, and much more.</li></ol>
+<h3><span class="mw-headline" id="Manual_User_Start">Manual User Start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=21.html" title="Edit section: Manual User Start">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ol><li>Connection functionality test.</li>
 <li>Connection leak test.</li>
 <li>General sanity check.</li>
 <li>General system security and anonymity check.</li>
 <li>As an information gathering tool, for example reporting the Whonix Debian package and build version (build version requires the <code>--verbose</code> option).</li>
 <li>VPN / tunnel functionality test.</li>
-<li>To educate users that stream isolation is broken when adding a VPN.</li></ul>
-<h2><span class="mw-headline" id="Planned_Features">Planned Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=19.html" title="Edit section: Planned Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<li>To educate users that stream isolation is broken when adding a VPN.</li></ol>
+<h2><span class="mw-headline" id="Planned_Features">Planned Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=22.html" title="Edit section: Planned Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>When an error occurs, provide: <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
 </p>
 <ul><li>A short error message.</li>
 <li>A separate help button which opens advice relating to the problem.</li>
 <li>A separate technical details drop-down button which contains debugging information.</li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=20.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;action=edit&amp;section=23.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Tor Browser in Whonix is configured to load a local Whonix resource after launch -- the familiar landing page.</span>
@@ -605,7 +650,7 @@ The <a class="external text" data-href="https://github.com/Whonix/anon-shared-bu
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonixcheck" href="./Whonixcheck" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonixcheck" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonixcheck" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -617,35 +662,35 @@ The <a class="external text" data-href="https://github.com/Whonix/anon-shared-bu
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181008215607
+Cached time: 20181103045411
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.180 seconds
-Real time usage: 0.203 seconds
-Preprocessor visited node count: 901/1000000
-Preprocessor generated node count: 2631/1000000
+CPU time usage: 0.168 seconds
+Real time usage: 0.206 seconds
+Preprocessor visited node count: 915/1000000
+Preprocessor generated node count: 2647/1000000
 Post‐expand include size: 8337/2097152 bytes
 Template argument size: 1291/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 14210/5000000 bytes
+Unstrip post‐expand size: 14319/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  114.389      1 -total
- 34.33%   39.270      1 Template:Reflist
- 16.95%   19.384      1 Template:Footer
-  9.63%   11.011      1 Template:Header
-  9.15%   10.469      3 Template:CodeSelect
-  7.89%    9.023      1 Template:Running_Whonixcheck
-  6.69%    7.652      1 Template:FooterLight
-  6.27%    7.167      1 Template:Box
-  5.05%    5.779      1 Template:Footer_this_is_a_wiki
-  4.04%    4.625      1 Template:Share
+100.00%  127.851      1 -total
+ 24.47%   31.285      1 Template:Reflist
+ 17.78%   22.727      1 Template:Header
+ 17.01%   21.749      1 Template:Footer
+  9.48%   12.120      3 Template:CodeSelect
+  9.09%   11.623      1 Template:Running_Whonixcheck
+  7.17%    9.166      1 Template:Box
+  6.89%    8.815      1 Template:FooterLight
+  4.74%    6.066      1 Template:Footer_this_is_a_wiki
+  3.91%    4.995      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=37195" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=37195">https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=37195</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=38921" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=38921">https://www.whonix.org/w/index.php?title=Whonixcheck&amp;oldid=38921</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -656,7 +701,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonixche
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 29 September 2018, at 08:06.</li>
+<li id="footer-lastmod"> This page was last edited on 3 November 2018, at 02:37.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -671,5 +716,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonixche
 </div>
 
 </body>
-<!-- Cached/compressed 20181008215607 -->
+<!-- Cached/compressed 20181103045411 -->
 </html>
