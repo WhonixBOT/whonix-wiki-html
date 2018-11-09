@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Tor Entry Guards - Whonix
+ url: ./Tor_Entry_Guards
+ date: Fri Nov  9 08:12:08 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Tor Entry Guards - Whonix</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Tor Entry Guards, Alternate Configurations, Fingerprinting Risks" name="description"/>
+<meta content="Tor Entry Guards, Alternate Configurations, Fingerprinting Risks" name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Tor Entry Guards" property="og:title"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Tor_Entry_Guards" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="Tor Entry Guards, Alternate Configurations, Fingerprinting Risks" property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tor_Entry_Guards rootpage-Tor_Entry_Guards skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="./Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Tor_Entry_Guards" href="./Tor_Entry_Guards.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Tor_Entry_Guards&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Tor_Entry_Guards&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=history" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Tor Entry Guards</h1>
+<h5 class="subtitle" id="siteSub"></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<table class="wikitable" style="background-color: #fff;text-align: center">
+<tbody><tr>
+<th colspan="2">About this <i><span style="background-color:#FBFBFB">Tor Entry Guards</span></i> Page
+</th></tr>
+<tr>
+<th>Support Status
+</th>
+<th>stable
+</th></tr>
+<tr>
+<th>Difficulty
+</th>
+<th>easy
+</th></tr>
+<tr>
+<th><a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">Maintainer</a>
+</th>
+<th><a class="external text" data-href="https://forums.whonix.org/users/0brand" href="https://forums.whonix.org/users/0brand" rel="noreferrer noopener" target="_blank">0brand</a>
+</th></tr>
+<tr>
+<th>Support
+</th>
+<th><a data-href="/wiki/Support" href="./Support.html" title="Support">Support</a>
+</th></tr>
+</tbody></table>
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Guard_Fingerprinting"><span class="tocnumber">1.1</span> <span class="toctext">Guard Fingerprinting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-2"><a href="#Manual_Rotation_of_Tor_Guards"><span class="tocnumber">2</span> <span class="toctext">Manual Rotation of Tor Guards</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Anonymity_and_Performance-related_Issues"><span class="tocnumber">2.1</span> <span class="toctext">Anonymity and Performance-related Issues</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Manual_Guard_Rotation_Threats"><span class="tocnumber">2.2</span> <span class="toctext">Manual Guard Rotation Threats</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Recommendations"><span class="tocnumber">2.3</span> <span class="toctext">Recommendations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Mitigate_the_Threat_of_Guard_Fingerprinting"><span class="tocnumber">3</span> <span class="toctext">Mitigate the Threat of Guard Fingerprinting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Clone_Whonix-Gateway_.28sys-whonix.29_with_New_Entry_Guards"><span class="tocnumber">3.1</span> <span class="toctext">Clone Whonix-Gateway (sys-whonix) with New Entry Guards</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Regenerate_the_Tor_State_After_Saving_the_Tor_State_Folder"><span class="tocnumber">3.2</span> <span class="toctext">Regenerate the Tor State After Saving the Tor State Folder</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Alternating_Bridges"><span class="tocnumber">3.3</span> <span class="toctext">Alternating Bridges</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Copy_Tor_Configuration_files_and_Settings_to_Another_sys-whonix_Instance"><span class="tocnumber">3.4</span> <span class="toctext">Copy Tor Configuration files and Settings to Another sys-whonix Instance</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Copy_Tor_State_Files_to_Another_sys-whonix_Instance"><span class="tocnumber">3.4.1</span> <span class="toctext">Copy Tor State Files to Another sys-whonix Instance</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Copy_Tor_Configuration_Options_.28torrc.29_to_Another_sys-whonix"><span class="tocnumber">3.4.2</span> <span class="toctext">Copy Tor Configuration Options (torrc) to Another sys-whonix</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Unsafe_Guard_Rotation_Methods"><span class="tocnumber">4</span> <span class="toctext">Unsafe Guard Rotation Methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Fresh_Tor_Entry_Guards_by_Regenerating_the_Tor_State_File"><span class="tocnumber">4.1</span> <span class="toctext">Fresh Tor Entry Guards by Regenerating the Tor State File</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Configure_Non-Persistent_Entry_Guards"><span class="tocnumber">4.2</span> <span class="toctext">Configure Non-Persistent Entry Guards</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Notes"><span class="tocnumber">5</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#License"><span class="tocnumber">7</span> <span class="toctext">License</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>What are Tor Entry Guards? If this is an unfamiliar term, please press on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>
+Current practical, low-latency, anonymity designs like Tor fail when the attacker can see both ends of the communication channel. For example, suppose the attacker controls or watches the Tor relay a user chooses to enter the network, and also controls or watches the website visited. In this case, the research community is unaware of any practical, low-latency design that can reliably prevent the attacker from correlating volume and timing information on both ends.
+</p>
+<p>
+Mitigating this threat requires consideration of the Tor network topology. Suppose the attacker controls, or can observe, <i>C</i> relays from a pool of <i>N</i> total relays. If a user selects a new entry and exit relay each time the Tor network is used, the attacker can correlate all traffic sent with a probability of <i>(c/n)<sup>2</sup></i>. For most users, profiling is as hazardous as being traced all the time. Simply put, users want to repeat activities without the attacker noticing, but being noticed once by the attacker is as detrimental as being noticed more frequently. [...]
+</p>
+<p>
+The solution to this problem is "entry guards". Each Tor client selects a few relays at random to use as entry points, and only uses those relays for the first hop. If those relays are not controlled or observed, the attacker can't use end-to-end techniques and the user is secure. If those relays <i>are</i> observed or controlled by the attacker, then they see a larger <i>fraction</i> of the user's traffic — but still the user is no more profiled than before. Thus, entry guards increase the user's chance of avoiding profiling (on the order of <i>(n-c)/n</i>), compared to the former case.
+</p>
+<p>
+You can read more at <a class="external text" data-href="http://freehaven.net/anonbib/#wright02" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">An Analysis of the Degradation of Anonymous Protocols</a>, <a class="external text" data-href="http://freehaven.net/anonbib/#wright03" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">Defending Anonymous Communication Against Passive Logging Attacks</a>, and especially <a class="external text" data-href="http://freehaven.net/anonbib/#hs-attack06" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">Locating Hidden Servers</a>.
+</p>
+<p>
+Restricting entry nodes may also help to defend against attackers who want to run a few Tor nodes and easily enumerate all of the Tor user IP addresses. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> However, this feature won't become really useful until Tor moves to a "directory guard" design as well.
+</p>
+<p>Source and License, see footnote: <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+</div>
+</div>
+</div>
+<p>Many well known enhanced anonymity designs such as Tor, Whonix and the Tor Browser Bundle (TBB) use persistent Tor guards. This decision is attributable to community-based research which demonstrates that persistent Tor entry guards benefit security and lower the probability of an adversary profiling a user.<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Note:</b> Guard fingerprinting techniques are similar to methods that track users via MAC addresses. If this is a realistic threat, then MAC address randomization is also recommended.</div></td></tr></tbody></table>
+<p><br/>
+In general, users should not interfere with Tor guard persistence or the natural rotation of entry guards every few months. At the time of writing, the Tor client selects one guard node, but previously used a three-guard design. Guards have a primary lifetime of 120 days.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> In some situations it is safer to not use the usual guard relay!</div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Guard_Fingerprinting">Guard Fingerprinting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Persistent_Tor_Entry_Guards_Introduction&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Persistent_Tor_Entry_Guards_Introduction&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While natural guard rotation is recommended, there are some corner cases in which an adversary could fingerprint the entry guards <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> and de-anonymize a user. For instance:
+</p>
+<ul><li>The same entry guards are used across various physical locations and access points.</li>
+<li>The same entry guards are used after permanently moving to a different physical location.</li></ul>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For details on how this is possible, press Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>Consider the following scenario. A user connects to Tor via a laptop at their home address. An advanced adversary has observed the client-to-guard-node network path to discover the user's entry point to the Tor network.
+</p><p>Soon afterwards, the same user attends a prominent event or protest in a nearby city. At that location, the user decides to anonymously blog about what transpired using the same laptop. This is problematic for anonymity, as the Tor client is using the same entry guard normally correlated with the user’s home address.
+</p><p>To understand the potential threat, consider the following:
+</p>
+<ul><li>There are only around 2,500 Tor guards in 2018. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li>By design, Tor is picking one primary guard and using it for a few months. Since the Tor user base is relatively small, it is possible that a guard might only be used by one person in an entire region.</li>
+<li>As the IP address of Tor entry guards is static and Tor network traffic is easily distinguishable, this information becomes public knowledge.</li>
+<li>It is feasible that if a user-guard relationship is unique in a city location, and that user moves, it is likely (but not certain) that there was a location change.</li>
+<li>At the event, the user might be the only one using Tor (or among a handful).</li>
+<li>If the user posts about the event <i>and</i> an adversary who is passively monitoring network traffic conducts the same successful observation of the client-to-guard network path, then it’s likely the "anonymous" posts will be linked with the same person who normally connects to that guard at home.</li></ul>
+<p>The relative uncommonness of Tor usage simply exacerbates the potential for de-anonymization.
+</p>
+</div>
+</div>
+<p>There are several ways to mitigate the risk of guard fingerprinting across different physical locations. In most cases, the original entry guards can also be re-established after returning home:
+</p>
+<ul><li><a data-href="/wiki/Tor_Entry_Guards#Clone_Whonix-Gateway_.28sys-whonix.29_with_New_Entry_Guards" href="./Tor_Entry_Guards.html" title="Tor Entry Guards">Clone Whonix-Gateway (sys-whonix) with New Entry Guards</a>.</li>
+<li><a data-href="/wiki/Tor_Entry_Guards#Regenerate_the_Tor_State_After_Saving_the_Tor_State_Folder" href="./Tor_Entry_Guards.html" title="Tor Entry Guards">Regenerate the Tor State File after Saving the Current Tor State</a>.</li>
+<li>Configure Tor to use <a data-href="/wiki/Tor_Entry_Guards#Alternating_Bridges" href="./Tor_Entry_Guards.html" title="Tor Entry Guards">Alternating Bridges</a>.</li>
+<li>If moving to a new location permanently, create <a data-href="/wiki/Tor_Entry_Guards#Fresh_Tor_Entry_Guards_by_Regenerating_the_Tor_State_File" href="./Tor_Entry_Guards.html" title="Tor Entry Guards">Fresh Tor Entry Guards by Regenerating the Tor State File</a>.</li></ul>
+<p>Forum discussion:<br/>
+<a class="external free" data-href="https://forums.whonix.org/t/persistent-tor-entry-guard-relays-can-make-you-trackable-across-different-physical-locations/2090" href="https://forums.whonix.org/t/persistent-tor-entry-guard-relays-can-make-you-trackable-across-different-physical-locations/2090" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/persistent-tor-entry-guard-relays-can-make-you-trackable-across-different-physical-locations/2090</a>
+</p><p><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p>
+<h1><span class="mw-headline" id="Manual_Rotation_of_Tor_Guards">Manual Rotation of Tor Guards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=2.html" title="Edit section: Manual Rotation of Tor Guards">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Anonymity_and_Performance-related_Issues">Anonymity and Performance-related Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=3.html" title="Edit section: Anonymity and Performance-related Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Users may be tempted to create a new Whonix-Gateway (<code>sys-whonix</code>) in the following circumstances:
+</p>
+<ul><li>Bootstrapping is slow or regularly fails.</li>
+<li>Tor logs show warnings suggestive of route manipulation attacks or other oddities.</li>
+<li>System logs reveal attempted attacks on Whonix or Tor processes, for example in AppArmor logs.</li>
+<li>Current Tor performance is very slow or unreliable due to collapsing circuits or other factors.</li>
+<li>The user is concerned about the amount of Tor data that could be revealed if Whonix-Gateway is infected, particularly after a long period of use.</li></ul>
+<p>Creating a new Whonix-Gateway (<code>sys-whonix</code>) will <i>likely</i> lead to a new set of Tor entry guards, which is <a class="external text" data-href="https://blog.torproject.org/improving-tors-anonymity-changing-guard-parameters" href="https://blog.torproject.org/improving-tors-anonymity-changing-guard-parameters" rel="noreferrer noopener" target="_blank">proven to degrade anonymity</a>. 
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAYAAADmOUiuAAAHT0lEQVRYw82XCVBTVxSGQwyIuMCAwUgQkM2wJAGiAYxSRUFwG0brnjJQqmIEgYJWx22qWJSWCmLB0aqtFpC27uIuYEUtAoJaxLogSAVcEBAVMYXTc5+89BFZFKj2zvyTmfdu3vvy33v+c8NiddOYp6sbf0ksboiTSFL8/f2NLCwsOKz/y7Bjs73KR4+G5xMnwsOxY2G1j8/OwMBAga6uLvuDwyGBVpKFRSGBo5UulT4PDwlZ5OXlpfd6Spff0Xl59OwZVD1uHDybMEGlWm9v+NrT8/yiRYuG8/l8Thff0fkv67BY+pkiURUTjtZlFxfl4sDAtdOnTzfU0ND4MIAB/frF1bUCR2uLm1tRaGiol0Ag0OoKYKeGIYslKHJ1VTL3Hi0CVzd+PNwcPhyW+vom+vn5mWlpab3fglnH46W1BfYU92AN7ssnHh6QLJVWfB4WNlMqleq8NzhbRqyoNGUKvExIgFofH6j29IQqjJtHY8ZAsasrrJwyZS/Gjm3fvn3Z7yNWOMxYoV1rSEoCMupTUuAxgj10d4cHo0ZBhZsbHBaL68JDQxUeHh79uiN22h1jtbSoWGmxpHI5NL54AQ8ePIC/8fPxzJlQ+dFHUD5yJPw1YgQUOzvDV56eZ4ODg114PB7nP8vBXoxYYe612zt2ALY2wDlgZmYG+fHxcB/hymQyKMUlLkHA0zY2ysUKxYqpU6e+a+y8PeCnJFYQjKjWy4vaa7UKBUSuWUPB0ZLPmQOVAQFQ6uICd6VSuDNsGNySSGCjTHYNY8fTyspKq9tjhsTKdWdnJbNCH2MhvCoogCVLlrQAHI8/oD4/H4oR7vbQoXDTyQluODjAOSsr+MLfP97X19dEU1Oze/fi2gED0mjX6AqtWbmSKox4XFIm4MKFC6nr5RER8KejI9wQi+G6SAR/2NvDVrG4LCws7GOJRKLdrbFSinuKco2uUIRUlpVRIJmZmS0At27dSl1vKC2FIlzaQqEQrtnZwRUbG7hgbg7Lp01LnT9/vqB3797sLhcJiZVdZmaFtGsPMf9Ihdaia01NTZSePn0KPXr0UAFevXpVda98/Xq4amsLBQh3ecgQyMNl3m1pWR0eFvaZu7t7vy7vwTEYKxWYZ8xcq8AqbqytBeZwxKUkcHp6etDY2Ki6rqyuhmu4Fy9bW0OupSVcQgezTE3hy3HjzgQFBQ3lcrmcTjtIYuWkQFBFu0bnWl1qqsohWphxFOAEhFe/V7l9O+RgDGUj3EWMofMmJpBqZNQQERS01MfHp3+nY8avT584AkZcu49gJNfKZ8yAplev3oDYs2cPBRgVFfXGvcaGBijA51xA584PGgTn+HzIHDgQ1ru65oeEhLibm5tz3nmJSazkicVK2rV7eDIpwVx7fvYstDZKsSAIYHp6eqv3Hx05AlnGxvBbM1z6gAGwV1+/cUlAQIxcLjfGPcx+pyVebWCQRrtGd4PyBQsoR1ob5LqBgQFUVla2eT9/8mTI4PHgjKEhnOZy4STOj7W1vYux4+Pg4KD91g7aaGh4knigXaO6AeplURG0N7Aq2/wBZNTk5FBwp/r3hxMIdxy1H4tq2YwZu+fOnWvdq1cvdocOklj5ns8vpF2ju0Hl6tVv7C11ZWRkdDjnCrZAAnZcXx+OoY6iEk1MqvDM6Ofm5tanQwfdNTUVt7B3MnvoLXRSiSeV7hjPS0rgBO7BowiZhjqCOoCQq7y9T2AHcsJtwm7TQRIrhwcPripGMGYPfZSY2KEzycnJgCcViIyMBKVS2e7colWrVHCHUYdQ2w0N6yOCgyMmTZqk36aDn+joxBEw4hrpoUXYQ29iByFnvfZeqN7qYmJi2p3/qqYGTmBwH8K9eBB1ALUPISNlshyMHTdTU1NOq7GSZW2tpF0jcKSHPtm/v8Nli46ObgFInOxoFGO/puH2E0DUjyR25s3bMGvWLCM2m81uscTL9fTSaNfok8dN/H/RxGhbbY3c3FzA56kAY2NjO/xOI4b9SVwtArYX9SvGzi/4GS0S3cHYmSwUCrVVS0xiJQ+bOe0affK4gblVf+cOvLx3j1K9uvA0Q2vftm3gj/O3rFsHL8i1+/f/VXn5a1VUqPQMg/0UZuxeBKPgUD+jdmPBLJ09e2dAQICltrY2m/oTlMDlFtKuUScPgUB18lDvoerdgASuKtcY0ZGGYhbBQVKtJPeal5NyDUVcI2CpqD2oFNRGc/NHGDtymUymwxrN4SgKEIp2LZ/AMU4evw8eTPXQrOYeetbISNUNCNjJ5sA91ixmfFBwjEJQwam5RsHh81JQyahdOGfFxImHFQqFiJXE41W06hqCvU/XklFJqJ8QcDdqk7FxXXh4+DzWD1xuGXEtrzOuMeE6cq01OIZrSSgabhcB5PPrIyIioliDWKyhG+zskhIkkgzUxQQnp4vfETk6Zm92cMjeLBZnxxOJRNnxQmH2JiJ7++w4e/scdcUS2dnRytuopm9bKj/G1lalbxiKFgpzlsnl29HB2f8AQvkHoInKWyIAAAAASUVORK5CYII=" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> Users considering using disposable Whonix-Gateway ProxyVMs in Qubes R4 are <a data-href="/wiki/Qubes/DisposableVM#Warning:_Avoid_Ephemeral_Whonix-Gateway_ProxyVMs_in_Qubes_R4" href="./Qubes/DisposableVM.html" title="Qubes/DisposableVM">warned</a> that this technique severely degrades anonymity; <u>new Tor guards are created during each distinct Whonix session.</u></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Manual_Guard_Rotation_Threats">Manual Guard Rotation Threats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=4.html" title="Edit section: Manual Guard Rotation Threats">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Forcing the rotation of guards more often than Tor’s default is dangerous for several reasons:
+</p>
+<ul><li>It increases the likelihood of a compromised or malicious Tor guard being selected. This raises the chance of a successful <a class="external text" data-href="https://securityaffairs.co/wordpress/17489/intelligence/traf%EF%AC%81c-correlation-vs-anonymity-on-tor.html" href="https://securityaffairs.co/wordpress/17489/intelligence/traf%EF%AC%81c-correlation-vs-anonymity-on-tor.html" rel="noreferrer noopener" target="_blank">correlation attack</a> if the adversary runs Tor exit relays in the network.</li>
+<li>The user is more likely to traverse a <a class="external text" data-href="http://freehaven.net/anonbib/#feamster:wpes2004" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">given</a> <a class="external text" data-href="http://freehaven.net/anonbib/#DBLP:conf:ccs:EdmanS09" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">set</a> of <a class="external text" data-href="http://freehaven.net/anonbib/#ndss13-relay-selection" href="http://freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">Internet infrastructure links</a> that are under the adversary's control, such as <a class="external text" data-href="http://web.mit.edu/6.033/www/papers/InterdomainRouting.pdf" href="http://web.mit.edu/6.033/www/papers/InterdomainRouting.pdf" rel="noreferrer noopener" target="_blank">Autonomous Systems (ASes)</a> or <a class="external text" data-href="https://www.itu.int/en/wtpf-13/Documents/backgrounder-wtpf-13-ixps-en.pdf" href="https://www.itu.int/en/wtpf-13/Documents/backgrounder-wtpf-13-ixps-en.pdf" rel="noreferrer noopener" target="_blank">Internet Exchange Points (IXPs)</a>.</li>
+<li>Every Tor guard change acts like a fingerprinting mechanism, since other users are less likely to pick the same set. If the adversary is able to enumerate a user's Tor guards and later observes someone with the same set, the chance is high the two observations stem from the same person.</li></ul>
+<p>For these reasons the Tor design changed in 2014 to establish a solitary primary guard node, while also increasing the set period for guard rotation. Also, do not discount the possibility that an adversary might purposefully cause poor Tor throughput, in the hope Tor guards are manually changed: <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p>
+<blockquote><p>We should also consider whether an adversary can *induce* congestion or resource exhaustion to cause a target user to switch away from her guard. Such an attack could work very nicely coupled with the guard enumeration attacks discussed above.</p></blockquote>
+<p>In one sense, slow Tor entry guards should be welcomed - “honeypot” operators on the Tor network are unlikely to have constrained bandwidth which might chase away intended targets.
+</p>
+<h2><span class="mw-headline" id="Recommendations">Recommendations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=5.html" title="Edit section: Recommendations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If users feel compelled in their circumstances to proceed despite the anonymity risks, then it may be safer to first try:
+</p>
+<ul><li>One of the fallback primary entry guards.</li>
+<li>A configured <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">bridge</a>.</li>
+<li>Chaining other <a data-href="/wiki/Tunnels/Introduction" href="./Tunnels/Introduction.html" title="Tunnels/Introduction">tunnels</a> with Tor.</li>
+<li>Creating a fresh Whonix-Gateway (<code>sys-whonix</code>) and <a href="#Copy_Tor_Configuration_files_and_Settings_to_Another_sys-whonix_Instance">copying across the Tor state file</a>.</li></ul>
+<p>The safest decision is to persist with poor performance and wait for normal guard rotation.
+</p>
+<h1><span class="mw-headline" id="Mitigate_the_Threat_of_Guard_Fingerprinting">Mitigate the Threat of Guard Fingerprinting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=6.html" title="Edit section: Mitigate the Threat of Guard Fingerprinting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>If guard fingerprinting across different locations is a legitimate concern, there are several ways to mitigate the threat. Viable options include: bridges, temporarily rotating guards or cloning Whonix-Gateway (<code>sys-whonix</code>) with new guards.
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Note:</b> Weigh the fingerprinting risks outlined earlier before proceeding. In most cases the decision to not rotate guards (even temporarily) is the correct one.</div></td></tr></tbody></table>
+<h2><span id="Clone_Whonix-Gateway_(sys-whonix)_with_New_Entry_Guards"></span><span class="mw-headline" id="Clone_Whonix-Gateway_.28sys-whonix.29_with_New_Entry_Guards">Clone Whonix-Gateway (sys-whonix) with New Entry Guards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=7.html" title="Edit section: Clone Whonix-Gateway (sys-whonix) with New Entry Guards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is possible to clone the current Whonix-Gateway (<code>sys-whonix</code>) and regenerate the Tor state file. Once the VM is cloned, it is important that the original is not unintentionally used for any anonymous activities. To negate this threat, disable networking in the original Whonix-Gateway until returning home. 
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> Do not clone the Whonix-Gateway (<code>sys-whonix</code>) with new guards at your home address. If the Tor client connects through the home network, the new guards might be correlated to the home address.</div></td></tr></tbody></table>
+<p><br/>
+Create a Whonix-Gateway (<code>sys-whonix</code>) clone and name it Whonix-Gateway-temp (<code>sys-whonix-temp</code>): 
+</p>
+<ul><li><ul><li>Virtualbox: follow <a class="external text" data-href="https://dirkstrauss.com/clone-virtualbox-vm/" href="https://dirkstrauss.com/clone-virtualbox-vm/" rel="noreferrer noopener" target="_blank">these instructions</a> to create a VM snapshot.</li>
+<li>Qubes-Whonix: In Qube Manager, <code>Right-click on sys-whonix</code> -&gt; <code>Clone qube</code></li></ul></li>
+<li><a href="#Fresh_Tor_Entry_Guards_by_Regenerating_the_Tor_State_File">Regenerate the Tor State File</a>.</li></ul>
+<h2><span class="mw-headline" id="Regenerate_the_Tor_State_After_Saving_the_Tor_State_Folder">Regenerate the Tor State After Saving the Tor State Folder</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=8.html" title="Edit section: Regenerate the Tor State After Saving the Tor State Folder">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Non-Qubes-Whonix only!</div></td></tr></tbody></table>
+<p><br/>
+Before arriving at the remote location, the Whonix-Gateway Tor state folder is moved to the <code>$HOME</code> directory and the Tor state file is regenerated. Perform all the following steps in Whonix-Gateway konsole.
+</p><p><b>1.</b> Stop Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl stop tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+</div>
+</div>
+<p><b>2.</b> Remove the temporary Tor state folder.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo rm -r /var/lib/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm -r /var/lib/tor</textarea>
+</div>
+</div>
+<p><b>3.</b> Restore the Tor state folder.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv ~/tor /var/lib</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/tor /var/lib</textarea>
+</div>
+</div>
+<p><b>4.</b> Restart Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl restart tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+</div>
+</div>
+<p>Before returning home, the Tor state folder is restored to its original settings.
+</p><p><b>1.</b> Stop Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl stop tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+</div>
+</div>
+<p><b>2.</b> Move the Tor state folder to the <code>$HOME</code> directory.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv /var/lib/tor ~/</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv /var/lib/tor ~/</textarea>
+</div>
+</div>
+<p><b>3.</b> Restart Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl restart tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+</div>
+</div>
+<h2><span class="mw-headline" id="Alternating_Bridges">Alternating Bridges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=9.html" title="Edit section: Alternating Bridges">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> are already configured, alternate bridges are recommended for different locations. If bridges are not being used, consider using entry guards in your primary location and relying on alternate bridges in different locations.
+</p><p>Complete the following steps in Whonix-Gateway (<code>sys-whonix</code>).
+</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
+</p><p>Start whonix-setup-wizard.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
+</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo whonixsetup</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+</div>
+</div>
+</div>
+<p>Choose the <i><span style="background-color:#FBFBFB">Disable Tor</span></i> option. Press next.
+</p><p><b>2.</b> Configure Tor to use bridges. Refer to the <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> documentation.
+</p><p><b>3.</b> Enable Tor using whonixsetup / whonix-setup-wizard at the new location.
+</p><p><b>4.</b> Before leaving this location, disable Tor. If traveling to a different area, add a different bridge address. To revert to the usual Tor guards used at home, remove the torrc bridge settings before enabling the network or rollback to a VM snapshot created at home.
+</p>
+<h2><span class="mw-headline" id="Copy_Tor_Configuration_files_and_Settings_to_Another_sys-whonix_Instance">Copy Tor Configuration files and Settings to Another sys-whonix Instance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=10.html" title="Edit section: Copy Tor Configuration files and Settings to Another sys-whonix Instance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> only!</div></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> Carefully follow these instructions to avoid unforeseen consequences. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></div></td></tr></tbody></table>
+<p><br/>
+Sometimes <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> users will want to copy the Tor state and custom configuration options from an existing <code>sys-whonix</code> ProxyVM to another <code>sys-whonix</code> instance. For example, this is useful for testing later Whonix releases without aiding deanonymization attempts by advanced adversaries <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> or when creating an identical backup that does not share any other persistent data, except for Tor state and custom torrc options.
+</p>
+<h3><span class="mw-headline" id="Copy_Tor_State_Files_to_Another_sys-whonix_Instance">Copy Tor State Files to Another sys-whonix Instance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=11.html" title="Edit section: Copy Tor State Files to Another sys-whonix Instance">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following instructions copy the Tor state from <code>sys-whonix-old</code> to <code>sys-whonix-new</code>.
+</p><p><b>1.</b> In <code>sys-whonix-new</code>, stop Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl stop tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+</div>
+</div>
+<p><b>2.</b> In <code>sys-whonix-new</code>, remove the Tor state file.
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b>  Care is required when removing files so extra spaces are not added to the file path! For example, if a space is accidentally placed before the asterisk in the command to remove the Tor state file, the <code>/</code> (root directory) and all system data would be lost.</div></td></tr></tbody></table>
+<p><br/>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo su</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo rm /var/lib/tor/*</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /var/lib/tor/*</textarea>
+</div>
+</div>
+<p><b>3.</b> In <code>sys-whonix-old</code>, stop Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl stop tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl stop tor@default</textarea>
+</div>
+</div>
+<p><b>4.</b> In <code>sys-whonix-old</code>, copy the Tor state file across to <code>sys-whonix-new</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo qvm-copy /var/lib/tor sys-whonix-new</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qvm-copy /var/lib/tor sys-whonix-new</textarea>
+</div>
+</div>
+<p>If the following error appears, it can be safely ignored (hit "OK" when prompted).
+</p>
+<pre>qfile-agent: Fatal error: stat “VM” (error type: No such file or directory)
+</pre>
+<p><b>5.</b> In <code>sys-whonix-new</code>, list the QubesIncoming directory to ensure the Tor state file was copied over successfully.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ls ~/QubesIncoming/sys-whonix-old/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ls ~/QubesIncoming/sys-whonix-old/tor</textarea>
+</div>
+</div>
+<p>The output should include the files below.
+</p>
+<pre>  <code>cached-certs cached-microdescs lock</code>
+  <code>cached-microdesc-consensus cached-microdescs.new state</code>
+</pre>
+<p><b>6.</b> In <code>sys-whonix-new</code>, move the newly copied Tor state file to <i>/var/lib/tor</i>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv ~/QubesIncoming/sys-whonix-old/tor/* /var/lib/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/tor/* /var/lib/tor</textarea>
+</div>
+</div>
+<p><b>7.</b> In <code>sys-whonix-new</code>, change ownership of all files in the Tor state folder to <code>debian-tor</code>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown -R debian-tor:debian-tor /var/lib/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R debian-tor:debian-tor /var/lib/tor</textarea>
+</div>
+</div>
+<p><b>8.</b> In <code>sys-whonix-new</code>, start Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl start tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl start tor@default</textarea>
+</div>
+</div>
+<p><b>9.</b> In <code>sys-whonix-new</code>, run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> to verify Tor is functioning properly. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>whonixcheck</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck</textarea>
+</div>
+</div>
+<h3><span id="Copy_Tor_Configuration_Options_(torrc)_to_Another_sys-whonix"></span><span class="mw-headline" id="Copy_Tor_Configuration_Options_.28torrc.29_to_Another_sys-whonix">Copy Tor Configuration Options (torrc) to Another sys-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=12.html" title="Edit section: Copy Tor Configuration Options (torrc) to Another sys-whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Note:</b> Whonix 13 torrc options can be migrated to Whonix 14-based <code>sys-whonix</code> instances. To achieve that, revise the instructions to use <code>/usr/local/etc/torrc.d/50_user.conf</code> as the destination for the torrc options in place of <code>/etc/tor/torrc</code> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<p><br/>
+</p>
+For migration between Whonix 14 based <code>sys-whonix</code> VMs, use <code>/usr/local/etc/torrc.d/50_user.conf</code> as both the source and destination file for torrc options.<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup></div></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Note:</b>  From Whonix 14 onward, all unique Tor configurations (torrc) options must be stored in <code>/usr/local/etc/torrc.d/50_user.conf</code> and nowhere else.</div></td></tr></tbody></table>
+<p><br/>
+These instructions copy custom Tor configuration options (torrc) from <code>sys-whonix-old</code> to <code>sys-whonix-new</code>.
+</p><p><b>1.</b>  In <code>sys-whonix-old</code>, copy the <i>torrc</i> options across to <code>sys-whonix-new</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</textarea>
+</div>
+</div>
+<p>If the following error appears, it can be safely ignored (hit "OK" when prompted).
+</p>
+<pre> qfile-agent: Fatal error: stat “VM” (error type: No such file or directory)
+</pre>
+<p><b>2.</b> In <code>sys-whonix-new</code>, list the <i>QubesIncoming</i> directory to ensure the <i>torrc</i> options were copied over successfully.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cat ~/QubesIncoming/sys-whonix-old/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cat ~/QubesIncoming/sys-whonix-old/50_user.conf</textarea>
+</div>
+</div>
+<p><b>3.</b> In <code>sys-whonix-new</code>, move the <i>50_user.conf</i> options from the <i>QubesIncoming</i> directory to the <i>50_user.conf</i> file.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</textarea>
+</div>
+</div>
+<p><b>4.</b> In <code>sys-whonix-new</code>, change ownership of the Tor configuration file.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown -R root:root /etc/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R root:root /etc/tor</textarea>
+</div>
+</div>
+<p><b>5.</b> In <code>sys-whonix-new</code>, restart Tor so the newly copied Tor config options take effect.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl restart tor@default</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl restart tor@default</textarea>
+</div>
+</div>
+<p><b>6.</b> In <code>sys-whonix-new</code>, run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> to verify Tor is functioning properly. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>whonixcheck</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">whonixcheck</textarea>
+</div>
+</div>
+<h1><span class="mw-headline" id="Unsafe_Guard_Rotation_Methods">Unsafe Guard Rotation Methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=13.html" title="Edit section: Unsafe Guard Rotation Methods">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Fresh_Tor_Entry_Guards_by_Regenerating_the_Tor_State_File">Fresh Tor Entry Guards by Regenerating the Tor State File</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=14.html" title="Edit section: Fresh Tor Entry Guards by Regenerating the Tor State File">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">The action is inadvisable unless the user is aware of the consequences; see <a href="#Introduction">Introduction</a>.</div></td></tr></tbody></table>
+<p><br/>
+The following instructions manually change a user's Tor entry guards. One use case for this action is before permanently relocating to a new area.
+</p><p>Complete the following steps in Whonix-Gateway (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>: <code>sys-whonix</code>).
+</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
+</p><p>Start whonix-setup-wizard.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
+</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo whonixsetup</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+</div>
+</div>
+</div>
+<p>Choose the <i><span style="background-color:#FBFBFB">Disable Tor</span></i> option. Press next.
+</p><p><b>2.</b> Delete Tor's state file.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo rm /var/lib/tor/state</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /var/lib/tor/state</textarea>
+</div>
+</div>
+<p><b>3.</b> Enable Tor using whonixsetup / whonix-setup-wizard at the new location.
+</p>
+<h2><span class="mw-headline" id="Configure_Non-Persistent_Entry_Guards">Configure Non-Persistent Entry Guards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=15.html" title="Edit section: Configure Non-Persistent Entry Guards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some users might consider configuring non-persistent entry guards so they constantly change. In almost all cases this is inadvisable, because persistent entry guards are a <a href="#Introduction">critical anonymity feature</a>. A far more secure alternative is <a href="#Alternating_Bridges">Alternating Bridges</a>, although this requires a considerable time investment.
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>To proceed in spite of the warning, press on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>Complete these steps in Whonix-Gateway (<code>sys-whonix</code>).
+</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
+</p><p>Start whonix-setup-wizard.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
+</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo whonixsetup</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+</div>
+</div>
+</div>
+<p>Choose the <i><span style="background-color:#FBFBFB">Disable Tor</span></i> option. Press next.
+</p><p><b>2.</b> Modify Tor settings.
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">From Whonix 14 onwards, all user unique Tor configurations should be stored in <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and not anywhere else. Note that Whonix will <u>not</u> modify <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> once it is created, therefore the user is responsible for adding or removing specific configurations in this file.</div></td></tr></tbody></table>
+<p><br/>
+Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</code>
+</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
+</div>
+</div>
+</div>
+<p>Add.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>DataDirectory /var/run/tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">DataDirectory /var/run/tor</textarea>
+</div>
+</div>
+<p>Save.
+</p><p><b>3.</b> Enable Tor using whonixsetup / whonix-setup-wizard at the new location.
+</p><p><b>4.</b> Before leaving this location, disable Tor and repeat the above steps if traveling to a different area. To revert to the usual guard nodes at home, remove the torrc setting before enabling the network or rollback to a VM snapshot that was created there.
+</p>
+</div>
+</div>
+<h1><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=16.html" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>The proposed Tails solutions towards AdvGoalTracking have disadvantages <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> and are not suitable options for Whonix. The reason is Whonix does not connect directly to a user's internet LAN, so trying to remember a network based on its SSID will not work. Unlike wireless access points, physical or virtual wired networks lack SSIDs and cannot be "remembered" that way.
+</p><p>Even if it were possible, it is best to avoid letting adversaries influence guard changes in any way. Spoofing MAC addresses or SSIDs would trigger the use of the alternative entry guard recorded for another "location profile". Global networks also have generic characteristics that cannot be differentiated from the point of view of a connecting device, resulting in the same guards being used on different networks.
+</p><p>Developers/Auditors-only: The development discussion related to this documentation chapter can be found <a class="external text" data-href="https://phabricator.whonix.org/T94" href="https://phabricator.whonix.org/T94" rel="noreferrer noopener" target="_blank">here</a>.
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Even though the attacker can't discover the user's destinations in the network, they still might target a list of known Tor users.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+Source:<br/>
+<a class="external text" data-href="https://www.torproject.org/docs/faq.html.en#EntryGuards" href="https://www.torproject.org/docs/faq.html.en" rel="noreferrer noopener" target="_blank">torproject.org What are Entry Guards?</a> (<a class="external text" data-href="http://www.webcitation.org/6eIN0hE4Y" href="http://www.webcitation.org/6eIN0hE4Y" rel="noreferrer noopener" target="_blank">w</a>)
+<br/>
+<a class="external text" data-href="https://www.torproject.org/docs/trademark-faq.html.en" href="https://www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">license</a> (<a class="external text" data-href="http://www.webcitation.org/6eIN7qhTe" href="http://www.webcitation.org/6eIN7qhTe" rel="noreferrer noopener" target="_blank">w</a>):<br/>
+Content on this site is Copyright The Tor Project, Inc.. Reproduction of content is permitted under a <a class="external text" data-href="https://creativecommons.org/licenses/by/3.0/us/" href="https://creativecommons.org/licenses/by/3.0/us/" rel="noreferrer noopener" target="_blank">Creative Commons Attribution 3.0 United States License</a> (<a class="external text" data-href="http://www.webcitation.org/6eINBPOrb" href="http://www.webcitation.org/6eINBPOrb" rel="noreferrer noopener" target="_blank">w</a>). All use under such license must be accompanied by a clear and prominent attribution that identifies The Tor Project, Inc. as the owner and originator of such content. The Tor Project Inc. reserves the right to change licenses and permissions at any time in its sole discretion.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">The risk of guard fingerprinting is less severe now that upstream (The Tor Project) has changed its guard parameters to decrease the de-anonymization risk.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Prop 291 indicates a 3.5 month guard rotation.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The Tor Project is currently considering shifting to two guards per client for better anonymity, instead of having one primary guard in use.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/torproject/torspec/blob/master/proposals/291-two-guard-nodes.txt" href="https://github.com/torproject/torspec/blob/master/proposals/291-two-guard-nodes.txt" rel="noreferrer noopener" target="_blank">https://github.com/torproject/torspec/blob/master/proposals/291-two-guard-nodes.txt</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">The <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/9273#comment:3" href="https://trac.torproject.org/projects/tor/ticket/9273" rel="noreferrer noopener" target="_blank">entropy associated with one, two or three guards</a> is 9, 17 and 25 bits, respectively.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://metrics.torproject.org/relayflags.html" href="https://metrics.torproject.org/relayflags.html" rel="noreferrer noopener" target="_blank">https://metrics.torproject.org/relayflags.html</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
+As concluded in ticket <a class="external text" data-href="https://phabricator.whonix.org/T469" href="https://phabricator.whonix.org/T469" rel="noreferrer noopener" target="_blank">research non-persistent Tor directory guards</a>, these are covered by the following instructions.</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/improving-tors-anonymity-changing-guard-parameters" href="https://blog.torproject.org/improving-tors-anonymity-changing-guard-parameters" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/improving-tors-anonymity-changing-guard-parameters</a></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">If an alternative command is used to remove the Tor state folder, this can result in broken file persistence across reboots. This relates to the <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> design, which uses <code>bind-dirs</code> file persistence for the Tor folder and other select directories. At the very least, users would need to mount and then unmount the Tor folder in the same way as <code>bind-dirs</code> does. This is likely a complicated and time-consuming task.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">As the same Tor entry guard is used.</span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">If Tor fails to start, verify the Tor folder has the proper file permissions with the following command <code>sudo ls -l /var/lib/tor</code></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">When users reach step 3 in the instructions,
+ move the torrc options from the QubesIncoming directory to the torrc file
+ <code>sudo mv ~/QubesIncoming/sys-whonix-old/torrc /usr/local/etc/torrc.d/50_user.conf</code></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+Users should revise instructions as follows:<br/>
+  Step 1 <code>qvm-copy /usr/local/etc/torrc.d/50_user.conf sys-whonix-new</code> <br/>
+  Step 2 <code>cat ~/QubesIncoming/sys-whonix-old/50_user.conf</code><br/> 
+  Step 3 <code>sudo mv ~/QubesIncoming/sys-whonix-old/50_user.conf /usr/local/etc/torrc.d/50_user.conf</code><br/> 
+  Step 4 <code>sudo chown -R root:root /usr/local/etc/torrc.d</code></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">If Tor is not running after restart, it is possible to verify the newly migrated torrc options are valid with the following command <code>anon-verify</code> - the output should be similar to the following.
+<br/><i>
+/===================================================================\
+|                      Report Summary                               |
+\===================================================================/
+No error detected in your Tor configuration.
+</i></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tails.boum.org/blueprint/persistent_Tor_state/" href="https://tails.boum.org/blueprint/persistent_Tor_state/" rel="noreferrer noopener" target="_blank">https://tails.boum.org/blueprint/persistent_Tor_state/</a></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/blog/tor-weekly-news-%E2%80%94-june-17th-2015#A_persistent_Tor_state_for_Tails" href="https://blog.torproject.org/blog/tor-weekly-news-%E2%80%94-june-17th-2015" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/blog/tor-weekly-news-%E2%80%94-june-17th-2015#A_persistent_Tor_state_for_Tails</a></span>
+</li>
+</ol></div></div>
+<h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=18.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<blockquote>
+<p>Whonix Tor Entry Guards wiki page Copyright (C) Amnesia &lt;amnesia at boum dot org&gt;<br/>
+Whonix Tor Entry Guards wiki page Copyright (C) 2012 - 2018 ENCRYPTED SUPPORT LP &lt;adrelanos@riseup.net&gt;<br/>
+<br/>
+This program comes with ABSOLUTELY NO WARRANTY; for details see the wiki source code.<br/>
+This is free software, and you are welcome to redistribute it under certain conditions; see the wiki source code for details.
+</p>
+</blockquote>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="./Tor_Entry_Guards" href="./Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Tor_Entry_Guards&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Tor_Entry_Guards&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=./Tor_Entry_Guards" href="https://facebook.com/sharer.php?u=./Tor_Entry_Guards">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20181016141913
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.324 seconds
+Real time usage: 0.540 seconds
+Preprocessor visited node count: 919/1000000
+Preprocessor generated node count: 2635/1000000
+Post‐expand include size: 34318/2097152 bytes
+Template argument size: 4706/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 9837/5000000 bytes
+Lua time usage: 0.080/7.000 seconds
+Lua virtual size: 15.18 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  439.255      1 -total
+ 38.95%  171.068     27 Template:CodeSelect
+ 36.99%  162.461     13 Template:Mbox
+ 17.16%   75.367      1 Template:Persistent_Tor_Entry_Guards_Introduction
+  6.26%   27.516      1 Template:Header
+  4.35%   19.093      1 Template:Footer
+  3.92%   17.224      1 Template:Reflist
+  3.18%   13.951      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  2.46%   10.806      3 Template:Box
+  1.95%    8.547      1 Template:FooterLight
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=38345" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=38345">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=38345</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 15 October 2018, at 23:47.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20181016141913 -->
+</html>

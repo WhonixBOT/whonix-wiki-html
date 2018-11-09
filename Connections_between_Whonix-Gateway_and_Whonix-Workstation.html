@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Connections between Whonix-Gateway and Whonix-Workstation - Whonix
+ url: ./Connections_between_Whonix-Gateway_and_Whonix-Workstation
+ date: Fri Nov  9 07:35:06 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Connections between Whonix-Gateway and Whonix-Workstation - Whonix</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/9/95/Binary-503583640.jpg" name="image"/>
+<meta content="https://www.whonix.org/w/images/9/95/Binary-503583640.jpg" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Authenticated / Encrypted Connections between Whonix-Gateway and Whonix-Workstation, ARP spoofing defense, SSH, OpenVPN, Using additional (isolated) n..." name="description"/>
+<meta content="Authenticated / Encrypted Connections between Whonix-Gateway and Whonix-Workstation, ARP spoofing defense, SSH, OpenVPN, Using additional (isolated) n..." name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Connections between Whonix-Gateway and Whonix-Workstation" property="og:title"/>
+<meta content="./Connections_between_Whonix-Gateway_and_Whonix-Workstation" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/9/95/Binary-503583640.jpg" property="og:image"/>
+<meta content="Authenticated / Encrypted Connections between Whonix-Gateway and Whonix-Workstation, ARP spoofing defense, SSH, OpenVPN, Using additional (isolated) n..." property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Connections_between_Whonix-Gateway_and_Whonix-Workstation rootpage-Connections_between_Whonix-Gateway_and_Whonix-Workstation skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="./Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Connections_between_Whonix-Gateway_and_Whonix-Workstation" href="./Connections_between_Whonix-Gateway_and_Whonix-Workstation.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=history" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Connections between Whonix-Gateway and Whonix-Workstation</h1>
+<h5 class="subtitle" id="siteSub"></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Basics"><span class="tocnumber">1.1</span> <span class="toctext">Basics</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Motivation_for_secure_Whonix-Gateway_.2F_Whonix-Workstation_connections"><span class="tocnumber">1.2</span> <span class="toctext">Motivation for secure Whonix-Gateway / Whonix-Workstation connections</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#OpenVPN_vs_SSH"><span class="tocnumber">1.3</span> <span class="toctext">OpenVPN vs SSH</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Authenticated_connections_between_Whonix-Gateway_and_Whonix-Workstation"><span class="tocnumber">2</span> <span class="toctext">Authenticated connections between Whonix-Gateway and Whonix-Workstation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#ARP_spoofing_defense"><span class="tocnumber">2.1</span> <span class="toctext">ARP spoofing defense</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Using_additional_.28isolated.29_network_interfaces"><span class="tocnumber">2.2</span> <span class="toctext">Using additional (isolated) network interfaces</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Theoretical"><span class="tocnumber">2.2.1</span> <span class="toctext">Theoretical</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Instructions"><span class="tocnumber">2.2.2</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Encrypted_and_authenticated_connections_between_Whonix-Gateway_and_Whonix-Workstation"><span class="tocnumber">3</span> <span class="toctext">Encrypted and authenticated connections between Whonix-Gateway and Whonix-Workstation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Using_SSH_.28not_tested.2Frecommended.29"><span class="tocnumber">3.1</span> <span class="toctext">Using SSH (not tested/recommended)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Using_OpenVPN"><span class="tocnumber">3.2</span> <span class="toctext">Using OpenVPN</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#See_Also"><span class="tocnumber">4</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Footnotes_.2F_References"><span class="tocnumber">5</span> <span class="toctext">Footnotes / References</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>This chapter does not apply to <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>. <sup class="reference" id="cite_ref-qubes_network_isolated_1-0"><a href="#cite_note-qubes_network_isolated-1">[1]</a></sup></li>
+<li>This chapter applies to <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a>.</li>
+<li>This chapter applies to <a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a> (using <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a>).</li>
+<li>You should read it if using any custom, non-stock, configurations.</li></ul>
+<h3><span class="mw-headline" id="Basics">Basics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=2.html" title="Edit section: Basics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>By default, Whonix assumes that Whonix-Gateway and Whonix-Workstation are connected by (virtual) LAN cable. Wireless technologies are not recommended as a malware compromised Whonix-Workstation could access (other) wireless access points and subsequently connect without Tor. Using a (virtual) cable enforces that Whonix-Workstation can only connect through Whonix-Gateway. For the same reason, connections to Whonix-Gateway over the internet are also not recommended.
+</p><p>By default, connections between Whonix-Workstation and Whonix-Gateway are neither authenticated nor encrypted. The above (virtual) LAN connection between Whonix-Workstation and Whonix-Gateway is assumed to be secure.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> Adding authentication and/or encryption by default would further increase the complexity of Whonix, which is to be avoided as explained in earlier chapters.
+<br/><br/>
+If you want to run <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> at the same time inside the same (virtual) isolated LAN, authentication should be added:
+</p>
+<ul><li>Inside virtual LANs:
+<ul><li>Authentication is enough.</li>
+<li>Encryption is not required. (When machines cannot be impersonated, MITM attacks are not possible from within the virtual LAN.)</li></ul></li>
+<li>Inside physical LANs:
+<ul><li>If your threat model includes the possibility of a MITM attack, encryption is needed .</li></ul></li></ul>
+<p><br/>
+If you want to connect to a Whonix-Gateway over insecure, untrusted, or unknown foreign networks (internet):
+</p>
+<ul><li>Both authentication and encryption should be added.
+<ul><li>Encryption is required to deny MITM eavesdropping.</li>
+<li>Authentication validates the identity of the connecting machine.
+<ul><li>Encryption solutions such as OpenVPN and ssh also provide authentication.</li></ul></li></ul></li></ul>
+<p><br/>
+</p>
+<h3><span id="Motivation_for_secure_Whonix-Gateway_/_Whonix-Workstation_connections"></span><span class="mw-headline" id="Motivation_for_secure_Whonix-Gateway_.2F_Whonix-Workstation_connections">Motivation for secure Whonix-Gateway / Whonix-Workstation connections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=3.html" title="Edit section: Motivation for secure Whonix-Gateway / Whonix-Workstation connections">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>Only applies to <i>non-stock</i> configurations</b>: If you run <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> simultaneously or want to connect to Whonix-Gateways over insecure or untrusted networks (internet):
+</p><p>A compromised Whonix-Workstation can impersonate the Whonix-Gateway, or any other Whonix-Workstation, within the same (virtual) LAN, perform active MITM attacks, or passively eavesdrop.
+</p>
+<h3><span class="mw-headline" id="OpenVPN_vs_SSH">OpenVPN vs SSH</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=4.html" title="Edit section: OpenVPN vs SSH">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Encryption can be added using OpenVPN or SSH. SSH, but not OpenVPN, has the advantage of being able to still easily tunnel a VPN through Tor, later. If you don't plan to do so, OpenVPN is probably easier. SSH has the disadvantage of increased setup complexity in this use case - you are probably better off using OpenVPN.
+</p>
+<h2><span class="mw-headline" id="Authenticated_connections_between_Whonix-Gateway_and_Whonix-Workstation">Authenticated connections between Whonix-Gateway and Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=5.html" title="Edit section: Authenticated connections between Whonix-Gateway and Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="ARP_spoofing_defense">ARP spoofing defense</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=6.html" title="Edit section: ARP spoofing defense">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This has only been quickly researched: From the <a class="external text" data-href="https://en.wikipedia.org/wiki/ARP_spoofing" href="https://en.wikipedia.org/wiki/ARP_spoofing" rel="noreferrer noopener" target="_blank">Wikipedia article about ARP spoofing</a>, it appears that <i>Static ARP entries</i> could be used to authenticate connections between Whonix-Gateway and Whonix-Workstation.
+</p>
+<h3><span id="Using_additional_(isolated)_network_interfaces"></span><span class="mw-headline" id="Using_additional_.28isolated.29_network_interfaces">Using additional (isolated) network interfaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=7.html" title="Edit section: Using additional (isolated) network interfaces">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Theoretical">Theoretical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=8.html" title="Edit section: Theoretical">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><i>(This chapter is actually not authentication, but solves the threat nonetheless.)</i>
+<br/><br/>
+A workaround, when running all vm's on the same VirtualBox host:
+</p>
+<ul><li>One can enable additional Virtual Network Adapters with uniquely named internal virtual networks, inherently isolating up to 7 Whonix-Workstations per Whonix-Gateway, <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li></ul>
+<p><br/>
+A workaround, for Whonix with Physical Isolation, where <i>all</i> possible connecting machines are trusted:
+</p>
+<ul><li>Whonix-Gateway inherently requires two network interfaces - external and internal. Additional physical and/or virtual LAN interfaces could be added. <i>(Ensure no bridging takes place.)</i></li></ul>
+<p><br/>
+</p>
+<h4><span class="mw-headline" id="Instructions">Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=9.html" title="Edit section: Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p><b>DRAFT! UNFINISHED!</b>
+</p><p>If you would like to see the unfinished documentation, please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>These instructions explain how to do it using <a data-href="/wiki/VirtualBox" href="./VirtualBox.html" title="VirtualBox">VirtualBox</a>.
+</p><p>For basic setup, see this forum thread:<br/>
+<a class="external free" data-href="https://forums.whonix.org/t/running-2-isolated-workstations-on-a-single-gateway/835" href="https://forums.whonix.org/t/running-2-isolated-workstations-on-a-single-gateway/835" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/running-2-isolated-workstations-on-a-single-gateway/835</a>
+</p><p>The original poster is on a good track already. Some more changes required.
+</p><p>On Whonix-Workstation in an additional isolated network.
+</p><p>Modify the Whonix Network Configuration.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p>
+<pre>Undocumented
+</pre>
+<p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p>
+<pre>kdesudo kate /etc/network/interfaces.d/30_non-qubes-whonix
+</pre>
+<p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</textarea>
+</div>
+</div>
+</div>
+<p>Use these settings.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>address 10.152.152.17
+netmask 255.255.192.0
+gateway 10.152.152.13</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">address 10.152.152.17
+netmask 255.255.192.0
+gateway 10.152.152.13</textarea>
+</div>
+</div>
+<p>On Whonix-Gateway.
+</p><p>Modify the Whonix Network Configuration.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
+</p>
+<pre>Undocumented
+</pre>
+<p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p>
+<pre>kdesudo kate /etc/network/interfaces.d/30_non-qubes-whonix
+</pre>
+<p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</textarea>
+</div>
+</div>
+</div>
+<p>Add this.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>auto eth2
+iface eth2 inet static
+       address 10.152.152.13
+       netmask 255.255.192.0</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">auto eth2
+iface eth2 inet static
+       address 10.152.152.13
+       netmask 255.255.192.0</textarea>
+</div>
+</div>
+<p><b>Modify Whonix User Firewall Settings</b>
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+</p><p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+</div>
+</div>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For more help, press on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+</p>
+<pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
+## which will override the defaults found here. When Whonix is updated, this
+## file may be overwritten.
+</pre>
+<p>See also <a data-href="/wiki/Whonix_Configuration_Files" href="./Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix modular flexible .d style configuration folders</a>.
+</p><p>To view the file, follow these instructions.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>And add additional interfaces to the firewall config.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>INT_IF="\
+eth1
+eth2"
+
+INT_TIF="$INT_IF"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">INT_IF="\
+eth1
+eth2"
+
+INT_TIF="$INT_IF"</textarea>
+</div>
+</div>
+<p>Reload Whonix's firewall (or reboot).
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo whonix_firewall</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
+</div>
+</div>
+<p>Restart networking.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo service networking restart</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service networking restart</textarea>
+</div>
+</div>
+<p>Perhaps NetworkManager is interfering and must be disabled.
+</p><p>Also the file /usr/share/tor/tor-service-defaults-torrc needs some changes. Tor needs to listen on the additional interfaces.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /usr/share/tor/tor-service-defaults-torrc</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /usr/share/tor/tor-service-defaults-torrc</textarea>
+</div>
+</div>
+<p>Use this file:<br/>
+<a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/tor_listen_on_all_interfaces/usr/share/tor/tor-service-defaults-torrc.anondist" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/tor_listen_on_all_interfaces/usr/share/tor/tor-service-defaults-torrc.anondist" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/blob/tor_listen_on_all_interfaces/usr/share/tor/tor-service-defaults-torrc.anondist</a>
+</p><p><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>Restart Tor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo service tor@default restart</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default restart</textarea>
+</div>
+</div>
+<p>It will now loudly complain, that Tor is listening on all IPs that that may not be what you want. You can ignore this, because the external network interface is firewalled.
+</p><p><b>TODO</b>: Explain what happens during upgrades.
+</p><p>Whonix-Workstation's whonixcheck / timesync / Tor Browser won't work. (Would need updated IP of the other gateway internal interface.) <b>TODO</b>: Expand.
+</p><p>Whonix-Workstation's TransPort access should be functional though. I.e. nslookup check.torproject.org and/or Firefox should work.
+</p><p>Whonix-Custom-Workstations should work.
+</p>
+</div>
+</div>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Encrypted_and_authenticated_connections_between_Whonix-Gateway_and_Whonix-Workstation">Encrypted and authenticated connections between Whonix-Gateway and Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=10.html" title="Edit section: Encrypted and authenticated connections between Whonix-Gateway and Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Using_SSH_(not_tested/recommended)"></span><span class="mw-headline" id="Using_SSH_.28not_tested.2Frecommended.29">Using SSH (not tested/recommended)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=11.html" title="Edit section: Using SSH (not tested/recommended)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>* DO NOT ALLOW SSH LOGINS!<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p><p>Each Gateway and Workstation should have its own SSH account and certificate distributed to each machine to which it will connect.<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>  Each Gateway and Workstations will need  ssh installed and the service started. Workstations need to be configured to automatically reconnect - in case Whonix-Workstation starts before the Gateway, or restarts.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Workstations need to use the tunnel IP to connect to the Gateway. The Whonix-Gateway should only accept certificate authentication, and only forward or answer to Tor over the SSH tunnel. All Workstations must use the established SSH tunnel to the Gateway, redirect such network access to socks via tranSOCKS_ev or similar. The Whonix-Gateway firewall may need corresponding changes. Not impossible to use SSH for this - but intricate.
+</p><p>You may be better off using OpenVPN. <i>However - OpenVPN is a full machine to machine connection, while ssh is easily port restricted.</i>
+<br/>
+</p>
+<h3><span class="mw-headline" id="Using_OpenVPN">Using OpenVPN</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=12.html" title="Edit section: Using OpenVPN">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p><b>DRAFT! UNFINISHED!</b>
+</p><p>If you would like to see the unfinished documentation, please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>Right now only supports two modes/security domains:
+</p>
+<ul><li>Whonix-Workstations with the secret key (=trusted) and</li>
+<li>other workstation with no key/vpn configured.</li></ul>
+<p>NOTE:
+</p>
+<ul><li>Transparent proxying doesn't seem to work at all, therefore you need to configure all applications to use socks ports.</li></ul>
+<p>On the gateway:
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Whonix first time users warning" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">The following information only applies to the <u>deprecated</u> version of Whonix 0.5.6. It requires updating for more recent versions of Whonix. Please help.</div></td></tr></tbody></table>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -i</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -i</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>apt-get -y install openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get -y install openvpn</textarea>
+</div>
+</div>
+<p>Create a new symmetric key
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -u user openvpn --genkey --secret /home/user/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u user openvpn --genkey --secret /home/user/static.key</textarea>
+</div>
+</div>
+<p>Copy key to workstation (Firewall needs to be disabled and openssh-server installed on Whonix-Workstation for this to work).
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -u user scp /home/user/static.key user@10.152.152.10:/home/user/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u user scp /home/user/static.key user@10.152.152.10:/home/user/static.key</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>mv /home/user/static.key /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mv /home/user/static.key /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>chown root:root /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chown root:root /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>chmod 700 /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chmod 700 /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<p>Create server configuration.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo "
+user nobody
+group nogroup
+daemon
+dev tun
+ifconfig 10.8.0.1 10.8.0.2
+secret /etc/openvpn/static.key" &gt; /etc/openvpn/server.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "
+user nobody
+group nogroup
+daemon
+dev tun
+ifconfig 10.8.0.1 10.8.0.2
+secret /etc/openvpn/static.key" &gt; /etc/openvpn/server.conf</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>service openvpn restart</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">service openvpn restart</textarea>
+</div>
+</div>
+<p>Edit torrc.<br/>
+TODO: only selectively change listening addresses. TransPort and optionally other SocksPorts have to remain available, if unauthenticated workstations are to be used. NOTE: we are using a hardcoded default IP here, if you are using non standard settings this will have to be edited.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ed -s /usr/local/etc/torrc.d/50_user.conf &lt;&lt;&lt; $',s/10.152.152.10/10.8.0.1/g\nw'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ed -s /usr/local/etc/torrc.d/50_user.conf &lt;&lt;&lt; $',s/10.152.152.10/10.8.0.1/g\nw'</textarea>
+</div>
+</div>
+<p>Edit /usr/local/bin/whonix_firewall.<br/>
+TODO: Put this automatically where it actually belongs
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo '
+# Allow openvpn in on port 1194
+iptables -A INPUT -i $INT_IF -p udp --dport 1194 -j ACCEPT' &gt;&gt; /usr/local/bin/whonix_firewall
+# TODO: replace hardcoded "eth1" with a wildcard</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo '
+# Allow openvpn in on port 1194
+iptables -A INPUT -i $INT_IF -p udp --dport 1194 -j ACCEPT' &gt;&gt; /usr/local/bin/whonix_firewall
+# TODO: replace hardcoded "eth1" with a wildcard</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>ed -s /usr/local/bin/whonix_firewall&lt;&lt;&lt; $',s/INT_TIF=eth1/INT_TIF=tun0/g\nw'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ed -s /usr/local/bin/whonix_firewall&lt;&lt;&lt; $',s/INT_TIF=eth1/INT_TIF=tun0/g\nw'</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>/usr/local/bin/whonix_firewall</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">/usr/local/bin/whonix_firewall</textarea>
+</div>
+</div>
+<p>On the Workstation(s):
+</p><p>TODO: Disable/tweak the new firewall
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -i</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -i</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>mv /home/user/static.key /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mv /home/user/static.key /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>chown root:root /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chown root:root /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>chmod 700 /etc/openvpn/static.key</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chmod 700 /etc/openvpn/static.key</textarea>
+</div>
+</div>
+<p>Should be in the default installation.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>apt-get --yes install --no-install-recommends torsocks</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get --yes install --no-install-recommends torsocks</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo "
+user nobody
+group nogroup
+daemon
+remote 10.152.152.10
+dev tun
+ifconfig 10.8.0.2 10.8.0.1
+secret /etc/openvpn/static.key" &gt; /etc/openvpn/server.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "
+user nobody
+group nogroup
+daemon
+remote 10.152.152.10
+dev tun
+ifconfig 10.8.0.2 10.8.0.1
+secret /etc/openvpn/static.key" &gt; /etc/openvpn/server.conf</textarea>
+</div>
+</div>
+<p>Edit resolv.conf.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>chattr -i /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chattr -i /etc/resolv.conf</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo "nameserver 10.8.0.1" &gt; /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "nameserver 10.8.0.1" &gt; /etc/resolv.conf</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>chattr +i /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">chattr +i /etc/resolv.conf</textarea>
+</div>
+</div>
+</div>
+</div>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=13.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="/wiki/Whonix-Workstation_Firewall" href="./Whonix-Workstation_Firewall.html" title="Whonix-Workstation Firewall">Whonix-Workstation Firewall</a></li></ul>
+<h1><span id="Footnotes_/_References"></span><span class="mw-headline" id="Footnotes_.2F_References">Footnotes / References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit&amp;section=14.html" title="Edit section: Footnotes / References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-qubes_network_isolated-1"><span class="mw-cite-backlink"><a href="#cite_ref-qubes_network_isolated_1-0">↑</a></span> <span class="reference-text">Because by Qubes default, AppVMs behind the same ProxyVM [or NetVM] are prevented from connecting to each other.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Here, secure is an assumption that nothing within your (virtual) LAN will MITM attack anything else.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">"<a class="external text" data-href="https://www.virtualbox.org/manual/ch06.html" href="https://www.virtualbox.org/manual/ch06.html" rel="noreferrer noopener" target="_blank">Four of the network cards can be configured in the "Network" section of the settings dialog in the graphical user interface of VirtualBox. You can configure all eight network cards on the command line via VBoxManage modifyvm</a>"</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">This likely should not be made the default version. Because... <b>TODO</b>: Explain.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">See: <a class="external text" data-href="http://serverfault.com/questions/56566/ssh-tunneling-only-access" href="http://serverfault.com/questions/56566/ssh-tunneling-only-access" rel="noreferrer noopener" target="_blank">ssh login</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Internet search How to set up ssh keys, for example, for instructions.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">Consider: autossh</span>
+</li>
+</ol></div></div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="./Connections_between_Whonix-Gateway_and_Whonix-Workstation" href="./Connections_between_Whonix-Gateway_and_Whonix-Workstation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Connections_between_Whonix-Gateway_and_Whonix-Workstation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Connections_between_Whonix-Gateway_and_Whonix-Workstation" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=./Connections_between_Whonix-Gateway_and_Whonix-Workstation" href="https://facebook.com/sharer.php?u=./Connections_between_Whonix-Gateway_and_Whonix-Workstation">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20181008225107
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.192 seconds
+Real time usage: 0.331 seconds
+Preprocessor visited node count: 620/1000000
+Preprocessor generated node count: 1741/1000000
+Post‐expand include size: 16328/2097152 bytes
+Template argument size: 6231/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3892/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
+Lua virtual size: 14.67 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  286.496      1 -total
+ 44.16%  126.520     32 Template:CodeSelect
+ 26.96%   77.253      1 Template:Old-Stable-0.5.6
+ 26.43%   75.709      1 Template:Mbox
+ 11.58%   33.175      1 Template:Header
+  8.96%   25.677      4 Template:Box
+  5.49%   15.735      1 Template:Footer
+  4.90%   14.026      1 Template:Firewall_Settings
+  3.25%    9.302      2 Template:Network_Config
+  2.70%    7.723      1 Template:Reflist
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;oldid=37420" dir="ltr" href="https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;oldid=37420">https://www.whonix.org/w/index.php?title=Connections_between_Whonix-Gateway_and_Whonix-Workstation&amp;oldid=37420</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 1 October 2018, at 22:38.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20181008225107 -->
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Dev/Operating System - Whonix
+ url: ../Dev/Operating_System
+ date: Fri Nov  9 07:47:12 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Dev/Operating System - Whonix</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Comparison and Consideration of various Operating Systems as base for the Whonix Anonymous Operating System. Design Documentation." name="description"/>
+<meta content="Comparison and Consideration of various Operating Systems as base for the Whonix Anonymous Operating System. Design Documentation." name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Dev/Operating System" property="og:title"/>
+<meta content="../Dev/Operating_System" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="Comparison and Consideration of various Operating Systems as base for the Whonix Anonymous Operating System. Design Documentation." property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Operating_System rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="../Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Operating_System" href="../Dev/Operating_System.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Operating_System&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Operating_System&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Operating_System&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Dev/Operating System</h1>
+<h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Operating_System"><span class="tocnumber">1</span> <span class="toctext">Operating System</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Why_don.27t_you_use_.3Cyour_favorite_most_secure_operating_system.3E_for_Whonix.3F"><span class="tocnumber">1.2</span> <span class="toctext">Why don't you use &lt;your favorite most secure operating system&gt; for Whonix?</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Generally"><span class="tocnumber">1.2.1</span> <span class="toctext">Generally</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#OpenBSD"><span class="tocnumber">1.2.2</span> <span class="toctext">OpenBSD</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#FreeBSD"><span class="tocnumber">1.2.3</span> <span class="toctext">FreeBSD</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#OpenWRT"><span class="tocnumber">1.2.4</span> <span class="toctext">OpenWRT</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#SubgraphOS"><span class="tocnumber">1.2.5</span> <span class="toctext">SubgraphOS</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Ubuntu"><span class="tocnumber">1.2.6</span> <span class="toctext">Ubuntu</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Mac_OS_X"><span class="tocnumber">1.2.7</span> <span class="toctext">Mac OS X</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Fedora"><span class="tocnumber">1.2.8</span> <span class="toctext">Fedora</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Qubes"><span class="tocnumber">1.2.9</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Gentoo_.2F_Hardened_Gentoo"><span class="tocnumber">1.2.10</span> <span class="toctext">Gentoo / Hardened Gentoo</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Alpine_Linux"><span class="tocnumber">1.2.11</span> <span class="toctext">Alpine Linux</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Arch_Linux"><span class="tocnumber">1.2.12</span> <span class="toctext">Arch Linux</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Switch_from_Ubuntu_to_Debian"><span class="tocnumber">1.3</span> <span class="toctext">Switch from Ubuntu to Debian</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#About_Debian"><span class="tocnumber">1.4</span> <span class="toctext">About Debian</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#General"><span class="tocnumber">1.4.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Why_is_Whonix_based_on_Debian_Stable.2C_not_Debian_Testing.3F"><span class="tocnumber">1.4.2</span> <span class="toctext">Why is Whonix based on Debian Stable, not Debian Testing?</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Popularity_Contest"><span class="tocnumber">1.4.3</span> <span class="toctext">Popularity Contest</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Comparison_of_Hardening_Compile_Flags"><span class="tocnumber">1.5</span> <span class="toctext">Comparison of Hardening Compile Flags</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#See_Also"><span class="tocnumber">2</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Footnotes"><span class="tocnumber">3</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Operating_System">Operating System</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=1.html" title="Edit section: Operating System">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=2.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This chapter applies to the host(s), Whonix-Gateway and Whonix-Workstation.
+</p><p><i>Whonix Example Implementation</i> is currently based on Debian. There were development discussions about switching to BSD, Alpine Linux or other secure operating systems.
+</p><p>Whonix can't protect against malicious code inserted into upstream operating system infrastructure. Debian ensures some chain of trust as it requires contributors to sign commits.
+</p>
+<h2><span id="Why_don't_you_use_&lt;your_favorite_most_secure_operating_system&gt;_for_Whonix?"></span><span class="mw-headline" id="Why_don.27t_you_use_.3Cyour_favorite_most_secure_operating_system.3E_for_Whonix.3F">Why don't you use &lt;your favorite most secure operating system&gt; for Whonix?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=3.html" title="Edit section: Why don't you use &lt;your favorite most secure operating system&gt; for Whonix?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h4><span class="mw-headline" id="Generally">Generally</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=4.html" title="Edit section: Generally">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Why do you use Debian, and not...
+</p><p>The operating system must have
+</p>
+<ul><li>acceptable usability</li>
+<li>must be somewhat popular, because only that leads to sufficient public scrutiny and enough available documentation.</li>
+<li>For redistribution of Whonix, there may also not be any legal/trademark issues such as with Ubuntu. (See "Switch from Ubuntu to Debian" chapter below).</li>
+<li>Must have a secure operating system updater (package manager), i.e. must not fall through the <a class="external text" data-href="https://www.updateframework.com/wiki/Docs/Security#AttacksandWeaknesses" href="https://www.updateframework.com/wiki/Docs/Security" rel="noreferrer noopener" target="_blank">TUF Threat Model</a> (<a class="external text" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">w</a>). Not having a secure updater is <a class="external text" data-href="https://krebsonsecurity.com/2011/11/apple-took-3-years-to-fix-finfisher-trojan-hole/" href="https://krebsonsecurity.com/2011/11/apple-took-3-years-to-fix-finfisher-trojan-hole/" rel="noreferrer noopener" target="_blank">very dangerous</a> (<a class="external text" data-href="http://www.webcitation.org/6FULk4z8t" href="http://www.webcitation.org/6FULk4z8t" rel="noreferrer noopener" target="_blank">w</a>).</li>
+<li>Source based distributions take a long time for upgrading and installation of packages, which users complain about. The same or even better security characteristics can be reached with deterministic (reproducible) builds.</li></ul>
+<p>Debian is a good compromise of security and usability.
+</p><p>By the way, this chapter won't only include examples which fall through Whonix's threat model.
+</p>
+<h4><span class="mw-headline" id="OpenBSD">OpenBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=5.html" title="Edit section: OpenBSD">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>OpenBSD is recommended against, because it completely falls through the Whonix threat model, see FAQ entry: <a data-href="/wiki/FAQ#Why_aren.27t_you_using_OpenBSD.2C_it_is_the_most_secure_OS_ever.21.21.211.21" href="../FAQ.html" title="FAQ">Why aren't you using OpenBSD, it is the most secure OS ever!!!1!</a>
+</p>
+<h4><span class="mw-headline" id="FreeBSD">FreeBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=6.html" title="Edit section: FreeBSD">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a data-href="/wiki/FAQ#Why_don.27t_you_use_FreeBSD.2C_which_is_more_secure.3F.21.3F" href="../FAQ.html" title="FAQ">Why don't you use FreeBSD, which is more secure?!?</a>
+</p>
+<h4><span class="mw-headline" id="OpenWRT">OpenWRT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=7.html" title="Edit section: OpenWRT">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a data-href="/wiki/FAQ#Why_don.27t_you_use_OpenWRT.2C_which_is_more_secure.3F.21.3F" href="../FAQ.html" title="FAQ">Why don't you use OpenWRT, which is more secure?!?</a>
+</p>
+<h4><span class="mw-headline" id="SubgraphOS">SubgraphOS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=8.html" title="Edit section: SubgraphOS">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a data-href="/wiki/FAQ#Why_don.27t_you_use_SubgraphOS.2C_which_is_more_secure.3F.21.3F" href="../FAQ.html" title="FAQ">Why don't you use SubgrahOS, which is more secure?!?</a>
+</p>
+<h4><span class="mw-headline" id="Ubuntu">Ubuntu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=9.html" title="Edit section: Ubuntu">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Ubuntu is not used as Whonix-Gateway/Workstation operating system for legal reasons (see below) and was lately negatively perceived due to <i><span style="background-color:#FBFBFB">privacy issues</span></i><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>, so it is recommended against to use it as host operating system as well.
+</p>
+<h4><span class="mw-headline" id="Mac_OS_X">Mac OS X</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=10.html" title="Edit section: Mac OS X">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Mac OS X can not be used for legal reasons. Even if that were not a problem, it is still a proprietary, closed source operating system, We don't like their attitude and how they (not) communicate with the security community. Also see: <a class="external text" data-href="https://krebsonsecurity.com/2011/11/apple-took-3-years-to-fix-finfisher-trojan-hole/" href="https://krebsonsecurity.com/2011/11/apple-took-3-years-to-fix-finfisher-trojan-hole/" rel="noreferrer noopener" target="_blank">Apple Took 3+ Years to Fix FinFisher Trojan Hole</a>.
+</p>
+<h4><span class="mw-headline" id="Fedora">Fedora</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=11.html" title="Edit section: Fedora">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Fedora yet did <b>not</b> fall through Whonix's threat model and could be considered as host and future or alternative Whonix-Gateway/Workstation operating system. Also Qubes OS, an operating system focusing on security by isolation, is based on Fedora. Started considering it, help welcome, see <a data-href="/wiki/Dev/Fedora" href="../Dev/Fedora.html" title="Dev/Fedora">Dev/Fedora</a>.
+</p>
+<h4><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=12.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Implemented as <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>.
+</p>
+<h4><span id="Gentoo_/_Hardened_Gentoo"></span><span class="mw-headline" id="Gentoo_.2F_Hardened_Gentoo">Gentoo / Hardened Gentoo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=13.html" title="Edit section: Gentoo / Hardened Gentoo">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Insecure package manager. Back then bug reports got closed down without much regard.
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/Gentoo-Port/issues/19" href="https://github.com/Whonix/Gentoo-Port/issues/19" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Gentoo-Port/issues/19</a> - <a class="external free" data-href="https://bugs.gentoo.org/show_bug.cgi?id=539954" href="https://bugs.gentoo.org/show_bug.cgi?id=539954" rel="noreferrer noopener" target="_blank">https://bugs.gentoo.org/show_bug.cgi?id=539954</a></li>
+<li><a class="external free" data-href="https://github.com/Whonix/Gentoo-Port/issues/10" href="https://github.com/Whonix/Gentoo-Port/issues/10" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Gentoo-Port/issues/10</a> - <a class="external free" data-href="https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85" href="https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85" rel="noreferrer noopener" target="_blank">https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85</a></li>
+<li><a class="external free" data-href="https://phabricator.whonix.org/T212#5691" href="https://phabricator.whonix.org/T212" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T212#5691</a></li>
+<li>[gentoo-portage-dev] Security and Comparison of Portage with other Package Managers: <a class="external free" data-href="https://archives.gentoo.org/gentoo-portage-dev/message/bda425ee6c676ec7a6b3c9500a9b00bf" href="https://archives.gentoo.org/gentoo-portage-dev/message/bda425ee6c676ec7a6b3c9500a9b00bf" rel="noreferrer noopener" target="_blank">https://archives.gentoo.org/gentoo-portage-dev/message/bda425ee6c676ec7a6b3c9500a9b00bf</a></li>
+<li>[gentoo-portage-dev] Portage and Update Security: <a class="external free" data-href="https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85" href="https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85" rel="noreferrer noopener" target="_blank">https://archives.gentoo.org/gentoo-portage-dev/message/94425239fcaedcee6c49ef398f12aa85</a></li></ul>
+<p>In this regard, Hardened Gentoo does not differ from Gentoo.
+</p><p>Due to the way these bug reports were handled, Gentoo was removed from the candidates of secure base operating systems.
+</p><p>Why not use a minimal Linux distribution? See <a data-href="/wiki/FAQ#Why_are_the_Whonix_images_so_big.3F" href="../FAQ.html" title="FAQ">Why are the Whonix images so big?</a>
+There might be more secure operating systems, such as <a class="external text" data-href="http://wiki.gentoo.org/wiki/Hardened_Gentoo" href="http://wiki.gentoo.org/wiki/Hardened_Gentoo" rel="noreferrer noopener" target="_blank">Hardenend</a> <a class="external text" data-href="http://www.gentoo.org/proj/en/hardened/" href="http://www.gentoo.org/proj/en/hardened/" rel="noreferrer noopener" target="_blank">Gentoo</a>, but in Patrick's opinion mortal users are unlikely to learn how to use them. More paranoids (and others) are welcome to use them for example as host operating system and leave feedback. Patches/ports welcome! <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+<h4><span class="mw-headline" id="Alpine_Linux">Alpine Linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=14.html" title="Edit section: Alpine Linux">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a class="external text" data-href="http://alpinelinux.org/" href="http://alpinelinux.org/" rel="noreferrer noopener" target="_blank">Alpine Linux</a> on first sight appears to have interesting security features. <s>But they <a class="external text" data-href="http://bugs.alpinelinux.org/issues/1067" href="http://bugs.alpinelinux.org/issues/1067" rel="noreferrer noopener" target="_blank">don't package Tor yet</a>.</s> Other than that, we didn't look thoroughly into it.
+</p><p>At first sight it looks like alpine's package manager suffers from the same issues as gentoo's. (Being vulnerable to indefinite freeze and downgrade attacks.) <a class="external text" data-href="https://phabricator.whonix.org/T212" href="https://phabricator.whonix.org/T212" rel="noreferrer noopener" target="_blank">TODO research</a>
+</p><p>The question to ask is "Does the package manager pass the TUF Threat Model?"
+</p><p>The Update Framework (TUF) - Attacks and Weaknesses:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md</a></li>
+<li><a class="external free" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">http://www.webcitation.org/6F7Io2ncN</a></li></ul>
+<p>(Made by similar people who created this research:<br/>
+<a class="external free" data-href="http://www.cs.arizona.edu/stork/packagemanagersecurity/attacks-on-package-managers.html" href="http://www.cs.arizona.edu/stork/packagemanagersecurity/attacks-on-package-managers.html" rel="noreferrer noopener" target="_blank">http://www.cs.arizona.edu/stork/packagemanagersecurity/attacks-on-package-managers.html</a><br/>
+which resulted as far as I understand in greatly improved package manager security in many distributions.)
+</p><p>One can ask the TUF people, who are in my experience very friendly and helpful, for their opinion on their mailing list:<br/>
+<a class="external free" data-href="https://groups.google.com/forum/#!forum/theupdateframework" href="https://groups.google.com/forum/" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/#!forum/theupdateframework</a>
+</p>
+<h4><span class="mw-headline" id="Arch_Linux">Arch Linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=15.html" title="Edit section: Arch Linux">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>TODO: Check its package manager security. (See above.)
+</p>
+<h2><span class="mw-headline" id="Switch_from_Ubuntu_to_Debian">Switch from Ubuntu to Debian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=16.html" title="Edit section: Switch from Ubuntu to Debian">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Beginning from 0.4.4, <i>Whonix Example Implementation</i> is based on Debian. Previously it was based on Ubuntu. From technical view, Ubuntu was a good choice, see <a data-href="/wiki/Ubuntu#About_Ubuntu" href="../Ubuntu.html" title="Ubuntu">About Ubuntu</a> if you are interested.
+</p><p>The switch was due to Ubuntu Trademark issues, see <a class="external text" data-href="http://www.ubuntu.com/aboutus/trademarkpolicy" href="http://www.ubuntu.com/aboutus/trademarkpolicy" rel="noreferrer noopener" target="_blank">About Ubuntu Trademark</a>. The terms are long and complicated. Since Whonix's changes are beyond a <i>remix</i> (as defined by Ubuntu Licensing), Whonix would either to have to ask for a license, which they reserve to revoke. Such a legally insecure state is not acceptable. Or Whonix would have to rebrand Ubuntu. It would be possible in theory, but in practice it would require a lot work to remove all Ubuntu strings. <a class="external text" data-href="https://lists.ubuntu.com/archives/ubuntu-users/2012-September/263760.html" href="https://lists.ubuntu.com/archives/ubuntu-users/2012-September/263760.html" rel="noreferrer noopener" target="_blank">Even new apt mirrors would be required</a>, which is much beyond the manpower of the Whonix project.
+</p><p>Debian is much more free. According to Debian project leader Stefano Zacchiroli (in private mail), there are no trademark issues as long as the derivative does not claim to be Debian. That is easy to fulfill.
+</p><p>Derivatives of Debian are even encouraged to use Debian infrastructure, see <a class="external text" data-href="http://wiki.debian.org/Derivatives/Guidelines" href="http://wiki.debian.org/Derivatives/Guidelines" rel="noreferrer noopener" target="_blank">Derivatives/Guidelines</a>. Debian even supports derivatives. There is a lot documentation, see <a class="external text" data-href="http://wiki.debian.org/Derivatives" href="http://wiki.debian.org/Derivatives" rel="noreferrer noopener" target="_blank">Derivatives</a> and even a <a class="external text" data-href="http://lists.debian.org/debian-derivatives/" href="http://lists.debian.org/debian-derivatives/" rel="noreferrer noopener" target="_blank">debian-derivatives mailing list</a>.
+</p>
+<h2><span class="mw-headline" id="About_Debian">About Debian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=17.html" title="Edit section: About Debian">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="General">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=18.html" title="Edit section: General">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Whonix is based on Debian.
+</p><p>Reasons for being based on Debian:
+</p>
+<ul><li>stable distribution</li>
+<li>exists for years</li>
+<li>will likely still be around in 10 years</li>
+<li>attempts to sow dissent failed <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li>
+<li>massive architecture support <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></li>
+<li>secure package manager</li>
+<li>As per <i><span style="background-color:#FBFBFB"><a class="external text" data-href="http://www.trapkit.de/tools/checksec.html" href="http://www.trapkit.de/tools/checksec.html" rel="noreferrer noopener" target="_blank">checksec.sh</a> --kernel</span></i>, reports good kernel protection: GCC stack protector support, enforce read-only kernel data, restrict /dev/mem and /dev/kmem access are all enabled.</li>
+<li><a class="external free" data-href="http://snapshot.debian.org" href="http://snapshot.debian.org" rel="noreferrer noopener" target="_blank">http://snapshot.debian.org</a>, hosted and signed by a trusted third party (Debian) <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>, allows implementation of robust build scripts <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> and <a data-href="/wiki/Verifiable_Builds" href="../Verifiable_Builds.html" title="Verifiable Builds">Verifiable Builds</a></li>
+<li><a class="external text" data-href="https://packages.debian.org/jessie/config-package-dev" href="https://packages.debian.org/jessie/config-package-dev" rel="noreferrer noopener" target="_blank">config-package-dev</a> allows creation of robust configuration packages</li>
+<li><a class="external text" data-href="https://packages.debian.org/jessie/grml-debootstrap" href="https://packages.debian.org/jessie/grml-debootstrap" rel="noreferrer noopener" target="_blank">grml-debootstrap</a> is a tool that allows creation of bootable raw images</li>
+<li>Debian is working on <a class="external text" data-href="https://wiki.debian.org/ReproducibleBuilds" href="https://wiki.debian.org/ReproducibleBuilds" rel="noreferrer noopener" target="_blank">ReproducibleBuilds</a></li>
+<li>huge knowledgeable community of Debian and their derivative users (stackexchange, debian forums, askubuntu and many more)</li>
+<li>Debian Developers are very approachable at conferences</li>
+<li>Tor has ties to Debian.</li>
+<li><a href="#Switch_from_Ubuntu_to_Debian">No legal/trademark issues.</a></li></ul>
+<p>Related statements from the FAQ reasoning why Debian is the base for Whonix Example Implementation:
+</p>
+<ul><li><a data-href="/wiki/FAQ#Why_are_the_Whonix_images_so_big.3F" href="../FAQ.html" title="FAQ">Why are the Whonix images so big?</a></li>
+<li><a data-href="/wiki/FAQ#Why_not_Use_a_Live_CD.2FDVD_as_the_Whonix-Workstation_operating_system.3F" href="../FAQ.html" title="FAQ">Why not use a Live CDs as Whonix-Workstation operating system?</a></li>
+<li><a data-href="/wiki/FAQ#Why_is_KDE_.28big.29_the_default_desktop_environment.3F_Why_not_use_a_minimal_DE.3F" href="../FAQ.html" title="FAQ">Why is KDE (big) the default desktop environment? Why not use a minimal DE?</a></li>
+<li><a data-href="/wiki/FAQ#Why_aren.27t_you_using_OpenBSD.2C_it.27s_the_most_secure_OS_ever.21.21.211.21" href="../FAQ.html" title="FAQ">Why aren't you using OpenBSD, it is the most secure OS ever!!!1!</a></li></ul>
+<p>General explanation, why so many distributions are based on Debian:
+</p>
+<ul><li><a class="external text" data-href="http://upsilon.cc/~zack/blog/posts/2011/09/why_there_are_so_many_debian_derivatives/" href="http://upsilon.cc/~zack/blog/posts/2011/09/why_there_are_so_many_debian_derivatives/" rel="noreferrer noopener" target="_blank">why there are so many debian derivatives</a></li></ul>
+<p>Also interesting:
+</p>
+<ul><li><a class="external text" data-href="http://lists.debian.org/debian-security/2013/10/msg00065.html" href="http://lists.debian.org/debian-security/2013/10/msg00065.html" rel="noreferrer noopener" target="_blank">Debian APT Key Revocation Procedure</a></li>
+<li><a class="external text" data-href="http://lists.debian.org/debian-security/2013/11/msg00019.html" href="http://lists.debian.org/debian-security/2013/11/msg00019.html" rel="noreferrer noopener" target="_blank">How (un)safe would Debian be when only using the security.debian.org repository?</a></li></ul>
+<p>Related:
+</p>
+<ul><li><a class="external text" data-href="http://wiki.debian.org/Derivatives/Census/Whonix" href="http://wiki.debian.org/Derivatives/Census/Whonix" rel="noreferrer noopener" target="_blank">Derivatives Census Whonix</a></li>
+<li><a data-href="/wiki/Dev/Relationship_With_Upstream" href="../Dev/Relationship_With_Upstream.html" title="Dev/Relationship With Upstream">Dev/Relationship With Upstream</a></li></ul>
+<p><span id="Why_is_Whonix_8_based_on_Debian_Stable.2C_not_Debian_Testing.3F"></span>
+</p>
+<h3><span id="Why_is_Whonix_based_on_Debian_Stable,_not_Debian_Testing?"></span><span class="mw-headline" id="Why_is_Whonix_based_on_Debian_Stable.2C_not_Debian_Testing.3F">Why is Whonix based on Debian Stable, not Debian Testing?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=19.html" title="Edit section: Why is Whonix based on Debian Stable, not Debian Testing?">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Sometimes severe bugs are introduced in Debian testing, such as the AppArmor <a class="external text" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732578" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732578" rel="noreferrer noopener" target="_blank">bug</a>, which prevented Tor from starting for everyone until a workaround was applied.</li>
+<li>Sometimes bugs are introduced which break Whonix's build script, such as <a class="external text" data-href="http://ml.grml.org/pipermail/grml/2014-January/011546.html" href="http://ml.grml.org/pipermail/grml/2014-January/011546.html" rel="noreferrer noopener" target="_blank">this</a> bug related to mount, which breaks grml-debootstrap and therefore Whonix's build script or <a class="external text" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734794" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734794" rel="noreferrer noopener" target="_blank">this</a> kpartx bug.</li>
+<li>Often other disturbing bugs are introduced, such as the grub bug (not able to reproduce and report upstream yet), non-functional VirtualBox Guest Additions or <a class="external text" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=728399" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=728399" rel="noreferrer noopener" target="_blank">issues</a> with shared folders.</li>
+<li>Sometimes packages get entirely removed from Debian testing, such as enigmail wasn't available for a while in Debian testing. This is confusing and constantly creating support requests.</li>
+<li>Too often, too many packages are upgraded (not just security fixes) (costs lots of time to keep up, bandwidth, system load).</li>
+<li>obfs3 (obfsproxy 0.2.3) is <a class="external text" data-href="http://deb.torproject.org/torproject.org/dists/stable/main/binary-i386/Packages" href="http://deb.torproject.org/torproject.org/dists/stable/main/binary-i386/Packages" rel="noreferrer noopener" target="_blank">available</a> again in torproject's repository.</li>
+<li>Quote, <a class="external text" data-href="https://www.debian.org/security/faq.html#testing" href="https://www.debian.org/security/faq.html" rel="noreferrer noopener" target="_blank">Debian Security FAQ</a>:</li></ul>
+<blockquote>
+<p>If you want to have a secure (and stable) server you are strongly encouraged to stay with stable.
+</p>
+</blockquote>
+<ul><li>Debian stable receives security fixes faster than Debian testing. For example, by 12/15/2016 Debian jessie was Debian stable and Debian stretch was Debian testing. <a class="external text" data-href="https://lists.debian.org/debian-security-announce/2016/msg00316.html" href="https://lists.debian.org/debian-security-announce/2016/msg00316.html" rel="noreferrer noopener" target="_blank">CVE-2016-1252</a> was fixed in Debian stable but not in Debian testing, see <a class="external text" data-href="http://www.webcitation.org/6mmY2AWVF" href="http://www.webcitation.org/6mmY2AWVF" rel="noreferrer noopener" target="_blank">Debian security tracker by 12/15/2016</a>.</li></ul>
+<h3><span class="mw-headline" id="Popularity_Contest">Popularity Contest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=20.html" title="Edit section: Popularity Contest">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Debian <i>popularity-contest</i> (popcon) package does not get installed on Whonix. Installing it gets prevented by the <a class="external text" data-href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control#L324" href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" rel="noreferrer noopener" target="_blank">anon-banned-packages</a> package.
+</p><p><a class="external text" data-href="http://popcon.debian.org/README" href="http://popcon.debian.org/README" rel="noreferrer noopener" target="_blank">popcon readme</a> | <a class="external text" data-href="http://popcon.debian.org/FAQ" href="http://popcon.debian.org/FAQ" rel="noreferrer noopener" target="_blank">popcon faq</a> | <a class="external text" data-href="http://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=popularity-contest" href="http://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=popularity-contest" rel="noreferrer noopener" target="_blank">popcon bugs</a> | <a class="external text" data-href="http://lists.alioth.debian.org/cgi-bin/mailman/listinfo/popcon-developers" href="http://lists.alioth.debian.org/cgi-bin/mailman/listinfo/popcon-developers" rel="noreferrer noopener" target="_blank">popularity contest mailing list</a> | <a class="external text" data-href="http://lists.alioth.debian.org/pipermail/popcon-developers/2012-October/002172.html" href="http://lists.alioth.debian.org/pipermail/popcon-developers/2012-October/002172.html" rel="noreferrer noopener" target="_blank">popularity contest mailing list: Drop atime and ctime for privacy reasons possible?</a>
+</p><p>Some privacy considerations and reasons why it is not installed:
+</p>
+<ul><li>The connection would obviously need to go over its own Tor circuit (stream isolation). At the moment popcon tries to go through http and if it fails (no internet connectivity) it goes into the mail queue. (sendmail) Sendmail probably works though TransPort, but we don't know if it can be torified for proper stream isolation.</li>
+<li>(From the popcon readme) "<i>Each popularity-contest host is identified by a random 128bit uuid (MY_HOSTID in /etc/popularity-contest.conf).</i>" - This would allow to enumerate a quite good guess about the amount number of Whonix users. We are not sure if sourceforge could already have an insight about that (due to Whonix News File downloads, see whonixcheck) or about any other negative implications.</li>
+<li>MY_HOSTID would probably get created at Whonix build time and all Whonix users would have the same MY_HOSTID, which would make it useless. A new MY_HOSTID would have to be created at first boot of Whonix.</li>
+<li>Popcon runs at a random day. Good.</li>
+<li>If the machine is powered on: it runs at 6:47, which is bad, because a local adversary (ISP or hotspot) could guess popcon runs over Tor which would likely be a Whonix user.</li>
+<li>If the machine is powered off at 6:47, it sends the report later, only if anachron is installed. It shouldn't run instantly after powering on, also for fingerprinting reasons. The time would have to be truly randomized.</li>
+<li><s>The transmission is not encrypted, see <a class="external text" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=480860" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=480860" rel="noreferrer noopener" target="_blank">popularity-contest should encrypt contents</a> and it is not planned to encrypt it. Malicious Tor exit relays could modify the transmission, but this is only a minor issue. Such malicious Tor exit relays could send fake transmissions on their own.</s></li>
+<li>It is questionable if and if yes, how long Debian will accept popularity contest transmissions from Tor exit relays. There is potential for electoral fraud.</li></ul>
+<p>For these reasons it is not a good idea to add popcon to Whonix. If you have suggestions or a different view, please get in contact.
+</p>
+<h2><span class="mw-headline" id="Comparison_of_Hardening_Compile_Flags">Comparison of Hardening Compile Flags</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=21.html" title="Edit section: Comparison of Hardening Compile Flags">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Debian jessie:
+</p>
+<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/curl
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   /usr/bin/gpg
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/gpg2
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   /bin/sed
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /bin/grep
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/tor
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   /bin/bash
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   /usr/bin/gwenview
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+No RELRO        Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/lib/iceweasel/iceweasel
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   /usr/lib/icedove/icedove
+</pre>
+<p>Securix (a derivative of Hardened Gentoo):
+</p>
+<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/curl
+
+Error: Not an ELF file: /usr/bin/gpg: symbolic link to gpg2
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/gpg2
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /bin/sed
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /bin/grep
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/bin/tor
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /bin/bash
+
+TODO
+  /usr/bin/gwenview
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/lib64/firefox/firefox
+
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+Full RELRO      Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   /usr/lib64/thunderbird/thunderbird
+</pre>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=22.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="/wiki/Advanced_Security_Guide#Harden_Software_Repositories" href="../Advanced_Security_Guide.html" title="Advanced Security Guide">Harden Software Repositories</a></li>
+<li><a data-href="/wiki/Advanced_Security_Guide#About_grsecurity" href="../Advanced_Security_Guide.html" title="Advanced Security Guide">About grsecurity</a></li>
+<li><a data-href="/wiki/Advanced_Security_Guide#Harden_Debian" href="../Advanced_Security_Guide.html" title="Advanced Security Guide">Harden Debian</a></li></ul>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit&amp;section=23.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.eff.org/deeplinks/2012/10/privacy-ubuntu-1210-amazon-ads-and-data-leaks" href="https://www.eff.org/deeplinks/2012/10/privacy-ubuntu-1210-amazon-ads-and-data-leaks" rel="noreferrer noopener" target="_blank">Privacy in Ubuntu 12.10: Amazon Ads and Data Leaks</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+Examples of usability issues.
+
+<pre>emerge firefox
+* There is NOT at least 4 GiB disk space at "/var/tmp/portage/www-client/firefox-31.5.0/temp"
+</pre>
+<p>What to do? Increase tmpfs size as per <a class="external free" data-href="http://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs" href="http://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs" rel="noreferrer noopener" target="_blank">http://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs</a>.
+</p>
+</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Debian is Free. Imagine how much money that must cost proprietary competiors from whom not all of them necessarily play by the law.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Not just i386, amd64 and perhaps arm. Should any platform become "evil", Debian as the universal operating system offers options and is most likely to port to new platforms.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">From perspective of Whonix.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Build script won't break due to upstream repository changes.</span>
+</li>
+</ol></div></div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Operating_System" href="../Dev/Operating_System" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Operating_System" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Operating_System" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Operating_System&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Operating_System&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=../Dev/Operating_System" href="https://facebook.com/sharer.php?u=../Dev/Operating_System">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Operating_System&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20181008212957
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.072 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 308/1000000
+Preprocessor generated node count: 1009/1000000
+Post‐expand include size: 3457/2097152 bytes
+Template argument size: 137/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7212/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   49.923      1 -total
+ 34.34%   17.145      1 Template:Footer
+ 26.69%   13.327      1 Template:Header
+ 15.76%    7.869      1 Template:Reflist
+ 15.01%    7.491      1 Template:FooterLight
+ 10.37%    5.178      1 Template:Footer_this_is_a_wiki
+  8.37%    4.176      1 Template:Share
+  7.71%    3.848      1 Template:Edit_it
+  3.84%    1.918      2 Template:Code2
+  3.28%    1.639      1 Template:Anchor
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;oldid=36605" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;oldid=36605">https://www.whonix.org/w/index.php?title=Dev/Operating_System&amp;oldid=36605</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 6 September 2018, at 01:08.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20181008212957 -->
+</html>

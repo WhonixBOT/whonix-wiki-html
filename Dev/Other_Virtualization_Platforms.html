@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Dev/Virtualization Platform - Whonix
+ url: ../Dev/Other_Virtualization_Platforms
+ date: Fri Nov  9 07:47:16 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Dev/Virtualization Platform - Whonix</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/a/aa/Background-1126047640.jpg" name="image"/>
+<meta content="https://www.whonix.org/w/images/a/aa/Background-1126047640.jpg" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Development Notes about existing and new Virtualizers supported by Whonix... VirtualBox, Qemu, KVM, VMware etc..." name="description"/>
+<meta content="Development Notes about existing and new Virtualizers supported by Whonix... VirtualBox, Qemu, KVM, VMware etc..." name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<link data-href="../Dev/Virtualization_Platform#Other_Virtualization_Platforms" href="../Dev/Virtualization_Platform" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Dev/Virtualization Platform" property="og:title"/>
+<meta content="../Dev/Virtualization_Platform#Other_Virtualization_Platforms" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/a/aa/Background-1126047640.jpg" property="og:image"/>
+<meta content="Development Notes about existing and new Virtualizers supported by Whonix... VirtualBox, Qemu, KVM, VMware etc..." property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Virtualization_Platform rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAArCAYAAAA65tviAAANxklEQVRo3rWae3Ad1X3HP2d3r65elmz5KcvyA0u2MQYbcIyhNgNI40wcHAdKIDjM5EFC0oaB0nTS0Jl22ukj09CmnaRNJ7QpTMorpQWSQoITiRjimNi4NTa2ZVvGT0m2JEuWru5D997d8+sf5+zdvZJsnHS6M5rV2bv39/t9f+/zO1cxxdUGdJp7nYKPAXcLrAEWAnkFx4E3gVc74KcA7UAHV3a12bvlMVfBBoGNClYCswFf4CSwD9ip4JcdoC/HQ031sN3cPifwPftIAKViC0AUKPv/VmVA6SsF1AazgBcUtEmMx4TX4s++ADzdCX6o6EsCCV9oNxpfKoCL4VgD1NYkmdEwjZHRDCdSOUZBHAtQ4JyClg7IXs4S1gqdwO1WEQKoGZZHwkpfAMbsX+zKKVjRAWcuaZFQk+3QDbRooAlomlHDnffdQuPCWVTVJEELIkIhm2fw/Agdb3Wx/cCZUABfwbYOeHEqrbXBastmlg/SXFWhPr7uKhbOrqW2sgLXUSjR5Md9xtLj9A2k2LHvDKNaOAcikdAPdMBzk4CEINqgU8EdClgErFvfyub7bkGs8IhAoBGtES2gBc9RnD45wJM/fIczF9LiGpqPdMC32ywDq6C7gJc0SLXnqE/d3MJNKxopFAMkCOkZ2mhBtEZpcBB2vtfDO8cH6QfS1qWBrR3wo1BhcYt8FHhVLIgbb1jC1gc2orUxvmEQAQjXBOb/hOvwrWd38t8nBnAMycc64O+tJTYreE2DLG6oVX/8iQ8ZACEtMSDQIBICMYoTLagg4PxgipffPkEvkDJgAoEZnZAGUDawqwVGgMQcYHnjDB786laUgNaC0trcRaM1pTWWWSiM0gE/+Mk+fvruaVEmdr4osNtmH3XT0jl89o5rEMczfhIqRkIwEoHQgkIsf0EXCwz1D/GDX52iBxOIAqMYMBK61j0CL7rAEuAP/vx+KuumWUEjZsQ0KFaDaF0SQkRw/IDnfryb7QfOigdFBa6Ae9vVjXxyw9VQWRvRjLuspuRWEIKJ0RfQmTF27TvO3p5RjofCw291wtvKmj4FTGsC1t+4hLse3IwOiAlcrjWxWgqFmChUopDlb5/bwf4zwyigdW4dj915A279bBCrgDg9kUk8jDsbRZZ4APT38a87DtNb0NJvQqO3ExaoNlim4KiALAL1xUe3sODqlijgxPit6BiDmE9PLRDI0Dm+9tTPyRV8/vq+dVQ0LkIpJxKqRKfcPc3nhm75c/MsyKTZt2svO86m5ERU21pUG9wDvOgBS4E/ffIxiiRQlogWo/0yAGHsxC1S0pplHmgGDu7DVTB98TLcZFUkUJlLWR4SKUVKtGN8LN3ssS4yg4M89V4/p8EPwAPuUW3wd8CjM0FtWNnE/Y9/nmIhiOLDMii5lAiC1VqoTSItx10kGB0m33uaqmWrSxoWGw9l67LvESkj5A3oXJb0u3vR2QyegmcPDnLa18EQuAq+pdpsCVkM3Pup21nzkXa07xuBY24wyX9DjYYgofRZFDcayY+jKipj7xMJiZQDiNEUAeW4+BeHyR49SHHgHIICLTgi7OpL8+7FcX0KHOAN1Q6nBBYtAx78w200r15t0yI20JhCiNhayn14olCircBhZiq5CdaSsc/F1GjRmuJgP7ljhyj09YByI7cOTPB3j+TlF/1ZjpkY6VVtMKqgrgX48l/8LnNbW21miQnIhAAsgZta+Agg5WvibgSClJot8X2kWCB79DDZg/tCj40KZKCjVBwIg7kir/VlpdsAyag28B1wlwKPfOMxZi9tMSlXImZl2itxIEqJZaBCoSc/FxHTSihT+8X3yR0/QrbrAH4qBcWCLbQ25etY6xLoMpcdzPm81j8u3da+qt3WkBbg4b96hMY1NyK+T5BNQ7GI9ouGsOOilAuuh/ISKC8BjhMJGsZJ6Cl+ET2eQ+dyBOkU/uhFgpGLFEcuojNjBOkxdDYTKaOs9bH3QGItS9QOIZqBXMBPLhSwFrmo2swGZnEr8NnPtTGzvpIgO2aratQHSSCgTX8kQWCaR+vTSimjdN83nxV9xA/KqrYxUMyScW3HG8aSsBMa1NgaLZzOaXaMFEMgx1QbbAc2LQK2fewGFi1oQIcNYhBv5MK1BRcjOnEdarC0tt3tRH/H+nvIL/pe6F7lTWpIz1WKPakiezOaHgPkZdUOTwh8pQHUh1cv5LabW/F9P2pBAo3WGhVmMh2tdWDrimVatg50qeGMgEosYCPBDL1yt5JYrEj4LgqlwFPw7/0FugNhzPRcf6Ta4eMCLzvA6soEX/7MRvL5YlmrLjoKMuNSsVY7ZCJi3U+X/FiCqP0vuadE75i1pR/o8iY1iIFCULHNbF4Lz/QXOBltqm5TbbBAwVkBaQb1O7+9lrqaihITYkxEYj5sgcWzzCRNxvJ+6bMy4LH3YlYr21wRnxaYxHIsq3kz5XM6AlIZtvFngQVzgU3XNbPu2qYyJhN9dvJurnw9dUxMVMTkTZoBbmJSiZQDsMki4SheGSjQ5Qsp8/j7HfDpEMhGgbcc4Lqkx5c+sZZCvoiUNlGRayixwWmFDdcqiKwjsc3YxLWJLR19T8uk9UQAIQg3WUFfpsB/XShwygw+RGC+gn5l99VJgRzAHFCbr23i+ta5UUxom2qDmOaEqNpewjIywcWiLjm+jqw8lRXiV8OmtTz1zC6OBsYaCo53QOvEKcrDwLcdYJXn8IUt1+H7QVlMXFJAmZgM4rVHXzobaX1FACTQ1K5azClVwX90HqLHWANgVgcMl4DE5lm9Ao11oDY01rFpTbN1o8jfQwHD2lIW/GJS8AfVBDfQjAaaM55mSU6hqgKCGo3ruUhRcMcdvHEHsw/TVC2dT2L5Qr7z9E7eFyEwIJ7tgAemnGsJtCv4mYBcBWrb+iU01FbYGhHb8gaxAhZbhxlHTWoton19Rgf8W33AS+th0eKAh+bUcO/tH6a+ehEnuodQY/0Mv/8e+aODsF2Y0dxMdUsTz7y6n/8ZTDFuhO7vgHmXHZm2wz8LfN4BrgI+fctiqjynlE0+qCZQEAb8AskV4+STASrr4A079J1x+UarT9PmDaxddyNVlZVsa/guS5s2QDpF14FBBntS1JMnfSFPX1+BG2a4nOtqYs/eAXafHmIoEnhlB3R94Mi0zUwbl1aAWlXhsm1tc6kah5U5KlpmrQrC6Kocrb+3glmt13C8u0CtCiiOpRjuOU/63FlSmSSvL7+J/MxqChmfx5v/k2leLe54kQt9gjMODY5LrXZpUB6jvT5/9p0Mp/qD0ngWuKsDXvnAIbbNYjOBfgG3BlhdneCuVXPLKnB54Gvy84p86McuycJGcoMj+OkM3YeGkGweP1VgdCigSmBa1ueha6+hKqlZevYEH6kfYdEMl+uaPLycS5BSDPcJR44GPH80zytKqDwJc0agZoQn3oKvXvE03rpYo8BpIFENLE843LtyDo5M0RCKMNRU4OZnAsZ6k1T4PvmLmvSwIp9ymFPh0lTjQdph554MW1oqSSQ0dZWaRE4z60SOm6qEGRqCPLw7BscbwFsCugqyBeh/H0lfROkxzjHOz+jlbXz208WviGZck48V7Lx2OXBEQCpAtTqKbcsbcEVKk8fQxfJFYfvmDNs+6VAvCZqmuZB2IOtAxmGgJ2DnngzfPKv55a2gqmB6JdQloaYCqj2o8MCz/iNiDknyPmSLkC4io+Oo1Lgd1x/G53VaSXPqshaJxctKBYcEJAFqmaPYvKCWhoQzqf0eKWoOJjUXmjXzlgvzZgEZuNAD/3hSOFMJ2fnA9YZHpQczqmBaAqoroNKFhGv2a5gOn2IAOR8yRUjlYfQCFE4BDfTzHL/PKNuBEXUlJ0zt0GLnt7WANIHaNKuS5TUuxVjqVUoRCGS1kCpC1u50k47R7gsP+Lx6UEPSzGad2VBfC/UVUJuAqgRUuOCGVsEMrvIBZAMYPGuUQjNQARziNC9xPwHdVwTEJgAHOGrPTmQmqNVJh1uneyQcs0O8THFmZExo2ac43zWdh54foGtAoA4qF0PDfKithOoEVFn3KllFQ1HDuRNwpgej0jzQhzAdxZPcTZbdVwRkQvX/EbBFMCO+RcBHGxLMSSozyhFjmUkNX6DYf2+RNZshWXAZueiw5fk8qWpQLjSvhbrp1ioOePagRRR07YKBgmXWC0zHbJ8HKfIid5L7NYBMOBC6XcEbYg9dpgPXJBTtMxN4qtw6IoJyHZyqJIHn0eWNs2dBhqXL4I6Vis7DIo8fQWkXKucizU2oucvMLlAVYPebkJ0N1GE2G/OB83a9nb/kKE9R5MSvBWQCqOnA08BWAfFAzQLWV7tcX+fhKTsScx2cigSugsMX8+wfydOt4YI9J3SAcfj6gXUo6vkajeZMscaF3Djoq8zJDg5QQHBRnOUX/JBvAnuBPkD/X4CEKfo+gX9QMEuDVIFqAG6d5tFS7eB6Lj3jATuGCgwBw7EDVODnHtz9ujlkgnpWsJ4dNDKXuTag+4F6hGEUVfTyPb5OjjeAc4Tfu1z6/Q1i52+AR8WEDgnrBa71hGx09idihLi+EwbKDk0TQJF6NrOHFpYhCEUUHgHbeYJu/gVjzNErruy/CRj7A4M/EfhKnLhEIN7B/Pigp5NL/MigGTiLyx28wGru4Qjf5xgP8z5piGaA/y9ApgA2D/gSBlAS+K6Cf+qAw1dE4GngM0ArK+nm8JQ/JZhw/S9dtEONwVO5dQAAAABJRU5ErkJggg==);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="../Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Virtualization_Platform" href="../Dev/Virtualization_Platform.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Virtualization_Platform&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Virtualization_Platform&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Dev/Virtualization Platform</h1>
+<h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span><span class="mw-redirectedfrom">(Redirected from <a class="mw-redirect" data-href="/w/index.php?title=Dev/Other_Virtualization_Platforms&amp;redirect=no" href="https://www.whonix.org/w/index.php?title=Dev/Other_Virtualization_Platforms&amp;redirect=no.html" title="Dev/Other Virtualization Platforms">Dev/Other Virtualization Platforms</a>)</span></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Other_Virtualization_Platforms"><span class="tocnumber">2</span> <span class="toctext">Other Virtualization Platforms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Introduction_2"><span class="tocnumber">2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Support_Plan"><span class="tocnumber">2.2</span> <span class="toctext">Support Plan</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Partially_Finished_Attempts"><span class="tocnumber">2.3</span> <span class="toctext">Partially Finished Attempts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#VirtualBox"><span class="tocnumber">3</span> <span class="toctext">VirtualBox</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#VirtualBox_missing_features"><span class="tocnumber">3.1</span> <span class="toctext">VirtualBox missing features</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#VirtualBox_no_longer_in_Debian_main"><span class="tocnumber">3.2</span> <span class="toctext">VirtualBox no longer in Debian main</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Arguments_for_keeping_VirtualBox_Support"><span class="tocnumber">3.3</span> <span class="toctext">Arguments for keeping VirtualBox Support</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Why_Use_KVM_Over_VirtualBox.3F"><span class="tocnumber">3.4</span> <span class="toctext">Why Use KVM Over VirtualBox?</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#See_Also"><span class="tocnumber">3.5</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Whonix is available for:
+</p>
+<ul><li><a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes</a></li>
+<li><a data-href="/wiki/KVM" href="../KVM.html" title="KVM">KVM</a></li>
+<li><a data-href="/wiki/VirtualBox" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a></li></ul>
+<p>In an ideal world, Whonix would support all Virtualization Platforms. Theoretically it could be done using <a class="external text" data-href="http://libvirt.org/" href="http://libvirt.org/" rel="noreferrer noopener" target="_blank">libvirt</a>. Practically libvirt is out of question. <a class="external text" data-href="https://www.redhat.com/archives/libvirt-users/2012-August/msg00150.html" href="https://www.redhat.com/archives/libvirt-users/2012-August/msg00150.html" rel="noreferrer noopener" target="_blank">libvirt-users Does libvirt abstract each and any vm specific command?</a> Libvirt does not (yet) abstract some commands Whonix depends on.
+</p>
+<h1><span class="mw-headline" id="Other_Virtualization_Platforms">Other Virtualization Platforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=2.html" title="Edit section: Other Virtualization Platforms">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Introduction_2">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=3.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In theory, Whonix could run inside any virtualizer, because its build scripts are very modular and extensible. In reality, Whonix has no man power to test other virtualizers. As soon as contributors join the project and maintain support for other virtualizers, support for them can most likely be easily added.
+</p>
+<h2><span class="mw-headline" id="Support_Plan">Support Plan</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=4.html" title="Edit section: Support Plan">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Whonix would need a <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainer</a> to support the other virtualization platform.
+</p><p>Important:
+</p>
+<ul><li>Someone who runs those <a data-href="/wiki/Test" href="../Test.html" title="Test">Test</a>, <a class="mw-redirect" data-href="/wiki/LeakTests" href="../LeakTests.html" title="LeakTests">LeakTests</a> and tests from <a data-href="/wiki/Protocol-Leak-Protection_and_Fingerprinting-Protection" href="../Protocol-Leak-Protection_and_Fingerprinting-Protection.html" title="Protocol-Leak-Protection and Fingerprinting-Protection">Protocol-Leak-Protection_and_Fingerprinting-Protection</a>.</li>
+<li>Someone who otherwise looks around if everything is sane.</li></ul>
+<p>Ideal:
+</p>
+<ul><li>Someone who creates, signs, uploads .ova images for the other virtualization platform (such as VMware, KVM, etc.).</li></ul>
+<h2><span class="mw-headline" id="Partially_Finished_Attempts">Partially Finished Attempts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=5.html" title="Edit section: Partially Finished Attempts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a data-href="/wiki/QEMU" href="../QEMU.html" title="QEMU">QEMU</a> (deprecated)</li>
+<li><a data-href="/wiki/VMware" href="../VMware.html" title="VMware">VMware</a> (proof of concept, no maintainer)</li></ul>
+<h1><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=6.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="VirtualBox_missing_features">VirtualBox missing features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=7.html" title="Edit section: VirtualBox missing features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following is non-ideal for <a data-href="/wiki/Comparison_with_Others#Verifiable_Builds" href="../Comparison_with_Others.html" title="Comparison with Others">verifiable builds</a>, because we have to convert to vdi first:
+</p>
+<ul><li><a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" rel="noreferrer noopener" target="_blank">export VM using VDI instead of VMDK?</a>: seems not possible.</li>
+<li><a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" rel="noreferrer noopener" target="_blank">Mount VMDK on Debian jessie?</a>: seems not possible.</li></ul>
+<p>The following is non-ideal, because we can not warn when host operating systems are being used we don't think are the right tool for hosting Whonix VMs:
+</p>
+<ul><li><a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58498" href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58498" rel="noreferrer noopener" target="_blank">Can a guest find out its host operating system?</a>: seems not possible.</li></ul>
+<ul><li>VirtualBox uses VMDK version 3. This is non-ideal, because working with these images is difficult.
+<ul><li>Converting these images is difficult.
+<ul><li><s>qemu-img version 1.6.1 (<span style="border:1px dotted #005cb9">qemu-img convert "vmdk_file" -O RAW "vdi_file"</span>) fails with: <i><span style="background-color:#FBFBFB">qemu-img: 'image' uses a vmdk feature which is not supported by this qemu version: VMDK version 3</span></i>, which is a <a class="external text" data-href="https://bugs.launchpad.net/qemu/+bug/1253465" href="https://bugs.launchpad.net/qemu/+bug/1253465" rel="noreferrer noopener" target="_blank">known issue in qemu</a>.</s> As per <a class="external text" data-href="https://bugs.launchpad.net/bugs/1253465" href="https://bugs.launchpad.net/bugs/1253465" rel="noreferrer noopener" target="_blank">this</a>, QEMU version equal or bigger than <i><span style="background-color:#FBFBFB">2.8</span></i> should be capable to work with VMDK version 3 disks. TODO: try</li>
+<li>Therefore it is required to convert them with VBoxManage to .vdi first. (<span style="border:1px dotted #005cb9">VBoxManage clonehd --format VDI "vmdk_file" "vdi_file"</span>)</li></ul></li>
+<li><s>Therefore the Free guestmount doesn't support mounting VMDK version 3 as well (because it internally uses qemu-img).</s> (Still true?)</li>
+<li><s>It requires proprietary software to mount them, such as the proprietary nbdkit plugin <a class="external text" data-href="https://github.com/libguestfs/nbdkit/blob/master/plugins/vddk/README.VDDK" href="https://github.com/libguestfs/nbdkit/blob/master/plugins/vddk/README.VDDK" rel="noreferrer noopener" target="_blank">vddk</a>. We're not aware of a Free Software alternative yet.</s> (Still true?)</li></ul></li></ul>
+<h2><span class="mw-headline" id="VirtualBox_no_longer_in_Debian_main">VirtualBox no longer in Debian main</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=8.html" title="Edit section: VirtualBox no longer in Debian main">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external free" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=709899" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=709899" rel="noreferrer noopener" target="_blank">http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=709899</a></li>
+<li><a class="external free" data-href="http://lists.debian.org/debian-devel/2013/08/msg00057.html" href="http://lists.debian.org/debian-devel/2013/08/msg00057.html" rel="noreferrer noopener" target="_blank">http://lists.debian.org/debian-devel/2013/08/msg00057.html</a></li>
+<li>"Virtualbox ships a BIOS that requires Watcom to compile from real sources,precompiled copy they ship as well is free but is not the preferred form for modification." <a class="external free" data-href="http://lists.debian.org/debian-devel/2013/08/msg00106.html" href="http://lists.debian.org/debian-devel/2013/08/msg00106.html" rel="noreferrer noopener" target="_blank">http://lists.debian.org/debian-devel/2013/08/msg00106.html</a></li>
+<li><a class="external free" data-href="https://www.virtualbox.org/ticket/12011" href="https://www.virtualbox.org/ticket/12011" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/ticket/12011</a></li>
+<li><a class="external free" data-href="https://lists.torproject.org/pipermail/tor-talk/2013-September/029978.html" href="https://lists.torproject.org/pipermail/tor-talk/2013-September/029978.html" rel="noreferrer noopener" target="_blank">https://lists.torproject.org/pipermail/tor-talk/2013-September/029978.html</a></li></ul>
+<ul><li>This is unrelated to <code>VirtualBox Oracle VM VirtualBox Extension Pack</code>, which is proprietary, and which was never in Debian.</li></ul>
+<h2><span class="mw-headline" id="Arguments_for_keeping_VirtualBox_Support">Arguments for keeping VirtualBox Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=9.html" title="Edit section: Arguments for keeping VirtualBox Support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a data-href="/wiki/KVM" href="../KVM.html" title="KVM">KVM</a> is not available to Windows users.</li>
+<li>Simplicity, as in: <a data-href="/wiki/VirtualBox" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a> has a VM import GUI feature.</li>
+<li>We have a <a class="mw-redirect" data-href="/wiki/Windows" href="../Windows.html" title="Windows">Whonix Windows Installer</a>.</li>
+<li>Available to users not owning computer providing hardware virtualization. (<a data-href="/wiki/KVM" href="../KVM.html" title="KVM">KVM</a> requires that. <a data-href="/wiki/QEMU" href="../QEMU.html" title="QEMU">QEMU</a> does not?)</li>
+<li>Due to Windows users and simplicity it leads to greater popularity, which in theory attracts more users, developers, auditors, founding, etc and is therefore good for the overall health of the project.</li>
+<li>Some Windows/<a data-href="/wiki/VirtualBox" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a> users experimenting with their first Linux (Whonix) will one day become users who mainly use Linux as their host operating system.</li></ul>
+<h2><span id="Why_Use_KVM_Over_VirtualBox?"></span><span class="mw-headline" id="Why_Use_KVM_Over_VirtualBox.3F">Why Use KVM Over VirtualBox?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=10.html" title="Edit section: Why Use KVM Over VirtualBox?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>See <a data-href="/wiki/KVM#Why_Use_KVM_Over_VirtualBox.3F" href="../KVM.html" title="KVM">Why Use KVM Over VirtualBox?</a>
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit&amp;section=11.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a data-href="/wiki/Advanced_Security_Guide#About_VirtualBox" href="../Advanced_Security_Guide.html" title="Advanced Security Guide">Advanced_Security_Guide#About_VirtualBox</a></li></ul>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Virtualization_Platform" href="../Dev/Virtualization_Platform" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Virtualization_Platform" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Virtualization_Platform" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Virtualization_Platform&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Virtualization_Platform&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=../Dev/Virtualization_Platform" href="https://facebook.com/sharer.php?u=../Dev/Virtualization_Platform">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20181109064713
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.044 seconds
+Real time usage: 0.049 seconds
+Preprocessor visited node count: 133/1000000
+Preprocessor generated node count: 412/1000000
+Post‐expand include size: 3532/2097152 bytes
+Template argument size: 200/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1263/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   26.154      1 -total
+ 62.79%   16.423      1 Template:Footer
+ 26.54%    6.942      1 Template:FooterLight
+ 19.27%    5.040      1 Template:Footer_this_is_a_wiki
+ 16.85%    4.406      1 Template:Header
+ 15.22%    3.982      1 Template:Share
+ 15.06%    3.938      1 Template:Edit_it
+  7.22%    1.888      1 Template:RandomNews
+  5.13%    1.341      1 Template:Whonix_onion
+  4.59%    1.200      2 Template:Code2
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;oldid=32571#Other_Virtualization_Platforms" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;oldid=32571">https://www.whonix.org/w/index.php?title=Dev/Virtualization_Platform&amp;oldid=32571#Other_Virtualization_Platforms</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 3 February 2018, at 15:06.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+</html>

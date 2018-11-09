@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: VPN Tunnel Setup Examples - Whonix
+ url: ./TestVPN
+ date: Fri Nov  9 08:10:09 2018
+-->
+<head>
+<meta charset="utf-8"/>
+<title>VPN Tunnel Setup Examples - Whonix</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="Instructions on how to combine VPN tunnels with Tor" name="description"/>
+<meta content="Instructions on how to combine VPN tunnels with Tor" name="twitter:description"/>
+<meta content="https://www.whonix.org/w/images/7/70/Dykeroad-41832640.jpg" name="image"/>
+<meta content="https://www.whonix.org/w/images/7/70/Dykeroad-41832640.jpg" name="twitter:image:src"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<link data-href="./Tunnels/Examples" href="./Tunnels/Examples" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Tunnels/Examples" property="og:title"/>
+<meta content="./Tunnels/Examples" property="og:url"/>
+<meta content="Instructions on how to combine VPN tunnels with Tor" property="og:description"/>
+<meta content="https://www.whonix.org/w/images/7/70/Dykeroad-41832640.jpg" property="og:image"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tunnels_Examples rootpage-Tunnels skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAArCAYAAAA65tviAAANxklEQVRo3rWae3Ad1X3HP2d3r65elmz5KcvyA0u2MQYbcIyhNgNI40wcHAdKIDjM5EFC0oaB0nTS0Jl22ukj09CmnaRNJ7QpTMorpQWSQoITiRjimNi4NTa2ZVvGT0m2JEuWru5D997d8+sf5+zdvZJsnHS6M5rV2bv39/t9f+/zO1cxxdUGdJp7nYKPAXcLrAEWAnkFx4E3gVc74KcA7UAHV3a12bvlMVfBBoGNClYCswFf4CSwD9ip4JcdoC/HQ031sN3cPifwPftIAKViC0AUKPv/VmVA6SsF1AazgBcUtEmMx4TX4s++ADzdCX6o6EsCCV9oNxpfKoCL4VgD1NYkmdEwjZHRDCdSOUZBHAtQ4JyClg7IXs4S1gqdwO1WEQKoGZZHwkpfAMbsX+zKKVjRAWcuaZFQk+3QDbRooAlomlHDnffdQuPCWVTVJEELIkIhm2fw/Agdb3Wx/cCZUABfwbYOeHEqrbXBastmlg/SXFWhPr7uKhbOrqW2sgLXUSjR5Md9xtLj9A2k2LHvDKNaOAcikdAPdMBzk4CEINqgU8EdClgErFvfyub7bkGs8IhAoBGtES2gBc9RnD45wJM/fIczF9LiGpqPdMC32ywDq6C7gJc0SLXnqE/d3MJNKxopFAMkCOkZ2mhBtEZpcBB2vtfDO8cH6QfS1qWBrR3wo1BhcYt8FHhVLIgbb1jC1gc2orUxvmEQAQjXBOb/hOvwrWd38t8nBnAMycc64O+tJTYreE2DLG6oVX/8iQ8ZACEtMSDQIBICMYoTLagg4PxgipffPkEvkDJgAoEZnZAGUDawqwVGgMQcYHnjDB786laUgNaC0trcRaM1pTWWWSiM0gE/+Mk+fvruaVEmdr4osNtmH3XT0jl89o5rEMczfhIqRkIwEoHQgkIsf0EXCwz1D/GDX52iBxOIAqMYMBK61j0CL7rAEuAP/vx+KuumWUEjZsQ0KFaDaF0SQkRw/IDnfryb7QfOigdFBa6Ae9vVjXxyw9VQWRvRjLuspuRWEIKJ0RfQmTF27TvO3p5RjofCw291wtvKmj4FTGsC1t+4hLse3IwOiAlcrjWxWgqFmChUopDlb5/bwf4zwyigdW4dj915A279bBCrgDg9kUk8jDsbRZZ4APT38a87DtNb0NJvQqO3ExaoNlim4KiALAL1xUe3sODqlijgxPit6BiDmE9PLRDI0Dm+9tTPyRV8/vq+dVQ0LkIpJxKqRKfcPc3nhm75c/MsyKTZt2svO86m5ERU21pUG9wDvOgBS4E/ffIxiiRQlogWo/0yAGHsxC1S0pplHmgGDu7DVTB98TLcZFUkUJlLWR4SKUVKtGN8LN3ssS4yg4M89V4/p8EPwAPuUW3wd8CjM0FtWNnE/Y9/nmIhiOLDMii5lAiC1VqoTSItx10kGB0m33uaqmWrSxoWGw9l67LvESkj5A3oXJb0u3vR2QyegmcPDnLa18EQuAq+pdpsCVkM3Pup21nzkXa07xuBY24wyX9DjYYgofRZFDcayY+jKipj7xMJiZQDiNEUAeW4+BeHyR49SHHgHIICLTgi7OpL8+7FcX0KHOAN1Q6nBBYtAx78w200r15t0yI20JhCiNhayn14olCircBhZiq5CdaSsc/F1GjRmuJgP7ljhyj09YByI7cOTPB3j+TlF/1ZjpkY6VVtMKqgrgX48l/8LnNbW21miQnIhAAsgZta+Agg5WvibgSClJot8X2kWCB79DDZg/tCj40KZKCjVBwIg7kir/VlpdsAyag28B1wlwKPfOMxZi9tMSlXImZl2itxIEqJZaBCoSc/FxHTSihT+8X3yR0/QrbrAH4qBcWCLbQ25etY6xLoMpcdzPm81j8u3da+qt3WkBbg4b96hMY1NyK+T5BNQ7GI9ouGsOOilAuuh/ISKC8BjhMJGsZJ6Cl+ET2eQ+dyBOkU/uhFgpGLFEcuojNjBOkxdDYTKaOs9bH3QGItS9QOIZqBXMBPLhSwFrmo2swGZnEr8NnPtTGzvpIgO2aratQHSSCgTX8kQWCaR+vTSimjdN83nxV9xA/KqrYxUMyScW3HG8aSsBMa1NgaLZzOaXaMFEMgx1QbbAc2LQK2fewGFi1oQIcNYhBv5MK1BRcjOnEdarC0tt3tRH/H+nvIL/pe6F7lTWpIz1WKPakiezOaHgPkZdUOTwh8pQHUh1cv5LabW/F9P2pBAo3WGhVmMh2tdWDrimVatg50qeGMgEosYCPBDL1yt5JYrEj4LgqlwFPw7/0FugNhzPRcf6Ta4eMCLzvA6soEX/7MRvL5YlmrLjoKMuNSsVY7ZCJi3U+X/FiCqP0vuadE75i1pR/o8iY1iIFCULHNbF4Lz/QXOBltqm5TbbBAwVkBaQb1O7+9lrqaihITYkxEYj5sgcWzzCRNxvJ+6bMy4LH3YlYr21wRnxaYxHIsq3kz5XM6AlIZtvFngQVzgU3XNbPu2qYyJhN9dvJurnw9dUxMVMTkTZoBbmJSiZQDsMki4SheGSjQ5Qsp8/j7HfDpEMhGgbcc4Lqkx5c+sZZCvoiUNlGRayixwWmFDdcqiKwjsc3YxLWJLR19T8uk9UQAIQg3WUFfpsB/XShwygw+RGC+gn5l99VJgRzAHFCbr23i+ta5UUxom2qDmOaEqNpewjIywcWiLjm+jqw8lRXiV8OmtTz1zC6OBsYaCo53QOvEKcrDwLcdYJXn8IUt1+H7QVlMXFJAmZgM4rVHXzobaX1FACTQ1K5azClVwX90HqLHWANgVgcMl4DE5lm9Ao11oDY01rFpTbN1o8jfQwHD2lIW/GJS8AfVBDfQjAaaM55mSU6hqgKCGo3ruUhRcMcdvHEHsw/TVC2dT2L5Qr7z9E7eFyEwIJ7tgAemnGsJtCv4mYBcBWrb+iU01FbYGhHb8gaxAhZbhxlHTWoton19Rgf8W33AS+th0eKAh+bUcO/tH6a+ehEnuodQY/0Mv/8e+aODsF2Y0dxMdUsTz7y6n/8ZTDFuhO7vgHmXHZm2wz8LfN4BrgI+fctiqjynlE0+qCZQEAb8AskV4+STASrr4A079J1x+UarT9PmDaxddyNVlZVsa/guS5s2QDpF14FBBntS1JMnfSFPX1+BG2a4nOtqYs/eAXafHmIoEnhlB3R94Mi0zUwbl1aAWlXhsm1tc6kah5U5KlpmrQrC6Kocrb+3glmt13C8u0CtCiiOpRjuOU/63FlSmSSvL7+J/MxqChmfx5v/k2leLe54kQt9gjMODY5LrXZpUB6jvT5/9p0Mp/qD0ngWuKsDXvnAIbbNYjOBfgG3BlhdneCuVXPLKnB54Gvy84p86McuycJGcoMj+OkM3YeGkGweP1VgdCigSmBa1ueha6+hKqlZevYEH6kfYdEMl+uaPLycS5BSDPcJR44GPH80zytKqDwJc0agZoQn3oKvXvE03rpYo8BpIFENLE843LtyDo5M0RCKMNRU4OZnAsZ6k1T4PvmLmvSwIp9ymFPh0lTjQdph554MW1oqSSQ0dZWaRE4z60SOm6qEGRqCPLw7BscbwFsCugqyBeh/H0lfROkxzjHOz+jlbXz208WviGZck48V7Lx2OXBEQCpAtTqKbcsbcEVKk8fQxfJFYfvmDNs+6VAvCZqmuZB2IOtAxmGgJ2DnngzfPKv55a2gqmB6JdQloaYCqj2o8MCz/iNiDknyPmSLkC4io+Oo1Lgd1x/G53VaSXPqshaJxctKBYcEJAFqmaPYvKCWhoQzqf0eKWoOJjUXmjXzlgvzZgEZuNAD/3hSOFMJ2fnA9YZHpQczqmBaAqoroNKFhGv2a5gOn2IAOR8yRUjlYfQCFE4BDfTzHL/PKNuBEXUlJ0zt0GLnt7WANIHaNKuS5TUuxVjqVUoRCGS1kCpC1u50k47R7gsP+Lx6UEPSzGad2VBfC/UVUJuAqgRUuOCGVsEMrvIBZAMYPGuUQjNQARziNC9xPwHdVwTEJgAHOGrPTmQmqNVJh1uneyQcs0O8THFmZExo2ac43zWdh54foGtAoA4qF0PDfKithOoEVFn3KllFQ1HDuRNwpgej0jzQhzAdxZPcTZbdVwRkQvX/EbBFMCO+RcBHGxLMSSozyhFjmUkNX6DYf2+RNZshWXAZueiw5fk8qWpQLjSvhbrp1ioOePagRRR07YKBgmXWC0zHbJ8HKfIid5L7NYBMOBC6XcEbYg9dpgPXJBTtMxN4qtw6IoJyHZyqJIHn0eWNs2dBhqXL4I6Vis7DIo8fQWkXKucizU2oucvMLlAVYPebkJ0N1GE2G/OB83a9nb/kKE9R5MSvBWQCqOnA08BWAfFAzQLWV7tcX+fhKTsScx2cigSugsMX8+wfydOt4YI9J3SAcfj6gXUo6vkajeZMscaF3Djoq8zJDg5QQHBRnOUX/JBvAnuBPkD/X4CEKfo+gX9QMEuDVIFqAG6d5tFS7eB6Lj3jATuGCgwBw7EDVODnHtz9ujlkgnpWsJ4dNDKXuTag+4F6hGEUVfTyPb5OjjeAc4Tfu1z6/Q1i52+AR8WEDgnrBa71hGx09idihLi+EwbKDk0TQJF6NrOHFpYhCEUUHgHbeYJu/gVjzNErruy/CRj7A4M/EfhKnLhEIN7B/Pigp5NL/MigGTiLyx28wGru4Qjf5xgP8z5piGaA/y9ApgA2D/gSBlAS+K6Cf+qAw1dE4GngM0ArK+nm8JQ/JZhw/S9dtEONwVO5dQAAAABJRU5ErkJggg==);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Payments" href="./Payments.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires payments to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Tunnels/Examples" href="./Tunnels/Examples.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Tunnels/Examples&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Tunnels/Examples&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Tunnels/Examples&amp;action=history" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">VPN Tunnel Setup Examples</h1>
+<h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Tunnels" href="./Tunnels.html" title="Tunnels">Tunnels</a></span><span class="mw-redirectedfrom">(Redirected from <a class="mw-redirect" data-href="/w/index.php?title=TestVPN&amp;redirect=no" href="https://www.whonix.org/w/index.php?title=TestVPN&amp;redirect=no.html" title="TestVPN">TestVPN</a>)</span></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><br/>
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><font size="4"><b><u>Before combining Tor with other tunnels, <a data-href="/wiki/Tunnels/Introduction" href="./Tunnels/Introduction.html" title="Tunnels/Introduction">be sure to read and understand the risks</a>!</u></b></font></div></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Ambox notice.png" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><u>Advertisement</u>:<br/>
+Too difficult to set up? Provider specific automation can be created for you by the lead developer of Whonix. Send reasonable price suggestions. Get in <a data-href="/wiki/Contact#For_Private_Inquiries" href="./Contact.html" title="Contact">contact</a>.</div></td></tr></tbody></table>
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Riseup.net"><span class="tocnumber">2</span> <span class="toctext">Riseup.net</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Riseup.net_Quick_VPN_Command_Line_Test"><span class="tocnumber">2.1</span> <span class="toctext">Riseup.net Quick VPN Command Line Test</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Riseup.net_riseup.conf"><span class="tocnumber">2.2</span> <span class="toctext">Riseup.net riseup.conf</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Riseup_DNS"><span class="tocnumber">2.3</span> <span class="toctext">Riseup DNS</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Setup"><span class="tocnumber">2.3.1</span> <span class="toctext">Setup</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Testing"><span class="tocnumber">2.3.2</span> <span class="toctext">Testing</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#usaip.eu"><span class="tocnumber">3</span> <span class="toctext">usaip.eu</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Using_a_graphical_user_interface"><span class="tocnumber">4</span> <span class="toctext">Using a graphical user interface</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#KDE_Network_Manager"><span class="tocnumber">4.1</span> <span class="toctext">KDE Network Manager</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#GNOME_Network_Manager"><span class="tocnumber">4.2</span> <span class="toctext">GNOME Network Manager</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The purpose of this page is mainly to demonstrate how easy it is to add a VPN to Whonix, whether is to use a VPN tunnel-link before or after Tor (i.e. User -&gt; Tor -&gt; VPN -&gt; Internet or User -&gt; VPN -&gt; Tor -&gt; Internet).
+</p><p>The examples given below were mainly for testing purposes. You may setup accounts for the same reasons, or use the information below as a very rough "guide" for setting up a VPN with Whonix. When setting up the accounts within the examples, make sure not to enter personal information while signing up. Use an extra e-mail address for registration, which you will never use for anything else. If you plan to use User -&gt; Tor -&gt; VPN, you should obviously also sign up through Tor. When using User -&gt; VPN -&gt; Tor, it is unknown what is best (to sign up through Tor or not), but using probably Tor can't hurt.
+</p>
+<h2><span class="mw-headline" id="Riseup.net">Riseup.net</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=2.html" title="Edit section: Riseup.net">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Riseup.net_Quick_VPN_Command_Line_Test">Riseup.net Quick VPN Command Line Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=3.html" title="Edit section: Riseup.net Quick VPN Command Line Test">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Known to support TCP, UDP, SSL.
+</p><p>(1) You need a riseup.net account.<br/>
+(2) You need to know your riseup account name.<br/>
+(3) Go to riseup.net -&gt; help -&gt; VPN and obtain your VPN secret. (VPN password)<br/>
+(4) Look inside the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and download it.<br/>
+(5) Open a terminal. (konsole) Get into the same folder, you stored <code>RiseupCA.pem</code>.<br/>
+(6) Install openvpn.
+<code>
+sudo apt-get update &amp;&amp; sudo apt-get install openvpn
+</code>
+(7) The following line from the riseup OpenVPN help page<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> won't work for user -&gt; Tor -&gt; VPN -&gt; Internet, because the Tor network does not support UDP.<br/>
+<code>
+sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem
+</code>
+The following line works for user -&gt; Tor -&gt; VPN -&gt; Internet.<br/>
+<code>
+sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem --proto tcp
+</code>
+(8) For DNS, see <a href="#Riseup_DNS">#Riseup DNS</a> below.
+</p>
+<h3><span class="mw-headline" id="Riseup.net_riseup.conf">Riseup.net riseup.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=4.html" title="Edit section: Riseup.net riseup.conf">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Known to support TCP, UDP, SSL.<br/>
+(1) You need a riseup.net account.<br/>
+(2) You need to know your riseup account name.<br/>
+(3) Go to <a class="external free" data-href="https://user.riseup.net/users/riseupusername/vpn" href="https://user.riseup.net/users/riseupusername/vpn" rel="noreferrer noopener" target="_blank">https://user.riseup.net/users/riseupusername/vpn</a> to obtain your VPN secret. (VPN password) (Replace "riseupusername" with your actual riseup user name.) (Or just got to <a class="external free" data-href="https://user.riseup.net" href="https://user.riseup.net" rel="noreferrer noopener" target="_blank">https://user.riseup.net</a>, login and click on "VPN".)<br/>
+(4) Look inside the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and (right click) <a class="external text" data-href="https://help.riseup.net/en/security/network-security/riseup-ca/RiseupCA.pem" href="https://help.riseup.net/en/security/network-security/riseup-ca/RiseupCA.pem" rel="noreferrer noopener" target="_blank">download</a> it.<br/>
+(5) Create a file auth.txt inside the same folder.
+</p>
+<pre>riseupusername
+vpnsecret
+</pre>
+<p>(6) Create a file riseup.conf inside the same folder.
+</p>
+<pre>client
+dev tun
+auth-user-pass auth.txt
+#remote vpn.riseup.net 443
+#remote seattle.vpn.riseup.net 443
+remote nyc.vpn.riseup.net 80
+ca RiseupCA.pem
+remote-cert-tls server
+script-security 1
+#user nobody
+#group nobody
+proto tcp
+#log /var/log/openvpn.log
+</pre>
+<p>(7) Start OpenVPN.
+</p><p><code>
+sudo openvpn riseup.conf
+</code>
+</p><p>(8) For DNS, see <a href="#Riseup_DNS">#Riseup DNS</a> below.
+</p>
+<h3><span class="mw-headline" id="Riseup_DNS">Riseup DNS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=5.html" title="Edit section: Riseup DNS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Setup">Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=6.html" title="Edit section: Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Open <i><span style="background-color:#FBFBFB">/etc/resolv.conf</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/resolv.conf</textarea>
+</div>
+</div>
+</div>
+<p>Comment out.
+</p>
+<pre>#nameserver 10.152.152.10
+</pre>
+<p>Add.
+</p>
+<pre>## Riseup.net OpenVPN DNS server
+nameserver 172.27.100.1
+</pre>
+<p>If you are not using riseup, you need to replace 172.27.100.1 and enter the virtual LAN IP address of your VPN providers DNS server. You might be able to obtain it from your VPN provider. You can also try to infer it after successfully connecting to the VPN from running "sudo route". The first destination default gateway should function as DNS server also.
+</p><p>Save.
+</p><p>If you want to be sure, that <i>/etc/resolv.conf</i> does not get overwritten by other packages. (Such as DHCP or resolvconf.)
+</p><p><code>
+sudo chattr +i /etc/resolv.conf
+</code>
+</p><p>If you ever want to remove it, use <i>-i</i>.
+</p>
+<h4><span class="mw-headline" id="Testing">Testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=7.html" title="Edit section: Testing">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>When using "<i>nameserver 10.152.152.10</i>"...
+</p><p><code>
+nslookup idnxcnkne4qt76tg.onion
+</code>
+</p><p>Will show.
+</p>
+<pre>Server:         10.152.152.10
+Address:        10.152.152.10#53
+Non-authoritative answer:
+Name:   idnxcnkne4qt76tg.onion
+Address: 10.192.0.1
+</pre>
+<p>When using "<i>nameserver 172.27.100.1</i>"...
+</p><p><code>
+nslookup idnxcnkne4qt76tg.onion
+</code>
+</p><p>Will show.
+</p>
+<pre>Server:         172.27.100.1
+Address:        172.27.100.1#53
+** server can't find idnxcnkne4qt76tg.onion: NXDOMAIN
+</pre>
+<p>Because you can not access .onion domains when a VPN has be chained. (user -&gt; Tor -&gt; VPN -&gt; Internet)
+</p><p>Resolving clearnet DNS should work.
+</p><p><code>
+nslookup riseup.net
+</code>
+</p><p>Should show.
+</p>
+<pre>Server:         172.27.100.1
+Address:        172.27.100.1#53
+Non-authoritative answer:
+Name:   riseup.net
+Address: 198.252.153.35
+</pre>
+<h2><span class="mw-headline" id="usaip.eu">usaip.eu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=8.html" title="Edit section: usaip.eu">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For testing purposes, in past, <a class="external text" data-href="https://www.usaip.eu/" href="https://www.usaip.eu/" rel="noreferrer noopener" target="_blank">usaip.eu</a> was used. They have been chosen, because they were free and didn't block the tested outgoing UDP port. The free version of usaip.eu can probably only be used for testing purposes, as it is only a test version, which force disconnects every 7 minutes. For longer and serious/stable use, you'll probably need another, VPN account. If you would like to see more information anyway, please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p><b>Note, at time of writing, it looked like, that usaip is probably blocking SSL, therefore</b>
+</p><p><code>
+UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a>
+</code>
+</p><p><b>will probably not work.</b>
+</p><p>Install OpenVPN.
+</p><p><code>
+sudo apt-get install openvpn
+</code>
+</p><p>Go to <a class="external text" data-href="http://usaip.eu/en/index.php" href="http://usaip.eu/en/index.php" rel="noreferrer noopener" target="_blank">usaip.eu</a> and click on free demo. Download the <i>usaip.zip</i>. It contains the OpenVPN configuration files. Unpack. Open a shell and get into the folder <i>cd usaip</i>. List all files <i>dir</i>. Connect to a VPN, for example:
+</p><p><code>
+sudo openvpn /home/user/usaip/eu-luxemburg.ovpn
+</code>
+</p><p>At time of writing, the page stated, the password was <i>demo</i>, password also <i>demo</i>. Wait until it is connected. When success, it will show "Initialization Sequence Completed". It might happen, that the connection will not succeed for some unknown reason. In this case try replacing the eu-luxemburg.ovpn from the example above with another &lt;country&gt;.ovpn from the usaip folder.
+</p><p>DNS settings have not been considered for this usaip.eu chapter.
+</p>
+</div>
+</div>
+<h2><span class="mw-headline" id="Using_a_graphical_user_interface">Using a graphical user interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=9.html" title="Edit section: Using a graphical user interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="KDE_Network_Manager">KDE Network Manager</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=10.html" title="Edit section: KDE Network Manager">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>If you want to install the KDE Network Manager.
+If you would like to see more information, please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p><code>
+sudo apt-get install network-manager-kde
+</code>
+</p><p>Start menu -&gt; System Settings -&gt; Network Settings
+</p><p>At time of writing the <a class="external text" data-href="https://www.riseup.net/en/openvpn-linux#kde" href="https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">riseup.net OpenVPN instructions for KDE</a> were not finished. Perhaps you'll find out yourself, use another guide for KDE Network Manager or use the command line based examples above.
+</p><p>Don't wonder if you don't see Whonix-Workstation's (virtual) wired network interface to Whonix-Gateway. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+</div>
+</div>
+<h3><span class="mw-headline" id="GNOME_Network_Manager">GNOME Network Manager</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=11.html" title="Edit section: GNOME Network Manager">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>Although Whonix is by default based on KDE, you can usually integrate GNOME applications.
+If you would like to see more information anyway, please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>In case of GNOME Network Manager it just requires some more fiddling because upstream developers wanted to make GNOME and KDE as compatible as possible, which includes that one settings manager won't show up when the other desktop has been started in a dual (KDE, GNOME) installation.
+</p><p>If you want to install the GNOME Network Manager.
+</p><p><code>
+sudo apt-get install network-manager-gnome network-manager-openvpn-gnome
+</code>
+</p><p>If you want to autostart GNOME Network Manager, open /etc/xdg/autostart/nm-applet.desktop with root rights.
+</p><p>Open <i><span style="background-color:#FBFBFB">/etc/xdg/autostart/nm-applet.desktop</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /etc/xdg/autostart/nm-applet.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/xdg/autostart/nm-applet.desktop</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/xdg/autostart/nm-applet.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/xdg/autostart/nm-applet.desktop</textarea>
+</div>
+</div>
+</div>
+<p>And comment out.
+</p><p><code>
+NotShowIn=KDE;
+</code>
+</p><p>If you want to make the nm-applet start menu entries visible and to start it manually, open /usr/share/applications/nm-applet.desktop.
+</p><p>Open <i><span style="background-color:#FBFBFB">/usr/share/applications/nm-applet.desktop</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /usr/share/applications/nm-applet.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /usr/share/applications/nm-applet.desktop</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /usr/share/applications/nm-applet.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/share/applications/nm-applet.desktop</textarea>
+</div>
+</div>
+</div>
+<p>And comment out.
+</p><p><code>
+NotShowIn=KDE;
+</code>
+</p><p>And add.
+</p><p><code>
+Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;
+</code>
+</p><p>If you want to make the nm-connection-editor start menu entries visible and to start it manually, open nm-connection-editor.
+</p><p>Open <i><span style="background-color:#FBFBFB">/usr/share/applications/nm-connection-editor.desktop</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /usr/share/applications/nm-connection-editor.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /usr/share/applications/nm-connection-editor.desktop</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /usr/share/applications/nm-connection-editor.desktop</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /usr/share/applications/nm-connection-editor.desktop</textarea>
+</div>
+</div>
+</div>
+<p>And comment out.
+</p><p><code>
+NotShowIn=KDE;
+</code>
+</p><p>Then you could open the settings.
+</p>
+<pre>Applications -&gt; Settings -&gt; Network Connections
+</pre>
+<p>You could try the <a class="external text" data-href="https://www.riseup.net/en/openvpn-linux#gnome" href="https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">riseup.net OpenVPN instructions for GNOME</a>.
+</p>
+</div>
+</div>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=12.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://help.riseup.net/en/openvpn-linux" href="https://help.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">https://help.riseup.net/en/openvpn-linux</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+That's still managed by the ordinary ifupdown way.
+<ul><li>/etc/network/interfaces</li>
+<li>/etc/network/interfaces.d/30_non-qubes-whonix</li></ul>
+See <a data-href="/wiki/Dev/Network_Manager" href="./Dev/Network_Manager.html" title="Dev/Network Manager">Dev/Network Manager</a> if you want to know why network-manager is not used by default in Whonix.</span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20181024102454
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.112 seconds
+Real time usage: 0.159 seconds
+Preprocessor visited node count: 505/1000000
+Preprocessor generated node count: 1356/1000000
+Post‐expand include size: 8500/2097152 bytes
+Template argument size: 2587/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2018/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
+Lua virtual size: 14.93 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  117.188      1 -total
+ 58.79%   68.896      1 Template:Tunnels_Introduction
+ 56.17%   65.820      2 Template:Mbox
+ 24.54%   28.754      4 Template:Open_with_root_rights
+ 21.22%   24.869      4 Template:Box
+ 19.06%   22.331      8 Template:CodeSelect
+  6.71%    7.868      1 Template:Tunnel_Automation_Sale
+  4.66%    5.457     17 Template:CodeSelect2
+  4.20%    4.921      1 Template:Reflist
+  1.32%    1.552      4 Template:Code2
+-->
+</div>
+<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4518-0!canonical and timestamp 20181024102454 and revision id 37392
+ -->
+</div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=37392" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=37392">https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=37392</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 1 October 2018, at 21:38.</li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+</html>
