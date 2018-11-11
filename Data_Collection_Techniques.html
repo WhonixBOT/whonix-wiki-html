@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Data Collection Techniques - Whonix
  url: ./Data_Collection_Techniques
- date: Sat Nov 10 07:35:43 2018
+ date: Sun Nov 11 07:35:44 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -241,7 +241,7 @@ BGP currently manages nearly 800K Internet-routable prefixes across the Internet
 <h2><span class="mw-headline" id="Route_Hijacking">Route Hijacking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=3.html" title="Edit section: Route Hijacking">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In this attack, groups of IP addresses are taken over via corruption of Internet routing tables maintained by the BGP: <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
-<ul><li>Adversaries re-route traffic for interception or modification purposes by maliciously manipulating BGP IP prefixes -- with a specific IPV4 of IPV5 address block and a path of AS numbers, the specific ASNs the traffic must pass through (to reach the announced address block) are controlled.</li>
+<ul><li>Adversaries re-route traffic for interception or modification purposes by maliciously manipulating BGP IP prefixes -- with a specific IPV4 or IPV5 address block and a path of AS numbers, the specific ASNs the traffic must pass through (to reach the announced address block) are controlled.</li>
 <li>Edge routers are then configured to announce prefixes that have not been assigned to them, leading to Internel-level BGP hijacking. If a shorter or more specific path is offered (or claimed), then the traffic is relayed to the hijacker.  <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li></ul>
 <p>For a recent, real-life BGP re-routing attack on a multi-national bank, see: <a class="external text" data-href="https://blog.thousandeyes.com/using-bgp-reroute-traffic-ddos/" href="https://blog.thousandeyes.com/using-bgp-reroute-traffic-ddos/" rel="noreferrer noopener" target="_blank">Using BGP to Reroute Traffic during a DDoS</a>.
 </p>
@@ -252,7 +252,7 @@ BGP currently manages nearly 800K Internet-routable prefixes across the Internet
 <p>Leaks pose security and privacy threats, since traffic can be redirected through unintended paths which may enable eavesdropping or traffic analysis. Leaks can be either accidental or malicious, but they usually arise from 'honest' mis-configurations. Visibility is necessary so it is possible for network operators to identify ISPs that are propagating bad routes (which are advertised during a route leak). This necessitates proper network monitoring tools so good actors can visualize and immediately modify any BGP-initiated route changes. <sup class="reference" id="cite_ref-BGP_leak_4-1"><a href="#cite_note-BGP_leak-4">[4]</a></sup>
 </p>
 <h1><span class="mw-headline" id="Browser_Fingerprinting">Browser Fingerprinting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=5.html" title="Edit section: Browser Fingerprinting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Research from a pool of 500,000 Internet users has shown that the vast majority (84%) have unique browser configurations and version information which makes them trackable across the Internet. When Java or Flash is installed, this figures rises to 94%. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Considering this research relied only on a relatively small number of variables, <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> companies with advanced fingerprinting capabilities may be approaching 100%, particularly in combination with cookies.
+<p>Research from a pool of 500,000 Internet users has shown that the vast majority (84%) have unique browser configurations and version information which makes them trackable across the Internet. When Java or Flash is installed, this figures rises to 94%. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Considering this research relied on a relatively small number of variables, <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> companies with advanced fingerprinting capabilities may be approaching 100%, particularly in combination with cookies.
 </p>
 <h2><span class="mw-headline" id="Fingerprinting_and_Anonymity">Fingerprinting and Anonymity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;action=edit&amp;section=6.html" title="Edit section: Fingerprinting and Anonymity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Academics suggest that around 33 bits of information is required to positively identify one person out of several billion! <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup></div></td></tr></tbody></table>
@@ -747,7 +747,7 @@ The MAC address serves as a unique identifier for the respective device in a loc
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Data_Collection_Techniques" href="./Data_Collection_Techniques" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Data_Collection_Techniques" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Data_Collection_Techniques" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -759,11 +759,11 @@ The MAC address serves as a unique identifier for the respective device in a loc
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181106095610
+Cached time: 20181110140259
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.324 seconds
-Real time usage: 0.412 seconds
+CPU time usage: 0.312 seconds
+Real time usage: 0.401 seconds
 Preprocessor visited node count: 1697/1000000
 Preprocessor generated node count: 4314/1000000
 Post‐expand include size: 10893/2097152 bytes
@@ -771,26 +771,26 @@ Template argument size: 423/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 36926/5000000 bytes
-Lua time usage: 0.060/7.000 seconds
-Lua virtual size: 15.18 MB/50 MB
+Unstrip post‐expand size: 36811/5000000 bytes
+Lua time usage: 0.050/7.000 seconds
+Lua virtual size: 15.2 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  279.182      1 -total
- 40.51%  113.093      6 Template:Mbox
- 15.73%   43.902      1 Template:Reflist
-  9.10%   25.396      1 Template:Footer
-  5.16%   14.411      1 Template:Header
-  5.11%   14.277      1 Template:FooterLight
-  3.81%   10.647      1 Template:Share
-  1.97%    5.503      1 Template:Footer_this_is_a_wiki
-  1.66%    4.640      1 Template:Maintainer
-  1.47%    4.090      1 Template:Edit_it
+100.00%  267.887      1 -total
+ 38.40%  102.868      6 Template:Mbox
+ 16.97%   45.466      1 Template:Reflist
+ 10.25%   27.446      1 Template:Footer
+  5.94%   15.922      1 Template:FooterLight
+  4.74%   12.700      1 Template:Share
+  3.90%   10.458      1 Template:Header
+  2.21%    5.918      1 Template:Footer_this_is_a_wiki
+  1.61%    4.311      1 Template:Edit_it
+  1.26%    3.378      1 Template:Maintainer
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39065" dir="ltr" href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39065">https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39065</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39169" dir="ltr" href="https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39169">https://www.whonix.org/w/index.php?title=Data_Collection_Techniques&amp;oldid=39169</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -801,7 +801,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Data_Coll
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 6 November 2018, at 10:41.</li>
+<li id="footer-lastmod"> This page was last edited on 10 November 2018, at 08:01.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -816,5 +816,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Data_Coll
 </div>
 
 </body>
-<!-- Cached/compressed 20181106095610 -->
+<!-- Cached/compressed 20181110140259 -->
 </html>
