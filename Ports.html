@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Ports - Whonix
  url: ./Ports
- date: Fri Nov 16 08:04:06 2018
+ date: Sat Nov 17 08:04:12 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -134,7 +134,7 @@ Whonix requires payments to stay alive.
 <h1><span class="mw-headline" id="On_the_usefulness_and_security_of_opening_ports_in_context_of_clearnet_and_Tor">On the usefulness and security of opening ports in context of clearnet and Tor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Ports&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Ports&amp;action=edit&amp;section=1.html" title="Edit section: On the usefulness and security of opening ports in context of clearnet and Tor">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>We have to clearly distinguish between opening when referring to clearnet versus referring to opening a port when using Tor.
 </p><p>Most times when talking generally about opening ports (clearnet, unrelated to Tor), technically one is referring to allow unsolicited incoming connections. Imagine a public web server. The websever is supposed to be able to reply to unsolicited incoming connections by clients. On the other hand however, clients usually (except when they are behind some corporate, national or similar firewall) can use any outgoing port. When a client is creating an outgoing connection, the operating system picks a random port where it expects the solicited incoming answer. Sometimes end users want to open a port such for example when they want to install a public webserver on their home connection. The end users have mostly unrestricted outgoing access, but unsolicited incoming connections are restricted by their home router's NAT firewall. Opening a port for them often means that they use their router's web interface, configure the port they want to open and forward it to a computer in their LAN network. Also when they are using a firewall that restricts unsolicited incoming connections, they need to open an incoming port in their firewall in order to make their server application reachable from the open internet. By doing so, the users real public IP address is exposed. You would not want to open a port using this method if you wish to stay anonymous.
-</p><p>When talking about <a data-href="/wiki/Tor" href="./Tor.html" title="Tor">Tor</a>, the topic of opening ports often causes confusion. By default Tor works only as a client, which means it lets the user establish outgoing connections<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> and and receives the solicited answers. The Tor software by default does not block any outgoing ports. However, some Tor exit relays restrict outgoing ports. In theory, if there was no Tor exit relay supporting outgoing port 22, then you could not exit the Tor network directly through that port. In these cases there would be no way to force open that port since that is a Tor relay, not Tor client setting.
+</p><p>When talking about <a data-href="/wiki/Tor" href="./Tor.html" title="Tor">Tor</a>, the topic of opening ports often causes confusion. By default Tor works only as a client, which means it lets the user establish outgoing connections<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> and receives the solicited answers. The Tor software by default does not block any outgoing ports. However, some Tor exit relays restrict outgoing ports. In theory, if there was no Tor exit relay supporting outgoing port 22, then you could not exit the Tor network directly through that port. In these cases there would be no way to force open that port since that is a Tor relay, not Tor client setting.
 </p><p><a data-href="/wiki/Hosting_Location_Hidden_Services" href="./Hosting_Location_Hidden_Services.html" title="Hosting Location Hidden Services">Hosting Location Onion Services</a> over Tor is possible. One way to accomplish this is using <a data-href="/wiki/Onion_Services" href="./Onion_Services.html" title="Onion Services">Onion Services</a>. To oversimplify this, by configuration Tor it instructions the Tor network to open an incoming port at Tor relays for Tor onion hostname which gets forwarded to a port on the machine where Tor is running (called virtport). The users real public IP address remains hidden. That onion hostname is only reachable by other Tor clients.
 </p><p>As of Whonix 13, it makes limited sense to open a port. There are very few exceptions.
 </p>
@@ -172,7 +172,7 @@ In Whonix 14 (in development), if you want to host a Tor onion service,  you wil
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Payment" href="./Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Ports" href="./Ports" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -184,38 +184,38 @@ In Whonix 14 (in development), if you want to host a Tor onion service,  you wil
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181008222545
+Cached time: 20181117070408
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.076 seconds
-Real time usage: 0.124 seconds
-Preprocessor visited node count: 156/1000000
-Preprocessor generated node count: 742/1000000
+Real time usage: 0.130 seconds
+Preprocessor visited node count: 153/1000000
+Preprocessor generated node count: 722/1000000
 Post‐expand include size: 3839/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1470/5000000 bytes
+Unstrip post‐expand size: 1590/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   98.085      1 -total
- 67.77%   66.468      1 Template:Mbox
- 18.55%   18.190      1 Template:Footer
-  7.38%    7.240      1 Template:FooterLight
-  5.83%    5.720      1 Template:Footer_this_is_a_wiki
-  4.97%    4.871      1 Template:Reflist
-  4.47%    4.381      1 Template:Edit_it
-  4.23%    4.153      1 Template:Header
-  3.92%    3.846      1 Template:Share
-  2.05%    2.008      1 Template:RandomNews
+100.00%  109.949      1 -total
+ 66.43%   73.036      1 Template:Mbox
+ 16.45%   18.088      1 Template:Footer
+  7.45%    8.187      1 Template:Header
+  7.15%    7.858      1 Template:FooterLight
+  5.58%    6.130      1 Template:Reflist
+  4.36%    4.794      1 Template:Footer_this_is_a_wiki
+  4.20%    4.618      1 Template:Share
+  3.30%    3.624      1 Template:Edit_it
+  2.17%    2.390      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ports&amp;oldid=35162" dir="ltr" href="https://www.whonix.org/w/index.php?title=Ports&amp;oldid=35162">https://www.whonix.org/w/index.php?title=Ports&amp;oldid=35162</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ports&amp;oldid=39470" dir="ltr" href="https://www.whonix.org/w/index.php?title=Ports&amp;oldid=39470">https://www.whonix.org/w/index.php?title=Ports&amp;oldid=39470</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -226,7 +226,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ports&amp
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 August 2018, at 07:08.</li>
+<li id="footer-lastmod"> This page was last edited on 17 November 2018, at 00:38.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -241,5 +241,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ports&amp
 </div>
 
 </body>
-<!-- Cached/compressed 20181008222545 -->
+<!-- Cached/compressed 20181117070408 -->
 </html>
