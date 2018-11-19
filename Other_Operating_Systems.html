@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Other Operating Systems - Whonix
  url: ./Other_Operating_Systems
- date: Sun Nov 18 08:02:42 2018
+ date: Mon Nov 19 08:02:46 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -180,10 +180,13 @@ Whonix requires payments to stay alive.
 <p><u>For <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<ol><li>Create a new VM.</li>
-<li>Set sys-whonix as your VM's NetVM.</li></ol>
+<p><b>1.</b> Create a new VM.
+</p><p><b>2.</b> Set sys-whonix as your VM's NetVM.
+</p><p><code>Qube Manager</code> -&gt; <code>right-click</code> <code>vm-name</code> -&gt; <code>NetVM</code> -&gt; <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
 </div>
 </div>
+<hr/>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p><u>For <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, click on Expand on the right.
 </p>
@@ -209,7 +212,7 @@ Whonix requires payments to stay alive.
 <li><code>System</code> -&gt; <code>Motherboard</code> -&gt; <code>Pointing Device</code> -&gt; <code>PS/2 Mouse (required to disable the USB controller)</code></li>
 <li><code>System</code> -&gt; <code>Processor</code> -&gt; <code>Enable PAE/NX (if available)</code></li>
 <li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Attached to Internal Network (important!)</code></li>
-<li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Name (of Internal Network) (important!): <span style="border:1px dotted #005cb9">Whonix</span></code> <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
+<li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Name (of Internal Network) (important!): <span style="border:1px dotted #005cb9">Whonix</span></code> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li>
 <li><code>USB</code> -&gt; <code>Uncheck Enable USB controller</code></li>
 <li>-&gt; <code>OK</code></li></ul>
 </div>
@@ -220,7 +223,7 @@ Whonix requires payments to stay alive.
 <div class="mw-collapsible-content">
 <p>This method's advantage is that there is need to manually create a new VM. The process is greatly simplified; the Whonix-Custom-Workstation only needs to be downloaded and imported. This approach has several benefits: it is easier, all security settings are set for the VM, and users don't have to remember and apply necessary settings.
 </p><p>The latest Whonix-Custom-Workstation Version is: <span style="color: green">9</span>
-</p><p>Although the version number for Whonix-Gateway and Whonix-Default / Download-Version might be far higher than the Whonix-Custom-Workstation version, this is normal. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>Although the version number for Whonix-Gateway and Whonix-Default / Download-Version might be far higher than the Whonix-Custom-Workstation version, this is normal. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p><b>1. Download the Whonix-Custom-Workstation</b>
 </p><p>Download the following image.
 </p><p><!--
@@ -230,8 +233,31 @@ param3 version
 param4 file name
 param5 file extension
 param6 link description
+param7 flavor
 -->
-<a class="" data-href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova" download="" href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova" target="_blank">Download</a>
+<a class=" " data-href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova
+" download="" href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova
+" target="_blank">
+Download
+</a>
 </p><p><b>2. Download the OpenPGP Signature</b>
 </p><p>Download the corresponding OpenPGP signature.
 </p><p><!--
@@ -241,12 +267,35 @@ param3 version
 param4 file name
 param5 file extension
 param6 link description
+param7 flavor
 -->
-<a class="link-https" data-href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova.asc" download="" href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova.asc" target="_blank">OpenPGP Signature</a>
+<a class="link-https " data-href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova.asc
+" download="" href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova.asc
+" target="_blank">
+OpenPGP Signature
+</a>
 </p><p><b>3. Verify the Whonix Image</b>
 </p><p>Follow these steps to <a data-href="/wiki/Verify_the_Whonix_images" href="./Verify_the_Whonix_images.html" title="Verify the Whonix images">verify</a> the Whonix image.
 </p><p><b>4. Import and Rename the Virtual Machine</b>
-</p><p>After importing the image, rename the virtual machine to something else. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>After importing the image, rename the virtual machine to something else. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 <code>VirtualBox</code> -&gt; <code>Right-click on VM</code> -&gt; <code>Settings</code> -&gt; <code>Name (for example: <i><span style="background-color:#FBFBFB">myVM</span></i>)</code>
 </p><p>If this method was used, please report how well it worked in the Whonix forum.
 </p>
@@ -254,6 +303,7 @@ param6 link description
 </div>
 </div>
 </div>
+<hr/>
 <p><b>Start VM and Install Operating System</b>
 </p>
 <ol><li>Start the newly created VM (for example: <i><span style="background-color:#FBFBFB">myVM</span></i>).</li>
@@ -271,6 +321,7 @@ Preferred DNS server 10.152.152.10
 </pre>
 <p><b>Download operating system updates.</b>
 </p>
+<hr/>
 <h1><span class="mw-headline" id="Whonix-FreeBSD-Workstation">Whonix-FreeBSD-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=5.html" title="Edit section: Whonix-FreeBSD-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><b>Create a new FreeBSD VM on VirtualBox</b>
 </p><p>VirtualBox -&gt; Machine -&gt; New -&gt; Next -&gt; Enter Name (for example: myVM) -&gt; Enter Operating System and Version -&gt; Next -&gt; define RAM -&gt; Next -&gt; create a new hdd (or not) -&gt; Next -&gt; disk format doesn't matter, VDI works fine however -&gt; Next -&gt; dynamically or fixed size is a matter of preference -&gt; Next hdd size and location is a matter of preference -&gt; Next -&gt; Create 
@@ -344,6 +395,7 @@ For the address resolution to work. Open <i><span style="background-color:#FBFBF
 </pre>
 <p>Confirm changes by running ifconfig.
 </p>
+<hr/>
 <h1><span id="Whonix-GNU/Linux-Workstation"></span><span class="mw-headline" id="Whonix-GNU.2FLinux-Workstation">Whonix-GNU/Linux-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=6.html" title="Edit section: Whonix-GNU/Linux-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Easy_2">Easy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=7.html" title="Edit section: Easy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This is the easiest, but least secure option. (<font size="-3"><a href="#more_security">#more security</a></font>)
@@ -352,10 +404,13 @@ For the address resolution to work. Open <i><span style="background-color:#FBFBF
 <p><u>For <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<ol><li>Create a new VM.</li>
-<li>Set sys-whonix as your VM's NetVM.</li></ol>
+<p><b>1.</b> Create a new VM.
+</p><p><b>2.</b> Set sys-whonix as your VM's NetVM.
+</p><p><code>Qube Manager</code> -&gt; <code>right-click</code> <code>vm-name</code> -&gt; <code>NetVM</code> -&gt; <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p>
 </div>
 </div>
+<hr/>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p><u>For <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, click on Expand on the right.
 </p>
@@ -381,7 +436,7 @@ For the address resolution to work. Open <i><span style="background-color:#FBFBF
 <li><code>System</code> -&gt; <code>Motherboard</code> -&gt; <code>Pointing Device</code> -&gt; <code>PS/2 Mouse (required to disable the USB controller)</code></li>
 <li><code>System</code> -&gt; <code>Processor</code> -&gt; <code>Enable PAE/NX (if available)</code></li>
 <li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Attached to Internal Network (important!)</code></li>
-<li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Name (of Internal Network) (important!): <span style="border:1px dotted #005cb9">Whonix</span></code> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></li>
+<li><code>Network</code> -&gt; <code>Adapter 1</code> -&gt; <code>Name (of Internal Network) (important!): <span style="border:1px dotted #005cb9">Whonix</span></code> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup></li>
 <li><code>USB</code> -&gt; <code>Uncheck Enable USB controller</code></li>
 <li>-&gt; <code>OK</code></li></ul>
 </div>
@@ -392,7 +447,7 @@ For the address resolution to work. Open <i><span style="background-color:#FBFBF
 <div class="mw-collapsible-content">
 <p>This method's advantage is that there is need to manually create a new VM. The process is greatly simplified; the Whonix-Custom-Workstation only needs to be downloaded and imported. This approach has several benefits: it is easier, all security settings are set for the VM, and users don't have to remember and apply necessary settings.
 </p><p>The latest Whonix-Custom-Workstation Version is: <span style="color: green">9</span>
-</p><p>Although the version number for Whonix-Gateway and Whonix-Default / Download-Version might be far higher than the Whonix-Custom-Workstation version, this is normal. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p><p>Although the version number for Whonix-Gateway and Whonix-Default / Download-Version might be far higher than the Whonix-Custom-Workstation version, this is normal. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p><b>1. Download the Whonix-Custom-Workstation</b>
 </p><p>Download the following image.
 </p><p><!--
@@ -402,8 +457,31 @@ param3 version
 param4 file name
 param5 file extension
 param6 link description
+param7 flavor
 -->
-<a class="" data-href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova" download="" href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova" target="_blank">Download</a>
+<a class=" " data-href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova
+" download="" href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova
+" target="_blank">
+Download
+</a>
 </p><p><b>2. Download the OpenPGP Signature</b>
 </p><p>Download the corresponding OpenPGP signature.
 </p><p><!--
@@ -413,12 +491,35 @@ param3 version
 param4 file name
 param5 file extension
 param6 link description
+param7 flavor
 -->
-<a class="link-https" data-href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova.asc" download="" href="https://download.whonix.org/linux/9/Whonix-Custom-Workstation-9.ova.asc" target="_blank">OpenPGP Signature</a>
+<a class="link-https " data-href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova.asc
+" download="" href="https://download.whonix.org/linux
+/
+9
+/
+Whonix-Custom-Workstation
+-
+
+9
+.
+ova.asc
+" target="_blank">
+OpenPGP Signature
+</a>
 </p><p><b>3. Verify the Whonix Image</b>
 </p><p>Follow these steps to <a data-href="/wiki/Verify_the_Whonix_images" href="./Verify_the_Whonix_images.html" title="Verify the Whonix images">verify</a> the Whonix image.
 </p><p><b>4. Import and Rename the Virtual Machine</b>
-</p><p>After importing the image, rename the virtual machine to something else. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>After importing the image, rename the virtual machine to something else. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 <code>VirtualBox</code> -&gt; <code>Right-click on VM</code> -&gt; <code>Settings</code> -&gt; <code>Name (for example: <i><span style="background-color:#FBFBFB">myVM</span></i>)</code>
 </p><p>If this method was used, please report how well it worked in the Whonix forum.
 </p>
@@ -426,6 +527,7 @@ param6 link description
 </div>
 </div>
 </div>
+<hr/>
 <p><b>Start VM and Install Operating System</b>
 </p>
 <ol><li>Start the newly created VM (for example: <i><span style="background-color:#FBFBFB">myVM</span></i>).</li>
@@ -537,6 +639,7 @@ iface eth0 inet static
 <p><b>Download operating system updates.</b>
 </p><p>For Debian based Linux, such as Ubuntu, see <a data-href="/wiki/Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">updates</a>.
 </p>
+<hr/>
 <h1><span class="mw-headline" id="Whonix-Android-Workstation">Whonix-Android-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=8.html" title="Edit section: Whonix-Android-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="With_Static_IP">With Static IP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=9.html" title="Edit section: With Static IP">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>Preferred!</b>
@@ -639,6 +742,9 @@ Gateway is ready to serve a dynamic IP to the Android x86 Whonix-Workstation.
 </p>
 </div>
 </div>
+<p><span id="more_security"></span>
+</p>
+<hr/>
 <h1><span class="mw-headline" id="More_security">More security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=11.html" title="Edit section: More security">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Recommendations:
 </p>
@@ -650,6 +756,7 @@ Gateway is ready to serve a dynamic IP to the Android x86 Whonix-Workstation.
 <li>Set up a static IP.</li>
 <li>In case you want to run more than one Whonix-Workstation at the same time, it is recommended reading the Introduction in the <a data-href="/wiki/Multiple_Whonix-Workstations" href="./Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a> article.</li>
 <li>Read <a data-href="/wiki/Security_Guide" href="./Security_Guide.html" title="Security Guide">Security Guide</a>, <a data-href="/wiki/Documentation" href="./Documentation.html" title="Documentation">Documentation</a> and <a data-href="/wiki/Design" href="./Design.html" title="Design">Design</a> (which is Whonix-Example-Implementation-Workstation (based on Debian GNU/Linux) specific) and try to apply as much from it to Windows as possible.</li></ul>
+<hr/>
 <h1><span class="mw-headline" id="Even_more_security">Even more security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=12.html" title="Edit section: Even more security">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="General">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=13.html" title="Edit section: General">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Recommendations:
@@ -660,12 +767,13 @@ Gateway is ready to serve a dynamic IP to the Android x86 Whonix-Workstation.
 <h2><span class="mw-headline" id="VM_settings">VM settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=14.html" title="Edit section: VM settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><u><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a> users</u> can skip this.
 </p>
+<hr/>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p><u>For <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
 <div class="toccolours mw-collapsible mw-collapsed">
-<p>If the Whonix-Custom-Workstation template was downloaded and imported, this section can be skipped. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+<p>If the Whonix-Custom-Workstation template was downloaded and imported, this section can be skipped. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p><p>If a VirtualBox VM was manually created, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
@@ -673,7 +781,7 @@ Gateway is ready to serve a dynamic IP to the Android x86 Whonix-Workstation.
 </p>
 <pre>vboxmanage list vms
 </pre>
-<p>Apply these settings. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+<p>Apply these settings. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p>
 <pre>VBoxManage modifyvm "yourvmname" --synthcpu on
 VBoxManage modifyvm "yourvmname" --acpi on
@@ -681,11 +789,11 @@ VBoxManage modifyvm "yourvmname" --ioapic on
 VBoxManage modifyvm "yourvmname" --rtcuseutc on
 VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled" "1"
 </pre>
-<p>Disable clipboard sharing. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+<p>Disable clipboard sharing. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
 <pre>VBoxManage modifyvm "yourvmname" --clipboard disabled
 </pre>
-<p>Disable Drag'n'Drop support. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+<p>Disable Drag'n'Drop support. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
 <pre>VBoxManage modifyvm "yourvmname" --draganddrop disabled
 </pre>
@@ -713,6 +821,7 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 </div>
 </div>
 </div>
+<hr/>
 <h2><span class="mw-headline" id="Whonix_Packages">Whonix Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=15.html" title="Edit section: Whonix Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a data-href="/wiki/Whonix_Debian_Packages" href="./Whonix_Debian_Packages.html" title="Whonix Debian Packages">Whonix's Debian Packages</a> (<a class="external text" data-href="https://github.com/Whonix" href="https://github.com/Whonix" rel="noreferrer noopener" target="_blank">overview</a>), such as for example <a class="external text" data-href="https://github.com/Whonix/uwt" href="https://github.com/Whonix/uwt" rel="noreferrer noopener" target="_blank">uwt</a>, are available for installation <a data-href="/wiki/Dev/Build_Documentation" href="./Dev/Build_Documentation.html" title="Dev/Build Documentation">from source</a> and <a data-href="/wiki/Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix's apt repository</a> (<a class="external text" data-href="https://github.com/Whonix/uwt#how-to-install-in-debian-using-apt-get" href="https://github.com/Whonix/uwt" rel="noreferrer noopener" target="_blank">example instructions</a>). Installation (of some) anonymity/security/privacy/usability related ones of them might be interesting for users of Debian and Debian derivatives.
 </p><p><b>Note, that usage of these package outside of Whonix is untested and there is no maintainer that supports this use case.</b>
@@ -757,18 +866,18 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <td style="background-color: #FF9090">No
 </td></tr>
 <tr>
-<td align="left">Protection against root exploits (Malware with root rights) on the Workstation <sup class="reference" id="cite_ref-same_footnote_as_11-0"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td align="left">Protection against root exploits (Malware with root rights) on the Workstation <sup class="reference" id="cite_ref-same_footnote_as_13-0"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-1"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-1"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-2"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-2"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">IP/DNS protocol leak protection
 </td>
-<td style="background-color: #90FF90">Full <sup class="reference" id="cite_ref-same_footnote_as_11-3"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Full <sup class="reference" id="cite_ref-same_footnote_as_13-3"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #90FF90">Full <sup class="reference" id="cite_ref-same_footnote_as_11-4"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Full <sup class="reference" id="cite_ref-same_footnote_as_13-4"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Takes advantage of Entry Guards
@@ -787,9 +896,9 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <tr>
 <td align="left">Hides hardware serials from malicious software
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-5"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-5"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-6"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-6"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Does not collects (virtual) hardware serials
@@ -803,21 +912,21 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 </td>
 <td style="background-color: #90FF90">Yes
 </td>
-<td><span id="Your_Responsibility"></span><a href="#Missing_Documentation">Your responsibility</a> to install Tor Browser. <sup class="reference" id="cite_ref-tb_12-0"><a href="#cite_note-tb-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<td><span id="Your_Responsibility"></span><a href="#Missing_Documentation">Your responsibility</a> to install Tor Browser. <sup class="reference" id="cite_ref-tb_14-0"><a href="#cite_note-tb-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </td></tr>
 <tr>
-<td align="left">Includes Firefox privacy patches <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> and Tor Button (=Tor Browser)
+<td align="left">Includes Firefox privacy patches <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> and Tor Button (=Tor Browser)
 </td>
 <td style="background-color: #90FF90">Yes, because it uses Tor Browser (without Tor/Vidalia).
 </td>
-<td>Your responsibility to install Tor Browser. <sup class="reference" id="cite_ref-tb_12-1"><a href="#cite_note-tb-12">[12]</a></sup>
+<td>Your responsibility to install Tor Browser. <sup class="reference" id="cite_ref-tb_14-1"><a href="#cite_note-tb-14">[14]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Prevents <a data-href="/wiki/DoNot#Prevent_Tor_over_Tor_scenarios." href="./DoNot.html" title="DoNot">Tor over Tor</a> for Tor Browser
 </td>
 <td style="background-color: #90FF90">Yes
 </td>
-<td>Your responsibility to prevent Tor over Tor. <sup class="reference" id="cite_ref-tb_12-2"><a href="#cite_note-tb-12">[12]</a></sup>
+<td>Your responsibility to prevent Tor over Tor. <sup class="reference" id="cite_ref-tb_14-2"><a href="#cite_note-tb-14">[14]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Stream isolation to prevent identity correlation through circuit sharing
@@ -829,9 +938,9 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <tr>
 <td align="left">Stream isolation in Tor Browser
 </td>
-<td style="background-color: #FF9090">No <sup class="reference" id="cite_ref-same_footnote_as_11-7"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #FF9090">No <sup class="reference" id="cite_ref-same_footnote_as_13-7"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #FF9090">No <sup class="reference" id="cite_ref-same_footnote_as_11-8"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #FF9090">No <sup class="reference" id="cite_ref-same_footnote_as_13-8"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Encryption
@@ -841,7 +950,7 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <td style="background-color: #FFFB85">Should be applied on host.
 </td></tr>
 <tr>
-<td align="left">Cold Boot Attack Protection <sup class="reference" id="cite_ref-same_footnote_as_11-9"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td align="left">Cold Boot Attack Protection <sup class="reference" id="cite_ref-same_footnote_as_13-9"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
 <td style="background-color: #FF9090">No
 </td>
@@ -871,23 +980,23 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <tr>
 <td align="left">Hides your MAC address from websites
 </td>
-<td style="background-color: #AFEEEE">Invalid <sup class="reference" id="cite_ref-same_footnote_as_11-10"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #AFEEEE">Invalid <sup class="reference" id="cite_ref-same_footnote_as_13-10"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #AFEEEE">Invalid <sup class="reference" id="cite_ref-same_footnote_as_11-11"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #AFEEEE">Invalid <sup class="reference" id="cite_ref-same_footnote_as_13-11"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
-<td align="left">Secures your MAC address from local LAN (sometimes ISP) <sup class="reference" id="cite_ref-same_footnote_as_11-12"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td align="left">Secures your MAC address from local LAN (sometimes ISP) <sup class="reference" id="cite_ref-same_footnote_as_13-12"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #FF9090">No, planned, see. <sup class="reference" id="cite_ref-same_footnote_as_11-13"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #FF9090">No, planned, see. <sup class="reference" id="cite_ref-same_footnote_as_13-13"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td>Your responsibility. <sup class="reference" id="cite_ref-same_footnote_as_11-14"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td>Your responsibility. <sup class="reference" id="cite_ref-same_footnote_as_13-14"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Hides your hosts MAC address from applications
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-15"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-15"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td>
-<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_11-16"><a href="#cite_note-same_footnote_as-11">[11]</a></sup>
+<td style="background-color: #90FF90">Yes <sup class="reference" id="cite_ref-same_footnote_as_13-16"><a href="#cite_note-same_footnote_as-13">[13]</a></sup>
 </td></tr>
 <tr>
 <td align="left">Secure gpg.conf
@@ -905,7 +1014,7 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 </td></tr></tbody></table>
 <h2><span class="mw-headline" id="Conclusion">Conclusion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=22.html" title="Edit section: Conclusion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The Whonix-Download-Workstation is already preconfigured with all Whonix extra security features.
-</p><p>A Whonix-Custom-Workstation <i>can be made</i> (Your responsibility!) as secure as a Whonix-Download-Workstation. If you simply create <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> a Whonix-Custom-Workstation it has still <i>some</i> security advantages, for example full IP/DNS protocol leak protection, but <i>not all</i>, for example it lacks Secure Distributed Network Time Synchronization. The details are listed in the table above.
+</p><p>A Whonix-Custom-Workstation <i>can be made</i> (Your responsibility!) as secure as a Whonix-Download-Workstation. If you simply create <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> a Whonix-Custom-Workstation it has still <i>some</i> security advantages, for example full IP/DNS protocol leak protection, but <i>not all</i>, for example it lacks Secure Distributed Network Time Synchronization. The details are listed in the table above.
 </p>
 <h1><span class="mw-headline" id="Missing_Documentation">Missing Documentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=23.html" title="Edit section: Missing Documentation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>You might wonder what "<a href="#Your_Responsibility">your responsibility</a>" means. Some users are wondering, where the documentation for these aspects can be found. No documentation has been written yet. There is a lack of resources to maintain such instructions. I.e. writing them, and more so, keeping them up to date, testing them, answering support requests, fixing bugs and implementing feature requests. Please <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">contribute</a>. For more detailed explanation, see also <a href="#Whonix_Packages">Whonix Packages</a>.
@@ -913,45 +1022,65 @@ VBoxManage setextradata "yourvmname" "VBoxInternal/Devices/VMMDev/0/Config/GetHo
 <h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=24.html" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Note: It is <b>W</b>honix, not whonix. Capital <b>W</b> case sensitivity matters.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>qubes-prefs --set vm-name netvm sys-whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qubes-prefs --set vm-name netvm sys-whonix</textarea>
+</div>
+</div></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">A newer Whonix-Custom-Workstation only needs to be redistributed if the settings for the VM have changed. For example, these have not changed between Whonix 9 and Whonix 13. Therefore, Whonix-Custom-Workstation version 9 is recent enough to function, because it comes with an empty virtual hard drive (meaning software cannot be outdated).</span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Note: It is <b>W</b>honix, not whonix. Capital <b>W</b> case sensitivity matters.</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">It is not strictly necessary to rename the VM at this point, but this prevents potential naming conflicts if another Whonix-Custom-Workstation is imported later on.</span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">A newer Whonix-Custom-Workstation only needs to be redistributed if the settings for the VM have changed. For example, these have not changed between Whonix 9 and Whonix 13. Therefore, Whonix-Custom-Workstation version 9 is recent enough to function, because it comes with an empty virtual hard drive (meaning software cannot be outdated).</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Note: It is <b>W</b>honix, not whonix. Capital <b>W</b> case sensitivity matters.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">It is not strictly necessary to rename the VM at this point, but this prevents potential naming conflicts if another Whonix-Custom-Workstation is imported later on.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">A newer Whonix-Custom-Workstation only needs to be redistributed if the settings for the VM have changed. For example, these have not changed between Whonix 9 and Whonix 13. Therefore, Whonix-Custom-Workstation version 9 is recent enough to function, because it comes with an empty virtual hard drive (meaning software cannot be outdated).</span>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>qubes-prefs --set vm-name netvm sys-whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">qubes-prefs --set vm-name netvm sys-whonix</textarea>
+</div>
+</div></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">It is not strictly necessary to rename the VM at this point, but this prevents potential naming conflicts if another Whonix-Custom-Workstation is imported later on.</span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Note: It is <b>W</b>honix, not whonix. Capital <b>W</b> case sensitivity matters.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">The Whonix-Custom-Workstation template already comes with these settings by default.</span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">A newer Whonix-Custom-Workstation only needs to be redistributed if the settings for the VM have changed. For example, these have not changed between Whonix 9 and Whonix 13. Therefore, Whonix-Custom-Workstation version 9 is recent enough to function, because it comes with an empty virtual hard drive (meaning software cannot be outdated).</span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">For further reading on why these settings are beneficial, see <i><span style="background-color:#FBFBFB">build-steps.d/2500_create-vbox-vm</span></i> in the Whonix source code folder.</span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">It is not strictly necessary to rename the VM at this point, but this prevents potential naming conflicts if another Whonix-Custom-Workstation is imported later on.</span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">This is a precautionary measure.</span>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">The Whonix-Custom-Workstation template already comes with these settings by default.</span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">This is a precautionary measure.</span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">For further reading on why these settings are beneficial, see <i><span style="background-color:#FBFBFB">build-steps.d/2500_create-vbox-vm</span></i> in the Whonix source code folder.</span>
 </li>
-<li id="cite_note-same_footnote_as-11"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-same_footnote_as_11-0">11.00</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-1">11.01</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-2">11.02</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-3">11.03</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-4">11.04</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-5">11.05</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-6">11.06</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-7">11.07</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-8">11.08</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-9">11.09</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-10">11.10</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-11">11.11</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-12">11.12</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-13">11.13</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-14">11.14</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-15">11.15</a></sup> <sup><a href="#cite_ref-same_footnote_as_11-16">11.16</a></sup></span> <span class="reference-text">Same footnote(s) as in <a data-href="/wiki/Comparison_with_Others" href="./Comparison_with_Others.html" title="Comparison with Others">Comparison of Whonix, Tails, Tor Browser, Qubes OS TorVM and Corridor</a> and <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a>.</span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">This is a precautionary measure.</span>
 </li>
-<li id="cite_note-tb-12"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-tb_12-0">12.0</a></sup> <sup><a href="#cite_ref-tb_12-1">12.1</a></sup> <sup><a href="#cite_ref-tb_12-2">12.2</a></sup></span> <span class="reference-text">
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">This is a precautionary measure.</span>
+</li>
+<li id="cite_note-same_footnote_as-13"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-same_footnote_as_13-0">13.00</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-1">13.01</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-2">13.02</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-3">13.03</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-4">13.04</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-5">13.05</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-6">13.06</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-7">13.07</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-8">13.08</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-9">13.09</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-10">13.10</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-11">13.11</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-12">13.12</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-13">13.13</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-14">13.14</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-15">13.15</a></sup> <sup><a href="#cite_ref-same_footnote_as_13-16">13.16</a></sup></span> <span class="reference-text">Same footnote(s) as in <a data-href="/wiki/Comparison_with_Others" href="./Comparison_with_Others.html" title="Comparison with Others">Comparison of Whonix, Tails, Tor Browser, Qubes OS TorVM and Corridor</a> and <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a>.</span>
+</li>
+<li id="cite_note-tb-14"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-tb_14-0">14.0</a></sup> <sup><a href="#cite_ref-tb_14-1">14.1</a></sup> <sup><a href="#cite_ref-tb_14-2">14.2</a></sup></span> <span class="reference-text">
 For help using Tor Browser without Tor over Tor (recommended), see:
 
 <ul><li>Linux: <a data-href="/wiki/Tor_Browser#Whonix-Custom-Linux-Workstation_specific" href="./Tor_Browser.html" title="Tor Browser">Tor_Browser#Whonix-Custom-Linux-Workstation_specific</a></li>
 <li>Windows: <a data-href="/wiki/Tor_Browser#Windows_specific" href="./Tor_Browser.html" title="Tor Browser">Tor_Browser#Windows_specific</a></li></ul>
 </span></li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
 For explanation of the about:tor "Something went wrong" error, please see this <a class="external text" data-href="https://forums.whonix.org/t/torbrowser-on-ubuntu-14-04-64-bit" href="https://forums.whonix.org/t/torbrowser-on-ubuntu-14-04-64-bit" rel="noreferrer noopener" target="_blank">forum thread</a>.</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers" href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers</a></span>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers" href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers</a></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">Install or use a Live CD/DVD into Whonix-Workstation.</span>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">Install or use a Live CD/DVD into Whonix-Workstation.</span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Interested in becoming an author for the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Other_Operating_Systems" href="./Other_Operating_Systems" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -963,38 +1092,38 @@ For explanation of the about:tor "Something went wrong" error, please see this <
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181018083021
+Cached time: 20181118140638
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.268 seconds
-Real time usage: 0.335 seconds
-Preprocessor visited node count: 1085/1000000
-Preprocessor generated node count: 2723/1000000
-Post‐expand include size: 25688/2097152 bytes
-Template argument size: 2010/2097152 bytes
+Real time usage: 0.331 seconds
+Preprocessor visited node count: 1122/1000000
+Preprocessor generated node count: 2817/1000000
+Post‐expand include size: 26295/2097152 bytes
+Template argument size: 2107/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 11672/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 12274/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  240.537      1 -total
- 30.85%   74.198      1 Template:Mbox
- 17.25%   41.482     15 Template:CodeSelect
- 12.59%   30.292      2 Template:VM_Settings_Easy_Common
-  8.90%   21.400      3 Template:Open_with_root_rights
-  7.85%   18.880      3 Template:Box
-  7.80%   18.758      1 Template:Footer
-  6.36%   15.307      1 Template:Reflist
-  3.53%    8.495      1 Template:FooterLight
-  2.80%    6.725      1 Template:VM_Settings_Security_Common
+100.00%  235.044      1 -total
+ 29.65%   69.688      1 Template:Mbox
+ 18.24%   42.866     17 Template:CodeSelect
+ 14.35%   33.725      2 Template:VM_Settings_Easy_Common
+ 10.33%   24.273      1 Template:Reflist
+  8.49%   19.958      3 Template:Open_with_root_rights
+  7.45%   17.503      3 Template:Box
+  6.89%   16.193      1 Template:Footer
+  2.79%    6.546      1 Template:FooterLight
+  2.47%    5.797      1 Template:VM_Settings_Security_Common
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=38426" dir="ltr" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=38426">https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=38426</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=39617" dir="ltr" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=39617">https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=39617</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1005,7 +1134,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Ope
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 18 October 2018, at 10:14.</li>
+<li id="footer-lastmod"> This page was last edited on 18 November 2018, at 13:57.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -1020,5 +1149,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Ope
 </div>
 
 </body>
-<!-- Cached/compressed 20181018083021 -->
+<!-- Cached/compressed 20181118140638 -->
 </html>
