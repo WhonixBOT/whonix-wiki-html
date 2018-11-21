@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tor Browser Advanced Topics - Whonix
  url: ../Tor_Browser/Advanced_Users
- date: Tue Nov 20 08:10:42 2018
+ date: Wed Nov 21 08:10:32 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -189,8 +189,14 @@ Whonix requires payments to stay alive.
 </ul>
 </li>
 <li class="toclevel-1 tocsection-47"><a href="#Debugging"><span class="tocnumber">10</span> <span class="toctext">Debugging</span></a></li>
-<li class="toclevel-1 tocsection-48"><a href="#Footnotes_.2F_References"><span class="tocnumber">11</span> <span class="toctext">Footnotes / References</span></a></li>
-<li class="toclevel-1 tocsection-49"><a href="#License"><span class="tocnumber">12</span> <span class="toctext">License</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="#Technical_Background_of_Tor_Browser_Update_Process_Cumbersomeness"><span class="tocnumber">11</span> <span class="toctext">Technical Background of Tor Browser Update Process Cumbersomeness</span></a>
+<ul>
+<li class="toclevel-2 tocsection-49"><a href="#Linux_Generally"><span class="tocnumber">11.1</span> <span class="toctext">Linux Generally</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="#Qubes_Specific"><span class="tocnumber">11.2</span> <span class="toctext">Qubes Specific</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-51"><a href="#Footnotes_.2F_References"><span class="tocnumber">12</span> <span class="toctext">Footnotes / References</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="#License"><span class="tocnumber">13</span> <span class="toctext">License</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Tor_Browser_Adversary_Model">Tor Browser Adversary Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=1.html" title="Edit section: Tor Browser Adversary Model">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -971,7 +977,72 @@ extensions.torlauncher.logmethod | 0
 </div>
 <p><sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup>
 </p>
-<h1><span id="Footnotes_/_References"></span><span class="mw-headline" id="Footnotes_.2F_References">Footnotes / References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=48.html" title="Edit section: Footnotes / References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Technical_Background_of_Tor_Browser_Update_Process_Cumbersomeness">Technical Background of Tor Browser Update Process Cumbersomeness</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=48.html" title="Edit section: Technical Background of Tor Browser Update Process Cumbersomeness">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Linux_Generally">Linux Generally</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=49" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=49.html" title="Edit section: Linux Generally">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Updating Tor Browser works different in Debian (and other Linux) generally. Different from most applications which can be upgraded through package sources such as apt-get in Debian. (<a data-href="/wiki/About#Based_on_Debian" href="../About.html" title="About">Whonix is based on Debian</a>.) This is because of unresolved upstream issues. Namely, upstream does not provide deb packages and/or a deb repository with Tor Browser.
+</p>
+<ul><li><a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/5236" href="https://trac.torproject.org/projects/tor/ticket/5236" rel="noreferrer noopener" target="_blank">Make a deb of the Torbrowser and add to repository</a></li>
+<li><a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/3994" href="https://trac.torproject.org/projects/tor/ticket/3994" rel="noreferrer noopener" target="_blank">Get TorBrowser in Debian</a></li></ul>
+<p><a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/5236#comment:45" href="https://trac.torproject.org/projects/tor/ticket/5236" rel="noreferrer noopener" target="_blank">Quote</a> Tor Browser Developer Georg Koppen (gk):
+</p>
+<blockquote>
+<p>We don't have plans to pick this up, but maybe someone from the community...
+</p>
+</blockquote>
+<p>The usual process for non-Whonix, i.e. general Linux users supposed by The Tor Project is for users to go to torproject.org, to download Tor Browser for their platform, to verify Tor Browser, to extract it inside the user's home folder and to start Tor Browser.
+</p><p>Simplification of above process is provided by programs such as torbrowser-launcher (for Debian users) and tb-updater (for Debian and Whonix users). Yet, Tor Browser still gets installed inside the user's home folder. Due to that, Tor Browser cannot be updated by the package management such as apt-get.
+</p><p>torbrowser-launcher and tb-updater are Tor Browser installers. torbrowser-launcher (for Debian users) and tb-updater are <u>not</u> Tor Browser updaters. The difference between an installer and an updater is that an installer is incapable of persisting user data after updates. Only an updater can do that, Yes, tb-updater should and will long term be renamed to tpo-downloader.
+</p>
+<h2><span class="mw-headline" id="Qubes_Specific">Qubes Specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=50" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=50.html" title="Edit section: Qubes Specific">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Prerequisite knowledge:
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Table:</b> <i>Qubes R4 Inheritance and Persistence</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col">
+</th>
+<th scope="col">Inheritance <sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup>
+</th>
+<th scope="col">Persistence <sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>
+</th></tr>
+<tr>
+<th scope="row">TemplateVM
+</th>
+<td>n/a
+</td>
+<td>Everything
+</td></tr>
+<tr>
+<th>TemplateBasedVM
+</th>
+<td><i>/etc/skel/</i> to <i>/home/</i>
+</td>
+<td><i>/rw/</i> (includes <i>/home/</i> and <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank"><code>bind-dirs</code></a>)
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://www.qubes-os.org/doc/glossary/#dvm-template" href="https://www.qubes-os.org/doc/glossary/" rel="noreferrer noopener" target="_blank">DVM Template</a> <sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup>
+</th>
+<td><i>/etc/skel/</i> to <i>/home/</i>
+</td>
+<td><i>/rw/</i> (includes <i>/home/</i> and <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank"><code>bind-dirs</code></a>)
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://www.qubes-os.org/doc/dispvm/" href="https://www.qubes-os.org/doc/dispvm/" rel="noreferrer noopener" target="_blank">DisposableVM</a>
+</th>
+<td><i>/rw/</i> (includes <i>/home/</i> and <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank"><code>bind-dirs</code></a>)
+</td>
+<td>Nothing
+</td></tr></tbody></table>
+</div>
+</div>
+<p>Tor Browser is required by Tor Project being installed inside the user's home folder as explained in earlier chapter <a href="#Linux_Generally">#Linux Generally</a>. Qubes TemplateBasedAppVMs have their own home folder, independent from the TemplateVM they are based on. Therefore, updates of a Qubes TemplateVM cannot (sanely) update already installed Tor Browser's in a Qubes TemplateBasedAppVMs home folder.
+</p><p>In result due technical limitation explained in <a href="#Linux_Generally">#Linux Generally</a> in combination with Qubes specific design choices this makes Tor Browser updates even more cumbersome in Qubes OS.
+</p><p>Given the situation, the best acrobatics that Whonix could <a class="external text" data-href="https://phabricator.whonix.org/T417" href="https://phabricator.whonix.org/T417" rel="noreferrer noopener" target="_blank">implement</a> is to ensure that <u>new</u> <i>AppVMs</i> and <i><a data-href="/wiki/Qubes/DisposableVM" href="../Qubes/DisposableVM.html" title="Qubes/DisposableVM">DispVMs</a></i> are created with a copy of the latest Tor Browser version. In essence when tb-updater is run in a Qubes TemplateVM is is storing Tor Browser in folder <code>/var/cache/tb-binary</code>. When a TemplateBasedAppVM starts, and when it never copied Tor Browser before (so realistically only at first boot), and when there is no copy of Tor Browser in <code>/home/user</code>, it will copy Tor Browser from <code>/var/cache/tb-binary</code> to <code>/home/user</code>. (Existing copies of Tor Browser in users's home folder are not overwritten by explicit design goal of course to avoid data loss.) See <a data-href="/wiki/Tor_Browser/Advanced_Users#tb-updater_in_Qubes_TemplateVM" href="../Tor_Browser/Advanced_Users.html" title="Tor Browser/Advanced Users">tb-updater in Qubes Template VM</a> for technical details.
+</p>
+<h1><span id="Footnotes_/_References"></span><span class="mw-headline" id="Footnotes_.2F_References">Footnotes / References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=51" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=51.html" title="Edit section: Footnotes / References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.torproject.org/projects/torbrowser/design/#Implementation" href="https://www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">https://www.torproject.org/projects/torbrowser/design/#Implementation</a></span>
@@ -1106,9 +1177,16 @@ Qubes feature request: <a class="external text" data-href="https://github.com/Qu
 <li id="cite_note-43"><span class="mw-cite-backlink"><a href="#cite_ref-43">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://www.torproject.org/docs/torbutton/en/design/" href="https://www.torproject.org/docs/torbutton/en/design/" rel="noreferrer noopener" target="_blank">https://www.torproject.org/docs/torbutton/en/design/</a></span>
 </li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><a href="#cite_ref-44">↑</a></span> <span class="reference-text">Upon creation.</span>
+</li>
+<li id="cite_note-45"><span class="mw-cite-backlink"><a href="#cite_ref-45">↑</a></span> <span class="reference-text">Following shutdown.</span>
+</li>
+<li id="cite_note-46"><span class="mw-cite-backlink"><a href="#cite_ref-46">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/4175" href="https://github.com/QubesOS/qubes-issues/issues/4175" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/4175</a></span>
+</li>
 </ol></div>
 <span class="error mw-ext-cite-error" dir="ltr" lang="en">Cite error: <code>&lt;ref&gt;</code> tag defined in <code>&lt;references&gt;</code> has no name attribute.</span></div>
-<h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=49" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=49.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=52" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit&amp;section=52.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <pre>Whonix Tor Browser wiki page Copyright (C) Amnesia &lt;amnesia at boum dot org&gt;
 Whonix Tor Browser wiki page Copyright (C) 2012 - 2018 ENCRYPTED SUPPORT LP &lt;adrelanos@riseup.net&gt;
 
@@ -1117,7 +1195,7 @@ This is free software, and you are welcome to redistribute it
 under certain conditions; see the wiki source code for details.</pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Interested in becoming an author for the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <hr/><font size="-1"><a class="external text" data-href="../Tor_Browser/Advanced_Users" href="../Tor_Browser/Advanced_Users" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Browser/Advanced_Users" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Browser/Advanced_Users" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1126,41 +1204,42 @@ under certain conditions; see the wiki source code for details.</pre>
 <a data-href="https://facebook.com/sharer.php?u=../Tor_Browser/Advanced_Users" href="https://facebook.com/sharer.php?u=../Tor_Browser/Advanced_Users">Facebook</a></font>
 </p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
 </p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p><p><font size="-1">Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.</font>
 </p></div>
 <!-- 
 NewPP limit report
-Cached time: 20181026092911
+Cached time: 20181120132434
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.416 seconds
-Real time usage: 0.575 seconds
-Preprocessor visited node count: 1815/1000000
-Preprocessor generated node count: 4394/1000000
-Post‐expand include size: 38405/2097152 bytes
-Template argument size: 8207/2097152 bytes
+CPU time usage: 0.396 seconds
+Real time usage: 0.501 seconds
+Preprocessor visited node count: 1868/1000000
+Preprocessor generated node count: 4496/1000000
+Post‐expand include size: 41487/2097152 bytes
+Template argument size: 10071/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 23539/5000000 bytes
-Lua time usage: 0.110/7.000 seconds
-Lua virtual size: 15.18 MB/50 MB
+Unstrip post‐expand size: 24592/5000000 bytes
+Lua time usage: 0.080/7.000 seconds
+Lua virtual size: 15.29 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  411.548      1 -total
- 45.54%  187.431     14 Template:Mbox
- 23.69%   97.486     28 Template:CodeSelect
- 14.41%   59.315      8 Template:Box
- 10.60%   43.610      1 Template:Reflist
-  7.61%   31.337      1 Template:Tor_Browser_Remove_Proxy_Settings
-  7.06%   29.041      4 Template:Open_with_root_rights
-  3.90%   16.035      1 Template:Footer
-  2.38%    9.781      1 Template:Qubes_persistence_note
-  1.73%    7.124      1 Template:Open_File
+100.00%  337.442      1 -total
+ 41.84%  141.178     14 Template:Mbox
+ 24.13%   81.409     28 Template:CodeSelect
+ 19.82%   66.883     10 Template:Box
+  9.36%   31.583      1 Template:Tor_Browser_Remove_Proxy_Settings
+  9.26%   31.235      1 Template:Reflist
+  8.87%   29.936      4 Template:Open_with_root_rights
+  3.80%   12.825      1 Template:Footer
+  2.50%    8.423      1 Template:Open_File
+  2.17%    7.313      1 Template:Qubes_persistence_note
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=38735" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=38735">https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=38735</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=39688" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=39688">https://www.whonix.org/w/index.php?title=Tor_Browser/Advanced_Users&amp;oldid=39688</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1.html" title="Category:Pages with reference errors (page does not exist)">Pages with reference errors</a></li><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1171,7 +1250,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Brows
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 26 October 2018, at 10:37.</li>
+<li id="footer-lastmod"> This page was last edited on 20 November 2018, at 13:56.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -1186,5 +1265,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Brows
 </div>
 
 </body>
-<!-- Cached/compressed 20181026092911 -->
+<!-- Cached/compressed 20181120132434 -->
 </html>
