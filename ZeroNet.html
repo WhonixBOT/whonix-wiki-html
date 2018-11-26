@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: ZeroNet: Decentralized Censorship-resistant Network - Whonix
  url: ./ZeroNet
- date: Sun Nov 25 08:19:57 2018
+ date: Mon Nov 26 08:20:43 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -146,7 +146,7 @@ Whonix requires payments to stay alive.
 </p>
 <blockquote><p><a class="external text" data-href="https://zeronet.io/" href="https://zeronet.io/" rel="noreferrer noopener" target="_blank">ZeroNet</a> uses Bitcoin cryptography and BitTorrent technology to build a decentralized censorship-resistant network.
 Users can publish static or dynamic websites in ZeroNet and visitors can choose to also serve the website. Websites will remain online even if it is being served by only one peer.</p></blockquote>
-<p>This means users do not have an IP address, since they are identified by a public key - specifically a Bitcoin address. The private key owner can sign and publish changes, which are propagated through the network. Sites are accessed through an ordinary browser in combination with the Zeronet application. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> The BitTorrent technology refers to the use of trackers to negotiate peer connections. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> ZeroNet can be optionally configured to use Tor for anonymity. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p>This means users are not identified or reachable by an IP address, since they are identified by a public key - specifically a public Bitcoin address. The private key owner can sign and publish changes, which are propagated through the network. Sites are accessed through an ordinary browser in combination with the Zeronet application. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> The BitTorrent technology refers to the use of trackers to negotiate peer connections. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> ZeroNet can be optionally configured to use Tor for anonymity. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p><p>The Zeronet wiki describes various features and benefits, including: <sup class="reference" id="cite_ref-Zeronet_wiki_1-1"><a href="#cite_note-Zeronet_wiki-1">[1]</a></sup>
 </p>
 <ul><li>Password-less authorization - the user account is protected by the same cryptography that applies to Bitcoin wallets.</li>
@@ -316,7 +316,7 @@ In Tor Browser:
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-Zeronet_wiki-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-Zeronet_wiki_1-0">1.0</a></sup> <sup><a href="#cite_ref-Zeronet_wiki_1-1">1.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://zeronet.readthedocs.io/en/latest/" href="https://zeronet.readthedocs.io/en/latest/" rel="noreferrer noopener" target="_blank">https://zeronet.readthedocs.io/en/latest/</a></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">ZeroNet acts as a local webhost for these pages.</span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">ZeroNet acts as a local web server for these pages.</span>
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/ZeroNet" href="https://en.wikipedia.org/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/ZeroNet</a></span>
 </li>
@@ -340,7 +340,7 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./ZeroNet" href="./ZeroNet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -349,41 +349,42 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 <a data-href="https://facebook.com/sharer.php?u=./ZeroNet" href="https://facebook.com/sharer.php?u=./ZeroNet">Facebook</a></font>
 </p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=ZeroNet&amp;action=edit" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
 </p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
+</p><p><font size="-1">Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.</font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181110164247
+Cached time: 20181126025044
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.148 seconds
-Real time usage: 0.213 seconds
-Preprocessor visited node count: 434/1000000
-Preprocessor generated node count: 1372/1000000
-Post‐expand include size: 7728/2097152 bytes
+CPU time usage: 0.140 seconds
+Real time usage: 0.346 seconds
+Preprocessor visited node count: 435/1000000
+Preprocessor generated node count: 1374/1000000
+Post‐expand include size: 7821/2097152 bytes
 Template argument size: 1328/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 6011/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 6182/5000000 bytes
+Lua time usage: 0.020/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  179.209      1 -total
- 42.08%   75.407      1 Template:TBB_localhost
- 40.69%   72.922      1 Template:Mbox
- 19.78%   35.454     12 Template:CodeSelect
- 10.90%   19.542      2 Template:Box
-  8.97%   16.076      1 Template:Footer
-  8.95%   16.034      1 Template:Control_Port_Filter_Python_Profile_Add
-  6.97%   12.489      1 Template:Reflist
-  6.04%   10.820      1 Template:Header
-  4.64%    8.313      1 Template:Tor_Browser_Start
+100.00%  314.306      1 -total
+ 62.19%  195.463     12 Template:CodeSelect
+ 18.77%   58.987      1 Template:TBB_localhost
+ 18.01%   56.600      1 Template:Mbox
+  5.79%   18.190      2 Template:Box
+  5.08%   15.966      1 Template:Footer
+  4.79%   15.063      1 Template:Control_Port_Filter_Python_Profile_Add
+  3.91%   12.279      1 Template:Reflist
+  2.34%    7.353      1 Template:Tor_Browser_Start
+  2.22%    6.988      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39237" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39237">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39237</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39821" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39821">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=39821</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -394,7 +395,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 10 November 2018, at 16:44.</li>
+<li id="footer-lastmod"> This page was last edited on 26 November 2018, at 00:11.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -409,5 +410,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 </div>
 
 </body>
-<!-- Cached/compressed 20181110164247 -->
+<!-- Cached/compressed 20181126025044 -->
 </html>

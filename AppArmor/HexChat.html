@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: AppArmor - Whonix
  url: ../AppArmor/HexChat
- date: Sun Nov 25 07:31:46 2018
+ date: Mon Nov 26 07:31:51 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires payments to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -500,12 +500,35 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </p>
 <h3><span class="mw-headline" id="Inspect_Notifications">Inspect Notifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=11.html" title="Edit section: Inspect Notifications">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>To inspect relevant logs, run.
+</p><p>Open <i><span style="background-color:#FBFBFB">/var/log/audit/audit.log</span></i> in an editor with root rights.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /var/log/audit/audit.log</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /var/log/audit/audit.log</textarea>
+</div>
+</div>
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo mousepad /var/log/audit/audit.log</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /var/log/audit/audit.log</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /var/log/audit/audit.log</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /var/log/audit/audit.log</textarea>
+</div>
 </div>
 </div>
 <p>To show denied AppArmor messages of any age, run.
@@ -576,7 +599,7 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -589,38 +612,38 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181125063142
+Cached time: 20181126063147
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.184 seconds
-Real time usage: 0.241 seconds
-Preprocessor visited node count: 739/1000000
-Preprocessor generated node count: 2079/1000000
-Post‐expand include size: 13908/2097152 bytes
-Template argument size: 1422/2097152 bytes
-Highest expansion depth: 6/40
+CPU time usage: 0.220 seconds
+Real time usage: 0.284 seconds
+Preprocessor visited node count: 772/1000000
+Preprocessor generated node count: 2158/1000000
+Post‐expand include size: 15260/2097152 bytes
+Template argument size: 1981/2097152 bytes
+Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4682/5000000 bytes
+Unstrip post‐expand size: 4633/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 15.05 MB/50 MB
+Lua virtual size: 14.92 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  188.344      1 -total
- 40.39%   76.081      5 Template:Mbox
- 34.64%   65.239     31 Template:CodeSelect
- 18.26%   34.385      1 Template:Qubes_AppArmor
-  6.57%   12.379      1 Template:Footer
-  4.71%    8.867      1 Template:Reflist
-  2.75%    5.183      1 Template:FooterLight
-  2.00%    3.774      1 Template:Footer_this_is_a_wiki
-  1.76%    3.310      1 Template:Header
-  1.63%    3.070      1 Template:Share
+100.00%  223.474      1 -total
+ 40.07%   89.550     33 Template:CodeSelect
+ 32.63%   72.920      5 Template:Mbox
+ 15.71%   35.108      1 Template:Qubes_AppArmor
+  7.37%   16.468      1 Template:Footer
+  5.77%   12.886      1 Template:Open_with_root_rights
+  4.87%   10.883      1 Template:Reflist
+  4.72%   10.544      1 Template:Box
+  3.22%    7.198      1 Template:FooterLight
+  2.20%    4.915      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39027" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39027">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39027</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39832" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39832">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=39832</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -631,7 +654,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 6 November 2018, at 03:22.</li>
+<li id="footer-lastmod"> This page was last edited on 26 November 2018, at 05:30.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>

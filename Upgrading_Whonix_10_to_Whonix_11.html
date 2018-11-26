@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Upgrading Whonix 10 to Whonix 11 - Whonix
  url: ./Upgrading_Whonix_10_to_Whonix_11
- date: Sun Nov 25 08:13:31 2018
+ date: Mon Nov 26 08:14:22 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -400,9 +400,37 @@ bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
 </p>
 <div class="mw-collapsible-content">
 <p>Upgrade <i><span style="background-color:#FBFBFB">qubes-core-agent</span></i> to at least <i><span style="background-color:#FBFBFB">3.0.15-1+deb8u1</span></i> and <i><span style="background-color:#FBFBFB">qubes-gui-agent</span></i> to at least <i><span style="background-color:#FBFBFB">3.0.9+deb8u1</span></i>. Otherwise you'll run into grave issues. <sup class="reference" id="cite_ref-qubes-grave-issues_6-0"><a href="#cite_note-qubes-grave-issues-6">[6]</a></sup> This is currently only possible from Qubes' <i><span style="background-color:#FBFBFB">wheezy-testing</span></i> repository. To do that, open <i><span style="background-color:#FBFBFB">/etc/apt/sources.list.d/qubes-r3.list</span></i> with root rights. For example.
+</p><p>Open <i><span style="background-color:#FBFBFB">/etc/apt/sources.list.d/qubes-r3.list</span></i> in an editor with root rights.
 </p>
-<pre>kdesudo kwrite /etc/apt/sources.list.d/qubes-r3.list
-</pre>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /etc/apt/sources.list.d/qubes-r3.list</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/apt/sources.list.d/qubes-r3.list</textarea>
+</div>
+</div>
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo mousepad /etc/apt/sources.list.d/qubes-r3.list</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /etc/apt/sources.list.d/qubes-r3.list</textarea>
+</div>
+</div>
+<p><u>If you are using a terminal-only Whonix</u>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/apt/sources.list.d/qubes-r3.list</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/apt/sources.list.d/qubes-r3.list</textarea>
+</div>
+</div>
+</div>
 <p>Comment in the following line by removing the <i><span style="background-color:#FBFBFB">#</span></i> in front of it.
 </p>
 <pre>deb [arch=amd64] http://deb.qubes-os.org/r3.0/vm wheezy-testing main
@@ -664,7 +692,7 @@ Disable torsocks warning spam such as.<br/>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Upgrading_Whonix_10_to_Whonix_11" href="./Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -677,35 +705,35 @@ Disable torsocks warning spam such as.<br/>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181121140528
+Cached time: 20181126071417
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.136 seconds
-Real time usage: 0.186 seconds
-Preprocessor visited node count: 1212/1000000
-Preprocessor generated node count: 3126/1000000
-Post‐expand include size: 5155/2097152 bytes
-Template argument size: 417/2097152 bytes
-Highest expansion depth: 6/40
+CPU time usage: 0.124 seconds
+Real time usage: 0.133 seconds
+Preprocessor visited node count: 1245/1000000
+Preprocessor generated node count: 3221/1000000
+Post‐expand include size: 6603/2097152 bytes
+Template argument size: 1116/2097152 bytes
+Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 22471/5000000 bytes
+Unstrip post‐expand size: 22629/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  104.870      1 -total
- 49.08%   51.471      1 Template:Header
- 14.15%   14.840      1 Template:Footer
- 12.55%   13.165      1 Template:Reflist
-  6.14%    6.438      1 Template:FooterLight
-  4.25%    4.462      1 Template:Footer_this_is_a_wiki
-  4.02%    4.214      1 Template:Share
-  3.61%    3.783     26 Template:Code2
-  3.19%    3.347      1 Template:Edit_it
-  1.33%    1.392      1 Template:RandomNews
+100.00%   67.579      1 -total
+ 20.22%   13.666      1 Template:Footer
+ 18.98%   12.828      1 Template:Reflist
+ 15.49%   10.471      1 Template:Open_with_root_rights
+ 13.42%    9.069      1 Template:Box
+ 11.53%    7.791      3 Template:CodeSelect
+  8.50%    5.746      1 Template:FooterLight
+  6.03%    4.072      1 Template:Footer_this_is_a_wiki
+  5.86%    3.963      1 Template:Header
+  5.48%    3.702     27 Template:Code2
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=37397" dir="ltr" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=37397">https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=37397</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830" dir="ltr" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830">https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -716,7 +744,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Upgrading
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 October 2018, at 21:38.</li>
+<li id="footer-lastmod"> This page was last edited on 26 November 2018, at 05:29.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
@@ -731,5 +759,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Upgrading
 </div>
 
 </body>
-<!-- Cached/compressed 20181121140528 -->
+<!-- Cached/compressed 20181126071417 -->
 </html>

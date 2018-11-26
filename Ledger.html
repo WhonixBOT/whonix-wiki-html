@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: HowTo: Ledger Hardware Wallet with Qubes - Whonix
  url: ./Ledger
- date: Sun Nov 25 07:57:23 2018
+ date: Mon Nov 26 07:58:06 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -380,8 +380,8 @@ Despite these risks, hardware wallets are considered a higher security solution 
 <p>Open <i><span style="background-color:#FBFBFB">/etc/udev/rules.d/20-hw1.rules</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainerNew">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/udev/rules.d/20-hw1.rules</pre>
 </div>
@@ -389,8 +389,17 @@ Despite these risks, hardware wallets are considered a higher security solution 
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/udev/rules.d/20-hw1.rules</textarea>
 </div>
 </div>
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo mousepad /etc/udev/rules.d/20-hw1.rules</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /etc/udev/rules.d/20-hw1.rules</textarea>
+</div>
+</div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainerNew">
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/udev/rules.d/20-hw1.rules</pre>
 </div>
@@ -720,7 +729,7 @@ This bug is in the Debian stretch version of electrum and only fixed in a later 
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Ledger_Hardware_Wallet" href="./Ledger_Hardware_Wallet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ledger_Hardware_Wallet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ledger_Hardware_Wallet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -733,35 +742,35 @@ This bug is in the Debian stretch version of electrum and only fixed in a later 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181125065719
+Cached time: 20181126065802
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.220 seconds
-Real time usage: 0.298 seconds
-Preprocessor visited node count: 826/1000000
-Preprocessor generated node count: 2322/1000000
-Post‐expand include size: 12904/2097152 bytes
-Template argument size: 3466/2097152 bytes
+CPU time usage: 0.212 seconds
+Real time usage: 0.287 seconds
+Preprocessor visited node count: 834/1000000
+Preprocessor generated node count: 2336/1000000
+Post‐expand include size: 13290/2097152 bytes
+Template argument size: 3695/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8502/5000000 bytes
+Unstrip post‐expand size: 8223/5000000 bytes
 Lua time usage: 0.050/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  232.592      1 -total
- 34.91%   81.191      6 Template:Mbox
- 30.49%   70.925     26 Template:CodeSelect
-  6.67%   15.517      1 Template:Reflist
-  6.59%   15.337      1 Template:Footer
-  5.32%   12.368      1 Template:Header
-  4.68%   10.897      1 Template:Open_with_root_rights
-  3.38%    7.865      2 Template:Box
-  2.66%    6.197      1 Template:FooterLight
-  1.89%    4.394      1 Template:Footer_this_is_a_wiki
+100.00%  219.846      1 -total
+ 38.39%   84.399      6 Template:Mbox
+ 27.55%   60.564     27 Template:CodeSelect
+  7.89%   17.343      1 Template:Footer
+  5.73%   12.607      1 Template:Header
+  5.17%   11.364      1 Template:Reflist
+  4.32%    9.505      1 Template:Open_with_root_rights
+  3.50%    7.684      1 Template:FooterLight
+  3.38%    7.429      2 Template:Box
+  2.41%    5.292      1 Template:Footer_this_is_a_wiki
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=39699" dir="ltr" href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=39699">https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=39699</a>"</div>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/13 full - Whonix
  url: ../Dev/Build_Documentation/13_full
- date: Sun Nov 25 07:39:11 2018
+ date: Mon Nov 26 07:39:30 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -546,8 +546,8 @@ Removing packages/kde-privacy/
 <p>Open <i><span style="background-color:#FBFBFB">/lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainerNew">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
 </div>
@@ -555,8 +555,17 @@ Removing packages/kde-privacy/
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
 </div>
 </div>
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo mousepad /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
+</div>
+</div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainerNew">
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
 </div>
@@ -851,7 +860,7 @@ Hostname inside VM image gets changed intentionally to <code>host</code> inside 
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/13_full" href="../Dev/Build_Documentation/13_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/13_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/13_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -864,35 +873,35 @@ Hostname inside VM image gets changed intentionally to <code>host</code> inside 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181121145655
+Cached time: 20181126044652
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.224 seconds
-Real time usage: 0.290 seconds
-Preprocessor visited node count: 1177/1000000
-Preprocessor generated node count: 3431/1000000
-Post‐expand include size: 35465/2097152 bytes
-Template argument size: 1978/2097152 bytes
+CPU time usage: 0.236 seconds
+Real time usage: 0.309 seconds
+Preprocessor visited node count: 1185/1000000
+Preprocessor generated node count: 3445/1000000
+Post‐expand include size: 36155/2097152 bytes
+Template argument size: 2259/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 15542/5000000 bytes
+Unstrip post‐expand size: 15350/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
-Lua virtual size: 14.93 MB/50 MB
+Lua virtual size: 14.92 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  206.428      1 -total
- 36.87%   76.110      1 Template:Build_Documentation_Get_Source_Code
- 30.39%   62.724      3 Template:Mbox
- 28.11%   58.030      1 Template:Build_Configuration
- 26.03%   53.736      1 Template:Gpg_signature_timestamp
- 15.56%   32.130     11 Template:CodeSelect
- 10.27%   21.207      1 Template:Build_Documentation_apt-cache
-  8.87%   18.317      1 Template:Build_Documentation_Whonix_APT_Repository
-  8.77%   18.094      1 Template:Reflist
-  6.92%   14.275      1 Template:Footer
+100.00%  223.254      1 -total
+ 36.05%   80.473      1 Template:Build_Documentation_Get_Source_Code
+ 27.95%   62.410      3 Template:Mbox
+ 27.41%   61.186      1 Template:Build_Configuration
+ 24.48%   54.659      1 Template:Gpg_signature_timestamp
+ 17.08%   38.129     12 Template:CodeSelect
+ 10.89%   24.314      1 Template:Build_Documentation_apt-cache
+  8.44%   18.845      1 Template:Build_Documentation_Whonix_APT_Repository
+  7.87%   17.570      1 Template:Reflist
+  7.86%   17.545      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089</a>"</div>
@@ -921,5 +930,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20181121145655 -->
+<!-- Cached/compressed 20181126044652 -->
 </html>

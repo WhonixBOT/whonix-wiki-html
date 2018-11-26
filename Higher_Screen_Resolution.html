@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VirtualBox/Higher Screen Resolution without installing VirtualBox Guest Additions - Whonix
  url: ./Higher_Screen_Resolution
- date: Sun Nov 25 07:54:18 2018
+ date: Mon Nov 26 07:54:57 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -152,25 +152,34 @@ Whonix requires payments to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /etc/X11/xorg.conf.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</span></i> in an editor with root rights.
+<p>Open <i><span style="background-color:#FBFBFB">/etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, run.
-</p><div class="codeContainerNew">
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>kdesudo kwrite kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
+<pre>kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+</div>
+</div>
+<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo mousepad /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
 </div>
 </div>
 <p><u>If you are using a terminal-only Whonix</u>, run.
-</p><div class="codeContainerNew">
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo nano kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
+<pre>sudo nano /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano kdesudo kwrite /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/X11/xorg.conf.d/00-virtualbox-monitor.conf</textarea>
 </div>
 </div>
 </div>
@@ -299,7 +308,7 @@ EndSection</textarea>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://www.whonix.org/blog/" href="https://www.whonix.org/blog/" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" href="./VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -312,35 +321,35 @@ EndSection</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181125065414
+Cached time: 20181126065454
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.064 seconds
-Real time usage: 0.079 seconds
-Preprocessor visited node count: 317/1000000
-Preprocessor generated node count: 1161/1000000
-Post‐expand include size: 6607/2097152 bytes
-Template argument size: 1643/2097152 bytes
+CPU time usage: 0.068 seconds
+Real time usage: 0.087 seconds
+Preprocessor visited node count: 325/1000000
+Preprocessor generated node count: 1175/1000000
+Post‐expand include size: 6963/2097152 bytes
+Template argument size: 1815/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1586/5000000 bytes
+Unstrip post‐expand size: 1379/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   59.415      1 -total
- 31.27%   18.576      8 Template:CodeSelect
- 23.72%   14.096      1 Template:Footer
- 20.28%   12.050      1 Template:Header
- 14.25%    8.467      1 Template:Reflist
- 11.50%    6.832      1 Template:Open_with_root_rights
- 10.41%    6.185      1 Template:FooterLight
-  9.17%    5.450      1 Template:Box
-  6.76%    4.015      1 Template:Footer_this_is_a_wiki
-  5.66%    3.363      1 Template:Share
+100.00%   66.747      1 -total
+ 31.45%   20.994      9 Template:CodeSelect
+ 25.88%   17.276      1 Template:Header
+ 20.55%   13.714      1 Template:Footer
+ 14.54%    9.704      1 Template:Open_with_root_rights
+ 12.59%    8.403      1 Template:Reflist
+ 11.89%    7.935      1 Template:Box
+  8.58%    5.726      1 Template:FooterLight
+  6.16%    4.111      1 Template:Footer_this_is_a_wiki
+  5.03%    3.360      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160">https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=35160</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=39831" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=39831">https://www.whonix.org/w/index.php?title=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions&amp;oldid=39831</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -351,7 +360,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VirtualBo
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 August 2018, at 06:08.</li>
+<li id="footer-lastmod"> This page was last edited on 26 November 2018, at 05:29.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
