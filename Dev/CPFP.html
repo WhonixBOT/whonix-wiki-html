@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation - Whonix
  url: ../Dev/CPFP
- date: Mon Nov 26 07:41:50 2018
+ date: Tue Nov 27 07:41:58 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -174,7 +174,7 @@ Whonix requires payments to stay alive.
 </p><p><s>Tor Browser (running in Whonix-Workstation) is configured by default (not changed by Whonix) to connect to Tor control port 127.0.0.1:9151.</s> TODO: document unix domain socket files
 </p>
 <h1><span class="mw-headline" id="Whonix-Gateway">Whonix-Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=3.html" title="Edit section: Whonix-Gateway">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>onion-grater listens on 0.0.0.0 port 9052, filters (white list) incoming control port messages and forwards them to the real Tor Control Port listening in 127.0.0.1:9051. onion-grater itself uses cookies authentication to authenticate Tor's control port. The latter is not important, since Whonix-Gateway's only purpose is running Tor, its not a multi user operating system, and if it were compromised, cookie authentication wouldn't be of help anymore either.
+<p>onion-grater listens on Whonix internal network interface <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>, port <code>9051</code>, filters (white list) incoming control port messages and forwards them to the real Tor Control Port listening on <code>ControlSocket</code> <code>/run/tor/control</code>. onion-grater itself uses cookies authentication to authenticate Tor's control port. The latter is not important, since Whonix-Gateway's only purpose is running Tor, its not a multi user operating system, and if it were compromised, cookie authentication wouldn't be of help anymore either.
 </p>
 <h1><span class="mw-headline" id="Attack_Scenarios">Attack Scenarios</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=4.html" title="Edit section: Attack Scenarios">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Once Whonix-Workstation has been compromised, the adversary could continuously and/or using a pattern, send white listed commands to Tor. At the moment, only <i><span style="background-color:#FBFBFB">NEWNYM</span></i> would be of interest. When the adversary is also an ISP level adversary, the adversary might be able to see the pattern being produced. This however is not a big risk, since once Whonix-Workstation is compromised, more powerful attacks are available - An adversary could also use "Morse Code", i.e. limit the victims traffic for a few seconds to zero or close to zero, then push the traffic to its maximum. 
@@ -235,15 +235,15 @@ Whonix requires payments to stay alive.
 </pre>
 <p>To see what's being send to onion-grater's port, run this on Whonix-Gateway.
 </p>
-<pre>sudo tcpdump -i eth1 -l -s0 -w - tcp dst port 9052 | strings
+<pre>sudo tcpdump -i eth1 -l -s0 -w - tcp dst port 9051 | strings
 </pre>
 <p>To connect to onion-grater from a <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a>-Gateway.
 </p>
-<pre>nc 10.152.152.10 9052
+<pre>nc 10.152.152.10 9051
 </pre>
 <p>To connect to onion-grater from a <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>-Gateway.
 </p>
-<pre>nc $(qubesdb-read /qubes-netvm-gateway) 9052
+<pre>nc $(qubesdb-read /qubes-netvm-gateway) 9051
 </pre>
 <p>On the Whonix-Workstation you should be able to run.
 </p>
@@ -454,7 +454,7 @@ Configuration was valid</pre>
 </p>
 <ul><li>A fork of (very early) <a class="external text" data-href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" rel="noreferrer noopener" target="_blank">tor-controlport-filter</a> by Tails. (See above.)</li>
 <li>Written in python2.7.</li>
-<li>Configurable by dropping .d-style<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> configuration snippets into <i><span style="background-color:#FBFBFB">/etc/cpfpy.d</span></i>.</li>
+<li>Configurable by dropping .d-style<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> configuration snippets into <i><span style="background-color:#FBFBFB">/etc/cpfpy.d</span></i>.</li>
 <li>Support to answer <i><span style="background-color:#FBFBFB">getinfo net/listeners/socks</span></i> with the lie '250-net/listeners/socks="127.0.0.1:9150"'.</li>
 <li>Supports logging.</li>
 <li>Honors signals sigterm, sigint, keyboard interrupt.</li>
@@ -463,7 +463,7 @@ Configuration was valid</pre>
 <li>Injects workstation IP into <code>add_onion</code>. For example will transform from / to:
 <ul><li><code>add_onion new:best port=80,17600</code></li>
 <li><code>add_onion new:best port=80,10.137.6.41:17600</code></li></ul></li>
-<li>Support subscribing Tor ControlPort events (<i><span style="background-color:#FBFBFB">setevent</span></i>). (Whonix 14 and above.) <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li>Support subscribing Tor ControlPort events (<i><span style="background-color:#FBFBFB">setevent</span></i>). (Whonix 14 and above.) <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup></li>
 <li>Complete systemd unit file.</li>
 <li>Lintian clean <i><span style="background-color:#FBFBFB">/debian</span></i> packaging folder.</li>
 <li>Will be deprecated when Whonix 14 get released.</li></ul>
@@ -520,15 +520,18 @@ Find out what <i><span style="background-color:#FBFBFB">status/circuit-establish
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Thanks to <a class="external text" data-href="https://www.whonix.org/old-forum/index.php?action=profile;u=87" href="https://www.whonix.org/old-forum/index.php?action=profile;u=87" rel="noreferrer noopener" target="_blank">HulaHoop</a> for <a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,342.0.html" href="https://www.whonix.org/old-forum/index.php/topic,342.0.html" rel="noreferrer noopener" target="_blank">suggesting this</a>.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a data-href="/wiki/Whonix_Configuration_Files#.d_Style_Configuration_Folders" href="../Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix_Configuration_Files#.d_Style_Configuration_Folders</a></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" href="https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf</a></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a data-href="/wiki/Whonix_Configuration_Files#.d_Style_Configuration_Folders" href="../Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix_Configuration_Files#.d_Style_Configuration_Folders</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://phabricator.whonix.org/T448" href="https://phabricator.whonix.org/T448" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T448</a></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Control_Port_Filter_Proxy" href="../Dev/Control_Port_Filter_Proxy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -541,38 +544,38 @@ Find out what <i><span style="background-color:#FBFBFB">status/circuit-establish
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181126064147
+Cached time: 20181127064154
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.132 seconds
-Real time usage: 0.209 seconds
-Preprocessor visited node count: 858/1000000
-Preprocessor generated node count: 2420/1000000
+CPU time usage: 0.148 seconds
+Real time usage: 0.184 seconds
+Preprocessor visited node count: 872/1000000
+Preprocessor generated node count: 2452/1000000
 Post‐expand include size: 12691/2097152 bytes
 Template argument size: 2938/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 6460/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 7001/5000000 bytes
+Lua time usage: 0.020/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  150.628      1 -total
- 44.24%   66.641      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 38.27%   57.648      1 Template:Mbox
- 25.90%   39.016      2 Template:Box
- 23.95%   36.071      4 Template:CodeSelect
- 22.88%   34.457      1 Template:Reload_Tor
-  9.04%   13.616      1 Template:Footer
-  7.36%   11.087      1 Template:Header
-  5.25%    7.910      1 Template:Reflist
-  3.83%    5.776      1 Template:FooterLight
+100.00%  111.160      1 -total
+ 51.07%   56.770      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 44.33%   49.278      1 Template:Mbox
+ 13.51%   15.013      1 Template:Footer
+ 11.46%   12.737      2 Template:Box
+  9.27%   10.305      4 Template:CodeSelect
+  8.30%    9.227      1 Template:Reflist
+  7.90%    8.784      1 Template:Reload_Tor
+  6.03%    6.702      1 Template:FooterLight
+  3.54%    3.934     30 Template:Code2
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39799" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39799">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39799</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39846" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39846">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=39846</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -583,7 +586,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Contr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 November 2018, at 23:50.</li>
+<li id="footer-lastmod"> This page was last edited on 27 November 2018, at 07:35.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
