@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes - Whonix
  url: ../Dev/Qubes_OS
- date: Fri Nov 30 07:59:40 2018
+ date: Sat Dec  1 07:54:58 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -717,12 +717,15 @@ get-sources: import-whonix-keys
 <h2><span class="mw-headline" id="Official_Builds">Official Builds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=37" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=37.html" title="Edit section: Official Builds">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
 <li><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup></li>
+<li><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li>
 <li><a class="external text" data-href="https://github.com/qubesos/qubes-builder-github#build-template-command" href="https://github.com/qubesos/qubes-builder-github" rel="noreferrer noopener" target="_blank">build command format</a></li>
 <li><a class="external text" data-href="https://github.com/QubesOS/updates-status/issues/566" href="https://github.com/QubesOS/updates-status/issues/566" rel="noreferrer noopener" target="_blank">Place for build template commands</a></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/updates-status/issues" href="https://github.com/QubesOS/updates-status/issues" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/updates-status/issues</a></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/build-issues/issues" href="https://github.com/QubesOS/build-issues/issues" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/build-issues/issues</a></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/qubes-template-configs/blob/master/R3.2/templates-community/whonix-14.conf" href="https://github.com/QubesOS/qubes-template-configs/blob/master/R3.2/templates-community/whonix-14.conf" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-template-configs/blob/master/R3.2/templates-community/whonix-14.conf</a></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/qubes-template-configs/blob/master/R4.0/templates-community/whonix-14.conf" href="https://github.com/QubesOS/qubes-template-configs/blob/master/R4.0/templates-community/whonix-14.conf" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-template-configs/blob/master/R4.0/templates-community/whonix-14.conf</a></li></ul>
+<pre>make DISTS_VM="whonix-gateway-14 whonix-workstation-14" template-github
+</pre>
 <h1><span class="mw-headline" id="Test">Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=38.html" title="Edit section: Test">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>works as UpdateVM</li>
 <li>can be used as ProxyVM for Fedora and Debian templates</li>
@@ -732,9 +735,9 @@ get-sources: import-whonix-keys
 <p>(<a class="external text" data-href="https://www.qubes-os.org/attachment/wiki/QubesFirewall/r2b1-manager-firewall.png" href="https://www.qubes-os.org/attachment/wiki/QubesFirewall/r2b1-manager-firewall.png" rel="noreferrer noopener" target="_blank">screenshot</a>)
 </p><p>Short:<br/>
 Have no effect for Qubes-Whonix VMs. Can be ignored.
-</p><p>Long <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>:<br/>
+</p><p>Long <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>:<br/>
 All that settings are in separate file in the VM directory - dom0 /var/lib/qubes/appvms/whonix/firewall.xml. If the VM is running, those settings are converted to iptables syntax and loaded into QubesDB of directly connected ProxyVM. The qubes-firewall service in the ProxyVM watch for such changes and applies the rules.
-</p><p>I.e. in case of Whonix, the connected ProxyVM is sys-whonix. Since in Whonix qubes-firewall service is disabled (Whonix 12 <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>), these settings do not affect Whonix. (<a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" rel="noreferrer noopener" target="_blank">qubes-whonix-firewall.service</a> is what Whonix uses.)
+</p><p>I.e. in case of Whonix, the connected ProxyVM is sys-whonix. Since in Whonix qubes-firewall service is disabled (Whonix 12 <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>), these settings do not affect Whonix. (<a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" rel="noreferrer noopener" target="_blank">qubes-whonix-firewall.service</a> is what Whonix uses.)
 </p>
 <h1><span class="mw-headline" id="Qubes_Upstream_Bugs">Qubes Upstream Bugs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=40" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=40.html" title="Edit section: Qubes Upstream Bugs">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Usability:
@@ -1161,7 +1164,7 @@ Default VMs without PCI devices    | PV  |    HVM    |   PVH   |
 <p>TODO: document
 </p>
 <h2><span class="mw-headline" id="Qubes_R4_3">Qubes R4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=71" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=71.html" title="Edit section: Qubes R4">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This is what<code>sudo qubesctl state.sls qvm.anon-whonix</code> does in effect. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> It does not only do what <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/anon-whonix.sls" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/anon-whonix.sls" rel="noreferrer noopener" target="_blank"><code>qvm.anon-whonix</code></a> does, since salt resolves <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/tree/master/qvm" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/tree/master/qvm" rel="noreferrer noopener" target="_blank">dependencies</a>. In other words, <code>qvm.anon-whonix</code> starts a chain reaction that includes all of the following.
+<p>This is what<code>sudo qubesctl state.sls qvm.anon-whonix</code> does in effect. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> It does not only do what <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/anon-whonix.sls" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/anon-whonix.sls" rel="noreferrer noopener" target="_blank"><code>qvm.anon-whonix</code></a> does, since salt resolves <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/tree/master/qvm" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/tree/master/qvm" rel="noreferrer noopener" target="_blank">dependencies</a>. In other words, <code>qvm.anon-whonix</code> starts a chain reaction that includes all of the following.
 </p>
 <ul><li>install packages from <code>qubes-templates-community</code>
 <ul><li>install <code>qubes-template-{{{{whonix-gw}}}}</code></li>
@@ -1177,7 +1180,7 @@ Default VMs without PCI devices    | PV  |    HVM    |   PVH   |
 <li>default-dispvm:  <code>whonix-ws-dvm</code></li>
 <li>add tag <code>anon-vm</code></li></ul></li></ul>
 <ul><li>create a VM called <code> whonix-ws-dvm</code>
-<ul><li>as DispVM Template <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li>
+<ul><li>as DispVM Template <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li>
 <li>with label:  <code>red</code></li>
 <li>with netvm:  <code>sys-whonix</code></li>
 <li>default-dispvm:  <code>whonix-ws-dvm</code></li>
@@ -1287,7 +1290,7 @@ whonix-gw-14 $anyvm deny</textarea>
 <p>Tags are not inherited. Generally settings are not inherited from TemplateVM by TemplateBasedVM. Where needed, core-admin-addon can be made to copy selected settings from TemplateVM to TemplateBasedVM.
 </p>
 </blockquote>
-<p><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<p><sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </p>
 <h1><span class="mw-headline" id="qvm-features">qvm-features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=79" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=79.html" title="Edit section: qvm-features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>To view VM features.
@@ -1365,22 +1368,24 @@ whonix-gw-14 $anyvm deny</textarea>
 </li>
 <li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/release/qubes-templates-offical-build-commands" href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/release/qubes-templates-offical-build-commands" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-developer-meta-files/blob/master/release/qubes-templates-offical-build-commands</a></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ" href="https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ" rel="noreferrer noopener" target="_blank">https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ</a></span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/4536" href="https://github.com/QubesOS/qubes-issues/issues/4536" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/4536</a></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf</a></span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ" href="https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ" rel="noreferrer noopener" target="_blank">https://groups.google.com/d/msg/qubes-devel/uzgN42uEJpE/hymUCMxoCwAJ</a></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-firewall.service.d/40_qubes-whonix.conf</a></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/</a></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><code>template-for-dispvms: true</code></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><code>template-for-dispvms: true</code></span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/QubesOS/qubes-core-admin/pull/214#issuecomment-399698122" href="https://github.com/QubesOS/qubes-core-admin/pull/214" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-core-admin/pull/214#issuecomment-399698122</a></span>
 </li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Qubes" href="../Dev/Qubes" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1393,35 +1398,35 @@ whonix-gw-14 $anyvm deny</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181130065933
+Cached time: 20181201065454
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.484 seconds
-Real time usage: 0.724 seconds
-Preprocessor visited node count: 1632/1000000
-Preprocessor generated node count: 3667/1000000
+CPU time usage: 0.252 seconds
+Real time usage: 0.269 seconds
+Preprocessor visited node count: 1655/1000000
+Preprocessor generated node count: 3719/1000000
 Post‐expand include size: 11125/2097152 bytes
 Template argument size: 2719/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 26047/5000000 bytes
+Unstrip post‐expand size: 26581/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  399.612      1 -total
- 47.91%  191.468     24 Template:CodeSelect
- 33.09%  132.239      3 Template:Open_with_root_rights
- 27.95%  111.704      3 Template:Box
-  8.55%   34.163      1 Template:Footer
-  5.10%   20.387      1 Template:Reflist
-  4.71%   18.832      5 Template:Yes
-  3.62%   14.464      1 Template:Header
-  3.51%   14.024      1 Template:FooterLight
-  2.38%    9.518      3 Template:No
+100.00%  143.332      1 -total
+ 40.96%   58.711     24 Template:CodeSelect
+ 20.04%   28.725      3 Template:Open_with_root_rights
+ 17.96%   25.747      3 Template:Box
+ 10.87%   15.584      1 Template:Footer
+  8.04%   11.518      1 Template:Reflist
+  7.03%   10.075      1 Template:Header
+  4.59%    6.580      1 Template:FooterLight
+  3.28%    4.704      1 Template:Footer_this_is_a_wiki
+  2.87%    4.119      1 Template:Qubes_persistence
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=36975" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=36975">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=36975</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=39880" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=39880">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=39880</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1432,7 +1437,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 16 September 2018, at 07:52.</li>
+<li id="footer-lastmod"> This page was last edited on 1 December 2018, at 00:36.</li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="../Priority_Support.html" title="Priority Support">Priority Support</a></li>
 <li id="footer-Investors"><a data-href="/wiki/Investors" href="../Investors.html" title="Investors">Investors</a></li>
 <li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="../Professional_Support.html" title="Professional Support">Professional Support</a></li>
