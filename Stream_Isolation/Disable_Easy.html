@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Disable Stream Isolation - Easy - Whonix
  url: ../Stream_Isolation/Disable_Easy
- date: Thu Dec  6 08:07:42 2018
+ date: Fri Dec  7 08:10:04 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -190,13 +190,13 @@ Whonix requires payments to stay alive.
 </p><p>Note: This action will break both the <a data-href="/wiki/Stream_Isolation" href="../Stream_Isolation.html" title="Stream Isolation">Stream Isolation</a> for Tor Browser and <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/3455" href="https://trac.torproject.org/projects/tor/ticket/3455" rel="noreferrer noopener" target="_blank">Tor Browser's tab isolation by socks user name</a>. This worsens the <a data-href="/wiki/Fingerprint#web_fingerprint" href="../Fingerprint.html" title="Fingerprint">web fingerprint</a> and causes the user to be <a data-href="/wiki/DoNot#Do_not_confuse_Anonymity_with_Pseudonymity." href="../DoNot.html" title="DoNot">pseudonymous, rather than anonymous</a>. To mitigate these risks, consider using <a data-href="/wiki/Advanced_Security_Guide#More_than_one_Tor_Browser_in_Whonix" href="../Advanced_Security_Guide.html" title="Advanced Security Guide">More than one Tor Browser in Whonix</a>, or better yet, <a data-href="/wiki/Multiple_Whonix-Workstations" href="../Multiple_Whonix-Workstations.html" title="Multiple Whonix-Workstations">Multiple Whonix-Workstations</a>.
 </p><p>If these settings are changed, expect Tor Button to show a red sign and state "Tor Disabled" if a mouse is hovered over it.
 </p><p>To enable transparent torification (no proxy setting), set the <code>TOR_TRANSPROXY=1</code> environment variable. There are several methods, but the <a href="#.2Fetc.2Fenvironment_Method">#/etc/environment Method</a> is the simplest one.
+</p><p><b>Note:</b> <u>Choose only 1 method</u> to enable transparent torification. 
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p>For other methods with finer granulated settings, please press on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>&lt;span id="<br/>od"&gt;
-<b>Command Line Method</b><br/>
+<p><u><b>Command Line Method</b></u><br/>
 </p><p>Navigate to the Tor Browser folder.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -216,7 +216,7 @@ Whonix requires payments to stay alive.
 </div>
 </div>
 <p><span id="start-tor-browser_Method"></span>
-<b>start-tor-browser Method</b><br/>
+<u><b>start-tor-browser Method</b></u><br/>
 </p><p>This only applies to a single instance of the Tor Browser folder that is configured. This method may not persist when Tor Browser is updated.
 </p><p>Find and open <span style="border:1px dotted #005cb9">start-tor-browser</span> in the Tor Browser folder in an editor.
 </p><p>This is most likely in <span style="border:1px dotted #005cb9">~/tor-browser_en-US/Browser/start-tor-browser</span> below <span style="border:1px dotted #005cb9">#!/usr/bin/env bash</span>.
@@ -232,7 +232,7 @@ Whonix requires payments to stay alive.
 </div>
 </div>
 <p><span id=".2Fetc.2Fenvironment_Method"></span>
-<b>/etc/environment Method</b><br/>
+<u><b>/etc/environment Method</b></u><br/>
 </p><p>This will apply to the whole environment, including any possible custom locations of Tor Browser installation folders. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/environment</span></i> in an editor with root rights.
 </p>
@@ -369,7 +369,7 @@ By using a curl parameter we are using anyhow, i.e. <code>CURL_PROXY="--fail"</c
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Stream_Isolation/Disable_Easy" href="../Stream_Isolation/Disable_Easy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Stream_Isolation/Disable_Easy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Stream_Isolation/Disable_Easy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -382,32 +382,32 @@ By using a curl parameter we are using anyhow, i.e. <code>CURL_PROXY="--fail"</c
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181126070844
+Cached time: 20181207031256
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.104 seconds
-Real time usage: 0.121 seconds
-Preprocessor visited node count: 393/1000000
-Preprocessor generated node count: 1160/1000000
-Post‐expand include size: 32226/2097152 bytes
-Template argument size: 10312/2097152 bytes
+CPU time usage: 0.116 seconds
+Real time usage: 0.128 seconds
+Preprocessor visited node count: 388/1000000
+Preprocessor generated node count: 1149/1000000
+Post‐expand include size: 32412/2097152 bytes
+Template argument size: 10375/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4117/5000000 bytes
+Unstrip post‐expand size: 4003/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-118.52%  114.581      8 Template:Box
-100.00%   96.674      1 -total
- 66.39%   64.183      1 Template:Disable_Stream_Isolation_Easy
- 40.30%   38.964     15 Template:CodeSelect
- 31.30%   30.260      3 Template:Open_with_root_rights
- 27.56%   26.646      1 Template:Tor_Browser_Remove_Proxy_Settings
- 23.70%   22.916      1 Template:Uwt_wrappers_deactivate_all_permanently
- 13.39%   12.947      1 Template:Footer
- 13.33%   12.884      1 Template:Deactivate_Misc_Proxy_Settings
- 10.28%    9.935      1 Template:Header
+110.62%  102.143      8 Template:Box
+100.00%   92.335      1 -total
+ 63.82%   58.928      1 Template:Disable_Stream_Isolation_Easy
+ 38.46%   35.509     15 Template:CodeSelect
+ 29.46%   27.199      3 Template:Open_with_root_rights
+ 28.26%   26.098      1 Template:Tor_Browser_Remove_Proxy_Settings
+ 20.13%   18.589      1 Template:Footer
+ 19.68%   18.167      1 Template:Uwt_wrappers_deactivate_all_permanently
+ 13.83%   12.767      1 Template:Deactivate_Misc_Proxy_Settings
+  9.19%    8.482      1 Template:FooterLight
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Stream_Isolation/Disable_Easy&amp;oldid=35106" dir="ltr" href="https://www.whonix.org/w/index.php?title=Stream_Isolation/Disable_Easy&amp;oldid=35106">https://www.whonix.org/w/index.php?title=Stream_Isolation/Disable_Easy&amp;oldid=35106</a>"</div>
@@ -436,5 +436,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Stream_Is
 </div>
 
 </body>
-<!-- Cached/compressed 20181126070844 -->
+<!-- Cached/compressed 20181207031256 -->
 </html>

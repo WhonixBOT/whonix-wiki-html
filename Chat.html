@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Instant Messenger Chat - Whonix
  url: ./Chat
- date: Thu Dec  6 07:34:34 2018
+ date: Fri Dec  7 07:34:47 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -401,7 +401,8 @@ In Whonix-Workstation AppVM.
 </div>
 <p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
-</p><p><u>If using a terminal-only Whonix-Workstation</u>, complete these steps.
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, complete this step. 
+</p><p>In Whonix-Workstation, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
@@ -415,7 +416,8 @@ In Whonix-Workstation AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
+</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -429,7 +431,8 @@ In Whonix-Workstation AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-ws-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
-</p><p><u>If using a terminal-only Whonix-Workstation</u>, complete these steps.
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, complete this step.
+</p><p>In Whonix-Workstation, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
@@ -735,7 +738,7 @@ under certain conditions; see the wiki source code for details.
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Chat" href="./Chat" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Chat" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Chat" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -748,35 +751,35 @@ under certain conditions; see the wiki source code for details.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181126023834
+Cached time: 20181207032227
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.264 seconds
-Real time usage: 0.362 seconds
+CPU time usage: 0.284 seconds
+Real time usage: 0.359 seconds
 Preprocessor visited node count: 1116/1000000
 Preprocessor generated node count: 2882/1000000
-Post‐expand include size: 27099/2097152 bytes
-Template argument size: 6543/2097152 bytes
+Post‐expand include size: 27776/2097152 bytes
+Template argument size: 6994/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 20257/5000000 bytes
+Unstrip post‐expand size: 20323/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 15.05 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  267.653      1 -total
- 32.42%   86.776     21 Template:CodeSelect
- 29.40%   78.685      5 Template:Mbox
- 16.99%   45.473      1 Template:Tox
- 13.35%   35.728      5 Template:Box
- 10.36%   27.717      1 Template:Reflist
-  6.83%   18.270      1 Template:Install_Backport
-  5.62%   15.041      1 Template:Firewall_Settings_Workstation
-  4.93%   13.190      1 Template:Footer
-  4.47%   11.961      1 Template:Control_Port_Filter_Python_Profile_Add
+100.00%  261.564      1 -total
+ 29.60%   77.416      5 Template:Mbox
+ 25.07%   65.567     21 Template:CodeSelect
+ 19.99%   52.278      1 Template:Tox
+ 19.18%   50.178      5 Template:Box
+ 11.40%   29.807      1 Template:Reflist
+  9.18%   24.009      1 Template:Install_Backport
+  8.53%   22.312      1 Template:Firewall_Settings_Workstation
+  6.38%   16.692      1 Template:Control_Port_Filter_Python_Profile_Add
+  5.61%   14.678      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=39826" dir="ltr" href="https://www.whonix.org/w/index.php?title=Chat&amp;oldid=39826">https://www.whonix.org/w/index.php?title=Chat&amp;oldid=39826</a>"</div>
@@ -805,5 +808,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Chat&amp;
 </div>
 
 </body>
-<!-- Cached/compressed 20181126023834 -->
+<!-- Cached/compressed 20181207032227 -->
 </html>

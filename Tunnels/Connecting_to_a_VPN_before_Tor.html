@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Thu Dec  6 08:12:19 2018
+ date: Fri Dec  7 08:14:45 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -489,7 +489,7 @@ vpnsecret
 <p>Save and exit.
 </p>
 <h6><span class="mw-headline" id="VPN_IP_Address">VPN IP Address</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=19.html" title="Edit section: VPN IP Address">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>Note: IP addresses are required, not DNS hostnames. Therefore, <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> cannot be used, but an IP address instead like <i><span style="background-color:#FBFBFB">198.252.153.226</span></i>. To discover the IP address, check with the provider or use nslookup on the host. For example, to verify the actual IP address of the <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> DNS server, run.
+<p>When editing the VPN configuration file the use of DNS hostnames is not supported. This means IP address(s) of the VPN must be used.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>  Therefore, <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> cannot be used, but an IP address such as <i><span style="background-color:#FBFBFB">198.252.153.226</span></i> should be used instead. To discover the IP address, check with the provider or use nslookup on the host. For example, to verify the actual IP address of the <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> DNS server, run.
 </p>
 <pre>nslookup vpn.riseup.net
 </pre>
@@ -555,12 +555,12 @@ script-security 2
 user tunnel
 iproute /usr/bin/ip_unpriv
 </pre>
-<p>Do not worry about TCP mode on Whonix-Gateway. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Your pick.
-</p><p><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+<p>Do not worry about TCP mode on Whonix-Gateway. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> Your pick.
+</p><p><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p><p>Save.
 </p>
 <h6><span class="mw-headline" id="DNS_Configuration">DNS Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=21.html" title="Edit section: DNS Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
 <h6><span class="mw-headline" id="Configuration_Folder_Permissions">Configuration Folder Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22.html" title="Edit section: Configuration Folder Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Since OpenVPN will be run under user <i>tunnel</i>, that user requires read access to the folder <i>/etc/openvpn</i>.
@@ -791,7 +791,7 @@ After=openvpn.service
 </code>
 </p><p>Save.
 </p><p>At next boot, the Tor daemon will be started after the OpenVPN daemon.
-</p><p>Debugging: <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p><p>Debugging: <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p><p><b>Limitations</b>
 </p>
 <ul><li>Only tested with OpenVPN. Most other VPN's have deficiencies anyway.</li>
@@ -838,22 +838,24 @@ Because Whonix-Gateway does not require any clearnet DNS anyhow.</span>
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">That config file is a bash fragment.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
-The Tor software cannot transport UDP yet, but it does not have to in this case. (Reference: <a data-href="/wiki/Tor#UDP" href="../Tor.html" title="Tor">Tor#UDP</a>.) Since the VPN connects over clearnet, UDP should just work as usual. Once the VPN is functional, Tor will have no issue to connect using it (without "knowing" it is over a VPN).</span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"> Many VPN service providers include DNS hostnames in their configuration files. The hostnames typically  include the providers name followed by (.net, .com, .ch, .pw).</span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+The Tor software cannot transport UDP yet, but it does not have to in this case. (Reference: <a data-href="/wiki/Tor#UDP" href="../Tor.html" title="Tor">Tor#UDP</a>.) Since the VPN connects over clearnet, UDP should just work as usual. Once the VPN is functional, Tor will have no issue to connect using it (without "knowing" it is over a VPN).</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/usr/bin/ip_unpriv" href="https://github.com/Whonix/usability-misc/blob/master/usr/bin/ip_unpriv" rel="noreferrer noopener" target="_blank">/usr/bin/ip_unpriv</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.
 
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/etc/sudoers.d/tunnel_unpriv" href="https://github.com/Whonix/usability-misc/blob/master/etc/sudoers.d/tunnel_unpriv" rel="noreferrer noopener" target="_blank">/etc/sudoers.d/tunnel_unpriv</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.
 
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/lib/systemd/system/openvpn%40openvpn.service.d/50_unpriv.conf" href="https://github.com/Whonix/usability-misc/blob/master/lib/systemd/system/openvpn%40openvpn.service.d/50_unpriv.conf" rel="noreferrer noopener" target="_blank">/lib/systemd/system/openvpn@openvpn.service.d/50_unpriv.conf</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.</span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">We must run OpenVPN as user 'tunnel', because that is the only user besides user <i><span style="background-color:#FBFBFB">clearnet</span></i> that will be allowed to establish external connections when using Whonix Firewall setting VPN_FIREWALL=1.</span>
-</li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
-Because Whonix-Gateway by default has no and needs no system DNS for its own traffic. See <a data-href="/wiki/Whonix-Gateway_System_DNS" href="../Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Whonix-Gateway System DNS</a> if you would like to read an explanation why that is so.</span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">We must run OpenVPN as user 'tunnel', because that is the only user besides user <i><span style="background-color:#FBFBFB">clearnet</span></i> that will be allowed to establish external connections when using Whonix Firewall setting VPN_FIREWALL=1.</span>
 </li>
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+Because Whonix-Gateway by default has no and needs no system DNS for its own traffic. See <a data-href="/wiki/Whonix-Gateway_System_DNS" href="../Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Whonix-Gateway System DNS</a> if you would like to read an explanation why that is so.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
 Reload systemd.
 
 <code>
@@ -874,7 +876,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_VPN_before_Tor" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -887,35 +889,35 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181126045229
+Cached time: 20181207040334
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.228 seconds
-Real time usage: 0.283 seconds
-Preprocessor visited node count: 1085/1000000
-Preprocessor generated node count: 2752/1000000
-Post‐expand include size: 39203/2097152 bytes
+CPU time usage: 0.272 seconds
+Real time usage: 0.342 seconds
+Preprocessor visited node count: 1093/1000000
+Preprocessor generated node count: 2774/1000000
+Post‐expand include size: 39334/2097152 bytes
 Template argument size: 10480/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9485/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
-Lua virtual size: 14.92 MB/50 MB
+Unstrip post‐expand size: 9784/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
+Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  202.860      1 -total
- 28.55%   57.911     10 Template:Box
- 26.60%   53.953      1 Template:Tunnels_Introduction
- 25.15%   51.021      2 Template:Mbox
- 24.15%   48.989     20 Template:CodeSelect
- 16.72%   33.920      4 Template:Open_with_root_rights
-  6.13%   12.426      1 Template:Footer
-  5.54%   11.232      1 Template:Header
-  5.34%   10.834      1 Template:Firewall_Settings
-  5.07%   10.293      1 Template:Reflist
+100.00%  242.253      1 -total
+ 28.01%   67.849      1 Template:Tunnels_Introduction
+ 26.92%   65.203     10 Template:Box
+ 26.69%   64.666      2 Template:Mbox
+ 22.37%   54.202     20 Template:CodeSelect
+ 14.90%   36.106      4 Template:Open_with_root_rights
+  8.94%   21.646      1 Template:Footer
+  7.27%   17.611      1 Template:Reflist
+  5.08%   12.318      1 Template:Reload_Tor
+  4.98%   12.063      1 Template:Firewall_Settings
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423</a>"</div>
@@ -944,5 +946,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20181126045229 -->
+<!-- Cached/compressed 20181207040334 -->
 </html>
