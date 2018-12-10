@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Sun Dec  9 08:16:02 2018
+ date: Mon Dec 10 08:15:21 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -490,9 +490,14 @@ vpnsecret
 </p>
 <h6><span class="mw-headline" id="VPN_IP_Address">VPN IP Address</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=19.html" title="Edit section: VPN IP Address">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>When editing the VPN configuration file the use of DNS hostnames is not supported. This means IP address(s) of the VPN must be used.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>  Therefore, <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> cannot be used, but an IP address such as <i><span style="background-color:#FBFBFB">198.252.153.226</span></i> should be used instead. To discover the IP address, check with the provider or use nslookup on the host. For example, to verify the actual IP address of the <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> DNS server, run.
-</p>
-<pre>nslookup vpn.riseup.net
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nslookup vpn.riseup.net</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup vpn.riseup.net</textarea>
+</div>
+</div>
 <h6><span class="mw-headline" id="VPN_Configuration_File">VPN Configuration File</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=20.html" title="Edit section: VPN Configuration File">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Open <i><span style="background-color:#FBFBFB">/etc/openvpn/openvpn.conf</span></i> in an editor with root rights.
 </p>
@@ -564,28 +569,59 @@ iproute /usr/bin/ip_unpriv
 </p>
 <h6><span class="mw-headline" id="Configuration_Folder_Permissions">Configuration Folder Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22.html" title="Edit section: Configuration Folder Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Since OpenVPN will be run under user <i>tunnel</i>, that user requires read access to the folder <i>/etc/openvpn</i>.
-</p>
-<pre>sudo chown -R tunnel:tunnel /etc/openvpn
-</pre>
-<pre>sudo chown -R tunnel:tunnel /var/run/openvpn
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown -R tunnel:tunnel /etc/openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R tunnel:tunnel /etc/openvpn</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown -R tunnel:tunnel /var/run/openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R tunnel:tunnel /var/run/openvpn</textarea>
+</div>
+</div>
 <h5><span class="mw-headline" id="systemd_setup">systemd setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23.html" title="Edit section: systemd setup">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Create the OpenVPN systemd service file.
-</p>
-<pre>sudo cp /lib/systemd/system/openvpn@.service /lib/systemd/system/openvpn@openvpn.service
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo cp /lib/systemd/system/openvpn@.service /lib/systemd/system/openvpn@openvpn.service</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo cp /lib/systemd/system/openvpn@.service /lib/systemd/system/openvpn@openvpn.service</textarea>
+</div>
+</div>
 <p>Enable the OpenVPN systemd service file.
-</p>
-<pre>sudo systemctl enable openvpn@openvpn
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl enable openvpn@openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl enable openvpn@openvpn</textarea>
+</div>
+</div>
 <p>Start the OpenVPN systemd service.
-</p>
-<pre>sudo systemctl start openvpn@openvpn
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl start openvpn@openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl start openvpn@openvpn</textarea>
+</div>
+</div>
 <p>Check the OpenVPN systemd service status.
-</p>
-<pre>sudo systemctl status openvpn@openvpn
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl status openvpn@openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl status openvpn@openvpn</textarea>
+</div>
+</div>
 <h5><span class="mw-headline" id="Enable_Tor">Enable Tor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=24.html" title="Edit section: Enable Tor">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Enable Tor using Whonix Setup Wizard.
 </p>
@@ -621,7 +657,7 @@ Be sure to use the right version of ip unpriv according to whether the VPN-FIREW
 <ul><li>Whonix TUNNEL_FIREWALL uses /usr/lib/tmpfiles.d/50_openvpn_unpriv.conf <i><span style="background-color:#FBFBFB">ip<b>_</b>unpriv</span></i> (underscore)</li>
 <li>Standalone VPN-FIREWALL uses  /usr/lib/tmpfiles.d/50_openvpn-unpriv.conf <i><span style="background-color:#FBFBFB">ip<b>-</b>unpriv</span></i> (hyphen)</li></ul>
 <h6><span class="mw-headline" id="Cannot_ioctl_TUNSETIFF">Cannot ioctl TUNSETIFF</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<pre>ERROR: Cannot ioctl TUNSETIFF tun: Operation not permitted (errno=1)
+<pre> <i>ERROR: Cannot ioctl TUNSETIFF tun: Operation not permitted (errno=1)</i>
 </pre>
 <p>In openvpn.conf do not use.
 </p>
@@ -641,37 +677,78 @@ Be sure to use the right version of ip unpriv according to whether the VPN-FIREW
 <pre>dev tun0
 </pre>
 <h6><span id="/run/openvpn/openvpn.status_Permission_denied"></span><span class="mw-headline" id=".2Frun.2Fopenvpn.2Fopenvpn.status_Permission_denied">/run/openvpn/openvpn.status Permission denied</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<pre>Options error: --status fails with '/run/openvpn/openvpn.status': Permission denied
+<pre> <i>Options error: --status fails with '/run/openvpn/openvpn.status': Permission denied</i>
 </pre>
 <p>Do not start OpenVPN as root. Do not use <i>sudo openvpn</i>, because this will lead to permission issues. Files in the <i>/run/openvpn</i> folder are owned by root, so they cannot be overwritten by the user tunnel.
 </p>
 <h6><span class="mw-headline" id="debug_start">debug start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-6" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-6.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>To debug start on the command line, run.
-</p>
-<pre>sudo /usr/sbin/openvpn --rmtun --dev tun0
-sudo /usr/sbin/openvpn --mktun --dev tun0 --dev-type tun --user tunnel --group tunnel
-cd /etc/openvpn/
-sudo -u tunnel openvpn /etc/openvpn/openvpn.conf
-</pre>
+<p>To start debug, run the following commands concurrently.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo /usr/sbin/openvpn --rmtun --dev tun0</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo /usr/sbin/openvpn --rmtun --dev tun0</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo /usr/sbin/openvpn --mktun --dev tun0 --dev-type tun --user tunnel --group tunnel</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo /usr/sbin/openvpn --mktun --dev tun0 --dev-type tun --user tunnel --group tunnel</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>cd /etc/openvpn/</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd /etc/openvpn/</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -u tunnel openvpn /etc/openvpn/openvpn.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u tunnel openvpn /etc/openvpn/openvpn.conf</textarea>
+</div>
+</div>
 <h6><span class="mw-headline" id="Linux_ip_link_set_failed">Linux ip link set failed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-7" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-7.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<pre>Linux ip link set failed: external program exited with error status: 2
+<pre> <i>Linux ip link set failed: external program exited with error status: 2</i>
 </pre>
 <p>Use ip_unpriv as documented above.
 </p>
 <h6><span class="mw-headline" id="DNS_Configuration_2">DNS Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-8" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-8.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>This only applies if resolvconf is used.
 </p><p>Permissions on two directories may need to be manually changed if they are not automatically applied. Check if changes are necessary via the following command.
-</p>
-<pre>ls -la /run/resolvconf
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ls -la /run/resolvconf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ls -la /run/resolvconf</textarea>
+</div>
+</div>
 <p>If the output lists tunnel as having read / write / execute permissions for both <i>/run/resolvconf</i> and <i>/run/resolvconf/interface</i>, then nothing needs modification. If tunnel is not listed as a group for one or both of these directories, then permissions need to be changed. In that case, run.
-</p>
-<pre>sudo chown --recursive root:tunnel /run/resolvconf
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown --recursive root:tunnel /run/resolvconf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown --recursive root:tunnel /run/resolvconf</textarea>
+</div>
+</div>
 <p>Then set the necessary permissions.
-</p>
-<pre>sudo chmod --recursive 775 /run/resolvconf
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chmod --recursive 775 /run/resolvconf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chmod --recursive 775 /run/resolvconf</textarea>
+</div>
+</div>
 <p>In <i>/run/resolvconf</i>, resolv.conf may or may not be owned by tunnel, depending on whether the systemd service has already started. There is no need to modify permissions on this file, as the permissions will change when the service starts.
 </p>
 <h6><span class="mw-headline" id="Terminology_for_Support_Requests">Terminology for Support Requests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-9" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-9.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
@@ -876,7 +953,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_VPN_before_Tor" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -889,35 +966,35 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181207040334
+Cached time: 20181210042925
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.272 seconds
-Real time usage: 0.342 seconds
-Preprocessor visited node count: 1093/1000000
+CPU time usage: 0.288 seconds
+Real time usage: 0.364 seconds
+Preprocessor visited node count: 1149/1000000
 Preprocessor generated node count: 2774/1000000
-Post‐expand include size: 39334/2097152 bytes
-Template argument size: 10480/2097152 bytes
+Post‐expand include size: 40892/2097152 bytes
+Template argument size: 11089/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9784/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
+Unstrip post‐expand size: 8664/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  242.253      1 -total
- 28.01%   67.849      1 Template:Tunnels_Introduction
- 26.92%   65.203     10 Template:Box
- 26.69%   64.666      2 Template:Mbox
- 22.37%   54.202     20 Template:CodeSelect
- 14.90%   36.106      4 Template:Open_with_root_rights
-  8.94%   21.646      1 Template:Footer
-  7.27%   17.611      1 Template:Reflist
-  5.08%   12.318      1 Template:Reload_Tor
-  4.98%   12.063      1 Template:Firewall_Settings
+100.00%  263.282      1 -total
+ 30.82%   81.152     34 Template:CodeSelect
+ 26.61%   70.068      1 Template:Tunnels_Introduction
+ 25.09%   66.045      2 Template:Mbox
+ 23.18%   61.023     10 Template:Box
+ 12.59%   33.145      4 Template:Open_with_root_rights
+  7.74%   20.389      1 Template:VPN-Firewall/Troubleshooting
+  5.92%   15.592      1 Template:Footer
+  5.32%   14.014      1 Template:Firewall_Settings
+  5.25%   13.834      1 Template:Header
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=37423</a>"</div>
@@ -946,5 +1023,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20181207040334 -->
+<!-- Cached/compressed 20181210042925 -->
 </html>
