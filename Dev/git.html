@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/git - Whonix
  url: ../Dev/git
- date: Tue Dec 18 07:50:46 2018
+ date: Wed Dec 19 07:50:32 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -270,13 +270,13 @@ Whonix requires money to stay alive.
 <p>Verify the chosen tag to build.
 </p>
 <pre>## ... Replace with tag you want to build.
-git verify-tag 14.0.0.9.6-stable
+git verify-tag 14.0.0.9.9-stable
 </pre>
 <p>The output should look similar to this.
 </p>
 <pre>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 type commit
-tag 14.0.0.9.6
+tag 14.0.0.9.9
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 
 .
@@ -290,9 +290,9 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.0.9.6 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.0.9.9 with the actual git tag being verified).
 </p>
-<pre>git verify-commit 14.0.0.9.6-stable^{commit}
+<pre>git verify-commit 14.0.0.9.9-stable^{commit}
 </pre>
 <p>The output should look similar to this.
 </p>
@@ -310,9 +310,9 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <pre>git tag</pre>
 <p>Use <i>git checkout</i> to select the preferred version (or <a class="mw-selflink selflink">git branch</a>) to build.
 </p>
-<pre>git checkout 14.0.0.9.6-stable
+<pre>git checkout 14.0.0.9.9-stable
 </pre>
-<p>Replace <i><span style="background-color:#FBFBFB">14.0.0.9.6</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
+<p>Replace <i><span style="background-color:#FBFBFB">14.0.0.9.9</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
 </p>
 <h2><span class="mw-headline" id="Clean_Up_and_Sanitize">Clean Up and Sanitize</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This step is also important for security.
@@ -549,7 +549,7 @@ dpkg-source: info: unpacking anon-meta-packages_7.9-1.debian.tar.xz
 </pre>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/git" href="../Dev/git" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/git" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/git" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -594,11 +594,11 @@ Without any useful commit message. <code>.</code> is the commit message here.</s
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20181215111524
+Cached time: 20181219065028
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.136 seconds
-Real time usage: 0.184 seconds
+CPU time usage: 0.156 seconds
+Real time usage: 0.397 seconds
 Preprocessor visited node count: 463/1000000
 Preprocessor generated node count: 1185/1000000
 Post‐expand include size: 10887/2097152 bytes
@@ -606,23 +606,23 @@ Template argument size: 824/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 5506/5000000 bytes
+Unstrip post‐expand size: 5352/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  138.438      1 -total
- 60.07%   83.154      1 Template:Build_Documentation_Get_Source_Code
- 43.99%   60.901      1 Template:Gpg_signature_timestamp
- 42.85%   59.321      1 Template:Mbox
- 29.41%   40.719     17 Template:CodeSelect
-  9.01%   12.478      1 Template:Footer
-  3.50%    4.849      1 Template:Build_Documentation_Choose_Version
-  3.47%    4.805      1 Template:Header
-  2.67%    3.692      1 Template:Share
-  2.55%    3.533      1 Template:Edit_it
+100.00%  339.672      1 -total
+ 69.08%  234.641     17 Template:CodeSelect
+ 24.45%   83.051      1 Template:Build_Documentation_Get_Source_Code
+ 17.81%   60.512      1 Template:Gpg_signature_timestamp
+ 17.31%   58.789      1 Template:Mbox
+  4.12%   13.994      1 Template:Footer
+  2.75%    9.324      1 Template:Header
+  1.42%    4.811      1 Template:Build_Documentation_Choose_Version
+  1.30%    4.424      1 Template:Share
+  1.13%    3.826      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=38461" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=38461">https://www.whonix.org/w/index.php?title=Dev/git&amp;oldid=38461</a>"</div>
@@ -655,5 +655,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/git&a
 </div>
 
 </body>
-<!-- Cached/compressed 20181215111524 -->
+<!-- Cached/compressed 20181219065028 -->
 </html>
