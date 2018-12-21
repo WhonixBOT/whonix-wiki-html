@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix-Gateways Own Traffic Transparent Proxy - Whonix
  url: ./Whonix-Gateways_Own_Traffic_Transparent_Proxy
- date: Thu Dec 20 08:19:46 2018
+ date: Fri Dec 21 08:20:57 2018
 -->
 <head>
 <meta charset="utf-8"/>
@@ -121,63 +121,69 @@ Whonix requires money to stay alive.
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>All traffic from Whonix-Workstation and Whonix-Gateway is routed over Tor. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>Whonix-Workstation has the transparent proxying feature enabled by default.</u> (You could <a data-href="/wiki/Stream_Isolation#Better_Protection" href="./Stream_Isolation.html" title="Stream Isolation">disable it</a> if you wanted to.)
+</p>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>Whonix-Gateway has by default <b>no</b> transparent proxying feature.</u> Instructions below document how <u>you could enable it</u>. There are no known use cases besides <a data-href="/wiki/Dev/Leak_Tests" href="./Dev/Leak_Tests.html" title="Dev/Leak Tests">leak testing</a>.
+</p>
+</div>
+<h1><span id="HowTo:_Enable_Transparent_Proxying_for_Whonix-Gateway's_own_Traffic"></span><span class="mw-headline" id="HowTo:_Enable_Transparent_Proxying_for_Whonix-Gateway.27s_own_Traffic">HowTo: Enable Transparent Proxying for Whonix-Gateway's own Traffic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=1.html" title="Edit section: HowTo: Enable Transparent Proxying for Whonix-Gateway's own Traffic">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Advanced users only!</b> <br/>
 <b>Usually recommended against and unnecessary!</b>
-</p><p>All traffic from Whonix-Workstation and Whonix-Gateway is routed over Tor. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
-</p><p>Whonix-Workstation has the transparent proxying feature enabled by default. (You could <a data-href="/wiki/Stream_Isolation#Better_Protection" href="./Stream_Isolation.html" title="Stream Isolation">disable it</a> if you wanted to.)
-</p><p>Whonix-Gateway has by default no transparent proxying feature. This article explains how you could enable it. There are no known use cases besides <a data-href="/wiki/Dev/Leak_Tests" href="./Dev/Leak_Tests.html" title="Dev/Leak Tests">leak testing</a>.
-</p><p>On Whonix-Gateway.
-</p><p>For explanation, open <span style="border:1px dotted #005cb9">/etc/whonix_firewall.d/30_user</span> and read what the settings <span style="border:1px dotted #005cb9">GATEWAY_TRANSPARENT_TCP</span> and <span style="border:1px dotted #005cb9">GATEWAY_TRANSPARENT_DNS</span> are about.
-</p><p>Open <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_user</span></i> in an editor.
+</p><p><b>Modify Whonix User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical environment</u>, run.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+</p><p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
 </p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>kwrite /etc/whonix_firewall.d/30_user</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kwrite /etc/whonix_firewall.d/30_user</textarea>
-</div>
-</div>
-<p><u>If you are using a terminal (Konsole)</u>, run.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_user</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_user</textarea>
-</div>
-</div>
-</div>
-<p>Open <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> in an editor with root rights.
-</p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>kdesudo kwrite /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>kdesudo mousepad /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo mousepad /etc/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If you are using a terminal-only Whonix</u>, run.
-</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+</div>
+</div>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For more help, press on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+</p>
+<pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
+## which will override the defaults found here. When Whonix is updated, this
+## file may be overwritten.
+</pre>
+<p>See also <a data-href="/wiki/Whonix_Configuration_Files" href="./Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix modular flexible .d style configuration folders</a>.
+</p><p>To view the file, follow these instructions.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -306,9 +312,10 @@ Configuration was valid</pre>
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https -H 'Host: check.torproject.org' -k https://138.201.14.212</textarea>
 </div>
 </div>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=1.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+</div>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=2.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Whonix-Gateway_System_DNS" href="./Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Getting the global system DNS resolver working on Whonix-Gateway (usually recommended against and unnecessary)</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=2.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;action=edit&amp;section=3.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Since Whonix 0.2.1, Whonix-Gateway traffic is also routed over Tor. In this way, use of Whonix is hidden from persons or systems observing the network.</span>
@@ -322,7 +329,7 @@ Configuration was valid</pre>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix-Gateways_Own_Traffic_Transparent_Proxy" href="./Whonix-Gateways_Own_Traffic_Transparent_Proxy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateways_Own_Traffic_Transparent_Proxy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateways_Own_Traffic_Transparent_Proxy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -335,38 +342,38 @@ Configuration was valid</pre>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20181215082510
+Cached time: 20181221072053
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.124 seconds
-Real time usage: 0.181 seconds
-Preprocessor visited node count: 392/1000000
-Preprocessor generated node count: 1375/1000000
-Post‐expand include size: 15015/2097152 bytes
-Template argument size: 4387/2097152 bytes
-Highest expansion depth: 7/40
+CPU time usage: 0.128 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 371/1000000
+Preprocessor generated node count: 1357/1000000
+Post‐expand include size: 27496/2097152 bytes
+Template argument size: 14734/2097152 bytes
+Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3711/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
+Unstrip post‐expand size: 3736/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  157.424      1 -total
- 36.29%   57.123      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 32.85%   51.707      1 Template:Mbox
- 26.07%   41.045     13 Template:CodeSelect
- 20.27%   31.912      5 Template:Box
- 11.03%   17.363      1 Template:Header
-  9.04%   14.232      1 Template:Footer
-  8.12%   12.789      1 Template:Reload_Tor
-  7.28%   11.468      1 Template:Open_File
-  5.99%    9.434      1 Template:Reflist
+101.82%  145.886     10 Template:Box
+100.00%  143.275      1 -total
+ 44.34%   63.531      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 40.58%   58.135      1 Template:Mbox
+ 23.69%   33.939     10 Template:CodeSelect
+  9.57%   13.706      1 Template:Footer
+  9.41%   13.480      1 Template:Reload_Tor
+  9.11%   13.052      1 Template:Firewall_Settings_Gateway
+  7.51%   10.763      1 Template:Reflist
+  2.71%    3.878      1 Template:TorifiedGateway
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=35491" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=35491">https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=35491</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=40189" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=40189">https://www.whonix.org/w/index.php?title=Whonix-Gateways_Own_Traffic_Transparent_Proxy&amp;oldid=40189</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -377,9 +384,9 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Ga
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 9 August 2018, at 19:30.</li>
+<li id="footer-lastmod"> This page was last edited on 21 December 2018, at 07:20.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
-<li id="footer-Privacy_Policy"><a class="mw-redirect" data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
+<li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Disclaimer"><a class="mw-redirect" data-href="/wiki/Disclaimer" href="./Disclaimer.html" title="Disclaimer">Disclaimer</a></li>
 <li id="footer-Terms_of_Service"><a class="mw-redirect" data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a></li>
 <li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
@@ -396,5 +403,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Ga
 </div>
 
 </body>
-<!-- Cached/compressed 20181215082510 -->
+<!-- Cached/compressed 20181221072053 -->
 </html>
