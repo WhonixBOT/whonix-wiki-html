@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tor Entry Guards - Whonix
  url: ./Tor_Entry_Guards
- date: Sun Jan 13 08:14:32 2019
+ date: Mon Jan 14 08:18:14 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -253,16 +253,16 @@ In general, users should not interfere with Tor guard persistence or the natural
 </p><p><br/>
 </p>
 <h1><span class="mw-headline" id="Increasing_Protection_from_Malicious_Entry_Guards_-_One_Guard_per_App">Increasing Protection from Malicious Entry Guards - One Guard per App</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=2.html" title="Edit section: Increasing Protection from Malicious Entry Guards - One Guard per App">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>In a discussion with Tor researcher, Tariq Elahi, about measuring exposure to malicious guards in multi-Workstation scenarios, it was discovered that a 1 guard/client per internet connected program (not identity!) is the safest configuration. It would reduce observation of your activities even more than the default scenario of using one Tor Entry Guard for all apps. To multiplex the app where you have separate identities, but want to make sure no contamination between them happens, you would maintain different Workstation snapshots from a clean base. 
-</p><p>The simplest way to apply such a configuration is to take a snapshot of Whonix-Gateway before first-run. Assuming you want to spin up an e-mail client in the Workstation you would go ahead and initialize the Gateway for this AppVM then save the resulting snapshot for the Gateway. Always using it with ALL email related snapshots for the Workstation. Before using IRC you would revert to the pristine Gateway snapshot before first-run and repeat the process by saving another Gateway snapshot. 
-</p><p>This can be done by cloning VMs too if you need to run multiple activities concurrently.
+<p>In a discussion with Tor researcher, Tariq Elahi, about measuring exposure to malicious guards in multi-Workstation scenarios, it was discovered that a 1 guard/client per internet connected program (not identity!) is the safest configuration. It would reduce observation of your activities even more than the default scenario of using one Tor Entry Guard for all apps. 
+</p><p>To apply such a configuration, Whonix-Gateway is imported into the hypervisor but has never been started. A snapshot taken called 'Original'. Start Gateway let it boot and Tor connect then shutdown and take snapshot 'E-Mail'.  This you will use with all Workstation snapshots called 'E-Mail' - whether it's Workstation 'E-mail' snapshot: John Doe, Jane Doe and so on (these are generated separately from a clean baseline too). Now say you want to switch to IRC, you revert to Gateway snapshot 'Original' repeat the same steps, letting it boot and Tor connect then shutdown and take snapshot 'IRC'.
+</p><p>If you need to run multiple apps at the same time you could clone clone the VMs.
 <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
-</p><p>There is a chance that Entry Guards could be re-picked for a separate App group, which would increase observation by an adversary. In absence of a technological solution to automatically prevent such scenarios, it is encouraged to manually check the Tor node list on the Gateway using <code>Onion Circuits</code> for duplicated Entry Guards that are shared by other snapshots. Erase and re-take a different snapshot if that is the case.
+</p><p>There is a chance that Entry Guards could be re-picked for a separate app group, which would increase observation by an adversary. In absence of a technological solution to automatically prevent such scenarios, it is encouraged to manually check the Tor node list on the Gateway using <code>Onion Circuits</code> for duplicated Entry Guards that are shared by other snapshots. Erase and re-take a different snapshot if that is the case.
 <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p><p><b>Important caveats:</b>
 </p>
 <ul><li>Do NOT start the app on the Workstation before taking the Gateway snapshot. This is to prevent it from generating data on the Gateway (for example: Onion service descriptors) that can be linked across sessions or detected in the event of the Workstation being infected. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li></ul>
-<ul><li>If you use multiple instances of the same app concurrently, make sure it gets its own Gateway VM (cloned from its respective snapshot) and its own isolated network. They should never share the same Gateway because a malicious Workstation can sniff data on the isolated network belonging to the other and also manipulate the shared Tor client into divulging information belonging to the other app VM.</li></ul>
+<ul><li>If you use multiple instances of the same app concurrently (E-mail accounts John Doe and Jane Doe from the above example), make sure each gets its own Gateway VM (cloned from the 'E-mail' snapshot for example) and its own isolated network. They should never share the same Gateway because a malicious Workstation can sniff data on the shared isolated network and also manipulate the common Tor client into divulging information belonging to the other app.</li></ul>
 <h1><span class="mw-headline" id="Manual_Rotation_of_Tor_Guards">Manual Rotation of Tor Guards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=3.html" title="Edit section: Manual Rotation of Tor Guards">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Anonymity_and_Performance-related_Issues">Anonymity and Performance-related Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=4.html" title="Edit section: Anonymity and Performance-related Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Users may be tempted to create a new Whonix-Gateway (<code>sys-whonix</code>) in the following circumstances:
@@ -959,7 +959,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Payment" href="./Payment" rel="noreferrer noopener" target="_blank">recurring payment</a> for your Priority Support!
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Tor_Entry_Guards" href="./Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -972,38 +972,38 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190113010640
+Cached time: 20190113194112
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.276 seconds
-Real time usage: 0.389 seconds
-Preprocessor visited node count: 972/1000000
-Preprocessor generated node count: 2787/1000000
+CPU time usage: 0.308 seconds
+Real time usage: 0.426 seconds
+Preprocessor visited node count: 969/1000000
+Preprocessor generated node count: 2767/1000000
 Post‐expand include size: 33580/2097152 bytes
 Template argument size: 4706/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 20645/5000000 bytes
+Unstrip post‐expand size: 20472/5000000 bytes
 Lua time usage: 0.090/7.000 seconds
 Lua virtual size: 15.31 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  292.555      1 -total
- 50.12%  146.619     13 Template:Mbox
- 29.78%   87.116      1 Template:Persistent_Tor_Entry_Guards_Introduction
- 24.81%   72.587     27 Template:CodeSelect
-  4.89%   14.312      1 Template:Reflist
-  4.77%   13.957      1 Template:Footer
-  3.78%   11.046      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  3.41%    9.981      3 Template:Box
-  2.69%    7.879      3 Template:Disable_Tor
-  1.90%    5.550      1 Template:Whonixsetup
+100.00%  299.051      1 -total
+ 50.27%  150.339     13 Template:Mbox
+ 27.94%   83.548      1 Template:Persistent_Tor_Entry_Guards_Introduction
+ 21.91%   65.515     27 Template:CodeSelect
+  7.37%   22.026      1 Template:Reflist
+  5.47%   16.367      1 Template:Footer
+  4.51%   13.501      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  3.12%    9.326      3 Template:Box
+  1.79%    5.342      3 Template:Disable_Tor
+  1.63%    4.863      1 Template:Header
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40496" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40496">https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40496</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549">https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1014,7 +1014,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 13 January 2019, at 01:45.</li>
+<li id="footer-lastmod"> This page was last edited on 13 January 2019, at 20:35.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Disclaimer"><a class="mw-redirect" data-href="/wiki/Disclaimer" href="./Disclaimer.html" title="Disclaimer">Disclaimer</a></li>
@@ -1033,5 +1033,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry
 </div>
 
 </body>
-<!-- Cached/compressed 20190113010640 -->
+<!-- Cached/compressed 20190113194112 -->
 </html>
