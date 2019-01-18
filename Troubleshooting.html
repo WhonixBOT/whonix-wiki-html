@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Troubleshooting - Whonix
  url: ./Troubleshooting
- date: Thu Jan 17 08:14:46 2019
+ date: Fri Jan 18 08:14:45 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -136,9 +136,10 @@ Whonix requires money to stay alive.
 <li class="toclevel-3 tocsection-9"><a href="#Connectivity_Issue"><span class="tocnumber">2.6.1</span> <span class="toctext">Connectivity Issue</span></a></li>
 </ul>
 </li>
+<li class="toclevel-2 tocsection-10"><a href="#Low_RAM_Issues"><span class="tocnumber">2.7</span> <span class="toctext">Low RAM Issues</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-10"><a href="#Footnotes"><span class="tocnumber">3</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">3</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -264,7 +265,75 @@ Users can check if a non-torified, non-anonyomus, direct connection to check.tor
 <li>Restart sys-whonix.</li></ol>
 <p>This procedure might help, but should not be considered a final solution. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=10.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Low_RAM_Issues">Low RAM Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=10.html" title="Edit section: Low RAM Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When adequate RAM is unavailable to meet the requirements of the Whonix VMs, issues can develop that can cause VM to become unusable. There are common factors that can contribute to low RAM issues in Whonix VMs. 
+</p>
+<ul><li>Unnecessary processes running and/or multi-tasking on the host OS.</li>
+<li>Multiple Browser tabs open.</li>
+<li>Unnecessary processes running in the Whonix VM.</li>
+<li>Allocating more RAM to the Whonix VM than what is available.<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup></li>
+<li>Insufficient RAM allocated to the Whonix VM.</li>
+<li>Other non-Whonix VMs running.</li></ul>
+<p>While insufficient RAM can cause a variety of issues there are certain behaviors that are commonly associated with low memory resources.
+</p>
+<ul><li>Applications are slow or unresponsive.</li>
+<li>The Virtual machine, mouse and/or keyboard may freeze.</li>
+<li>Window staggers or jumps when scrolling.</li>
+<li>Issues become worse when opening additional browser tabs or starting new processes.</li>
+<li>General performance issues.</li></ul>
+<p>If additional memory is needed for the virtual machine, users can free up resources and/or add more RAM to the virtual machine.  
+</p><p><u>Free up additional memory resources.</u>
+</p>
+<ul><li>Terminate any non-essential processes on the host.</li>
+<li>Shutdown any non-essential VMs.</li>
+<li>Shutdown and/or close non-essential processes and browser tabs in Whonix VMs.</li>
+<li>(<a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> only!) If users are experiencing low memory issues in the Whonix-Workstation, additional resources can be freed by reducing RAM in Whonix-Gateway VM by using <a data-href="/wiki/RAM_Adjusted_Desktop_Starter" href="./RAM_Adjusted_Desktop_Starter.html" title="RAM Adjusted Desktop Starter"> rads</a>.</li></ul>
+<p><u>Add additional RAM to the Whonix VM.</u>
+</p><p><b>VirtualBox</b>
+</p><p>Note:To add RAM in VirtualBox the VM <u>must</u> first be powered down.
+</p>
+<ul><li><code>Virtual machine</code> -&gt; <code>Menu</code> -&gt; <code>Settings</code> -&gt; <code><i>Adjust</i></code> <code>Memory slider</code> -&gt; <code><i>Hit:</i> OK</code></li></ul>
+<p><b>KVM</b>
+</p><p><b>1.</b> Shutdown virutal machine.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>virsh -c qemu:///system shutdown &lt;vm_name&gt;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">virsh -c qemu:///system shutdown &lt;vm_name&gt;</textarea>
+</div>
+</div>
+<p><b>2.</b> Increase maximum memory
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>virsh setmaxmem &lt;vm_name&gt; &lt;memsize&gt; --config</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">virsh setmaxmem &lt;vm_name&gt; &lt;memsize&gt; --config</textarea>
+</div>
+</div>
+<p><b>3.</b> Set actual memory
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>virsh setmem &lt;vm_name&gt; &lt;memsize&gt; --config</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">virsh setmem &lt;vm_name&gt; &lt;memsize&gt; --config</textarea>
+</div>
+</div>
+<p><b>4.</b> Restart virtual machine.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>virsh -c qemu:///system start &lt;vm_name&gt;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">virsh -c qemu:///system start &lt;vm_name&gt;</textarea>
+</div>
+</div>
+<p><b>Qubes-Whonix</b>
+</p>
+<ul><li><code>Qube Manager</code> -&gt; <code>VM_name</code> -&gt; <code>Qubes s<u>e</u>ttings</code> -&gt; <code>Advanced</code> -&gt; <code>Max memory:</code> <code><i>mem_size</i></code></li></ul>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">For example, ping 8.8.8.8, ping google.com and so on.</span>
@@ -274,6 +343,8 @@ Users can check if a non-torified, non-anonyomus, direct connection to check.tor
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">This test only uses TCP and not DNS.</span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">This procedure was useful for Qubes-Whonix R3.2 users, although the Qubes bug report is now resolved: <a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/2141" href="https://github.com/QubesOS/qubes-issues/issues/2141" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/2141</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">Adding more memory than what is available will prevent the VM from booting.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -315,7 +386,7 @@ Users can check if a non-torified, non-anonyomus, direct connection to check.tor
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Troubleshooting" href="./Troubleshooting" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Troubleshooting" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Troubleshooting" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -328,38 +399,38 @@ Users can check if a non-torified, non-anonyomus, direct connection to check.tor
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190109163656
+Cached time: 20190118071441
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.124 seconds
-Real time usage: 0.184 seconds
-Preprocessor visited node count: 320/1000000
-Preprocessor generated node count: 1110/1000000
-Post‐expand include size: 3779/2097152 bytes
-Template argument size: 237/2097152 bytes
+CPU time usage: 0.128 seconds
+Real time usage: 0.180 seconds
+Preprocessor visited node count: 374/1000000
+Preprocessor generated node count: 1226/1000000
+Post‐expand include size: 4109/2097152 bytes
+Template argument size: 403/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3964/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
+Unstrip post‐expand size: 4642/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
 Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  147.076      1 -total
- 53.76%   79.069      1 Template:Mbox
- 18.81%   27.672      7 Template:CodeSelect
- 13.28%   19.533      1 Template:Footer
-  4.71%    6.928      1 Template:Reflist
-  3.81%    5.600      1 Template:Share
-  3.27%    4.811      1 Template:Edit_it
-  2.99%    4.393      1 Template:Header
-  1.34%    1.975      1 Template:RandomNews
-  1.23%    1.811      1 Template:Curl_Plain
+100.00%  138.428      1 -total
+ 42.87%   59.351      1 Template:Mbox
+ 25.53%   35.346     11 Template:CodeSelect
+  9.97%   13.803      1 Template:Footer
+  9.71%   13.437      1 Template:Header
+  4.30%    5.951      1 Template:Reflist
+  2.54%    3.512      1 Template:Share
+  2.40%    3.320      1 Template:Edit_it
+  1.23%    1.699      1 Template:Curl_Plain
+  1.15%    1.598      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40249" dir="ltr" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40249">https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40249</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40611" dir="ltr" href="https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40611">https://www.whonix.org/w/index.php?title=Troubleshooting&amp;oldid=40611</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -370,7 +441,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Troublesh
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 December 2018, at 13:11.</li>
+<li id="footer-lastmod"> This page was last edited on 18 January 2019, at 07:54.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Disclaimer"><a class="mw-redirect" data-href="/wiki/Disclaimer" href="./Disclaimer.html" title="Disclaimer">Disclaimer</a></li>
@@ -389,5 +460,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Troublesh
 </div>
 
 </body>
-<!-- Cached/compressed 20190109163656 -->
+<!-- Cached/compressed 20190118071441 -->
 </html>
