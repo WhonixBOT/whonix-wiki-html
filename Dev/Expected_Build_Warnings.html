@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Expected Build Warnings - Whonix
  url: ../Dev/Expected_Build_Warnings
- date: Mon Jan 21 07:44:29 2019
+ date: Tue Jan 22 07:45:08 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -121,19 +121,26 @@ Whonix requires money to stay alive.
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<pre>dpkg-source: warning: extracting unsigned source package
+</pre>
+<pre>dpkg-source: warning: extracting unsigned source package (anon-gw-anonymizer-config_5.0-1.dsc)
+</pre>
+<p>etc.
+</p><p>This does not affect the build. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
 <pre>Can not write log, openpty() failed (/dev/pts not mounted?)
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
 <pre>[....] Your system does not have the CPU extensions required to use KVM. Not doing anything. ...[ FAIL ]
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p>
 <pre>[....] Stopping VirtualBox kernel modules [ ok ].
 [....] Starting VirtualBox kernel modules[....] No suitable module for running kernel found ...[ FAIL ]
 invoke-rc.d: initscript virtualbox, action "restart" failed.
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p>
 <pre>WARNING: The character device /dev/vboxdrv does not exist.
 	 Please install the virtualbox-ose-dkms package and the appropriate
@@ -141,15 +148,15 @@ invoke-rc.d: initscript virtualbox, action "restart" failed.
 
 	 You will not be able to start VMs until this problem is fixed.
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 <pre>dpkg: warning: failed to open configuration file '/root/.dpkg.cfg' for reading: Permission denied
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p>
 <pre>sudo: unable to resolve host host
 </pre>
-<p>This does not affect the build. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+<p>This does not affect the build. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p>Related forum topic: <br/>
 <a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,120.0.html" href="https://www.whonix.org/old-forum/index.php/topic,120.0.html" rel="noreferrer noopener" target="_blank">Expected Build Warnings</a>
 </p>
@@ -192,7 +199,7 @@ invoke-rc.d: initscript virtualbox, action "restart" failed.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Expected_Build_Warnings" href="../Dev/Expected_Build_Warnings" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Expected_Build_Warnings" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Expected_Build_Warnings" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -203,48 +210,51 @@ invoke-rc.d: initscript virtualbox, action "restart" failed.
 </p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
 </p>
 <p><font size="-1">Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.</font></p><div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">This is nothing to be concerned about; it only happens because commands are run inside chroot. Research of this "issue" indicates it is purely cosmetic.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://forums.whonix.org/t/end-to-end-signed-debs-debsign-debsig-and-dpkg-sig/3446" href="https://forums.whonix.org/t/end-to-end-signed-debs-debsign-debsig-and-dpkg-sig/3446" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/end-to-end-signed-debs-debsign-debsig-and-dpkg-sig/3446</a></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">KVM is installed as a dependency of the build dependency libguestfs-tools. KVM is not needed to build the actual images.</span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">This is nothing to be concerned about; it only happens because commands are run inside chroot. Research of this "issue" indicates it is purely cosmetic.</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">This only means that VirtualBox cannot be started. VirtualBox kernel modules could not be compiled because the <span style="border:1px dotted #005cb9">linux-headers-$(uname -r)</span> package was not installed prior to installing VirtualBox (before starting Whonix's build script). The build script doesn't start VirtualBox, hence does not affect the build. The build script only uses <span style="border:1px dotted #005cb9">VBoxManage</span> for creation of virtual machine description files and that tool doesn't need VirtualBox kernel modules.</span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">KVM is installed as a dependency of the build dependency libguestfs-tools. KVM is not needed to build the actual images.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">This is caused by the same issue referenced above.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">This only means that VirtualBox cannot be started. VirtualBox kernel modules could not be compiled because the <span style="border:1px dotted #005cb9">linux-headers-$(uname -r)</span> package was not installed prior to installing VirtualBox (before starting Whonix's build script). The build script doesn't start VirtualBox, hence does not affect the build. The build script only uses <span style="border:1px dotted #005cb9">VBoxManage</span> for creation of virtual machine description files and that tool doesn't need VirtualBox kernel modules.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">This happens because <span style="border:1px dotted #005cb9">debuild</span> is run as user, not root. It is probably a bug in dpkg. Research of this issue reveals there are many similar bugs in dpkg.</span>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">This is caused by the same issue referenced above.</span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">This happens because <span style="border:1px dotted #005cb9">debuild</span> is run as user, not root. It is probably a bug in dpkg. Research of this issue reveals there are many similar bugs in dpkg.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 Hostname inside VM image gets changed intentionally to <code>host</code> inside the VM image. The cause probably is package anon-base-files postinst running <code>hostname "$my_host_name"</code> / <code>hostname host</code>. This change should only happen inside the change root <code>chroot</code>. We might get rid of this issue by porting form <code>chroot</code> to <code>systemd-nspawn</code>, but it is not very important.</span>
 </li>
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20190109232027
+Cached time: 20190122040817
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.048 seconds
-Real time usage: 0.052 seconds
-Preprocessor visited node count: 141/1000000
-Preprocessor generated node count: 523/1000000
-Post‐expand include size: 3258/2097152 bytes
+CPU time usage: 0.060 seconds
+Real time usage: 0.067 seconds
+Preprocessor visited node count: 155/1000000
+Preprocessor generated node count: 565/1000000
+Post‐expand include size: 3395/2097152 bytes
 Template argument size: 42/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3667/5000000 bytes
+Unstrip post‐expand size: 4044/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   38.527      1 -total
- 45.34%   17.468      1 Template:Footer
- 18.55%    7.148      1 Template:Expected_Build_Warnings
- 14.35%    5.528      1 Template:Header
- 10.70%    4.124      1 Template:Share
-  8.49%    3.269      1 Template:Edit_it
-  5.78%    2.226      1 Template:RandomNews
-  4.40%    1.694      3 Template:Code
-  3.88%    1.493      1 Template:Forkme
-  3.17%    1.223      1 Template:Whonix_onion
+100.00%   46.757      1 -total
+ 43.56%   20.367      1 Template:Footer
+ 23.43%   10.953      1 Template:Expected_Build_Warnings
+ 11.13%    5.204      1 Template:Share
+ 11.12%    5.199      1 Template:Header
+ 10.79%    5.043      1 Template:Edit_it
+  4.36%    2.040      1 Template:RandomNews
+  4.21%    1.970      3 Template:Code
+  3.82%    1.785      1 Template:Forkme
+  2.93%    1.371      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Expected_Build_Warnings&amp;oldid=38097" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Expected_Build_Warnings&amp;oldid=38097">https://www.whonix.org/w/index.php?title=Dev/Expected_Build_Warnings&amp;oldid=38097</a>"</div>
@@ -277,5 +287,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Expec
 </div>
 
 </body>
-<!-- Cached/compressed 20190109232027 -->
+<!-- Cached/compressed 20190122040817 -->
 </html>

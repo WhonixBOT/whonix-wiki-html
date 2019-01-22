@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/14 full - Whonix
  url: ../Dev/Build_Documentation/14_full
- date: Mon Jan 21 07:40:28 2019
+ date: Tue Jan 22 07:40:56 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -164,9 +164,14 @@ Whonix requires money to stay alive.
 <div class="mw-collapsible-content">
 <p>Usually you are not using <a class="external text" data-href="https://en.wikipedia.org/wiki/Continuous_integration" href="https://en.wikipedia.org/wiki/Continuous_integration" rel="noreferrer noopener" target="_blank">CI</a> environments without knowing.
 </p><p>You can find out if you are running inside a CI environment by running.
-</p>
-<pre>echo "$CI"
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo "$CI"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "$CI"</textarea>
+</div>
+</div>
 <p>If it shows nothing, i.e.
 </p>
 <pre>
@@ -185,49 +190,110 @@ Whonix requires money to stay alive.
 </div>
 <p><br/>
 </p>
-<ul><li>Get the source code</li></ul>
-<pre>sudo apt-get update
-</pre>
-<pre>sudo apt-get install git time curl apt-cacher-ng
-</pre>
-<pre>cd; git clone --jobs=4 --recursive https://github.com/Whonix/Whonix
-</pre>
+<ul><li>Install build dependencies and get the source code.</li></ul>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install git time curl apt-cacher-ng lsb-release fakeroot</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install git time curl apt-cacher-ng lsb-release fakeroot</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cd; git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd; git clone --jobs=4 --recursive https://github.com/Whonix/Whonix</textarea>
+</div>
+</div>
 <ul><li><a data-href="/wiki/Dev/Get_Whonix_Source_Code" href="../Dev/Get_Whonix_Source_Code.html" title="Dev/Get Whonix Source Code">Learn how to verify the code here</a>.</li>
-<li>Install APT Cache. (If you want to use onion sources AND you are not behind Whonix-Gateway see APT Cache in "optional build configuration" below).</li></ul>
-<pre>sudo apt-get install apt-cacher-ng
-</pre>
-<ul><li><a data-href="/wiki/Template:Build_Configuration" href="../Template:Build_Configuration.html" title="Template:Build Configuration">Optional Build Configuration</a></li></ul>
+<li><a data-href="/wiki/Template:Build_Configuration" href="../Template:Build_Configuration.html" title="Template:Build Configuration">Optional Build Configuration</a></li></ul>
 <h1><span class="mw-headline" id="VM_Creation">VM Creation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/14_full&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;action=edit&amp;section=3.html" title="Edit section: VM Creation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The following build targets are available:
-</p>
-<pre>--target virtualbox
---target qcow2
---target raw
---target root
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>--target virtualbox</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">--target virtualbox</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>--target qcow2</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">--target qcow2</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>--target raw</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">--target raw</textarea>
+</div>
+</div>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>--target root</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">--target root</textarea>
+</div>
+</div>
 <ul><li><i><span style="background-color:#FBFBFB">--target virtualbox</span></i> creates <i><span style="background-color:#FBFBFB">.ova</span></i> images <a data-href="/wiki/VirtualBox" href="../VirtualBox.html" title="VirtualBox">VirtualBox</a></li>
 <li><i><span style="background-color:#FBFBFB">--target qcow2</span></i> creates <i><span style="background-color:#FBFBFB">.qcow2</span></i> images for <a data-href="/wiki/KVM" href="../KVM.html" title="KVM">KVM</a> and <a data-href="/wiki/QEMU" href="../QEMU.html" title="QEMU">QEMU</a></li>
 <li><i><span style="background-color:#FBFBFB">--target raw</span></i> creates <i><span style="background-color:#FBFBFB">.raw</span></i> images</li>
 <li><i><span style="background-color:#FBFBFB">--target root</span></i> is for <a data-href="/wiki/Dev/Build_Documentation/Physical_Isolation" href="../Dev/Build_Documentation/Physical_Isolation.html" title="Dev/Build Documentation/Physical Isolation">Physical Isolation Build Documentation</a></li>
 <li><i><span style="background-color:#FBFBFB">--target virtualbox</span></i>, <i><span style="background-color:#FBFBFB">--target qcow2</span></i>, and <i><span style="background-color:#FBFBFB">--target raw</span></i> can be combined to build multiple images at once.</li></ul>
 <p><br/>
-<b>Note: These instructions use VirtualBox as an example, assume you have the Whonix source code at ~/, and assume you are using APT Cache.</b>
+<b>Note: These instructions use VirtualBox as an example, assume you have the Whonix source code in your home folder (at <code>~/</code>.)</b>
 </p><p>Delete any existing Whonix-Gateway virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Gateway from VirtualBox installed on your build machine!
-</p>
-<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --clean
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --clean</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --clean</textarea>
+</div>
+</div>
 <p>Delete any existing Whonix-Workstation virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Workstation from VirtualBox installed on your build machine!
-</p>
-<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --clean
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --clean</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --clean</textarea>
+</div>
+</div>
 <p>Build a Whonix-Gateway virtual machine image.
-</p>
-<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --build
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --build</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ~/Whonix/whonix_build --flavor whonix-gateway --target virtualbox --build</textarea>
+</div>
+</div>
 <p>Build a Whonix-Workstation virtual machine image.
-</p>
-<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --build
-</pre>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --build</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo ~/Whonix/whonix_build --flavor whonix-workstation --target virtualbox --build</textarea>
+</div>
+</div>
 <p>The resulting <i><span style="background-color:#FBFBFB">.ova</span></i>, <i><span style="background-color:#FBFBFB">.qcow2</span></i> and/or <i><span style="background-color:#FBFBFB">.raw</span></i> images can be found in <span style="border:1px dotted #005cb9">~/whonix_binary</span> folder.
 </p><p>While building, you might see a few <a data-href="/wiki/Dev/Expected_Build_Warnings" href="../Dev/Expected_Build_Warnings.html" title="Dev/Expected Build Warnings">Expected Build Warnings</a>.
 </p>
@@ -272,7 +338,7 @@ Whonix requires money to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/14_full" href="../Dev/Build_Documentation/14_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -285,35 +351,35 @@ Whonix requires money to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190120154837
+Cached time: 20190122064053
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.060 seconds
-Real time usage: 0.066 seconds
-Preprocessor visited node count: 290/1000000
-Preprocessor generated node count: 1241/1000000
-Post‐expand include size: 3780/2097152 bytes
-Template argument size: 322/2097152 bytes
+CPU time usage: 0.080 seconds
+Real time usage: 0.089 seconds
+Preprocessor visited node count: 322/1000000
+Preprocessor generated node count: 1297/1000000
+Post‐expand include size: 4752/2097152 bytes
+Template argument size: 865/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3029/5000000 bytes
+Unstrip post‐expand size: 2415/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   39.481      1 -total
- 45.87%   18.111      1 Template:Footer
- 12.53%    4.946      1 Template:Header
- 12.26%    4.839      1 Template:Share
- 10.28%    4.059      1 Template:Edit_it
-  9.34%    3.687      1 Template:Reflist
-  8.63%    3.409     15 Template:Code2
-  5.14%    2.031      1 Template:RandomNews
-  4.44%    1.753      3 Template:Code
-  4.04%    1.594      1 Template:Forkme
+100.00%   65.956      1 -total
+ 45.47%   29.989     12 Template:CodeSelect
+ 23.28%   15.355      1 Template:Footer
+  9.16%    6.044      1 Template:Header
+  5.66%    3.735      1 Template:Share
+  4.66%    3.076      1 Template:Edit_it
+  4.63%    3.057     15 Template:Code2
+  4.26%    2.807      1 Template:Reflist
+  3.28%    2.166      1 Template:RandomNews
+  2.31%    1.526      3 Template:Code
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40628" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40628">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40628</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40671" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40671">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_full&amp;oldid=40671</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -324,7 +390,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 20 January 2019, at 10:22.</li>
+<li id="footer-lastmod"> This page was last edited on 22 January 2019, at 07:31.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Disclaimer"><a class="mw-redirect" data-href="/wiki/Disclaimer" href="../Disclaimer.html" title="Disclaimer">Disclaimer</a></li>
@@ -343,5 +409,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20190120154837 -->
+<!-- Cached/compressed 20190122064053 -->
 </html>
