@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Reinstall Qubes-Whonix TemplateVMs - Stable Version - Whonix
  url: ../Qubes/Reinstall
- date: Mon Feb 11 08:08:27 2019
+ date: Tue Feb 12 08:11:34 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -326,26 +326,42 @@ You can either:
 </div>
 <h2><span class="mw-headline" id="Optional_Updates_over_Tor">Optional Updates over Tor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-9" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-9.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h4><span class="mw-headline" id="TemplateVMs">TemplateVMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>To force <u>all</u> TemplateVM updates over Tor: <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p>
-<ul><li><b>R3.2:</b> For each template, manually open VM settings and set NetVM to <code>sys-whonix</code>.</li>
-<li><b>R4:</b> Use salt in dom0:
-<ul><li><div class="codeContainerNew">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Use salt in dom0:
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo qubesctl state.sls qvm.updates-via-whonix</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qubesctl state.sls qvm.updates-via-whonix</textarea>
 </div>
-</div></li></ul></li></ul>
-<p>In Qubes R4, this setting can be undone by modifying <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code>. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>This setting can be undone by modifying dom0 <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code>. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
+</div>
+</div>
 <h4><span class="mw-headline" id="dom0">dom0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>To force dom0 updates over Tor, set Qubes dom0 UpdateVM to <code>sys-whonix</code>.
-</p><p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
-</p><p>To revert this change, set Qubes dom0 UpdateVM to <code>sys-firewall</code> or any other VM of our choice.
-</p><p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</p>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>To revert this change, set Qubes dom0 UpdateVM to <code>sys-firewall</code> or any other VM of our choice.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p>
+</div>
+</div>
 <h2><span class="mw-headline" id="Optional:_Enable_AppArmor">Optional: Enable AppArmor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p>If you are interested, click on Expand on the right.
@@ -606,7 +622,7 @@ To revert this change, run.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/Reinstall" href="../Qubes/Reinstall" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -619,35 +635,35 @@ To revert this change, run.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190127190449
+Cached time: 20190211114016
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.232 seconds
-Real time usage: 0.317 seconds
-Preprocessor visited node count: 591/1000000
-Preprocessor generated node count: 1742/1000000
-Post‐expand include size: 38700/2097152 bytes
-Template argument size: 9257/2097152 bytes
+CPU time usage: 0.224 seconds
+Real time usage: 0.297 seconds
+Preprocessor visited node count: 633/1000000
+Preprocessor generated node count: 1826/1000000
+Post‐expand include size: 43358/2097152 bytes
+Template argument size: 11286/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9591/5000000 bytes
-Lua time usage: 0.050/7.000 seconds
+Unstrip post‐expand size: 9594/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.93 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  251.898      1 -total
- 93.75%  236.152      1 Template:Qubes/Reinstall
- 36.97%   93.115      4 Template:Mbox
- 27.94%   70.369     24 Template:CodeSelect
- 16.14%   40.665      7 Template:Box
- 14.92%   37.587      1 Template:Qubes_AppArmor
-  9.28%   23.385      1 Template:Reflist
-  7.62%   19.190      1 Template:Footer
-  5.52%   13.904      1 Template:Header
-  3.61%    9.096      1 Template:Qubes_upgrade_dom0
+100.00%  224.005      1 -total
+ 92.50%  207.200      1 Template:Qubes/Reinstall
+ 35.12%   78.678      4 Template:Mbox
+ 26.26%   58.833     24 Template:CodeSelect
+ 19.81%   44.386     14 Template:Box
+ 13.67%   30.613      1 Template:Qubes_AppArmor
+ 10.48%   23.468      1 Template:Reflist
+  8.18%   18.329      1 Template:Footer
+  6.56%   14.696      1 Template:Header
+  3.37%    7.543      1 Template:Qubes_Install_Updates_over_Tor
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=40746" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=40746">https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=40746</a>"</div>
@@ -680,5 +696,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Rei
 </div>
 
 </body>
-<!-- Cached/compressed 20190127190449 -->
+<!-- Cached/compressed 20190211114016 -->
 </html>

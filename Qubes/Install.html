@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: HowTo: Install the Stable Version of Qubes-Whonix 14 - Whonix
  url: ../Qubes/Install
- date: Mon Feb 11 08:08:16 2019
+ date: Tue Feb 12 08:11:22 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -193,26 +193,42 @@ Then read the <a data-href="/wiki/About" href="../About.html" title="About">Abou
 </p>
 <h2><span class="mw-headline" id="Optional_Updates_over_Tor">Optional Updates over Tor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=6.html" title="Edit section: Optional Updates over Tor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h4><span class="mw-headline" id="TemplateVMs">TemplateVMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>To force <u>all</u> TemplateVM updates over Tor: <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p>
-<ul><li><b>R3.2:</b> For each template, manually open VM settings and set NetVM to <code>sys-whonix</code>.</li>
-<li><b>R4:</b> Use salt in dom0:
-<ul><li><div class="codeContainerNew">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Use salt in dom0:
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo qubesctl state.sls qvm.updates-via-whonix</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qubesctl state.sls qvm.updates-via-whonix</textarea>
 </div>
-</div></li></ul></li></ul>
-<p>In Qubes R4, this setting can be undone by modifying <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code>. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>This setting can be undone by modifying dom0 <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code>. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p>
+</div>
+</div>
 <h4><span class="mw-headline" id="dom0">dom0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>To force dom0 updates over Tor, set Qubes dom0 UpdateVM to <code>sys-whonix</code>.
-</p><p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
-</p><p>To revert this change, set Qubes dom0 UpdateVM to <code>sys-firewall</code> or any other VM of our choice.
-</p><p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>To revert this change, set Qubes dom0 UpdateVM to <code>sys-firewall</code> or any other VM of our choice.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p>
+</div>
+</div>
 <h2><span class="mw-headline" id="Optional:_Enable_AppArmor">Optional: Enable AppArmor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;action=edit&amp;section=7.html" title="Edit section: Optional: Enable AppArmor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div class="toccolours mw-collapsible mw-collapsed">
 <p>If you are interested, click on Expand on the right.
@@ -753,7 +769,7 @@ Then press.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><font size="-1"><a class="external text" data-href="../Qubes/Install" href="../Qubes/Install" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -797,7 +813,7 @@ Solution: Restarting after uninstalling old versions.
 </p>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Qubes/Install" href="../Qubes/Install" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Install" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -810,35 +826,35 @@ Solution: Restarting after uninstalling old versions.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190203111633
+Cached time: 20190211113945
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.292 seconds
-Real time usage: 0.396 seconds
-Preprocessor visited node count: 863/1000000
-Preprocessor generated node count: 2335/1000000
-Post‐expand include size: 39658/2097152 bytes
-Template argument size: 2051/2097152 bytes
-Highest expansion depth: 7/40
+CPU time usage: 0.308 seconds
+Real time usage: 0.467 seconds
+Preprocessor visited node count: 905/1000000
+Preprocessor generated node count: 2419/1000000
+Post‐expand include size: 43479/2097152 bytes
+Template argument size: 4078/2097152 bytes
+Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 17975/5000000 bytes
+Unstrip post‐expand size: 18282/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  314.685      1 -total
- 26.32%   82.814     29 Template:CodeSelect
- 24.88%   78.279      2 Template:Mbox
- 24.37%   76.683      1 Template:Qubes_Install_Introduction
- 23.70%   74.574      1 Template:First_Time_User
- 20.93%   65.865      1 Template:Stay_tuned
- 12.69%   39.937      1 Template:Qubes_AppArmor
- 10.81%   34.016      2 Template:Reflist
- 10.76%   33.874      1 Template:Header
- 10.46%   32.924      1 Template:Known_bugs
+100.00%  374.785      1 -total
+ 37.39%  140.119      2 Template:Mbox
+ 37.23%  139.546      1 Template:Qubes_Install_Introduction
+ 36.61%  137.226      1 Template:First_Time_User
+ 24.27%   90.966     29 Template:CodeSelect
+ 20.81%   77.983      1 Template:Stay_tuned
+ 10.94%   40.999      2 Template:Reflist
+  9.30%   34.845      1 Template:Qubes_AppArmor
+  8.34%   31.254      1 Template:Known_bugs
+  5.91%   22.134      2 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=40750" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=40750">https://www.whonix.org/w/index.php?title=Qubes/Install&amp;oldid=40750</a>"</div>
@@ -871,5 +887,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Ins
 </div>
 
 </body>
-<!-- Cached/compressed 20190203111633 -->
+<!-- Cached/compressed 20190211113945 -->
 </html>

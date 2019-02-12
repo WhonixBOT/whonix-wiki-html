@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/9 full - Whonix
  url: ../Dev/Build_Documentation/9_full
- date: Mon Feb 11 07:41:02 2019
+ date: Tue Feb 12 07:41:57 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires money to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -358,13 +358,13 @@ If you are interested, click on Expand on the right.
 <p>Verify the chosen tag to build.
 </p>
 <pre>## ... Replace with tag you want to build.
-git verify-tag 14.0.0.9.9-stable
+git verify-tag 14.0.1.3.8-stable
 </pre>
 <p>The output should look similar to this.
 </p>
 <pre>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 type commit
-tag 14.0.0.9.9
+tag 14.0.1.3.8
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 
 .
@@ -378,9 +378,9 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.0.9.9 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.3.8 with the actual git tag being verified).
 </p>
-<pre>git verify-commit 14.0.0.9.9-stable^{commit}
+<pre>git verify-commit 14.0.1.3.8-stable^{commit}
 </pre>
 <p>The output should look similar to this.
 </p>
@@ -398,9 +398,9 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <pre>git tag</pre>
 <p>Use <i>git checkout</i> to select the preferred version (or <a data-href="/wiki/Dev/git" href="../Dev/git.html" title="Dev/git">git branch</a>) to build.
 </p>
-<pre>git checkout 14.0.0.9.9-stable
+<pre>git checkout 14.0.1.3.8-stable
 </pre>
-<p>Replace <i><span style="background-color:#FBFBFB">14.0.0.9.9</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
+<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.3.8</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
 </p>
 <h2><span class="mw-headline" id="Clean_Up_and_Sanitize">Clean Up and Sanitize</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This step is also important for security.
@@ -901,7 +901,7 @@ kFreeBSD (32-bit).
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/9_full" href="../Dev/Build_Documentation/9_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/9_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/9_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -914,11 +914,11 @@ kFreeBSD (32-bit).
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190123075856
+Cached time: 20190211123531
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.252 seconds
-Real time usage: 0.338 seconds
+CPU time usage: 0.256 seconds
+Real time usage: 0.453 seconds
 Preprocessor visited node count: 1205/1000000
 Preprocessor generated node count: 3387/1000000
 Post‐expand include size: 42237/2097152 bytes
@@ -926,23 +926,23 @@ Template argument size: 7419/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 16013/5000000 bytes
-Lua time usage: 0.050/7.000 seconds
-Lua virtual size: 14.92 MB/50 MB
+Unstrip post‐expand size: 15999/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
+Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  245.315      1 -total
- 37.59%   92.202      4 Template:Mbox
- 28.73%   70.479      1 Template:Forkme
- 28.49%   69.895      1 Template:Build_Configuration
- 28.07%   68.861      5 Template:Box
- 14.98%   36.743     12 Template:CodeSelect
- 13.12%   32.181      1 Template:Build_Documentation_Get_Source_Code
- 13.03%   31.969      1 Template:Build_Documentation_apt-cache
-  7.67%   18.821      1 Template:Footer
-  7.28%   17.849      1 Template:Build_Documentation_Whonix_APT_Repository
+100.00%  347.765      1 -total
+ 90.99%  316.421      5 Template:Box
+ 54.00%  187.785      1 Template:Build_Configuration
+ 46.97%  163.345     12 Template:CodeSelect
+ 32.34%  112.453      1 Template:Build_Documentation_apt-cache
+ 28.39%   98.742      1 Template:Open_with_root_rights
+ 20.75%   72.145      4 Template:Mbox
+ 16.67%   57.980      1 Template:Build_Documentation_Whonix_APT_Repository
+ 16.44%   57.173      1 Template:Forkme
+  8.59%   29.859      1 Template:Build_Documentation_Get_Source_Code
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=37427" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=37427">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/9_full&amp;oldid=37427</a>"</div>
@@ -975,5 +975,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20190123075856 -->
+<!-- Cached/compressed 20190211123531 -->
 </html>

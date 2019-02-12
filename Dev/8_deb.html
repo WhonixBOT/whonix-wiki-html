@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/14 deb - Whonix
  url: ../Dev/Build_Documentation/8_deb
- date: Mon Feb 11 07:40:32 2019
+ date: Tue Feb 12 07:41:23 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -211,13 +211,13 @@ Whonix requires money to stay alive.
 <p>Verify the chosen tag to build.
 </p>
 <pre>## ... Replace with tag you want to build.
-git verify-tag 14.0.0.9.9-stable
+git verify-tag 14.0.1.3.8-stable
 </pre>
 <p>The output should look similar to this.
 </p>
 <pre>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 type commit
-tag 14.0.0.9.9
+tag 14.0.1.3.8
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 
 .
@@ -231,9 +231,9 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.0.9.9 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.3.8 with the actual git tag being verified).
 </p>
-<pre>git verify-commit 14.0.0.9.9-stable^{commit}
+<pre>git verify-commit 14.0.1.3.8-stable^{commit}
 </pre>
 <p>The output should look similar to this.
 </p>
@@ -251,9 +251,9 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <pre>git tag</pre>
 <p>Use <i>git checkout</i> to select the preferred version (or <a data-href="/wiki/Dev/git" href="../Dev/git.html" title="Dev/git">git branch</a>) to build.
 </p>
-<pre>git checkout 14.0.0.9.9-stable
+<pre>git checkout 14.0.1.3.8-stable
 </pre>
-<p>Replace <i><span style="background-color:#FBFBFB">14.0.0.9.9</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
+<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.3.8</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
 </p>
 <h2><span class="mw-headline" id="Clean_Up_and_Sanitize">Clean Up and Sanitize</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This step is also important for security.
@@ -420,7 +420,7 @@ Beginning from git tag 9.6 and above.</span>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/14_deb" href="../Dev/Build_Documentation/14_deb" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_deb" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/14_deb" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -433,11 +433,11 @@ Beginning from git tag 9.6 and above.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190211064028
+Cached time: 20190212064117
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.132 seconds
-Real time usage: 0.200 seconds
+CPU time usage: 0.176 seconds
+Real time usage: 0.489 seconds
 Preprocessor visited node count: 497/1000000
 Preprocessor generated node count: 1549/1000000
 Post‐expand include size: 12695/2097152 bytes
@@ -445,23 +445,23 @@ Template argument size: 319/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9724/5000000 bytes
+Unstrip post‐expand size: 9667/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 14.93 MB/50 MB
+Lua virtual size: 14.8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  161.258      1 -total
- 51.54%   83.115      2 Template:Mbox
- 47.13%   75.998      1 Template:Forkme
- 20.92%   33.730      1 Template:Build_Documentation_Get_Source_Code
-  9.78%   15.763      1 Template:Footer
-  8.71%   14.049      1 Template:Header
-  7.59%   12.239      4 Template:CodeSelect
-  6.49%   10.469      1 Template:Reflist
-  6.22%   10.027      1 Template:Gpg_signature_timestamp
-  3.38%    5.447      1 Template:Build_Documentation_Choose_Version
+100.00%  426.861      1 -total
+ 34.60%  147.695      2 Template:Mbox
+ 33.04%  141.018      1 Template:Forkme
+ 21.41%   91.373      1 Template:Build_Documentation_Get_Source_Code
+ 16.47%   70.323      1 Template:Footer
+ 13.14%   56.107      1 Template:Reflist
+ 10.74%   45.847      4 Template:CodeSelect
+  7.12%   30.411      1 Template:Header
+  6.37%   27.200      1 Template:Build_Documentation_Cleanup
+  4.97%   21.204      1 Template:Gpg_signature_timestamp
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/14_deb&amp;oldid=35050</a>"</div>
