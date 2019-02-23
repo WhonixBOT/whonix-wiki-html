@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Permanent Takedown Attack Defender - Whonix
  url: ../Dev/pdt
- date: Fri Feb 22 07:53:53 2019
+ date: Sat Feb 23 07:52:17 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -135,8 +135,7 @@ Whonix requires money to stay alive.
 </div>
 <h1><span class="mw-headline" id="Summary">Summary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=1.html" title="Edit section: Summary">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>This is a proposal to defend a <b><u>P</u>ermanent <u>T</u>akedown <u>A</u>ttack</b> (<u><b>PTA</b></u>). A mechanism to securely download project metadata, which includes censor resistance, defeating rollback and infinite freeze attacks.
-</p><p>Both, <code>TUF (The Update Framework)</code><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> and <code>PTAD (Permanent Takedown Threat Defender)</code>, do not require software to be running on a server and can be run on any (free) web space.
-</p><p><font size="-3"><s>In comparison to <code>TUF (The Update Framework)</code>, it does not require software to be running on a server and can be run on any (free) web space.</s> &lt;-- This was a <a class="external text" data-href="https://github.com/theupdateframework/tuf/issues/78" href="https://github.com/theupdateframework/tuf/issues/78" rel="noreferrer noopener" target="_blank">misconception</a>.</font>
+</p><p>Both, <code>TUF (The Update Framework)</code><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> and <code>PTAD (Permanent Takedown Threat Defender)</code>, do not require software to be running on a server and can be run on any (free) web space. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p><a class="external text" data-href="https://github.com/theupdateframework/tuf/issues/127" href="https://github.com/theupdateframework/tuf/issues/127" rel="noreferrer noopener" target="_blank">TUF cannot defeat a PTA yet.</a>
 </p>
 <h1><span class="mw-headline" id="Definitions">Definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=2.html" title="Edit section: Definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -149,16 +148,16 @@ Whonix requires money to stay alive.
 <p><font size="-3">Definition by this page:</font>
 </p>
 <blockquote>
-<p><b>Permanent takedown threat.</b> An attacker takes down a mirror by taking over the domain or by taking down the server using DoS<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> attack, cracking down the server with malware or by pressuring humans (the server administrator).
+<p><b>Permanent takedown threat.</b> An attacker takes down a mirror by taking over the domain or by taking down the server using DoS<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> attack, cracking down the server with malware or by pressuring humans (the server administrator).
 </p>
 </blockquote>
-<p><font size="-3">Quote: <code>TUF: Attacks and Weaknesses</code><sup class="reference" id="cite_ref-tufaaw_4-0"><a href="#cite_note-tufaaw-4">[4]</a></sup>:</font>
+<p><font size="-3">Quote: <code>TUF: Attacks and Weaknesses</code><sup class="reference" id="cite_ref-tufaaw_5-0"><a href="#cite_note-tufaaw-5">[5]</a></sup>:</font>
 </p>
 <blockquote>
 <p><b>Rollback attacks.</b> An attacker presents a software update system with older files than those the client has already seen, causing the client to use files older than those the client knows about.
 </p>
 </blockquote>
-<p><font size="-3">Quote: <code>TUF: Attacks and Weaknesses</code><sup class="reference" id="cite_ref-tufaaw_4-1"><a href="#cite_note-tufaaw-4">[4]</a></sup>:</font>
+<p><font size="-3">Quote: <code>TUF: Attacks and Weaknesses</code><sup class="reference" id="cite_ref-tufaaw_5-1"><a href="#cite_note-tufaaw-5">[5]</a></sup>:</font>
 </p>
 <blockquote>
 <p><b>Indefinite freeze attacks.</b> An attacker continues to present a software update system with the same files the client has already seen. The result is that the client does not know that new files are available.
@@ -174,11 +173,11 @@ Whonix requires money to stay alive.
 </p><p>To prevent disclosing which software is fetching project metadata, the request must go through Tor. Identity correlation through circuit sharing must be circumvented by using a separate circuit for project metadata fetches.
 </p><p>GPG signing of project metadata is a must, since it is independent from SSL certificate authorities.
 </p><p>The public key of the signer must be included into the software project at build time. Distributed trust could be implemented by using X signing keys and defining, that project metadata has to be signed by at least Y of X signers to be accepted as valid.
-</p><p>Apparently, there is not any distributed censor resistant data storage available over Tor. Freenet is a distributed censor resistant data storage, which can unfortunately not be accessed over Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Otherwise Freenet could be well suited for this purpose. This is likely not going to change anytime soon.<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
-</p><p>Had a constructive discussion with GNUnet devs. Will wait for the next stable announcement.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p>Apparently, there is not any distributed censor resistant data storage available over Tor. Freenet is a distributed censor resistant data storage, which can unfortunately not be accessed over Tor. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Otherwise Freenet could be well suited for this purpose. This is likely not going to change anytime soon.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p>Had a constructive discussion with GNUnet devs. Will wait for the next stable announcement.<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p>
 <h1><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=5.html" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>There are web services run by different organizations, which allow (free) web hosting, which can be used for project metadata. Examples are github pages, sourceforge file release system and free onion hosting services. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+<p>There are web services run by different organizations, which allow (free) web hosting, which can be used for project metadata. Examples are github pages, sourceforge file release system and free onion hosting services. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p><p>Below is an example, how a project metadata file could look like.
 </p>
 <pre>-----BEGIN PGP SIGNED MESSAGE-----
@@ -203,11 +202,11 @@ xxxSIGNATURExxx
 -----END PGP SIGNATURE-----
 </pre>
 <p>Such a project metadata file is supposed to be initially copied into the project's binary distribution at build time. The purpose is to initially equip the metadata fetcher with a list of mirrors.
-</p><p>From all available mirrors, the metadata fetcher uses all <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> mirrors at each run time to download the current project metadata. If metadata mirrors are modified or expanded, the updated file will possibly be stored persistently and overrule the metadata file which was included at build time.
+</p><p>From all available mirrors, the metadata fetcher uses all <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> mirrors at each run time to download the current project metadata. If metadata mirrors are modified or expanded, the updated file will possibly be stored persistently and overrule the metadata file which was included at build time.
 </p><p>The <i>projectversion</i> variable contains the version of the project and can be anything. The <i>homepage</i> variable contains the latest homepage of the project. It can be useful to inform users about the new homepage in case the old one has been taken down. The <i>news</i> variable contains a plain text string. Most of the times it shouldn't contain anything and should only be used to inform users about urgent things, such as when a takedown attack is in place.
 </p><p>The <i>metadataversion</i> variable is a consecutive number, i.e. after 536 follow 537. Each update of the metadata file increases that number. The client may not accept lower metadata version numbers, than the client already knows about. This should defeat rollback attacks.
 </p><p>Defeating indefinite freeze attacks is technically a bit more difficult. Each metadata fetch against a different mirror has to go through its own Tor circuit. Going through its own Tor circuit, most times a different Tor exit will be used (and connections to onion services are stream isolated so or so). This will result in using different ISP's to connect to the metadata mirror and as long as not all Tor exit relays or all Tor exit relays's ISPs or all metadata mirrors are compromised, no indefinite freeze attack can be successfully mounted. When fetching from onion services, there are no ISP's involved, who could tamper with the metadata.
-</p><p>The <i>validuntil</i> variable represents how long the file is valid, until the mirror is considered outdated. The number represents the time in unixtime<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>. If a mirror is considered outdated, a new mirror will be tried.
+</p><p>The <i>validuntil</i> variable represents how long the file is valid, until the mirror is considered outdated. The number represents the time in unixtime<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>. If a mirror is considered outdated, a new mirror will be tried.
 </p><p>Distributed trust for the signers has not yet been considered. The signers gpg key is fully trusted. To implement this, one could look into the TUF project, since the TUF project already contains code to define a threshold of signers.
 </p><p>Specifically for Whonix, <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> and the <a data-href="/wiki/Dev/News" href="../Dev/News.html" title="Dev/News">Whonix News Format</a> could be extended.
 </p>
@@ -218,26 +217,29 @@ xxxSIGNATURExxx
 <li>ticket: <a class="external free" data-href="https://phabricator.whonix.org/T114" href="https://phabricator.whonix.org/T114" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T114</a></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit&amp;section=7.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
-<div class="mw-references-wrap"><ol class="references">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.updateframework.com/" href="https://www.updateframework.com/" rel="noreferrer noopener" target="_blank">https://www.updateframework.com/</a></span>
 </li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/theupdateframework/tuf" href="https://github.com/theupdateframework/tuf" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf</a></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Denial-of-service_attack" href="https://en.wikipedia.org/wiki/Denial-of-service_attack" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Denial-of-service_attack</a></span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/theupdateframework/tuf/issues/78" href="https://github.com/theupdateframework/tuf/issues/78" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/issues/78</a></span>
 </li>
-<li id="cite_note-tufaaw-4"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-tufaaw_4-0">4.0</a></sup> <sup><a href="#cite_ref-tufaaw_4-1">4.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md</a> <a class="external free" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">http://www.webcitation.org/6F7Io2ncN</a></span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Denial-of-service_attack" href="https://en.wikipedia.org/wiki/Denial-of-service_attack" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Denial-of-service_attack</a></span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">Freenet could be accessed over Tor, by tunneling UDP over Tor using a VPN. This is too unsuitable for most users to be considered as a workaround. Most VPNs cost money, VPN over Tor is a hack alone and there are not as many VPN nodes as Tor exits, are there?</span>
+<li id="cite_note-tufaaw-5"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-tufaaw_5-0">5.0</a></sup> <sup><a href="#cite_ref-tufaaw_5-1">5.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md</a> <a class="external free" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">http://www.webcitation.org/6F7Io2ncN</a></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html" href="https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html" rel="noreferrer noopener" target="_blank">https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html</a></span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Freenet could be accessed over Tor, by tunneling UDP over Tor using a VPN. This is too unsuitable for most users to be considered as a workaround. Most VPNs cost money, VPN over Tor is a hack alone and there are not as many VPN nodes as Tor exits, are there?</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html" href="https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html" rel="noreferrer noopener" target="_blank">https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html</a></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html" href="https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html" rel="noreferrer noopener" target="_blank">https://emu.freenetproject.org/pipermail/devl/2016-December/039447.html</a></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">Such as <a class="external text" data-href="http://torhostg5s7pa2sn.onion/" href="http://torhostg5s7pa2sn.onion/" rel="noreferrer noopener" target="_blank">torhost</a>.</span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html" href="https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html" rel="noreferrer noopener" target="_blank">https://lists.gnu.org/archive/html/gnunet-developers/2016-12/msg00033.html</a></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">Or if load balancing is required, using multiple and random mirrors.</span>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">Such as <a class="external text" data-href="http://torhostg5s7pa2sn.onion/" href="http://torhostg5s7pa2sn.onion/" rel="noreferrer noopener" target="_blank">torhost</a>.</span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Unix_time" href="https://en.wikipedia.org/wiki/Unix_time" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Unix_time</a></span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">Or if load balancing is required, using multiple and random mirrors.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Unix_time" href="https://en.wikipedia.org/wiki/Unix_time" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Unix_time</a></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -280,46 +282,51 @@ xxxSIGNATURExxx
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Permanent_Takedown_Attack_Defender" href="../Dev/Permanent_Takedown_Attack_Defender" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Permanent_Takedown_Attack_Defender" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Permanent_Takedown_Attack_Defender" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Permanent_Takedown_Attack_Defender&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Permanent_Takedown_Attack_Defender&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Permanent_Takedown_Attack_Defender" href="https://facebook.com/sharer.php?u=../Dev/Permanent_Takedown_Attack_Defender">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! See <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
-</p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" href="https://github.com/Whonix/Whonix/blob/master/debian/copyright" rel="noreferrer noopener" target="_blank">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)</font>
-</p><p><font size="-1">Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.</font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" href="https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md" rel="noreferrer noopener" target="_blank">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;action=edit">Edit</a>! IP addresses are scrubbed, but editing over Tor is recommended. Edits are held for moderation.</font>
+</p><p><font size="-1">
+Copyright (C) 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a>
+</font></p><p><font size="-1">Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Libre Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)
+</font></p><p><font size="-1">Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network.
+</font></p><p><font size="-1">Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
+</font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190222065349
+Cached time: 20190223065214
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.060 seconds
-Real time usage: 0.069 seconds
-Preprocessor visited node count: 277/1000000
-Preprocessor generated node count: 969/1000000
-Post‐expand include size: 2684/2097152 bytes
+CPU time usage: 0.056 seconds
+Real time usage: 0.061 seconds
+Preprocessor visited node count: 292/1000000
+Preprocessor generated node count: 1007/1000000
+Post‐expand include size: 2791/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7455/5000000 bytes
+Unstrip post‐expand size: 7609/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   45.046      1 -total
- 38.01%   17.120      1 Template:Footer
- 22.63%   10.195      1 Template:Reflist
- 17.68%    7.966      1 Template:Header
- 10.27%    4.628      1 Template:Share
-  6.82%    3.072      1 Template:Edit_it
-  4.51%    2.031      1 Template:RandomNews
-  2.76%    1.243      1 Template:Whonix_onion
+100.00%   36.639      1 -total
+ 40.51%   14.844      1 Template:Footer
+ 23.65%    8.665      1 Template:Reflist
+ 10.73%    3.933      1 Template:Header
+  9.83%    3.603      1 Template:Share
+  7.75%    2.841      1 Template:Edit_it
+  3.99%    1.460      1 Template:RandomNews
+  3.14%    1.151      2 Template:Name
+  2.06%    0.754      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=40703" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=40703">https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=40703</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=41009" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=41009">https://www.whonix.org/w/index.php?title=Dev/Permanent_Takedown_Attack_Defender&amp;oldid=41009</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li><li><a class="new" data-href="/w/index.php?title=Category:Design_Proposal&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Design_Proposal&amp;action=edit&amp;redlink=1.html" title="Category:Design Proposal (page does not exist)">Design Proposal</a></li><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -330,7 +337,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Perma
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 January 2019, at 11:16.</li>
+<li id="footer-lastmod"> This page was last edited on 23 February 2019, at 04:46.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
