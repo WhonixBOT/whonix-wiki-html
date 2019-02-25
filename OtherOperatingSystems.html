@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Other Operating Systems - Whonix
  url: ./OtherOperatingSystems
- date: Sun Feb 24 08:05:03 2019
+ date: Mon Feb 25 08:06:19 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -1068,6 +1068,27 @@ TODO development: Can't you use a static IP?<br/>
 <p>VM settings are the same: attach the network adapter to the internal network named <b>Whonix</b>
 </p><p>Android x86 doesn't seem to support static IPs for Ethernet, so a DHCP server needs to be set up on Whonix-Gateway.
 </p><p>Install a DHCP server package:
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<p>Upgrade the system.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get dist-upgrade</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+</div>
+</div>
+<p>Install the <code>isc-dhcp-server</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install isc-dhcp-server</pre>
@@ -1075,6 +1096,9 @@ TODO development: Can't you use a static IP?<br/>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install isc-dhcp-server</textarea>
 </div>
+</div>
+<p>The procedure of installing <code>isc-dhcp-server</code> is now complete.
+</p>
 </div>
 <p>Note: It won't start, because it is not configured yet.
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/dhcp/dhcpd.conf</span></i> in an editor with root rights.
@@ -1548,7 +1572,7 @@ For explanation of the about:tor "Something went wrong" error, please see this <
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Other_Operating_Systems" href="./Other_Operating_Systems" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1565,38 +1589,38 @@ Copyright (C) 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Po
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190224070458
+Cached time: 20190225070615
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.576 seconds
-Real time usage: 0.674 seconds
-Preprocessor visited node count: 1591/1000000
-Preprocessor generated node count: 3750/1000000
-Post‐expand include size: 40325/2097152 bytes
-Template argument size: 5272/2097152 bytes
+CPU time usage: 0.432 seconds
+Real time usage: 0.551 seconds
+Preprocessor visited node count: 1618/1000000
+Preprocessor generated node count: 3806/1000000
+Post‐expand include size: 41373/2097152 bytes
+Template argument size: 5666/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 18051/5000000 bytes
-Lua time usage: 0.050/7.000 seconds
+Unstrip post‐expand size: 18232/5000000 bytes
+Lua time usage: 0.060/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  429.477      1 -total
- 35.19%  151.151     42 Template:CodeSelect
- 21.80%   93.618      6 Template:Mbox
- 16.20%   69.583      6 Template:Box
- 15.76%   67.697      5 Template:Open_with_root_rights
- 10.70%   45.934      2 Template:VM_Settings_Easy_Common
-  8.34%   35.821      1 Template:Reflist
-  4.80%   20.608      1 Template:Footer
-  2.15%    9.227      1 Template:Open_File
-  1.87%    8.018      1 Template:Qubes_persistence_note
+100.00%  412.638      1 -total
+ 30.63%  126.411     44 Template:CodeSelect
+ 26.04%  107.453      6 Template:Mbox
+ 12.92%   53.313      7 Template:Box
+ 11.80%   48.694      2 Template:VM_Settings_Easy_Common
+  9.68%   39.957      5 Template:Open_with_root_rights
+  5.96%   24.613      1 Template:Reflist
+  3.82%   15.749      1 Template:Header
+  3.74%   15.417      1 Template:Footer
+  2.86%   11.820      1 Template:Install_Package
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=40721" dir="ltr" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=40721">https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=40721</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=41097" dir="ltr" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=41097">https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=41097</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1.html" title="Category:Pages with reference errors (page does not exist)">Pages with reference errors</a></li><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1607,7 +1631,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Ope
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 26 January 2019, at 17:19.</li>
+<li id="footer-lastmod"> This page was last edited on 25 February 2019, at 07:13.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

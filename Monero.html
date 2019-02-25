@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Monero - Whonix
  url: ./Monero
- date: Sun Feb 24 08:02:28 2019
+ date: Mon Feb 25 08:03:42 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -30,12 +30,12 @@
 <link data-href="/w/index.php?title=Monero&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Monero&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="https://www.whonix.org/favicon.ico" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Monero" property="og:title"/>
-<meta content="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Monero" property="og:url"/>
+<meta content="./Monero" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/7/79/Moneroheader.png" property="og:image"/>
 <meta content="How to use Monero in Whonix" property="og:description"/>
 
@@ -570,17 +570,13 @@ zdhkwneu7lfaum2p.onion:18099
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
 Only <code>monerod</code> is currently available from Debian backports. Monero GUI is not yet available from packages.debian.org.
 
-Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/monero" href="https://packages.debian.org/stretch-backports/monero" rel="noreferrer noopener" target="_blank"><code>monero</code></a> can be installed from Debian backports. This is non-ideal, see footnote. 
-
-<b>1.</b> Boot Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM.
-
-<b>2.</b> Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources.
-
-Note: this applies to Whonix 14.0.1.3.8. Later Whonix versions may use a codename different to <code>stretch</code>.
-
-In Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM, run.
-
-<div class="codeContainerNew">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/monero" href="https://packages.debian.org/stretch-backports/monero" rel="noreferrer noopener" target="_blank"><code>monero</code></a> can be installed from Debian backports. This is non-ideal, see footnote. 
+</p><p><b>1.</b> Boot Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM.
+</p><p><b>2.</b> Add the current Debian stable backports codename <code>stretch-backports</code> to Debian apt sources.
+</p><p>Note: this applies to Whonix 14.0.1.3.8. Later Whonix versions may use a codename different to <code>stretch</code>.
+</p><p>In Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM, run.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb https://deb.debian.org/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
 </div>
@@ -588,10 +584,8 @@ In Whonix-Workstation (<code>whonix-ws-14</code>) TemplateVM, run.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb https://deb.debian.org/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
 </div>
 </div>
-
-Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a> can set the <i>.onion</i> mirror. 
-
-<div class="codeContainerNew">
+<p>Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a> can set the <i>.onion</i> mirror. 
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
 </div>
@@ -599,9 +593,8 @@ Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href=
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian stretch-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
 </div>
 </div>
-<b>3.</b> <a data-href="/wiki/Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
-
-<div class="codeContainerNew">
+<p><b>3.</b> <a data-href="/wiki/Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
@@ -609,9 +602,8 @@ Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href=
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<b>4.</b> Install the select software.
-
-<div class="codeContainerNew">
+<p><b>4.</b> Install the select software.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get -t stretch-backports install monero</pre>
 </div>
@@ -619,19 +611,16 @@ Alternatively, users who like <a data-href="/wiki/Onionizing_Repositories" href=
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get -t stretch-backports install monero</textarea>
 </div>
 </div>
-
-The procedure is now complete.
-
-<b>5.</b> Undo.
-
-On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>.  To proceed, run.
-
-<div class="codeContainerNew">
+<p>The procedure is now complete.
+</p><p><b>5.</b> Undo.
+</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>stretch</code> to <code>buster</code>.  To proceed, run.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm /etc/apt/sources.list.d/backports.list</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo rm /etc/apt/sources.list.d/backports.list</textarea>
+</div>
 </div>
 </div></span>
 </li>
@@ -673,7 +662,7 @@ We avoid scurl, since there is no redirecting stable link. TODO: can probably be
 <div id="allcomments"></div><form action="" method="post" name="commentForm">
 <div class="c-form-title">Add your comment</div>
 <div class="c-form-reply-to" id="replyto"></div>
-<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Special:UserLogin/signup" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Special:UserLogin/signup">register</a> or <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Special:UserLogin" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Special:UserLogin">log in</a>. It is free.</div>
+<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="./Special:UserLogin/signup" href="./Special:UserLogin/signup">register</a> or <a data-href="./Special:UserLogin" href="./Special:UserLogin">log in</a>. It is free.</div>
 <p><textarea cols="64" id="comment" name="commentText" rows="5"></textarea>
 </p>
 <div class="c-form-button"><input class="site-button" type="button" value="Post comment"/></div>
@@ -688,7 +677,7 @@ We avoid scurl, since there is no redirecting stable link. TODO: can probably be
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Monero" href="./Monero" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Monero" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Monero" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -705,35 +694,35 @@ Copyright (C) 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Po
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190223052946
+Cached time: 20190225070338
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.140 seconds
-Real time usage: 0.327 seconds
-Preprocessor visited node count: 460/1000000
-Preprocessor generated node count: 1414/1000000
-Post‐expand include size: 6807/2097152 bytes
-Template argument size: 1544/2097152 bytes
-Highest expansion depth: 6/40
+CPU time usage: 0.120 seconds
+Real time usage: 0.139 seconds
+Preprocessor visited node count: 466/1000000
+Preprocessor generated node count: 1426/1000000
+Post‐expand include size: 8313/2097152 bytes
+Template argument size: 2776/2097152 bytes
+Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 6018/5000000 bytes
+Unstrip post‐expand size: 5846/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  274.271      1 -total
- 70.69%  193.879     14 Template:CodeSelect
- 37.18%  101.966      1 Template:Reflist
- 34.87%   95.645      1 Template:Install_Backport
- 16.48%   45.208      1 Template:Footer
-  8.72%   23.922      1 Template:Share
-  4.33%   11.867      1 Template:Edit_it
-  1.77%    4.856      1 Template:Header
-  1.08%    2.974      1 Template:Maintainer
-  0.78%    2.130      1 Template:Open_a_Whonix-Workstation_Terminal
+100.00%   90.197      1 -total
+ 38.63%   34.847     14 Template:CodeSelect
+ 33.54%   30.254      1 Template:Reflist
+ 26.26%   23.687      1 Template:Install_Backport
+ 25.32%   22.837      2 Template:Box
+ 16.21%   14.625      1 Template:Footer
+ 11.86%   10.697      1 Template:Header
+  3.32%    2.991      1 Template:Share
+  3.05%    2.748      1 Template:Edit_it
+  2.93%    2.645      1 Template:Maintainer
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Monero&amp;oldid=40416" dir="ltr" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Monero&amp;oldid=40416">http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Monero&amp;oldid=40416</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Monero&amp;oldid=40416" dir="ltr" href="https://www.whonix.org/w/index.php?title=Monero&amp;oldid=40416">https://www.whonix.org/w/index.php?title=Monero&amp;oldid=40416</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1.html" title="Category:Pages with reference errors (page does not exist)">Pages with reference errors</a></li><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -765,5 +754,5 @@ Retrieved from "<a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr7
 </div>
 
 </body>
-<!-- Cached/compressed 20190223052946 -->
+<!-- Cached/compressed 20190225070338 -->
 </html>
