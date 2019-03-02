@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tor Entry Guards - Whonix
  url: ./Tor_Entry_Guards
- date: Fri Mar  1 08:16:59 2019
+ date: Sat Mar  2 08:14:46 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -30,12 +30,12 @@
 <link data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="https://www.whonix.org/favicon.ico" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Tor Entry Guards" property="og:title"/>
-<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Tor_Entry_Guards" property="og:url"/>
+<meta content="./Tor_Entry_Guards" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="Tor Entry Guards, Alternate Configurations, Fingerprinting Risks" property="og:description"/>
 
@@ -380,21 +380,24 @@ Before arriving at the remote location, the Whonix-Gateway Tor state folder is m
 <h2><span class="mw-headline" id="Alternating_Bridges">Alternating Bridges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;action=edit&amp;section=10.html" title="Edit section: Alternating Bridges">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> are already configured, alternate bridges are recommended for different locations. If bridges are not being used, consider using entry guards in your primary location and relying on alternate bridges in different locations.
 </p><p>Complete the following steps in Whonix-Gateway (<code>sys-whonix</code>).
-</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
-</p><p>Start whonix-setup-wizard.
+</p><p><b>1.</b> Disable Tor using Anon Connection Wizard (safest option).
+</p><p>Start Anon Connection Wizard.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><code>
+Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Anon Connection Wizard</code>
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p><code>
+Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Anon Connection Wizard
+</code>
+</p><p><u>If you are using a terminal Whonix-Gateway</u>, type.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo whonixsetup</pre>
+<pre>kdesudo anon-connection-wizard</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo anon-connection-wizard</textarea>
 </div>
 </div>
 </div>
@@ -584,21 +587,24 @@ These instructions copy custom Tor configuration options (torrc) from <code>sys-
 <p><br/>
 The following instructions manually change a user's Tor entry guards. One use case for this action is before permanently relocating to a new area.
 </p><p>Complete the following steps in Whonix-Gateway (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>: <code>sys-whonix</code>).
-</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
-</p><p>Start whonix-setup-wizard.
+</p><p><b>1.</b> Disable Tor using Anon Connection Wizard (safest option).
+</p><p>Start Anon Connection Wizard.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><code>
+Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Anon Connection Wizard</code>
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p><code>
+Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Anon Connection Wizard
+</code>
+</p><p><u>If you are using a terminal Whonix-Gateway</u>, type.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo whonixsetup</pre>
+<pre>kdesudo anon-connection-wizard</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo anon-connection-wizard</textarea>
 </div>
 </div>
 </div>
@@ -622,21 +628,24 @@ The following instructions manually change a user's Tor entry guards. One use ca
 </p>
 <div class="mw-collapsible-content">
 <p>Complete these steps in Whonix-Gateway (<code>sys-whonix</code>).
-</p><p><b>1.</b> Disable Tor using whonix-setup-wizard (safest option).
-</p><p>Start whonix-setup-wizard.
+</p><p><b>1.</b> Disable Tor using Anon Connection Wizard (safest option).
+</p><p>Start Anon Connection Wizard.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><code>
+Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Anon Connection Wizard</code>
 </p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p><code>
+Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Anon Connection Wizard
+</code>
+</p><p><u>If you are using a terminal Whonix-Gateway</u>, type.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo whonixsetup</pre>
+<pre>kdesudo anon-connection-wizard</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonixsetup</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo anon-connection-wizard</textarea>
 </div>
 </div>
 </div>
@@ -945,7 +954,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <div id="allcomments"></div><form action="" method="post" name="commentForm">
 <div class="c-form-title">Add your comment</div>
 <div class="c-form-reply-to" id="replyto"></div>
-<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup">register</a> or <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin">log in</a>. It is free.</div>
+<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="./Special:UserLogin/signup" href="./Special:UserLogin/signup">register</a> or <a data-href="./Special:UserLogin" href="./Special:UserLogin">log in</a>. It is free.</div>
 <p><textarea cols="64" id="comment" name="commentText" rows="5"></textarea>
 </p>
 <div class="c-form-button"><input class="site-button" type="button" value="Post comment"/></div>
@@ -960,7 +969,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
+<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Tor_Entry_Guards" href="./Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor_Entry_Guards" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -977,38 +986,38 @@ Copyright (C) 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Po
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190226191929
+Cached time: 20190302052635
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.308 seconds
-Real time usage: 0.531 seconds
+CPU time usage: 0.384 seconds
+Real time usage: 0.978 seconds
 Preprocessor visited node count: 971/1000000
 Preprocessor generated node count: 2775/1000000
-Post‐expand include size: 33734/2097152 bytes
-Template argument size: 4706/2097152 bytes
+Post‐expand include size: 33677/2097152 bytes
+Template argument size: 4705/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 20779/5000000 bytes
-Lua time usage: 0.070/7.000 seconds
+Unstrip post‐expand size: 20860/5000000 bytes
+Lua time usage: 0.100/7.000 seconds
 Lua virtual size: 15.18 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  411.437      1 -total
- 50.49%  207.718     27 Template:CodeSelect
- 31.07%  127.831     13 Template:Mbox
- 17.87%   73.505      1 Template:Persistent_Tor_Entry_Guards_Introduction
-  3.67%   15.083      1 Template:Footer
-  3.66%   15.073      1 Template:Reflist
-  2.33%    9.582      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  2.32%    9.563      3 Template:Box
-  1.84%    7.570      3 Template:Disable_Tor
-  1.47%    6.049      1 Template:Header
+100.00%  767.397      1 -total
+ 48.74%  374.060     27 Template:CodeSelect
+ 23.07%  177.005     13 Template:Mbox
+ 12.15%   93.255      1 Template:Persistent_Tor_Entry_Guards_Introduction
+  8.47%   65.021      1 Template:Reflist
+  7.08%   54.312      1 Template:Header
+  4.87%   37.402      1 Template:Footer
+  2.96%   22.740      3 Template:Box
+  2.95%   22.675      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  2.69%   20.663      3 Template:Disable_Tor
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549">https://www.whonix.org/w/index.php?title=Tor_Entry_Guards&amp;oldid=40549</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1040,5 +1049,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=To
 </div>
 
 </body>
-<!-- Cached/compressed 20190226191929 -->
+<!-- Cached/compressed 20190302052636 -->
 </html>
