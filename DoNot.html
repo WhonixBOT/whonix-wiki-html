@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tips on Remaining Anonymous - Whonix
  url: ./DoNot
- date: Mon Mar  4 07:52:51 2019
+ date: Tue Mar  5 07:53:22 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -193,10 +193,11 @@ Whonix requires Donations to stay alive.
 <p><span id="Do_not_confuse_Anonymity_with_Pseudonymity"></span>
 </p>
 <h2><span class="mw-headline" id="Confuse_Anonymity_with_Pseudonymity">Confuse Anonymity with Pseudonymity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=DoNot&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=DoNot&amp;action=edit&amp;section=3.html" title="Edit section: Confuse Anonymity with Pseudonymity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This chapter explains the difference between anonymity and pseudonymity. Defining terms is always a difficult topic because a majority consensus is required.
-</p><p>An <i>anonymous connection</i> is defined as a connection to a destination server, where the destination server has no means to find out the origin (IP address / location) of that connection nor to associate an identifier <sup class="reference" id="cite_ref-identifier_1-0"><a href="#cite_note-identifier-1">[1]</a></sup> to it.
-</p><p>A <i>pseudonymous connection</i> is defined as a connection to a destination server, where the destination server has no means to find out the origin (IP address / location) of a connection, but can associate it with an identifier. <sup class="reference" id="cite_ref-identifier_1-1"><a href="#cite_note-identifier-1">[1]</a></sup>
-</p><p>In an ideal world, perfection would be achieved by the Tor network, Tor Browser, computer hardware, physical security, the underlying operating system, and so on. For example, in this utopia the user could fetch a news website, and neither the news website or the website's ISP would have any idea if the user had ever made contact before. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>This chapter explains the difference between anonymity and pseudonymity. Note that defining terms is always a difficult process because a majority consensus is required:
+</p>
+<ul><li><b>Anonymous connection:</b> A connection to a destination server, where it has no ability to discover the origin (IP address / location) of the connection, nor to associate any identifier <sup class="reference" id="cite_ref-identifier_1-0"><a href="#cite_note-identifier-1">[1]</a></sup> with it.</li>
+<li><b>Pseudonymous connection:</b> A connection to a destination server, where it has no ability to discover the origin (IP address / location) of the connection, but it can be associated with an identifier. <sup class="reference" id="cite_ref-identifier_1-1"><a href="#cite_note-identifier-1">[1]</a></sup></li></ul>
+<p>In an ideal world, perfection would be achieved by the Tor network, Tor Browser, computer hardware, physical security, the underlying operating system, and so on. For example, in this utopia the user could fetch a news website, and neither the news website or the website's ISP would have any idea if the user had ever made contact before. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>In contrast, the imperfect scenario results when software is used incorrectly, like when stock Firefox is used over the Tor network instead of the "Tor-safe" Tor Browser. The unfortunate Firefox user still protects their original connection (IP address / location) from discovery, but an identifier (like cookies) can be used to make that connection pseudonymous. For example, the destination website could log "user with id 111222333444 viewed Video Title A at Time B on Date C and Video Title D at Time E at Date F.". This information can be used for profiling, which over time becomes more and more comprehensive. The anonymity set is gradually reduced, and in the worst case leads to de-anonymization.
 </p><p>As soon as a user logs into a website with a username for activities like forum posting or webmail, the connection is by definition no longer anonymous, but pseudonymous. The origin of the connection (IP address / location) is still hidden, but the connection can be associated with an identifier <sup class="reference" id="cite_ref-identifier_1-2"><a href="#cite_note-identifier-1">[1]</a></sup>; in this case, an account name. Identifiers can be used to keep a log of various things: when a user wrote something, the date and time of login and logout, what a user wrote and to whom, the IP address used (useless if it is a Tor exit relay), the recorded browser fingerprint and so on.
 </p><p>Maxim Kammerer, developer of Liberté Linux <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>, has disparate ideas on anonymity and pseudonymity which should not be withheld from the reader: <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
@@ -233,11 +234,35 @@ The four primary modes are outlined below.
 <li>The user's real IP address / location is revealed.</li>
 <li>The user's location is revealed.</li></ul>
 <h3><span class="mw-headline" id="Conclusion">Conclusion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=DoNot&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=DoNot&amp;action=edit&amp;section=9.html" title="Edit section: Conclusion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>It is unwise to combine anonymity modes 1 and 2. For example, if the user has an instant messenger or email account and uses that via mode 1, it is inadvisable to use the same account for mode 2. The reason is the user is mixing absolute anonymity (mode 1) with selective anonymity (mode 2; since the recipient knows the user).
-</p><p><b>It is also unwise to mix two or more modes inside the same Tor session</b>, because they could share the same Tor exit relay, leading to identity correlation.
-</p><p><b>It is also unwise to mix two or more modes inside the same Whonix-Workstation</b>, because if that workstation gets compromised, leading to identity correlation.
-</p><p>Combining other modes may also be dangerous and could lead to the leakage of personal information or the user's physical location.
+<p>Based on the preceding information, the table below outlines <u>unrecommended</u> behavior.
+</p><p><b>Table:</b> <i>Dangerous Anonymity Mode Combinations</i>
 </p>
+<table class="wikitable">
+<tbody><tr>
+<th align="left"><b>Combination</b>
+</th>
+<th align="left"><b>Example</b>
+</th></tr>
+<tr class="odd">
+<td align="left"><b>Anonymity modes 1 + 2</b>
+</td>
+<td align="left">If the user has an instant messenger or email account and uses that via mode 1, it is inadvisable to use the same account for mode 2. The reason is the user is mixing absolute anonymity (mode 1) with selective anonymity (mode 2; since the recipient knows the user).
+</td></tr>
+<tr class="even">
+<td align="left"><b>Two or more modes inside the same Tor session</b>
+</td>
+<td align="left">Using an encrypted chat application over Tor and then posting in the Whonix forum without rotating Tor circuits. If the modes share the same Tor exit relay, this could lead to identity correlation.
+</td></tr>
+<tr class="odd">
+<td align="left"><b>Two or modes inside the same Whonix-Workstation</b>
+</td>
+<td align="left">Using the same Whonix-Workstation for encrypted email as well as posting to a Tor Project mailing list. If the workstation is compromised, this leads to identity correlation.
+</td></tr>
+<tr class="even">
+<td align="left"><b>Other combinations</b>
+</td>
+<td align="left">Combining other modes may also be dangerous and could lead to the leakage of personal information or the user's physical location.
+</td></tr></tbody></table>
 <h3><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=DoNot&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=DoNot&amp;action=edit&amp;section=10.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>License of "Do not Mix Anonymity Modes": <sup class="reference" id="cite_ref-adrelicense_7-0"><a href="#cite_note-adrelicense-7">[7]</a></sup>
 </p>
@@ -556,7 +581,7 @@ When a transparent proxy is used (like in Whonix), it is possible to start a Tor
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=DoNot&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=DoNot&amp;action=edit&amp;section=38.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
-<li id="cite_note-identifier-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-identifier_1-0">1.0</a></sup> <sup><a href="#cite_ref-identifier_1-1">1.1</a></sup> <sup><a href="#cite_ref-identifier_1-2">1.2</a></sup></span> <span class="reference-text">For example, an identifier could be a (Flash) Cookie with a unique number.</span>
+<li id="cite_note-identifier-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-identifier_1-0">1.0</a></sup> <sup><a href="#cite_ref-identifier_1-1">1.1</a></sup> <sup><a href="#cite_ref-identifier_1-2">1.2</a></sup></span> <span class="reference-text">For example, an identifier could be a (Flash) cookie with a unique ID.</span>
 </li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Unfortunately, fingerprinting defenses are not yet perfect in any browser and there are still open bugs. See <a class="external text" data-href="https://trac.torproject.org/projects/tor/query?status=accepted&amp;status=assigned&amp;status=needs_information&amp;status=needs_review&amp;status=new&amp;status=reopened&amp;order=priority&amp;col=id&amp;col=summary&amp;col=keywords&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;keywords=tbb-linkability" href="https://trac.torproject.org/projects/tor/query?status=accepted&amp;status=assigned&amp;status=needs_information&amp;status=needs_review&amp;status=new&amp;status=reopened&amp;order=priority&amp;col=id&amp;col=summary&amp;col=keywords&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;keywords=tbb-linkability" rel="noreferrer noopener" target="_blank">tbb-linkability</a> and <a class="external text" data-href="https://trac.torproject.org/projects/tor/query?status=accepted&amp;status=assigned&amp;status=needs_review&amp;status=needs_revision&amp;status=new&amp;status=reopened&amp;order=priority&amp;col=id&amp;col=summary&amp;col=keywords&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;keywords=tbb-fingerprinting" href="https://trac.torproject.org/projects/tor/query?status=accepted&amp;status=assigned&amp;status=needs_review&amp;status=needs_revision&amp;status=new&amp;status=reopened&amp;order=priority&amp;col=id&amp;col=summary&amp;col=keywords&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;keywords=tbb-fingerprinting" rel="noreferrer noopener" target="_blank">tbb-fingerprinting</a>.</span>
 </li>
@@ -661,7 +686,7 @@ This was originally posted by adrelanos (proper) to the <a class="external text"
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="https://www.whonix.org" href="https://www.whonix.org" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./DoNot" href="./DoNot" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/DoNot" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/DoNot" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -675,11 +700,11 @@ This was originally posted by adrelanos (proper) to the <a class="external text"
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190303190402
+Cached time: 20190304175508
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.180 seconds
-Real time usage: 0.265 seconds
+CPU time usage: 0.248 seconds
+Real time usage: 0.328 seconds
 Preprocessor visited node count: 876/1000000
 Preprocessor generated node count: 2305/1000000
 Post‐expand include size: 6662/2097152 bytes
@@ -687,26 +712,26 @@ Template argument size: 854/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 16754/5000000 bytes
+Unstrip post‐expand size: 16895/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 14.93 MB/50 MB
+Lua virtual size: 14.79 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  173.274      1 -total
- 42.41%   73.485      4 Template:Mbox
- 19.99%   34.635      1 Template:Header
- 10.75%   18.633      1 Template:Reflist
-  9.44%   16.362      1 Template:Footer
-  2.34%    4.046      1 Template:Share
-  1.91%    3.301      1 Template:Edit_it
-  1.78%    3.092     16 Template:Anchor
-  0.97%    1.674      1 Template:RandomNews
-  0.55%    0.948      1 Template:Whonix_onion
+100.00%  196.172      1 -total
+ 38.23%   74.990      4 Template:Mbox
+ 15.85%   31.102      1 Template:Reflist
+ 15.58%   30.573      1 Template:Header
+ 13.43%   26.342      1 Template:Footer
+  3.60%    7.063      1 Template:Share
+  2.74%    5.383      1 Template:Edit_it
+  1.97%    3.870     16 Template:Anchor
+  1.41%    2.757      1 Template:RandomNews
+  0.93%    1.825      2 Template:Name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41179" dir="ltr" href="https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41179">https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41179</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41355" dir="ltr" href="https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41355">https://www.whonix.org/w/index.php?title=DoNot&amp;oldid=41355</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -717,7 +742,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=DoNot&amp
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 28 February 2019, at 11:18.</li>
+<li id="footer-lastmod"> This page was last edited on 4 March 2019, at 15:23.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -738,5 +763,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=DoNot&amp
 </div>
 
 </body>
-<!-- Cached/compressed 20190303190402 -->
+<!-- Cached/compressed 20190304175508 -->
 </html>
