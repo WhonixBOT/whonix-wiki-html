@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Thu Mar  7 08:14:44 2019
+ date: Fri Mar  8 08:19:21 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -319,14 +319,12 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <p>If you are interested in <a data-href="/wiki/Hide_Tor_and_Whonix_from_your_ISP" href="../Hide_Tor_and_Whonix_from_your_ISP.html" title="Hide Tor and Whonix from your ISP">Hide Tor and Whonix from your ISP</a> (read that page first)... After installing Whonix-Gateway, do the following steps before activating Tor in <span style="border:1px dotted #005cb9">Whonix Setup Wizard</span>.
 </p>
 <h5><span class="mw-headline" id="Preparation">Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=12.html" title="Edit section: Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p>It is challenging to set up OpenVPN on Whonix with a secure, leak preventing <a href="#Fail_Closed_Mechanism">Fail Closed Mechanism</a>. For this reason, it is strongly recommended to learn how to set up OpenVPN on Debian stable (currently stretch). The following steps are a simple overview of the process:
+<p>It is challenging to set up OpenVPN on Whonix with a secure, leak preventing <a href="#Fail_Closed_Mechanism">Fail Closed Mechanism</a>. For this reason, it is strongly recommended that users to learn how to set up OpenVPN on Debian stable (currently stretch). The following steps are a simple overview of the process:
 </p>
 <ol><li>Prepare a Debian stable VM.</li>
 <li>Install the Debian OpenVPN package: <i>sudo apt-get install openvpn</i></li>
 <li>Research how to set up a VPN using OpenVPN on the command line. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup></li>
 <li>Search for help with general VPN setup in the <a href="#VPN_Setup">#VPN Setup</a> chapter or on the <a class="mw-redirect" data-href="/wiki/TestVPN" href="../TestVPN.html" title="TestVPN">TestVPN</a> page. <a data-href="/wiki/Support" href="../Support.html" title="Support">Help</a> is available from various sources, and the VPN provider may also be of assistance.</li></ol>
-<p>Whonix 12 users may recall the variable VPN_SERVERS; it has been abolished for better security. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
-</p>
 <h5><span class="mw-headline" id="Firewall_Settings">Firewall Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=13.html" title="Edit section: Firewall Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p><b>Modify Whonix User Firewall Settings</b>
 </p>
@@ -378,7 +376,7 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </div>
 </div>
 </div>
-<p>Add the following settings. You can skip comments (starting with <span style="border:1px dotted #005cb9">#</span>). Don't use <span style="border:1px dotted #005cb9">;</span> for comments. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> Likely you do not need to either uncomment (removing the <span style="border:1px dotted #005cb9">#</span> in front) or modify <span style="border:1px dotted #005cb9">VPN_INTERFACE</span> / <span style="border:1px dotted #005cb9">LOCAL_NET</span>.
+<p>Add the following settings. You can skip comments (starting with <span style="border:1px dotted #005cb9">#</span>). Don't use <span style="border:1px dotted #005cb9">;</span> for comments. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Likely you do not need to either uncomment (removing the <span style="border:1px dotted #005cb9">#</span> in front) or modify <span style="border:1px dotted #005cb9">VPN_INTERFACE</span> / <span style="border:1px dotted #005cb9">LOCAL_NET</span>.
 </p>
 <pre>## Make sure Tor always connects through the VPN.
 ## Enable: 1
@@ -516,7 +514,7 @@ vpnsecret
 <p>Save and exit.
 </p>
 <h6><span class="mw-headline" id="VPN_IP_Address">VPN IP Address</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=20.html" title="Edit section: VPN IP Address">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>When editing the VPN configuration file the use of DNS hostnames is not supported. This means IP address(s) of the VPN must be used.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>  Therefore, <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> cannot be used, but an IP address such as <i><span style="background-color:#FBFBFB">198.252.153.226</span></i> should be used instead. To discover the IP address, check with the provider or use nslookup on the host. For example, to verify the actual IP address of the <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> DNS server, run.
+<p>When editing the VPN configuration file the use of DNS hostnames is not supported. This means IP address(s) of the VPN must be used.<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>  Therefore, <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> cannot be used, but an IP address such as <i><span style="background-color:#FBFBFB">198.252.153.226</span></i> should be used instead. To discover the IP address, check with the provider or use nslookup on the host. For example, to verify the actual IP address of the <i><span style="background-color:#FBFBFB">vpn.riseup.net</span></i> DNS server, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nslookup vpn.riseup.net</pre>
@@ -587,12 +585,12 @@ script-security 2
 user tunnel
 iproute /usr/bin/ip_unpriv
 </pre>
-<p>Do not worry about TCP mode on Whonix-Gateway. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> Your pick.
-</p><p><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>Do not worry about TCP mode on Whonix-Gateway. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Your pick.
+</p><p><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p><p>Save.
 </p>
 <h6><span class="mw-headline" id="DNS_Configuration">DNS Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22.html" title="Edit section: DNS Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
 <h6><span class="mw-headline" id="Configuration_Folder_Permissions">Configuration Folder Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23.html" title="Edit section: Configuration Folder Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Since OpenVPN will be run under user <i>tunnel</i>, that user requires read access to the folder <i>/etc/openvpn</i>.
@@ -791,7 +789,7 @@ Always refer to the connection scheme when requesting support: <i><span style="b
 <p>Before submitting a support request for VPN related issues users are encouraged to follow the <a data-href="/wiki/Support#Free_Support_Principle" href="../Support.html" title="Support">Free Support Principle</a> when working towards a solution. Whonix developers will use the information provided by the user to determine if the issue is a technical problem (aka bug) and/or configuration error which is a common reason for VPN connectivity issue.
 </p><p>Before Whonix developers will review the support request, the following information must be provided.
 </p>
-<ul><li>Steps to reproduce the behavior. For example, list all command that were run up to this point.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li></ul>
+<ul><li>Steps to reproduce the behavior. For example, list all command that were run up to this point.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li></ul>
 <ul><li>Actual behavior. (Detailed explanation. Reports stating "VPN does not work" will be rejected.)</li></ul>
 <ul><li>Expected behavior. (Reports stating "VPN works" will be rejected.)</li></ul>
 <p>The following information is also required.
@@ -911,7 +909,7 @@ After=openvpn.service
 </code>
 </p><p>Save.
 </p><p>At next boot, the Tor daemon will be started after the OpenVPN daemon.
-</p><p>Debugging: <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</p><p>Debugging: <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p><p><b>Limitations</b>
 </p>
 <ul><li>Only tested with OpenVPN. Most other VPN's have deficiencies anyway.</li>
@@ -958,28 +956,26 @@ At the time of writing Debian 9 stretch was the stable release version.</span>
 </span></li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Only proceed if this is successful. Do not post support requests regarding these instructions before completing this basic exercise.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T460" href="https://phabricator.whonix.org/T460" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T460</a></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">That config file is a bash fragment.</span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">That config file is a bash fragment.</span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"> Many VPN service providers include DNS hostnames in their configuration files. The hostnames typically  include the providers name followed by (.net, .com, .ch, .pw).</span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"> Many VPN service providers include DNS hostnames in their configuration files. The hostnames typically  include the providers name followed by (.net, .com, .ch, .pw).</span>
-</li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 The Tor software cannot transport UDP yet, but it does not have to in this case. (Reference: <a data-href="/wiki/Tor#UDP" href="../Tor.html" title="Tor">Tor#UDP</a>.) Since the VPN connects over clearnet, UDP should just work as usual. Once the VPN is functional, Tor will have no issue to connect using it (without "knowing" it is over a VPN).</span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/usr/bin/ip_unpriv" href="https://github.com/Whonix/usability-misc/blob/master/usr/bin/ip_unpriv" rel="noreferrer noopener" target="_blank">/usr/bin/ip_unpriv</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.
 
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/etc/sudoers.d/tunnel_unpriv" href="https://github.com/Whonix/usability-misc/blob/master/etc/sudoers.d/tunnel_unpriv" rel="noreferrer noopener" target="_blank">/etc/sudoers.d/tunnel_unpriv</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.
 
 The <a class="external text" data-href="https://github.com/Whonix/usability-misc/blob/master/lib/systemd/system/openvpn%40openvpn.service.d/50_unpriv.conf" href="https://github.com/Whonix/usability-misc/blob/master/lib/systemd/system/openvpn%40openvpn.service.d/50_unpriv.conf" rel="noreferrer noopener" target="_blank">/lib/systemd/system/openvpn@openvpn.service.d/50_unpriv.conf</a> wrapper script is being provided by the <a class="external text" data-href="https://github.com/Whonix/usability-misc" href="https://github.com/Whonix/usability-misc" rel="noreferrer noopener" target="_blank">usabilty-misc</a> package.</span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">We must run OpenVPN as user 'tunnel', because that is the only user besides user <i><span style="background-color:#FBFBFB">clearnet</span></i> that will be allowed to establish external connections when using Whonix Firewall setting VPN_FIREWALL=1.</span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">We must run OpenVPN as user 'tunnel', because that is the only user besides user <i><span style="background-color:#FBFBFB">clearnet</span></i> that will be allowed to establish external connections when using Whonix Firewall setting VPN_FIREWALL=1.</span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
 Because Whonix-Gateway by default has no and needs no system DNS for its own traffic. See <a data-href="/wiki/Whonix-Gateway_System_DNS" href="../Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Whonix-Gateway System DNS</a> if you would like to read an explanation why that is so.</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 To list previous commands, run.
 <div class="codeContainerNew">
 <div class="preDiv">
@@ -990,7 +986,7 @@ To list previous commands, run.
 </div>
 </div></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 Reload systemd.
 
 <code>
@@ -1049,7 +1045,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://www.whonix.org/blog/" href="https://www.whonix.org/blog/" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_VPN_before_Tor" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1063,35 +1059,35 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190305101334
+Cached time: 20190308024903
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.300 seconds
-Real time usage: 0.387 seconds
-Preprocessor visited node count: 1194/1000000
-Preprocessor generated node count: 2888/1000000
-Post‐expand include size: 45198/2097152 bytes
+CPU time usage: 0.376 seconds
+Real time usage: 0.970 seconds
+Preprocessor visited node count: 1186/1000000
+Preprocessor generated node count: 2866/1000000
+Post‐expand include size: 45080/2097152 bytes
 Template argument size: 14124/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 11019/5000000 bytes
+Unstrip post‐expand size: 10871/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.92 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  295.087      1 -total
- 31.64%   93.377     35 Template:CodeSelect
- 25.70%   75.829      1 Template:Tunnels_Introduction
- 24.46%   72.181      2 Template:Mbox
- 23.44%   69.176     13 Template:Box
- 11.94%   35.228      4 Template:Open_with_root_rights
-  7.01%   20.678      1 Template:VPN-Firewall/Troubleshooting
-  6.33%   18.683      1 Template:Reflist
-  6.04%   17.832      1 Template:Footer
-  4.96%   14.626      1 Template:Firewall_Settings
+100.00%  834.222      1 -total
+ 65.91%  549.858     35 Template:CodeSelect
+ 50.61%  422.209     13 Template:Box
+ 31.55%  263.189      4 Template:Open_with_root_rights
+ 19.50%  162.643      1 Template:VPN-Firewall/Troubleshooting
+ 14.36%  119.821      1 Template:Tunnels_Introduction
+ 13.82%  115.309      2 Template:Mbox
+  7.24%   60.411      1 Template:Firewall_Settings
+  7.17%   59.780      1 Template:VPN/Setup/VPN_Credentials
+  5.21%   43.457      1 Template:VPN/Setup/Systemd
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369</a>"</div>
@@ -1126,5 +1122,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20190305101334 -->
+<!-- Cached/compressed 20190308024903 -->
 </html>
