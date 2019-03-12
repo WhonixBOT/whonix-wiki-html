@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: OnionShare - Whonix
  url: ./OnionShare
- date: Mon Mar 11 08:07:31 2019
+ date: Tue Mar 12 08:02:48 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -164,7 +164,8 @@ Whonix requires Donations to stay alive.
 <p>OnionShare is an open source program that allows a file of any size to be shared securely and anonymously using the Tor network. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> The OnionShare wiki succinctly describes the design: <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
 <blockquote><p>It works by starting a web server, making it accessible as a Tor Onion Service, and generating an unguessable URL to access and download the files. It does not require setting up a separate server or using a third party file-sharing service. You host the files on your own computer and use a Tor Onion Service to make it temporarily accessible over the internet. The receiving user just needs to open the URL in Tor Browser to download the file.</p></blockquote>
-<p>At the time of writing, the OnionShare package is not packaged in Debian stretch. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> For these reasons, the following instructions use the most recent version available from GitHub. Advanced users may prefer to use APT pinning to install the version from Debian buster instead.
+<p>As of OnionShare 2, it is also possible to run the program in Receive mode, which allows you to receive files via OnionShare, uploaded by users using Tor Browser - a sort of 'SecureDrop Lite', or personal dropbox.
+</p><p>At the time of writing, the OnionShare package is not packaged in Debian stretch. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> For these reasons, the following instructions use the most recent version available from GitHub. Advanced users may prefer to use APT pinning to install the version from Debian buster instead. However, installing from a tagged release in Git ensures you have access to the latest features.
 </p>
 <h2><span class="mw-headline" id="Install_OnionShare">Install OnionShare</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=2.html" title="Edit section: Install OnionShare">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>1.</b> <i>Optional</i>: Create a separate Whonix-Workstation (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>: <code>anon-onionshare</code> AppVM).
@@ -220,7 +221,7 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 <p><b>5.</b> Examine and verify the git tags and commit.
-</p><p>These steps list the available git tags, and verifies the latest version and its commit (v1.3.1 at the time of writing).
+</p><p>These steps list the available git tags, and verifies the latest version and its commit (v2.0 at the time of writing).
 </p>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Good signature messages should appear for each verify command below. Do not proceed if signatures are bad! In that case, remove the OnionShare directory and repeat step 3.</div></td></tr></tbody></table>
 <p><br/>
@@ -234,30 +235,30 @@ Whonix requires Donations to stay alive.
 </div>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-tag v1.3.1</pre>
+<pre>git verify-tag v2.0</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag v1.3.1</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag v2.0</textarea>
 </div>
 </div>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-commit v1.3.1^{commit}</pre>
+<pre>git verify-commit v2.0^{commit}</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit v1.3.1^{commit}</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit v2.0^{commit}</textarea>
 </div>
 </div>
 <p>Qubes-Whonix users should shut down <code>anon-onionshare</code> prior to the next step.
 </p><p><b>6.</b> Install OnionShare dependencies.
 </p><p>Several dependencies must be installed in Whonix-Workstation (<code>whonix-ws-14</code> TemplateVM) for OnionShare to work correctly. Locate the <i><span style="background-color:#FBFBFB">BUILD.md</span></i> file in the OnionShare repository and run the necessary apt-get commands in the "Debian-like distros" section.
-</p><p>For example, for OnionShare 1.3.1 run in a terminal (Konsole).
+</p><p>For example, for OnionShare 2 run in a terminal (Konsole).
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt install -y build-essential fakeroot python3-all python3-stdeb dh-python python3-flask python3-stem python3-pyqt5 python-nautilus python3-pytest obfs4proxy</pre>
+<pre>sudo apt install -y python3-flask python3-stem python3-pyqt5 python3-crypto python3-socks python-nautilus tor obfs4proxy python3-pytest build-essential fakeroot python3-all python3-stdeb dh-python</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt install -y build-essential fakeroot python3-all python3-stdeb dh-python python3-flask python3-stem python3-pyqt5 python-nautilus python3-pytest obfs4proxy</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt install -y python3-flask python3-stem python3-pyqt5 python3-crypto python3-socks python-nautilus tor obfs4proxy python3-pytest build-essential fakeroot python3-all python3-stdeb dh-python</textarea>
 </div>
 </div>
 <p>Qubes-Whonix users should shutdown the <code>whonix-ws-14</code> TemplateVM after dependencies have installed, and restart the <code>anon-onionshare</code> AppVM.
@@ -432,8 +433,9 @@ In Whonix-Workstation AppVM.
 </p>
 <ul><li>Click the “Test Settings” button. If all steps were completed correctly, Tor will successfully connect.</li>
 <li>The GUI should say it supports both ephemeral onion services and stealth onion services.</li>
-<li>Check “Create stealth onion services” to make OnionShare operations more secure.
-<ul><li>Note: Using Stealth mode makes it harder for the end user to connect to the share, because they must first edit their torrc file. Please see the <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" rel="noreferrer noopener" target="_blank">official documentation</a> for further information.</li></ul></li></ul>
+<li>You can check “Create stealth onion services” (Client Auth) to make OnionShare operations more secure - however, this currently only works with legacy 'v2' (shorter) style onions. Support for Client Auth with v3/prop224/next-gen onions will be possible in a future release.
+<ul><li>Note: Using Stealth mode makes it harder for the end user to connect to the share, because they must first edit their torrc file. Please see the <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" rel="noreferrer noopener" target="_blank">official documentation</a> for further information.</li></ul></li>
+<li>By default, if the version of Tor in use is 0.3.5.7 or higher (as it is in Whonix 14), OnionShare will use next-gen or 'v3' (sometimes referred to as prop224) onion addresses by default. These are recognizable by their longer address. You can enable Legacy Mode in the settings if for some reason you want to use the shorter (but less secure) v2 onion addresses.</li></ul>
 <h3><span class="mw-headline" id="How_to_Use_OnionShare">How to Use OnionShare</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=5.html" title="Edit section: How to Use OnionShare">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Once OnionShare has been installed correctly and the Tor check is successful, sharing files anonymously is easy: <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
@@ -444,7 +446,8 @@ Send this URL to the person you're sending the files to. If the files you're sen
 The person who is receiving the files doesn't need OnionShare. All they need is to open the URL you send them in Tor Browser to be able to download the file.
 </p>
 </blockquote>
-<p>A complete user guide, along with advanced topics, hardening options <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> and development documentation is available on the <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki" href="https://github.com/micahflee/onionshare/wiki" rel="noreferrer noopener" target="_blank">official website</a>. Do not change settings without fully understanding their function, otherwise onion addresses might be re-used, shares might be left open even after multiple downloads are performed, and so on.
+<p>As of OnionShare 2, a new feature exists called 'Receive Mode'. With this mode, you can start an onion service and allow other users to upload files to <i>you</i> via Tor Browser (rather than Share Mode, in which you share files from your OnionShare to those users). You can read more about Receive Mode <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki/Receive-Mode" href="https://github.com/micahflee/onionshare/wiki/Receive-Mode" rel="noreferrer noopener" target="_blank">in the OnionShare wiki</a>.
+</p><p>A complete user guide, along with advanced topics, hardening options <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> and development documentation is available on the <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki" href="https://github.com/micahflee/onionshare/wiki" rel="noreferrer noopener" target="_blank">official website</a>. Do not change settings without fully understanding their function, otherwise onion addresses might be re-used, shares might be left open even after multiple downloads are performed, and so on.
 </p>
 <h2><span class="mw-headline" id="OnionShare_AppArmor_Profiles">OnionShare AppArmor Profiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=6.html" title="Edit section: OnionShare AppArmor Profiles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>AppArmor profiles are available to better contain OnionShare, but they have not yet been tested in Whonix. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> Profile development is reported to be lagging behind the master and development branches of the OnionShare git repository. Therefore, willing testers should be knowledgeable about AppArmor profiles before attempting this procedure. 
@@ -464,7 +467,7 @@ The person who is receiving the files doesn't need OnionShare. All they need is 
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The git installation will not persist in Qubes-Whonix following reboot. This method avoids polluting the <code>whonix-ws-14</code> TemplateVM upon which it is based.</span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">OnionShare is developed by Micah Lee and mig5. The key ID has been taken directly from www.micahflee.com</span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">The OnionShare core developer is Micah Lee. The key ID has been taken directly from www.micahflee.com</span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users could also use <code>/etc/onion-grater-merger.d/</code>. Qubes-Whonix users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>) and restart their Whonix-Gateway ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ProxyVMs based on the same Whonix-Gateway TemplateVM for lets say one Whonix-Gateway ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ProxyVM with the default more restricted onion-grater whitelist.</span>
@@ -522,7 +525,7 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p><a class="external text" data-href="https://www.whonix.org/blog/translations-coordinator" href="https://www.whonix.org/blog/translations-coordinator" rel="noreferrer noopener" target="_blank">The Whonix Project is looking for a Translations Coordinator!</a>
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./OnionShare" href="./OnionShare" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -536,38 +539,38 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190304005504
+Cached time: 20190312033605
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.188 seconds
-Real time usage: 0.256 seconds
+CPU time usage: 0.172 seconds
+Real time usage: 0.224 seconds
 Preprocessor visited node count: 614/1000000
 Preprocessor generated node count: 1845/1000000
 Post‐expand include size: 16565/2097152 bytes
-Template argument size: 6898/2097152 bytes
+Template argument size: 6927/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8550/5000000 bytes
+Unstrip post‐expand size: 8406/5000000 bytes
 Lua time usage: 0.030/7.000 seconds
-Lua virtual size: 14.66 MB/50 MB
+Lua virtual size: 14.67 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  209.919      1 -total
- 32.52%   68.257      1 Template:Mbox
- 30.88%   64.820     21 Template:CodeSelect
- 16.81%   35.280      5 Template:Box
- 10.99%   23.069      1 Template:Footer
-  7.38%   15.485      1 Template:Firewall_Settings_Workstation
-  7.17%   15.059      1 Template:Control_Port_Filter_Python_Profile_Add
-  5.93%   12.455      1 Template:Reflist
-  3.00%    6.292      1 Template:Header
-  2.78%    5.836      1 Template:Edit_it
+100.00%  176.920      1 -total
+ 32.44%   57.390     21 Template:CodeSelect
+ 29.92%   52.927      1 Template:Mbox
+ 16.00%   28.315      5 Template:Box
+  9.37%   16.576      1 Template:Footer
+  7.65%   13.541      1 Template:Reflist
+  6.94%   12.278      1 Template:Firewall_Settings_Workstation
+  5.99%   10.592      1 Template:Control_Port_Filter_Python_Profile_Add
+  3.40%    6.017      1 Template:Header
+  2.35%    4.164      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=40304" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=40304">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=40304</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=41478" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=41478">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=41478</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -578,7 +581,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShar
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 December 2018, at 13:11.</li>
+<li id="footer-lastmod"> This page was last edited on 11 March 2019, at 23:10.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -599,5 +602,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShar
 </div>
 
 </body>
-<!-- Cached/compressed 20190304005504 -->
+<!-- Cached/compressed 20190312033605 -->
 </html>
