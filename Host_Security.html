@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Host Security - Whonix
  url: ./Host_Security
- date: Tue Mar 12 07:56:54 2019
+ date: Wed Mar 13 07:59:19 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -46,7 +46,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Host_Security rootpage-Host_Security skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Host_Security rootpage-Host_Security skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -137,13 +137,19 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-9"><a href="#Hardening"><span class="tocnumber">4</span> <span class="toctext">Hardening</span></a></li>
 <li class="toclevel-1 tocsection-10"><a href="#Hardware_Component_Risks"><span class="tocnumber">5</span> <span class="toctext">Hardware Component Risks</span></a></li>
 <li class="toclevel-1 tocsection-11"><a href="#Hostnames"><span class="tocnumber">6</span> <span class="toctext">Hostnames</span></a></li>
-<li class="toclevel-1 tocsection-12"><a href="#Power_Saving_Considerations"><span class="tocnumber">7</span> <span class="toctext">Power Saving Considerations</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Power_Saving_Considerations"><span class="tocnumber">7</span> <span class="toctext">Power Saving Considerations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Non-Qubes-Whonix"><span class="tocnumber">7.1</span> <span class="toctext">Non-Qubes-Whonix</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Qubes-Whonix"><span class="tocnumber">7.2</span> <span class="toctext">Qubes-Whonix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Host_Security_Basics">Host Security Basics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=1.html" title="Edit section: Host Security Basics">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Users are recommended to first read relevant Computer Security Education entries concerning host security, such as:
 </p>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
 <ul><li><a data-href="/wiki/Core_Dumps" href="./Core_Dumps.html" title="Core Dumps">Core Dumps</a></li>
 <li><a data-href="/wiki/Firmware_Security_and_Updates" href="./Firmware_Security_and_Updates.html" title="Firmware Security and Updates">Firmware Security and Updates</a></li>
 <li><a data-href="/wiki/Hardware_Threat_Minimization" href="./Hardware_Threat_Minimization.html" title="Hardware Threat Minimization">Hardware Threat Minimization</a></li>
@@ -157,6 +163,7 @@ Whonix requires Donations to stay alive.
 <li><a data-href="/wiki/Router_and_Local_Area_Network_Security" href="./Router_and_Local_Area_Network_Security.html" title="Router and Local Area Network Security">Router and Local Area Network Security</a></li>
 <li><a data-href="/wiki/System_Configuration_and_Access" href="./System_Configuration_and_Access.html" title="System Configuration and Access">System Configuration and Access</a></li>
 <li><a data-href="/wiki/Disable_TCP_and_ICMP_Timestamps" href="./Disable_TCP_and_ICMP_Timestamps.html" title="Disable TCP and ICMP Timestamps">TCP and ICMP Timestamps</a></li></ul>
+</div>
 <h1><span class="mw-headline" id="Anonymous_Mobile_Modems">Anonymous Mobile Modems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=2.html" title="Edit section: Anonymous Mobile Modems">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> The technique outlined in this section may be ineffective against advanced adversaries who can:
 <ul><li><a class="external text" data-href="https://theintercept.com/2014/12/04/nsa-auroragold-hack-cellphones/" href="https://theintercept.com/2014/12/04/nsa-auroragold-hack-cellphones/" rel="noreferrer noopener" target="_blank">Subvert cellular networks</a>.</li>
@@ -186,12 +193,25 @@ Whonix requires Donations to stay alive.
 <li>Buy cash codes in different stores anonymously.</li>
 <li>Never use the anonymous SIM card with a non-anonymous phone or mobile modem beforehand.</li></ul></li></ul>
 <h2><span class="mw-headline" id="Mobile_Modem_Warnings">Mobile Modem Warnings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=6.html" title="Edit section: Mobile Modem Warnings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Many devices are manufactured by a handful of countries that have run <a class="external text" data-href="http://www.macworld.com.au/news/3g-and-4g-usb-modems-are-a-security-threat-researcher-says-89533/" href="http://www.macworld.com.au/news/3g-and-4g-usb-modems-are-a-security-threat-researcher-says-89533/" rel="noreferrer noopener" target="_blank">insecure software</a> in the recent past. Also, devices often show critical <a class="external text" data-href="https://www.helpnetsecurity.com/2015/12/03/3g4g-cellular-usb-modems-are-full-of-critical-security-flaws-many-0-days/" href="https://www.helpnetsecurity.com/2015/12/03/3g4g-cellular-usb-modems-are-full-of-critical-security-flaws-many-0-days/" rel="noreferrer noopener" target="_blank">zero days</a>, such as remote code executive flaws, exploitable firmware, vulnerability to cross-site scripting, and CSRF vulnerabilities.
-</p><p>Always choose hardware carefully and conduct meticulous manufacturer research beforehand!
+<p>Many mobile modem devices are manufactured by a handful of companies like Huawei, Gemtek, Quanta and ZTE, with insecure software/firmware being the norm. Devices have often shown critical <a class="external text" data-href="https://www.helpnetsecurity.com/2015/12/03/3g4g-cellular-usb-modems-are-full-of-critical-security-flaws-many-0-days/" href="https://www.helpnetsecurity.com/2015/12/03/3g4g-cellular-usb-modems-are-full-of-critical-security-flaws-many-0-days/" rel="noreferrer noopener" target="_blank">zero days</a>: <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+<blockquote><p>The findings include Remote Code Execution (RCE) in web scripts, integrity attacks, Cross-Site Request Forgery (CSRF), and Cross-Site Scripting (XSS).<br/>
+</p><p>The research covers a full range of attacks against carrier customers using these types of modems — device identification, code injection, PC infection, SIM card cloning, data interception, determining subscriber location, getting access to user accounts on the operator's website, and APT attacks. <br/>
+...
+</p><p>
+All in all, we have a full infection cycle of devices and related PCs. Using the infected devices, we can determine location, intercept and send SMS messages and USSD requests, read HTTP and HTTPS traffic (by replacing SSL certificates), attack SIM cards via binary SMS messages, and intercept 2G traffic. Further infection can continue through the operator's networks, popular websites or equipment infected by worms (when connecting a new device).</p></blockquote>
+<p>Key points from this research: <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p>
+<ul><li>Virtually all the exploits could be conducted remotely.</li>
+<li>60% of the mobile modems studied were vulnerable to RCE.</li>
+<li>Only a minority of mobile modems protected against arbitrary firmware modifications.</li>
+<li>In some cases, CSRF attacks could be used to remotely upload modified firmware and arbitrary code injection.</li>
+<li>XSS often allowed for everything from host infection to SMS interception, as well as modified firmware installation.</li></ul>
+<p>The take-home message is always choose hardware carefully and conduct meticulous manufacturer research beforehand!
 </p>
 <h2><span class="mw-headline" id="Mobile_Modem_Operation">Mobile Modem Operation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=7.html" title="Edit section: Mobile Modem Operation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>When using cellular networks, users often receive a shared external IP address due to scarcity of IPv4 IPs. This can lead to thousands of users sharing one IPv4 address at the same time. Also, some providers do not yet log the users' (NAT) ports. Consequently, providers cannot pinpoint users when they are given an IP address and time stamp. This is a nice feature, but do not rely on it for strong anonymity!
-</p><p>Some providers assign additional and unique IPv6 IP addresses to their users. This is not a concern for intended Tor usage, as it does not yet automatically utilize IPv6. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> For greater security, on-line activities should be conducted in locations that are new, distant, random, and non-circular.
+</p><p>Some providers assign additional and unique IPv6 IP addresses to their users. This is not a concern for intended Tor usage, as it does not yet automatically utilize IPv6. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> For greater security, on-line activities should be conducted in locations that are new, distant, random, and non-circular.
 </p>
 <h1><span class="mw-headline" id="Anonymous_WiFi_Adapters">Anonymous WiFi Adapters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=8.html" title="Edit section: Anonymous WiFi Adapters">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Normally the dial-up or broadband provider knows your name, postal address and non-anonymous payment method. If Tor or Whonix is compromised, then an adversary only needs to pressure the service provider to confirm your identity. This is not the case if using an anonymous WiFi adapter plugged or integrated into the Whonix-Gateway.
@@ -204,7 +224,7 @@ Whonix requires Donations to stay alive.
 <li>For greater security, always use a new, distant, random, non-circular hotspot location.</li>
 <li>Check for cameras and witnesses during online activities.</li></ul>
 <h1><span class="mw-headline" id="Hardening">Hardening</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=9.html" title="Edit section: Hardening">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Whonix does not yet improve host security. It is recommended to use a secure host operating system like <a data-href="/wiki/Host_Operating_System_Selection#Recommended_GNU.2FLinux_Distribution" href="./Host_Operating_System_Selection.html" title="Host Operating System Selection">Debian GNU/Linux</a> and manually <a data-href="/wiki/Operating_System_Hardening#Harden_Debian" href="./Operating_System_Hardening.html" title="Operating System Hardening">harden</a> it. Also follow relevant steps in the <a data-href="/wiki/System_Hardening_Checklist" href="./System_Hardening_Checklist.html" title="System Hardening Checklist">System Hardening Checklist</a> for greater security.
+<p>Whonix does not yet improve host security. It is recommended to use a secure host operating system like <a class="external text" data-href="https://www.qubes-os.org/downloads/" href="https://www.qubes-os.org/downloads/" rel="noreferrer noopener" target="_blank">Qubes</a> or <a data-href="/wiki/Host_Operating_System_Selection#Recommended_GNU.2FLinux_Distribution" href="./Host_Operating_System_Selection.html" title="Host Operating System Selection">Debian GNU/Linux</a> and manually <a data-href="/wiki/Operating_System_Hardening#Harden_Debian" href="./Operating_System_Hardening.html" title="Operating System Hardening">harden</a> it. Also follow relevant steps in the <a data-href="/wiki/System_Hardening_Checklist" href="./System_Hardening_Checklist.html" title="System Hardening Checklist">System Hardening Checklist</a> for better security.
 </p>
 <h1><span class="mw-headline" id="Hardware_Component_Risks">Hardware Component Risks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=10.html" title="Edit section: Hardware Component Risks">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>In the default configuration, Whonix provides significant protection against <a data-href="/wiki/Comparison_with_Others#Circumventing_Proxy_Obedience_Design" href="./Comparison_with_Others.html" title="Comparison with Others">circumvention of the proxy obedience design</a>. This includes:
@@ -229,23 +249,31 @@ Whonix requires Donations to stay alive.
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b> Upon system suspend / standby, Full Disk Encryption (FDE) keys are still kept in RAM.</div></td></tr></tbody></table>
 <p><br/>
 Users at high risk or traveling should avoid leaving a system in the suspend or standby state. Instead, the recommended power mode to use is hibernation. This will lock all system partitions to a safe state, though there is a small trade-off in startup time.
-</p><p>On GNU/Linux hosts, standby will not always result in having LUKS keys retained in memory. Some experimental projects <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> and custom setups with systemd+scripting are able to erase the keys before system suspend to avoid mistakes.
+</p><p>On GNU/Linux hosts, standby will not always result in having LUKS keys retained in memory. Some experimental projects <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> and custom setups with systemd+scripting are able to erase the keys before system suspend to avoid mistakes.
 </p><p>Following a system standby period, the network fingerprint for Tor on the Whonix-Gateway is identical to a standard Tor instance on the host that has gone through the same procedure. There are some old connections that go stale and need renewal, but nothing is seen by a network adversary because time leak identifiers have been stripped out of Tor's protocol / OpenSSL, and TCP Timestamps are gone. 
-</p><p><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> only:<br/>
-In order to reconnect, manual time adjustment is required or the VM can simply be powered off and then powered on again. This step will not be necessary once hypervisor-specific post resume hooks are used, because guest clocks will be seamlessly updated upon power state changes from the host.
-</p><p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> only:<br/>
-Has automatic seamless time adjustment after resume. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=13.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Non-Qubes-Whonix">Non-Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=13.html" title="Edit section: Non-Qubes-Whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In order to reconnect, manual time adjustment is required or the VM can simply be powered off and then powered on again. This step will be unnecessary once hypervisor-specific post resume hooks are used, because guest clocks will be seamlessly updated upon power state changes from the host.
+</p>
+<h2><span class="mw-headline" id="Qubes-Whonix">Qubes-Whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=14.html" title="Edit section: Qubes-Whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Qubes-Whonix has automatic, seamless, time adjustment after resume. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Host_Security&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;action=edit&amp;section=15.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">This is undocumented and therefore unrecommended.</span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6" href="https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6</a></span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://blog.ptsecurity.com/2015/12/critical-vulnerabilities-in-3g4g-modems.html" href="http://blog.ptsecurity.com/2015/12/critical-vulnerabilities-in-3g4g-modems.html" rel="noreferrer noopener" target="_blank">http://blog.ptsecurity.com/2015/12/critical-vulnerabilities-in-3g4g-modems.html</a></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/jonasmalacofilho/ubuntu-luks-suspend" href="https://github.com/jonasmalacofilho/ubuntu-luks-suspend" rel="noreferrer noopener" target="_blank">https://github.com/jonasmalacofilho/ubuntu-luks-suspend</a></span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">For a detailed description of how these vulnerabilities are exploited, refer to the source document and additional reference.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.computerworld.com/article/2495389/3g-and-4g-usb-modems-are-a-security-threat--researcher-says.html" href="https://www.computerworld.com/article/2495389/3g-and-4g-usb-modems-are-a-security-threat--researcher-says.html" rel="noreferrer noopener" target="_blank">3G and 4G USB modems are a security threat</a>.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6" href="https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/wiki/org/roadmaps/Tor/IPv6</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/jonasmalacofilho/ubuntu-luks-suspend" href="https://github.com/jonasmalacofilho/ubuntu-luks-suspend" rel="noreferrer noopener" target="_blank">https://github.com/jonasmalacofilho/ubuntu-luks-suspend</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-pre.d/30_sdwdate.sh" href="https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-pre.d/30_sdwdate.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-pre.d/30_sdwdate.sh</a>
 <a class="external free" data-href="https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-post.d/30_sdwdate.sh" href="https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-post.d/30_sdwdate.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/sdwdate/blob/master/etc/qubes/suspend-post.d/30_sdwdate.sh</a></span>
 </li>
@@ -290,7 +318,7 @@ Has automatic seamless time adjustment after resume. <sup class="reference" id="
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Host_Security" href="./Host_Security" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Host_Security" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Host_Security" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -304,38 +332,38 @@ Has automatic seamless time adjustment after resume. <sup class="reference" id="
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190303200635
+Cached time: 20190312170010
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.104 seconds
-Real time usage: 0.146 seconds
-Preprocessor visited node count: 228/1000000
-Preprocessor generated node count: 860/1000000
+CPU time usage: 0.096 seconds
+Real time usage: 0.360 seconds
+Preprocessor visited node count: 279/1000000
+Preprocessor generated node count: 966/1000000
 Post‐expand include size: 4864/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4342/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
-Lua virtual size: 14.79 MB/50 MB
+Unstrip post‐expand size: 5365/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
+Lua virtual size: 14.92 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  100.776      1 -total
- 56.13%   56.564      2 Template:Mbox
- 22.90%   23.081      1 Template:Footer
-  8.10%    8.164      1 Template:Reflist
-  6.19%    6.238      1 Template:Share
-  5.72%    5.761      1 Template:Header
-  4.19%    4.220      1 Template:Edit_it
-  2.32%    2.338      1 Template:RandomNews
-  1.81%    1.819      2 Template:Name
-  1.08%    1.089      1 Template:Whonix_onion
+100.00%  324.210      1 -total
+ 88.53%  287.011      2 Template:Mbox
+  5.22%   16.929      1 Template:Footer
+  2.75%    8.919      1 Template:Reflist
+  1.24%    4.009      1 Template:Share
+  1.15%    3.742      1 Template:Header
+  0.93%    3.016      1 Template:Edit_it
+  0.54%    1.752      1 Template:RandomNews
+  0.26%    0.837      2 Template:Name
+  0.25%    0.805      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=40255" dir="ltr" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=40255">https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=40255</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=41511" dir="ltr" href="https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=41511">https://www.whonix.org/w/index.php?title=Host_Security&amp;oldid=41511</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -346,7 +374,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Host_Secu
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 December 2018, at 13:11.</li>
+<li id="footer-lastmod"> This page was last edited on 12 March 2019, at 14:05.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -367,5 +395,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Host_Secu
 </div>
 
 </body>
-<!-- Cached/compressed 20190303200635 -->
+<!-- Cached/compressed 20190312170010 -->
 </html>
