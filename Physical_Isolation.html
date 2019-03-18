@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Physical Isolation - Whonix
  url: ./Physical_Isolation
- date: Sun Mar 17 08:10:52 2019
+ date: Mon Mar 18 08:09:10 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -47,7 +47,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Build_Documentation_Physical_Isolation rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Build_Documentation_Physical_Isolation rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -135,7 +135,7 @@ a.freelink
   font-weight: bold;
 }
 </style>
-<a class="freelink" data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software">FREE</a></b>
+<a class="freelink" data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software">FREE</a></b>
 </p>
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
@@ -764,7 +764,7 @@ a.freelink
   font-weight: bold;
 }
 </style>
-<a class="freelink" data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software">FREE</a></b>
+<a class="freelink" data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software">FREE</a></b>
 </p><p>Install git and curl.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -802,13 +802,13 @@ a.freelink
 <p>Verify the chosen tag to build.
 </p>
 <pre>## ... Replace with tag you want to build.
-git verify-tag 14.0.1.3.8-stable
+git verify-tag 14.0.1.4.4-stable
 </pre>
 <p>The output should look similar to this.
 </p>
 <pre>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 type commit
-tag 14.0.1.3.8
+tag 14.0.1.4.4
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 
 .
@@ -822,9 +822,9 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="./Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.3.8 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.4.4 with the actual git tag being verified).
 </p>
-<pre>git verify-commit 14.0.1.3.8-stable^{commit}
+<pre>git verify-commit 14.0.1.4.4-stable^{commit}
 </pre>
 <p>The output should look similar to this.
 </p>
@@ -842,9 +842,9 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <pre>git tag</pre>
 <p>Use <i>git checkout</i> to select the preferred version (or <a data-href="/wiki/Dev/git" href="./Dev/git.html" title="Dev/git">git branch</a>) to build.
 </p>
-<pre>git checkout 14.0.1.3.8-stable
+<pre>git checkout 14.0.1.4.4-stable
 </pre>
-<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.3.8</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="./Download.html" title="Download">Whonix News Blog</a>.
+<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.4.4</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="./Download.html" title="Download">Whonix News Blog</a>.
 </p>
 <h2><span class="mw-headline" id="Clean_Up_and_Sanitize">Clean Up and Sanitize</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This step is also important for security.
@@ -1731,7 +1731,7 @@ Then press.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Dev/Build_Documentation/Physical_Isolation" href="./Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -2018,7 +2018,7 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </p>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Don't mind having your name connected to Whonix? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> / <a class="external text" data-href="https://plus.google.com/108150429836421683225" href="https://plus.google.com/108150429836421683225" rel="noreferrer noopener" target="_blank">g+</a>.
+<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Dev/Build_Documentation/Physical_Isolation" href="./Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -2032,11 +2032,11 @@ To fix this in Qubes R3.2, developers would need to backport Qubes-Whonix salt:
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190317071041
+Cached time: 20190318070858
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.592 seconds
-Real time usage: 0.675 seconds
+CPU time usage: 0.596 seconds
+Real time usage: 0.710 seconds
 Preprocessor visited node count: 2146/1000000
 Preprocessor generated node count: 5110/1000000
 Post‐expand include size: 77432/2097152 bytes
@@ -2044,23 +2044,23 @@ Template argument size: 11275/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 38247/5000000 bytes
+Unstrip post‐expand size: 38011/5000000 bytes
 Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 14.92 MB/50 MB
+Lua virtual size: 15.05 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  404.075      1 -total
- 30.37%  122.730     45 Template:CodeSelect
- 20.87%   84.334      9 Template:Box
- 18.76%   75.795      5 Template:Mbox
- 17.82%   72.024      1 Template:Stay_tuned
- 16.73%   67.622      1 Template:Build_Configuration
- 13.52%   54.636      1 Template:Default_Passwords
- 11.78%   47.584      2 Template:Reflist
-  8.45%   34.133      4 Template:Open_with_root_rights
-  7.23%   29.197      1 Template:Build_Documentation_Get_Source_Code
+100.00%  410.905      1 -total
+ 35.21%  144.698     45 Template:CodeSelect
+ 20.59%   84.608      1 Template:Build_Configuration
+ 20.07%   82.457      9 Template:Box
+ 19.22%   78.974      1 Template:Stay_tuned
+ 17.41%   71.543      5 Template:Mbox
+ 13.17%   54.132      1 Template:Default_Passwords
+ 11.87%   48.757      2 Template:Reflist
+ 10.75%   44.176      1 Template:Build_Documentation_Whonix_APT_Repository
+  8.84%   36.323      4 Template:Open_with_root_rights
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=40875" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=40875">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=40875</a>"</div>

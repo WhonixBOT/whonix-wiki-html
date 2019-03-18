@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/13 full - Whonix
  url: ../Dev/Build_Documentation/13_full
- date: Sun Mar 17 07:42:25 2019
+ date: Mon Mar 18 07:42:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -46,7 +46,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Build_Documentation_13_full rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dev_Build_Documentation_13_full rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -311,7 +311,7 @@ a.freelink
   font-weight: bold;
 }
 </style>
-<a class="freelink" data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software">FREE</a></b>
+<a class="freelink" data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software">FREE</a></b>
 </p><p>Install git and curl.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -349,13 +349,13 @@ a.freelink
 <p>Verify the chosen tag to build.
 </p>
 <pre>## ... Replace with tag you want to build.
-git verify-tag 14.0.1.3.8-stable
+git verify-tag 14.0.1.4.4-stable
 </pre>
 <p>The output should look similar to this.
 </p>
 <pre>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 type commit
-tag 14.0.1.3.8
+tag 14.0.1.4.4
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000
 
 .
@@ -369,9 +369,9 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 gpg:          There is no indication that the signature belongs to the owner.
 </pre>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.3.8 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a>) It is advisable to verify the signature of the git commit as well (replace 14.0.1.4.4 with the actual git tag being verified).
 </p>
-<pre>git verify-commit 14.0.1.3.8-stable^{commit}
+<pre>git verify-commit 14.0.1.4.4-stable^{commit}
 </pre>
 <p>The output should look similar to this.
 </p>
@@ -389,9 +389,9 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <pre>git tag</pre>
 <p>Use <i>git checkout</i> to select the preferred version (or <a data-href="/wiki/Dev/git" href="../Dev/git.html" title="Dev/git">git branch</a>) to build.
 </p>
-<pre>git checkout 14.0.1.3.8-stable
+<pre>git checkout 14.0.1.4.4-stable
 </pre>
-<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.3.8</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
+<p>Replace <i><span style="background-color:#FBFBFB">14.0.1.4.4</span></i> with the actual version chosen for the build: the stable, testers-only or  developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix versions, follow the <a data-href="/wiki/Download#Stay_tuned" href="../Download.html" title="Download">Whonix News Blog</a>.
 </p>
 <h2><span class="mw-headline" id="Clean_Up_and_Sanitize">Clean Up and Sanitize</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This step is also important for security.
@@ -925,7 +925,7 @@ Hostname inside VM image gets changed intentionally to <code>host</code> inside 
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
+<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Build_Documentation/13_full" href="../Dev/Build_Documentation/13_full" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/13_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/13_full" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -933,17 +933,17 @@ Hostname inside VM image gets changed intentionally to <code>host</code> inside 
 |
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Build_Documentation/13_full" href="https://facebook.com/sharer.php?u=../Dev/Build_Documentation/13_full">Facebook</a></font>
 </p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Build_Documentation/13_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a class="mw-redirect" data-href="/wiki/Why_Whonix_is_Free_Software" href="../Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190316064047
+Cached time: 20190317153546
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.252 seconds
-Real time usage: 0.326 seconds
+CPU time usage: 0.276 seconds
+Real time usage: 0.366 seconds
 Preprocessor visited node count: 1222/1000000
 Preprocessor generated node count: 3535/1000000
 Post‐expand include size: 42758/2097152 bytes
@@ -951,23 +951,23 @@ Template argument size: 7573/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 17485/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
+Unstrip post‐expand size: 17583/5000000 bytes
+Lua time usage: 0.040/7.000 seconds
 Lua virtual size: 14.79 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  233.134      1 -total
- 40.15%   93.592      1 Template:Build_Documentation_Get_Source_Code
- 33.04%   77.039      3 Template:Mbox
- 30.41%   70.902      1 Template:Build_Configuration
- 28.39%   66.188      1 Template:Gpg_signature_timestamp
- 23.50%   54.781      5 Template:Box
- 20.70%   48.267     12 Template:CodeSelect
- 13.00%   30.306      1 Template:Build_Documentation_Whonix_APT_Repository
- 10.94%   25.496      1 Template:Build_Documentation_apt-cache
-  7.96%   18.563      1 Template:Reflist
+100.00%  268.526      1 -total
+ 39.00%  104.721      1 Template:Build_Documentation_Get_Source_Code
+ 30.18%   81.038      3 Template:Mbox
+ 27.21%   73.073      1 Template:Gpg_signature_timestamp
+ 26.24%   70.457      1 Template:Build_Configuration
+ 22.46%   60.317      5 Template:Box
+ 15.68%   42.102     12 Template:CodeSelect
+ 10.49%   28.157      1 Template:Build_Documentation_apt-cache
+  8.34%   22.385      1 Template:Footer
+  8.03%   21.574      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/13_full&amp;oldid=38089</a>"</div>
@@ -1002,5 +1002,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20190316064047 -->
+<!-- Cached/compressed 20190317153546 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Advanced Deanonymization Attacks - Whonix
  url: ./Advanced_Attacks
- date: Sun Mar 17 07:32:06 2019
+ date: Mon Mar 18 07:32:01 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -47,7 +47,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Advanced_Deanonymization_Attacks rootpage-Advanced_Deanonymization_Attacks skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Advanced_Deanonymization_Attacks rootpage-Advanced_Deanonymization_Attacks skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -126,9 +126,13 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Attack_Definitions"><span class="tocnumber">2</span> <span class="toctext">Attack Definitions</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Attack_Methodology"><span class="tocnumber">3</span> <span class="toctext">Attack Methodology</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Development"><span class="tocnumber">4</span> <span class="toctext">Development</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Attack_Methodology"><span class="tocnumber">3</span> <span class="toctext">Attack Methodology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Other_Deanonymization_Vectors"><span class="tocnumber">3.1</span> <span class="toctext">Other Deanonymization Vectors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Development"><span class="tocnumber">4</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -271,13 +275,17 @@ Whonix requires Donations to stay alive.
 </td>
 <td style="background-color: #AFEEEE">Planning
 </td></tr></tbody></table>
-<p><a data-href="/wiki/Time_Attacks" href="./Time_Attacks.html" title="Time Attacks">Time-related attacks</a> are in a class of their own. Although documented separately, time attacks have some overlap with factors outlined here.
-</p><p>There are numerous other advanced attacks which have not been included in the above table. The reason is they have easy fixes, such as avoiding some <a data-href="/wiki/KVM#Unsafe_Features" href="./KVM.html" title="KVM">unsafe hypervisor features</a>.
+<p>There are numerous other advanced attacks which have not been included in the above table. The reason is they have easy fixes, such as avoiding some <a data-href="/wiki/KVM#Unsafe_Features" href="./KVM.html" title="KVM">unsafe hypervisor features</a>.
 </p>
-<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Other_Deanonymization_Vectors">Other Deanonymization Vectors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4.html" title="Edit section: Other Deanonymization Vectors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>High-risk users should familiarize themselves with other attack vectors that can lead to deanonymization or other harmful outcomes.
+</p>
+<ul><li><a data-href="/wiki/Time_Attacks" href="./Time_Attacks.html" title="Time Attacks">Time-related Attacks</a>: These are in a class of their own. In simple terms, insecure time synchronization and the leaking of time data can result in deanonymization. Although documented separately, time attacks have some overlap with factors outlined here.</li>
+<li><a data-href="/wiki/Warning#Tor_Ecosystem_Attacks" href="./Warning.html" title="Warning">Tor Ecosystem Attacks</a>: Advanced adversaries are capable of attacking the Tor client, server and/or network (sometimes in combination) to identify users and/or servers in specific situations.</li></ul>
+<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Dev/Advanced_Deanonymization_Attacks" href="./Dev/Advanced_Deanonymization_Attacks.html" title="Dev/Advanced Deanonymization Attacks">Dev/Advanced Deanonymization Attacks</a></li>
 <li>Ticket: <a class="external text" data-href="https://phabricator.whonix.org/T540" href="https://phabricator.whonix.org/T540" rel="noreferrer noopener" target="_blank">Covert Channels Meta Ticket</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=6.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T540" href="https://phabricator.whonix.org/T540" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T540</a></span>
@@ -341,7 +349,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Free Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Advanced_Deanonymization_Attacks" href="./Advanced_Deanonymization_Attacks" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Advanced_Deanonymization_Attacks" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Advanced_Deanonymization_Attacks" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -355,35 +363,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190317063200
+Cached time: 20190318063157
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.112 seconds
-Real time usage: 0.215 seconds
-Preprocessor visited node count: 306/1000000
-Preprocessor generated node count: 1069/1000000
+CPU time usage: 0.072 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 310/1000000
+Preprocessor generated node count: 1073/1000000
 Post‐expand include size: 3526/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 6196/5000000 bytes
+Unstrip post‐expand size: 6363/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  153.891      1 -total
- 33.45%   51.479      1 Template:Footer
- 19.59%   30.152      1 Template:Reflist
- 19.01%   29.260      1 Template:Header
-  7.65%   11.774      6 Template:BlueBackground
-  6.89%   10.608      1 Template:Edit_it
-  4.12%    6.345      1 Template:Share
-  3.48%    5.363      2 Template:Name
-  1.89%    2.910      1 Template:Blue
-  1.79%    2.752      4 Template:Red
+100.00%   48.765      1 -total
+ 38.05%   18.555      1 Template:Footer
+ 18.17%    8.861      1 Template:Reflist
+ 10.50%    5.122      1 Template:Header
+  9.96%    4.859      1 Template:Share
+  7.24%    3.532      1 Template:Edit_it
+  5.76%    2.807      6 Template:BlueBackground
+  3.59%    1.749      1 Template:RandomNews
+  3.51%    1.710      5 Template:Green
+  2.89%    1.407      4 Template:Red
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41593" dir="ltr" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41593">https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41593</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662" dir="ltr" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662">https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -394,7 +402,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Advanced_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 14 March 2019, at 11:13.</li>
+<li id="footer-lastmod"> This page was last edited on 17 March 2019, at 07:56.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
