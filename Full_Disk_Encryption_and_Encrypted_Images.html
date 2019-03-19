@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Full Disk Encryption and Encrypted Images - Whonix
  url: ./Full_Disk_Encryption_and_Encrypted_Images
- date: Mon Mar 18 07:57:16 2019
+ date: Tue Mar 19 07:59:32 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -46,7 +46,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Full_Disk_Encryption_and_Encrypted_Images rootpage-Full_Disk_Encryption_and_Encrypted_Images skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Full_Disk_Encryption_and_Encrypted_Images rootpage-Full_Disk_Encryption_and_Encrypted_Images skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -202,7 +202,7 @@ Whonix requires Donations to stay alive.
 </p>
 <h3><span class="mw-headline" id="Removable_Media">Removable Media</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;action=edit&amp;section=4.html" title="Edit section: Removable Media">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <h4><span class="mw-headline" id="New_Removable_Media">New Removable Media</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;action=edit&amp;section=5.html" title="Edit section: New Removable Media">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Gnome Disks Utility creates LUKS partitions with AES-128 by default which is insufficient in event of quantum computers materializing. This has been successfully reported and fixed upstream as of February 2019,<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> until it lands in Debian, an appropriately secure container must be manually created. Afterwards, unlock the device and format the internal filesystem as EXT4 in Gnome Disks. 
+<p>Gnome Disks Utility creates LUKS partitions with AES-128 by default which is insufficient in event of quantum computers materializing. This has been successfully reported and fixed upstream as of February 2019, <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> but until it lands in Debian, an appropriately secure container must be manually created. Afterwards, unlock the device and format the internal filesystem as EXT4 in Gnome Disks. 
 </p><p>First enumerate the device. They will usually be called 'sdb1', as sdaX is reserved for the system on default installs. To avoid confusion, only connect one removable device at a time:
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -341,7 +341,7 @@ The same precautions should be taken as outlined in the previous section, as the
 </p>
 <ul><li>With swap and crash dumps disabled, it is unknown whether the virtualizer writes parts of the VM's RAM contents to the disk. TODO: Specifically ask virtualizer vendors about this possibility.</li>
 <li>Potential setup configurations:
-<ul><li>Theoretically, a fullly encrypted operating system (currently: Debian) could be installed inside a VM and Whonix could be built using <code>--target root</code> inside another VM. This is analogous to the <a data-href="/wiki/Dev/Build_Documentation/Physical_Isolation" href="./Dev/Build_Documentation/Physical_Isolation.html" title="Dev/Build Documentation/Physical Isolation">physical isolation</a> model, but secure VM settings would be missing (similar to <a data-href="/wiki/Manually_Create_Whonix_VM_Settings" href="./Manually_Create_Whonix_VM_Settings.html" title="Manually Create Whonix VM Settings">Manually Create Whonix VM Settings</a>).</li>
+<ul><li>Theoretically, a fully encrypted operating system (currently: Debian) could be installed inside a VM and Whonix could be built using <code>--target root</code> inside another VM. This is analogous to the <a data-href="/wiki/Dev/Build_Documentation/Physical_Isolation" href="./Dev/Build_Documentation/Physical_Isolation.html" title="Dev/Build Documentation/Physical Isolation">physical isolation</a> model, but secure VM settings would be missing (similar to <a data-href="/wiki/Manually_Create_Whonix_VM_Settings" href="./Manually_Create_Whonix_VM_Settings.html" title="Manually Create Whonix VM Settings">Manually Create Whonix VM Settings</a>).</li>
 <li>An encryption feature could be added to grml-debootstrap and/or the Whonix build script. There was an  <a class="external text" data-href="https://forums.whonix.org/t/whonix-container-encryption-options/193" href="https://forums.whonix.org/t/whonix-container-encryption-options/193" rel="noreferrer noopener" target="_blank">attempt</a> to do that, but this effort has stalled.</li>
 <li>cryptsetup-reencrypt could be used, allowing for the shipping of encrypted Whonix images. The master key and the password (potentially blank) would be known to the public at first. Later, users would use cryptsetup-reencrypt to fix the master key and password, that is, to make the encryption effective.</li></ul></li></ul>
 <p>For further information about encrypted images, see <a class="external text" data-href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" rel="noreferrer noopener" target="_blank">How Useful is In-Guest Encryption?</a> Users interested in running Whonix as a live OS, should read <a class="external text" data-href="https://forums.whonix.org/t/whonix-live-mode/3894/9" href="https://forums.whonix.org/t/whonix-live-mode/3894/9" rel="noreferrer noopener" target="_blank">this entry</a>. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>
@@ -417,10 +417,10 @@ The same precautions should be taken as outlined in the previous section, as the
 </li>
 <li id="cite_note-31"><span class="mw-cite-backlink"><a href="#cite_ref-31">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://libvirt.org/formatstorageencryption.html#StorageEncryptionLuks" href="https://libvirt.org/formatstorageencryption.html" rel="noreferrer noopener" target="_blank">https://libvirt.org/formatstorageencryption.html#StorageEncryptionLuks</a></span>
 </li>
-<li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.techopedia.com/definition/30466/memory-ballooning" href="https://www.techopedia.com/definition/30466/memory-ballooning" rel="noreferrer noopener" target="_blank">https://www.techopedia.com/definition/30466/memory-ballooning</a> : "Memory ballooning is a memory management feature used in most virtualization platforms which allows a host system to artificially enlarge its pool of memory by taking advantage or reclaiming unused memory previously allocated to various virtual machines."</span>
+<li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.techopedia.com/definition/30466/memory-ballooning" href="https://www.techopedia.com/definition/30466/memory-ballooning" rel="noreferrer noopener" target="_blank">https://www.techopedia.com/definition/30466/memory-ballooning</a> <blockquote><p>Memory ballooning is a memory management feature used in most virtualization platforms which allows a host system to artificially enlarge its pool of memory by taking advantage or reclaiming unused memory previously allocated to various virtual machines.</p></blockquote></span>
 </li>
 <li id="cite_note-33"><span class="mw-cite-backlink"><a href="#cite_ref-33">↑</a></span> <span class="reference-text">
-<a class="external free" data-href="https://security.stackexchange.com/a/42186" href="https://security.stackexchange.com/a/42186" rel="noreferrer noopener" target="_blank">https://security.stackexchange.com/a/42186</a> : "Linux zeroes out (i.e. fills with zeros) all pages of memory not when they are released, but when they are given to another process. Thus, no process may obtain data excerpts from another process. However, the pages will retain their old contents until they are reused."</span>
+<a class="external free" data-href="https://security.stackexchange.com/a/42186" href="https://security.stackexchange.com/a/42186" rel="noreferrer noopener" target="_blank">https://security.stackexchange.com/a/42186</a> <blockquote><p>Linux zeroes out (i.e. fills with zeros) all pages of memory not when they are released, but when they are given to another process. Thus, no process may obtain data excerpts from another process. However, the pages will retain their old contents until they are reused.</p></blockquote></span>
 </li>
 <li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://superuser.com/a/894936" href="https://superuser.com/a/894936" rel="noreferrer noopener" target="_blank">https://superuser.com/a/894936</a></span>
 </li>
@@ -428,7 +428,7 @@ The same precautions should be taken as outlined in the previous section, as the
 </li>
 <li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text">The threat is similar to <a href="#Cold_Boot_Attacks">cold boot attacks</a>, but in this case it might even be a "warm" attack, because under this threat model, the machine and RAM is still powered. <a class="external text" data-href="http://en.wikibooks.org/wiki/Grsecurity/Appendix/Grsecurity_and_PaX_Configuration_Options#Sanitize_all_freed_memory" href="http://en.wikibooks.org/wiki/Grsecurity/Appendix/Grsecurity_and_PaX_Configuration_Options" rel="noreferrer noopener" target="_blank">PAX_MEMORY_SANITIZE</a> and its <a class="external text" data-href="https://github.com/thestinger/linux-hardened/wiki#sanitize-all-freed-memory" href="https://github.com/thestinger/linux-hardened/wiki" rel="noreferrer noopener" target="_blank">KSPP successor</a> may mitigate this, but at the cost of a non-trivial performance hit.</span>
 </li>
-<li id="cite_note-37"><span class="mw-cite-backlink"><a href="#cite_ref-37">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://docs.openstack.org/security-guide/content/data-privacy-concerns.html" href="http://docs.openstack.org/security-guide/content/data-privacy-concerns.html" rel="noreferrer noopener" target="_blank">http://docs.openstack.org/security-guide/content/data-privacy-concerns.html</a> : Xen explicitly assigns dedicated memory regions to instances and scrubs data upon the destruction of instances (or domains in Xen parlance). KVM depends more greatly on Linux page management; A complex set of rules related to KVM paging is defined in the KVM documentation. It is important to note that use of the Xen memory balloon feature is likely to result in information disclosure. We strongly recommended to avoid use of this feature.</span>
+<li id="cite_note-37"><span class="mw-cite-backlink"><a href="#cite_ref-37">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://docs.openstack.org/security-guide/tenant-data/data-privacy-concerns.html" href="https://docs.openstack.org/security-guide/tenant-data/data-privacy-concerns.html" rel="noreferrer noopener" target="_blank">https://docs.openstack.org/security-guide/tenant-data/data-privacy-concerns.html</a> <blockquote><p>Xen explicitly assigns dedicated memory regions to instances and scrubs data upon the destruction of instances (or domains in Xen parlance). KVM depends more greatly on Linux page management; A complex set of rules related to KVM paging is defined in the KVM documentation. It is important to note that use of the Xen memory balloon feature is likely to result in information disclosure. We strongly recommended to avoid use of this feature.</p></blockquote></span>
 </li>
 <li id="cite_note-38"><span class="mw-cite-backlink"><a href="#cite_ref-38">↑</a></span> <span class="reference-text">Live OS systems are designed to not leave traces of user activity on disk.</span>
 </li>
@@ -482,7 +482,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Check out the <a class="external text" data-href="https://www.whonix.org/blog" href="https://www.whonix.org/blog" rel="noreferrer noopener" target="_blank">Whonix blog</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Full_Disk_Encryption_and_Encrypted_Images" href="./Full_Disk_Encryption_and_Encrypted_Images" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Full_Disk_Encryption_and_Encrypted_Images" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Full_Disk_Encryption_and_Encrypted_Images" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -496,38 +496,38 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190317124200
+Cached time: 20190318202145
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.188 seconds
-Real time usage: 0.241 seconds
-Preprocessor visited node count: 900/1000000
+CPU time usage: 0.220 seconds
+Real time usage: 0.317 seconds
+Preprocessor visited node count: 901/1000000
 Preprocessor generated node count: 2527/1000000
 Post‐expand include size: 9158/2097152 bytes
 Template argument size: 1037/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 20752/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
-Lua virtual size: 15.05 MB/50 MB
+Unstrip post‐expand size: 20649/5000000 bytes
+Lua time usage: 0.050/7.000 seconds
+Lua virtual size: 14.93 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  170.423      1 -total
- 44.38%   75.638      5 Template:Mbox
- 13.93%   23.744      1 Template:Reflist
-  9.83%   16.758      6 Template:CodeSelect
-  9.41%   16.040      1 Template:Footer
-  3.29%    5.602      1 Template:Header
-  2.17%    3.702      1 Template:Share
-  1.96%    3.335      1 Template:Edit_it
-  1.86%    3.174      1 Template:Maintainer
-  1.10%    1.874      1 Template:License_Amnesia
+100.00%  244.517      1 -total
+ 41.33%  101.062      5 Template:Mbox
+ 10.58%   25.867      1 Template:Header
+ 10.45%   25.556      1 Template:Reflist
+  9.48%   23.183      6 Template:CodeSelect
+  8.47%   20.703      1 Template:Footer
+  2.13%    5.212      1 Template:Maintainer
+  1.82%    4.447      1 Template:Share
+  1.57%    3.849      1 Template:Edit_it
+  1.11%    2.721      4 Template:Code2
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41108" dir="ltr" href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41108">https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41108</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41743" dir="ltr" href="https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41743">https://www.whonix.org/w/index.php?title=Full_Disk_Encryption_and_Encrypted_Images&amp;oldid=41743</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -538,7 +538,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Full_Disk
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 February 2019, at 11:24.</li>
+<li id="footer-lastmod"> This page was last edited on 18 March 2019, at 10:13.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -559,5 +559,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Full_Disk
 </div>
 
 </body>
-<!-- Cached/compressed 20190317124200 -->
+<!-- Cached/compressed 20190318202145 -->
 </html>
