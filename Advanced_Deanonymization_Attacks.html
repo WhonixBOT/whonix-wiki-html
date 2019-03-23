@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en"><!-- 
+ single html processed by https://github.com/zTrix/webpage2html
+ title: Advanced Deanonymization Attacks - Whonix
+ url: ./Advanced_Deanonymization_Attacks
+ date: Sat Mar 23 07:30:54 2019
+-->
+<head>
+<meta charset="utf-8"/>
+<title>Advanced Deanonymization Attacks - Whonix</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+
+<meta content="MediaWiki 1.31.1" name="generator"/>
+<meta content="" name="google-site-verification"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@Whonix" name="twitter:site"/>
+<meta content="Whonix" name="twitter:domain"/>
+<meta content="@Whonix" name="twitter:creator"/>
+<meta content="Overview of Advanced Deanonymization Attacks and their development status in Whonix" name="description"/>
+<meta content="Overview of Advanced Deanonymization Attacks and their development status in Whonix" name="twitter:description"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
+<link data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
+<link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
+<meta content="article" property="og:type"/>
+<meta content="Whonix" property="og:site_name"/>
+<meta content="Advanced Deanonymization Attacks" property="og:title"/>
+<meta content="./Advanced_Deanonymization_Attacks" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="Overview of Advanced Deanonymization Attacks and their development status in Whonix" property="og:description"/>
+
+<meta content="" property="fb:app_id"/>
+<meta content="" property="fb:admins"/>
+<meta content="https://www.facebook.com/Whonix" property="article:author"/>
+<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Advanced_Deanonymization_Attacks rootpage-Advanced_Deanonymization_Attacks skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+
+</div>
+<div id="page-content">
+<div class="row">
+<div class="large-12 columns">
+<!-- Output page indicators -->
+<div class="mw-indicators mw-body-content">
+</div>
+<!-- If user is logged in output echo location -->
+<!--[if lt IE 9]>
+				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
+				<![endif]-->
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+
+#banner {
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 0.5em !important;
+ margin-top: 0.5em !important;
+ background-color:#D03232;
+ border: solid 1px #aaaaaa; 
+ height:66px;
+}
+
+#banner a.cn-full-banner-click {
+ display:block;
+ height:100%;
+ width:100%;
+ cursor: pointer;
+}
+
+
+#banner-logo {
+ position: absolute;
+ top: 8px;
+ left: 15px;
+ background-image: url(data:image/png;base64,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);
+ height: 50px;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+
+#banner #black-text {
+ font-size: 1.1em;
+ color: white;
+ padding: 0.5em 40px 0.4em 60px;
+ line-height: 1.3em;
+ text-align: center;
+}
+</style>
+</p><div id="banner">
+<a class="cn-full-banner-click" data-href="/wiki/Donate" href="./Donate.html" title="">
+<div id="banner-logo"></div>
+<div id="black-text">
+Whonix requires Donations to stay alive.
+     </div>
+</a>
+</div>
+</div></div></div> </div>
+</div>
+<div id="mw-js-message" style="display:none;"></div>
+<div class="row">
+<div class="large-12 columns" id="p-cactions">
+<a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
+<!--RTL -->
+<ul class="f-dropdown" data-dropdown-content="" id="actions">
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Advanced_Deanonymization_Attacks" href="./Advanced_Deanonymization_Attacks.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Advanced_Deanonymization_Attacks&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Advanced_Deanonymization_Attacks&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=history" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<!--RTL -->
+<div id="content">
+<h1 class="title" id="firstHeading">Advanced Deanonymization Attacks</h1>
+<h5 class="subtitle" id="siteSub"></h5>
+<div class="clear_both" id="contentSub"></div>
+<div class="mw-bodytext" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Attack_Definitions"><span class="tocnumber">2</span> <span class="toctext">Attack Definitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Attack_Methodology"><span class="tocnumber">3</span> <span class="toctext">Attack Methodology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Other_Deanonymization_Vectors"><span class="tocnumber">3.1</span> <span class="toctext">Other Deanonymization Vectors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Development"><span class="tocnumber">4</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>This page aims to track and document advanced attacks <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> that also affect virtualized and anonymous systems like Whonix. Attacks discussed below tend to have a very high accuracy rate and can easily have devastating impacts upon anonymity. The common thread to these attacks is abuse of the underlying hardware design to undermine isolation barriers imposed by the software stack operating above it. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> Exploiting buggy software remains the lowest hanging fruit for network adversaries. It is expected they will further expand their toolbox and more regularly utilize these vectors, since the chances of discovery are minimal to none.
+</p>
+<h1><span class="mw-headline" id="Attack_Definitions">Attack Definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=2.html" title="Edit section: Attack Definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>Table:</b> <i>Common Attack Vectors causing Data Leakage</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Attack Vector</b>
+</th>
+<th scope="col"><b>Description</b>
+</th></tr>
+<tr>
+<th scope="row">Side Channels
+</th>
+<td><a class="external text" data-href="https://en.wikipedia.org/wiki/Side_channel_attack" href="https://en.wikipedia.org/wiki/Side_channel_attack" rel="noreferrer noopener" target="_blank">Side channel attacks</a> allow a malicious process to spy on events/data outside the VM.
+</td></tr>
+<tr>
+<th scope="row">Local Covert Channels
+</th>
+<td><a class="external text" data-href="https://www.techopedia.com/definition/10255/covert-channel" href="https://www.techopedia.com/definition/10255/covert-channel" rel="noreferrer noopener" target="_blank">Local covert channels</a> require collaboration between a malicious VM and an infected victim VM to leak confidential data.
+</td></tr>
+<tr>
+<th scope="row">Network Covert Channels
+</th>
+<td><a class="external text" data-href="https://en.wikipedia.org/wiki/Covert_channel#Data_hiding_in_OSI_model" href="https://en.wikipedia.org/wiki/Covert_channel" rel="noreferrer noopener" target="_blank">Network</a> <a class="external text" data-href="https://en.wikipedia.org/wiki/Covert_channel#Data_hiding_in_LAN_environment_by_covert_channels" href="https://en.wikipedia.org/wiki/Covert_channel" rel="noreferrer noopener" target="_blank">covert</a> <a class="external text" data-href="https://en.wikipedia.org/wiki/Covert_channel#Data_hiding_in_TCP/IP_Protocol_suite_by_covert_channels" href="https://en.wikipedia.org/wiki/Covert_channel" rel="noreferrer noopener" target="_blank">channels</a> only require that a compromised VM induce identifiable changes in network traffic that are immediately visible to adversaries that surveil the network.
+</td></tr>
+<tr>
+<th scope="row">Biometric Tracking
+</th>
+<td>Behavioral tracking (also called biometric tracking) relies on spying on how users interact with their devices, <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> rather than looking at the unique identifiers of the device, protocol or application levels.
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="Attack_Methodology">Attack Methodology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=3.html" title="Edit section: Attack Methodology">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>Table:</b> <i>Advanced Deanonymization Methods</i>
+</p>
+<table class="wikitable" style="text-align: center; background-color: #fff">
+<tbody><tr style="background-color: #f9f9f9">
+<td style="height: 35px;width: 170px">
+</td>
+<td><b>CPU-induced Network Latency</b> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</td>
+<td><b>TCP ISNs and Temperature-induced Clock Skews</b> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</td>
+<td><b>DRAMA Cross-CPU Attacks</b> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</td>
+<td><b>Cross-VM CPU Cache Attacks</b> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</td>
+<td><b>Keyboard/Mouse Input Fingerprinting</b> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Attack Class</b>
+</td>
+<td>Covert Channel (network)
+</td>
+<td>Covert Channel (network)
+</td>
+<td>Covert (local) and Side Channel
+</td>
+<td>Covert (local) and Side Channel
+</td>
+<td>Behavioral Tracking
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Local Compromise Required</b>
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Attack Summary</b>
+</td>
+<td>CPU load induces a noticeable latency in network packets.
+</td>
+<td>CPU load skews the clock crystal frequency; these changes are detectable in the TCP ISN field.
+</td>
+<td>Timing of access to the shared memory bank permits data leaks, as well as snooping on keystrokes.
+</td>
+<td>Measurement of the shared CPU cache access latency; this leaks timing data concerning cryptographic processes.
+</td>
+<td>Timing of/between keystrokes and mouse movement speed/angles creates a unique individual pattern.
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Mitigation</b>
+</td>
+<td>Queue and release packets randomly with Netfilter.
+</td>
+<td>Rewrite TCP ISNs to conceal timer skews.
+</td>
+<td>Block clflush and tsc instructions, as well as removing all timers. Further, avoid the multi-threading of VMs, or alternatively use non-interleaved NUMA with pinned vCPUs.
+</td>
+<td>Pin vCPUs to separate pCPUs, block tsc instructions, and remove all timers.
+</td>
+<td>Abstract keyboard/mouse input into a network layer and the injection of random delays. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Whonix <a data-href="/wiki/KVM" href="./KVM.html" title="KVM">KVM</a> Mitigation</b>
+</td>
+<td style="background-color: #90FF90">Near Production
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td>
+<td style="background-color: #90FF90">Production
+</td>
+<td style="background-color: #90FF90">Production
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b>Whonix <a data-href="/wiki/VirtualBox" href="./VirtualBox.html" title="VirtualBox">VirtualBox</a> Mitigation</b>
+</td>
+<td style="background-color: #90FF90">Near Production
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td>
+<td style="background-color: #FF9090">-
+</td>
+<td style="background-color: #FF9090">-
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td></tr>
+<tr>
+<td style="height: 27px;background-color: #f9f9f9"><b><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> Mitigation</b>
+</td>
+<td style="background-color: #90FF90">Near Production
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td>
+<td style="background-color: #FF9090">-
+</td>
+<td style="background-color: #FF9090">-
+</td>
+<td style="background-color: #AFEEEE">Planning
+</td></tr></tbody></table>
+<p>There are numerous other advanced attacks which have not been included in the above table. The reason is they have easy fixes, such as avoiding some <a data-href="/wiki/KVM#Unsafe_Features" href="./KVM.html" title="KVM">unsafe hypervisor features</a>.
+</p>
+<h2><span class="mw-headline" id="Other_Deanonymization_Vectors">Other Deanonymization Vectors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=4.html" title="Edit section: Other Deanonymization Vectors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>High-risk users should familiarize themselves with other attack vectors that can lead to deanonymization or other harmful outcomes.
+</p>
+<ul><li><a data-href="/wiki/Time_Attacks" href="./Time_Attacks.html" title="Time Attacks">Time-related Attacks</a>: These are in a class of their own. In simple terms, insecure time synchronization and the leaking of time data can result in deanonymization. Although documented separately, time attacks have some overlap with factors outlined here.</li>
+<li><a data-href="/wiki/Warning#Tor_Ecosystem_Attacks" href="./Warning.html" title="Warning">Tor Ecosystem Attacks</a>: Advanced adversaries are capable of attacking the Tor client, server and/or network (sometimes in combination) to identify users and/or servers in specific situations.</li></ul>
+<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=5.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="/wiki/Dev/Advanced_Deanonymization_Attacks" href="./Dev/Advanced_Deanonymization_Attacks.html" title="Dev/Advanced Deanonymization Attacks">Dev/Advanced Deanonymization Attacks</a></li>
+<li>Ticket: <a class="external text" data-href="https://phabricator.whonix.org/T540" href="https://phabricator.whonix.org/T540" rel="noreferrer noopener" target="_blank">Covert Channels Meta Ticket</a></li></ul>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit&amp;section=6.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T540" href="https://phabricator.whonix.org/T540" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T540</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">See <a class="external text" data-href="http://cs.sru.edu/~mullins/cpsc100book/module02_introduction/module02-03_introduction.html" href="http://cs.sru.edu/~mullins/cpsc100book/module02_introduction/module02-03_introduction.html" rel="noreferrer noopener" target="_blank">Introduction to Computers: Hardware and Software</a> for a basic description of the difference between hardware, firmware and software.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.whonix.org/blog/biometric-fingerprinting" href="https://www.whonix.org/blog/biometric-fingerprinting" rel="noreferrer noopener" target="_blank">https://www.whonix.org/blog/biometric-fingerprinting</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T530" href="https://phabricator.whonix.org/T530" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T530</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T543" href="https://phabricator.whonix.org/T543" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T543</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T541" href="https://phabricator.whonix.org/T541" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T541</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T539" href="https://phabricator.whonix.org/T539" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T539</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://cmaurice.fr/pdf/ndss17_maurice.pdf" href="https://cmaurice.fr/pdf/ndss17_maurice.pdf" rel="noreferrer noopener" target="_blank">Hello from the Other Side: SSH over Robust Cache Covert Channels in the Cloud</a>: a newer covert channel attack that requires the same condition of a shared CPU cache.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T542" href="https://phabricator.whonix.org/T542" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T542</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">Removing fine-grained timers also helps in this situation.</span>
+</li>
+</ol></div></div>
+<hr/>
+<p><font size="-1">No user support in comments. See <a data-href="/wiki/Support" href="./Support.html" title="Support">Support</a>.
+</font></p><p><font size="-1">Comments will be deleted after some time. Specifically after comments have been addressed in form of wiki enhancements. See <a data-href="/wiki/Wiki_Comments_Policy" href="./Wiki_Comments_Policy.html" title="Wiki Comments Policy">Wiki Comments Policy</a>.</font>
+</p>
+<div class="comments-body"><div class="c-order">
+<div class="c-order-select">
+<p class="mw-empty-elt"> </p><form action="" name="ChangeOrder">
+<select name="TheOrder">
+<option value="0">Sort by date</option>
+<option value="1">Sort by score</option>
+</select>
+</form>
+<p class="mw-empty-elt"></p>
+</div>
+<div class="c-spy" id="spy">
+<p> <a data-href="javascript:void(0)" href="javascript:void(0)">Enable comment auto-refresher</a>
+</p>
+</div>
+<div class="visualClear"></div>
+</div>
+<p> <br/>
+</p>
+<div id="allcomments"></div><form action="" method="post" name="commentForm">
+<div class="c-form-title">Add your comment</div>
+<div class="c-form-reply-to" id="replyto"></div>
+<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="./Special:UserLogin/signup" href="./Special:UserLogin/signup">register</a> or <a data-href="./Special:UserLogin" href="./Special:UserLogin">log in</a>. It is free.</div>
+<p><textarea cols="64" id="comment" name="commentText" rows="5"></textarea>
+</p>
+<div class="c-form-button"><input class="site-button" type="button" value="Post comment"/></div>
+<p><input name="action" type="hidden" value="purge"/>
+<input name="pageId" type="hidden" value="5454"/>
+<input name="commentid" type="hidden"/>
+<input name="lastCommentId" type="hidden" value="0"/>
+<input name="commentParentId" type="hidden"/>
+<input name="cpage" type="hidden" value="1"/>
+<input name="token" type="hidden" value="+\"/></p></form>
+<p class="mw-empty-elt"></p>
+<a id="end" rel="nofollow"></a></div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+</p>
+</div>
+<hr/><p><font size="-1"><a class="external text" data-href="./Advanced_Deanonymization_Attacks" href="./Advanced_Deanonymization_Attacks" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Advanced_Deanonymization_Attacks" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Advanced_Deanonymization_Attacks" rel="noreferrer noopener" target="_blank">onion</a><br/>
+</font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Advanced_Deanonymization_Attacks&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Advanced_Deanonymization_Attacks&amp;text=&amp;via=Whonix">Twitter</a>
+|
+<a data-href="https://facebook.com/sharer.php?u=./Advanced_Deanonymization_Attacks" href="https://facebook.com/sharer.php?u=./Advanced_Deanonymization_Attacks">Facebook</a></font>
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a class="mw-redirect" data-href="/wiki/Why_Whonix_is_Free_Software" href="./Why_Whonix_is_Free_Software.html" title="Why Whonix is Free Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
+</font>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20190322042608
+Cache expiry: 0
+Dynamic content: true
+CPU time usage: 0.096 seconds
+Real time usage: 0.097 seconds
+Preprocessor visited node count: 310/1000000
+Preprocessor generated node count: 1073/1000000
+Post‐expand include size: 3526/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6518/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   55.553      1 -total
+ 42.28%   23.485      1 Template:Footer
+ 15.95%    8.863      1 Template:Reflist
+ 11.97%    6.652      1 Template:Share
+ 10.79%    5.995      1 Template:Header
+  8.83%    4.906      1 Template:Edit_it
+  4.02%    2.235      1 Template:RandomNews
+  3.66%    2.032      6 Template:BlueBackground
+  2.54%    1.409      2 Template:Name
+  2.36%    1.313      5 Template:Green
+-->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662" dir="ltr" href="https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662">https://www.whonix.org/w/index.php?title=Advanced_Deanonymization_Attacks&amp;oldid=41662</a>"</div>
+<div class="clear_both"></div>
+</div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+</div>
+</div>
+</div>
+<footer class="row">
+<div id="footer">
+<div class="small-12 large-centered columns text-center" id="footer-left">
+<ul id="footer-left">
+<li id="footer-lastmod"> This page was last edited on 17 March 2019, at 07:56.</li>
+<li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
+<li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
+<li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
+<li id="footer-Terms_of_Service"><a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a></li>
+<li id="footer-DMCA"><a class="mw-redirect" data-href="/wiki/DMCA" href="./DMCA.html" title="DMCA">DMCA</a></li>
+<li id="footer-E_Sign_Consent"><a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a></li>
+<li id="footer-Priority_Support"><a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a></li>
+<li id="footer-Investors"><a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a></li>
+<li id="footer-Professional_Support"><a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a></li>
+</ul>
+</div>
+<div class="large-12 small-12 columns" id="footer-right-icons">
+<ul id="poweredby">
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+<!-- Cached/compressed 20190322042608 -->
+</html>
