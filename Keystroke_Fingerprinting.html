@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Keystroke Deanonymization - Whonix
  url: ./Keystroke_Fingerprinting
- date: Fri Apr  5 07:37:42 2019
+ date: Sat Apr  6 07:37:40 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -125,9 +125,10 @@ Whonix requires Donations to stay alive.
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Keystroke_Dynamics"><span class="tocnumber">1</span> <span class="toctext">Keystroke Dynamics</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Future"><span class="tocnumber">2</span> <span class="toctext">Future</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#See_Also"><span class="tocnumber">3</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1"><a href="#Defense_Testing"><span class="tocnumber">2</span> <span class="toctext">Defense Testing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Future"><span class="tocnumber">3</span> <span class="toctext">Future</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_Also"><span class="tocnumber">4</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="Keystroke_Dynamics">Keystroke Dynamics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Keystroke_Deanonymization&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;action=edit&amp;section=1.html" title="Edit section: Keystroke Dynamics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -147,7 +148,36 @@ Whonix requires Donations to stay alive.
 </p><p><b>News: <a class="external text" data-href="https://forums.whonix.org/t/kloak-keystroke-level-online-anonymization-kernel-obfuscates-typing-behavior-at-the-device-level-testers-wanted/7089" href="https://forums.whonix.org/t/kloak-keystroke-level-online-anonymization-kernel-obfuscates-typing-behavior-at-the-device-level-testers-wanted/7089" rel="noreferrer noopener" target="_blank">kloak - Keystroke Anonymization Tool</a> - Testers Wanted</b>
 </p><p>In addition, users must also disguise their linguistic style to combat <a data-href="/wiki/Surfing_Posting_Blogging#Stylometry" href="./Surfing_Posting_Blogging.html" title="Surfing Posting Blogging">stylometric analysis</a> and be aware of <a data-href="/wiki/Surfing_Posting_Blogging#Mouse_Fingerprinting" href="./Surfing_Posting_Blogging.html" title="Surfing Posting Blogging">mouse tracking techniques</a> available to adversaries.
 </p>
+<h2><span class="mw-headline" id="Defense_Testing">Defense Testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Keystroke_dynamics&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Keystroke_dynamics&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You can test that kloak actually works by trying an <a class="external text" data-href="https://www.keytrac.net/en/tryout" href="https://www.keytrac.net/en/tryout" rel="noreferrer noopener" target="_blank">online keystroke biometrics demo</a>. For example, try these three different scenarios:
+</p><p><b>Train normal, test normal</b>
+</p><p><b>Train normal, test kloak</b>
+</p><p><b>Train kloak, test kloak</b>
+</p><p><br/>
+Train normal means to train with normal typing behavior, i.e., without kloak running. At the enrollment page on the KeyTrac demo, enter a username and password without kloak running, and then on the authenticate page, try authenticating. 
+</p><p>Expected results and interpretation:
+</p><p><br/>
+<b>Train normal, test normal</b>
+</p><p>trial 1: 94% accuracy identified
+</p><p>trial 2: 92% accuracy
+</p><p>trial 3: 94% ..
+</p><p><br/>
+<b>Train normal, test kloak</b>
+</p><p>trial 1: 18%
+</p><p>trial 2: 15%
+</p><p>trial 3: 19%
+</p><p><br/>
+<b>Train kloak, test kloak</b>
+</p><p>trial 1: 40%
+</p><p>trial 2: 42%
+</p><p>trial 3 36%
+</p><p><br/>
+</p><p>Without kloak users can be identified with very high certainty. The second set of tests show that kloak definitely obfuscates typing behavior, making it difficult to authenticate or identify a particular user. Third set: users running kloak may look "similar" to other users running kloak. That is, it might be possible to identify kloak users from non-kloak users. If this is the case, the anonymity set will increase as more users start running kloak.
+</p>
 <h2><span class="mw-headline" id="Future">Future</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Keystroke_Deanonymization&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;action=edit&amp;section=2.html" title="Edit section: Future">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Update: <a class="external text" data-href="https://forums.whonix.org/t/kloak-keystroke-anonymization-tool/7089" href="https://forums.whonix.org/t/kloak-keystroke-anonymization-tool/7089" rel="noreferrer noopener" target="_blank">A new version of kloak is available since March 2019</a>. Kloak now runs as a service and is readily installable from Whonix repos. It will be installed in Whonix 15 by default. We recommend installing it on the host however so it remains effective in event of Workstation VM compromise. Planned future developments will focus on obfuscating unique mouse movement behavior to protect user anonymity.
+</p><p>Tickets:
+</p>
 <ul><li><a class="external free" data-href="https://github.com/vmonaco/keystroke-obfuscation" href="https://github.com/vmonaco/keystroke-obfuscation" rel="noreferrer noopener" target="_blank">https://github.com/vmonaco/keystroke-obfuscation</a></li>
 <li><a class="external free" data-href="https://github.com/vmonaco/keystroke-obfuscation/issues/1#issuecomment-268598887" href="https://github.com/vmonaco/keystroke-obfuscation/issues/1" rel="noreferrer noopener" target="_blank">https://github.com/vmonaco/keystroke-obfuscation/issues/1#issuecomment-268598887</a></li>
 <li><a class="external free" data-href="https://github.com/vmonaco/kloak" href="https://github.com/vmonaco/kloak" rel="noreferrer noopener" target="_blank">https://github.com/vmonaco/kloak</a></li>
@@ -206,7 +236,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Keystroke_Deanonymization" href="./Keystroke_Deanonymization" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Keystroke_Deanonymization" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Keystroke_Deanonymization" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -220,35 +250,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190405053741
+Cached time: 20190406053739
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.020 seconds
-Real time usage: 0.023 seconds
-Preprocessor visited node count: 128/1000000
-Preprocessor generated node count: 661/1000000
-Post‐expand include size: 5053/2097152 bytes
+CPU time usage: 0.022 seconds
+Real time usage: 0.024 seconds
+Preprocessor visited node count: 129/1000000
+Preprocessor generated node count: 663/1000000
+Post‐expand include size: 6360/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3535/5000000 bytes
+Unstrip post‐expand size: 3623/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   16.465      1 -total
- 50.24%    8.272      1 Template:Footer
- 20.07%    3.305      1 Template:Header
- 13.15%    2.165      1 Template:Reflist
- 12.56%    2.068      1 Template:Share
- 12.09%    1.991      1 Template:Keystroke_dynamics
- 10.52%    1.732      1 Template:Edit_it
-  5.02%    0.827      1 Template:RandomNews
-  2.88%    0.475      1 Template:Whonix_onion
-  2.87%    0.472      2 Template:Name
+100.00%   15.127      1 -total
+ 54.29%    8.213      1 Template:Footer
+ 13.85%    2.095      1 Template:Keystroke_dynamics
+ 13.68%    2.070      1 Template:Reflist
+ 13.65%    2.065      1 Template:Header
+ 13.15%    1.990      1 Template:Share
+ 11.27%    1.705      1 Template:Edit_it
+  5.58%    0.844      1 Template:RandomNews
+  3.13%    0.474      1 Template:Whonix_onion
+  3.02%    0.457      2 Template:Name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42011" dir="ltr" href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42011">https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42011</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42110" dir="ltr" href="https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42110">https://www.whonix.org/w/index.php?title=Keystroke_Deanonymization&amp;oldid=42110</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -259,7 +289,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Keystroke
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 2 April 2019, at 21:16.</li>
+<li id="footer-lastmod"> This page was last edited on 5 April 2019, at 19:41.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
