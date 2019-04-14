@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Source Code Intro - Whonix
  url: ../Dev/SourceCodeIntro
- date: Sat Apr 13 07:35:17 2019
+ date: Sun Apr 14 07:34:54 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -176,8 +176,7 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-2 tocsection-28"><a href="#Build_Script_Features_-_Missing"><span class="tocnumber">9.2</span> <span class="toctext">Build Script Features - Missing</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-29"><a href="#Automation_and_Speed_up"><span class="tocnumber">10</span> <span class="toctext">Automation and Speed up</span></a></li>
-<li class="toclevel-1 tocsection-30"><a href="#Footnotes"><span class="tocnumber">11</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Footnotes"><span class="tocnumber">10</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -567,11 +566,8 @@ qemu-img convert Whonix-Gateway-disk1.vmdk -O raw Whonix-Gateway.raw
 <li>use onion apt sources for building</li>
 <li>install different packages for virtualbox (virtualbox-guest-x11) and kvm (spice...)</li></ul>
 <h2><span class="mw-headline" id="Build_Script_Features_-_Missing">Build Script Features - Missing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=28.html" title="Edit section: Build Script Features - Missing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<ul><li>separate VirtualBox / KVM builds during official builds - <a class="external free" data-href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4</a></li></ul>
-<h1><span class="mw-headline" id="Automation_and_Speed_up">Automation and Speed up</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29.html" title="Edit section: Automation and Speed up">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p><a data-href="/wiki/Dev/Build_Documentation/14_developers" href="../Dev/Build_Documentation/14_developers.html" title="Dev/Build Documentation/14 developers">Dev/Build_Documentation/14_developers</a>
-</p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><s>separate VirtualBox / KVM builds during official builds - <a class="external free" data-href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" href="https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/non-qubes-whonix-13-0-0-1-0-x-issues/2443/4</a></s> (Fixed. Nowadays there is <code>--target virtualbox</code> or <code>--target qcow2</code>.)</li></ul>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">If something would go wrong, you would have to reinstall the whole operating system every time again. That's why we use separate steps.</span>
@@ -623,7 +619,7 @@ qemu-img convert Whonix-Gateway-disk1.vmdk -O raw Whonix-Gateway.raw
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Source_Code_Intro" href="../Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -637,35 +633,35 @@ qemu-img convert Whonix-Gateway-disk1.vmdk -O raw Whonix-Gateway.raw
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190413053516
+Cached time: 20190414053453
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.062 seconds
-Real time usage: 0.068 seconds
-Preprocessor visited node count: 766/1000000
-Preprocessor generated node count: 2102/1000000
+CPU time usage: 0.052 seconds
+Real time usage: 0.054 seconds
+Preprocessor visited node count: 762/1000000
+Preprocessor generated node count: 2098/1000000
 Post‐expand include size: 5661/2097152 bytes
 Template argument size: 1100/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7570/5000000 bytes
+Unstrip post‐expand size: 7180/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   30.176      1 -total
- 35.72%   10.780      1 Template:Footer
- 19.98%    6.029      1 Template:Open_with_root_rights
- 17.36%    5.238      1 Template:Box
- 14.84%    4.479      3 Template:CodeSelect
- 13.02%    3.928      1 Template:Header
-  9.11%    2.749      1 Template:Share
-  8.10%    2.444      1 Template:Reflist
-  7.47%    2.255      1 Template:Edit_it
-  3.69%    1.114     15 Template:Code
+100.00%   27.709      1 -total
+ 27.90%    7.730      1 Template:Footer
+ 21.52%    5.963      1 Template:Open_with_root_rights
+ 18.49%    5.124      1 Template:Box
+ 15.97%    4.426      3 Template:CodeSelect
+  8.77%    2.429      1 Template:Reflist
+  8.46%    2.344      1 Template:Header
+  6.47%    1.793      1 Template:Share
+  5.53%    1.532      1 Template:Edit_it
+  4.98%    1.379     15 Template:Code
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=35534</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=42491" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=42491">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=42491</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -676,7 +672,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Sourc
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 9 August 2018, at 20:37.</li>
+<li id="footer-lastmod"> This page was last edited on 13 April 2019, at 18:43.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
