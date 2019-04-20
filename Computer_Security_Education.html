@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Computer Security Education - Whonix
  url: ./Computer_Security_Education
- date: Fri Apr 19 07:32:05 2019
+ date: Sat Apr 20 07:32:06 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -141,160 +141,161 @@ Whonix requires Donations to stay alive.
 </ul>
 </li>
 <li class="toclevel-1"><a href="#The_Importance_of_a_Malware_Free_System"><span class="tocnumber">6</span> <span class="toctext">The Importance of a Malware Free System</span></a></li>
-<li class="toclevel-1"><a href="#The_Utility_of_Antivirus_Tools"><span class="tocnumber">7</span> <span class="toctext">The Utility of Antivirus Tools</span></a></li>
-<li class="toclevel-1"><a href="#Preventing_Malware_Infections"><span class="tocnumber">8</span> <span class="toctext">Preventing Malware Infections</span></a></li>
-<li class="toclevel-1"><a href="#Detecting_Malware_Infections"><span class="tocnumber">9</span> <span class="toctext">Detecting Malware Infections</span></a>
+<li class="toclevel-1"><a href="#Targeted_Malware_vs_Off-The-Shelf_Malware"><span class="tocnumber">7</span> <span class="toctext">Targeted Malware vs Off-The-Shelf Malware</span></a></li>
+<li class="toclevel-1"><a href="#The_Utility_of_Antivirus_Tools"><span class="tocnumber">8</span> <span class="toctext">The Utility of Antivirus Tools</span></a></li>
+<li class="toclevel-1"><a href="#Preventing_Malware_Infections"><span class="tocnumber">9</span> <span class="toctext">Preventing Malware Infections</span></a></li>
+<li class="toclevel-1"><a href="#Detecting_Malware_Infections"><span class="tocnumber">10</span> <span class="toctext">Detecting Malware Infections</span></a>
 <ul>
-<li class="toclevel-2 tocsection-10"><a href="#Firmware_Trojans"><span class="tocnumber">9.1</span> <span class="toctext">Firmware Trojans</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Firmware_Trojans"><span class="tocnumber">10.1</span> <span class="toctext">Firmware Trojans</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1"><a href="#Virtualizers_and_Hardware_Compromise"><span class="tocnumber">10</span> <span class="toctext">Virtualizers and Hardware Compromise</span></a></li>
-<li class="toclevel-1"><a href="#The_Promise_of_Libre_Firmware"><span class="tocnumber">11</span> <span class="toctext">The Promise of Libre Firmware</span></a>
+<li class="toclevel-1"><a href="#Virtualizers_and_Hardware_Compromise"><span class="tocnumber">11</span> <span class="toctext">Virtualizers and Hardware Compromise</span></a></li>
+<li class="toclevel-1"><a href="#The_Promise_of_Libre_Firmware"><span class="tocnumber">12</span> <span class="toctext">The Promise of Libre Firmware</span></a>
 <ul>
-<li class="toclevel-2 tocsection-11"><a href="#Avoid_Out-of-band_Management_Features"><span class="tocnumber">11.1</span> <span class="toctext">Avoid Out-of-band Management Features</span></a>
+<li class="toclevel-2 tocsection-11"><a href="#Avoid_Out-of-band_Management_Features"><span class="tocnumber">12.1</span> <span class="toctext">Avoid Out-of-band Management Features</span></a>
 <ul>
-<li class="toclevel-3 tocsection-12"><a href="#Out-of-band_Management_Design"><span class="tocnumber">11.1.1</span> <span class="toctext">Out-of-band Management Design</span></a></li>
-<li class="toclevel-3 tocsection-13"><a href="#Out-of-band_Management_Functionality"><span class="tocnumber">11.1.2</span> <span class="toctext">Out-of-band Management Functionality</span></a></li>
-<li class="toclevel-3 tocsection-14"><a href="#Exploitation_Risk"><span class="tocnumber">11.1.3</span> <span class="toctext">Exploitation Risk</span></a></li>
-<li class="toclevel-3 tocsection-15"><a href="#General_Privacy_and_Security_Concerns"><span class="tocnumber">11.1.4</span> <span class="toctext">General Privacy and Security Concerns</span></a></li>
-<li class="toclevel-3 tocsection-16"><a href="#Hardware_Recommendations"><span class="tocnumber">11.1.5</span> <span class="toctext">Hardware Recommendations</span></a></li>
-<li class="toclevel-3 tocsection-17"><a href="#Avoid_Other_Out-of-band_Features"><span class="tocnumber">11.1.6</span> <span class="toctext">Avoid Other Out-of-band Features</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Out-of-band_Management_Design"><span class="tocnumber">12.1.1</span> <span class="toctext">Out-of-band Management Design</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Out-of-band_Management_Functionality"><span class="tocnumber">12.1.2</span> <span class="toctext">Out-of-band Management Functionality</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Exploitation_Risk"><span class="tocnumber">12.1.3</span> <span class="toctext">Exploitation Risk</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#General_Privacy_and_Security_Concerns"><span class="tocnumber">12.1.4</span> <span class="toctext">General Privacy and Security Concerns</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Hardware_Recommendations"><span class="tocnumber">12.1.5</span> <span class="toctext">Hardware Recommendations</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Avoid_Other_Out-of-band_Features"><span class="tocnumber">12.1.6</span> <span class="toctext">Avoid Other Out-of-band Features</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-18"><a href="#Using_a_Dedicated_Host_Operating_System_and_Computer"><span class="tocnumber">11.2</span> <span class="toctext">Using a Dedicated Host Operating System and Computer</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#Using_Whonix_on_External_Media"><span class="tocnumber">11.3</span> <span class="toctext">Using Whonix on External Media</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Using_a_Non-shared_Host"><span class="tocnumber">11.4</span> <span class="toctext">Using a Non-shared Host</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#Firmware_Updates"><span class="tocnumber">11.5</span> <span class="toctext">Firmware Updates</span></a>
+<li class="toclevel-2 tocsection-18"><a href="#Using_a_Dedicated_Host_Operating_System_and_Computer"><span class="tocnumber">12.2</span> <span class="toctext">Using a Dedicated Host Operating System and Computer</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Using_Whonix_on_External_Media"><span class="tocnumber">12.3</span> <span class="toctext">Using Whonix on External Media</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Using_a_Non-shared_Host"><span class="tocnumber">12.4</span> <span class="toctext">Using a Non-shared Host</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Firmware_Updates"><span class="tocnumber">12.5</span> <span class="toctext">Firmware Updates</span></a>
 <ul>
-<li class="toclevel-3 tocsection-22"><a href="#Firmware_on_Personal_Computers"><span class="tocnumber">11.5.1</span> <span class="toctext">Firmware on Personal Computers</span></a></li>
-<li class="toclevel-3 tocsection-23"><a href="#Firmware_Updating_and_Security_Problems"><span class="tocnumber">11.5.2</span> <span class="toctext">Firmware Updating and Security Problems</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Firmware_on_Personal_Computers"><span class="tocnumber">12.5.1</span> <span class="toctext">Firmware on Personal Computers</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Firmware_Updating_and_Security_Problems"><span class="tocnumber">12.5.2</span> <span class="toctext">Firmware Updating and Security Problems</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-24"><a href="#Using_Open-source_Hardware"><span class="tocnumber">11.6</span> <span class="toctext">Using Open-source Hardware</span></a>
+<li class="toclevel-2 tocsection-24"><a href="#Using_Open-source_Hardware"><span class="tocnumber">12.6</span> <span class="toctext">Using Open-source Hardware</span></a>
 <ul>
-<li class="toclevel-3 tocsection-25"><a href="#Hardware_Trust_in_Modern_Computing"><span class="tocnumber">11.6.1</span> <span class="toctext">Hardware Trust in Modern Computing</span></a></li>
-<li class="toclevel-3 tocsection-26"><a href="#Open-source_Hardware_Alternatives"><span class="tocnumber">11.6.2</span> <span class="toctext">Open-source Hardware Alternatives</span></a>
+<li class="toclevel-3 tocsection-25"><a href="#Hardware_Trust_in_Modern_Computing"><span class="tocnumber">12.6.1</span> <span class="toctext">Hardware Trust in Modern Computing</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Open-source_Hardware_Alternatives"><span class="tocnumber">12.6.2</span> <span class="toctext">Open-source Hardware Alternatives</span></a>
 <ul>
-<li class="toclevel-4 tocsection-27"><a href="#ARM-based_Platforms"><span class="tocnumber">11.6.2.1</span> <span class="toctext">ARM-based Platforms</span></a></li>
-<li class="toclevel-4 tocsection-28"><a href="#Open-source_Processors"><span class="tocnumber">11.6.2.2</span> <span class="toctext">Open-source Processors</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="#ARM-based_Platforms"><span class="tocnumber">12.6.2.1</span> <span class="toctext">ARM-based Platforms</span></a></li>
+<li class="toclevel-4 tocsection-28"><a href="#Open-source_Processors"><span class="tocnumber">12.6.2.2</span> <span class="toctext">Open-source Processors</span></a></li>
 </ul>
 </li>
-<li class="toclevel-3 tocsection-29"><a href="#Final_Hardware_Purchase"><span class="tocnumber">11.6.3</span> <span class="toctext">Final Hardware Purchase</span></a>
+<li class="toclevel-3 tocsection-29"><a href="#Final_Hardware_Purchase"><span class="tocnumber">12.6.3</span> <span class="toctext">Final Hardware Purchase</span></a>
 <ul>
-<li class="toclevel-4 tocsection-30"><a href="#Buyer_Considerations"><span class="tocnumber">11.6.3.1</span> <span class="toctext">Buyer Considerations</span></a></li>
+<li class="toclevel-4 tocsection-30"><a href="#Buyer_Considerations"><span class="tocnumber">12.6.3.1</span> <span class="toctext">Buyer Considerations</span></a></li>
 </ul>
 </li>
-<li class="toclevel-3 tocsection-31"><a href="#Firmware_Considerations"><span class="tocnumber">11.6.4</span> <span class="toctext">Firmware Considerations</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Firmware_Considerations"><span class="tocnumber">12.6.4</span> <span class="toctext">Firmware Considerations</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-32"><a href="#Host_Operating_System"><span class="tocnumber">11.7</span> <span class="toctext">Host Operating System</span></a>
+<li class="toclevel-2 tocsection-32"><a href="#Host_Operating_System"><span class="tocnumber">12.7</span> <span class="toctext">Host Operating System</span></a>
 <ul>
-<li class="toclevel-3 tocsection-33"><a href="#Windows_Hosts"><span class="tocnumber">11.7.1</span> <span class="toctext">Windows Hosts</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1"><a href="#Windows_as_Malware"><span class="tocnumber">12</span> <span class="toctext">Windows as Malware</span></a>
-<ul>
-<li class="toclevel-2"><a href="#Windows_Backdoors_and_User_Freedoms"><span class="tocnumber">12.1</span> <span class="toctext">Windows Backdoors and User Freedoms</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Insecurity"><span class="tocnumber">12.2</span> <span class="toctext">Windows Insecurity</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Sabotage"><span class="tocnumber">12.3</span> <span class="toctext">Windows Sabotage</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Interference"><span class="tocnumber">12.4</span> <span class="toctext">Windows Interference</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Surveillance"><span class="tocnumber">12.5</span> <span class="toctext">Windows Surveillance</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1"><a href="#Windows_Analysis"><span class="tocnumber">13</span> <span class="toctext">Windows Analysis</span></a>
-<ul>
-<li class="toclevel-2"><a href="#Forfeited_Privacy_Rights"><span class="tocnumber">13.1</span> <span class="toctext">Forfeited Privacy Rights</span></a></li>
-<li class="toclevel-2"><a href="#Inescapable_Telemetry"><span class="tocnumber">13.2</span> <span class="toctext">Inescapable Telemetry</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Insecurity_2"><span class="tocnumber">13.3</span> <span class="toctext">Windows Insecurity</span></a></li>
-<li class="toclevel-2"><a href="#Windows_Software_Sources"><span class="tocnumber">13.4</span> <span class="toctext">Windows Software Sources</span></a></li>
-<li class="toclevel-2"><a href="#Freedom_Software_Superiority"><span class="tocnumber">13.5</span> <span class="toctext">Freedom Software Superiority</span></a>
-<ul>
-<li class="toclevel-3 tocsection-34"><a href="#MacOS_Hosts"><span class="tocnumber">13.5.1</span> <span class="toctext">MacOS Hosts</span></a></li>
-<li class="toclevel-3 tocsection-35"><a href="#GNU.2FLinux_Hosts"><span class="tocnumber">13.5.2</span> <span class="toctext">GNU/Linux Hosts</span></a>
-<ul>
-<li class="toclevel-4 tocsection-36"><a href="#Recommended_GNU.2FLinux_Distribution"><span class="tocnumber">13.5.2.1</span> <span class="toctext">Recommended GNU/Linux Distribution</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Windows_Hosts"><span class="tocnumber">12.7.1</span> <span class="toctext">Windows Hosts</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-37"><a href="#Router_and_Local_Area_Network_Security"><span class="tocnumber">13.6</span> <span class="toctext">Router and Local Area Network Security</span></a>
+<li class="toclevel-1"><a href="#Windows_as_Malware"><span class="tocnumber">13</span> <span class="toctext">Windows as Malware</span></a>
 <ul>
-<li class="toclevel-3 tocsection-38"><a href="#The_State_of_Router_Insecurity"><span class="tocnumber">13.6.1</span> <span class="toctext">The State of Router Insecurity</span></a></li>
-<li class="toclevel-3 tocsection-39"><a href="#Suitable_Hardware_and_Router_Configurations"><span class="tocnumber">13.6.2</span> <span class="toctext">Suitable Hardware and Router Configurations</span></a></li>
-<li class="toclevel-3 tocsection-40"><a href="#Accessing_Router_Settings"><span class="tocnumber">13.6.3</span> <span class="toctext">Accessing Router Settings</span></a>
+<li class="toclevel-2"><a href="#Windows_Backdoors_and_User_Freedoms"><span class="tocnumber">13.1</span> <span class="toctext">Windows Backdoors and User Freedoms</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Insecurity"><span class="tocnumber">13.2</span> <span class="toctext">Windows Insecurity</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Sabotage"><span class="tocnumber">13.3</span> <span class="toctext">Windows Sabotage</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Interference"><span class="tocnumber">13.4</span> <span class="toctext">Windows Interference</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Surveillance"><span class="tocnumber">13.5</span> <span class="toctext">Windows Surveillance</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Windows_Analysis"><span class="tocnumber">14</span> <span class="toctext">Windows Analysis</span></a>
 <ul>
-<li class="toclevel-4 tocsection-41"><a href="#Linux"><span class="tocnumber">13.6.3.1</span> <span class="toctext">Linux</span></a></li>
-<li class="toclevel-4 tocsection-42"><a href="#Windows"><span class="tocnumber">13.6.3.2</span> <span class="toctext">Windows</span></a></li>
-<li class="toclevel-4 tocsection-43"><a href="#macOS"><span class="tocnumber">13.6.3.3</span> <span class="toctext">macOS</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-44"><a href="#Recommended_Router_Settings"><span class="tocnumber">13.6.4</span> <span class="toctext">Recommended Router Settings</span></a>
+<li class="toclevel-2"><a href="#Forfeited_Privacy_Rights"><span class="tocnumber">14.1</span> <span class="toctext">Forfeited Privacy Rights</span></a></li>
+<li class="toclevel-2"><a href="#Inescapable_Telemetry"><span class="tocnumber">14.2</span> <span class="toctext">Inescapable Telemetry</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Insecurity_2"><span class="tocnumber">14.3</span> <span class="toctext">Windows Insecurity</span></a></li>
+<li class="toclevel-2"><a href="#Windows_Software_Sources"><span class="tocnumber">14.4</span> <span class="toctext">Windows Software Sources</span></a></li>
+<li class="toclevel-2"><a href="#Freedom_Software_Superiority"><span class="tocnumber">14.5</span> <span class="toctext">Freedom Software Superiority</span></a>
 <ul>
-<li class="toclevel-4 tocsection-45"><a href="#General_Router_Settings"><span class="tocnumber">13.6.4.1</span> <span class="toctext">General Router Settings</span></a></li>
-<li class="toclevel-4 tocsection-46"><a href="#Wireless_Network_Router_Settings"><span class="tocnumber">13.6.4.2</span> <span class="toctext">Wireless Network Router Settings</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-47"><a href="#Router_Firmware"><span class="tocnumber">13.6.5</span> <span class="toctext">Router Firmware</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-48"><a href="#Host_Firewall"><span class="tocnumber">13.7</span> <span class="toctext">Host Firewall</span></a></li>
-<li class="toclevel-2 tocsection-49"><a href="#Disable_TCP_Timestamps"><span class="tocnumber">13.8</span> <span class="toctext">Disable TCP Timestamps</span></a>
+<li class="toclevel-3 tocsection-34"><a href="#MacOS_Hosts"><span class="tocnumber">14.5.1</span> <span class="toctext">MacOS Hosts</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#GNU.2FLinux_Hosts"><span class="tocnumber">14.5.2</span> <span class="toctext">GNU/Linux Hosts</span></a>
 <ul>
-<li class="toclevel-3 tocsection-50"><a href="#Qubes"><span class="tocnumber">13.8.1</span> <span class="toctext">Qubes</span></a></li>
-<li class="toclevel-3 tocsection-51"><a href="#Linux_2"><span class="tocnumber">13.8.2</span> <span class="toctext">Linux</span></a></li>
-<li class="toclevel-3 tocsection-52"><a href="#Windows_2"><span class="tocnumber">13.8.3</span> <span class="toctext">Windows</span></a></li>
-<li class="toclevel-3 tocsection-53"><a href="#Other_Operating_Systems"><span class="tocnumber">13.8.4</span> <span class="toctext">Other Operating Systems</span></a></li>
+<li class="toclevel-4 tocsection-36"><a href="#Recommended_GNU.2FLinux_Distribution"><span class="tocnumber">14.5.2.1</span> <span class="toctext">Recommended GNU/Linux Distribution</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-54"><a href="#Disable_ICMP_Timestamps"><span class="tocnumber">13.9</span> <span class="toctext">Disable ICMP Timestamps</span></a>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="#Router_and_Local_Area_Network_Security"><span class="tocnumber">14.6</span> <span class="toctext">Router and Local Area Network Security</span></a>
 <ul>
-<li class="toclevel-3 tocsection-55"><a href="#Qubes_2"><span class="tocnumber">13.9.1</span> <span class="toctext">Qubes</span></a></li>
-<li class="toclevel-3 tocsection-56"><a href="#Linux_3"><span class="tocnumber">13.9.2</span> <span class="toctext">Linux</span></a></li>
-<li class="toclevel-3 tocsection-57"><a href="#Windows_3"><span class="tocnumber">13.9.3</span> <span class="toctext">Windows</span></a></li>
-<li class="toclevel-3 tocsection-58"><a href="#Other_Operating_Systems_2"><span class="tocnumber">13.9.4</span> <span class="toctext">Other Operating Systems</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-59"><a href="#Microphones"><span class="tocnumber">13.10</span> <span class="toctext">Microphones</span></a>
+<li class="toclevel-3 tocsection-38"><a href="#The_State_of_Router_Insecurity"><span class="tocnumber">14.6.1</span> <span class="toctext">The State of Router Insecurity</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Suitable_Hardware_and_Router_Configurations"><span class="tocnumber">14.6.2</span> <span class="toctext">Suitable Hardware and Router Configurations</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Accessing_Router_Settings"><span class="tocnumber">14.6.3</span> <span class="toctext">Accessing Router Settings</span></a>
 <ul>
-<li class="toclevel-3 tocsection-60"><a href="#KVM"><span class="tocnumber">13.10.1</span> <span class="toctext">KVM</span></a></li>
-<li class="toclevel-3 tocsection-61"><a href="#VirtualBox"><span class="tocnumber">13.10.2</span> <span class="toctext">VirtualBox</span></a></li>
-<li class="toclevel-3 tocsection-62"><a href="#Qubes_3"><span class="tocnumber">13.10.3</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-4 tocsection-41"><a href="#Linux"><span class="tocnumber">14.6.3.1</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-4 tocsection-42"><a href="#Windows"><span class="tocnumber">14.6.3.2</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="#macOS"><span class="tocnumber">14.6.3.3</span> <span class="toctext">macOS</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-63"><a href="#Webcams"><span class="tocnumber">13.11</span> <span class="toctext">Webcams</span></a></li>
-<li class="toclevel-2 tocsection-64"><a href="#Wireless_Input_Devices"><span class="tocnumber">13.12</span> <span class="toctext">Wireless Input Devices</span></a></li>
-<li class="toclevel-2 tocsection-65"><a href="#Backups"><span class="tocnumber">13.13</span> <span class="toctext">Backups</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-66"><a href="#Whonix_information"><span class="tocnumber">14</span> <span class="toctext">Whonix information</span></a>
+<li class="toclevel-3 tocsection-44"><a href="#Recommended_Router_Settings"><span class="tocnumber">14.6.4</span> <span class="toctext">Recommended Router Settings</span></a>
 <ul>
-<li class="toclevel-2 tocsection-67"><a href="#MAC_Address"><span class="tocnumber">14.1</span> <span class="toctext">MAC Address</span></a>
+<li class="toclevel-4 tocsection-45"><a href="#General_Router_Settings"><span class="tocnumber">14.6.4.1</span> <span class="toctext">General Router Settings</span></a></li>
+<li class="toclevel-4 tocsection-46"><a href="#Wireless_Network_Router_Settings"><span class="tocnumber">14.6.4.2</span> <span class="toctext">Wireless Network Router Settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-47"><a href="#Router_Firmware"><span class="tocnumber">14.6.5</span> <span class="toctext">Router Firmware</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-48"><a href="#Host_Firewall"><span class="tocnumber">14.7</span> <span class="toctext">Host Firewall</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#Disable_TCP_Timestamps"><span class="tocnumber">14.8</span> <span class="toctext">Disable TCP Timestamps</span></a>
 <ul>
-<li class="toclevel-3 tocsection-68"><a href="#Introduction_2"><span class="tocnumber">14.1.1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-3 tocsection-69"><a href="#Using_a_Home_Connection"><span class="tocnumber">14.1.2</span> <span class="toctext">Using a Home Connection</span></a></li>
-<li class="toclevel-3 tocsection-70"><a href="#Using_a_Public_Computer"><span class="tocnumber">14.1.3</span> <span class="toctext">Using a Public Computer</span></a></li>
-<li class="toclevel-3 tocsection-71"><a href="#Using_a_Personal_Computer_in_a_Public_Network"><span class="tocnumber">14.1.4</span> <span class="toctext">Using a Personal Computer in a Public Network</span></a></li>
-<li class="toclevel-3 tocsection-72"><a href="#Random_MAC_Addresses"><span class="tocnumber">14.1.5</span> <span class="toctext">Random MAC Addresses</span></a></li>
-<li class="toclevel-3 tocsection-73"><a href="#Auto-connect_Risk"><span class="tocnumber">14.1.6</span> <span class="toctext">Auto-connect Risk</span></a></li>
-<li class="toclevel-3 tocsection-74"><a href="#Changing_MAC_Addresses"><span class="tocnumber">14.1.7</span> <span class="toctext">Changing MAC Addresses</span></a>
+<li class="toclevel-3 tocsection-50"><a href="#Qubes"><span class="tocnumber">14.8.1</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Linux_2"><span class="tocnumber">14.8.2</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="#Windows_2"><span class="tocnumber">14.8.3</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="#Other_Operating_Systems"><span class="tocnumber">14.8.4</span> <span class="toctext">Other Operating Systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-54"><a href="#Disable_ICMP_Timestamps"><span class="tocnumber">14.9</span> <span class="toctext">Disable ICMP Timestamps</span></a>
 <ul>
-<li class="toclevel-4 tocsection-75"><a href="#For_Qubes_Hosts"><span class="tocnumber">14.1.7.1</span> <span class="toctext">For Qubes Hosts</span></a></li>
-<li class="toclevel-4 tocsection-76"><a href="#For_Linux_Hosts"><span class="tocnumber">14.1.7.2</span> <span class="toctext">For Linux Hosts</span></a></li>
-<li class="toclevel-4 tocsection-77"><a href="#For_Windows_Hosts"><span class="tocnumber">14.1.7.3</span> <span class="toctext">For Windows Hosts</span></a></li>
-<li class="toclevel-4 tocsection-78"><a href="#For_MacOS_Hosts"><span class="tocnumber">14.1.7.4</span> <span class="toctext">For MacOS Hosts</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="#Qubes_2"><span class="tocnumber">14.9.1</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="#Linux_3"><span class="tocnumber">14.9.2</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="#Windows_3"><span class="tocnumber">14.9.3</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="#Other_Operating_Systems_2"><span class="tocnumber">14.9.4</span> <span class="toctext">Other Operating Systems</span></a></li>
 </ul>
 </li>
-<li class="toclevel-3 tocsection-79"><a href="#Sources"><span class="tocnumber">14.1.8</span> <span class="toctext">Sources</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="#Microphones"><span class="tocnumber">14.10</span> <span class="toctext">Microphones</span></a>
+<ul>
+<li class="toclevel-3 tocsection-60"><a href="#KVM"><span class="tocnumber">14.10.1</span> <span class="toctext">KVM</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="#VirtualBox"><span class="tocnumber">14.10.2</span> <span class="toctext">VirtualBox</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="#Qubes_3"><span class="tocnumber">14.10.3</span> <span class="toctext">Qubes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-63"><a href="#Webcams"><span class="tocnumber">14.11</span> <span class="toctext">Webcams</span></a></li>
+<li class="toclevel-2 tocsection-64"><a href="#Wireless_Input_Devices"><span class="tocnumber">14.12</span> <span class="toctext">Wireless Input Devices</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="#Backups"><span class="tocnumber">14.13</span> <span class="toctext">Backups</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-66"><a href="#Whonix_information"><span class="tocnumber">15</span> <span class="toctext">Whonix information</span></a>
+<ul>
+<li class="toclevel-2 tocsection-67"><a href="#MAC_Address"><span class="tocnumber">15.1</span> <span class="toctext">MAC Address</span></a>
+<ul>
+<li class="toclevel-3 tocsection-68"><a href="#Introduction_2"><span class="tocnumber">15.1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="#Using_a_Home_Connection"><span class="tocnumber">15.1.2</span> <span class="toctext">Using a Home Connection</span></a></li>
+<li class="toclevel-3 tocsection-70"><a href="#Using_a_Public_Computer"><span class="tocnumber">15.1.3</span> <span class="toctext">Using a Public Computer</span></a></li>
+<li class="toclevel-3 tocsection-71"><a href="#Using_a_Personal_Computer_in_a_Public_Network"><span class="tocnumber">15.1.4</span> <span class="toctext">Using a Personal Computer in a Public Network</span></a></li>
+<li class="toclevel-3 tocsection-72"><a href="#Random_MAC_Addresses"><span class="tocnumber">15.1.5</span> <span class="toctext">Random MAC Addresses</span></a></li>
+<li class="toclevel-3 tocsection-73"><a href="#Auto-connect_Risk"><span class="tocnumber">15.1.6</span> <span class="toctext">Auto-connect Risk</span></a></li>
+<li class="toclevel-3 tocsection-74"><a href="#Changing_MAC_Addresses"><span class="tocnumber">15.1.7</span> <span class="toctext">Changing MAC Addresses</span></a>
+<ul>
+<li class="toclevel-4 tocsection-75"><a href="#For_Qubes_Hosts"><span class="tocnumber">15.1.7.1</span> <span class="toctext">For Qubes Hosts</span></a></li>
+<li class="toclevel-4 tocsection-76"><a href="#For_Linux_Hosts"><span class="tocnumber">15.1.7.2</span> <span class="toctext">For Linux Hosts</span></a></li>
+<li class="toclevel-4 tocsection-77"><a href="#For_Windows_Hosts"><span class="tocnumber">15.1.7.3</span> <span class="toctext">For Windows Hosts</span></a></li>
+<li class="toclevel-4 tocsection-78"><a href="#For_MacOS_Hosts"><span class="tocnumber">15.1.7.4</span> <span class="toctext">For MacOS Hosts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-79"><a href="#Sources"><span class="tocnumber">15.1.8</span> <span class="toctext">Sources</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-80"><a href="#Known_Bugs"><span class="tocnumber">15</span> <span class="toctext">Known Bugs</span></a></li>
-<li class="toclevel-1 tocsection-81"><a href="#Greater_Security_and_Next_Steps"><span class="tocnumber">16</span> <span class="toctext">Greater Security and Next Steps</span></a></li>
-<li class="toclevel-1 tocsection-82"><a href="#References"><span class="tocnumber">17</span> <span class="toctext">References</span></a></li>
-<li class="toclevel-1 tocsection-83"><a href="#License"><span class="tocnumber">18</span> <span class="toctext">License</span></a></li>
+<li class="toclevel-1 tocsection-80"><a href="#Known_Bugs"><span class="tocnumber">16</span> <span class="toctext">Known Bugs</span></a></li>
+<li class="toclevel-1 tocsection-81"><a href="#Greater_Security_and_Next_Steps"><span class="tocnumber">17</span> <span class="toctext">Greater Security and Next Steps</span></a></li>
+<li class="toclevel-1 tocsection-82"><a href="#References"><span class="tocnumber">18</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-83"><a href="#License"><span class="tocnumber">19</span> <span class="toctext">License</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Computer_Security_Education&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Computer_Security_Education&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -391,14 +392,19 @@ Disclosure of information is particularly problematic for mobile devices, since 
 <li>Remotely turn on webcams and microphones.</li>
 <li>Create "zombie" computers which form part of a botnet for spam email, <a class="external text" data-href="https://en.wikipedia.org/wiki/Distributed_denial-of-service" href="https://en.wikipedia.org/wiki/Distributed_denial-of-service" rel="noreferrer noopener" target="_blank">DDOS attacks</a> or the hosting of illicit / illegal material.</li>
 <li>Record everything a user types, sends and receives.</li></ul>
-<h2><span class="mw-headline" id="The_Utility_of_Antivirus_Tools">The Utility of Antivirus Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Targeted_Malware_vs_Off-The-Shelf_Malware">Targeted Malware vs Off-The-Shelf Malware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Targeted malware is the opposite of off-the-shelf malware.
+</p><p>Targeted malware is specifically crafted against a known target to attack a specific system or limited amount of systems only with the goal to avoid detection by avoiding getting installed on too many where qualified people might detect the malware and publish about it.
+</p><p>On other other hand, off-the-shelf malware attempts to spread in bulk against bigger groups or the general public with the goal of taking over as many systems as possible.
+</p>
+<h2><span class="mw-headline" id="The_Utility_of_Antivirus_Tools">The Utility of Antivirus Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Antivirus products and <a class="external text" data-href="https://en.wikipedia.org/wiki/Personal_firewall" href="https://en.wikipedia.org/wiki/Personal_firewall" rel="noreferrer noopener" target="_blank">personal firewalls</a> are <i>not</i> drop in solutions for a secure host. Malware can often stay undetected and evade scans, while application level personal firewalls are often circumvented. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> <a class="external text" data-href="https://en.wikipedia.org/wiki/Polymorphic_code" href="https://en.wikipedia.org/wiki/Polymorphic_code" rel="noreferrer noopener" target="_blank">Polymorphic code</a> and <a class="external text" data-href="https://en.wikipedia.org/wiki/Rootkit" href="https://en.wikipedia.org/wiki/Rootkit" rel="noreferrer noopener" target="_blank">rootkits</a> essentially render antivirus products helpless. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup> <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>
 </p><p>Antivirus tools are actually worse than useless. In the case of sophisticated and targeted attacks, the antivirus software can serve as a pathway to exploiting a system's kernel, since they almost always run with administration level privileges. <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup> Antivirus software also harms privacy by sending system files back to the company servers for analysis.<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> The software also actively conducts man-in-the-middle attacks on secure SSL connections, enabling very sensitive information to be viewed. <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>
 </p>
-<h2><span class="mw-headline" id="Preventing_Malware_Infections">Preventing Malware Infections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-3" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-3.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Preventing_Malware_Infections">Preventing Malware Infections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The optimal scenario is to avoid infection by malware in the first place. Once malicious code has accessed a system, it is next to impossible to contain. Sensible steps include: hardening the operating system, carefully vetting programs and files that are retrieved from the Internet, and using hypervisors (virtualizers) to isolate software that processes untrusted data.
 </p>
-<h2><span class="mw-headline" id="Detecting_Malware_Infections">Detecting Malware Infections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Detecting_Malware_Infections">Detecting Malware Infections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:Malware&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Detecting off-the-shelf (standardized) malware is a very hard problem and conceptually a lost cause. If uncustomized malware is widespread enough, then it has a chance of being detected by a technician. Tailored malware might also get detected by a technician, but the likelihood is low unless they are lucky or gifted.
 </p><p>Non-technical users do not have many good options. They can either:
 </p>
@@ -1934,7 +1940,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix.
+<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Computer_Security_Education" href="./Computer_Security_Education" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Computer_Security_Education" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Computer_Security_Education" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1948,35 +1954,35 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190330070950
+Cached time: 20190419093408
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.331 seconds
-Real time usage: 0.414 seconds
-Preprocessor visited node count: 4033/1000000
-Preprocessor generated node count: 9824/1000000
-Post‐expand include size: 66861/2097152 bytes
+CPU time usage: 0.347 seconds
+Real time usage: 0.424 seconds
+Preprocessor visited node count: 4034/1000000
+Preprocessor generated node count: 9826/1000000
+Post‐expand include size: 67438/2097152 bytes
 Template argument size: 1084/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 87697/5000000 bytes
-Lua time usage: 0.070/7.000 seconds
-Lua virtual size: 8.13 MB/50 MB
+Unstrip post‐expand size: 87953/5000000 bytes
+Lua time usage: 0.060/7.000 seconds
+Lua virtual size: 8.14 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  273.305      1 -total
- 36.83%  100.647     37 Template:Mbox
- 17.32%   47.334     39 Template:CodeSelect
- 13.39%   36.591      1 Template:Reflist
-  3.35%    9.159      1 Template:Footer
-  2.71%    7.419      1 Template:Malware
-  2.53%    6.904      1 Template:Windows_Hosts
-  2.02%    5.510      1 Template:Firmware_Trojans
-  1.27%    3.459      1 Template:Header
-  0.75%    2.049      1 Template:Share
+100.00%  275.827      1 -total
+ 35.28%   97.305     37 Template:Mbox
+ 17.26%   47.597     39 Template:CodeSelect
+ 16.88%   46.569      1 Template:Reflist
+  3.08%    8.499      1 Template:Footer
+  2.54%    7.013      1 Template:Malware
+  2.45%    6.766      1 Template:Windows_Hosts
+  1.31%    3.607      1 Template:Firmware_Trojans
+  0.82%    2.252      1 Template:Header
+  0.71%    1.960      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Computer_Security_Education&amp;oldid=37723" dir="ltr" href="https://www.whonix.org/w/index.php?title=Computer_Security_Education&amp;oldid=37723">https://www.whonix.org/w/index.php?title=Computer_Security_Education&amp;oldid=37723</a>"</div>
@@ -1990,7 +1996,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Computer_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 2 October 2018, at 22:25.</li>
+<li id="footer-lastmod"> This page was last edited on 2 October 2018, at 23:25.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -2011,5 +2017,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Computer_
 </div>
 
 </body>
-<!-- Cached/compressed 20190330070950 -->
+<!-- Cached/compressed 20190419093408 -->
 </html>

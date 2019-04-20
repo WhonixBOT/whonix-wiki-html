@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Entropy - Whonix
  url: ../Dev/Entropy
- date: Fri Apr 19 07:33:55 2019
+ date: Sat Apr 20 07:33:55 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -128,22 +128,24 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-2 tocsection-3"><a href="#Resources"><span class="tocnumber">2.1</span> <span class="toctext">Resources</span></a></li>
 <li class="toclevel-2 tocsection-4"><a href="#VirtualBox_Bug_Reports"><span class="tocnumber">2.2</span> <span class="toctext">VirtualBox Bug Reports</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Software_Packages"><span class="tocnumber">2.3</span> <span class="toctext">Software Packages</span></a>
+<li class="toclevel-2 tocsection-5"><a href="#.2Fdev.2Frandom_vs._.2Fdev.2Furandom"><span class="tocnumber">2.3</span> <span class="toctext">/dev/random vs. /dev/urandom</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Software_Packages"><span class="tocnumber">2.4</span> <span class="toctext">Software Packages</span></a>
 <ul>
-<li class="toclevel-3 tocsection-6"><a href="#Introduction_2"><span class="tocnumber">2.3.1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-3 tocsection-7"><a href="#haveged"><span class="tocnumber">2.3.2</span> <span class="toctext">haveged</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Introduction_2"><span class="tocnumber">2.4.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#haveged"><span class="tocnumber">2.4.2</span> <span class="toctext">haveged</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#jitterentropy"><span class="tocnumber">2.4.3</span> <span class="toctext">jitterentropy</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-8"><a href="#Hardware_Entropy_Keys"><span class="tocnumber">3</span> <span class="toctext">Hardware Entropy Keys</span></a>
+<li class="toclevel-1 tocsection-10"><a href="#Hardware_Entropy_Keys"><span class="tocnumber">3</span> <span class="toctext">Hardware Entropy Keys</span></a>
 <ul>
-<li class="toclevel-2 tocsection-9"><a href="#Entropy_Key"><span class="tocnumber">3.1</span> <span class="toctext">Entropy Key</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#OneRNG"><span class="tocnumber">3.2</span> <span class="toctext">OneRNG</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#List"><span class="tocnumber">3.3</span> <span class="toctext">List</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Entropy_Key"><span class="tocnumber">3.1</span> <span class="toctext">Entropy Key</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#OneRNG"><span class="tocnumber">3.2</span> <span class="toctext">OneRNG</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#List"><span class="tocnumber">3.3</span> <span class="toctext">List</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-12"><a href="#Resources_2"><span class="tocnumber">4</span> <span class="toctext">Resources</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Resources_2"><span class="tocnumber">4</span> <span class="toctext">Resources</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -160,8 +162,36 @@ Whonix requires Donations to stay alive.
 <h2><span class="mw-headline" id="VirtualBox_Bug_Reports">VirtualBox Bug Reports</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=4.html" title="Edit section: VirtualBox Bug Reports">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><a class="external text" data-href="https://www.virtualbox.org/ticket/11296" href="https://www.virtualbox.org/ticket/11296" rel="noreferrer noopener" target="_blank">entropy quality</a></li>
 <li><a class="external text" data-href="https://www.virtualbox.org/ticket/11297" href="https://www.virtualbox.org/ticket/11297" rel="noreferrer noopener" target="_blank">poor entropy performance</a></li></ul>
-<h2><span class="mw-headline" id="Software_Packages">Software Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=5.html" title="Edit section: Software Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="Introduction_2">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=6.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h2><span id="/dev/random_vs._/dev/urandom"></span><span class="mw-headline" id=".2Fdev.2Frandom_vs._.2Fdev.2Furandom">/dev/random vs. /dev/urandom</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=5.html" title="Edit section: /dev/random vs. /dev/urandom">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This debate comes from a misconception by the Linux manual writer.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> The fact is both APIs use the same CSPRNG. The issue happens when the randomness pool has not been properly initialized and entropy is requested early at boot. Otherwise the blocking behavior of <code>/dev/random</code> during normal system running is an annoying bug than a useful safety feature. A well seeded pool should be able to provide sufficient/endless randomness from a single seed.
+</p><p><br/>
+Here is what reknown cryptographer Dr. Daniel J. Bernstein has to say on the matter:<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+<pre>Cryptographers are certainly not responsible for this superstitious
+nonsense. Think about this for a moment: whoever wrote the /dev/random
+manual page seems to simultaneously believe that
+
+(1) we can't figure out how to deterministically expand one 256-bit
+/dev/random output into an endless stream of unpredictable keys
+(this is what we need from urandom), but
+
+(2) we _can_ figure out how to use a single key to safely encrypt
+many messages (this is what we need from SSL, PGP, etc.).
+
+For a cryptographer this doesn't even pass the laugh test.
+
+I'm not saying that /dev/urandom has a perfect API. It's disappointingly
+common for vendors to deploy devices where the randomness pool has never
+been initialized; BSD /dev/urandom catches this configuration bug by
+blocking, but Linux /dev/urandom (unlike Linux /dev/random) spews
+predictable data, causing (e.g.) the widespread RSA security failures
+documented on http://factorable.net. But fixing this configuration bug
+has nothing to do with the /dev/random superstitions.
+</pre>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Software_Packages">Software Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=6.html" title="Edit section: Software Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Introduction_2">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=7.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>It has to be researched if they do work well inside Virtual Machines (VirtualBox). Simply installing all of them may not be wise.
 </p>
 <ul><li><a class="external text" data-href="http://www.vanheusden.com/entropybroker/" href="http://www.vanheusden.com/entropybroker/" rel="noreferrer noopener" target="_blank">entropy broker</a>: Not in Debian.</li>
@@ -172,7 +202,7 @@ Whonix requires Donations to stay alive.
 <li>clrngd: In Debian.</li>
 <li>ekeyd: In Debian.</li>
 <li>HAVEGE: In Debian. See below.</li></ul>
-<h3><span class="mw-headline" id="haveged">haveged</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=7.html" title="Edit section: haveged">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="haveged">haveged</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=8.html" title="Edit section: haveged">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Haveged is an entropy gathering daemon.
 </p><p>Quoted from the <a class="external text" data-href="http://www.issihosts.com/haveged/ais31.html" href="http://www.issihosts.com/haveged/ais31.html" rel="noreferrer noopener" target="_blank">haveged testing page</a>: "<i>[...] will behave similarly in a virtual environment is a more risky proposition [...] there have been reports of VM that implement the processor time stamp counter as a constant and there are known differences in cpuid operation in others. [...]</i>"
 </p><p>Will haveged create sufficient entropy in VirtualBox? Luckily, haveged comes with tools to check the if the entropy it creates.
@@ -204,16 +234,33 @@ All 2 tests passed
 <li>This was successfully tested in VirtualBox with haveged running.</li>
 <li>This was successfully tested in kvm without rng device and without haveged running.</li>
 <li>This was successfully tested in kvm without rng device and with haveged running.</li>
-<li>This was successfully tested in Qubes without haveged running. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
+<li>This was successfully tested in Qubes without haveged running. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li>
 <li>This was successfully tested in Qubes with haveged running.</li></ul>
-<h1><span class="mw-headline" id="Hardware_Entropy_Keys">Hardware Entropy Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=8.html" title="Edit section: Hardware Entropy Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Entropy_Key">Entropy Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=9.html" title="Edit section: Entropy Key">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><br/>
+</p>
+<h3><span class="mw-headline" id="jitterentropy">jitterentropy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=9.html" title="Edit section: jitterentropy">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>jitterentropy is a RNG designed in the spirit of haveged (using CPU timer jitter as entropy source) except it made up of a kernel module - mainlined since Linux 4.2 and a userspace daemon (jitterentropy-rngd*) to prevent /dev/random from blocking. The advantage of jitterentropy is by taking advantage of a loaded kernel module, it can ensure randomness is being collected before the CSPRNG is initialized. So, when CSPRNG initialization happens, we can ensure that it is properly seeded on first boot, minimizing the likelihood that exact keys will be created on distinct systems. This is something haveged can't provide, as it runs entirely in userspace.
+</p><p>It is a good alternative to haveged, especially for hypervisors that don't support virtio-RNG and so don't have access to entropy sources early during boot process. jitterentropy-rngd is now included in Debian Buster and has been available since Whonix 15.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup><sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p><p>Links:
+</p><p><br/>
+<a class="external free" data-href="http://www.chronox.de/jent.html" href="http://www.chronox.de/jent.html" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent.html</a>
+</p><p><a class="external free" data-href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf</a>
+</p><p><a class="external free" data-href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" rel="noreferrer noopener" target="_blank">https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/</a>
+</p><p><a class="external free" data-href="https://packages.debian.org/sid/jitterentropy-rngd" href="https://packages.debian.org/sid/jitterentropy-rngd" rel="noreferrer noopener" target="_blank">https://packages.debian.org/sid/jitterentropy-rngd</a>
+</p><p><br/>
+Playing devil's advocate here: Ted Ts'o <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> expresses strong skepticism about the efficacy of RNGs that rely on CPU jitter. summary: CPU jitter may not be random as thought to someone who designed the CPU cache and know how its internals "tick" <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>. So while these RNGs may not harm, another solution for RNG-less platforms may be a good idea.
+</p><p><br/>
+</p>
+<pre>It may be that there is some very complex state which is hidden inside the the CPU execution pipeline, the L1 cache, etc., etc. But just because *you* can't figure it out, and just because *I* can't figure it out doesn't mean that it is ipso facto something which a really bright NSA analyst working in Fort Meade can't figure out. (Or heck, a really clever Intel engineer who has full visibility into the internal design of an Intel CPU....)
+</pre>
+<h1><span class="mw-headline" id="Hardware_Entropy_Keys">Hardware Entropy Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=10.html" title="Edit section: Hardware Entropy Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Entropy_Key">Entropy Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11.html" title="Edit section: Entropy Key">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="http://www.entropykey.co.uk/" href="http://www.entropykey.co.uk/" rel="noreferrer noopener" target="_blank">Entropy Key</a>; Hardware not fully open source. Some resources say, it is okay as an additional source of entropy. Where to add it? Since Whonix depends on a host operating system, the Whonix-Gateway and the Whonix-Workstation, where it does make most sense to add it? Perhaps adding it to the host and using a entropy broker could be the most effective method. Better than buying three entropy keys.
 </p>
-<h2><span class="mw-headline" id="OneRNG">OneRNG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=10.html" title="Edit section: OneRNG">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="OneRNG">OneRNG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12.html" title="Edit section: OneRNG">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://www.kickstarter.com/projects/moonbaseotago/onerng-an-open-source-entropy-generator" href="https://www.kickstarter.com/projects/moonbaseotago/onerng-an-open-source-entropy-generator" rel="noreferrer noopener" target="_blank">OneRNG</a>; Hardware and Firmware fully open source. Firmware is cryptographically signed to ensure it hasn't been tampered with. Board has a removable tin RF Shield so you can verify the circuits match the diagrams provided by the manufacturer. Fully reprogrammable with manufacturer provided software+cable (must be bought separately). Where to add it? Since Whonix depends on a host operating system, the Whonix-Gateway and the Whonix-Workstation, where it does make most sense to add it? Perhaps adding it to the host and using a entropy broker could be the most effective method.
 </p>
-<h2><span class="mw-headline" id="List">List</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11.html" title="Edit section: List">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="List">List</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=13.html" title="Edit section: List">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><a class="external free" data-href="http://noosphere.princeton.edu/reg.html" href="http://noosphere.princeton.edu/reg.html" rel="noreferrer noopener" target="_blank">http://noosphere.princeton.edu/reg.html</a></li>
 <li><a class="external free" data-href="http://en.m.wikipedia.org/wiki/Noosphere" href="http://en.m.wikipedia.org/wiki/Noosphere" rel="noreferrer noopener" target="_blank">http://en.m.wikipedia.org/wiki/Noosphere</a></li>
 <li><a class="external free" data-href="http://www.idquantique.com/random-number-generators/products/quantis-usb.html" href="http://www.idquantique.com/random-number-generators/products/quantis-usb.html" rel="noreferrer noopener" target="_blank">http://www.idquantique.com/random-number-generators/products/quantis-usb.html</a></li>
@@ -221,7 +268,7 @@ All 2 tests passed
 <li><a class="external free" data-href="http://www.entropykey.co.uk" href="http://www.entropykey.co.uk" rel="noreferrer noopener" target="_blank">http://www.entropykey.co.uk</a></li>
 <li><a class="external free" data-href="https://en.wikipedia.org/wiki/Comparison_of_hardware_random_number_generators" href="https://en.wikipedia.org/wiki/Comparison_of_hardware_random_number_generators" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Comparison_of_hardware_random_number_generators</a></li>
 <li><a class="external free" data-href="http://www.seeedstudio.com/wiki/FST-01" href="http://www.seeedstudio.com/wiki/FST-01" rel="noreferrer noopener" target="_blank">http://www.seeedstudio.com/wiki/FST-01</a></li></ul>
-<h1><span class="mw-headline" id="Resources_2">Resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12.html" title="Edit section: Resources">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Resources_2">Resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=14.html" title="Edit section: Resources">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="http://holdenc.altervista.org/avalanche/" href="http://holdenc.altervista.org/avalanche/" rel="noreferrer noopener" target="_blank">Random Sequence Generator based on Avalanche Noise</a></li>
 <li><a class="external free" data-href="https://groups.google.com/forum/#!forum/randomness-generation" href="https://groups.google.com/forum/" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/#!forum/randomness-generation</a></li>
 <li><a class="external free" data-href="https://groups.google.com/forum/#!topic/randomness-generation/pIdFa3iarhI" href="https://groups.google.com/forum/" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/#!topic/randomness-generation/pIdFa3iarhI</a></li>
@@ -268,7 +315,7 @@ All 2 tests passed
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../Dev/Entropy" href="../Dev/Entropy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -280,38 +327,50 @@ All 2 tests passed
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font></p><p><font size="-1">
 </font></p><div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T32" href="https://phabricator.whonix.org/T32" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T32</a></span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://pthree.org/2014/07/21/the-linux-random-number-generator/" href="https://pthree.org/2014/07/21/the-linux-random-number-generator/" rel="noreferrer noopener" target="_blank">https://pthree.org/2014/07/21/the-linux-random-number-generator/</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://www.mail-archive.com/cryptography@randombit.net/msg04763.html" href="http://www.mail-archive.com/cryptography@randombit.net/msg04763.html" rel="noreferrer noopener" target="_blank">http://www.mail-archive.com/cryptography@randombit.net/msg04763.html</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T32" href="https://phabricator.whonix.org/T32" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T32</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T817" href="https://phabricator.whonix.org/T817" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T817</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://phabricator.whonix.org/T727" href="https://phabricator.whonix.org/T727" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T727</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">He's the main developer behind Linux's RNG and staunchly resisted relying only on Intel's RDRAND. His opinions carry weight with good reason.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lwn.net/Articles/586427/" href="https://lwn.net/Articles/586427/" rel="noreferrer noopener" target="_blank">https://lwn.net/Articles/586427/</a></span>
 </li>
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20190325063415
+Cached time: 20190420012423
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.027 seconds
-Real time usage: 0.029 seconds
-Preprocessor visited node count: 146/1000000
-Preprocessor generated node count: 378/1000000
+CPU time usage: 0.041 seconds
+Real time usage: 0.047 seconds
+Preprocessor visited node count: 255/1000000
+Preprocessor generated node count: 618/1000000
 Post‐expand include size: 2466/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2714/5000000 bytes
+Unstrip post‐expand size: 4753/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   16.870      1 -total
- 71.24%   12.018      1 Template:Footer
- 16.52%    2.787      1 Template:Share
- 16.48%    2.780      1 Template:Header
- 14.46%    2.439      1 Template:Edit_it
-  7.38%    1.245      1 Template:RandomNews
-  5.37%    0.906      1 Template:Whonix_onion
-  5.37%    0.906      2 Template:Name
+100.00%   29.387      1 -total
+ 45.39%   13.340      1 Template:Footer
+ 29.82%    8.764      1 Template:Header
+ 10.04%    2.950      1 Template:Share
+  8.34%    2.450      1 Template:Edit_it
+  4.93%    1.449      1 Template:RandomNews
+  2.92%    0.859      1 Template:Whonix_onion
+  2.20%    0.648      2 Template:Name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=29184" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=29184">https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=29184</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=42691" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=42691">https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=42691</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -322,7 +381,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Entro
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 17 April 2017, at 08:53.</li>
+<li id="footer-lastmod"> This page was last edited on 19 April 2019, at 23:06.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -343,5 +402,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Entro
 </div>
 
 </body>
-<!-- Cached/compressed 20190325063415 -->
+<!-- Cached/compressed 20190420012423 -->
 </html>

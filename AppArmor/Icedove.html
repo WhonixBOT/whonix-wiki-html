@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: AppArmor - Whonix
  url: ../AppArmor/Icedove
- date: Fri Apr 19 07:31:13 2019
+ date: Sat Apr 20 07:31:14 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -428,10 +428,10 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 <h2><span class="mw-headline" id="Correcting_Other_Whonix_AppArmor_Profiles">Correcting Other Whonix AppArmor Profiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=10.html" title="Edit section: Correcting Other Whonix AppArmor Profiles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The same method can be used to resolve other AppArmor problems impacting full functionality of applications in Whonix. For instance, in Whonix 13 the <code>whonixcheck</code> AppArmor profile caused continuous "denied" messages in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>. Correcting this issue was quite simple: <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
-<ul><li>Navigate to the <a class="external text" data-href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" rel="noreferrer noopener" target="_blank">raw, updated whonixcheck profile</a>.</li>
+<ol><li>Navigate to the <a class="external text" data-href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" href="https://raw.githubusercontent.com/Whonix/whonixcheck/master/etc/apparmor.d/usr.bin.whonixcheck" rel="noreferrer noopener" target="_blank">raw, updated whonixcheck profile</a>.</li>
 <li>Replace the existing content in <i>/etc/apparmor.d/usr.bin.whonixcheck</i> with the updated github content, in both TemplateVMs <code>whonix-gw-14</code> and <code>whonix-ws-14</code>.</li>
 <li>Shut down both TemplateVMs and any running instances of <code>sys-whonix</code> and <code>anon-whonix</code>.</li>
-<li>Restart <code>sys-whonix</code> and <code>anon-whonix</code>.</li></ul>
+<li>Restart <code>sys-whonix</code> and <code>anon-whonix</code>.</li></ol>
 <h2><span class="mw-headline" id="Inspecting_and_Disabling_AppArmor_Notifications">Inspecting and Disabling AppArmor Notifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=11.html" title="Edit section: Inspecting and Disabling AppArmor Notifications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>From Whonix 14, <a class="external text" data-href="https://packages.debian.org/stretch/apparmor-notify" href="https://packages.debian.org/stretch/apparmor-notify" rel="noreferrer noopener" target="_blank">apparmor-notify</a> is no longer installed by default. This means desktop notifications will not appear concerning AppArmor denied messages, which are stored in <i>/var/log/audit/audit.log</i> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p>
@@ -574,7 +574,7 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -588,10 +588,10 @@ Cut and paste the profile text into the old Tor Browser profile which is open in
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190419053112
+Cached time: 20190420053113
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.091 seconds
+CPU time usage: 0.089 seconds
 Real time usage: 0.116 seconds
 Preprocessor visited node count: 673/1000000
 Preprocessor generated node count: 2024/1000000
@@ -600,26 +600,26 @@ Template argument size: 3806/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 6020/5000000 bytes
-Lua time usage: 0.010/7.000 seconds
+Unstrip post‐expand size: 6174/5000000 bytes
+Lua time usage: 0.020/7.000 seconds
 Lua virtual size: 7.61 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   92.709      1 -total
- 40.19%   37.263     27 Template:CodeSelect
- 31.11%   28.844      3 Template:Mbox
- 13.74%   12.736      2 Template:Box
-  8.33%    7.724      1 Template:Footer
-  5.23%    4.850      1 Template:Open_with_root_rights
-  4.33%    4.016      1 Template:Reflist
-  2.39%    2.214      1 Template:Header
-  1.77%    1.643      1 Template:Share
-  1.74%    1.611      5 Template:Whonix-gw
+100.00%   92.749      1 -total
+ 36.28%   33.650     27 Template:CodeSelect
+ 35.07%   32.523      3 Template:Mbox
+ 12.73%   11.805      2 Template:Box
+  9.15%    8.485      1 Template:Footer
+  4.48%    4.156      1 Template:Open_with_root_rights
+  4.39%    4.070      1 Template:Reflist
+  2.28%    2.115      1 Template:Header
+  2.26%    2.093      1 Template:Share
+  1.86%    1.728      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42580" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42580">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42580</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42649" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42649">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=42649</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -630,7 +630,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 17 April 2019, at 17:54.</li>
+<li id="footer-lastmod"> This page was last edited on 19 April 2019, at 08:44.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
