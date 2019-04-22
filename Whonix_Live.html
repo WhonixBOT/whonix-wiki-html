@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Live Mode - Whonix
  url: ./Whonix_Live
- date: Sun Apr 21 07:43:06 2019
+ date: Mon Apr 22 07:43:12 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -149,18 +149,22 @@ Whonix requires Donations to stay alive.
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Warning"><span class="tocnumber">2</span> <span class="toctext">Warning</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Live-mode_Configuration"><span class="tocnumber">3</span> <span class="toctext">Live-mode Configuration</span></a>
+<li class="toclevel-1 tocsection-2"><a href="#Warning"><span class="tocnumber">2</span> <span class="toctext">Warning</span></a>
 <ul>
-<li class="toclevel-2 tocsection-4"><a href="#Qubes"><span class="tocnumber">3.1</span> <span class="toctext">Qubes</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#VirtualBox"><span class="tocnumber">3.2</span> <span class="toctext">VirtualBox</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#KVM"><span class="tocnumber">3.3</span> <span class="toctext">KVM</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Alternative_Configurations"><span class="tocnumber">3.4</span> <span class="toctext">Alternative Configurations</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Anti-Forensics_Precautions"><span class="tocnumber">2.1</span> <span class="toctext">Anti-Forensics Precautions</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-8"><a href="#Debugging.2FErrors"><span class="tocnumber">4</span> <span class="toctext">Debugging/Errors</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Miscellaneous"><span class="tocnumber">5</span> <span class="toctext">Miscellaneous</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Live-mode_Configuration"><span class="tocnumber">3</span> <span class="toctext">Live-mode Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Qubes"><span class="tocnumber">3.1</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#VirtualBox"><span class="tocnumber">3.2</span> <span class="toctext">VirtualBox</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#KVM"><span class="tocnumber">3.3</span> <span class="toctext">KVM</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Alternative_Configurations"><span class="tocnumber">3.4</span> <span class="toctext">Alternative Configurations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Debugging.2FErrors"><span class="tocnumber">4</span> <span class="toctext">Debugging/Errors</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Miscellaneous"><span class="tocnumber">5</span> <span class="toctext">Miscellaneous</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -170,7 +174,7 @@ Whonix requires Donations to stay alive.
 <ul><li><code>grub-live</code> will create a new boot menu entry which the user has to select manually but it is the more failsafe and hence the recommended option.</li>
 <li>With <code>ro-mode-init</code> the boot menu will stay the same and the system will automatically boot into live mode when it detects a read-only disk otherwise it boots normally into persistent mode.</li></ul>
 <h1><span class="mw-headline" id="Warning">Warning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=2.html" title="Edit section: Warning">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Live mode is not amnesic; in particular, memory forensics has not been taken into account! The primary objective is preventing malware from gaining persistence and having an unchanged system after each reboot.<br/>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Live mode is not amnesic by itself and needs extra steps to be taken on the host to be effective. Also, memory forensics has not been taken into account! The primary objective is preventing malware from gaining persistence and having an unchanged system after each reboot.<br/>
 <p><br/>
 Whonix-Workstation and Whonix-Gateway: It is also recommended to regularly boot into persistent mode for installation of <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">updates</a>.
 </p>
@@ -181,12 +185,103 @@ When Whonix is run as a live system, all changes are written to RAM by default. 
 </p><p>To make memory forensics harder, the machine should either be removed from any power source (by pulling the plug / removing the battery) and/or the memory should be wiped upon shutdown.
 </p>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-src="/w/images/c/c8/Ambox_notice.png" height="40" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Since live mode makes each write go to RAM, the user might want to increase the memory assigned to the VM to improve performance; for example, if large files are regularly downloaded.</div></td></tr></tbody></table>
-<h1><span class="mw-headline" id="Live-mode_Configuration">Live-mode Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=3.html" title="Edit section: Live-mode Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><br/>
+</p>
+<h3><span class="mw-headline" id="Anti-Forensics_Precautions">Anti-Forensics Precautions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=3.html" title="Edit section: Anti-Forensics Precautions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Whonix 15 includes grub-live by default. When using this feature in Whonix VMs, some precautions need to be taken even on trusted systems like GNU/Linux hosts to prevent leaving traces (proprietary OSs are a lost cause). At the moment, the only advantage of doing this over running <a data-href="/wiki/Grub-live" href="./Grub-live.html" title="Grub-live">grub-live</a> on the host, is to achieve selective amnesia for some VMs while others remain persistent. As grub-live development continues to advance allowing for selective exemption of host directories, this may not be necessary in the future. This section is a work in progress and not exhaustive.
+</p><p><br/>
+</p>
+<ul><li>Dealing with swap:</li></ul>
+<p>Tails documentation comments that host swapping may be the biggest threat to anti-forensics on Linux when running in a VM <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Linux does use swapping despite having apparent "free" memory. The kernel tends to swap out long-inactive and memory-consuming processes. This frees up RAM for caches, thus improves responsiveness.
+</p><p><br/>
+<u>Disabling swap for entire system</u>
+</p><p>Turning off for the whole system may cause a system instability/crashes if the RAM hard limit is hit. However the ample RAM in new systems makes it unlikely  and it is worth the tradeoff.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p><br/>
+This command will disable swap and delete the file during the life of this session:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo swapoff -a</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo swapoff -a</textarea>
+</div>
+</div>
+<p>To disable swap in a persistent way edit the <code>fstab</code> file and comment out the line with the swap partition with a <code>#</code>:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/fstab</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/fstab</textarea>
+</div>
+</div>
+<p>Save and reboot.
+</p><p>Confirm it is off by checking the <code>free</code> command. The swap line should show zeros:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>free -h</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">free -h</textarea>
+</div>
+</div>
+<p><br/>
+<u>Disabling swapping selectively for KVM VMs</u>
+</p><p>An alternative KVM only solution is to set guest memory pages to being locked<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p>
+<pre>&lt;memoryBacking&gt;&lt;locked/&gt;&lt;/memoryBacking&gt;
+</pre>
+<p>This option is not without disadvantages however and can be abused by malicious guests DoSing the host through RAM exhaustion.<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>N.B. Setting <code>vm.swappiness = 0</code> does not completely prevent swapping.<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p><p><br/>
+</p>
+<ul><li>Enable grub-live on Whonix Gateway too:</li></ul>
+<p>It is recommended users run the live package on Whonix Gateway too after initial Tor start when a guard has been set. This should eliminate any Tor related cached data like DNS requests that could leave traces about web activity. However be warned that it may make your Tor behavior distinguishable from regular Tor users when it comes to redownloading consensus files more frequently or when switching to a new guard after some months have passed. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p><br/>
+</p>
+<ul><li>Disabling program crash dumps:</li></ul>
+<p>Besides swap there is the problem of disabling process memory dumping to disk.
+</p><p>A user has to go out of their way to enable kernel memory dumps which isn't done by default, with kdump-tools on Debian.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p><p>However systemd seems to do this for all userspace processes and needs this to be explicitly disabled in its own config files because it ignores sysctl options.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p><p>systemd's default behavior is to generate core dumps for all processes in <code>/var/lib/systemd/coredump</code>. This behavior can be overridden by creating a configuration snippet in the <code>/etc/systemd/coredump.conf.d/</code> directory with the following content:
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir /etc/systemd/coredump.conf.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir /etc/systemd/coredump.conf.d</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/systemd/coredump.conf.d/custom.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/systemd/coredump.conf.d/custom.conf</textarea>
+</div>
+</div>
+<pre>[Coredump]
+Storage=none
+</pre>
+<p><br/>
+Then reload systemd's configuration:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl daemon-reload</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl daemon-reload</textarea>
+</div>
+</div>
+<p>This method alone is usually sufficient to disable userspace core dumps, so long as no other programs enable automatic core dumps on the system, but the coredump is still generated in memory and systemd-coredump runs.
+</p>
+<h1><span class="mw-headline" id="Live-mode_Configuration">Live-mode Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=4.html" title="Edit section: Live-mode Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><code>grub-live</code> is currently <a data-href="/wiki/Unsupported" href="./Unsupported.html" title="Unsupported">unsupported</a> on <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a>, but may become available in the future. Refer to the following <a class="external text" data-href="https://forums.whonix.org/t/whonix-live-mode/3894/31" href="https://forums.whonix.org/t/whonix-live-mode/3894/31" rel="noreferrer noopener" target="_blank">forum discussion</a> for further information.
 </p><p>In Qubes R4, <a data-href="/wiki/Qubes/DisposableVM" href="./Qubes/DisposableVM.html" title="Qubes/DisposableVM">Qubes DisposableVMs</a> are a suitable alternative, as well as the <a class="external text" data-href="https://www.qubes-os.org/doc/live-usb/" href="https://www.qubes-os.org/doc/live-usb/" rel="noreferrer noopener" target="_blank">Qubes Live USB</a>.
 </p>
-<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=5.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Backup.
 </p>
@@ -270,7 +365,7 @@ To boot into normal mode again, simply revert this change via:
 </p>
 </div>
 </div>
-<h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=6.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=7.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Backup.
 </p>
@@ -326,7 +421,7 @@ To boot into normal mode again, simply revert this change via:
 </p><p>To increase security, the VM disks can be set to read-only. Otherwise, malware running as root in the VM could theoretically mount the image read-write and gain persistence in this way.
 To do so, power off the machine and set the hard disk to read-only in the virt-manager GUI before booting into live mode. To boot into normal mode again, simply revert this change and choose the normal boot option in the GRUB menu.
 </p>
-<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=7.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=8.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Skip this section if the <a data-href="/wiki/Whonix_Live#KVM" href="./Whonix_Live.html" title="Whonix Live">KVM Live-mode</a> or <a data-href="/wiki/Whonix_Live#VirtualBox" href="./Whonix_Live.html" title="Whonix Live">Virtualbox Live-mode</a> configuration steps above have already been completed.</div></td></tr></tbody></table>
 <p><br/>
 Virtualbox and KVM:
@@ -335,7 +430,7 @@ Virtualbox and KVM:
 <p>VirtualBox only:
 </p>
 <ul><li><a data-href="/wiki/Whonix_Live/Immutable_Disk_Method_on_VirtualBox" href="./Whonix_Live/Immutable_Disk_Method_on_VirtualBox.html" title="Whonix Live/Immutable Disk Method on VirtualBox">Whonix Live/Immutable Disk Method on VirtualBox</a></li></ul>
-<h1><span id="Debugging/Errors"></span><span class="mw-headline" id="Debugging.2FErrors">Debugging/Errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=8.html" title="Edit section: Debugging/Errors">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span id="Debugging/Errors"></span><span class="mw-headline" id="Debugging.2FErrors">Debugging/Errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9.html" title="Edit section: Debugging/Errors">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>An inconsistent filesystem will likely result in errors during live-boot. For instance, inconsistencies can arise when the VM is killed instead of performing a normal shutdown in persistent mode. Therefore, to make sure it is consistent, run <code>fsck</code> in persistent mode. Debian automatically does this during boot. VMs running in live mode can be killed without problems.
 </p><p>In the case of non-<code>fsck</code> related errors using <code>ro-mode-init</code> (like dropping to an initramfs shell), add the following to the kernel command line/GRUB menu for easier debugging:
 </p><p></p><div class="codeContainerNew">
@@ -346,13 +441,13 @@ Virtualbox and KVM:
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">debug=1 break=init-premount</textarea>
 </div>
 </div>
-<h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=9.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=10.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>In the future, running Whonix from a <a data-href="/wiki/FAQ#Will_there_be_a_Whonix_Live_CD_or_DVD.3F" href="./FAQ.html" title="FAQ">Live CD or DVD</a> might be supported. Check this wiki entry at a later date.
 </p><p>To learn more about live mode, refer to the <a class="external text" data-href="https://forums.whonix.org/t/whonix-live-mode" href="https://forums.whonix.org/t/whonix-live-mode" rel="noreferrer noopener" target="_blank">Live-mode forum discussion</a>.
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=10.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
-<div class="mw-references-wrap"><ol class="references">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
 Since Whonix 14.</span>
 </li>
@@ -363,6 +458,24 @@ Since Whonix 14.</span>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a data-href="/wiki/Full_Disk_Encryption_and_Encrypted_Images#Other_Security_Considerations" href="./Full_Disk_Encryption_and_Encrypted_Images.html" title="Full Disk Encryption and Encrypted Images">Encrypted Guest Images - Other Security Considerations</a></span>
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a data-href="/wiki/Core_Dumps" href="./Core_Dumps.html" title="Core Dumps">Core Dumps</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tails.boum.org/doc/advanced_topics/virtualization/index.en.html#security" href="https://tails.boum.org/doc/advanced_topics/virtualization/index.en.html" rel="noreferrer noopener" target="_blank">https://tails.boum.org/doc/advanced_topics/virtualization/index.en.html#security</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://superuser.com/questions/243357/how-to-prevent-a-specific-program-from-swapping" href="https://superuser.com/questions/243357/how-to-prevent-a-specific-program-from-swapping" rel="noreferrer noopener" target="_blank">https://superuser.com/questions/243357/how-to-prevent-a-specific-program-from-swapping</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://serverfault.com/questions/561446/how-can-i-keep-important-vms-in-memory-without-disabling-swap" href="https://serverfault.com/questions/561446/how-can-i-keep-important-vms-in-memory-without-disabling-swap" rel="noreferrer noopener" target="_blank">https://serverfault.com/questions/561446/how-can-i-keep-important-vms-in-memory-without-disabling-swap</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://libvirt.org/formatdomain.html#elementsMemoryBacking" href="https://libvirt.org/formatdomain.html" rel="noreferrer noopener" target="_blank">https://libvirt.org/formatdomain.html#elementsMemoryBacking</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">When set and supported by the hypervisor, memory pages belonging to the domain will be locked in host's memory and the host will not be allowed to swap them out, which might be required for some workloads such as real-time. For QEMU/KVM guests, the memory used by the QEMU process itself will be locked too: unlike guest memory, this is an amount libvirt has no way of figuring out in advance, so it has to remove the limit on locked memory altogether. Thus, enabling this option opens up to a potential security risk: the host will be unable to reclaim the locked memory back from the guest when it's running out of memory, which means a malicious guest allocating large amounts of locked memory could cause a denial-of-service attack on the host. Because of this, using this option is discouraged unless your workload demands it; even then, it's highly recommended to set a `hard_limit` (see [memory tuning](<a class="external free" data-href="https://libvirt.org/formatdomain.html#elementsMemoryTuning" href="https://libvirt.org/formatdomain.html" rel="noreferrer noopener" target="_blank">https://libvirt.org/formatdomain.html#elementsMemoryTuning</a>)) on memory allocation suitable for the specific environment at the same time to mitigate the risks described above.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://superuser.com/questions/760102/why-do-i-get-swapping-even-if-i-set-vm-swappiness-to-0" href="https://superuser.com/questions/760102/why-do-i-get-swapping-even-if-i-set-vm-swappiness-to-0" rel="noreferrer noopener" target="_blank">https://superuser.com/questions/760102/why-do-i-get-swapping-even-if-i-set-vm-swappiness-to-0</a></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/t/whonix-live-mode-amnesia-amnesic-non-persistent-anti-forensics/3894/127?u=hulahoop" href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/t/whonix-live-mode-amnesia-amnesic-non-persistent-anti-forensics/3894/127?u=hulahoop" rel="noreferrer noopener" target="_blank">http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/t/whonix-live-mode-amnesia-amnesic-non-persistent-anti-forensics/3894/127?u=hulahoop</a></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.bentasker.co.uk/documentation/linux/312-installing-and-configuring-kdump-on-debian-jessie" href="https://www.bentasker.co.uk/documentation/linux/312-installing-and-configuring-kdump-on-debian-jessie" rel="noreferrer noopener" target="_blank">https://www.bentasker.co.uk/documentation/linux/312-installing-and-configuring-kdump-on-debian-jessie</a></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://wiki.archlinux.org/index.php/Core_dump" href="https://wiki.archlinux.org/index.php/Core_dump" rel="noreferrer noopener" target="_blank">https://wiki.archlinux.org/index.php/Core_dump</a></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -405,7 +518,7 @@ Since Whonix 14.</span>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="./Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="./Whonix_Live" href="./Whonix_Live" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -419,38 +532,38 @@ Since Whonix 14.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190324192625
+Cached time: 20190421182807
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.081 seconds
-Real time usage: 0.155 seconds
-Preprocessor visited node count: 453/1000000
-Preprocessor generated node count: 1529/1000000
-Post‐expand include size: 12996/2097152 bytes
-Template argument size: 3793/2097152 bytes
+CPU time usage: 0.078 seconds
+Real time usage: 0.121 seconds
+Preprocessor visited node count: 654/1000000
+Preprocessor generated node count: 1981/1000000
+Post‐expand include size: 13627/2097152 bytes
+Template argument size: 3961/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3767/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
+Unstrip post‐expand size: 8959/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
 Lua virtual size: 7.6 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  138.260      1 -total
- 40.57%   56.095      3 Template:Mbox
- 23.12%   31.969      1 Template:Header
- 15.28%   21.122     11 Template:Box
-  9.61%   13.281     11 Template:CodeSelect
-  6.82%    9.423      1 Template:Footer
-  6.01%    8.304      1 Template:Maintainer
-  5.75%    7.951      2 Template:Install_Package
-  3.19%    4.414      1 Template:Title
-  2.81%    3.884      1 Template:Code2
+100.00%   95.558      1 -total
+ 28.71%   27.432      3 Template:Mbox
+ 22.36%   21.363      1 Template:Header
+ 21.20%   20.258     17 Template:CodeSelect
+ 20.75%   19.824     11 Template:Box
+  9.23%    8.816      1 Template:Footer
+  8.63%    8.244      2 Template:Install_Package
+  4.46%    4.263      1 Template:Reflist
+  2.44%    2.332      1 Template:Whonix_Live_Backup
+  2.14%    2.049      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=40308" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=40308">https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=40308</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=42819" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=42819">https://www.whonix.org/w/index.php?title=Whonix_Live&amp;oldid=42819</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -461,7 +574,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 December 2018, at 13:11.</li>
+<li id="footer-lastmod"> This page was last edited on 21 April 2019, at 19:37.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -482,5 +595,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 </div>
 
 </body>
-<!-- Cached/compressed 20190324192625 -->
+<!-- Cached/compressed 20190421182807 -->
 </html>
