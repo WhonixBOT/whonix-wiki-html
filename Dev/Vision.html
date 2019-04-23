@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Vision - Whonix
  url: ../Dev/Vision
- date: Mon Apr 22 07:35:28 2019
+ date: Tue Apr 23 07:35:15 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -124,10 +124,10 @@ Whonix requires Donations to stay alive.
 <h1><span id="Whonix²"></span><span class="mw-headline" id="Whonix.C2.B2">Whonix²</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Vision&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Vision&amp;action=edit&amp;section=1.html" title="Edit section: Whonix²">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>That's just a code name for a <b>BOX</b> setup "2.0" that may eventually offer strong guarantees of security and anonymity.
 </p><p>It should address all the current single points of failure:
-</p><p><b>CPU:</b> Even in a microkernel + IOMMU system the CPU (and to some extend the GPU, this ) needs to be trusted blindly. The system needs to consists of multiple (diverse) CPUs. Whonix with Physical Isolation already does that. This is just an reminder that software based isolation (through next gen sandboxing and microkernel design) will never be able to replace hardware isolation.
+</p><p><b>CPU:</b> Even in a microkernel + IOMMU system the CPU (and to some extend the GPU, this ) needs to be trusted blindly. The system needs to consists of multiple (diverse) CPUs. Whonix ™ with Physical Isolation already does that. This is just an reminder that software based isolation (through next gen sandboxing and microkernel design) will never be able to replace hardware isolation.
 </p><p><b>Software/Compiler</b> Even if the TCB is small and verifiable to some extent there is an inherently unsolvable problem: Compilers ("trusting trust"). The only option to improve this I see is to rely on a diverse "polyculture" of software stacks and infrastructure instead of our current Windows and gcc monocultures. (I suppose most .mil and all research microkernels are written on monolithic untrusted "legacy" systems). Alternatives do exist (most likely built with gcc...) but probably not mature enough, though I hear OpenBSD kernel can be built with pcc. clang/LLVM is probably the best bet. This also extends to the build system, workstations and gateways should be built on their respective target platforms, not a single build system.
-</p><p><b>Software updates:</b> Currently, one single bad update from Debian and it is game over. Software updates are always a root "backdoor", they grant unknown people full remote access to all your systems. This needs to be changed. If the TCB is small and well tested there won't be many security updates and they will be simple, small patches. Deterministic binary builds could make that userfriendly. At least we should not rely on a single organization to provide security updates for all systems in Whonix (this includes having the same upstream for complicated software, i.e. the Linux kernel...).
-</p><p><b>Tor:</b> Currently, one serious Tor vulnerability and it is game over. Even with true end-to-end communications, if Tor (or its TCB) is subverted an adversary can find out who is talking and to whom one is talking. Whonix should route all traffic over at least two strong anonymity networks (not just single hop proxy/VPN/SSH). Further, there should be the option to use a high latency network. This could be as simple as a single onion service (which would have to be fully trusted to not collude with our "global adversary". A real solution would of course have to be decentralized. The only options so far are remailers (Mixminion...) but those have few users (poor anonymity set) which is probably related to their outdated user interface and experience. However, even with a small number of users, if remailers are routed through Tor they are still more secure than Tor (in this context the resulting anonymity is cumulative).
+</p><p><b>Software updates:</b> Currently, one single bad update from Debian and it is game over. Software updates are always a root "backdoor", they grant unknown people full remote access to all your systems. This needs to be changed. If the TCB is small and well tested there won't be many security updates and they will be simple, small patches. Deterministic binary builds could make that userfriendly. At least we should not rely on a single organization to provide security updates for all systems in Whonix ™ (this includes having the same upstream for complicated software, i.e. the Linux kernel...).
+</p><p><b>Tor:</b> Currently, one serious Tor vulnerability and it is game over. Even with true end-to-end communications, if Tor (or its TCB) is subverted an adversary can find out who is talking and to whom one is talking. Whonix ™ should route all traffic over at least two strong anonymity networks (not just single hop proxy/VPN/SSH). Further, there should be the option to use a high latency network. This could be as simple as a single onion service (which would have to be fully trusted to not collude with our "global adversary". A real solution would of course have to be decentralized. The only options so far are remailers (Mixminion...) but those have few users (poor anonymity set) which is probably related to their outdated user interface and experience. However, even with a small number of users, if remailers are routed through Tor they are still more secure than Tor (in this context the resulting anonymity is cumulative).
 </p><p><b>"Protocol leaks", Anonymity set reduction:</b> The current platform of choice (for pretty much everything, including anonymous communication) is the web browser. Browser really suck when it comes to privacy, anonymity or security. Allowing scripting, storing IDs (cookies and more), constantly changing features (html5, webgl, websockets...), <a class="external text" data-href="http://rdist.root.org/2010/11/29/final-post-on-javascript-crypto/" href="http://rdist.root.org/2010/11/29/final-post-on-javascript-crypto/" rel="noreferrer noopener" target="_blank">lack</a> of strong crypto environment make the web browser one of the worst platforms imaginable for strong anonymity (or security). Why? Because we also lack a credible alternative. One such alternative could have been the now dead or in limbo <a class="external text" data-href="http://syndie.I2P2.de/" href="http://syndie.I2P2.de/" rel="noreferrer noopener" target="_blank">Syndie</a> ("Syndie's design as an anonymity-sensitive client application carefully avoids the intricate data sensitivity problems that nearly every application not built with anonymity in mind does not.")
 </p><p><b>In summary:</b> Whonix² needs to consist of at least two very diverse systems, different hardware manufacturers, different kernels, different companies/orgs providing support and offer at least two different anonymizing networks. Bonus points for utilizing diverse crypto systems and cascades. Neither system should "know" both who is communicating and with whom.
 </p>
@@ -171,47 +171,49 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Vision" href="../Dev/Vision" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Vision" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Vision" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Vision" href="https://www.Whonix.org/wiki/Dev/Vision" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Vision" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Vision" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Vision&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Vision&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Vision" href="https://facebook.com/sharer.php?u=../Dev/Vision">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Vision&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Vision&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Dev/Vision&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Vision&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190324190137
+Cached time: 20190423001738
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.015 seconds
-Real time usage: 0.019 seconds
-Preprocessor visited node count: 59/1000000
-Preprocessor generated node count: 236/1000000
-Post‐expand include size: 2456/2097152 bytes
+CPU time usage: 0.017 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 78/1000000
+Preprocessor generated node count: 316/1000000
+Post‐expand include size: 2612/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2271/5000000 bytes
+Unstrip post‐expand size: 2420/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   14.068      1 -total
- 65.57%    9.225      1 Template:Footer
- 29.49%    4.149      1 Template:Header
- 16.78%    2.361      1 Template:Share
- 12.53%    1.763      1 Template:Edit_it
-  6.13%    0.862      1 Template:RandomNews
-  5.25%    0.739      1 Template:Whonix_onion
-  4.58%    0.644      2 Template:Name
+100.00%   15.580      1 -total
+ 74.66%   11.632      1 Template:Footer
+ 14.96%    2.331      1 Template:Header
+ 14.41%    2.245      1 Template:Edit_it
+ 14.16%    2.206      1 Template:Share
+  7.28%    1.134      1 Template:RandomNews
+  5.94%    0.926      7 Template:Project_name_short
+  5.52%    0.860      9 Template:Project_name
+  5.28%    0.822      2 Template:Name
+  3.74%    0.583      1 Template:Whonix_onion
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=32967" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=32967">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=32967</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=43342" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=43342">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Vision&amp;oldid=43342</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -222,7 +224,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 13 February 2018, at 12:43.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 13:23.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -243,5 +245,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 </div>
 
 </body>
-<!-- Cached/compressed 20190324190137 -->
+<!-- Cached/compressed 20190423001738 -->
 </html>

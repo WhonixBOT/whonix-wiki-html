@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/SSL Certificate Pinning - Whonix
  url: ../Dev/SSL_Certificate_Pinning
- date: Mon Apr 22 07:35:01 2019
+ date: Tue Apr 23 07:34:49 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -173,9 +173,9 @@ Whonix requires Donations to stay alive.
 <ul><li>Not even Tor Browser does pin the Certificate yet. (The Tor Project ticket: <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/3555" href="https://trac.torproject.org/projects/tor/ticket/3555" rel="noreferrer noopener" target="_blank">enhancement: Pin *.torproject.org's certs in TBB</a>) Mike also says "low priority", where Patrick disagrees. However, Tor Browser at least <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/6098#comment:4" href="https://trac.torproject.org/projects/tor/ticket/6098" rel="noreferrer noopener" target="_blank">enforces HSTS for *.torproject.org</a>.</li></ul></li>
 <li>Implementation.
 <ul><li>torbrowser-launcher is not installable from Debian stable at time of writing. TODO: expand</li>
-<li>Whonix is still installing <a class="external text" data-href="https://github.com/Whonix/tb-updater" href="https://github.com/Whonix/tb-updater" rel="noreferrer noopener" target="_blank">tb-updater</a> rather than <a class="external text" data-href="https://github.com/micahflee/torbrowser-launcher/" href="https://github.com/micahflee/torbrowser-launcher/" rel="noreferrer noopener" target="_blank">torbrowser-launcher</a> by default because, see <a class="external text" data-href="https://phabricator.whonix.org/T18" href="https://phabricator.whonix.org/T18" rel="noreferrer noopener" target="_blank">ticket</a>. So the certificate file <i><span style="background-color:#FBFBFB">/usr/share/torbrowser-launcher/torproject.pem</span></i> is not installed by default.</li>
+<li>Whonix ™ is still installing <a class="external text" data-href="https://github.com/Whonix/tb-updater" href="https://github.com/Whonix/tb-updater" rel="noreferrer noopener" target="_blank">tb-updater</a> rather than <a class="external text" data-href="https://github.com/micahflee/torbrowser-launcher/" href="https://github.com/micahflee/torbrowser-launcher/" rel="noreferrer noopener" target="_blank">torbrowser-launcher</a> by default because, see <a class="external text" data-href="https://phabricator.whonix.org/T18" href="https://phabricator.whonix.org/T18" rel="noreferrer noopener" target="_blank">ticket</a>. So the certificate file <i><span style="background-color:#FBFBFB">/usr/share/torbrowser-launcher/torproject.pem</span></i> is not installed by default.</li>
 <li>It might be a Debian packaging bug to have whonixcheck depend on torbrowser-launcher for this purpose? Ignorable point, because whonixcheck is too specific to be included into Debian official repository anyhow.</li>
-<li>We would also have to install torbrowser-launcher on Whonix-Gateway, so the certificate file <i><span style="background-color:#FBFBFB">/usr/share/torbrowser-launcher/torproject.pem</span></i> gets installed by default. But since by Whonix design, users must not use Tor Browser in Whonix-Gateway, we would have to hide (config-package-dev displace) torbrowser-launcher's start menu entries as well as build a wrapper around its binaries to warn against this. This is doable, but no one has implemented that yet.</li>
+<li>We would also have to install torbrowser-launcher on Whonix-Gateway ™, so the certificate file <i><span style="background-color:#FBFBFB">/usr/share/torbrowser-launcher/torproject.pem</span></i> gets installed by default. But since by Whonix ™ design, users must not use Tor Browser in Whonix-Gateway ™, we would have to hide (config-package-dev displace) torbrowser-launcher's start menu entries as well as build a wrapper around its binaries to warn against this. This is doable, but no one has implemented that yet.</li>
 <li>We are unaware of any other package or even project that does provide SSL certificates for direct pinning (do not confuse this with SSL CA pinning), that we could rely on. Apparently there is not even a list of certain domains and their SSL certificates (public key hashes) (do not confuse this with SSL CA pinning).</li></ul></li>
 <li>Maintenance burden.
 <ul><li><a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/5789" href="https://trac.torproject.org/projects/tor/ticket/5789" rel="noreferrer noopener" target="_blank">The Tor Project (TPO) refused to maintain an OpenPGP signed certificate</a>. (They are excused: maintenance burden. TODO: expand)</li>
@@ -358,25 +358,25 @@ if (!defined($server_cert) || ($server_cert == 0)) {
 <p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="../Dev/SSL_Certificate_Pinning" href="../Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/SSL_Certificate_Pinning" href="https://www.Whonix.org/wiki/Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/SSL_Certificate_Pinning" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/SSL_Certificate_Pinning&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/SSL_Certificate_Pinning&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=../Dev/SSL_Certificate_Pinning" href="https://facebook.com/sharer.php?u=../Dev/SSL_Certificate_Pinning">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190324194704
+Cached time: 20190422215245
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.037 seconds
-Real time usage: 0.078 seconds
-Preprocessor visited node count: 294/1000000
-Preprocessor generated node count: 731/1000000
-Post‐expand include size: 3223/2097152 bytes
+CPU time usage: 0.034 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 323/1000000
+Preprocessor generated node count: 821/1000000
+Post‐expand include size: 3405/2097152 bytes
 Template argument size: 561/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
@@ -385,19 +385,19 @@ Unstrip post‐expand size: 4384/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   63.197      1 -total
- 65.84%   41.607      1 Template:Header
- 17.57%   11.105      1 Template:Footer
- 11.56%    7.305      3 Template:CodeSelect
-  3.52%    2.223      1 Template:Share
-  2.96%    1.869      1 Template:Edit_it
-  2.51%    1.588      1 Template:RandomNews
-  1.63%    1.032      3 Template:Code2
-  1.19%    0.755      3 Template:Curl_Secure
-  1.07%    0.675      1 Template:Whonix_onion
+100.00%   22.019      1 -total
+ 45.62%   10.044      1 Template:Footer
+ 29.26%    6.444      3 Template:CodeSelect
+  9.35%    2.058      1 Template:Header
+  8.05%    1.772      1 Template:Edit_it
+  8.03%    1.769      1 Template:Share
+  4.05%    0.891      1 Template:RandomNews
+  3.41%    0.750      7 Template:Project_name_short
+  3.25%    0.716      3 Template:Curl_Secure
+  2.77%    0.610      3 Template:Code2
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=41618" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=41618">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=41618</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=44052" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=44052">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/SSL_Certificate_Pinning&amp;oldid=44052</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -408,7 +408,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 16 March 2019, at 07:24.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 15:00.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -429,5 +429,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 </div>
 
 </body>
-<!-- Cached/compressed 20190324194704 -->
+<!-- Cached/compressed 20190422215245 -->
 </html>

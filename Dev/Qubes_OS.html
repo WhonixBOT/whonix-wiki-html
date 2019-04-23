@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes - Whonix
  url: ../Dev/Qubes_OS
- date: Mon Apr 22 07:34:57 2019
+ date: Tue Apr 23 07:34:44 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -17,8 +17,8 @@
 
 <meta content="MediaWiki 1.31.1" name="generator"/>
 <meta content="" name="google-site-verification"/>
-<meta content="Qubes-Whonix development notes." name="description"/>
-<meta content="Qubes-Whonix development notes." name="twitter:description"/>
+<meta content="Qubes-Whonix ™ development notes." name="description"/>
+<meta content="Qubes-Whonix ™ development notes." name="twitter:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="image"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" name="twitter:image:src"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -37,7 +37,7 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Qubes" property="og:title"/>
 <meta content="../Dev/Qubes" property="og:url"/>
-<meta content="Qubes-Whonix development notes." property="og:description"/>
+<meta content="Qubes-Whonix ™ development notes." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 
 <meta content="" property="fb:app_id"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -154,7 +154,7 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-20"><a href="#tb-updater_vs_TemplateVM"><span class="tocnumber">16</span> <span class="toctext">tb-updater vs TemplateVM</span></a>
 <ul>
 <li class="toclevel-2 tocsection-21"><a href="#prerequisite_knowledge"><span class="tocnumber">16.1</span> <span class="toctext">prerequisite knowledge</span></a></li>
-<li class="toclevel-2 tocsection-22"><a href="#Implementation_as_of_Qubes-Whonix_11"><span class="tocnumber">16.2</span> <span class="toctext">Implementation as of Qubes-Whonix 11</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Implementation_as_of_Qubes-Whonix_.E2.84.A2_11"><span class="tocnumber">16.2</span> <span class="toctext">Implementation as of Qubes-Whonix ™ 11</span></a></li>
 <li class="toclevel-2 tocsection-23"><a href="#Brainstorming"><span class="tocnumber">16.3</span> <span class="toctext">Brainstorming</span></a>
 <ul>
 <li class="toclevel-3 tocsection-24"><a href="#Headless_TBB_Internal_Updater_Updates_in_AppVMs"><span class="tocnumber">16.3.1</span> <span class="toctext">Headless TBB Internal Updater Updates in AppVMs</span></a></li>
@@ -180,7 +180,7 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-3 tocsection-35"><a href="#Fedora_rpm"><span class="tocnumber">19.1.2</span> <span class="toctext">Fedora rpm</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-36"><a href="#Build_Qubes-Whonix_Templates"><span class="tocnumber">19.2</span> <span class="toctext">Build Qubes-Whonix Templates</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Build_Qubes-Whonix_.E2.84.A2_Templates"><span class="tocnumber">19.2</span> <span class="toctext">Build Qubes-Whonix ™ Templates</span></a></li>
 <li class="toclevel-2 tocsection-37"><a href="#Official_Builds"><span class="tocnumber">19.3</span> <span class="toctext">Official Builds</span></a></li>
 </ul>
 </li>
@@ -202,7 +202,7 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-50"><a href="#Torified_Updates_Proxy"><span class="tocnumber">30</span> <span class="toctext">Torified Updates Proxy</span></a>
 <ul>
 <li class="toclevel-2 tocsection-51"><a href="#sys-whonix"><span class="tocnumber">30.1</span> <span class="toctext">sys-whonix</span></a></li>
-<li class="toclevel-2 tocsection-52"><a href="#Whonix_TemplateVMs"><span class="tocnumber">30.2</span> <span class="toctext">Whonix TemplateVMs</span></a>
+<li class="toclevel-2 tocsection-52"><a href="#Whonix_.E2.84.A2_TemplateVMs"><span class="tocnumber">30.2</span> <span class="toctext">Whonix ™ TemplateVMs</span></a>
 <ul>
 <li class="toclevel-3 tocsection-53"><a href="#Qubes_R3.2_2"><span class="tocnumber">30.2.1</span> <span class="toctext">Qubes R3.2</span></a></li>
 <li class="toclevel-3 tocsection-54"><a href="#Qubes_R4_2"><span class="tocnumber">30.2.2</span> <span class="toctext">Qubes R4</span></a></li>
@@ -219,7 +219,7 @@ Whonix requires Donations to stay alive.
 </li>
 <li class="toclevel-1 tocsection-59"><a href="#bind-dirs_flow_chart"><span class="tocnumber">33</span> <span class="toctext">bind-dirs flow chart</span></a></li>
 <li class="toclevel-1 tocsection-60"><a href="#qubes-whonix-postinit.service_flow_chart"><span class="tocnumber">34</span> <span class="toctext">qubes-whonix-postinit.service flow chart</span></a></li>
-<li class="toclevel-1 tocsection-61"><a href="#Qubes-Whonix_14_release_testing"><span class="tocnumber">35</span> <span class="toctext">Qubes-Whonix 14 release testing</span></a></li>
+<li class="toclevel-1 tocsection-61"><a href="#Qubes-Whonix_.E2.84.A2_14_release_testing"><span class="tocnumber">35</span> <span class="toctext">Qubes-Whonix ™ 14 release testing</span></a></li>
 <li class="toclevel-1 tocsection-62"><a href="#lightdm_autologin"><span class="tocnumber">36</span> <span class="toctext">lightdm autologin</span></a></li>
 <li class="toclevel-1 tocsection-63"><a href="#ssh_into_Qubes_dom0"><span class="tocnumber">37</span> <span class="toctext">ssh into Qubes dom0</span></a></li>
 <li class="toclevel-1 tocsection-64"><a href="#releasever"><span class="tocnumber">38</span> <span class="toctext">releasever</span></a></li>
@@ -305,7 +305,7 @@ Whonix requires Donations to stay alive.
 <h1><span class="mw-headline" id="Config_Files_Changes">Config Files Changes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=4.html" title="Edit section: Config Files Changes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external text" data-href="https://groups.google.com/d/msg/qubes-users/AqZV65yZLuU/RQlLPOn5yRsJ" href="https://groups.google.com/d/msg/qubes-users/AqZV65yZLuU/RQlLPOn5yRsJ" rel="noreferrer noopener" target="_blank">source</a>
 </p><p>I don't know how rpm packaging works. However, the TorVM rpm packaging seems simpler to me and introduce less overhead than Debian packaging at first view. Is there something like config-package-dev for Fedora? config-package-dev is a package to overtake ownership of other
-&gt; package's files. Such as, in Debian the Tor package owns /usr/share/tor/tor-service-defaults-torrc. Whonix needs to modify that file and keep it updated. config-package-dev can be used to avoid getting the file being overwritten when upstream releases and upgrade. Is there something like this for Fedora or is this even required? That would make a port much simpler, because for many parts, it is just diverted config files.
+&gt; package's files. Such as, in Debian the Tor package owns /usr/share/tor/tor-service-defaults-torrc. Whonix ™ needs to modify that file and keep it updated. config-package-dev can be used to avoid getting the file being overwritten when upstream releases and upgrade. Is there something like this for Fedora or is this even required? That would make a port much simpler, because for many parts, it is just diverted config files.
 </p><p>qubes-tor pacakages provides own config file (tor --defaults-torrc option used), so no need to override the one provided by tor package.
 </p><p>But to answer your question - no, rpm do not have option to take ownership of files from other packages, but to workaround this (rather sensible) limitation you can modify the config in triggers (so the file will be modified after each original package update).
 </p>
@@ -369,7 +369,7 @@ ntpdate in netvm (VM set as clockvm in qubes-prefs), then pass the result to 'da
 </p><p>Corollary: stream isolation cannot be circumvented.
 </p>
 <h1><span class="mw-headline" id="Inter-VM_Networking">Inter-VM Networking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=13.html" title="Edit section: Inter-VM Networking">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p><s>Current Qubes + Whonix implementation has both the Whonix-Gateway and Whonix-Workstation connected to the same backend FirewallVM and iptables forwarding is manually established between the Whonix IP addresses. This current method is really just an efficient hack for our initial Qubes + Whonix implementation. The native/proper way to network VMs in Qubes is via chaining their networking "backend" together, which is part of Xen networking structure. This is how other VMs in Qubes are networked, including TorVM. According to Qubes devs, these Xen backends provide simple point-to-point networking between VMs. So this would be advantageous for further isolation of inter-VM Whonix traffic, since, currently, all inter-VM traffic is routed through the internet-facing FirewallVM, which can also be shared by other VMs. This current implementation with a shared FirewallVM could be somewhat of a security concern for inter-VM traffic, and a reason to move to native/proper isolated point-to-point "backend" networking. Also, in the future, it is desirable to leverage full ProxyVM/ServiceVM networking between Whonix-Gateway and Whonix-Workstation, as the TorVM does. ProxyVM utilizes Xen "backend" networking but automates it with transparent Qubes GUI networking, making use of dynamically created virtual networking interfaces. Whonix may need to add onto or adjust its internal networking setup to be compatible with such native Qubes networking.</s>
+<p><s>Current Qubes + Whonix ™ implementation has both the Whonix-Gateway ™ and Whonix-Workstation ™ connected to the same backend FirewallVM and iptables forwarding is manually established between the Whonix ™ IP addresses. This current method is really just an efficient hack for our initial Qubes + Whonix ™ implementation. The native/proper way to network VMs in Qubes is via chaining their networking "backend" together, which is part of Xen networking structure. This is how other VMs in Qubes are networked, including TorVM. According to Qubes devs, these Xen backends provide simple point-to-point networking between VMs. So this would be advantageous for further isolation of inter-VM Whonix ™ traffic, since, currently, all inter-VM traffic is routed through the internet-facing FirewallVM, which can also be shared by other VMs. This current implementation with a shared FirewallVM could be somewhat of a security concern for inter-VM traffic, and a reason to move to native/proper isolated point-to-point "backend" networking. Also, in the future, it is desirable to leverage full ProxyVM/ServiceVM networking between Whonix-Gateway ™ and Whonix-Workstation ™, as the TorVM does. ProxyVM utilizes Xen "backend" networking but automates it with transparent Qubes GUI networking, making use of dynamically created virtual networking interfaces. Whonix ™ may need to add onto or adjust its internal networking setup to be compatible with such native Qubes networking.</s>
 </p><p>Older, perhaps outdated discussions related to this topic:
 </p>
 <ul><li><a class="external free" data-href="https://groups.google.com/d/topic/qubes-users/RFXoZ3zt-PE" href="https://groups.google.com/d/topic/qubes-users/RFXoZ3zt-PE" rel="noreferrer noopener" target="_blank">https://groups.google.com/d/topic/qubes-users/RFXoZ3zt-PE</a></li>
@@ -416,7 +416,7 @@ packages/whonix-ws-firewall/etc/whonix_firewall.d/30_default.conf:GATEWAY_IP="10
 <p>Overrulable. <br/>
 File: /etc/whonix_firewall.d/40_qubes <br/>
 Content: GATEWAY_IP="&lt;qubes-ip&gt;" <br/>
-Note: Keep a possible race condiation in mind. Depending on how that config snippnett is created and when whonix_firewall starts. Should the config change after whonix_firewall was already loaded, reload Whonix's firewall ("sudo whonix_firewall").
+Note: Keep a possible race condiation in mind. Depending on how that config snippnett is created and when whonix_firewall starts. Should the config change after whonix_firewall was already loaded, reload Whonix ™ firewall ("sudo whonix_firewall").
 </p>
 <pre>packages/anon-shared-helper-scripts/usr/lib/anon-shared-helper-scripts/tor_bootstrap_check.bsh:            TOR_CONTROL_HOST="10.152.152.10"
 packages/anon-shared-helper-scripts/usr/lib/anon-shared-helper-scripts/tor_bootstrap_check.bsh:            TOR_CONTROL_HOST="10.152.152.10"
@@ -517,7 +517,7 @@ packages/anon-gw-anonymizer-config/usr/share/tor/tor-service-defaults-torrc.anon
 <pre>packages/whonix-legacy/debian/whonix-legacy.preinst:         sed -i 's/192.168.0.10/10.152.152.10/g' "/home/user/.torchat/torchat.ini" || true
 packages/whonix-legacy/debian/whonix-legacy.preinst:         sed -i 's/192.168.0.10/10.152.152.10/g' "/home/user/.xchat2/xchat.conf" || true
 </pre>
-<p>No change required here. Only applies to Whonix 8.3.
+<p>No change required here. Only applies to Whonix ™ 8.3.
 </p>
 <pre>packages/{{whonix-gw}}-network-conf/etc/network/interfaces.whonix:       address 10.152.152.10
 </pre>
@@ -541,8 +541,8 @@ packages/sdwdate-plugin-anon-shared-streamiso/README.md:Sets sdwdate's proxy set
 </pre>
 <p>Just documentation strings. Either nevermind or patch documentation.
 </p>
-<pre>packages/anon-ws-disable-stacked-tor/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh:##   127.0.0.1:9050 to Whonix-Gateway 10.152.152.10:9050 and
-packages/anon-ws-disable-stacked-tor/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh:##   127.0.0.1:9150 to Whonix-Gateway 10.152.152.10:9150.
+<pre>packages/anon-ws-disable-stacked-tor/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh:##   127.0.0.1:9050 to {{gateway_product_name}} 10.152.152.10:9050 and
+packages/anon-ws-disable-stacked-tor/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh:##   127.0.0.1:9150 to {{gateway_product_name}} 10.152.152.10:9150.
 packages/anon-ws-disable-stacked-tor/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh:#export TOR_SOCKS_HOST="10.152.152.10"
 </pre>
 <p>Just documentation strings. Either nevermind or patch documentation.
@@ -610,8 +610,8 @@ packages/anon-gw-anonymizer-config/usr/local/etc/torrc.d/50_user.conf.examples:H
 <h2><span class="mw-headline" id="prerequisite_knowledge">prerequisite knowledge</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=21.html" title="Edit section: prerequisite knowledge">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>TPO stands for The Tor Project</li>
 <li>The /home folder of a TemplateVM is copied to a TemplateBasedVM at creation time of the TemplateBasedVM. From then, TemplateBasedVM's /home folder is left untouched. (Source: <a class="external free" data-href="https://groups.google.com/forum/#!topic/qubes-users/WwVJhGA-Xnc" href="https://groups.google.com/forum/" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/#!topic/qubes-users/WwVJhGA-Xnc</a>)</li>
-<li>Tor Browser installation path in Whonix 12 will change to ~/.tb. (<a class="external free" data-href="https://phabricator.whonix.org/T338" href="https://phabricator.whonix.org/T338" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T338</a>)</li>
-<li>Since Qubes-Whonix 11, Tor Browser gets installed by default for new images. (Not for in place upgrades.)</li>
+<li>Tor Browser installation path in Whonix ™ 12 will change to ~/.tb. (<a class="external free" data-href="https://phabricator.whonix.org/T338" href="https://phabricator.whonix.org/T338" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T338</a>)</li>
+<li>Since Qubes-Whonix ™ 11, Tor Browser gets installed by default for new images. (Not for in place upgrades.)</li>
 <li><a data-href="/wiki/Tor_Browser#Tor_Browser_Updater_.28Whonix.29" href="../Tor_Browser.html" title="Tor Browser">Tor Browser Updater (Whonix)</a> (((<a class="external free" data-href="https://github.com/Whonix/tb-updater" href="https://github.com/Whonix/tb-updater" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/tb-updater</a>))) vs</li>
 <li><a data-href="/wiki/Tor_Browser#Tor_Browser_Internal_Updater" href="../Tor_Browser.html" title="Tor Browser">Tor Browser Internal Updater</a></li>
 <li>Tor Browser Updater (Whonix) is unable to keep user settings (modifications such as bookmarks). It renames the old folder. Adds ".old.$(date)". So nothing is lost. Then installs a fresh one. Something important to know. This limitation can probably not be lifted in tb-updater. Upgrading Tor Browser is hard. (TPO often changed the folder layout in past.) That's what Tor Browser's internal updater is for.</li>
@@ -621,11 +621,11 @@ packages/anon-gw-anonymizer-config/usr/local/etc/torrc.d/50_user.conf.examples:H
 <li>A quick an dirty packaging of TBB would likely require too much maintenance effort. [Needs keeping up with upstream releases.]</li>
 <li>Packaging TBB is further complicated, because TBB abuses Firefox's user settings mechanism for configuring anonymity related settings. (Firefox prefs) Therefore separation of binaries and user data is difficult.</li>
 <li>Once TBB is in user's home folder...  [as TPO wants it] [and it does not work otherwise]... And once the user used it... And once the user stored settings there that the user cares about... [bookmarks, etc...] It gets very difficult for the TemplateVM and/or tb-updater to keep the TBB folder up to date. That's what Tor Browser Internal Updater is for.
-<ul><li>Unfortunately, this means, if a user had for example 5 different Qubes-Whonix-Workstation based AppVMs where Tor Browser is in use, the user would have to update each of its 5 TBBs using Tor Browser Internal Updater.</li>
+<ul><li>Unfortunately, this means, if a user had for example 5 different Qubes-Whonix-Workstation ™ based AppVMs where Tor Browser is in use, the user would have to update each of its 5 TBBs using Tor Browser Internal Updater.</li>
 <li>This is an issue, because Qubes updates are already complicated. (Various templates and dom0 needs to be updated.) This adds another layer of complexity. Users also have to care about updating stuff from within their AppVMs, which is counter intuitive.</li>
 <li>TBB stable has automatic updates enabled by default. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup></li></ul></li></ul>
-<h2><span class="mw-headline" id="Implementation_as_of_Qubes-Whonix_11">Implementation as of Qubes-Whonix 11</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=22.html" title="Edit section: Implementation as of Qubes-Whonix 11">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<ul><li>As of Qubes-Whonix 11 it is confusing. Running tb-updater in the TemplateVM and restarting AppVM won't result in up to date TBB's. [Since if the TemplateVM modifies /home, this will not propagate to AppVM's /home.]</li></ul>
+<h2><span id="Implementation_as_of_Qubes-Whonix_™_11"></span><span class="mw-headline" id="Implementation_as_of_Qubes-Whonix_.E2.84.A2_11">Implementation as of Qubes-Whonix ™ 11</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=22.html" title="Edit section: Implementation as of Qubes-Whonix ™ 11">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>As of Qubes-Whonix ™ 11 it is confusing. Running tb-updater in the TemplateVM and restarting AppVM won't result in up to date TBB's. [Since if the TemplateVM modifies /home, this will not propagate to AppVM's /home.]</li></ul>
 <h2><span class="mw-headline" id="Brainstorming">Brainstorming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=23.html" title="Edit section: Brainstorming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Headless_TBB_Internal_Updater_Updates_in_AppVMs">Headless TBB Internal Updater Updates in AppVMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=24.html" title="Edit section: Headless TBB Internal Updater Updates in AppVMs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>We could call a qrexec service that starts TBB in each individual AppVM heedlessly (without / with hidden gui, using xvfb or similar) so it will be fetching updates.
@@ -635,7 +635,7 @@ packages/anon-gw-anonymizer-config/usr/local/etc/torrc.d/50_user.conf.examples:H
 <a class="external free" data-href="https://phabricator.whonix.org/T417" href="https://phabricator.whonix.org/T417" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T417</a>
 </p>
 <h3><span class="mw-headline" id="keep_as_is">keep as is</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=26.html" title="Edit section: keep as is">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Newly created Qubes-Whonix-Workstation AppVMs inherit the TBB version that came pre-installed in the Qubes-Whonix-Workstation TemplateVM. From there, TBB's internal updater keeps care of updating it.
+<p>Newly created Qubes-Whonix-Workstation ™ AppVMs inherit the TBB version that came pre-installed in the Qubes-Whonix-Workstation ™ TemplateVM. From there, TBB's internal updater keeps care of updating it.
 </p>
 <h2><span class="mw-headline" id="Forum_Discussion_2">Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=27.html" title="Edit section: Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><a class="external free" data-href="https://forums.whonix.org/t/what-should-tor-browser-updater-whonix-do-in-a-templatevm" href="https://forums.whonix.org/t/what-should-tor-browser-updater-whonix-do-in-a-templatevm" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/what-should-tor-browser-updater-whonix-do-in-a-templatevm</a></li>
@@ -645,7 +645,7 @@ packages/anon-gw-anonymizer-config/usr/local/etc/torrc.d/50_user.conf.examples:H
 </p>
 <h1><span class="mw-headline" id="Upgrade_through_Clearnet">Upgrade through Clearnet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=29.html" title="Edit section: Upgrade through Clearnet">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Qubes_R3.2">Qubes R3.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=30.html" title="Edit section: Qubes R3.2">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Just a note about upgrading a Whonix-Gateway TemplateVM through Clearnet. Untorified! This is easily possible by setting the following environment variable.
+<p>Just a note about upgrading a Whonix-Gateway ™ TemplateVM through Clearnet. Untorified! This is easily possible by setting the following environment variable.
 </p>
 <pre>export UWT_DEV_PASSTHROUGH="1"
 </pre>
@@ -669,7 +669,7 @@ packages/anon-gw-anonymizer-config/usr/local/etc/torrc.d/50_user.conf.examples:H
 <li>fill version in `.spec.in` (writing it into `.spec` file)</li>
 <li>build it with `rpmbuild -bb &lt;path-to-spec&gt;`</li></ul>
 </blockquote>
-<h2><span class="mw-headline" id="Build_Qubes-Whonix_Templates">Build Qubes-Whonix Templates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=36.html" title="Edit section: Build Qubes-Whonix Templates">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Build_Qubes-Whonix_™_Templates"></span><span class="mw-headline" id="Build_Qubes-Whonix_.E2.84.A2_Templates">Build Qubes-Whonix ™ Templates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=36.html" title="Edit section: Build Qubes-Whonix ™ Templates">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>git clone https://github.com/QubesOS/qubes-builder.git
 </pre>
 <p>(<a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/3441#issuecomment-359447019" href="https://github.com/QubesOS/qubes-issues/issues/3441" rel="noreferrer noopener" target="_blank">source of the following instructions</a>)
@@ -735,10 +735,10 @@ get-sources: import-whonix-keys
 <h1><span class="mw-headline" id="Qubes_VM_Manger_Firewall_Tab_Settings">Qubes VM Manger Firewall Tab Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=39.html" title="Edit section: Qubes VM Manger Firewall Tab Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>(<a class="external text" data-href="https://www.qubes-os.org/attachment/wiki/QubesFirewall/r2b1-manager-firewall.png" href="https://www.qubes-os.org/attachment/wiki/QubesFirewall/r2b1-manager-firewall.png" rel="noreferrer noopener" target="_blank">screenshot</a>)
 </p><p>Short:<br/>
-Have no effect for Qubes-Whonix VMs. Can be ignored.
+Have no effect for Qubes-Whonix ™ VMs. Can be ignored.
 </p><p>Long <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>:<br/>
 All that settings are in separate file in the VM directory - dom0 /var/lib/qubes/appvms/whonix/firewall.xml. If the VM is running, those settings are converted to iptables syntax and loaded into QubesDB of directly connected ProxyVM. The qubes-firewall service in the ProxyVM watch for such changes and applies the rules.
-</p><p>I.e. in case of Whonix, the connected ProxyVM is sys-whonix. Since in Whonix qubes-firewall service is disabled (Whonix 12 <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>), these settings do not affect Whonix. (<a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" rel="noreferrer noopener" target="_blank">qubes-whonix-firewall.service</a> is what Whonix uses.)
+</p><p>I.e. in case of Whonix ™, the connected ProxyVM is sys-whonix. Since in Whonix ™ qubes-firewall service is disabled (Whonix 12 <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>), these settings do not affect Whonix. (<a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-firewall.service" rel="noreferrer noopener" target="_blank">qubes-whonix-firewall.service</a> is what Whonix ™ uses.)
 </p>
 <h1><span class="mw-headline" id="Qubes_Upstream_Bugs">Qubes Upstream Bugs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=40" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=40.html" title="Edit section: Qubes Upstream Bugs">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Usability:
@@ -805,8 +805,8 @@ All that settings are in separate file in the VM directory - dom0 /var/lib/qubes
 <p>Goals:<br/>
 </p>
 <ul><li>any TemplateVM behind sys-whonix should be restricted to torified updates proxy only</li>
-<li>Whonix TemplateVMs behind sys-whonix should be restricted to torified updates proxy only</li>
-<li>Whonix TemplateVMs connected to a ProxyVM other than sys-whonix should refuse to connect and show a warning [done]</li></ul>
+<li>Whonix ™ TemplateVMs behind sys-whonix should be restricted to torified updates proxy only</li>
+<li>Whonix ™ TemplateVMs connected to a ProxyVM other than sys-whonix should refuse to connect and show a warning [done]</li></ul>
 <p>Qubes tickets:<br/>
 </p>
 <ul><li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1815" href="https://github.com/QubesOS/qubes-issues/issues/1815" rel="noreferrer noopener" target="_blank">Implement new firewall dom0-&gt;VM interface</a></li>
@@ -814,7 +814,7 @@ All that settings are in separate file in the VM directory - dom0 /var/lib/qubes
 <li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1637" href="https://github.com/QubesOS/qubes-issues/issues/1637" rel="noreferrer noopener" target="_blank">Template policy, services-&gt;features, core plugins</a></li></ul>
 <p>Tickets:<br/>
 </p>
-<ul><li><a class="external text" data-href="https://phabricator.whonix.org/T372" href="https://phabricator.whonix.org/T372" rel="noreferrer noopener" target="_blank">Qubes-Whonix Whonix-Workstation TemplateVMs block access to (torified) open internet</a></li></ul>
+<ul><li><a class="external text" data-href="https://phabricator.whonix.org/T372" href="https://phabricator.whonix.org/T372" rel="noreferrer noopener" target="_blank">Qubes-Whonix ™ Whonix-Workstation ™ TemplateVMs block access to (torified) open internet</a></li></ul>
 <h1><span class="mw-headline" id="Connection_Issues">Connection Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=47" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=47.html" title="Edit section: Connection Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>icmp mtu connection issues?</li></ul>
 <h1><span class="mw-headline" id="Matrix_of_Qubes_VM_Types">Matrix of Qubes VM Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=48.html" title="Edit section: Matrix of Qubes VM Types">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -848,8 +848,8 @@ HVM Template
 &lt;meta name="application-name" content="tor proxy"/&gt;
 &lt;/head&gt;
 </pre>
-<h2><span class="mw-headline" id="Whonix_TemplateVMs">Whonix TemplateVMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=52" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=52.html" title="Edit section: Whonix TemplateVMs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Inside Whonix TemplateVMs, <a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/usr/lib/qubes-whonix/utility_functions.sh" href="https://github.com/Whonix/qubes-whonix/blob/master/usr/lib/qubes-whonix/utility_functions.sh" rel="noreferrer noopener" target="_blank">the following command is run will be run</a>.
+<h2><span id="Whonix_™_TemplateVMs"></span><span class="mw-headline" id="Whonix_.E2.84.A2_TemplateVMs">Whonix ™ TemplateVMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=52" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=52.html" title="Edit section: Whonix ™ TemplateVMs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Inside Whonix ™ TemplateVMs, <a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/usr/lib/qubes-whonix/utility_functions.sh" href="https://github.com/Whonix/qubes-whonix/blob/master/usr/lib/qubes-whonix/utility_functions.sh" rel="noreferrer noopener" target="_blank">the following command is run will be run</a>.
 </p>
 <h3><span class="mw-headline" id="Qubes_R3.2_2">Qubes R3.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=53" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=53.html" title="Edit section: Qubes R3.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <pre>curl_output="$(UWT_DEV_PASSTHROUGH="1" curl --silent --connect-timeout 10 "${PROXY_SERVER}")" || true
@@ -903,8 +903,8 @@ HVM Template
 </pre>
 <h2><span class="mw-headline" id="Related">Related</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=55" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=55.html" title="Edit section: Related">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1957" href="https://github.com/QubesOS/qubes-issues/issues/1957" rel="noreferrer noopener" target="_blank">Cache updates #1957, qubes-updates-cache, qubes-updates-proxy</a></li>
-<li>design decision: <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1880" href="https://github.com/QubesOS/qubes-issues/issues/1880" rel="noreferrer noopener" target="_blank">Difficulty to upgrade Whonix TemplateVMs over clearnet considered a bug or feature?</a></li>
-<li>bug: <a class="external text" data-href="https://forums.whonix.org/t/templates-incorrectly-think-theyre-not-connected-to-a-whonix-gateway" href="https://forums.whonix.org/t/templates-incorrectly-think-theyre-not-connected-to-a-whonix-gateway" rel="noreferrer noopener" target="_blank">Templates incorrectly think they're not connected to a Whonix gateway.</a></li></ul>
+<li>design decision: <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1880" href="https://github.com/QubesOS/qubes-issues/issues/1880" rel="noreferrer noopener" target="_blank">Difficulty to upgrade Whonix ™ TemplateVMs over clearnet considered a bug or feature?</a></li>
+<li>bug: <a class="external text" data-href="https://forums.whonix.org/t/templates-incorrectly-think-theyre-not-connected-to-a-whonix-gateway" href="https://forums.whonix.org/t/templates-incorrectly-think-theyre-not-connected-to-a-whonix-gateway" rel="noreferrer noopener" target="_blank">Templates incorrectly think they're not connected to a Whonix ™ gateway.</a></li></ul>
 <h1><span class="mw-headline" id="Updates_Proxy_Debugging">Updates Proxy Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=56" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=56.html" title="Edit section: Updates Proxy Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>qubes-updates-proxy (and its deprecated name: qubes-yum-proxy) - a service providing a proxy for templates - by default enabled in NetVMs (especially: sys-net)</li>
 <li>updates-proxy-setup (and its deprecated name: yum-proxy-setup) - use a proxy provided by another VM (instead of downloading updates directly), enabled by default in all templates</li></ul>
@@ -923,7 +923,7 @@ HVM Template
 <ul><li>/usr/lib/qubes-whonix/bind-directories</li>
 <li>/usr/lib/qubes-whonix/replace-ips</li>
 <li>enable / disable Tor through qvm-service</li></ul>
-<h1><span class="mw-headline" id="Qubes-Whonix_14_release_testing">Qubes-Whonix 14 release testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=61" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=61.html" title="Edit section: Qubes-Whonix 14 release testing">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span id="Qubes-Whonix_™_14_release_testing"></span><span class="mw-headline" id="Qubes-Whonix_.E2.84.A2_14_release_testing">Qubes-Whonix ™ 14 release testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=61" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=61.html" title="Edit section: Qubes-Whonix ™ 14 release testing">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>make sure /etc/systemd/system/multi-user.target.wants/qubes-whonix-firewall.service is gone</li>
 <li>sudo service qubes-whonix-firewall status</li>
 <li>sudo service whonix-firewall status</li>
@@ -956,7 +956,7 @@ autologin-user=user
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/qubes-rpc/local.ssh</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/qubes-rpc/local.ssh</pre>
@@ -965,7 +965,7 @@ autologin-user=user
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/qubes-rpc/local.ssh</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/qubes-rpc/local.ssh</pre>
@@ -994,7 +994,7 @@ exec socat STDIO TCP-CONNECT:localhost:22
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/qubes-rpc/policy/local.ssh</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/qubes-rpc/policy/local.ssh</pre>
@@ -1003,7 +1003,7 @@ exec socat STDIO TCP-CONNECT:localhost:22
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/qubes-rpc/policy/local.ssh</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/qubes-rpc/policy/local.ssh</pre>
@@ -1031,7 +1031,7 @@ exec socat STDIO TCP-CONNECT:localhost:22
 </p><p>Open <i><span style="background-color:#FBFBFB">/rw/config/rc.local</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /rw/config/rc.local</pre>
@@ -1040,7 +1040,7 @@ exec socat STDIO TCP-CONNECT:localhost:22
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /rw/config/rc.local</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /rw/config/rc.local</pre>
@@ -1225,15 +1225,15 @@ whonix-gw-14 $anyvm deny</textarea>
 <p>Qubes dom0 package <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines" rel="noreferrer noopener" target="_blank"><code>qubes-mgmt-salt-dom0-virtual-machines</code></a> <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/9" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/9" rel="noreferrer noopener" target="_blank">will</a> depend on <code>qubes-core-admin-addon-whonix</code>, therefore ensuring it will be installed. (<a class="external text" data-href="https://phabricator.whonix.org/T792" href="https://phabricator.whonix.org/T792" rel="noreferrer noopener" target="_blank">T792</a>) (<a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/3881" href="https://github.com/QubesOS/qubes-issues/issues/3881" rel="noreferrer noopener" target="_blank">#3881</a>)
 </p><p>The template package <a class="external text" data-href="https://github.com/Whonix/qubes-whonix" href="https://github.com/Whonix/qubes-whonix" rel="noreferrer noopener" target="_blank"><code>qubes-whonix</code></a> ships script <a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/etc/qubes/post-install.d/30-whonix-ws.sh" href="https://github.com/Whonix/qubes-whonix/blob/master/etc/qubes/post-install.d/30-whonix-ws.sh" rel="noreferrer noopener" target="_blank"><code>/etc/qubes/post-install.d/30-whonix-ws.sh</code></a>, which contains <code>qvm-features-request whonix-ws=1</code>, which is parsed by dom0 package <a class="external text" data-href="https://github.com/QubesOS/qubes-core-agent-linux" href="https://github.com/QubesOS/qubes-core-agent-linux" rel="noreferrer noopener" target="_blank"><code>qubes-core-agent-linux</code></a> <a class="external text" data-href="https://github.com/QubesOS/qubes-core-agent-linux/blob/master/qubes-rpc/qubes.PostInstall" href="https://github.com/QubesOS/qubes-core-agent-linux/blob/master/qubes-rpc/qubes.PostInstall" rel="noreferrer noopener" target="_blank">qubes RPC <code>qubes.PostInstall</code></a>.
 </p><p>As per Marek, <code>qvm-features-request whonix-ws=1</code> should <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/3765#issuecomment-386805491" href="https://github.com/QubesOS/qubes-issues/issues/3765" rel="noreferrer noopener" target="_blank">not be set by salt</a>.
-</p><p>Missing Whonix tags anon-vm / anon-gateway <a class="external text" data-href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/pull/6" href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/pull/6" rel="noreferrer noopener" target="_blank">will be added</a>.
+</p><p>Missing Whonix ™ tags anon-vm / anon-gateway <a class="external text" data-href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/pull/6" href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/pull/6" rel="noreferrer noopener" target="_blank">will be added</a>.
 </p>
 <h2><span class="mw-headline" id="anon-vm_tag">anon-vm tag</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=74" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=74.html" title="Edit section: anon-vm tag">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><code>anon-vm</code> gets prepended to <a class="external text" data-href="https://github.com/QubesOS/qubes-core-admin/blob/master/qubes-rpc-policy/qubes.GetDate.policy" href="https://github.com/QubesOS/qubes-core-admin/blob/master/qubes-rpc-policy/qubes.GetDate.policy" rel="noreferrer noopener" target="_blank"><code>/etc/qubes-rpc/policy/qubes.GetDate</code></a> by <a class="external text" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/template-whonix-ws.sls#L43" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/template-whonix-ws.sls" rel="noreferrer noopener" target="_blank">salt template-whonix-ws.sls</a>. Or <a class="external text" data-href="https://github.com/QubesOS/qubes-core-admin/pull/221" href="https://github.com/QubesOS/qubes-core-admin/pull/221" rel="noreferrer noopener" target="_blank">maybe in future simpler by just adding it.</a>
 </p><p>Tags are not reliably set yet. TODO: <a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/4155" href="https://github.com/QubesOS/qubes-issues/issues/4155" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/4155</a> - That is something doable. But it's not a big deal for now since Qubes VMs have many ways to ask dom0 for the non-randomized time.
 </p>
-<ul><li><a class="external text" data-href="https://phabricator.whonix.org/T389" href="https://phabricator.whonix.org/T389" rel="noreferrer noopener" target="_blank">make sure Qubes-Whonix has no access to clocksource=xen</a> (unlikely to be fixed anytime soon without external help) (It matters in context of <a data-href="/wiki/Dev/TimeSync#Clock_Correlation_Attack" href="../Dev/TimeSync.html" title="Dev/TimeSync">Clock Correlation Attack</a>.</li>
-<li><a class="external text" data-href="https://phabricator.whonix.org/T440" href="https://phabricator.whonix.org/T440" rel="noreferrer noopener" target="_blank">set random clock offset for Qubes-Whonix VMs using mgmt to prevent clock correlation attacks</a></li>
-<li><a class="external text" data-href="https://phabricator.whonix.org/T397" href="https://phabricator.whonix.org/T397" rel="noreferrer noopener" target="_blank">prevent dom0 telling Qubes-Whonix VMs the time by using the mgmt stack for that / disable Qubes dom0 /etc/qubes-rpc/qubes.SetDateTime</a></li></ul>
+<ul><li><a class="external text" data-href="https://phabricator.whonix.org/T389" href="https://phabricator.whonix.org/T389" rel="noreferrer noopener" target="_blank">make sure Qubes-Whonix ™ has no access to clocksource=xen</a> (unlikely to be fixed anytime soon without external help) (It matters in context of <a data-href="/wiki/Dev/TimeSync#Clock_Correlation_Attack" href="../Dev/TimeSync.html" title="Dev/TimeSync">Clock Correlation Attack</a>.</li>
+<li><a class="external text" data-href="https://phabricator.whonix.org/T440" href="https://phabricator.whonix.org/T440" rel="noreferrer noopener" target="_blank">set random clock offset for Qubes-Whonix ™ VMs using mgmt to prevent clock correlation attacks</a></li>
+<li><a class="external text" data-href="https://phabricator.whonix.org/T397" href="https://phabricator.whonix.org/T397" rel="noreferrer noopener" target="_blank">prevent dom0 telling Qubes-Whonix ™ VMs the time by using the mgmt stack for that / disable Qubes dom0 /etc/qubes-rpc/qubes.SetDateTime</a></li></ul>
 <p><a class="external text" data-href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/tree/master/qubes-rpc-policy" href="https://github.com/QubesOS/qubes-core-admin-addon-whonix/tree/master/qubes-rpc-policy" rel="noreferrer noopener" target="_blank">Tags will be more important in future</a> for <a class="external text" data-href="https://phabricator.whonix.org/T534" href="https://phabricator.whonix.org/T534" rel="noreferrer noopener" target="_blank">sdwdate-gui-qubes</a> but that is more usability, not security.
 </p>
 <h2><span class="mw-headline" id="anon-gateway_tag">anon-gateway tag</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=75" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=75.html" title="Edit section: anon-gateway tag">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -1339,7 +1339,7 @@ whonix-gw-14 $anyvm deny</textarea>
 <ul><li><a class="external free" data-href="https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonix_firstrun.pm" href="https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonix_firstrun.pm" rel="noreferrer noopener" target="_blank">https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonix_firstrun.pm</a></li>
 <li><a class="external free" data-href="https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonixcheck.pm" href="https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonixcheck.pm" rel="noreferrer noopener" target="_blank">https://github.com/marmarek/openqa-tests-qubesos/blob/master/tests/whonixcheck.pm</a></li></ul>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=84" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=84.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li><a data-href="/wiki/Dev/Test" href="../Dev/Test.html" title="Dev/Test">Dev/Test - How to "UnWhonix" - Instructions on how to remove Whonix Tor default networking for Whonix-Gateway. After applying these instructions, Whonix-Gateway will connect to clearnet.</a></li>
+<ul><li><a data-href="/wiki/Dev/Test" href="../Dev/Test.html" title="Dev/Test">Dev/Test - How to "UnWhonix" - Instructions on how to remove Whonix ™ Tor default networking for Whonix-Gateway ™. After applying these instructions, Whonix-Gateway ™ will connect to clearnet.</a></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" rel="noreferrer noopener" target="_blank">How to add a ProxyVM between anon-whonix and sys-whonix? (whonix-ws-email -&gt; sys-fw-whonix -&gt; whonix-gw-14 -&gt; sys-firewall -&gt; sys-net)</a></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=85" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=85.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
@@ -1427,49 +1427,49 @@ whonix-gw-14 $anyvm deny</textarea>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="../Dev/Qubes" href="../Dev/Qubes" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Qubes" href="https://www.Whonix.org/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Dev/Qubes&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Dev/Qubes&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Qubes" href="https://facebook.com/sharer.php?u=../Dev/Qubes">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190422053456
+Cached time: 20190423053443
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.111 seconds
-Real time usage: 0.121 seconds
-Preprocessor visited node count: 1657/1000000
-Preprocessor generated node count: 3719/1000000
-Post‐expand include size: 10569/2097152 bytes
-Template argument size: 2719/2097152 bytes
+CPU time usage: 0.128 seconds
+Real time usage: 0.134 seconds
+Preprocessor visited node count: 1810/1000000
+Preprocessor generated node count: 4135/1000000
+Post‐expand include size: 11593/2097152 bytes
+Template argument size: 2785/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 28008/5000000 bytes
+Unstrip post‐expand size: 28126/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   67.960      1 -total
- 43.59%   29.625     24 Template:CodeSelect
- 20.43%   13.887      3 Template:Open_with_root_rights
- 18.76%   12.752      3 Template:Box
- 14.38%    9.770      1 Template:Footer
-  6.60%    4.487      1 Template:Reflist
-  3.17%    2.157      1 Template:Header
-  3.10%    2.104      1 Template:Share
-  2.86%    1.944      1 Template:Edit_it
-  2.84%    1.933      1 Template:Qubes_persistence
+100.00%   78.393      1 -total
+ 39.56%   31.012     24 Template:CodeSelect
+ 20.29%   15.909      3 Template:Open_with_root_rights
+ 18.76%   14.706      3 Template:Box
+ 14.08%   11.037      1 Template:Footer
+  6.12%    4.800      1 Template:Reflist
+  2.65%    2.075      1 Template:Share
+  2.63%    2.061      1 Template:Header
+  2.47%    1.940      1 Template:Edit_it
+  2.37%    1.859      1 Template:Qubes_persistence
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=40943" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=40943">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=40943</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=44588" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=44588">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=44588</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1480,7 +1480,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 18 February 2019, at 10:04.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 15:38.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Upgrading Whonix 10 to Whonix 11 - Whonix
  url: ./Upgrading_Whonix_10_to_Whonix_11
- date: Mon Apr 22 07:42:00 2019
+ date: Tue Apr 23 07:41:43 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -125,8 +125,8 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Before_you_start"><span class="tocnumber">1</span> <span class="toctext">Before you start</span></a>
 <ul>
-<li class="toclevel-2 tocsection-2"><a href="#If_you_want_to_upgrade_Whonix-Gateway_as_well_as_Whonix-Workstation"><span class="tocnumber">1.1</span> <span class="toctext">If you want to upgrade Whonix-Gateway as well as Whonix-Workstation</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#If_you_only_want_to_upgrade_Whonix-Workstation"><span class="tocnumber">1.2</span> <span class="toctext">If you only want to upgrade Whonix-Workstation</span></a></li>
+<li class="toclevel-2 tocsection-2"><a href="#If_you_want_to_upgrade_Whonix-Gateway_.E2.84.A2_as_well_as_Whonix-Workstation_.E2.84.A2"><span class="tocnumber">1.1</span> <span class="toctext">If you want to upgrade Whonix-Gateway ™ as well as Whonix-Workstation ™</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#If_you_only_want_to_upgrade_Whonix-Workstation_.E2.84.A2"><span class="tocnumber">1.2</span> <span class="toctext">If you only want to upgrade Whonix-Workstation ™</span></a></li>
 <li class="toclevel-2 tocsection-4"><a href="#Non-Critical_Errors_.2F_Warnings"><span class="tocnumber">1.3</span> <span class="toctext">Non-Critical Errors / Warnings</span></a></li>
 </ul>
 </li>
@@ -158,30 +158,30 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-24"><a href="#Grub_Fix"><span class="tocnumber">6</span> <span class="toctext">Grub Fix</span></a></li>
 <li class="toclevel-1 tocsection-25"><a href="#Qubes_Cleanup"><span class="tocnumber">7</span> <span class="toctext">Qubes Cleanup</span></a>
 <ul>
-<li class="toclevel-2 tocsection-26"><a href="#Qubes-Whonix-Gateway_purge_unneeded_packages"><span class="tocnumber">7.1</span> <span class="toctext">Qubes-Whonix-Gateway purge unneeded packages</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#purge_unneeded_packages_2"><span class="tocnumber">7.1</span> <span class="toctext">purge unneeded packages</span></a></li>
 </ul>
 </li>
 <li class="toclevel-1 tocsection-27"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Before_you_start">Before you start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=1.html" title="Edit section: Before you start">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="If_you_want_to_upgrade_Whonix-Gateway_as_well_as_Whonix-Workstation">If you want to upgrade Whonix-Gateway as well as Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=2.html" title="Edit section: If you want to upgrade Whonix-Gateway as well as Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="If_you_want_to_upgrade_Whonix-Gateway_™_as_well_as_Whonix-Workstation_™"></span><span class="mw-headline" id="If_you_want_to_upgrade_Whonix-Gateway_.E2.84.A2_as_well_as_Whonix-Workstation_.E2.84.A2">If you want to upgrade Whonix-Gateway ™ as well as Whonix-Workstation ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=2.html" title="Edit section: If you want to upgrade Whonix-Gateway ™ as well as Whonix-Workstation ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>1. Backup your data. (Ideally have a copy of your VM, so you can try again.) <br/>
 2. Consider running the optional <a href="#Sanity_Tests">#Sanity Tests</a>. <br/>
-3. Upgrade Whonix-Workstation. <br/>
-4. Power off Whonix-Workstation. <br/>
+3. Upgrade Whonix-Workstation ™. <br/>
+4. Power off Whonix-Workstation ™. <br/>
 5. Upgrade Whonix-Gatway. <br/>
-6. Restart Whonix-Gateway. <br/>
-7. Restart Whonix-Workstation <br/>
+6. Restart Whonix-Gateway ™. <br/>
+7. Restart Whonix-Workstation ™ <br/>
 </p>
-<h2><span class="mw-headline" id="If_you_only_want_to_upgrade_Whonix-Workstation">If you only want to upgrade Whonix-Workstation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=3.html" title="Edit section: If you only want to upgrade Whonix-Workstation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="If_you_only_want_to_upgrade_Whonix-Workstation_™"></span><span class="mw-headline" id="If_you_only_want_to_upgrade_Whonix-Workstation_.E2.84.A2">If you only want to upgrade Whonix-Workstation ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=3.html" title="Edit section: If you only want to upgrade Whonix-Workstation ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>1. Backup your data. (Ideally have a copy of your VM, so you can try again.) <br/>
 2. Consider running the optional <a href="#Sanity_Tests">#Sanity Tests</a>. <br/>
-3. Upgrade Whonix-Workstation. <br/>
-4. Power off Whonix-Workstation. <br/>
-5. <a data-href="/wiki/Download" href="./Download.html" title="Download">Get</a> Whonix-Gateway. <br/>
-6. Start Whonix-Gateway. <br/>
-7. Start Whonix-Workstation <br/>
+3. Upgrade Whonix-Workstation ™. <br/>
+4. Power off Whonix-Workstation ™. <br/>
+5. <a data-href="/wiki/Download" href="./Download.html" title="Download">Get</a> Whonix-Gateway ™. <br/>
+6. Start Whonix-Gateway ™. <br/>
+7. Start Whonix-Workstation ™ <br/>
 </p><p>You can ignore the following errors.
 </p>
 <h2><span id="Non-Critical_Errors_/_Warnings"></span><span class="mw-headline" id="Non-Critical_Errors_.2F_Warnings">Non-Critical Errors / Warnings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=4.html" title="Edit section: Non-Critical Errors / Warnings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -403,7 +403,7 @@ bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/apt/sources.list.d/qubes-r3.list</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/apt/sources.list.d/qubes-r3.list</pre>
@@ -412,7 +412,7 @@ bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/apt/sources.list.d/qubes-r3.list</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/apt/sources.list.d/qubes-r3.list</pre>
@@ -480,7 +480,7 @@ Leaving 'diversion of /etc/init/serial.conf to /etc/init/serial.conf.qubes-orig 
 </div>
 </div>
 <h1><span class="mw-headline" id="Upgrading">Upgrading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=23.html" title="Edit section: Upgrading">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p><b><a data-href="/wiki/Download" href="./Download.html" title="Download">Downloading</a> a new Whonix-Gateway / Whonix-Workstation will be probably easier than applying the following instructions for upgrading.</b>
+<p><b><a data-href="/wiki/Download" href="./Download.html" title="Download">Downloading</a> a new Whonix-Gateway ™ / Whonix-Workstation ™ will be probably easier than applying the following instructions for upgrading.</b>
 </p><p>Backups are important as noted in above chapter <a href="#Before_you_start">#Before you start</a>. Especially for <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p><p>Consider doing the <a href="#Sanity_Tests">#Sanity Tests</a> described above. They'll check if your system is affected by obvious grave issues, that you must fix before attempting to upgrade. If your package manager is broken, for example because you mixed packages from Debian stable with packages from Debian testing, then the upgrade may fail in the middle leaving your system in a difficult to resolve situation.
 </p><p>Consider keeping the full terminal (Konsole) log. Even if everything apparently worked, there might be issues after reboot. In case of a bug report in the forums you would be asked to share the upgrading log so the issue can be investigated.
@@ -491,7 +491,7 @@ Leaving 'diversion of /etc/init/serial.conf to /etc/init/serial.conf.qubes-orig 
 </pre>
 <p>Do a usual <a data-href="/wiki/Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">upgrade</a> of your system's packages from Debian.
 </p><p>For <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users, before you proceed, it is strongly recommended that you apply the above <a href="#Qubes_Pre_Fixup">#Qubes Pre Fixup</a>.
-</p><p>Enable Whonix's <i><span style="background-color:#FBFBFB">jessie</span></i> repository. Don't use the <i><span style="background-color:#FBFBFB">testers</span></i> repository just yet. [Wait for new information.]
+</p><p>Enable Whonix ™ <i><span style="background-color:#FBFBFB">jessie</span></i> repository. Don't use the <i><span style="background-color:#FBFBFB">testers</span></i> repository just yet. [Wait for new information.]
 </p>
 <pre>whonix_repository --enable --codename jessie
 </pre>
@@ -552,28 +552,28 @@ Leaving 'diversion of /etc/init/serial.conf to /etc/init/serial.conf.qubes-orig 
 </p>
 <pre>apt-get purge spice-vdagent
 </pre>
-<p>Qubes only. Whonix-Gateway only. Move old qubes-whonix-control-port-filter-python.service out of the way.
+<p>Qubes only. Whonix-Gateway ™ only. Move old qubes-whonix-control-port-filter-python.service out of the way.
 </p>
 <pre>sudo mv /etc/systemd/system/qubes-whonix-control-port-filter-python.service ~/
 </pre>
-<p>Qubes only. Whonix-Gateway only. Move old /etc/init.d/control-port-filter-python out of the way.
+<p>Qubes only. Whonix-Gateway ™ only. Move old /etc/init.d/control-port-filter-python out of the way.
 </p>
 <pre>sudo mv /etc/init.d/control-port-filter-python ~/
 </pre>
-<p>Qubes only. Whonix-Gateway only. Enable control-port-filter-python.
+<p>Qubes only. Whonix-Gateway ™ only. Enable control-port-filter-python.
 </p>
 <pre>sudo systemctl enable control-port-filter-python
 </pre>
-<p>Qubes only. Whonix-Workstation only. Move old /etc/tmpfiles.d/tor.conf out of the way. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<p>Qubes only. Whonix-Workstation ™ only. Move old /etc/tmpfiles.d/tor.conf out of the way. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <pre>sudo mv /etc/tmpfiles.d/tor.conf ~/
 </pre>
 <p>It is recommended to have the <i><span style="background-color:#FBFBFB">whonix-gateway</span></i> / <i><span style="background-color:#FBFBFB">whonix-workstation</span></i> package installed to make sure nothing is broken. (If you like to uninstall it later as per <a data-href="/wiki/Whonix_Debian_Packages" href="./Whonix_Debian_Packages.html" title="Whonix Debian Packages">Whonix Debian Packages</a>, you're free to do so. Still, it is recommended to re-install it before removal to make sure you're as close to official package selection as possible.)
-</p><p>If you are upgrading Whonix-Gateway...
+</p><p>If you are upgrading Whonix-Gateway ™...
 </p>
 <pre>apt-get install whonix-gateway
 </pre>
-<p>If you are upgrading Whonix-Workstation...
+<p>If you are upgrading Whonix-Workstation ™...
 </p>
 <pre>apt-get install whonix-workstation
 </pre>
@@ -589,7 +589,7 @@ Leaving 'diversion of /etc/init/serial.conf to /etc/init/serial.conf.qubes-orig 
 </p>
 <pre>apt-get install grub-output-verbose
 </pre>
-<p>Qubes only! Get rid of Whonix's autostart of Whonix Setup Wizard.
+<p>Qubes only! Get rid of Whonix ™ autostart of Whonix Setup Wizard.
 </p>
 <pre>sudo mv /etc/xdg/autostart/whonix-setup-wizard.desktop ~/
 </pre>
@@ -625,8 +625,9 @@ Installation finished. No error reported.
 0
 </pre>
 <h1><span class="mw-headline" id="Qubes_Cleanup">Qubes Cleanup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=25.html" title="Edit section: Qubes Cleanup">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Qubes-Whonix-Gateway_purge_unneeded_packages">Qubes-Whonix-Gateway purge unneeded packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=26.html" title="Edit section: Qubes-Whonix-Gateway purge unneeded packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>You can optionally purge the following unneeded packages from Qubes-Whonix-Gateway.
+<h2><span class="mw-headline" id="purge_unneeded_packages_2">purge unneeded packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit&amp;section=26.html" title="Edit section: purge unneeded packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Qubes-Whonix ™ Whonix-Gateway ™ only!
+</p><p>You can optionally purge the following unneeded packages from Qubes-Whonix ™ Whonix-Gateway ™.
 </p>
 <pre>sudo apt-get purge cups mutt icedove amd64-microcode intel-microcode avahi-daemon
 </pre>
@@ -733,26 +734,26 @@ Disable torsocks warning spam such as.<br/>
 <p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a>.
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="./Upgrading_Whonix_10_to_Whonix_11" href="./Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Upgrading_Whonix_10_to_Whonix_11" href="https://www.Whonix.org/wiki/Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Upgrading_Whonix_10_to_Whonix_11" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Upgrading_Whonix_10_to_Whonix_11&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Upgrading_Whonix_10_to_Whonix_11&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=./Upgrading_Whonix_10_to_Whonix_11" href="https://facebook.com/sharer.php?u=./Upgrading_Whonix_10_to_Whonix_11">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190324205539
+Cached time: 20190423013213
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.086 seconds
-Real time usage: 0.102 seconds
-Preprocessor visited node count: 1243/1000000
-Preprocessor generated node count: 3217/1000000
-Post‐expand include size: 5988/2097152 bytes
-Template argument size: 1116/2097152 bytes
+CPU time usage: 0.091 seconds
+Real time usage: 0.096 seconds
+Preprocessor visited node count: 1344/1000000
+Preprocessor generated node count: 3513/1000000
+Post‐expand include size: 6712/2097152 bytes
+Template argument size: 1138/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
@@ -760,19 +761,19 @@ Unstrip post‐expand size: 23915/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   70.002      1 -total
- 26.52%   18.568      1 Template:Open_with_root_rights
- 22.90%   16.028      1 Template:Box
- 19.62%   13.735      3 Template:CodeSelect
- 15.86%   11.101      1 Template:Footer
- 13.49%    9.444      1 Template:Header
- 10.02%    7.011      1 Template:Reflist
-  5.45%    3.814     27 Template:Code2
-  3.30%    2.307      1 Template:Share
-  3.06%    2.143      1 Template:Edit_it
+100.00%   49.064      1 -total
+ 19.29%    9.466      1 Template:Footer
+ 18.26%    8.961      1 Template:Open_with_root_rights
+ 16.25%    7.975      1 Template:Box
+ 12.08%    5.928      1 Template:Reflist
+ 11.12%    5.456      3 Template:CodeSelect
+  9.93%    4.872      1 Template:Header
+  4.26%    2.090      1 Template:Share
+  4.17%    2.047     27 Template:Code2
+  3.67%    1.799      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=39830</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=44911" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=44911">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Upgrading_Whonix_10_to_Whonix_11&amp;oldid=44911</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -783,7 +784,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Up
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 26 November 2018, at 05:29.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 16:11.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -804,5 +805,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Up
 </div>
 
 </body>
-<!-- Cached/compressed 20190324205539 -->
+<!-- Cached/compressed 20190423013213 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Mon Apr 22 07:41:45 2019
+ date: Tue Apr 23 07:41:28 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -140,7 +140,7 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <li class="toclevel-3 tocsection-7"><a href="#Use_a_Fail_Closed_Mechanism"><span class="tocnumber">1.4.2</span> <span class="toctext">Use a Fail Closed Mechanism</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-8"><a href="#Inside_Whonix-Gateway"><span class="tocnumber">1.5</span> <span class="toctext">Inside Whonix-Gateway</span></a>
+<li class="toclevel-2 tocsection-8"><a href="#Inside_Whonix-Gateway_.E2.84.A2"><span class="tocnumber">1.5</span> <span class="toctext">Inside Whonix-Gateway ™</span></a>
 <ul>
 <li class="toclevel-3 tocsection-9"><a href="#VPN_Client_Choice_2"><span class="tocnumber">1.5.1</span> <span class="toctext">VPN Client Choice</span></a></li>
 <li class="toclevel-3 tocsection-10"><a href="#Whonix_TUNNEL_FIREWALL_vs_standalone_VPN-Firewall"><span class="tocnumber">1.5.2</span> <span class="toctext">Whonix TUNNEL_FIREWALL vs standalone VPN-Firewall</span></a></li>
@@ -190,10 +190,10 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <hr/>
 <h1><span id="Connecting_to_a_VPN_before_Tor_(User_-&gt;_VPN_-&gt;_Tor_-&gt;_Internet)"></span><span class="mw-headline" id="Connecting_to_a_VPN_before_Tor_.28User_-.3E_VPN_-.3E_Tor_-.3E_Internet.29">Connecting to a VPN before Tor (User -&gt; VPN -&gt; Tor -&gt; Internet)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=1.html" title="Edit section: Connecting to a VPN before Tor (User -&gt; VPN -&gt; Tor -&gt; Internet)">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=2.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<ul><li><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> users have the option to use a <a href="#Separate_VPN-Gateway">#Separate VPN-Gateway</a> but could also install the VPN software <a href="#Inside_Whonix-Gateway">#Inside Whonix-Gateway</a>.</li>
-<li><a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users could install the VPN software <a href="#On_the_Host">#On the Host</a> or <a href="#Inside_Whonix-Gateway">#Inside Whonix-Gateway</a>.</li></ul>
+<ul><li><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users have the option to use a <a href="#Separate_VPN-Gateway">#Separate VPN-Gateway</a> but could also install the VPN software <a href="#Inside_Whonix-Gateway_.E2.84.A2">#Inside Whonix-Gateway ™</a>.</li>
+<li><a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users could install the VPN software <a href="#On_the_Host">#On the Host</a> or <a href="#Inside_Whonix-Gateway_.E2.84.A2">#Inside Whonix-Gateway ™</a>.</li></ul>
 <p><br/>
-</p><p>What's the difference of installing a VPN on the host versus installing on Whonix-Gateway?
+</p><p>What's the difference of installing a VPN on the host versus installing on Whonix-Gateway ™?
 </p>
 <table class="wikitable" style="background-color: #fff;text-align: center">
 <tbody><tr>
@@ -201,9 +201,9 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </th>
 <th>VPN Installed on the Host
 </th>
-<th>VPN Installed on Whonix-Gateway
+<th>VPN Installed on Whonix-Gateway ™
 </th>
-<th>VPN Installed on <u>both</u> the Host and Whonix-Gateway
+<th>VPN Installed on <u>both</u> the Host and Whonix-Gateway ™
 </th></tr>
 <tr>
 <th>All Whonix Traffic Routing
@@ -224,7 +224,7 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <td>User -&gt; Host's VPN -&gt; Internet
 </td></tr>
 <tr>
-<th>Whonix-Gateway Compromise
+<th>Whonix-Gateway ™ Compromise
 </th>
 <td>Host's VPN Affords Protection
 </td>
@@ -237,15 +237,15 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p>
 <ul><li>Is it necessary to hide <i>all traffic</i> from the ISP? <sup class="reference" id="cite_ref-all-traffic_1-0"><a href="#cite_note-all-traffic-1">[1]</a></sup> Then install the VPN on the host.</li>
 <li>Should the VPN provider be able to see <i>all traffic</i>? <sup class="reference" id="cite_ref-all-traffic_1-1"><a href="#cite_note-all-traffic-1">[1]</a></sup> Then install the VPN on the host.</li>
-<li>Should the VPN provider be limited to seeing <i>Tor traffic</i>, but not <i>clearnet traffic</i>? Then install the VPN on Whonix-Gateway.</li></ul>
+<li>Should the VPN provider be limited to seeing <i>Tor traffic</i>, but not <i>clearnet traffic</i>? Then install the VPN on Whonix-Gateway ™.</li></ul>
 <h2><span class="mw-headline" id="VPN_Client_Choice">VPN Client Choice</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=3.html" title="Edit section: VPN Client Choice">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>Use OpenVPN.</li>
 <li>Using bitmask with Qubes is not yet documented.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li>
 <li>Other VPN clients are unsupported. We are not aware of any sane VPN client choices besides OpenVPN.</li></ul>
 <hr/>
 <h2><span class="mw-headline" id="Separate_VPN-Gateway">Separate VPN-Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=4.html" title="Edit section: Separate VPN-Gateway">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> only! <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> is <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a>!
-</p><p>A separate VPN-Gateway between Whonix-Gateway and sys-firewall, i.e. Whonix-Workstation -&gt; Whonix-Gateway -&gt; sys-vpn -&gt; sys-firewall -&gt; sys-net.
+<p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> only! <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> is <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a>!
+</p><p>A separate VPN-Gateway between Whonix-Gateway ™ and sys-firewall, i.e. Whonix-Workstation ™ -&gt; Whonix-Gateway ™ -&gt; sys-vpn -&gt; sys-firewall -&gt; sys-net.
 </p><p><b>User -&gt; VPN -&gt; Tor -&gt; Internet </b>
 </p><p>These "Separate VPN-Gateway" instructions are new. You might be one of the first users. You might run into minor issues. Please test and <a class="external text" data-href="https://forums.whonix.org" href="https://forums.whonix.org" rel="noreferrer noopener" target="_blank">report</a> how it went.
 </p>
@@ -267,7 +267,7 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <p><b>3.</b> Setup the VPN-Gateway as per <a class="external text" data-href="https://www.qubes-os.org/doc/vpn/" href="https://www.qubes-os.org/doc/vpn/" rel="noreferrer noopener" target="_blank">Qubes VPN documentation</a>.  The instructions to configure the <a class="external text" data-href="https://qubes-os.org/doc/vpn/#set-up-a-proxyvm-as-a-vpn-gateway-using-iptables-and-cli-scripts" href="https://qubes-os.org/doc/vpn/" rel="noreferrer noopener" target="_blank">VPN gateway using iptables and CLI scripts</a> is preferred to prevent clearnet leaks when the VPN breaks down. 
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>When a failed closed configuration is used and the VPN connection breaks down, all traffic originating from Whonix-Gateway (commonly called <code>sys-whonix</code>) would <u>only</u> be forced through Tor. This is what you want if you are reading this documentation chapter.
+<p>When a failed closed configuration is used and the VPN connection breaks down, all traffic originating from Whonix-Gateway ™ (commonly called <code>sys-whonix</code>) would <u>only</u> be forced through Tor. This is what you want if you are reading this documentation chapter.
 </p><p><b>User -&gt; Tor -&gt; Internet</b>
 </p><p>If a failed closed configuration is not used, network traffic (such as DNS queries) could leak through the VPN tunnel to the Internet when the tunnel connection breaks down.
 </p><p><b>User -&gt; VPN</b>(<u>clearnet leaks!</u>) <b>-&gt; Tor -&gt; Internet</b>
@@ -277,18 +277,18 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <a class="external text" data-href="https://qubes-os.org/doc/vpn/" href="https://qubes-os.org/doc/vpn/" rel="noreferrer noopener" target="_blank">Qubes VPN Documentation</a>
 </p>
 </div>
-<p><u>Note:</u> Both TCP and UDP VPN connections should work. System DNS should work out of the box so no DNS configuration is required for Whonix-Gateway.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p><u>Note:</u> Both TCP and UDP VPN connections should work. System DNS should work out of the box so no DNS configuration is required for Whonix-Gateway ™.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p><p>Done!
 </p><p>For troubleshooting, see footnote. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 <hr/>
 <h2><span class="mw-headline" id="On_the_Host">On the Host</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=5.html" title="Edit section: On the Host">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> only! (Because in Qubes, the host is non-networked by default. <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> users have the option to use a <a href="#Separate_VPN-Gateway">#Separate VPN-Gateway</a> but could also install the VPN software <a href="#Inside_Whonix-Gateway">#Inside Whonix-Gateway</a>.)
+<p><a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> only! (Because in Qubes, the host is non-networked by default. <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users have the option to use a <a href="#Separate_VPN-Gateway">#Separate VPN-Gateway</a> but could also install the VPN software <a href="#Inside_Whonix-Gateway_.E2.84.A2">#Inside Whonix-Gateway ™</a>.)
 </p><p><b>User -&gt; VPN -&gt; Tor -&gt; Internet </b>
-</p><p>When using a Whonix-Gateway virtual machine, connect to a VPN using software on the host operating system (and not on the Whonix-Workstation nor Whonix-Gateway).
+</p><p>When using a Whonix-Gateway ™ virtual machine, connect to a VPN using software on the host operating system (and not on the Whonix-Workstation ™ nor Whonix-Gateway ™).
 </p><p>Using software inside the host operating system may be more convenient if your more familiar with the host operating system than Whonix. Additionally, your VPN provider might provide custom software with tools for connecting to their servers. However, there are issues that you must consider:
 </p>
-<ul><li>A VPN on the host operating system will route all traffic originating from the host through the VPN, as well as Whonix's traffic. It is up to your preferences, if you like this or not.</li>
+<ul><li>A VPN on the host operating system will route all traffic originating from the host through the VPN, as well as Whonix ™ traffic. It is up to your preferences, if you like this or not.</li>
 <li>Your VPN software may not be designed or configured to "fail closed". That is, if your VPN session suddenly disconnects, your Tor connection will be automatically sent through your ISP without going through your VPN service.</li></ul>
 <h4><span class="mw-headline" id="How_to_add_the_VPN_in_Host_OS">How to add the VPN in Host OS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=6.html" title="Edit section: How to add the VPN in Host OS">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Use the host operating system's built-in tools connect to your VPN or use the software provided by your VPN service.
@@ -296,27 +296,27 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p>
 <h4><span class="mw-headline" id="Use_a_Fail_Closed_Mechanism">Use a Fail Closed Mechanism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=7.html" title="Edit section: Use a Fail Closed Mechanism">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>A general problem with VPNs is that connections often fail to remain open. This means the VPN connection suddenly closes, leaving the user directly connected to the Internet (without first tunneling through the VPN). This is not a Whonix-specific problem. VPN servers and software can occasionally fail without prior notice. Therefore, if the VPN is unreachable or the connection breaks down for whatever reason, in most cases the user will continue to connect to the Internet without the VPN.
-</p><p>One of the key benefits of Whonix is that when a VPN connection fails, protection is still provided by the Tor process. In this instance, the Whonix-Workstation will seamlessly continue to make "direct" connections through Tor. Failure of the VPN tunnel may be inconsequential if a VPN is only used to circumvent Tor censorship. On the other hand, if VPN use is intended to improve security, then it must be configured so that if/when the VPN connection fails, all connections between the outside world and the computer are halted.
+</p><p>One of the key benefits of Whonix is that when a VPN connection fails, protection is still provided by the Tor process. In this instance, the Whonix-Workstation ™ will seamlessly continue to make "direct" connections through Tor. Failure of the VPN tunnel may be inconsequential if a VPN is only used to circumvent Tor censorship. On the other hand, if VPN use is intended to improve security, then it must be configured so that if/when the VPN connection fails, all connections between the outside world and the computer are halted.
 </p><p>If you want to enforce, that the VPN always gets used, try <a class="external text" data-href="https://github.com/adrelanos/VPN-Firewall" href="https://github.com/adrelanos/VPN-Firewall" rel="noreferrer noopener" target="_blank">VPN-Firewall</a>.
 </p><p>(Or if that works for you, install the VPN on the gateway instead, because it comes with an integrated TUNNEL_FIREWALL feature, i.e. stay away from the standalone VPN-Firewall when you set up a VPN on the gateway.)
 </p>
 <hr/>
-<p><span id="VPN_Software_on_Whonix-Gateway"></span>
+<p><span id="VPN_Software_on_Whonix-Gateway_.E2.84.A2"></span>
 </p>
-<h2><span class="mw-headline" id="Inside_Whonix-Gateway">Inside Whonix-Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=8.html" title="Edit section: Inside Whonix-Gateway">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Whonix-Gateway can be configured to connect to a VPN server before Tor, as well as "fail closed", blocking all Tor traffic if the VPN disconnects. 
+<h2><span id="Inside_Whonix-Gateway_™"></span><span class="mw-headline" id="Inside_Whonix-Gateway_.E2.84.A2">Inside Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=8.html" title="Edit section: Inside Whonix-Gateway ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Whonix-Gateway ™ can be configured to connect to a VPN server before Tor, as well as "fail closed", blocking all Tor traffic if the VPN disconnects. 
 </p><p><b>User -&gt; VPN -&gt; Tor -&gt; Internet</b>
 </p>
 <h5><span class="mw-headline" id="VPN_Client_Choice_2">VPN Client Choice</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=9.html" title="Edit section: VPN Client Choice">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Use OpenVPN.
-</p><p>Using bitmask inside Whonix-Gateway for this use case is <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a>. And discouraged. Because bitmask modifies the firewall. Perhaps that can be configured or is safe. Reaching that and documenting bitmask is TODO, <a class="external text" data-href="https://phabricator.whonix.org/T516" href="https://phabricator.whonix.org/T516" rel="noreferrer noopener" target="_blank">help welcome</a>!
+</p><p>Using bitmask inside Whonix-Gateway ™ for this use case is <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a>. And discouraged. Because bitmask modifies the firewall. Perhaps that can be configured or is safe. Reaching that and documenting bitmask is TODO, <a class="external text" data-href="https://phabricator.whonix.org/T516" href="https://phabricator.whonix.org/T516" rel="noreferrer noopener" target="_blank">help welcome</a>!
 </p><p>Other VPN clients are <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a>. We are not aware of any sane VPN client choices besides OpenVPN.
 </p>
 <h5><span class="mw-headline" id="Whonix_TUNNEL_FIREWALL_vs_standalone_VPN-Firewall">Whonix TUNNEL_FIREWALL vs standalone VPN-Firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=10.html" title="Edit section: Whonix TUNNEL FIREWALL vs standalone VPN-Firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>When applying VPN instructions inside Whonix VMs, <b>do not</b> use the standalone VPN-Firewall. It is not required and is incompatible with the integrated Whonix TUNNEL_FIREWALL feature which is documented below.
 </p>
 <h5><span class="mw-headline" id="Setup_Time">Setup Time</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=11.html" title="Edit section: Setup Time">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p>If you are interested in <a data-href="/wiki/Hide_Tor_and_Whonix_from_your_ISP" href="../Hide_Tor_and_Whonix_from_your_ISP.html" title="Hide Tor and Whonix from your ISP">Hide Tor and Whonix from your ISP</a> (read that page first)... After installing Whonix-Gateway, do the following steps before activating Tor in <span style="border:1px dotted #005cb9">Whonix Setup Wizard</span>.
+<p>If you are interested in <a data-href="/wiki/Hide_Tor_and_Whonix_from_your_ISP" href="../Hide_Tor_and_Whonix_from_your_ISP.html" title="Hide Tor and Whonix from your ISP">Hide Tor and Whonix from your ISP</a> (read that page first)... After installing Whonix-Gateway ™, do the following steps before activating Tor in <span style="border:1px dotted #005cb9">Whonix Setup Wizard</span>.
 </p>
 <h5><span class="mw-headline" id="Preparation">Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=12.html" title="Edit section: Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>It is challenging to set up OpenVPN on Whonix with a secure, leak preventing <a href="#Fail_Closed_Mechanism">Fail Closed Mechanism</a>. For this reason, it is strongly recommended that users to learn how to set up OpenVPN on Debian stable (currently stretch). The following steps are a simple overview of the process:
@@ -330,11 +330,11 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix User Firewall Settings</code>
-</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
-</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
+</p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
@@ -358,11 +358,11 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p><p>To view the file, follow these instructions.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+<p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
-</p><p><u>If using a graphical Whonix-Gateway</u>, complete these steps.
+</p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
-</p><p><u>If using a terminal-only Whonix-Gateway</u>, complete these steps.
+</p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
@@ -400,14 +400,14 @@ VPN_FIREWALL=1
 <p>Save.
 </p>
 <h5><span class="mw-headline" id="Reload_Firewall">Reload Firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=14.html" title="Edit section: Reload Firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p>Reload Whonix-Gateway Firewall.
+<p>Reload Whonix-Gateway ™ Firewall.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
-</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+<p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, run.
+</p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, run.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonix_firewall</pre>
@@ -421,7 +421,7 @@ VPN_FIREWALL=1
 <p>Open <i><span style="background-color:#FBFBFB">/etc/sudoers.d/tunnel_unpriv</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/sudoers.d/tunnel_unpriv</pre>
@@ -430,7 +430,7 @@ VPN_FIREWALL=1
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/sudoers.d/tunnel_unpriv</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/sudoers.d/tunnel_unpriv</pre>
@@ -463,7 +463,7 @@ Defaults:tunnel !requiretty
 </p><p>Update: The Riseup "legacy" VPN may have been discontinued, as it no longer works for the author of these instructions. The Riseup replacement service (Bitmask) has not been tested.
 </p>
 <h6><span class="mw-headline" id="Get_VPN_Certificate">Get VPN Certificate</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=18.html" title="Edit section: Get VPN Certificate">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>TODO: Documentation bug fix required. Won't work without Tor being enabled. You need to get the certificate elsewhere and then <a data-href="/wiki/File_Transfer" href="../File_Transfer.html" title="File Transfer">File Transfer</a> it into Whonix-Gateway.
+<p>TODO: Documentation bug fix required. Won't work without Tor being enabled. You need to get the certificate elsewhere and then <a data-href="/wiki/File_Transfer" href="../File_Transfer.html" title="File Transfer">File Transfer</a> it into Whonix-Gateway ™.
 </p><p>Look at the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and (right-click) <a class="external text" data-href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" href="https://help.riseup.net/security/network-security/riseup-ca/RiseupCA.pem" rel="noreferrer noopener" target="_blank">download</a> it. Store the certificate in <i><span style="background-color:#FBFBFB">/etc/openvpn/RiseupCA.pem</span></i>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -478,7 +478,7 @@ Defaults:tunnel !requiretty
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/openvpn/auth.txt</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/auth.txt</pre>
@@ -487,7 +487,7 @@ Defaults:tunnel !requiretty
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/auth.txt</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/openvpn/auth.txt</pre>
@@ -527,7 +527,7 @@ vpnsecret
 <p>Open <i><span style="background-color:#FBFBFB">/etc/openvpn/openvpn.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/openvpn/openvpn.conf</pre>
@@ -536,7 +536,7 @@ vpnsecret
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/openvpn/openvpn.conf</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/openvpn/openvpn.conf</pre>
@@ -585,12 +585,12 @@ script-security 2
 user tunnel
 iproute /usr/bin/ip_unpriv
 </pre>
-<p>Do not worry about TCP mode on Whonix-Gateway. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Your pick.
+<p>Do not worry about TCP mode on Whonix-Gateway ™. Using the VPN in TCP mode may be possible depending the services provides by your VPN provider, but is not required on Whonix-Gateway ™. The VPN in UDP mode should work just fine. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Your pick.
 </p><p><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p><p>Save.
 </p>
 <h6><span class="mw-headline" id="DNS_Configuration">DNS Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=22.html" title="Edit section: DNS Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>DNS configuration, resolvconf, update-resolv-conf or similar is not required for Whonix-Gateway ™. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
 <h6><span class="mw-headline" id="Configuration_Folder_Permissions">Configuration Folder Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=23.html" title="Edit section: Configuration Folder Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Since OpenVPN will be run under user <i>tunnel</i>, that user requires read access to the folder <i>/etc/openvpn</i>.
@@ -651,11 +651,11 @@ iproute /usr/bin/ip_unpriv
 <p>Enable Tor using Whonix Setup Wizard.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
-</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+<p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Whonix Setup</code>
+</p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Whonix Setup Wizard</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway</u>, complete the following steps.
+</p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonixsetup</pre>
@@ -813,14 +813,14 @@ Always refer to the connection scheme when requesting support: <i><span style="b
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
-</p><p><u>If you are using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
-</p><p><u>If you are using a graphical Whonix-Gateway</u>, complete the following steps.
+</p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
-<p><u>If you are using a terminal-only Whonix-Gateway</u>, press on Expand on the right.
+<p><u>If you are using a terminal-only Whonix-Gateway ™</u>, press on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
 <p>Complete the following steps.
@@ -864,7 +864,7 @@ Configuration was valid</pre>
 </div>
 </div>
 <p><b>Leak Tests</b>
-</p><p>When you shut down the VPN, neither Tor, nor Whonix-Gateway's whonixcheck/apt-get/etc. nor Whonix-Workstation should be able to connect anywhere anymore.
+</p><p>When you shut down the VPN, neither Tor, nor Whonix-Gateway ™ whonixcheck/apt-get/etc. nor Whonix-Workstation ™ should be able to connect anywhere anymore.
 </p><p><b> Force Tor to wait for OpenVPN </b>
 </p><p>Create a folder /etc/systemd/system/tor.service.d.
 </p><p><code>
@@ -874,7 +874,7 @@ sudo mkdir /etc/systemd/system/tor.service.d
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/systemd/system/tor.service.d/50_user.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/systemd/system/tor.service.d/50_user.conf</pre>
@@ -883,7 +883,7 @@ sudo mkdir /etc/systemd/system/tor.service.d
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/systemd/system/tor.service.d/50_user.conf</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/systemd/system/tor.service.d/50_user.conf</pre>
@@ -948,7 +948,7 @@ All traffic generated by the host and all applications running on the host. For 
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
 At the time of writing Debian 9 stretch was the stable release version.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Because Whonix-Gateway does not require any clearnet DNS anyhow.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Because Whonix-Gateway ™ does not require any clearnet DNS anyhow.</span>
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 <ul><li>Check, that your VPN-Gateway is fully functional. Test connectivity from inside the VPN-Gateway.</li>
@@ -973,7 +973,7 @@ The <a class="external text" data-href="https://github.com/Whonix/usability-misc
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">We must run OpenVPN as user 'tunnel', because that is the only user besides user <i><span style="background-color:#FBFBFB">clearnet</span></i> that will be allowed to establish external connections when using Whonix Firewall setting VPN_FIREWALL=1.</span>
 </li>
 <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
-Because Whonix-Gateway by default has no and needs no system DNS for its own traffic. See <a data-href="/wiki/Whonix-Gateway_System_DNS" href="../Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Whonix-Gateway System DNS</a> if you would like to read an explanation why that is so.</span>
+Because Whonix-Gateway ™ by default has no and needs no system DNS for its own traffic. See <a data-href="/wiki/Whonix-Gateway_System_DNS" href="../Whonix-Gateway_System_DNS.html" title="Whonix-Gateway System DNS">Whonix-Gateway System DNS</a> if you would like to read an explanation why that is so.</span>
 </li>
 <li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 To list previous commands, run.
@@ -1027,7 +1027,33 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </div>
 <p> <br/>
 </p>
-<div id="allcomments"></div><form action="" method="post" name="commentForm">
+<div id="allcomments"><a id="cfirst" name="cfirst" rel="nofollow"></a><div class="c-ignored full" id="ignore-247" style="display:none;">
+You are ignoring the author of this comment<div class="c-ignored-links">
+<a data-comment-id="247" data-href="javascript:void(0);" href="javascript:void(0);">Show comment</a> | <a data-href="../Special:CommentIgnoreList" href="../Special:CommentIgnoreList">Manage ignore list</a></div>
+</div>
+<div class="c-item full" id="comment-247">
+<div class="c-avatar"><img alt="" border="0" data-src="/w/images/thumb/5/59/Deep-web-1106648640.jpg/50px-Deep-web-1106648640.jpg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gBHRmlsZSBzb3VyY2U6IGh0dHBzOi8vd3d3Lndob25peC5vcmcvd2lraS9GaWxlOkRlZXAtd2ViLTExMDY2NDg2NDAuanBn/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAJAAyAwEiAAIRAQMRAf/EABsAAAMBAQADAAAAAAAAAAAAAAADBQQGAQII/8QAMRAAAgAFAwIEBQIHAAAAAAAAAQIAAwQREgUhMUFRBhMiMgcUYZGhI0JDU2JxgcHx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAiEQACAQMEAgMAAAAAAAAAAAAAAQIDERIEEyExMlFBYaH/2gAMAwEAAhEDEQA/APn6RNPl4H+UHAAFzvvzA1aFL29tgb2W1zaMMicvyueV2VCpF+gIPHX/AJCBPl/My5lWGeSLM6IQCwv7R2v+IiVLJ8nPjRyfJ1nhzw/qniFfNlFKemLECZMX3f2AjXrnhudpCP5c96l5RFx5OIYC1yD1tcfePOnfEXUHBl0GkUkuRLX0opYkAcDt26RJ8T+KqjUZJlVMmbSzcAgBYkDfc8A3478Q7bh4lG1T8fkRKqhMUFV3KENsLXtCaqc2TtcYjAXIFwMewibp9SQhF7sQ29xzb6xtqmABR2AfBSRmOQv0iZ08ZEjp4SsL8kndUJB4JVRBHrLQFFOCnYdAYIO4y/2Kp5ZWjZW2MwMwYtYH2/eJ1UwPt2A9NsrxtmzTjNdTiXVStrD91/8AUU9N0OVOpnqtRmFZTN+kim5a/X8Q6mubsfTXN2dB8Na3SaOVOqdQmiXNTZQD0t2+8SviPqlJqdfnSriq+lQUKk8c7xz+qSVpK52pAVkXsBucT23jFmZpAwycn3EmFw0cI1nXbbb/AARHQxjqHqMncfQkgi3ewudtxFipQkPb2qm4vYDbt/nmIkue4stgqi9gveKKzi4RVa4Dy77C+4HMFVi8rjK0XlcYiLgvoJ26gQRHZ2yPqP3gjdp+zdp+xfm/0Jxjx9CL/mLsqomCjoEy9IdLA/WCCHooRKqHaZUzWZmyLbm8KDYlhYG3eCCNCG/xgrepQpIB44hIm42OCHg7jtBBAsGQ9K/FFX5Skawtcy9z+YIIImfZK+z/2Q=="/></div>
+<div class="c-container">
+<div class="c-user">
+<p>Anonymous user #1<span class="c-user-level"></span>
+</p>
+<div class="c-time">13 days  ago</div>
+<div class="c-score">
+<span class="c-score-title">Score <span id="Comment247">0</span></span> You</div>
+</div>
+<div class="c-comment f-message">
+<p>Could you guys provide information as to how I can check if my host VPN is in fact connected to Whonix.
+Do I need to change the settings from NAT, Bridged, etc... Is there a way I can see this on the backend and what not.
+</p>
+Thanks.</div>
+<div class="c-actions">
+<p><a data-href="../Tunnels/Connecting_to_a_VPN_before_Tor#comment-247" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="nofollow">Permalink</a>  | <a class="comments-reply-to" data-comment-id="247" data-comments-safe-username="Anonymous user" data-comments-user-gender="unknown" href="#end" rel="nofollow">Reply</a>
+</p>
+</div>
+</div>
+<div class="visualClear"></div>
+</div>
+</div><form action="" method="post" name="commentForm">
 <div class="c-form-title">Add your comment</div>
 <div class="c-form-reply-to" id="replyto"></div>
 <div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="../Special:UserLogin/signup" href="../Special:UserLogin/signup">register</a> or <a data-href="../Special:UserLogin" href="../Special:UserLogin">log in</a>. It is free.</div>
@@ -1037,7 +1063,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 <p><input name="action" type="hidden" value="purge"/>
 <input name="pageId" type="hidden" value="4177"/>
 <input name="commentid" type="hidden"/>
-<input name="lastCommentId" type="hidden" value="0"/>
+<input name="lastCommentId" type="hidden" value="247"/>
 <input name="commentParentId" type="hidden"/>
 <input name="cpage" type="hidden" value="1"/>
 <input name="token" type="hidden" value="+\"/></p></form>
@@ -1045,52 +1071,52 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Want to get involved with Whonix? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="../Tunnels/Connecting_to_a_VPN_before_Tor" href="../Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=../Tunnels/Connecting_to_a_VPN_before_Tor&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=../Tunnels/Connecting_to_a_VPN_before_Tor&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=../Tunnels/Connecting_to_a_VPN_before_Tor" href="https://facebook.com/sharer.php?u=../Tunnels/Connecting_to_a_VPN_before_Tor">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190324191406
+Cached time: 20190422210516
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.134 seconds
-Real time usage: 0.165 seconds
-Preprocessor visited node count: 1186/1000000
-Preprocessor generated node count: 2866/1000000
-Post‐expand include size: 45085/2097152 bytes
-Template argument size: 14124/2097152 bytes
+CPU time usage: 0.157 seconds
+Real time usage: 0.197 seconds
+Preprocessor visited node count: 1385/1000000
+Preprocessor generated node count: 3392/1000000
+Post‐expand include size: 47121/2097152 bytes
+Template argument size: 14369/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 10727/5000000 bytes
+Unstrip post‐expand size: 12229/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.63 MB/50 MB
+Lua virtual size: 7.62 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  125.308      1 -total
- 33.79%   42.339     35 Template:CodeSelect
- 26.06%   32.657     13 Template:Box
- 23.12%   28.973      1 Template:Tunnels_Introduction
- 21.61%   27.078      2 Template:Mbox
- 12.85%   16.099      4 Template:Open_with_root_rights
-  8.08%   10.131      1 Template:VPN-Firewall/Troubleshooting
-  6.91%    8.657      1 Template:Footer
-  6.11%    7.652      1 Template:Firewall_Settings
-  4.98%    6.243      1 Template:Reflist
+100.00%  153.816      1 -total
+ 30.40%   46.765     35 Template:CodeSelect
+ 23.84%   36.670     13 Template:Box
+ 20.96%   32.244      1 Template:Tunnels_Introduction
+ 19.69%   30.291      2 Template:Mbox
+ 12.45%   19.151      4 Template:Open_with_root_rights
+  8.96%   13.778      1 Template:Footer
+  7.03%   10.811      1 Template:VPN-Firewall/Troubleshooting
+  4.85%    7.460      1 Template:Firewall_Settings
+  4.59%    7.063      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=41369</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=45118" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=45118">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=45118</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1101,7 +1127,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 5 March 2019, at 11:07.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 22:26.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1122,5 +1148,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20190324191406 -->
+<!-- Cached/compressed 20190422210516 -->
 </html>

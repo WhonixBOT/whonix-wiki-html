@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Leak Tests - Whonix
  url: ./LeakTests
- date: Mon Apr 22 07:37:38 2019
+ date: Tue Apr 23 07:37:23 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -131,7 +131,7 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-2 tocsection-5"><a href="#Online"><span class="tocnumber">4.1</span> <span class="toctext">Online</span></a></li>
 <li class="toclevel-2 tocsection-6"><a href="#Deactivate_host_DNS"><span class="tocnumber">4.2</span> <span class="toctext">Deactivate host DNS</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Deactivate_Whonix-Gateway_DNS"><span class="tocnumber">4.3</span> <span class="toctext">Deactivate Whonix-Gateway DNS</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Deactivate_Whonix-Gateway_.E2.84.A2_DNS"><span class="tocnumber">4.3</span> <span class="toctext">Deactivate Whonix-Gateway ™ DNS</span></a></li>
 <li class="toclevel-2 tocsection-8"><a href="#Using_dig"><span class="tocnumber">4.4</span> <span class="toctext">Using dig</span></a></li>
 <li class="toclevel-2 tocsection-9"><a href="#Using_nslookup"><span class="tocnumber">4.5</span> <span class="toctext">Using nslookup</span></a></li>
 </ul>
@@ -154,8 +154,8 @@ Whonix requires Donations to stay alive.
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>In past Whonix documentation stated "in your own interest you should do the leak tests". That was from a time, where Whonix was only useful for very advanced end users, because only textual instructions existed; there were no scripts, no source code and the Whonix concept was brand new. It is unrealistic, that all download users do and understand the leak tests. That's why it was removed from the Readme.
-</p><p>You are still invited and encouraged to do the leak tests, in fact, at the moment, there are probably not many people auditing Whonix security.
+<p>In past Whonix ™ documentation stated "in your own interest you should do the leak tests". That was from a time, where Whonix ™ was only useful for very advanced end users, because only textual instructions existed; there were no scripts, no source code and the Whonix ™ concept was brand new. It is unrealistic, that all download users do and understand the leak tests. That's why it was removed from the Readme.
+</p><p>You are still invited and encouraged to do the leak tests, in fact, at the moment, there are probably not many people auditing Whonix ™ security.
 </p><p>Unfortunately, leak testing is as complicated as programming. You can not learn it overnight and you won't find someone online, willing to teach you for free. That's really something you have to do on your own. We continue to list and document all leak tests we are aware of, but we can not educate everyone in the depths of networking.
 </p>
 <h1><span class="mw-headline" id="Knowledge_assumed">Knowledge assumed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=2.html" title="Edit section: Knowledge assumed">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -167,7 +167,7 @@ Whonix requires Donations to stay alive.
 </p>
 <ul><li><a class="external text" data-href="https://trac.torproject.org/projects/tor/wiki/doc/build/BuildSignoff#TestPagestoUse" href="https://trac.torproject.org/projects/tor/wiki/doc/build/BuildSignoff" rel="noreferrer noopener" target="_blank">List 1</a></li>
 <li><a class="external text" data-href="https://trac.torproject.org/projects/tor/wiki/doc/Testing/Tools#Sites" href="https://trac.torproject.org/projects/tor/wiki/doc/Testing/Tools" rel="noreferrer noopener" target="_blank">List 2</a></li></ul>
-<p>None of the Leak Testing Websites running inside Whonix-Workstation is able to find out the real external clearnet IP address, no matter if plugins, flash and/or java are activated.
+<p>None of the Leak Testing Websites running inside Whonix-Workstation ™ is able to find out the real external clearnet IP address, no matter if plugins, flash and/or java are activated.
 </p>
 <h1><span class="mw-headline" id="DNS_Leak_Tests">DNS Leak Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=4.html" title="Edit section: DNS Leak Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Online">Online</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=5.html" title="Edit section: Online">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -177,15 +177,15 @@ Whonix requires Donations to stay alive.
 <li><a class="external free" data-href="http://check2ip.com/" href="http://check2ip.com/" rel="noreferrer noopener" target="_blank">http://check2ip.com/</a></li>
 <li><a class="external free" data-href="https://anonymster.com/dns-leak-test/" href="https://anonymster.com/dns-leak-test/" rel="noreferrer noopener" target="_blank">https://anonymster.com/dns-leak-test/</a></li></ul>
 <h2><span class="mw-headline" id="Deactivate_host_DNS">Deactivate host DNS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=6.html" title="Edit section: Deactivate host DNS">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Deactivating the DNS on your host should result in not being be able to nslookup anymore, but Whonix-Workstation's nslookup should still be functional.
-</p><p>Theoretical background: Whonix-Workstation requests should always be resolved by Whonix-Gateway. In the case of a DNS leak, the host operating system is resolving DNS queries for the Whonix-Workstation. Deactivating the host's DNS would make Whonix-Workstation's DNS queries non-functional, breaking functionality. This is confirmation of a DNS leak.
+<p>Deactivating the DNS on your host should result in not being be able to nslookup anymore, but Whonix-Workstation ™ nslookup should still be functional.
+</p><p>Theoretical background: Whonix-Workstation ™ requests should always be resolved by Whonix-Gateway ™. In the case of a DNS leak, the host operating system is resolving DNS queries for the Whonix-Workstation ™. Deactivating the host's DNS would make Whonix-Workstation ™ DNS queries non-functional, breaking functionality. This is confirmation of a DNS leak.
 </p>
-<h2><span class="mw-headline" id="Deactivate_Whonix-Gateway_DNS">Deactivate Whonix-Gateway DNS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=7.html" title="Edit section: Deactivate Whonix-Gateway DNS">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>On the Whonix-Gateway. 
+<h2><span id="Deactivate_Whonix-Gateway_™_DNS"></span><span class="mw-headline" id="Deactivate_Whonix-Gateway_.E2.84.A2_DNS">Deactivate Whonix-Gateway ™ DNS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=7.html" title="Edit section: Deactivate Whonix-Gateway ™ DNS">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On the Whonix-Gateway ™. 
 </p><p>Open <i><span style="background-color:#FBFBFB">/etc/resolv.conf</span></i> in an editor with root rights.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>KDE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>KDE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo kwrite /etc/resolv.conf</pre>
@@ -194,7 +194,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /etc/resolv.conf</textarea>
 </div>
 </div>
-<p><u>If you are using a graphical Whonix or <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u> with <b>XFCE</b>, run.
+<p><u>If you are using a graphical Whonix or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u> with <b>XFCE</b>, run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>kdesudo mousepad /etc/resolv.conf</pre>
@@ -217,10 +217,10 @@ Whonix requires Donations to stay alive.
 </p>
 <pre>#nameserver 127.0.0.1
 </pre>
-<p>As a test's result the DNS requests in the Whonix-Workstation should still work while the DNS requests in the Whonix-Gateway no longer work.
+<p>As a test's result the DNS requests in the Whonix-Workstation ™ should still work while the DNS requests in the Whonix-Gateway ™ no longer work.
 </p>
 <h2><span class="mw-headline" id="Using_dig">Using dig</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=8.html" title="Edit section: Using dig">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Another very poor manish leak test: Because Tor's DNS resolver does not handle AAAA records this will not return any google hostnames if run on Whonix-Workstation and DNS requests aren't leaking. Running.
+<p>Another very poor manish leak test: Because Tor's DNS resolver does not handle AAAA records this will not return any google hostnames if run on Whonix-Workstation ™ and DNS requests aren't leaking. Running.
 </p>
 <pre>dig AAAA check.torproject.org</pre>
 <p>Should reply.
@@ -270,10 +270,10 @@ Address:        10.152.152.10#53
 ** server can't find check.torproject.org: NOTIMP
 </pre>
 <h1><span class="mw-headline" id="Leaks_through_the_host_or_VM">Leaks through the host or VM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=10.html" title="Edit section: Leaks through the host or VM">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Shut down the Whonix-Gateway and start the Whonix-Workstation. The Whonix-Workstation shouldn't be able to exchange data with any outside target.
+<p>Shut down the Whonix-Gateway ™ and start the Whonix-Workstation ™. The Whonix-Workstation ™ shouldn't be able to exchange data with any outside target.
 </p>
 <h1><span class="mw-headline" id="Ping_Test">Ping Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=11.html" title="Edit section: Ping Test">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>First, make sure both VMs are online. Since ICMP is not supported by Tor and filtered by Whonix firewall, you should not be able to ping any servers.
+<p>First, make sure both VMs are online. Since ICMP is not supported by Tor and filtered by Whonix ™ firewall, you should not be able to ping any servers.
 </p>
 <h1><span id="FIN_ACK_/_RST_ACK_-_Leak_Test"></span><span class="mw-headline" id="FIN_ACK_.2F_RST_ACK_-_Leak_Test">FIN ACK / RST ACK - Leak Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=12.html" title="Edit section: FIN ACK / RST ACK - Leak Test">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><font size="-3">Credit for FIN ACK / RST ACK - Leak Test (coined by Whonix): Originally written by Mike Perry on the tor-talk mailing list, he found a transparent proxy leak without references to Whonix. (<a class="external text" data-href="https://lists.torproject.org/pipermail/tor-talk/2014-March/032503.html" href="https://lists.torproject.org/pipermail/tor-talk/2014-March/032503.html" rel="noreferrer noopener" target="_blank">source</a>) The test has been adapted for Whonix.</font>
@@ -291,7 +291,7 @@ sudo apt-get install tcpdump
 </pre>
 <p>For testing/learning, connect to 74.125.28.104 (ping, open in a browser, use curl, scurl or similar) and see how it looks like when a connection to that IP is being made.
 </p><p>Close the connection. Stop tcpdump. Start tcpdump again.
-</p><p>In Whonix-Workstation.
+</p><p>In Whonix-Workstation ™.
 </p><p>Create a socket connection.
 </p>
 <pre>python
@@ -300,12 +300,12 @@ import socket
 
 s = socket.create_connection(("74.125.28.104", 80))
 </pre>
-<p>On Whonix-Gateway.
+<p>On Whonix-Gateway ™.
 </p><p>Stop Tor.
 </p>
 <pre>sudo service tor@default stop
 </pre>
-<p>In Whonix-Workstation.
+<p>In Whonix-Workstation ™.
 </p><p>Close the socket connection.
 </p>
 <pre>s.close()
@@ -314,22 +314,22 @@ s = socket.create_connection(("74.125.28.104", 80))
 </p><p>Check, that you can not see any connections to 74.125.28.104 in tcpdump.
 </p><p>Variations of this test:
 </p>
-<ul><li>You could also run tcpdump in Whonix-Workstation or on Whonix-Gateway.</li>
-<li>You could also <a data-href="/wiki/Whonix-Gateways_Own_Traffic_Transparent_Proxy" href="./Whonix-Gateways_Own_Traffic_Transparent_Proxy.html" title="Whonix-Gateways Own Traffic Transparent Proxy">enable transparent proxying for Whonix-Gateway's own traffic</a> and create the socket connection on Whonix-Gateway.</li></ul>
+<ul><li>You could also run tcpdump in Whonix-Workstation ™ or on Whonix-Gateway ™.</li>
+<li>You could also <a data-href="/wiki/Whonix-Gateways_Own_Traffic_Transparent_Proxy" href="./Whonix-Gateways_Own_Traffic_Transparent_Proxy.html" title="Whonix-Gateways Own Traffic Transparent Proxy">enable transparent proxying for Whonix-Gateway ™ own traffic</a> and create the socket connection on Whonix-Gateway ™.</li></ul>
 <p><font size="-3">
 Forum discussion:
 </font></p><font size="-3"><ul><li><a class="external text" data-href="https://forums.whonix.org/t/testers-wanted-new-fin-ack-rst-ack-leak-test/229" href="https://forums.whonix.org/t/testers-wanted-new-fin-ack-rst-ack-leak-test/229" rel="noreferrer noopener" target="_blank">Part 1</a></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/testers-wanted-new-fin-ack-rst-ack-leak-test-part-2/313" href="https://forums.whonix.org/t/testers-wanted-new-fin-ack-rst-ack-leak-test-part-2/313" rel="noreferrer noopener" target="_blank">Part 2</a></li></ul></font><font size="-3"></font><p><font size="-3"></font>
 </p>
 <h1><span class="mw-headline" id="Integrated_tshark_leaktest">Integrated tshark leaktest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=13.html" title="Edit section: Integrated tshark leaktest">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>On Whonix-Gateway start looking for leaks.
+<p>On Whonix-Gateway ™ start looking for leaks.
 </p><p>You need to install the anon-gw-leaktest package.
 </p>
 <pre>## Login as user, open a shell as user or su user.
 ## /usr/bin/leaktest
 sudo leaktest
 </pre>
-<p>On Whonix-Workstation try to produce a leak.
+<p>On Whonix-Workstation ™ try to produce a leak.
 </p><p>You need to install the anon-ws-leaktest package.
 </p>
 <pre>## Login as user, open a shell as user or su user.
@@ -344,7 +344,7 @@ sudo leaktest
 <li>Perhaps useful for similar projects.</li>
 <li>Optional additional tests.</li></ul>
 <h1><span class="mw-headline" id="Integreated_whonixcheck_leaktest">Integreated whonixcheck leaktest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14.html" title="Edit section: Integreated whonixcheck leaktest">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Please also run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway and Whonix-Workstation. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
+<p>Please also run <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway ™ and Whonix-Workstation ™. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation ™ <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>whonixcheck --leak-tests</pre>
@@ -361,11 +361,11 @@ sudo leaktest
 <li>Please add more to the list if you know other tests.</li></ul>
 <h1><span class="mw-headline" id="Other_Leak_Tests">Other Leak Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=17.html" title="Edit section: Other Leak Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://www.whonix.org/blog/corridor-a-clearnet-leak-tester" href="https://www.whonix.org/blog/corridor-a-clearnet-leak-tester" rel="noreferrer noopener" target="_blank">corridor, a Tor traffic whitelisting gateway, a clearnet leak tester</a></li>
-<li><a class="external text" data-href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" rel="noreferrer noopener" target="_blank">Using corridor, a Tor traffic whitelisting gateway with Qubes-Whonix</a></li>
-<li>A similar project published another leak test. Read <a class="external text" data-href="https://github.com/ra--/Tor-gateway/wiki/Faq" href="https://github.com/ra--/Tor-gateway/wiki/Faq" rel="noreferrer noopener" target="_blank">How can I test if there is a leak in the setup respectively all traffic goes through Tor?</a>. Has not been tested with Whonix yet. If you do it, please share your results.</li></ul>
+<li><a class="external text" data-href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" href="https://www.whonix.org/blog/using-corridor-tor-traffic-whitelisting-gateway-qubes-whonix" rel="noreferrer noopener" target="_blank">Using corridor, a Tor traffic whitelisting gateway with Qubes-Whonix ™</a></li>
+<li>A similar project published another leak test. Read <a class="external text" data-href="https://github.com/ra--/Tor-gateway/wiki/Faq" href="https://github.com/ra--/Tor-gateway/wiki/Faq" rel="noreferrer noopener" target="_blank">How can I test if there is a leak in the setup respectively all traffic goes through Tor?</a>. Has not been tested with Whonix ™ yet. If you do it, please share your results.</li></ul>
 <h1><span class="mw-headline" id="Qubes_specific">Qubes specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=18.html" title="Edit section: Qubes specific">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="TemplateVM_Update_Proxy_Leak_Test">TemplateVM Update Proxy Leak Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=19.html" title="Edit section: TemplateVM Update Proxy Leak Test">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Start a your Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>). <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>Start a your Whonix-Gateway ™ TemplateVM (commonly called <code>whonix-gw-14</code>). <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>In your TempalteVM.
 </p><p>Start downloading some big<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> package. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> Example.
 </p><p></p><div class="codeContainerNew">
@@ -376,7 +376,7 @@ sudo leaktest
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get download firefox-esr</textarea>
 </div>
 </div>
-<p>Now switch to your Whonix-Gateway ProxyVM (commonly called <code>sys-whonix</code>) and stop Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+<p>Now switch to your Whonix-Gateway ™ ProxyVM (commonly called <code>sys-whonix</code>) and stop Tor. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default stop</pre>
@@ -392,7 +392,7 @@ Err http://security.debian.org/ jessie/updates/main firefox-esr amd64 52.5.2esr-
   500  Unable to connect
 E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefox-esr amd64 52.5.2esr-1~deb8u1_amd64.deb  500  Unable to connect
 </pre>
-<p>You can now start Tor in your Whonix-Gateway ProxyVM again. 
+<p>You can now start Tor in your Whonix-Gateway ™ ProxyVM again. 
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo service tor@default start</pre>
@@ -401,7 +401,7 @@ E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefo
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo service tor@default start</textarea>
 </div>
 </div>
-<p>Repeat this test with your Whonix-Workstation TemplateVM (commonly called <code>whonix-ws-14</code>).
+<p>Repeat this test with your Whonix-Workstation ™ TemplateVM (commonly called <code>whonix-ws-14</code>).
 </p>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=20.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Browser_Tests" href="./Browser_Tests.html" title="Browser Tests">Browser Tests</a></li>
@@ -411,7 +411,7 @@ E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefo
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Because Whonix-Gateway does not have a TransPort by default.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Because Whonix-Gateway ™ does not have a TransPort by default.</span>
 </li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
 Those are assumed to be torified, i.e. having their NetVM set to sys-whonix.</span>
@@ -476,49 +476,49 @@ This should lead to the same <i>expected result</i>.</span>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Did you know that anyone can edit the <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="./Dev/Leak_Tests" href="./Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Leak_Tests" href="https://www.Whonix.org/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./Dev/Leak_Tests&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./Dev/Leak_Tests&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=./Dev/Leak_Tests" href="https://facebook.com/sharer.php?u=./Dev/Leak_Tests">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190422053737
+Cached time: 20190423053723
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.042 seconds
-Real time usage: 0.046 seconds
-Preprocessor visited node count: 497/1000000
-Preprocessor generated node count: 1425/1000000
-Post‐expand include size: 4578/2097152 bytes
-Template argument size: 679/2097152 bytes
+CPU time usage: 0.052 seconds
+Real time usage: 0.057 seconds
+Preprocessor visited node count: 637/1000000
+Preprocessor generated node count: 1819/1000000
+Post‐expand include size: 5516/2097152 bytes
+Template argument size: 701/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 6308/5000000 bytes
+Unstrip post‐expand size: 6186/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   30.139      1 -total
- 32.03%    9.654      8 Template:CodeSelect
- 28.54%    8.602      1 Template:Footer
- 19.57%    5.898      1 Template:Open_with_root_rights
- 15.89%    4.788      1 Template:Box
- 12.49%    3.765      1 Template:Reflist
-  6.60%    1.989      1 Template:Share
-  6.11%    1.840      1 Template:Edit_it
-  6.08%    1.833      1 Template:Header
-  3.33%    1.005      1 Template:Whonix-gw
+100.00%   40.542      1 -total
+ 26.88%   10.897      8 Template:CodeSelect
+ 25.72%   10.429      1 Template:Footer
+ 19.84%    8.042      1 Template:Open_with_root_rights
+ 16.48%    6.682      1 Template:Box
+  9.88%    4.004      1 Template:Reflist
+  5.71%    2.314      1 Template:Header
+  5.00%    2.029      1 Template:Share
+  4.59%    1.862      1 Template:Edit_it
+  2.91%    1.181      1 Template:Whonix-gw
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=41385" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=41385">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=41385</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=45171" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=45171">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=45171</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -529,7 +529,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 6 March 2019, at 08:47.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 22:48.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

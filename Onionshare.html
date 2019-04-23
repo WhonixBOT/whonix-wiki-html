@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: OnionShare - Whonix
  url: ./Onionshare
- date: Mon Apr 22 07:38:33 2019
+ date: Tue Apr 23 07:38:19 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -169,12 +169,12 @@ Whonix requires Donations to stay alive.
 </p><p>At the time of writing, the OnionShare package is not packaged in Debian stretch. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> For these reasons, the following instructions use the most recent version available from GitHub. Advanced users may prefer to use APT pinning to install the version from Debian buster instead. However, installing from a tagged release in Git ensures you have access to the latest features.
 </p>
 <h2><span class="mw-headline" id="Install_OnionShare">Install OnionShare</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=2.html" title="Edit section: Install OnionShare">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><b>1.</b> <i>Optional</i>: Create a separate Whonix-Workstation (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>: <code>anon-onionshare</code> AppVM).
+<p><b>1.</b> <i>Optional</i>: Create a separate Whonix-Workstation ™ (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: <code>anon-onionshare</code> AppVM).
 </p><p>Note: This is not strictly necessary, but best practice is to separate anonymous activities of a different nature in distinct VMs (AppVMs). <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
-</p><p>In <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a>, to clone the existing <code>anon-whonix</code>: 
+</p><p>In <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>, to clone the existing <code>anon-whonix</code>: 
 </p><p><code>Qube Manager</code> -&gt; <code>Right-click on anon-vm</code> -&gt; <code>Select "<u>C</u>lone qube"</code> -&gt; <code>Rename to "anon-onionshare"</code>
-</p><p><b>2.</b> Install git in Whonix-Workstation (<code>anon-onionshare</code>).
-</p><p>Open a terminal (Konsole) in Whonix-Workstation (<code>anon-onionshare</code>) and navigate to the persistent home directory. 
+</p><p><b>2.</b> Install git in Whonix-Workstation ™ (<code>anon-onionshare</code>).
+</p><p>Open a terminal (Konsole) in Whonix-Workstation ™ (<code>anon-onionshare</code>) and navigate to the persistent home directory. 
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd /home/user</pre>
@@ -250,9 +250,9 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit v2.0^{commit}</textarea>
 </div>
 </div>
-<p>Qubes-Whonix users should shut down <code>anon-onionshare</code> prior to the next step.
+<p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users should shut down <code>anon-onionshare</code> prior to the next step.
 </p><p><b>6.</b> Install OnionShare dependencies.
-</p><p>Several dependencies must be installed in Whonix-Workstation (<code>whonix-ws-14</code> TemplateVM) for OnionShare to work correctly. Locate the <i><span style="background-color:#FBFBFB">BUILD.md</span></i> file in the OnionShare repository and run the necessary apt-get commands in the "Debian-like distros" section.
+</p><p>Several dependencies must be installed in Whonix-Workstation ™ (<code>whonix-ws-14</code> TemplateVM) for OnionShare to work correctly. Locate the <i><span style="background-color:#FBFBFB">BUILD.md</span></i> file in the OnionShare repository and run the necessary apt-get commands in the "Debian-like distros" section.
 </p><p>For example, for OnionShare 2 run in a terminal (Konsole).
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -262,13 +262,13 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt install -y python3-flask python3-stem python3-pyqt5 python3-crypto python3-socks python-nautilus tor obfs4proxy python3-pytest build-essential fakeroot python3-all python3-stdeb dh-python</textarea>
 </div>
 </div>
-<p>Qubes-Whonix users should shutdown the <code>whonix-ws-14</code> TemplateVM after dependencies have installed, and restart the <code>anon-onionshare</code> AppVM.
+<p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users should shutdown the <code>whonix-ws-14</code> TemplateVM after dependencies have installed, and restart the <code>anon-onionshare</code> AppVM.
 </p><p><span id="onion-grater"></span>
-<b>7.</b> Extend the onion-grater whitelist in Whonix-Gateway (<code>sys-whonix</code>).
+<b>7.</b> Extend the onion-grater whitelist in Whonix-Gateway ™ (<code>sys-whonix</code>).
 </p><p><b>Extend onion-grater Whitelist</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>On Whonix-Gateway.</b>
+<p><b>On Whonix-Gateway ™.</b>
 </p><p>Create a new directory. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -307,13 +307,13 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 </div>
-<p><b>8.</b> Modify the Whonix-Workstation (<code>anon-onionshare</code>) user firewall settings and reload them.
-</p><p><b>Modify Whonix-Workstation User Firewall Settings</b>
+<p><b>8.</b> Modify the Whonix-Workstation ™ (<code>anon-onionshare</code>) user firewall settings and reload them.
+</p><p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.<br/>
-In Whonix-Workstation AppVM.
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+In Whonix-Workstation ™ AppVM.
 </p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -332,10 +332,10 @@ In Whonix-Workstation AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
-<p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
+<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, complete this step. 
-</p><p>In Whonix-Workstation, open the whonix_firewall configuration file in an editor.
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
+</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
@@ -360,12 +360,12 @@ In Whonix-Workstation AppVM.
 </p><p>To view the file, follow these instructions.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete these steps.
+<p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-ws-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
-</p><p><u>If using a graphical Whonix-Workstation</u>, complete these steps.
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a></u>, complete this step.
-</p><p>In Whonix-Workstation, open the whonix_firewall configuration file in an editor.
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
@@ -389,14 +389,14 @@ In Whonix-Workstation AppVM.
 </div>
 </div>
 <p>Save.
-</p><p><b>Reload Whonix-Workstation Firewall.</b>
+</p><p><b>Reload Whonix-Workstation ™ Firewall.</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Workstation AppVM (commonly named anon-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
-</p><p><u>If you are using a graphical Whonix-Workstation</u>, complete the following steps.
+<p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Workstation ™ AppVM (commonly named anon-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><u>If you are using a graphical Whonix-Workstation ™</u>, complete the following steps.
 </p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
-</p><p><u>If you are using a terminal-only Whonix-Workstation</u>, run.
+</p><p><u>If you are using a terminal-only Whonix-Workstation ™</u>, run.
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo whonix_firewall</pre>
@@ -407,7 +407,7 @@ In Whonix-Workstation AppVM.
 </div>
 </div>
 <h2><span class="mw-headline" id="Start_OnionShare">Start OnionShare</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=3.html" title="Edit section: Start OnionShare">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>To start OnionShare in Whonix-Workstation (<code>anon-onionshare</code>) first navigate to the OnionShare folder.
+<p>To start OnionShare in Whonix-Workstation ™ (<code>anon-onionshare</code>) first navigate to the OnionShare folder.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>cd onionshare</pre>
@@ -447,7 +447,7 @@ In Whonix-Workstation AppVM.
 <li>The GUI should say it supports both ephemeral onion services and stealth onion services.</li>
 <li>You can check “Create stealth onion services” (Client Auth) to make OnionShare operations more secure - however, this currently only works with legacy 'v2' (shorter) style onions. Support for Client Auth with v3/prop224/next-gen onions will be possible in a future release.
 <ul><li>Note: Using Stealth mode makes it harder for the end user to connect to the share, because they must first edit their torrc file. Please see the <a class="external text" data-href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" href="https://github.com/micahflee/onionshare/wiki/Stealth-Onion-Services" rel="noreferrer noopener" target="_blank">official documentation</a> for further information.</li></ul></li>
-<li>By default, if the version of Tor in use is 0.3.5.7 or higher (as it is in Whonix 14), OnionShare will use next-gen or 'v3' (sometimes referred to as prop224) onion addresses by default. These are recognizable by their longer address. You can enable Legacy Mode in the settings if for some reason you want to use the shorter (but less secure) v2 onion addresses.</li></ul>
+<li>By default, if the version of Tor in use is 0.3.5.7 or higher (as it is in Whonix ™ 14), OnionShare will use next-gen or 'v3' (sometimes referred to as prop224) onion addresses by default. These are recognizable by their longer address. You can enable Legacy Mode in the settings if for some reason you want to use the shorter (but less secure) v2 onion addresses.</li></ul>
 <h3><span class="mw-headline" id="How_to_Use_OnionShare">How to Use OnionShare</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=5.html" title="Edit section: How to Use OnionShare">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Once OnionShare has been installed correctly and the Tor check is successful, sharing files anonymously is easy: <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p>
@@ -463,7 +463,7 @@ The person who is receiving the files doesn't need OnionShare. All they need is 
 </p>
 <h2><span class="mw-headline" id="OnionShare_AppArmor_Profiles">OnionShare AppArmor Profiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=6.html" title="Edit section: OnionShare AppArmor Profiles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>AppArmor profiles are available to better contain OnionShare, but they have not yet been tested in Whonix. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> Profile development is reported to be lagging behind the master and development branches of the OnionShare git repository. Therefore, willing testers should be knowledgeable about AppArmor profiles before attempting this procedure. 
-</p><p>Advanced users are encouraged to help progress the <a class="external text" data-href="https://github.com/micahflee/onionshare/issues/686" href="https://github.com/micahflee/onionshare/issues/686" rel="noreferrer noopener" target="_blank">open OnionShare AppArmor ticket</a> and help complete this wiki section. Successes or failures can also be reported in the <a class="external text" data-href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/c/apparmor" href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/c/apparmor" rel="noreferrer noopener" target="_blank">Whonix AppArmor forum</a>.
+</p><p>Advanced users are encouraged to help progress the <a class="external text" data-href="https://github.com/micahflee/onionshare/issues/686" href="https://github.com/micahflee/onionshare/issues/686" rel="noreferrer noopener" target="_blank">open OnionShare AppArmor ticket</a> and help complete this wiki section. Successes or failures can also be reported in the <a class="external text" data-href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/c/apparmor" href="http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/c/apparmor" rel="noreferrer noopener" target="_blank">Whonix ™ AppArmor forum</a>.
 </p><p>TODO: Test profiles and expand this section.
 </p>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=OnionShare&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit&amp;section=7.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -475,14 +475,14 @@ The person who is receiving the files doesn't need OnionShare. All they need is 
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tracker.debian.org/pkg/onionshare" href="https://tracker.debian.org/pkg/onionshare" rel="noreferrer noopener" target="_blank">https://tracker.debian.org/pkg/onionshare</a></span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Qubes-Whonix users should note the <code>whonix-ws-14</code> TemplateVM will pull in over 70Mb of dependencies at step 6. Consider creating a separate, cloned <code>whonix-ws-14</code> TemplateVM for this purpose beforehand.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users should note the <code>whonix-ws-14</code> TemplateVM will pull in over 70Mb of dependencies at step 6. Consider creating a separate, cloned <code>whonix-ws-14</code> TemplateVM for this purpose beforehand.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The git installation will not persist in Qubes-Whonix following reboot. This method avoids polluting the <code>whonix-ws-14</code> TemplateVM upon which it is based.</span>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">The git installation will not persist in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> following reboot. This method avoids polluting the <code>whonix-ws-14</code> TemplateVM upon which it is based.</span>
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">The OnionShare core developer is Micah Lee. The key ID has been taken directly from www.micahflee.com</span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
-Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> users could also use <code>/etc/onion-grater-merger.d/</code>. Qubes-Whonix users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway TemplateVM (commonly called <code>whonix-gw-14</code>) and restart their Whonix-Gateway ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ProxyVMs based on the same Whonix-Gateway TemplateVM for lets say one Whonix-Gateway ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ProxyVM with the default more restricted onion-grater whitelist.</span>
+Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway ™ (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users could also use <code>/etc/onion-grater-merger.d/</code>. <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway ™ TemplateVM (commonly called <code>whonix-gw-14</code>) and restart their Whonix-Gateway ™ ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ™ ProxyVMs based on the same Whonix-Gateway ™ TemplateVM for lets say one Whonix-Gateway ™ ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ™ ProxyVM with the default more restricted onion-grater whitelist.</span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">As per <a class="external free" data-href="https://labs.riseup.net/code/issues/7870#note-15" href="https://labs.riseup.net/code/issues/7870" rel="noreferrer noopener" target="_blank">https://labs.riseup.net/code/issues/7870#note-15</a> OnionShare uses ports 17600 to 17659.</span>
 </li>
@@ -537,52 +537,52 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
-<hr/><p><font size="-1"><a class="external text" data-href="./OnionShare" href="./OnionShare" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">onion</a><br/>
+<hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/OnionShare" href="https://www.Whonix.org/wiki/OnionShare" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">onion</a><br/>
 </font></p><font size="-1"></font><p><font size="-1">Share: <a data-href="https://twitter.com/intent/tweet?url=./OnionShare&amp;text=&amp;via=Whonix" href="https://twitter.com/intent/tweet?url=./OnionShare&amp;text=&amp;via=Whonix">Twitter</a>
 |
 <a data-href="https://facebook.com/sharer.php?u=./OnionShare" href="https://facebook.com/sharer.php?u=./OnionShare">Facebook</a></font>
-</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix</a>, then <a data-href="/w/index.php?title=OnionShare&amp;action=edit" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit">Edit</a>! Edits are held for moderation.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix is a trademark.</a> Whonix is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
+</p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=OnionShare&amp;action=edit" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;action=edit">Edit</a>! Edits are held for moderation.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="http://www.openinventionnetwork.com/licensees.php" href="http://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> of the Open Invention Network. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190422053832
+Cached time: 20190423053818
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.082 seconds
-Real time usage: 0.103 seconds
-Preprocessor visited node count: 631/1000000
-Preprocessor generated node count: 1906/1000000
-Post‐expand include size: 16861/2097152 bytes
-Template argument size: 7199/2097152 bytes
+CPU time usage: 0.092 seconds
+Real time usage: 0.119 seconds
+Preprocessor visited node count: 754/1000000
+Preprocessor generated node count: 2330/1000000
+Post‐expand include size: 18247/2097152 bytes
+Template argument size: 7390/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8392/5000000 bytes
-Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.47 MB/50 MB
+Unstrip post‐expand size: 8714/5000000 bytes
+Lua time usage: 0.000/7.000 seconds
+Lua virtual size: 7.5 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   82.474      1 -total
- 33.92%   27.978     22 Template:CodeSelect
- 27.00%   22.267      1 Template:Mbox
- 20.89%   17.229      5 Template:Box
- 10.27%    8.474      1 Template:Footer
-  8.56%    7.060      1 Template:Firewall_Settings_Workstation
-  8.24%    6.799      1 Template:Control_Port_Filter_Python_Profile_Add
-  6.85%    5.649      1 Template:Reflist
-  3.22%    2.654      1 Template:Header
-  2.80%    2.310      1 Template:Share
+100.00%   96.899      1 -total
+ 31.58%   30.602     22 Template:CodeSelect
+ 24.79%   24.022      5 Template:Box
+ 22.55%   21.846      1 Template:Mbox
+ 10.64%   10.313      1 Template:Firewall_Settings_Workstation
+ 10.46%   10.138      1 Template:Footer
+  7.47%    7.237      1 Template:Control_Port_Filter_Python_Profile_Add
+  6.57%    6.369      1 Template:Reflist
+  4.23%    4.102      1 Template:Header
+  3.93%    3.812      1 Template:Reload_Firewall_ws
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=42429" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=42429">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=42429</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=44935" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=44935">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=44935</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -593,7 +593,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShar
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 13 April 2019, at 00:00.</li>
+<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 16:25.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
