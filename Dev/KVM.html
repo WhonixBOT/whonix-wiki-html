@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/KVM - Whonix
  url: ../Dev/KVM
- date: Wed Apr 24 07:34:19 2019
+ date: Thu Apr 25 07:34:18 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -142,23 +142,23 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-11"><a href="#In_Progress"><span class="tocnumber">5</span> <span class="toctext">In Progress</span></a></li>
 <li class="toclevel-1 tocsection-12"><a href="#Done"><span class="tocnumber">6</span> <span class="toctext">Done</span></a>
 <ul>
-<li class="toclevel-2 tocsection-13"><a href="#clocksource"><span class="tocnumber">6.1</span> <span class="toctext">clocksource</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#Upcoming_XML_Changes_-_Stable_Next"><span class="tocnumber">6.2</span> <span class="toctext">Upcoming XML Changes - Stable Next</span></a></li>
-<li class="toclevel-2 tocsection-15"><a href="#Apply_Clean-filter_traffic.3F"><span class="tocnumber">6.3</span> <span class="toctext">Apply Clean-filter traffic?</span></a></li>
-<li class="toclevel-2 tocsection-16"><a href="#RNG"><span class="tocnumber">6.4</span> <span class="toctext">RNG</span></a>
+<li class="toclevel-2 tocsection-13"><a href="#Biometric_Fingerprinting"><span class="tocnumber">6.1</span> <span class="toctext">Biometric Fingerprinting</span></a>
 <ul>
-<li class="toclevel-3 tocsection-17"><a href="#Rate_limit"><span class="tocnumber">6.4.1</span> <span class="toctext">Rate limit</span></a></li>
-<li class="toclevel-3 tocsection-18"><a href="#Haveged"><span class="tocnumber">6.4.2</span> <span class="toctext">Haveged</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Mouse_Tracking"><span class="tocnumber">6.1.1</span> <span class="toctext">Mouse Tracking</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Solutions"><span class="tocnumber">6.1.2</span> <span class="toctext">Solutions</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-19"><a href="#blkiotune"><span class="tocnumber">6.5</span> <span class="toctext">blkiotune</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Secure_Clipboard"><span class="tocnumber">6.6</span> <span class="toctext">Secure Clipboard</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#Biometric_Fingerprinting"><span class="tocnumber">6.7</span> <span class="toctext">Biometric Fingerprinting</span></a>
+<li class="toclevel-2 tocsection-16"><a href="#clocksource"><span class="tocnumber">6.2</span> <span class="toctext">clocksource</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Upcoming_XML_Changes_-_Stable_Next"><span class="tocnumber">6.3</span> <span class="toctext">Upcoming XML Changes - Stable Next</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Apply_Clean-filter_traffic.3F"><span class="tocnumber">6.4</span> <span class="toctext">Apply Clean-filter traffic?</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#RNG"><span class="tocnumber">6.5</span> <span class="toctext">RNG</span></a>
 <ul>
-<li class="toclevel-3 tocsection-22"><a href="#Mouse_Tracking"><span class="tocnumber">6.7.1</span> <span class="toctext">Mouse Tracking</span></a></li>
-<li class="toclevel-3 tocsection-23"><a href="#Solutions"><span class="tocnumber">6.7.2</span> <span class="toctext">Solutions</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Rate_limit"><span class="tocnumber">6.5.1</span> <span class="toctext">Rate limit</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Haveged"><span class="tocnumber">6.5.2</span> <span class="toctext">Haveged</span></a></li>
 </ul>
 </li>
+<li class="toclevel-2 tocsection-22"><a href="#blkiotune"><span class="tocnumber">6.6</span> <span class="toctext">blkiotune</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Secure_Clipboard"><span class="tocnumber">6.7</span> <span class="toctext">Secure Clipboard</span></a></li>
 <li class="toclevel-2 tocsection-24"><a href="#CPU_Masking"><span class="tocnumber">6.8</span> <span class="toctext">CPU Masking</span></a></li>
 <li class="toclevel-2 tocsection-25"><a href="#Passed_to_Command_Line"><span class="tocnumber">6.9</span> <span class="toctext">Passed to Command Line</span></a></li>
 <li class="toclevel-2 tocsection-26"><a href="#Haveged_test_for_KVM_.2B_virtio-rng_Result"><span class="tocnumber">6.10</span> <span class="toctext">Haveged test for KVM + virtio-rng Result</span></a></li>
@@ -355,61 +355,7 @@ QEMU_AUDIO_DRV=spice \
 <p>None.
 </p>
 <h1><span class="mw-headline" id="Done">Done</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=12.html" title="Edit section: Done">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="clocksource">clocksource</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=13.html" title="Edit section: clocksource">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<pre>cat /sys/devices/system/clocksource/clocksource0/available_clocksource
-</pre>
-<pre>refined-jiffies jiffies
-</pre>
-<pre>cat /sys/devices/system/clocksource/clocksource0/current_clocksource
-</pre>
-<pre>refined-jiffies
-</pre>
-<p><a class="external free" data-href="https://forums.whonix.org/t/available-clocksource-current-clocksource" href="https://forums.whonix.org/t/available-clocksource-current-clocksource" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/available-clocksource-current-clocksource</a>
-</p>
-<h2><span class="mw-headline" id="Upcoming_XML_Changes_-_Stable_Next">Upcoming XML Changes - Stable Next</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=14.html" title="Edit section: Upcoming XML Changes - Stable Next">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>When Stretch hits stable disable:
-</p><p>smm which is not even supported by qemu yet.
-</p><p>Check if switch to virtio-input devices means virtio=serial can now be removed.
-</p>
-<h2><span id="Apply_Clean-filter_traffic?"></span><span class="mw-headline" id="Apply_Clean-filter_traffic.3F">Apply Clean-filter traffic?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=15.html" title="Edit section: Apply Clean-filter traffic?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Advantages are its easy to set a new IP for a new WS. Has many rules to prevent MAC, IP, ARP spoofing. Can also protect the GW from DoS by using connection tracking and rate-limiting.
-</p><p>Sounds good but I still think a completely separate internal network is the best option to ensure separartion between multi WSs. The GW should be able to withstand DoS on its own or there will be big problems. I think its safer if libvirt knows nothing about the traffic on the internal network and does not parse anything on there.
-</p><p>To have a multi-WS implementation with different internal networks likely requires a big effort on the Whonix ™ development side. Not worth it when setting a new GW is easy and costs little resources - also provides more assurance against theoretical attacks on a shared GW.
-</p>
-<h2><span class="mw-headline" id="RNG">RNG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=16.html" title="Edit section: RNG">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="Rate_limit">Rate limit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=17.html" title="Edit section: Rate limit">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>This is necessary to prevent malicious entropy starvation of other VMs and the host.
-</p><p>Test code for /dev/random throughput<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
-</p>
-<pre>dd if=/dev/random bs=1k count=1</pre>
-<p>Re-reading the article it seems the choice made is OK. The limit sets the max a guest can use to be 25% of that of the host.
-</p>
-<pre>/dev/random provides high quality numbers but stops when entropy is poor: the Linux kernel keeps a entropy pool of 4 KB (see /proc/sys/kernel/random/poolsize); when the pool is empty, the kernel blocks causing a delay until it can provide the requested random numbers.
-</pre>
-<p><a class="external free" data-href="https://www.certdepot.net/rhel7-get-started-random-number-generator/" href="https://www.certdepot.net/rhel7-get-started-random-number-generator/" rel="noreferrer noopener" target="_blank">https://www.certdepot.net/rhel7-get-started-random-number-generator/</a>
-</p>
-<pre>Note: Just after &lt;rng model=’virtio’&gt;, you can add a line like &lt;rate bytes=’1024′ period=’1000’/&gt; to prevent a guest from consuming more than 1 KB per second of pseudo random numbers. Otherwise, one single guest could consume all the available pseudo random numbers at the expense of all the others.
-</pre>
-<p>Also applied for GW since some crypto requiring operations under the control of WS processes can abuse the entropy available to it if unchecked.
-</p>
-<h3><span class="mw-headline" id="Haveged">Haveged</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=18.html" title="Edit section: Haveged">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Cross-posted
-</p>
-<pre>   haveged relies on the RDTSC instruction, that apparently is useless in some virtualized environments. Also, the quality of random numbers output by HAVEGE is unclear, and the topic of many discussions.
-</pre>
-<p><a class="external free" data-href="https://tails.boum.org/contribute/design/random/#rngd" href="https://tails.boum.org/contribute/design/random/" rel="noreferrer noopener" target="_blank">https://tails.boum.org/contribute/design/random/#rngd</a>
-</p><p>haveged is not useful on KVM 
-</p><p>rdtsc or any tsc counter provides very accurate clock tick information so better to block.
-</p>
-<h2><span class="mw-headline" id="blkiotune">blkiotune</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=19.html" title="Edit section: blkiotune">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Its possible to limit IO throughput per VM however with disk speeds varying a lot it will be impossible to find an option that makes sense for everybody. Nonetheless still interesting to have. Documented below is a IO test and how to set limits.
-</p><p><a class="external free" data-href="https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling" href="https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling" rel="noreferrer noopener" target="_blank">https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling</a>
-</p>
-<h2><span class="mw-headline" id="Secure_Clipboard">Secure Clipboard</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=20.html" title="Edit section: Secure Clipboard">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p><a class="external free" data-href="https://bugzilla.redhat.com/show_bug.cgi?id=1320263" href="https://bugzilla.redhat.com/show_bug.cgi?id=1320263" rel="noreferrer noopener" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1320263</a>
-</p><p><br/>
-</p>
-<h2><span class="mw-headline" id="Biometric_Fingerprinting">Biometric Fingerprinting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=21.html" title="Edit section: Biometric Fingerprinting">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Biometric_Fingerprinting">Biometric Fingerprinting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=13.html" title="Edit section: Biometric Fingerprinting">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This problem is related to all hypervisors and noted here to keep track. New info added not in mail list message:
 </p><p>Upstream tickets:
 </p><p><a class="external free" data-href="https://lists.nongnu.org/archive/html/qemu-discuss/2016-03/msg00023.html" href="https://lists.nongnu.org/archive/html/qemu-discuss/2016-03/msg00023.html" rel="noreferrer noopener" target="_blank">https://lists.nongnu.org/archive/html/qemu-discuss/2016-03/msg00023.html</a>
@@ -476,7 +422,7 @@ higher level behavior fingerprinting:
 higher level "cognitive" behavioral biometrics are application specific. That paper uses descriptive statistics for actions that are very specific to the game and don't really apply anywhere else.
 </p><p><br/>
 </p>
-<h3><span class="mw-headline" id="Mouse_Tracking">Mouse Tracking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=22.html" title="Edit section: Mouse Tracking">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Mouse_Tracking">Mouse Tracking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=14.html" title="Edit section: Mouse Tracking">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>User re-authentication via mouse movements
 <a class="external free" data-href="https://doi.org/10.1145/1029208.1029210" href="https://doi.org/10.1145/1029208.1029210" rel="noreferrer noopener" target="_blank">https://doi.org/10.1145/1029208.1029210</a>
 </p><p>Relatively successful tracking active readers however mouse movements are not enough to fingerprint users. That was back in 2004.
@@ -497,12 +443,66 @@ high accuracy achieved in limited situations - actice authentication during log-
 </p><p>search terms:
 </p><p>Mouse movement authentication
 </p>
-<h3><span class="mw-headline" id="Solutions">Solutions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=23.html" title="Edit section: Solutions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Solutions">Solutions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=15.html" title="Edit section: Solutions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Researcher Vinnie Monaco has kindly volunteered to write tools that mitigate these attacks:
 </p><p>anti-keystroke defense:
 <a class="external free" data-href="https://github.com/vmonaco/kloak" href="https://github.com/vmonaco/kloak" rel="noreferrer noopener" target="_blank">https://github.com/vmonaco/kloak</a>
 </p><p>mouse movement defense:
 Upcoming
+</p>
+<h2><span class="mw-headline" id="clocksource">clocksource</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=16.html" title="Edit section: clocksource">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>cat /sys/devices/system/clocksource/clocksource0/available_clocksource
+</pre>
+<pre>refined-jiffies jiffies
+</pre>
+<pre>cat /sys/devices/system/clocksource/clocksource0/current_clocksource
+</pre>
+<pre>refined-jiffies
+</pre>
+<p><a class="external free" data-href="https://forums.whonix.org/t/available-clocksource-current-clocksource" href="https://forums.whonix.org/t/available-clocksource-current-clocksource" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/available-clocksource-current-clocksource</a>
+</p>
+<h2><span class="mw-headline" id="Upcoming_XML_Changes_-_Stable_Next">Upcoming XML Changes - Stable Next</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=17.html" title="Edit section: Upcoming XML Changes - Stable Next">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When Stretch hits stable disable:
+</p><p>smm which is not even supported by qemu yet.
+</p><p>Check if switch to virtio-input devices means virtio=serial can now be removed.
+</p>
+<h2><span id="Apply_Clean-filter_traffic?"></span><span class="mw-headline" id="Apply_Clean-filter_traffic.3F">Apply Clean-filter traffic?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=18.html" title="Edit section: Apply Clean-filter traffic?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Advantages are its easy to set a new IP for a new WS. Has many rules to prevent MAC, IP, ARP spoofing. Can also protect the GW from DoS by using connection tracking and rate-limiting.
+</p><p>Sounds good but I still think a completely separate internal network is the best option to ensure separartion between multi WSs. The GW should be able to withstand DoS on its own or there will be big problems. I think its safer if libvirt knows nothing about the traffic on the internal network and does not parse anything on there.
+</p><p>To have a multi-WS implementation with different internal networks likely requires a big effort on the Whonix ™ development side. Not worth it when setting a new GW is easy and costs little resources - also provides more assurance against theoretical attacks on a shared GW.
+</p>
+<h2><span class="mw-headline" id="RNG">RNG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=19.html" title="Edit section: RNG">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Rate_limit">Rate limit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=20.html" title="Edit section: Rate limit">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is necessary to prevent malicious entropy starvation of other VMs and the host.
+</p><p>Test code for /dev/random throughput<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
+<pre>dd if=/dev/random bs=1k count=1</pre>
+<p>Re-reading the article it seems the choice made is OK. The limit sets the max a guest can use to be 25% of that of the host.
+</p>
+<pre>/dev/random provides high quality numbers but stops when entropy is poor: the Linux kernel keeps a entropy pool of 4 KB (see /proc/sys/kernel/random/poolsize); when the pool is empty, the kernel blocks causing a delay until it can provide the requested random numbers.
+</pre>
+<p><a class="external free" data-href="https://www.certdepot.net/rhel7-get-started-random-number-generator/" href="https://www.certdepot.net/rhel7-get-started-random-number-generator/" rel="noreferrer noopener" target="_blank">https://www.certdepot.net/rhel7-get-started-random-number-generator/</a>
+</p>
+<pre>Note: Just after &lt;rng model=’virtio’&gt;, you can add a line like &lt;rate bytes=’1024′ period=’1000’/&gt; to prevent a guest from consuming more than 1 KB per second of pseudo random numbers. Otherwise, one single guest could consume all the available pseudo random numbers at the expense of all the others.
+</pre>
+<p>Also applied for GW since some crypto requiring operations under the control of WS processes can abuse the entropy available to it if unchecked.
+</p>
+<h3><span class="mw-headline" id="Haveged">Haveged</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=21.html" title="Edit section: Haveged">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Cross-posted
+</p>
+<pre>   haveged relies on the RDTSC instruction, that apparently is useless in some virtualized environments. Also, the quality of random numbers output by HAVEGE is unclear, and the topic of many discussions.
+</pre>
+<p><a class="external free" data-href="https://tails.boum.org/contribute/design/random/#rngd" href="https://tails.boum.org/contribute/design/random/" rel="noreferrer noopener" target="_blank">https://tails.boum.org/contribute/design/random/#rngd</a>
+</p><p>haveged is not useful on KVM 
+</p><p>rdtsc or any tsc counter provides very accurate clock tick information so better to block.
+</p>
+<h2><span class="mw-headline" id="blkiotune">blkiotune</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=22.html" title="Edit section: blkiotune">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Its possible to limit IO throughput per VM however with disk speeds varying a lot it will be impossible to find an option that makes sense for everybody. Nonetheless still interesting to have. Documented below is a IO test and how to set limits.
+</p><p><a class="external free" data-href="https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling" href="https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling" rel="noreferrer noopener" target="_blank">https://fedoraproject.org/wiki/QA:Testcase_Virtualization_IO_Throttling</a>
+</p>
+<h2><span class="mw-headline" id="Secure_Clipboard">Secure Clipboard</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=23.html" title="Edit section: Secure Clipboard">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="external free" data-href="https://bugzilla.redhat.com/show_bug.cgi?id=1320263" href="https://bugzilla.redhat.com/show_bug.cgi?id=1320263" rel="noreferrer noopener" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1320263</a>
+</p><p><br/>
 </p>
 <h2><span class="mw-headline" id="CPU_Masking">CPU Masking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;action=edit&amp;section=24.html" title="Edit section: CPU Masking">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>KVM cpus support a baseline of features by default. You can mask out the problematic ones and don't have to worry about the extra ones it doesn't support because it will be masked out anyhow (because it was never supported in the first place).
@@ -1552,7 +1552,7 @@ Support QEMU's 'hda-output' codec advertising only a line-out for ich6 and ich9 
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a>.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/KVM" href="https://www.Whonix.org/wiki/Dev/KVM" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/KVM" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/KVM" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1566,11 +1566,11 @@ Support QEMU's 'hda-output' codec advertising only a line-out for ich6 and ich9 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190424032607
+Cached time: 20190425032450
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.108 seconds
-Real time usage: 0.141 seconds
+CPU time usage: 0.084 seconds
+Real time usage: 0.116 seconds
 Preprocessor visited node count: 1273/1000000
 Preprocessor generated node count: 2766/1000000
 Post‐expand include size: 2946/2097152 bytes
@@ -1578,23 +1578,23 @@ Template argument size: 36/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 36362/5000000 bytes
+Unstrip post‐expand size: 36142/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   75.297      1 -total
- 49.45%   37.235      1 Template:Footer
- 36.30%   27.332      1 Template:Share
- 13.66%   10.286      1 Template:Header
-  6.66%    5.012      1 Template:Reflist
-  3.46%    2.604      1 Template:Edit_it
-  3.40%    2.564     17 Template:Project_name
-  3.28%    2.469      1 Template:Forkme
-  2.00%    1.508      3 Template:Gateway_product_name
-  1.62%    1.223      1 Template:RandomNews
+100.00%   56.591      1 -total
+ 56.66%   32.067      1 Template:Header
+ 17.43%    9.862      1 Template:Footer
+  7.18%    4.062      1 Template:Reflist
+  4.17%    2.362      1 Template:Share
+  3.14%    1.775      1 Template:Edit_it
+  1.55%    0.878      1 Template:Forkme
+  1.42%    0.801      1 Template:RandomNews
+  1.32%    0.747      1 Template:Code
+  1.13%    0.642     17 Template:Project_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45262" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45262">https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45262</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45353" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45353">https://www.whonix.org/w/index.php?title=Dev/KVM&amp;oldid=45353</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1605,7 +1605,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/KVM&a
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 April 2019, at 20:26.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 03:52.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1626,5 +1626,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/KVM&a
 </div>
 
 </body>
-<!-- Cached/compressed 20190424032607 -->
+<!-- Cached/compressed 20190425032450 -->
 </html>
