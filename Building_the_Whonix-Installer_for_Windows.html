@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Building the Whonix-Installer for Windows - Whonix
  url: ./Building_the_Whonix-Installer_for_Windows
- date: Thu Apr 25 07:31:50 2019
+ date: Fri Apr 26 07:31:47 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -23,8 +23,8 @@
 <meta content="@Whonix" name="twitter:site"/>
 <meta content="Whonix" name="twitter:domain"/>
 <meta content="@Whonix" name="twitter:creator"/>
-<meta content="How to build the Whonix-Windows-Installer from source code." name="description"/>
-<meta content="How to build the Whonix-Windows-Installer from source code." name="twitter:description"/>
+<meta content="How to build the Whonix ™-Windows-Installer from source code." name="description"/>
+<meta content="How to build the Whonix ™-Windows-Installer from source code." name="twitter:description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -38,7 +38,7 @@
 <meta content="Dev/Building the Whonix-Installer for Windows" property="og:title"/>
 <meta content="./Dev/Building_the_Whonix-Installer_for_Windows" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="How to build the Whonix-Windows-Installer from source code." property="og:description"/>
+<meta content="How to build the Whonix ™-Windows-Installer from source code." property="og:description"/>
 
 <meta content="" property="fb:app_id"/>
 <meta content="" property="fb:admins"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -125,7 +125,7 @@ Whonix requires Donations to stay alive.
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Compiling_the_Whonix-Windows-Installer_yourself"><span class="tocnumber">2</span> <span class="toctext">Compiling the Whonix-Windows-Installer yourself</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Compiling_the_Whonix_.E2.84.A2-Windows-Installer_yourself"><span class="tocnumber">2</span> <span class="toctext">Compiling the Whonix ™-Windows-Installer yourself</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#What_you.27ll_need"><span class="tocnumber">3</span> <span class="toctext">What you'll need</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Preparing_the_files"><span class="tocnumber">4</span> <span class="toctext">Preparing the files</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Building_the_Installer"><span class="tocnumber">5</span> <span class="toctext">Building the Installer</span></a></li>
@@ -133,10 +133,10 @@ Whonix requires Donations to stay alive.
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>The Whonix-Windows-Installer for Windows is a simple and fast way to set-up Whonix ™ on a system running Microsoft Windows.
+<p>The Whonix ™-Windows-Installer for Windows is a simple and fast way to set-up Whonix ™ on a system running Microsoft Windows.
 </p>
-<h1><span class="mw-headline" id="Compiling_the_Whonix-Windows-Installer_yourself">Compiling the Whonix-Windows-Installer yourself</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=2.html" title="Edit section: Compiling the Whonix-Windows-Installer yourself">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>The following instructions will tell you how to build the Whonix-Windows-Installer using the source code provided via Github, as well as the required Whonix ™ and VirtualBox files.
+<h1><span id="Compiling_the_Whonix_™-Windows-Installer_yourself"></span><span class="mw-headline" id="Compiling_the_Whonix_.E2.84.A2-Windows-Installer_yourself">Compiling the Whonix ™-Windows-Installer yourself</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=2.html" title="Edit section: Compiling the Whonix ™-Windows-Installer yourself">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>The following instructions will tell you how to build the Whonix ™-Windows-Installer using the source code provided via Github, as well as the required Whonix ™ and VirtualBox files.
 </p>
 <h1><span id="What_you'll_need"></span><span class="mw-headline" id="What_you.27ll_need">What you'll need</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=3.html" title="Edit section: What you'll need">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>The Whonix-Gateway ™ and Whonix-Workstation ™ Images for VirtualBox found here: <a class="external free" data-href="./VirtualBox" href="./VirtualBox" rel="noreferrer noopener" target="_blank">./VirtualBox</a></li>
@@ -144,7 +144,7 @@ Whonix requires Donations to stay alive.
 <li>"7zSD.sfx" which you may obtain under "7-Zip 9.20 Extra" here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a></li>
 <li>"7za.exe" which you may obtain under "7-Zip 16.04 Extra" here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a></li>
 <li>The newest version of Inno Setup Unicode, a tool for easily creating installers, found here: <a class="external free" data-href="http://www.jrsoftware.org/isdl.php" href="http://www.jrsoftware.org/isdl.php" rel="noreferrer noopener" target="_blank">http://www.jrsoftware.org/isdl.php</a></li>
-<li>Whonix-Windows-UI, which can be built from source via this guide: <a data-href="/wiki/Dev/Building_Whonix-UI_for_Windows" href="./Dev/Building_Whonix-UI_for_Windows.html" title="Dev/Building Whonix-UI for Windows">Dev/Building Whonix-UI for Windows</a></li>
+<li>Whonix ™-Windows-UI, which can be built from source via this guide: <a class="new" data-href="/w/index.php?title=Dev/Building_Whonix_%E2%84%A2-UI_for_Windows&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Dev/Building_Whonix_%E2%84%A2-UI_for_Windows&amp;action=edit&amp;redlink=1.html" title="Dev/Building Whonix ™-UI for Windows (page does not exist)">Dev/Building Whonix ™-UI for Windows</a></li>
 <li>The Source for the installer, the logo, the license text, configuration files and the batch file handling the compilation, found here: <a class="external free" data-href="https://github.com/Whonix/Whonix-Windows-Installer" href="https://github.com/Whonix/Whonix-Windows-Installer" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix-Windows-Installer</a></li></ul>
 <h1><span class="mw-headline" id="Preparing_the_files">Preparing the files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=4.html" title="Edit section: Preparing the files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>First and foremost, install Inno Setup Unicode on your system.
@@ -154,16 +154,16 @@ Whonix requires Donations to stay alive.
 </pre>
 <p>Once this has been finished, a window will open telling you where these three files (VirtualBox[Characters based on your version]amd64.msi, VirtualBox[Characters based on your version]x86.msi, common.cab) have been extracted in. Rename "VirtualBox[Characters based on your version]amd64.msi" to "virtualbox_x64.msi" and "VirtualBox[Characters based on your version]x86.msi" to "virtualbox_x86.msi" and save all of them in a folder, because they will be needed later.
 </p><p>Furthermore, put the Whonix-Workstation ™ and Whonix-Gateway ™ Images in the same folder and rename them "whonix_gateway.ova" and "whonix_workstation.ova" respectively.
-</p><p>Now, put the source files ("Whonix.iss", "logo.ico", "license.txt", "MakeInstaller.bat", "config.txt") inside the same folder as the other files. Furthermore, include Whonix-Windows-UI ("Whonix.exe"), as well as "7zSD.sfx" and "7za.exe".
+</p><p>Now, put the source files ("Whonix ™.iss", "logo.ico", "license.txt", "MakeInstaller.bat", "config.txt") inside the same folder as the other files. Furthermore, include Whonix ™-Windows-UI ("Whonix ™.exe"), as well as "7zSD.sfx" and "7za.exe".
 </p><p>Now, you should have the following files in the folder:
 </p>
-<ul><li>Whonix.exe</li>
+<ul><li>Whonix ™.exe</li>
 <li>virtualbox_x64.msi</li>
 <li>virtualbox_x86.msi</li>
 <li>common.cab</li>
 <li>whonix_gateway.ova</li>
 <li>whonix_workstation.ova</li>
-<li>Whonix.iss</li>
+<li>Whonix ™.iss</li>
 <li>logo.ico</li>
 <li>license.txt</li>
 <li>7zSD.sfx</li>
@@ -173,8 +173,8 @@ Whonix requires Donations to stay alive.
 <p>With this, the preparation is finished and we can get on to building the Installer.
 </p>
 <h1><span class="mw-headline" id="Building_the_Installer">Building the Installer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=5.html" title="Edit section: Building the Installer">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Building the installer itself is very easy once everything has been properly set up. All you need to do is launch "MakeInstaller.bat". Now, the compilation via InnoSetup, the packaging and the combination of all files via 7-Zip, as well as any other required steps are handled automatically. The result is going to be named "Install Whonix.exe".
-</p><p>This concludes the guide to building the Whonix-Installer for Windows from source.
+<p>Building the installer itself is very easy once everything has been properly set up. All you need to do is launch "MakeInstaller.bat". Now, the compilation via InnoSetup, the packaging and the combination of all files via 7-Zip, as well as any other required steps are handled automatically. The result is going to be named "Install Whonix ™.exe".
+</p><p>This concludes the guide to building the Whonix ™-Installer for Windows from source.
 </p>
 <h1><span class="mw-headline" id="The_deprecated_Installer">The deprecated Installer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=6.html" title="Edit section: The deprecated Installer">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>There used to a version of this installer based on NSIS which has been discontinued, due to stability and a host of other issues. It may still be found here: <a class="external free" data-href="https://github.com/Whonix/Whonix-Windows-Installer-deprecated" href="https://github.com/Whonix/Whonix-Windows-Installer-deprecated" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix-Windows-Installer-deprecated</a>
@@ -233,35 +233,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425053149
+Cached time: 20190426053146
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.020 seconds
-Real time usage: 0.023 seconds
-Preprocessor visited node count: 128/1000000
-Preprocessor generated node count: 394/1000000
-Post‐expand include size: 3032/2097152 bytes
+CPU time usage: 0.021 seconds
+Real time usage: 0.024 seconds
+Preprocessor visited node count: 178/1000000
+Preprocessor generated node count: 550/1000000
+Post‐expand include size: 3210/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2356/5000000 bytes
+Unstrip post‐expand size: 2364/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   15.817      1 -total
- 64.80%   10.250      1 Template:Footer
- 13.77%    2.178      1 Template:Header
- 13.26%    2.097      1 Template:Share
- 11.73%    1.856      1 Template:Edit_it
-  5.82%    0.921      1 Template:RandomNews
-  4.63%    0.732      7 Template:Project_name_short
-  4.50%    0.712      2 Template:Gateway_product_name
-  3.72%    0.589      8 Template:Project_name
-  3.47%    0.548      2 Template:Name
+100.00%   16.840      1 -total
+ 57.05%    9.607      1 Template:Footer
+ 17.33%    2.918      1 Template:Header
+ 12.59%    2.121      1 Template:Share
+ 11.17%    1.881      1 Template:Edit_it
+  5.78%    0.973      1 Template:RandomNews
+  4.15%    0.699      2 Template:Gateway_product_name
+  4.01%    0.675     21 Template:Project_name
+  3.98%    0.669     15 Template:Project_name_short
+  3.97%    0.668      2 Template:Workstation_product_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=44244" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=44244">https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=44244</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=46210" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=46210">https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=46210</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -272,7 +272,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 15:23.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:49.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

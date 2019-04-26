@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Design-Shared - Whonix
  url: ../Dev/Design-Shared
- date: Thu Apr 25 07:33:36 2019
+ date: Fri Apr 26 07:33:33 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -208,7 +208,7 @@ Whonix requires Donations to stay alive.
 </p>
 <h1><span class="mw-headline" id="Get_Build_Dependencies">Get Build Dependencies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=3.html" title="Edit section: Get Build Dependencies">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Install a tool to create Virtual Machine images (such as grml-debootstrap) and tools for mouting and apply other useful build configurations.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Configure apt-get and dpkg, to ask no questions while installing the build dependencies.</li>
 <li>Update the build machine's operating system.</li>
@@ -217,10 +217,10 @@ Whonix requires Donations to stay alive.
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/15_prepare-build-machine" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/15_prepare-build-machine" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/15_prepare-build-machine</a></li></ul></li></ul>
 <h1><span class="mw-headline" id="Get_Base_Operating_System">Get Base Operating System</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=4.html" title="Edit section: Get Base Operating System">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Use a tool to create a Virtual Machine base installation, which contains a secure operating system and which is bootable.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Used Debian for reasons explained on the <a data-href="/wiki/Dev/Operating_System" href="../Dev/Operating_System.html" title="Dev/Operating System">Dev/Operating System</a> design page.</li>
-<li>Whonix ™ uses grml-debootstrap to build .img Virtual Machine images. The .img images are still virtualizer agnostic, can be run in a variety of virtualizers such as Qemu or Qubes OS. They can (and will in Whonix-Example-Implementation case) be converted to other formats to support other virtualizers (such as the .img format, which VirtualBox uses in case of Whonix).
+<li>Whonix ™ uses grml-debootstrap to build .img Virtual Machine images. The .img images are still virtualizer agnostic, can be run in a variety of virtualizers such as Qemu or Qubes OS. They can (and will in Whonix ™-Example-Implementation case) be converted to other formats to support other virtualizers (such as the .img format, which VirtualBox uses in case of Whonix ™).
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/20_create-debian-img" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/20_create-debian-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/20_create-debian-img</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/Whonix-Gateway_packages" href="https://github.com/Whonix/Whonix/blob/master/Whonix-Gateway_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/Whonix-Gateway_packages</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages" href="https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/Whonix-Workstation_packages</a></li>
@@ -233,17 +233,17 @@ Whonix requires Donations to stay alive.
 <li>Whonix ™ with <a class="mw-redirect" data-href="/wiki/Physical_Isolation" href="../Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>.</li></ul>
 <h1><span class="mw-headline" id="Backup_Base_Operating_System">Backup Base Operating System</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=5.html" title="Edit section: Backup Base Operating System">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Make a backup of that image. This is not strictly required, but you will want to modify that image often and want to start fresh often.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/25_backup-img" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/25_backup-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/25_backup-img</a></li></ul>
 <h1><span class="mw-headline" id="Mount_Image">Mount Image</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=6.html" title="Edit section: Mount Image">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Mount the image, so files can be copied into it.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/mount-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/mount-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/mount-img</a></li></ul>
 <h1><span class="mw-headline" id="Copy_Files_Into_Image">Copy Files Into Image</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=7.html" title="Edit section: Copy Files Into Image">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Copy configuration files and chroot scripts into the Virtual Machine image to transform it into a Gateway or Workstation.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Copying script: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/30_copy-into-img" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/30_copy-into-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/30_copy-into-img</a></li>
 <li>Verification script: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files</a></li>
@@ -252,27 +252,27 @@ Whonix requires Donations to stay alive.
 <li>All files from whonix_shared will get copied into Whonix-Gateway ™ and Whonix-Workstation ™.</li></ul>
 <h1><span class="mw-headline" id="Chrooting">Chrooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=8.html" title="Edit section: Chrooting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>As preparation for the next step, there must be a method to chroot the mounted image.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img</a></li></ul>
 <h1><span class="mw-headline" id="Running_Scripts_inside_Chroot">Running Scripts inside Chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=9.html" title="Edit section: Running Scripts inside Chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The base operating system has to be modified. Some scripts need to be executed inside the virtual machines. This is called running chroot scripts.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/35_run-chroot-scripts-img" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/35_run-chroot-scripts-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/35_run-chroot-scripts-img</a></li></ul>
 <h1><span class="mw-headline" id="Unchrooting">Unchrooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=10.html" title="Edit section: Unchrooting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The process of chrooting must be undone after the chroot scripts were executed.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img</a></li></ul>
 <h1><span class="mw-headline" id="Unmounting">Unmounting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=11.html" title="Edit section: Unmounting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The image must be unmounted after the copying files into it or after chrooting, running chroot scripts and unchrooting.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/unmount-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/unmount-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/unmount-img</a></li></ul>
 <h1><span class="mw-headline" id="Creating_a_Virtual_Machine_package">Creating a Virtual Machine package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=12.html" title="Edit section: Creating a Virtual Machine package">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>It is useful to deploy the Virtual Machine images through a package format, which makes it easy to import them for users.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Uses VirtualBox.</li>
 <li>VirtualBox does not support .img images, only .vdi (and others).
@@ -288,7 +288,7 @@ Whonix requires Donations to stay alive.
 <h3><span id="Username,_FQDN,_hostname"></span><span class="mw-headline" id="Username.2C_FQDN.2C_hostname">Username, FQDN, hostname</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=15.html" title="Edit section: Username, FQDN, hostname">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Hosts file. Use non-identifying values for FQDN and hostname, because some applications may leak it. (Mixmaster is known to leak it.) Set FQDN to "host.localdomain" and set hostname to "host". <a class="external text" data-href="https://mailman.boum.org/pipermail/tails-dev/2013-January/002457.html" href="https://mailman.boum.org/pipermail/tails-dev/2013-January/002457.html" rel="noreferrer noopener" target="_blank">It is best when they are shared among anonymity focused distributions.</a>
 </p><p>It is recommended to work as non-privileged user and not using one will get into usability trouble (desktop environments don't like running as root). For usability, consistency, defence in depth, name it "user". It is better to say non-saying operating system user account names and ideally share them among anonymity focused distributions since the user could accidentally leak it (ex: ssh).
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Set FQDN to "host.localdomain" and set hostname to "host": <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/hosts" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/hosts" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/hosts</a></li>
 <li>adding user account "user": <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/30_adduser_user" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/30_adduser_user" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/30_adduser_user</a></li>
@@ -303,7 +303,7 @@ Whonix requires Donations to stay alive.
 </p><p>Misc settings, higher timeouts, more retries when package download or DNS resolution fails. This is useful because anonymity networks are slow and otherwise updating would occasionally fail due to network problems.
 </p><p>Must have a secure operating system updater (package manager), i.e. must not fall through the <a class="external text" data-href="https://www.updateframework.com/wiki/Docs/Security#AttacksandWeaknesses" href="https://www.updateframework.com/wiki/Docs/Security" rel="noreferrer noopener" target="_blank">TUF Threat Model</a> (<a class="external text" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">w</a>). Additionally, downloading should go thought an anonymity network, with changing exit relays. This makes an adversary less likely to interfere with the update process, because updates go through different ISPs, which makes it much more difficult to mount a man-in-the-middle attack over an extended amount of time.
 </p><p>The package manager shouldn't confuse the user with questions to keep the locally installed configuration file or to install the new version from the upstream package maintainer.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Gateway and Workstation updates go through Tor. (Due to Firewall, Network Configuration and Stream Isolation Wrapper, details in Design-Shared/Gateway/Workstation.)</li>
 <li>Whonix ™ uses Debian ftp.us.debian.org and security.debian.org repositories.
@@ -318,7 +318,7 @@ Whonix requires Donations to stay alive.
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/apper" href="https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/apper" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_workstation/usr/local/share/whonix/kde/share/config/apper</a></li></ul></li></ul>
 <h3><span class="mw-headline" id="TimeSync">TimeSync</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=17.html" title="Edit section: TimeSync">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Add a secure method with distributed trust to obtain date and time, because a clock which is drift, is bad for anonymity.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p><p>General Information
 </p>
 <ul><li><a class="mw-redirect" data-href="/wiki/TimeSync" href="../TimeSync.html" title="TimeSync">TimeSync</a></li>
@@ -353,13 +353,13 @@ Whonix requires Donations to stay alive.
 <li>Combined graphical and text user interface "timesync" scripts folder. <a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/timesync-scripts" href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/timesync-scripts" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/timesync-scripts</a> and some from <a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/whonixcheck-scripts" href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/whonixcheck-scripts" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/bin/whonixcheck-scripts</a> (which are sourced becomes clear by reading the main <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timesync" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timesync" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timesync</a> script)</li></ul>
 <h3><span class="mw-headline" id="Banned_Packages">Banned Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=18.html" title="Edit section: Banned Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Some packages aren't suited for an anonymous operating system. Reasons are privacy issues or messing with network settings. Ensure, that those get removed, if they got installed by the virtual machine image creation tool. This shouldn't be the case because of the hand selected package selection. Just in case upstream dependencies change or custom packages get added by users who build from source code. Ensure that those packages won't get installed by accident. Since it is documented, advanced users can overwrite these recommendations if they know better.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_banned_packages" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_banned_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_banned_packages</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/apt/preferences.d/50_banned-packages" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/apt/preferences.d/50_banned-packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/apt/preferences.d/50_banned-packages</a></li></ul>
 <h3><span class="mw-headline" id="Stream_Isolation_Wrapper">Stream Isolation Wrapper</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=19.html" title="Edit section: Stream Isolation Wrapper">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Stream isolate different applications to prevent identity correlation through circuit sharing. To my knowledge, only the anonymizer Tor supports this feature.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>See <a data-href="/wiki/Stream_Isolation" href="../Stream_Isolation.html" title="Stream Isolation">Stream Isolation</a>.</li>
 <li><a class="external text" data-href="https://trac.torproject.org/projects/tor/wiki/doc/torsocks" href="https://trac.torproject.org/projects/tor/wiki/doc/torsocks" rel="noreferrer noopener" target="_blank">uwt</a> is a wrapper arround torsocks: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/uwt" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/uwt" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/uwt</a></li>
@@ -369,7 +369,7 @@ Whonix requires Donations to stay alive.
 <h2><span class="mw-headline" id="Extra">Extra</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=20.html" title="Edit section: Extra">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Time_Privacy">Time Privacy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=21.html" title="Edit section: Time Privacy">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Applications such as gpg and git embed time stamps in their output. For improved privacy it may make sense to fake this data. The user should enable it oneself, otherwise it could be very surprising and may not do what the user wants. Experimental design and implementation. Disabled by default.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Disabled by default.</li>
 <li>timeprivacy script: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timeprivacy" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timeprivacy" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/timeprivacy</a></li>
@@ -378,7 +378,7 @@ Whonix requires Donations to stay alive.
 <li>Application wrapper symlinks to the master wrapper (If the application is not installed, the wrapper doesn't do anything. So having one more installed than necessary, doesn't matter.): <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_uwt" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_uwt" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_uwt</a></li></ul>
 <h3><span id="hdd_configuration_/_swap_/_Disk_uuid_/_dbus_machine-id"></span><span class="mw-headline" id="hdd_configuration_.2F_swap_.2F_Disk_uuid_.2F_dbus_machine-id">hdd configuration / swap / Disk uuid / dbus machine-id</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=22.html" title="Edit section: hdd configuration / swap / Disk uuid / dbus machine-id">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Since the virtual machine creation tool won't create a swap partition (which is actually good because it simplifies the setup) but the system could run out of memory, add a swap file. The is optional depending on the operating system and available RAM. Configure swap to be used as little as possible to improve speed.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Swap file creation. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_create_swap_file" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_create_swap_file" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_create_swap_file</a></li>
 <li>Activating swap in fstab. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/fstab" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/fstab" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/fstab</a></li>
@@ -392,14 +392,14 @@ Whonix requires Donations to stay alive.
 <li>Share dbus machine-id: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/var/lib/dbus/machine-id" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/var/lib/dbus/machine-id" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/var/lib/dbus/machine-id</a></li></ul></li></ul>
 <h3><span class="mw-headline" id="Base_Files">Base Files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=23.html" title="Edit section: Base Files">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Perhaps only required for Debian and derivatives. Whonix ™ was asked to replace the default dpkg origin symlink.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/dpkg/origins/whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/dpkg/origins/whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/dpkg/origins/whonix</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_symlinks" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_symlinks" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_symlinks</a></li></ul>
 <h2><span class="mw-headline" id="Usability">Usability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=24.html" title="Edit section: Usability">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="check_mechanism">check mechanism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=25.html" title="Edit section: check mechanism">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Recommended, not strictly required.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p><p>General Information
 </p>
 <ul><li><a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a></li>
@@ -430,7 +430,7 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="Desktop_Environment">Desktop Environment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=26.html" title="Edit section: Desktop Environment">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>It is useful to have a desktop preconfigured to make it as easy as possible for users who use Linux for the first time.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>shared
 <ul><li>Based on KDE.</li>
@@ -467,36 +467,36 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="sudoers">sudoers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=27.html" title="Edit section: sudoers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. For convenience. Only recommended for Virtual Machines.
 </p><p>Allow shutdown, reboot and poweroff without a password. Allow starting Tor Controller arm without password. (No effect on Workstation, since arm is only Gateway.) Allow mixmaster-update without password. (No effect on Gateway, since mixmaster is only installed on Gateway.)
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/reboot" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/reboot" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/reboot</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/arm" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/arm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/arm</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/mixmaster-update" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/mixmaster-update" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/sudoers.d/mixmaster-update</a></li></ul>
 <h3><span class="mw-headline" id="Console_Autologin">Console Autologin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=28.html" title="Edit section: Console Autologin">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Only recommended for virtual machines.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/inittab" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/inittab" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/inittab</a></li></ul>
 <h3><span class="mw-headline" id="Console_Default_Password_Hint">Console Default Password Hint</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=29.html" title="Edit section: Console Default Password Hint">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>The system will be shipped with a default password (which users are suggested to change in documentation). To prevent user frustration when not knowing the password it greatly reduced (from Whonix ™ experience) support requests if the default password is displayed right above the password prompt.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/issue" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/issue" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/issue</a></li></ul>
 <h3><span class="mw-headline" id="Console_Welcome_Message">Console Welcome Message</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=30.html" title="Edit section: Console Welcome Message">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>Contains general information about derivative, licensing, default passwords, how to open the help file.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/motd" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/motd" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/motd</a></li></ul>
 <h3><span class="mw-headline" id="Deactivate_display_power_saving_in_Virtual_Machines">Deactivate display power saving in Virtual Machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=31" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=31.html" title="Edit section: Deactivate display power saving in Virtual Machines">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Since it is confusing and not useful and not saving any energy. (Needs to be applied on host.)
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/profile.d/20_disable_powersaving.sh" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/profile.d/20_disable_powersaving.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/profile.d/20_disable_powersaving.sh</a></li></ul>
 <h3><span class="mw-headline" id="boot_manager_configuration">boot manager configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=32" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=32.html" title="Edit section: boot manager configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. For higher boot resolution, it is required to run update-grub after changing grub configuration files.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Not yet functional.</li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/grub.d/50_whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/grub.d/50_whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/etc/grub.d/50_whonix</a></li>
@@ -504,39 +504,39 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="update_command_not_found">update command not found</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=33" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=33.html" title="Edit section: update command not found">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>Initially update the command not found database, to prevent showing "please run update-command-not-found" in case a non-existent command gets entered in console.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_update_command_not_found" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_update_command_not_found" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_update_command_not_found</a></li></ul>
 <h3><span id="Secure/SSL_Command_Line_Downloader"></span><span class="mw-headline" id="Secure.2FSSL_Command_Line_Downloader">Secure/SSL Command Line Downloader</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=34" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=34.html" title="Edit section: Secure/SSL Command Line Downloader">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Add a command line downloader, which enforces using https (SSL).
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>A simple curl wrapper. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/scurl" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/scurl" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/bin/scurl</a></li>
 <li>Documented under <a data-href="/wiki/Software#scurl_-_SSL_command_line_downloader" href="../Software.html" title="Software">scurl - SSL command line downloader</a></li>
 <li>The user starts scurl, the wrapper will run the curl uwt wrapper (/usr/bin/curl), which stream isolates and finally calls curl.</li></ul>
 <h3><span class="mw-headline" id="Slim_Down">Slim Down</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=35" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=35.html" title="Edit section: Slim Down">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. To safe space and to prevent (some) development related leaks, remove cache, temporary files, dhcp leases, package manager cache, logs, history.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/80_slimdown" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/80_slimdown" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/80_slimdown</a></li></ul>
 <h3><span class="mw-headline" id="Icons">Icons</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=36.html" title="Edit section: Icons">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>Some pretty icons for the start menu and the desktop for custom applications, which are only useful in a Gateway/Workstation design.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/local/share/whonix/icons" href="https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/local/share/whonix/icons" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_shared/usr/local/share/whonix/icons</a></li></ul>
 <h2><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=37" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=37.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Sanity_Checks">Sanity Checks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=38.html" title="Edit section: Sanity Checks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Recommended, not strictly required.
 </p><p>Some simple tests to check for example, if all files have been correctly copied into the image, if the package manager is fully functional, because some virtual machine creation tools build broken images. Package integrity checks.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/32_verify_copied_files</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/10_root_check" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/10_root_check" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/10_root_check</a></li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/20_sanity_checks" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/20_sanity_checks" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/20_sanity_checks</a></li></ul>
 <h3><span class="mw-headline" id="Misc">Misc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=39.html" title="Edit section: Misc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Chroot Script Skeleton, not strictly required, might just be useful to explain how to create chroot-scripts: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_skeleton" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_skeleton" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_skeleton</a></li>
 <li>Create a list of all files inside Whonix ™ source folder. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/release/list_source_files" href="https://github.com/Whonix/Whonix/blob/master/release/list_source_files" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/release/list_source_files</a></li>
@@ -545,13 +545,13 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="Variables">Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=40" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=40.html" title="Edit section: Variables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Recommended, not strictly required.
 </p><p>It is useful to configure the system, not to ask any questions which require user interaction such as when you plan to run the package manager from within chroot. This is because interaction is not useful when automating things.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/variables" href="https://github.com/Whonix/Whonix/blob/master/help-steps/variables" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/variables</a></li></ul>
 <h3><span class="mw-headline" id="Package_Cache">Package Cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=41" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=41.html" title="Edit section: Package Cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>If the package manager is used inside chroot, it makes sense to run it though a cache, so debugging steps can be done faster.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>apt.conf which can be used in case apt-get gets used inside chroot. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/apt.conf" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/apt.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/apt.conf</a></li></ul>
 <p>What is <i>/usr/local/share/whonix/apt.conf</i> good for?
@@ -563,51 +563,51 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="Prevent_daemons_from_starting_inside_chroot">Prevent daemons from starting inside chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=42" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=42.html" title="Edit section: Prevent daemons from starting inside chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional.
 </p><p>Only in case you want to install something inside chroot for debugging purposes. Otherwise they can lock the chroot folder and you won't be able to unchroot.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>policy-rc.d blocks daemons from starting. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/policy-rc.d" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/policy-rc.d" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/policy-rc.d</a></li>
 <li>policy-rc.d gets copied into chroot when chrooting. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/chroot-img</a></li>
 <li>policy-rc.d gets deleted inside chroot when leaving chroot. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img" href="https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/unchroot-img</a></li></ul>
 <h3><span class="mw-headline" id="Indicate_last_chroot_script">Indicate last chroot script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=43" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=43.html" title="Edit section: Indicate last chroot script">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Not strictly required. A chroot script, which indicates that all went well.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/90_end" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/90_end" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/90_end</a></li></ul>
 <h3><span class="mw-headline" id="Lower_priority_while_building">Lower priority while building</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=44" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=44.html" title="Edit section: Lower priority while building">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Not strictly required.
 </p><p>Using ionice and renice.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/pre</a></li></ul>
 <h3><span class="mw-headline" id="Enable_debugging">Enable debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=45" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=45.html" title="Edit section: Enable debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Not strictly required.
 </p><p>When using bash, set -x to show each command that gets executed.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/pre</a></li></ul>
 <h3><span class="mw-headline" id="Error_handling">Error handling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=46" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=46.html" title="Edit section: Error handling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Not strictly required.
 </p><p>It is important to ensure that there are no error while copying files into the images or while running the chroot scripts because many steps are essential. Stop and loudly complain if any unexpected error occurs.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>general trap: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" href="https://github.com/Whonix/Whonix/blob/master/help-steps/pre" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/pre</a></li>
 <li>using traps and exit 1 everywhere</li></ul>
 <h3><span class="mw-headline" id="Delete_Virtual_Machine_files">Delete Virtual Machine files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=47" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=47.html" title="Edit section: Delete Virtual Machine files">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Not strictly required.
 </p><p>So they can be re-created for debugging purposes.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/debug-steps/delete-vbox-vm" href="https://github.com/Whonix/Whonix/blob/master/debug-steps/delete-vbox-vm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/debug-steps/delete-vbox-vm</a></li></ul>
 <h3><span class="mw-headline" id="Interactive_Chroot">Interactive Chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=48.html" title="Edit section: Interactive Chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Optional. Not strictly required.
 </p><p>After creating the base operating system image, after copying files into it or after applying the chroot scripts, it is useful to have a command, which allows to look around inside the image without having to boot the image. Adrelanos calls this Interactive Chroot.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/debug-steps/interactive-chroot-img" href="https://github.com/Whonix/Whonix/blob/master/debug-steps/interactive-chroot-img" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/debug-steps/interactive-chroot-img</a></li></ul>
 <h2><span class="mw-headline" id="Licensing">Licensing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=49" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=49.html" title="Edit section: Licensing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Only required for builds, which will be redistributed in public.
 </p><p>Make a list of GPLed software.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Added <a class="external text" data-href="http://dberkholz.com/2004/02/" href="http://dberkholz.com/2004/02/" rel="noreferrer noopener" target="_blank">damngpl</a>. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/damngpl" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/damngpl" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/damngpl</a></li>
 <li>Creating a list of GPLed software. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_sources" href="https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_sources" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_shared/usr/local/share/whonix/chroot-scripts/70_sources</a></li>
@@ -616,14 +616,14 @@ Whonix requires Donations to stay alive.
 <h1><span class="mw-headline" id="Build_Automation">Build Automation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=50" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=50.html" title="Edit section: Build Automation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Optional. Not strictly required.
 </p><p>Since many steps are required to build a Gateway or Workstation, it is useful to automate build creation.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_build" href="https://github.com/Whonix/Whonix/blob/master/whonix_build" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_build</a></li>
 <li><a data-href="/wiki/Dev/Build_Documentation" href="../Dev/Build_Documentation.html" title="Dev/Build Documentation">Dev/Build Documentation</a></li></ul>
 <h1><span class="mw-headline" id="Release_Automation">Release Automation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=51" href="https://www.whonix.org/w/index.php?title=Dev/Design-Shared&amp;action=edit&amp;section=51.html" title="Edit section: Release Automation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Optional. Not strictly required.
 </p><p>Since many steps are required to redistribute a Gateway or Workstation, it is useful to automate releases.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Release maintenance folder: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/release/README" href="https://github.com/Whonix/Whonix/blob/master/release/README" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/release/README</a></li>
 <li>sourceforge.net Download Readme: <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/release/README" href="https://github.com/Whonix/Whonix/blob/master/release/README" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/release/README</a></li>
@@ -636,7 +636,7 @@ Whonix requires Donations to stay alive.
 </p><p>To build a Gateway, also things from the <a data-href="/wiki/Dev/Design-Gateway" href="../Dev/Design-Gateway.html" title="Dev/Design-Gateway">Dev/Design-Gateway</a> page have to be added.
 </p><p>To build a Workstation, also things from the <a data-href="/wiki/Dev/Design-Workstation" href="../Dev/Design-Workstation.html" title="Dev/Design-Workstation">Dev/Design-Workstation</a> page have to be added.
 </p><p>Justify other design decisions, what the project doesn't and what it doesn't do. Have loads of documentation. Have a source code hacking guide and source code introduction.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a data-href="/wiki/Dev/Design-Gateway" href="../Dev/Design-Gateway.html" title="Dev/Design-Gateway">Dev/Design-Gateway</a></li>
 <li><a data-href="/wiki/Dev/Design-Workstation" href="../Dev/Design-Workstation.html" title="Dev/Design-Workstation">Dev/Design-Workstation</a></li>
@@ -684,7 +684,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> for subscribing to Whonix source code changes.
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Design-Shared" href="https://www.Whonix.org/wiki/Dev/Design-Shared" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Shared" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Shared" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -698,35 +698,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190422215123
+Cached time: 20190425170912
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.054 seconds
-Real time usage: 0.057 seconds
-Preprocessor visited node count: 377/1000000
-Preprocessor generated node count: 764/1000000
-Post‐expand include size: 3462/2097152 bytes
+CPU time usage: 0.136 seconds
+Real time usage: 0.172 seconds
+Preprocessor visited node count: 1394/1000000
+Preprocessor generated node count: 3480/1000000
+Post‐expand include size: 5696/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2326/5000000 bytes
+Unstrip post‐expand size: 2577/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   19.498      1 -total
- 47.75%    9.310      1 Template:Footer
- 14.77%    2.879      1 Template:Header
-  9.81%    1.913      1 Template:Share
-  8.03%    1.565      1 Template:Edit_it
-  4.29%    0.836      1 Template:RandomNews
-  3.95%    0.770      1 Template:Design_Introduction
-  3.74%    0.729      1 Template:Forkme
-  3.69%    0.719      7 Template:Project_name_short
-  3.53%    0.688      6 Template:Gateway_product_name
+100.00%  126.452      1 -total
+ 31.41%   39.718      1 Template:Header
+  7.74%    9.784      1 Template:Footer
+  6.08%    7.690    301 Template:Project_name_short
+  2.74%    3.469      6 Template:Gateway_product_name
+  2.72%    3.437     68 Template:Project_name
+  2.46%    3.115      1 Template:Design_Introduction
+  2.38%    3.013      1 Template:Forkme
+  2.27%    2.868      7 Template:Workstation_product_name
+  2.24%    2.834      1 Template:Gateway_product_name_short
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=45103" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=45103">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=45103</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=46386" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=46386">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Design-Shared&amp;oldid=46386</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -737,7 +737,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 22:26.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:56.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -758,5 +758,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=De
 </div>
 
 </body>
-<!-- Cached/compressed 20190422215123 -->
+<!-- Cached/compressed 20190425170912 -->
 </html>

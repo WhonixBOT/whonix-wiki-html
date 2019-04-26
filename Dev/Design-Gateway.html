@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Design-Gateway - Whonix
  url: ../Dev/Design-Gateway
- date: Thu Apr 25 07:33:35 2019
+ date: Fri Apr 26 07:33:32 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -166,14 +166,14 @@ Whonix requires Donations to stay alive.
 </p><p><br/>
 </p>
 <h1><span class="mw-headline" id="List_of_installed_Packages">List of installed Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=2.html" title="Edit section: List of installed Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Whonix-Example-Implementation:
+<p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-meta-packages/blob/master/debian/control</a></li></ul>
 <h1><span class="mw-headline" id="Files">Files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=3.html" title="Edit section: Files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Essential">Essential</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=4.html" title="Edit section: Essential">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Anonymizer">Anonymizer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=5.html" title="Edit section: Anonymizer">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>An application to anonymize network traffic, called anonymizer, is required. The application to anonymize network traffic has to be obtained from a safe download source. Increase file maximum, if required by the anonymizer.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Whonix ™ is based on Tor.</li>
 <li>Tor configuration file: <font color="red"><s><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/etc/torrc.d/50_user.conf.whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/etc/torrc.d/50_user.conf.whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/etc/torrc.d/50_user.conf.whonix</a></s></font> <a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/tree/master/etc/tor" href="https://github.com/Whonix/anon-gw-anonymizer-config/tree/master/etc/tor" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/tree/master/etc/tor</a> ?</li>
@@ -189,7 +189,7 @@ Whonix requires Donations to stay alive.
 </p><p>Disable IP forwarding, if it is not required due to the firewall rules (such as in case of Tor, which offers a TransPort and a DNSPort).
 </p><p>Configure the system resolver to use the anonymity network to resolve DNS. - This is <b>not</b> required to anonymize traffic of the Workstation. The system resolver of the Gateway should not get used by any applications anyway, because they are explicitly configured to use the anonymity network. Useful as defence in depth. DNS and other traffic from the Workstation gets forced by the Gateway's firewall to use the anonymity network. The Gateways's own traffic gets anonymized with the purpose of <b>hiding the existence of the Gateway from the ISP</b>, as it is expected that most users do not want to announce the existence of a Gateway, which may indicate that they run onion services or other applications over Tor. The Gateway could alternatively fetch its own operating system updates over clearnet, but since package selection is unique clearnet traffic may imply Gateway. And, as package downloads are only authenticated, not encrypted, it is better to download the updates over the already to hand anonymity network. As an anonymity network, such as Tor,  with changing exit relays (and thus exit ISPs) is getting used, this also makes it even harder for an adversary to interfere with the update process. The last sentence gets elaborated on the <a data-href="/wiki/Dev/Design-Shared" href="../Dev/Design-Shared.html" title="Dev/Design-Shared">Design Shared</a> page in chapter about "<a data-href="/wiki/Dev/Design-Shared#Operating_System_Updates" href="../Dev/Design-Shared.html" title="Dev/Design-Shared">Operating System Updates</a>".
 </p><p>Prevent DHCP from updating the system resolver.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/build-steps.d/2500_create-vbox-vm" href="https://github.com/Whonix/Whonix/tree/master/build-steps.d/2500_create-vbox-vm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/build-steps.d/2500_create-vbox-vm</a> in function gateway_specific, two virtual network cards are added. The first one, type NAT. The second one, type internal.</li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/network/interfaces.whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/network/interfaces.whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/network/interfaces.whonix</a></li>
@@ -198,7 +198,7 @@ Whonix requires Donations to stay alive.
 <li>Configure system resolver to use the anonymity network to resolve DNS. <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/resolv.conf.whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/resolv.conf.whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/resolv.conf.whonix</a></li></ul>
 <h3><span class="mw-headline" id="Firewall">Firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=7.html" title="Edit section: Firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Add a firewall, which permits only the anonymizer's traffic to reach the internet.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Firewall script: <a class="external free" data-href="https://github.com/Whonix/whonix-gw-firewall/blob/master/usr/bin/whonix_firewall" href="https://github.com/Whonix/whonix-gw-firewall/blob/master/usr/bin/whonix_firewall" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-gw-firewall/blob/master/usr/bin/whonix_firewall</a></li>
 <li>configuration file: <a class="external free" data-href="https://github.com/Whonix/whonix-gw-firewall/blob/master/etc/whonix_firewall.d/30_default.conf" href="https://github.com/Whonix/whonix-gw-firewall/blob/master/etc/whonix_firewall.d/30_default.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-gw-firewall/blob/master/etc/whonix_firewall.d/30_default.conf</a></li>
@@ -207,40 +207,40 @@ Whonix requires Donations to stay alive.
 <h3><span class="mw-headline" id="Firewall_Removal">Firewall Removal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=9.html" title="Edit section: Firewall Removal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
 </p><p>Include a command to easily remove all firewall rules, which can not be run by accident without editing the file with root rights.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/dev_clearnet" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/dev_clearnet" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/dev_clearnet</a></li></ul>
 <h3><span class="mw-headline" id="Leaktest_script">Leaktest script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=10.html" title="Edit section: Leaktest script">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
 </p><p>Have a script to try to produce a leak and check if there are any leaks.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/leaktest" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/leaktest" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/leaktest</a></li>
 <li><a data-href="/wiki/Dev/Leak_Tests" href="../Dev/Leak_Tests.html" title="Dev/Leak Tests">Dev/Leak Tests</a></li></ul>
 <h3><span class="mw-headline" id="Clearnet_User">Clearnet User</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=11.html" title="Edit section: Clearnet User">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
 </p><p>To have a user account "clearnet" on the Gateway may be helpful for debugging, an "unsafe" browser (which can be used to register public hotspots).
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/chroot-scripts/70_clearnetuser" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/chroot-scripts/70_clearnetuser" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/chroot-scripts/70_clearnetuser</a></li></ul>
 <h2><span class="mw-headline" id="Usability">Usability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=12.html" title="Edit section: Usability">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Tor_Controller">Tor Controller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=13.html" title="Edit section: Tor Controller">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>Arm is installed by default and documented on the <a data-href="/wiki/Tor_Controller" href="../Tor_Controller.html" title="Tor Controller">Tor Controller</a> page.</li>
 <li>Tor Controller startup script. Starting Tor controller without password by using "sudo arm": <a class="external free" data-href="https://github.com/Whonix/Whonix/tree/master/whonix_gateway/usr/bin/arm" href="https://github.com/Whonix/Whonix/tree/master/whonix_gateway/usr/bin/arm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/tree/master/whonix_gateway/usr/bin/arm</a></li></ul>
 <h3><span class="mw-headline" id="Help_file">Help file</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=14.html" title="Edit section: Help file">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
 </p><p>When the user types a short and easy command, the most important and most asked commands should be listed.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li>User can type "whonix".</li>
 <li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/whonix" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/whonix" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/bin/whonix</a></li></ul>
 <h3><span class="mw-headline" id="Marker_file">Marker file</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=15.html" title="Edit section: Marker file">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><b>Optional</b>
 </p><p>Add a marker file so scripts you write can find out, whether they are running on the Gateway or inside the Workstation. There are probably different implementations possible to reach that goal.
-</p><p>Whonix-Example-Implementation:
+</p><p>Whonix ™-Example-Implementation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/whonix_gateway" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/whonix_gateway" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/whonix_gateway/usr/local/share/whonix/whonix_gateway</a></li></ul>
 <h1><span class="mw-headline" id="Design-Shared">Design-Shared</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;action=edit&amp;section=16.html" title="Edit section: Design-Shared">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -286,7 +286,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="../Donate" href="../Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Design-Gateway" href="https://www.Whonix.org/wiki/Dev/Design-Gateway" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Gateway" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Design-Gateway" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -300,35 +300,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190422212911
+Cached time: 20190425153935
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.026 seconds
-Real time usage: 0.031 seconds
-Preprocessor visited node count: 156/1000000
-Preprocessor generated node count: 420/1000000
-Post‐expand include size: 3056/2097152 bytes
+CPU time usage: 0.031 seconds
+Real time usage: 0.049 seconds
+Preprocessor visited node count: 308/1000000
+Preprocessor generated node count: 812/1000000
+Post‐expand include size: 3414/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2229/5000000 bytes
+Unstrip post‐expand size: 2486/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   18.212      1 -total
- 65.70%   11.966      1 Template:Footer
- 13.56%    2.470      1 Template:Share
- 13.12%    2.390      1 Template:Header
- 12.44%    2.265      1 Template:Edit_it
-  6.78%    1.235      1 Template:RandomNews
-  5.75%    1.046      7 Template:Project_name_short
-  4.18%    0.762      1 Template:Gateway_product_name
-  4.15%    0.756      1 Template:Forkme
-  3.80%    0.693      7 Template:Project_name
+100.00%   34.704      1 -total
+ 50.36%   17.478      1 Template:Header
+ 31.11%   10.797      1 Template:Footer
+  7.37%    2.557      1 Template:Share
+  5.48%    1.901      1 Template:Edit_it
+  3.20%    1.112      1 Template:RandomNews
+  2.76%    0.958     50 Template:Project_name_short
+  2.20%    0.763      1 Template:Design_Introduction
+  1.98%    0.688     17 Template:Project_name
+  1.93%    0.671      1 Template:Forkme
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=44685" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=44685">https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=44685</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=46148" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=46148">https://www.whonix.org/w/index.php?title=Dev/Design-Gateway&amp;oldid=46148</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -339,7 +339,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Desig
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 15:47.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:42.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -360,5 +360,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Desig
 </div>
 
 </body>
-<!-- Cached/compressed 20190422212911 -->
+<!-- Cached/compressed 20190425153935 -->
 </html>

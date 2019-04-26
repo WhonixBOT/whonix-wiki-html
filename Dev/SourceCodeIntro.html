@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Source Code Intro - Whonix
  url: ../Dev/SourceCodeIntro
- date: Thu Apr 25 07:34:53 2019
+ date: Fri Apr 26 07:34:50 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -182,7 +182,7 @@ Whonix requires Donations to stay alive.
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>This chapter is dedicated to give an introduction into the Whonix ™ source code. <i><b>If you prefer to read and understand the source code just by reading scripts you may skip this optional chapter.</b></i> It can be quite difficult to get started with hacking existing big complex projects.
 </p><p><b>build-steps</b>
-</p><p>This is a high level overview. Whonix-Example-Implementation can currently be build in nine steps. (There is also a whonix_build script, which automates these eight steps for your convenience.)
+</p><p>This is a high level overview. Whonix ™-Example-Implementation can currently be build in nine steps. (There is also a whonix_build script, which automates these eight steps for your convenience.)
 </p>
 <ul><li>1100_prepare-build-machine</li>
 <li>1150_export-libvirt-xml</li>
@@ -230,9 +230,9 @@ Whonix requires Donations to stay alive.
 </p>
 <ul><li>packages/anon-*-build-*/usr/lib/anon-dist/chroot-scripts-post.d/</li></ul>
 <p><i><b>Summary:</b></i>
-</p><p>Thus, given the nature of the build step orientated scripts, you can easily work on the different aspects of Whonix. For example, once you have created a clean virtual machine with the operating system only, you can make a copy, run either the gateway or the workstation copy routine or Chroot Scripts as often as you need to test your changes and if something goes wrong, go back to backup. You don't have to build everything from scratch again. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>Thus, given the nature of the build step orientated scripts, you can easily work on the different aspects of Whonix ™. For example, once you have created a clean virtual machine with the operating system only, you can make a copy, run either the gateway or the workstation copy routine or Chroot Scripts as often as you need to test your changes and if something goes wrong, go back to backup. You don't have to build everything from scratch again. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p><p><i><b>Another Introduction:</b></i>
-</p><p>It is really not that difficult after all. If you like, you could read <a data-href="/wiki/Manually_Creating_Whonix" href="../Manually_Creating_Whonix.html" title="Manually Creating Whonix">Manually Creating Whonix</a>, which is a similar topic, which covers part of this in other words.
+</p><p>It is really not that difficult after all. If you like, you could read <a data-href="/wiki/Manually_Creating_Whonix" href="../Manually_Creating_Whonix.html" title="Manually Creating Whonix">Manually Creating Whonix ™</a>, which is a similar topic, which covers part of this in other words.
 </p>
 <h1><span class="mw-headline" id="OpenPGP_keys">OpenPGP keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=2.html" title="Edit section: OpenPGP keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>OpenPGP public keys required for building Whonix ™ are stored inside various packages. These include.
@@ -248,10 +248,10 @@ Whonix requires Donations to stay alive.
 <li><a class="external text" data-href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys-revoked.d" href="https://github.com/Whonix/whonix-repository/tree/master/usr/share/whonix/whonix-keys-revoked.d" rel="noreferrer noopener" target="_blank">/usr/share/whonix/whonix-keys-revoked.d</a>
 <ul><li>None yet.</li></ul></li></ul></li>
 <li>whonixcheck: <a class="external text" data-href="https://github.com/Whonix/whonixcheck/tree/master/usr/share/whonix/whonix-news-keys.d" href="https://github.com/Whonix/whonixcheck/tree/master/usr/share/whonix/whonix-news-keys.d" rel="noreferrer noopener" target="_blank">/usr/share/whonix/whonix-news-keys.d</a>
-<ul><li>patrick.asc - Whonix ™ maintainer key - used for <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a>'s W<a data-href="/wiki/Download#Whonix_Version_Check_and_Whonix_News" href="../Download.html" title="Download">honix News</a> v<a class="external text" data-href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news#L84" href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news" rel="noreferrer noopener" target="_blank">erification</a></li></ul></li></ul>
+<ul><li>patrick.asc - Whonix ™ maintainer key - used for <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a>'s W<a data-href="/wiki/Download#Whonix_.E2.84.A2_Version_Check_and_Whonix_News" href="../Download.html" title="Download">honix News</a> v<a class="external text" data-href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news#L84" href="https://github.com/Whonix/whonixcheck/blob/master/usr/lib/whonixcheck/check_news" rel="noreferrer noopener" target="_blank">erification</a></li></ul></li></ul>
 <p>To find out what the keys are good for, simply grep the source code.
 </p>
-<pre>cd /home/user/Whonix
+<pre>cd /home/user/{{project_name_short}}
 grep -r tbb-keys.d *
 grep -r tpoarchive-keys.d *
 grep -r whonix-keys-revoked *
@@ -296,7 +296,7 @@ sub   2048R/219EC810 2009-09-04 [expires: 2018-08-30]
 </pre>
 <ul><li>Details: Sanity tests that check the integrity of the build. See package description of the <a class="external text" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks" href="https://github.com/Whonix/anon-shared-build-sanity-checks" rel="noreferrer noopener" target="_blank">anon-shared-build-sanity-checks</a> package for a more verbose explanation.</li>
 <li>Used by default in Whonix ™ build script: Yes.</li>
-<li>Negligible for <a data-href="/wiki/Dev/Installation_from_Repository" href="../Dev/Installation_from_Repository.html" title="Dev/Installation from Repository">Whonix installations from repository</a>: Up to you.</li>
+<li>Negligible for <a data-href="/wiki/Dev/Installation_from_Repository" href="../Dev/Installation_from_Repository.html" title="Dev/Installation from Repository">Whonix ™ installations from repository</a>: Up to you.</li>
 <li>Convertible into postinst script: Probably not, because some tests such as checking if apt-get/dpkg are in sane states cannot run inside a postinst script because apt-get/dpkg would be still working at that time.</li>
 <li>package: <a class="external free" data-href="https://github.com/Whonix/anon-shared-build-sanity-checks" href="https://github.com/Whonix/anon-shared-build-sanity-checks" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-shared-build-sanity-checks</a></li>
 <li>script:
@@ -530,7 +530,7 @@ Whonix-Gateway-disk1.vmdk</textarea>
 </p><p>What would have to be done:
 </p>
 <ul><li>create rpm package</li>
-<li>Find a replacement for config-package-dev, a package which allows third party packages (Whonix) to own files which are owned by other packages. Such as <i><span style="background-color:#FBFBFB">/etc/tor/torrc</span></i> is owned by tor, but anon-gw-anonymizer-config includes its own config file.</li>
+<li>Find a replacement for config-package-dev, a package which allows third party packages (Whonix ™) to own files which are owned by other packages. Such as <i><span style="background-color:#FBFBFB">/etc/tor/torrc</span></i> is owned by tor, but anon-gw-anonymizer-config includes its own config file.</li>
 <li>add init scripts (currently done by debhelper)</li>
 <li>add man pages (currently done by debhelper and ronn, see debian/rules)</li>
 <li>minor: replacement for dh_apparmor</li></ul>
@@ -648,7 +648,7 @@ Whonix-Gateway-disk1.vmdk</textarea>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>Don't mind having your name connected to <a class="new" data-href="/w/index.php?title=Template:Product_name&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Product_name&amp;action=edit&amp;redlink=1.html" title="Template:Product name (page does not exist)">Template:Product name</a>? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Source_Code_Intro" href="https://www.Whonix.org/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -662,35 +662,35 @@ Whonix-Gateway-disk1.vmdk</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425053452
+Cached time: 20190426053449
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.066 seconds
-Real time usage: 0.071 seconds
-Preprocessor visited node count: 945/1000000
-Preprocessor generated node count: 2632/1000000
-Post‐expand include size: 6920/2097152 bytes
+Real time usage: 0.072 seconds
+Preprocessor visited node count: 1033/1000000
+Preprocessor generated node count: 2884/1000000
+Post‐expand include size: 7162/2097152 bytes
 Template argument size: 1334/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7148/5000000 bytes
+Unstrip post‐expand size: 7210/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.998      1 -total
- 26.26%   11.293      8 Template:CodeSelect
- 23.16%    9.960      1 Template:Footer
- 16.87%    7.254      1 Template:Open_with_root_rights
- 14.67%    6.306      1 Template:Box
-  6.20%    2.666      1 Template:Header
-  6.01%    2.583      1 Template:Reflist
-  4.65%    1.998      1 Template:Share
-  3.74%    1.610      1 Template:Edit_it
-  2.79%    1.201     15 Template:Code
+100.00%   42.906      1 -total
+ 26.08%   11.191      8 Template:CodeSelect
+ 23.66%   10.152      1 Template:Footer
+ 15.74%    6.753      1 Template:Open_with_root_rights
+ 13.98%    5.997      1 Template:Box
+  6.87%    2.948      1 Template:Header
+  6.19%    2.657      1 Template:Reflist
+  4.75%    2.037      1 Template:Share
+  4.34%    1.864      1 Template:Edit_it
+  3.37%    1.444      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=45166" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=45166">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=45166</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=46378" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=46378">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=46378</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -701,7 +701,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Sourc
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 22:44.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:53.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

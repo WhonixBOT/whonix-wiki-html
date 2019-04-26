@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VoIP - Whonix
  url: ./Voip
- date: Thu Apr 25 07:42:36 2019
+ date: Fri Apr 26 07:42:30 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -179,7 +179,7 @@ Whonix requires Donations to stay alive.
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=2.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Anonymizing Voice over IP is somewhat difficult, but possible. It is not so much about hiding the IP, which is easy with Whonix ™, it is about voice recognition and slow Tor network speed (latency). Pseudonymous use or hidden voice communication with known contacts depends on your threat model.
 </p><p>For people behind Tor, who know each other, talking to each other, it is possible to hide the fact that they are talking with each other, from their ISP, government, exit relays, man-in-the-middle, etc. That wouldn't be anonymous, because they know each other.
-</p><p>You can't anonymously use your own voice and whistle-blow over VoIP. Voice gets recorded and voice recognition works well. When you are having a phone call later over a non anonymous connection (which almost everyone had at least once in its life, so everyone supplied a sample of their voice and name), they can correlate the two identities. You would have to use a voice scrambler and how good that works is a whole new field for research, which is outside the scope of Whonix.
+</p><p>You can't anonymously use your own voice and whistle-blow over VoIP. Voice gets recorded and voice recognition works well. When you are having a phone call later over a non anonymous connection (which almost everyone had at least once in its life, so everyone supplied a sample of their voice and name), they can correlate the two identities. You would have to use a voice scrambler and how good that works is a whole new field for research, which is outside the scope of Whonix ™.
 </p><p>You could type and let a artificial voice speak (like in anonymous videos), that could work. But is that the point? You better write a mail then.
 </p><p>It is also recommended against voice chatting with other anonymous people. (Like you can talk in a forum.) You don't know who you are talking to. That voice also could be correlated later, putting aside voice scrambler, or artificial voice, which wouldn't make sense.
 </p><p>If you are not calling from .onion to .onion (which delegates encryption to Tor), you should use a VoIP client supporting an end-to-end encryption protocol, such as ZRTP<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>. <b>ZRTP End-to-End Encryption cannot Protect VBR Streams.</b> When using ZRTP + SRTP  for encryption in any stretch that goes on the clearnet, be sure to never select a VBR (variable bitrate) codec as the pauses in a conversations produce fingerprints in the encrypted stream that allow the adversary to infer what words are being said.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
@@ -698,7 +698,7 @@ The developer of TOR Fone (a fork of SpeakFreely) recommends against<sup class="
 <h4><span class="mw-headline" id="Skype">Skype</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=18.html" title="Edit section: Skype">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p><b>Does this mean that, for example, is my IP and location safe when using Skype?</b>
 </p><p>Yes, IP and location is safe. Skype has been tested in Whonix ™, it "works" quite well (does it? it seems to have stopped working in 2013 - see <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>), still recommended against. Some further comments you should be aware of:
-</p><p>Those are not Whonix or Tor issues, those are Skype issues. Consider Skype usage <a data-href="/wiki/DoNot#Do_not_confuse_Anonymity_with_Pseudonymity." href="./DoNot.html" title="DoNot">pseudonymous rather than anonymous</a>. Skype is closed source and given Skype's history (reading BIOS etc. just research) it is very much likely that they link all your account names inside Whonix-Workstation ™ to the same pseudonym.
+</p><p>Those are not Whonix ™ or Tor issues, those are Skype issues. Consider Skype usage <a data-href="/wiki/DoNot#Do_not_confuse_Anonymity_with_Pseudonymity." href="./DoNot.html" title="DoNot">pseudonymous rather than anonymous</a>. Skype is closed source and given Skype's history (reading BIOS etc. just research) it is very much likely that they link all your account names inside Whonix-Workstation ™ to the same pseudonym.
 </p><p>Also obviously, if you log into an account, which you have ever used without Tor, consider the account non-anonymous. You really should assume, that they have logs and link your Tor and non-Tor use together.
 </p><p>Security doesn't depend on your local security and key management, but on a third party, the Skype authority. Consider the Skype encryption broken by the Skype authority.
 </p><p>Another obvious thing, if you chat with people, who have not created their account over Tor and who have not always connected over Tor, it is also not so hard to guess who you are. Remember, you are not in control of Skype's encryption keys and Skype is not Open Source, thus do not rely on Skype's encryption.
@@ -706,7 +706,7 @@ The developer of TOR Fone (a fork of SpeakFreely) recommends against<sup class="
 </p><p>Also read <a data-href="/wiki/DoNot#Do_not_mix_Modes_of_Anonymity.21" href="./DoNot.html" title="DoNot">Do not mix Modes of Anonymity!</a>
 </p><p>In conclusion Skype usage does not leak IP/location, but is discouraged anyway, unless you want to use it for circumvention only, without wanting to be anonymous or pseudonymous.
 </p><p>What's the point in using Skype if you and all your chat partners are also willing to create and use their accounts only over Tor? You are advised to use Skype alternatives.
-</p><p>If you are wondering, why Skype works at all in Whonix over Tor, since Tor only supports TCP, see technical details: <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
+</p><p>If you are wondering, why Skype works at all in Whonix ™ over Tor, since Tor only supports TCP, see technical details: <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
 </p>
 <h3><span class="mw-headline" id="List">List</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=19.html" title="Edit section: List">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>There is a <a class="external text" data-href="https://en.wikipedia.org/wiki/Comparison_of_VoIP_software" href="https://en.wikipedia.org/wiki/Comparison_of_VoIP_software" rel="noreferrer noopener" target="_blank">Comparison of VoIP software</a> in wikipedia. The client should be Open Source and if you are not calling from .onion to .onion (and let Tor handle encryption) it should also support voice encryption such as ZRTP.
@@ -714,7 +714,7 @@ The developer of TOR Fone (a fork of SpeakFreely) recommends against<sup class="
 <h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=20.html" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li><a class="external text" data-href="https://guardianproject.info/2013/01/31/anonymous-cb-radio-with-mumble-and-tor/" href="https://guardianproject.info/2013/01/31/anonymous-cb-radio-with-mumble-and-tor/" rel="noreferrer noopener" target="_blank">guardianproject.info: Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</a></li></ul>
 <h2><span class="mw-headline" id="External_Resources">External Resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=21.html" title="Edit section: External Resources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<ul><li>Not Whonix specific, still interesting: <a class="external text" data-href="http://huertanix.tumblr.com/post/55261352264/location-anonymous-voice-communication-a-step-by-step" href="http://huertanix.tumblr.com/post/55261352264/location-anonymous-voice-communication-a-step-by-step" rel="noreferrer noopener" target="_blank">Location-Anonymous Voice Communication, A Step-by-Step Guide</a></li></ul>
+<ul><li>Not Whonix ™ specific, still interesting: <a class="external text" data-href="http://huertanix.tumblr.com/post/55261352264/location-anonymous-voice-communication-a-step-by-step" href="http://huertanix.tumblr.com/post/55261352264/location-anonymous-voice-communication-a-step-by-step" rel="noreferrer noopener" target="_blank">Location-Anonymous Voice Communication, A Step-by-Step Guide</a></li></ul>
 <h2><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VoIP&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=VoIP&amp;action=edit&amp;section=22.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
@@ -822,7 +822,7 @@ Blocking UDP is not sufficient <br/>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a>.
+<p>Don't mind having your name connected to <a class="new" data-href="/w/index.php?title=Template:Product_name&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Product_name&amp;action=edit&amp;redlink=1.html" title="Template:Product name (page does not exist)">Template:Product name</a>? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/VoIP" href="https://www.Whonix.org/wiki/VoIP" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -836,38 +836,38 @@ Blocking UDP is not sufficient <br/>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425054235
+Cached time: 20190426054230
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.137 seconds
-Real time usage: 0.171 seconds
-Preprocessor visited node count: 1178/1000000
-Preprocessor generated node count: 3053/1000000
-Post‐expand include size: 39372/2097152 bytes
+CPU time usage: 0.146 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 1198/1000000
+Preprocessor generated node count: 3121/1000000
+Post‐expand include size: 39468/2097152 bytes
 Template argument size: 12770/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 14670/5000000 bytes
+Unstrip post‐expand size: 14837/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.63 MB/50 MB
+Lua virtual size: 7.64 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  136.524      1 -total
- 36.06%   49.232      1 Template:Tox
- 35.38%   48.301     31 Template:CodeSelect
- 34.81%   47.524      9 Template:Box
- 20.61%   28.141      3 Template:Mbox
- 10.66%   14.554      1 Template:Install_Backport
-  8.11%   11.067      1 Template:Footer
-  7.38%   10.080      1 Template:Reflist
-  7.24%    9.888      1 Template:Firewall_Settings_Workstation
-  6.53%    8.909      1 Template:Open_with_root_rights
+100.00%  138.584      1 -total
+ 42.07%   58.309      1 Template:Tox
+ 33.82%   46.874      9 Template:Box
+ 31.94%   44.258     31 Template:CodeSelect
+ 23.55%   32.630      3 Template:Mbox
+ 12.60%   17.467      1 Template:Install_Backport
+  7.39%   10.243      1 Template:Footer
+  7.17%    9.935      1 Template:Firewall_Settings_Workstation
+  7.01%    9.711      1 Template:Reflist
+  3.91%    5.417      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=44936" dir="ltr" href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=44936">https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=44936</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=46332" dir="ltr" href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=46332">https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=46332</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -878,7 +878,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 16:25.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:50.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

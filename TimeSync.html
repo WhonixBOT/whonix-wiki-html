@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/TimeSync - Whonix
  url: ./TimeSync
- date: Thu Apr 25 07:40:48 2019
+ date: Fri Apr 26 07:40:42 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -60,7 +60,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -106,7 +106,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -281,8 +281,8 @@ real time any longer.  This may be useful in certain security or QA contexts, bu
 <h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=14.html" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>Whonix ™ leaves the host's system clock or time synchronization mechanism untouched.</li>
 <li>Whonix-Gateway ™ and Whonix-Workstation ™ are commonly used inside virtualizers and therefore have their own virtual hardware system clocks.</li>
-<li>Virtualizers time synchronization get disabled by Whonix.
-<ul><li>Most VirtualBox time synchronization features get disabled by Whonix.
+<li>Virtualizers time synchronization get disabled by Whonix ™.
+<ul><li>Most VirtualBox time synchronization features get disabled by Whonix ™.
 <ul><li>Guest additions time synchronization gets disabled in by <a class="external text" data-href="https://github.com/Whonix/vbox-disable-timesync" href="https://github.com/Whonix/vbox-disable-timesync" rel="noreferrer noopener" target="_blank">vbox-disable-timesync</a> at run time. See VirtualBox bug report <a class="external text" data-href="https://www.virtualbox.org/ticket/10828" href="https://www.virtualbox.org/ticket/10828" rel="noreferrer noopener" target="_blank">VBoxService --disable-timesync broken</a>. They say it is actually not a bug. It is a missing feature, that running instances of VBoxService can not be modified in their settings.</li>
 <li>built in time synchronization features get disabled by <i>VBoxManage setextradata "$VMNAME" "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled" "1"</i> at build time.</li></ul></li>
 <li>KVM: TODO document</li>
@@ -299,14 +299,14 @@ real time any longer.  This may be useful in certain security or QA contexts, bu
 <li>sdwdate runs after booting.</li>
 <li>Whonix-Gateway ™: Using sdwdate is better against Attack (1) when using a bridge.</li>
 <li>Every hour, at a random time, sdwdate will set the clock again. This is useful for machines running for long time periods without reboot.</li>
-<li>sdwdate runs at non-predictable times to prevent the ISP or Tor guard/bridge node to guess, that the user is running Whonix.</li>
+<li>sdwdate runs at non-predictable times to prevent the ISP or Tor guard/bridge node to guess, that the user is running Whonix ™.</li>
 <li>sdwdate adds or subtracts a random amount of seconds in range of 0.000000001 and 0.999999999. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> This is supposed to prevent time servers tracking individual users.</li>
 <li>That will reach the design goal, that all clocks, the host's, Whonix-Gateway ™ and Whonix-Workstation ™ slightly differ.</li></ul>
 <h2><span class="mw-headline" id="Block_Networking_until_sdwdate_Finishes">Block Networking until sdwdate Finishes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=15.html" title="Edit section: Block Networking until sdwdate Finishes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>TODO: expand
 </p><p><b>This is not yet enabled by default.</b>
 </p><p>Network access will be limited to Tor and sdwdate until network time synchronization is done to prevent accidental traffic before that is done.
-</p><p>Whonix firewall runs in two different modes. After boot  it runs in <code>timesync-fail-closed mode</code>.
+</p><p>Whonix ™ firewall runs in two different modes. After boot  it runs in <code>timesync-fail-closed mode</code>.
 </p>
 <pre>OK: First run during current boot, therefore running in timesync-fail-closed mode.
 OK: (Only local Tor control port connections and torified sdwdate allowed.)
@@ -347,7 +347,7 @@ OK: (Full torified network access allowed.)
 </div>
 </div>
 <h1><span class="mw-headline" id="Conclusions">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=17.html" title="Edit section: Conclusions">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li><span style="background-color: #FF9090"><b>Attack 1</b></span> is a general Tor problem. It is impossible to solve for Whonix. It is unsolved in other projects as well.</li>
+<ul><li><span style="background-color: #FF9090"><b>Attack 1</b></span> is a general Tor problem. It is impossible to solve for Whonix ™. It is unsolved in other projects as well.</li>
 <li><span style="background-color: #FFFB85"><b>Attack 2</b></span> gets partially defeated.
 <ul><li>Whonix-Gateway ™ and Whonix-Workstation ™ are immune.</li>
 <li>This problem is unsolved in other projects as well.
@@ -359,7 +359,7 @@ OK: (Full torified network access allowed.)
 <li>Manual workaround: Check your clock manually and read <a data-href="/wiki/Other_Operating_Systems#About_Ubuntu" href="./Other_Operating_Systems.html" title="Other Operating Systems">About Ubuntu</a> (stale mirror attack). (<a class="external text" data-href="https://bugs.launchpad.net/launchpad/+bug/716535" href="https://bugs.launchpad.net/launchpad/+bug/716535" rel="noreferrer noopener" target="_blank">Bug #716535: Please support Valid-Until in release files for security.ubuntu.com</a>)</li></ul></li>
 <li><span style="background-color: #90FF90"><b>Attack 3</b></span> gets defeated, Whonix ™ adds additional security.</li>
 <li><span style="background-color: #90FF90"><b>Attack 4</b></span> gets defeated, Whonix ™ adds additional security.</li>
-<li><span style="background-color: #FF9090"><b>Attack 5</b></span> is a general Tor problem, which can not be solved by Whonix ™ and which is unsolved in other projects as well. Since host, Whonix-Gateway ™ and Whonix-Workstation ™ time all differ, at least this attack becomes harder against Whonix.</li></ul>
+<li><span style="background-color: #FF9090"><b>Attack 5</b></span> is a general Tor problem, which can not be solved by Whonix ™ and which is unsolved in other projects as well. Since host, Whonix-Gateway ™ and Whonix-Workstation ™ time all differ, at least this attack becomes harder against Whonix ™.</li></ul>
 <p>When the user powers on Whonix-Gateway ™ and the host time is too much off, it will not be able to connect to the Tor network. It is advised, when powering on Whonix-Gateway ™, to check that the host time is no more than 1 hour in past or more than 3 hour in future, otherwise Tor will be unable to establish circuits.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </p><p>An adversary tampering with the user's clock, while the user doesn't recognize that, can't do any more damage to Whonix ™ than he could do to Tor Browser. Worst case is a denial of service for Tor. On the other hand, an adversary capable of actively tampering with the traffic between the user and its entry guard or bridge poses much bigger risks to Tor in general. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p><p>The reason for running TimeSync on Whonix-Gateway ™, is that onion services can only be accessed if the clock is no more than 30 minutes slow or fast.<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> Running TimeSync ensures, that Whonix-Gateway ™ clock is reasonably accurate.
@@ -464,7 +464,7 @@ With this call the kernel is instructed to change the time gradually. You can ob
 <ul><li>TCP Sequence Numbers -&gt; open issue <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup></li>
 <li>ICMP timestamps -&gt; blocked by Whonix ™ firewall for Whonix ™ VMs. Host: <a data-href="/wiki/Computer_Security_Education#Disable_ICMP_Timestamps" href="./Computer_Security_Education.html" title="Computer Security Education">Recommendation</a> to disable on the host.</li>
 <li>TCP timestamps -&gt; blocked in Whonix ™ VMs by <a class="external text" data-href="https://github.com/Whonix/tcp-timestamps-disable" href="https://github.com/Whonix/tcp-timestamps-disable" rel="noreferrer noopener" target="_blank">tcp-timestamps-disable</a>.; <a data-href="/wiki/Computer_Security_Education#Disable_TCP_Timestamps" href="./Computer_Security_Education.html" title="Computer Security Education">Recommendation</a> to disable on the host.</li>
-<li>NTP <sup class="reference" id="cite_ref-ntp-rfc_14-1"><a href="#cite_note-ntp-rfc-14">[14]</a></sup> <sup class="reference" id="cite_ref-ntp-se_15-1"><a href="#cite_note-ntp-se-15">[15]</a></sup> -&gt; Not installed by default in Whonix. Host: TODO</li>
+<li>NTP <sup class="reference" id="cite_ref-ntp-rfc_14-1"><a href="#cite_note-ntp-rfc-14">[14]</a></sup> <sup class="reference" id="cite_ref-ntp-se_15-1"><a href="#cite_note-ntp-se-15">[15]</a></sup> -&gt; Not installed by default in Whonix ™. Host: TODO</li>
 <li>Automatic updaters and other network using cron jobs that run at non-random, canned <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> times.</li>
 <li>Javascript. <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup> <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup></li>
 <li>E-mail clients such as Mozilla Thunderbird and others.<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup></li></ul>
@@ -545,7 +545,7 @@ valid-until=2014-08-01 00:00:00
 <li>Therefore vulnerable to Attack 3 as per <a href="#Attacks">#Attacks</a>.</li></ul></li></ul>
 <h5><span class="mw-headline" id="Conclusions_2">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=35" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=35.html" title="Edit section: Conclusions">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <ul><li>Relying solely on anondate for time setting is probably a bad idea.</li>
-<li>Tor consensus time is used as an  <a class="external text" data-href="https://phabricator.whonix.org/T151" href="https://phabricator.whonix.org/T151" rel="noreferrer noopener" target="_blank">sdwdate Tor Consensus Time Sanity Check</a>. (Whonix 14 and above)</li>
+<li>Tor consensus time is used as an  <a class="external text" data-href="https://phabricator.whonix.org/T151" href="https://phabricator.whonix.org/T151" rel="noreferrer noopener" target="_blank">sdwdate Tor Consensus Time Sanity Check</a>. (Whonix ™ 14 and above)</li>
 <li>Rough time fix.
 <ul><li>Only for users that do not care about being temporarily <a data-href="/wiki/Fingerprint" href="./Fingerprint.html" title="Fingerprint">fingerprinted</a>! This needs proper documentation.</li>
 <li>If clock is too much off so sdwdate cannot fix it, use anondate to get a rough time fix, then let sdwdate do the rest.</li></ul></li></ul>
@@ -564,7 +564,7 @@ valid-until=2014-08-01 00:00:00
 <h5><span class="mw-headline" id="Status_of_this_idea">Status of this idea</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=38.html" title="Edit section: Status of this idea">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <ul><li>Needs more research.</li>
 <li>A simple command line tool that can parse Tor's consensus and Tor's log as been implemented: <a href="#anondate">#anondate</a></li>
-<li>Perhaps relying solely on anondate for time setting could be implemented as an alternative <a data-href="/wiki/Dev/TimeSync#Time_Fetching_Methods" href="./Dev/TimeSync.html" title="Dev/TimeSync">Time Fetching Method</a> into sdwdate and be available as an option (disabled by default in Whonix).</li></ul>
+<li>Perhaps relying solely on anondate for time setting could be implemented as an alternative <a data-href="/wiki/Dev/TimeSync#Time_Fetching_Methods" href="./Dev/TimeSync.html" title="Dev/TimeSync">Time Fetching Method</a> into sdwdate and be available as an option (disabled by default in Whonix ™).</li></ul>
 <h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=39.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Useful to run in Qubes dom0.
 </p>
@@ -701,7 +701,7 @@ Check.
 </li>
 <li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.torproject.org/pipermail/tor-talk/2012-February/023264.html" href="https://lists.torproject.org/pipermail/tor-talk/2012-February/023264.html" rel="noreferrer noopener" target="_blank">https://lists.torproject.org/pipermail/tor-talk/2012-February/023264.html</a></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">General Tor problems, Tor is known to be broken against many active attacks. This can not be solved by Whonix. When an adversary is capable of running active attacks, tampering with the time leading into a denial of service is the least of the worries. The adversary could also disrupt the service easier. And as for active attacking in general, there are other attacks which are easier to deploy and which pose a greater danger. Not a Whonix ™ specific problem.</span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">General Tor problems, Tor is known to be broken against many active attacks. This can not be solved by Whonix ™. When an adversary is capable of running active attacks, tampering with the time leading into a denial of service is the least of the worries. The adversary could also disrupt the service easier. And as for active attacking in general, there are other attacks which are easier to deploy and which pose a greater danger. Not a Whonix ™ specific problem.</span>
 </li>
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/3582#comment:3" href="https://trac.torproject.org/projects/tor/ticket/3582" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/3582#comment:3</a></span>
 </li>
@@ -798,8 +798,8 @@ Source, source code comment in tordate: <a class="external free" data-href="http
 </ol></div></div>
 <h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=60" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;action=edit&amp;section=60.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <blockquote>
-<p>Whonix Dev/TimeSync wiki page Copyright (C) Amnesia &lt;amnesia at boum dot org&gt;<br/>
-Whonix Dev/TimeSync wiki page Copyright (C) 2012 - 2018 ENCRYPTED SUPPORT LP &lt;adrelanos@riseup.net&gt;<br/>
+<p>Whonix ™ Dev/TimeSync wiki page Copyright (C) Amnesia &lt;amnesia at boum dot org&gt;<br/>
+Whonix ™ Dev/TimeSync wiki page Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP &lt;adrelanos@riseup.net&gt;<br/>
 <br/>
 This program comes with ABSOLUTELY NO WARRANTY; for details see the wiki source code.<br/>
 This is free software, and you are welcome to redistribute it under certain conditions; see the wiki source code for details.
@@ -845,7 +845,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/TimeSync" href="https://www.Whonix.org/wiki/Dev/TimeSync" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/TimeSync" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/TimeSync" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -859,35 +859,35 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425054047
+Cached time: 20190426054041
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.099 seconds
-Real time usage: 0.104 seconds
-Preprocessor visited node count: 1436/1000000
-Preprocessor generated node count: 3630/1000000
-Post‐expand include size: 6788/2097152 bytes
+CPU time usage: 0.118 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 1503/1000000
+Preprocessor generated node count: 3814/1000000
+Post‐expand include size: 7000/2097152 bytes
 Template argument size: 762/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 24946/5000000 bytes
+Unstrip post‐expand size: 24775/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   56.337      1 -total
- 18.24%   10.274      1 Template:Reflist
- 18.05%   10.170      1 Template:Footer
- 10.35%    5.833      1 Template:Boot_Clock_Randomization
-  9.02%    5.081      1 Template:Open_File
-  6.54%    3.686      1 Template:Box
-  5.43%    3.060      2 Template:CodeSelect
-  4.12%    2.323      1 Template:Header
-  3.64%    2.048      1 Template:Share
-  3.21%    1.806      1 Template:Edit_it
+100.00%   67.616      1 -total
+ 17.30%   11.695      1 Template:Reflist
+ 13.75%    9.297      1 Template:Footer
+  9.60%    6.491      1 Template:Boot_Clock_Randomization
+  8.29%    5.608      1 Template:Open_File
+  5.97%    4.038      1 Template:Box
+  5.02%    3.391      1 Template:Header
+  4.93%    3.336      2 Template:CodeSelect
+  3.05%    2.063      1 Template:Share
+  2.64%    1.783      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=45046" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=45046">https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=45046</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=46389" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=46389">https://www.whonix.org/w/index.php?title=Dev/TimeSync&amp;oldid=46389</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -898,7 +898,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/TimeS
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 22:11.</li>
+<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:56.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
