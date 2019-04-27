@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/About Debian Packaging - Whonix
  url: ../Dev/About_Debian_Packaging
- date: Fri Apr 26 07:32:40 2019
+ date: Sat Apr 27 07:32:44 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -126,6 +126,8 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-1"><a href="#Recommends_vs_Depends"><span class="tocnumber">1</span> <span class="toctext">Recommends vs Depends</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Files_in_Home_Folder"><span class="tocnumber">2</span> <span class="toctext">Files in Home Folder</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Files_in_.2Fetc.2Fskel"><span class="tocnumber">3</span> <span class="toctext">Files in /etc/skel</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Modifying_Default_Configuration_of_Third_Party_Packages"><span class="tocnumber">4</span> <span class="toctext">Modifying Default Configuration of Third Party Packages</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#config-package-dev"><span class="tocnumber">5</span> <span class="toctext">config-package-dev</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Recommends_vs_Depends">Recommends vs Depends</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=1.html" title="Edit section: Recommends vs Depends">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -162,6 +164,29 @@ Whonix requires Donations to stay alive.
 <ul><li>Needs special code to handle such cases.</li></ul></li>
 <li>If the file from <code>/etc/skel</code> is in the user's home folder, it's hard to update it. Updating the file in <code>/etc/skel</code> won't effect the user's version of the file in the user's home folder.
 <ul><li>Needs special code to handle such cases.</li></ul></li></ul>
+<h1><span class="mw-headline" id="Modifying_Default_Configuration_of_Third_Party_Packages">Modifying Default Configuration of Third Party Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=4.html" title="Edit section: Modifying Default Configuration of Third Party Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Taking systemd as an example. Suppose <code>/lib/systemd/system/systemd-random-seed.service</code> modifications are desired.
+</p><p>File <code>/lib/systemd/system/systemd-random-seed.service</code> is owned by a third party package <code>systemd</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>dpkg -S /lib/systemd/system/systemd-random-seed.service</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">dpkg -S /lib/systemd/system/systemd-random-seed.service</textarea>
+</div>
+</div>
+<pre>systemd: /lib/systemd/system/systemd-random-seed.service
+</pre>
+<ul><li>Editing <code>/lib/systemd/system/systemd-random-seed.service</code>.
+<ul><li>Is the worst (changes get lost on systemd package gets upgraded) (there is a solution using <code>dpkg-divert</code> encapsulated in a more sane by using <code>config-package-dev</code> <code>displace</code> and we use it in Whonix source code where it could not be avoided but if avoidable it is best avoided if possible somehow).</li></ul></li>
+<li>Shipping <code>/etc/systemd/system/systemd-random-seed.service</code>
+<ul><li>would be better but still not great (this is for local administrator, not linux distribution)</li></ul></li>
+<li><code>/lib/systemd/system/systemd-random-seed.service.d</code> folder and a file such as <code>/lib/systemd/system/systemd-random-seed.service.d/30_something.conf</code>
+<ul><li>is an ideal solution for linux distributions such as Whonix since it does not takeover files by other packages and does not take away something from the local system administrator or user.</li></ul></li></ul>
+<h1><span class="mw-headline" id="config-package-dev">config-package-dev</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;action=edit&amp;section=5.html" title="Edit section: config-package-dev">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Ideally avoided as per above.
+</p><p><a class="external free" data-href="https://debathena.mit.edu/config-packages/" href="https://debathena.mit.edu/config-packages/" rel="noreferrer noopener" target="_blank">https://debathena.mit.edu/config-packages/</a>
+</p>
 <hr/>
 <p><font size="-1">No user support in comments. See <a data-href="/wiki/Support" href="../Support.html" title="Support">Support</a>.
 </font></p><p><font size="-1">Comments will be deleted after some time. Specifically after comments have been addressed in form of wiki enhancements. See <a data-href="/wiki/Wiki_Comments_Policy" href="../Wiki_Comments_Policy.html" title="Wiki Comments Policy">Wiki Comments Policy</a>.</font>
@@ -202,7 +227,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/About_Debian_Packaging" href="https://www.Whonix.org/wiki/Dev/About_Debian_Packaging" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/About_Debian_Packaging" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/About_Debian_Packaging" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -216,35 +241,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425193728
+Cached time: 20190426140740
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.024 seconds
-Real time usage: 0.034 seconds
-Preprocessor visited node count: 123/1000000
-Preprocessor generated node count: 410/1000000
-Post‐expand include size: 2864/2097152 bytes
-Template argument size: 0/2097152 bytes
+CPU time usage: 0.025 seconds
+Real time usage: 0.028 seconds
+Preprocessor visited node count: 147/1000000
+Preprocessor generated node count: 466/1000000
+Post‐expand include size: 2934/2097152 bytes
+Template argument size: 55/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2232/5000000 bytes
+Unstrip post‐expand size: 2283/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   23.689      1 -total
- 46.28%   10.964      1 Template:Header
- 43.05%   10.199      1 Template:Footer
-  9.10%    2.155      1 Template:Share
-  8.77%    2.078      1 Template:Edit_it
-  4.06%    0.961      1 Template:RandomNews
-  3.53%    0.836     11 Template:Project_name
-  2.60%    0.615     16 Template:Project_name_short
-  2.47%    0.586      2 Template:Name
-  2.25%    0.534      1 Template:Project_onion
+100.00%   17.266      1 -total
+ 52.79%    9.115      1 Template:Footer
+ 16.47%    2.844      1 Template:Header
+ 15.68%    2.708      1 Template:CodeSelect
+ 10.47%    1.808      1 Template:Share
+  9.36%    1.616      1 Template:Edit_it
+  5.06%    0.874      1 Template:RandomNews
+  3.58%    0.618     10 Template:Project_name
+  3.41%    0.588     16 Template:Project_name_short
+  3.38%    0.583      1 Template:Gateway_product_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46391" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46391">https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46391</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46550" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46550">https://www.whonix.org/w/index.php?title=Dev/About_Debian_Packaging&amp;oldid=46550</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -255,7 +280,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/About
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:56.</li>
+<li id="footer-lastmod"> This page was last edited on 26 April 2019, at 14:08.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -276,5 +301,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/About
 </div>
 
 </body>
-<!-- Cached/compressed 20190425193728 -->
+<!-- Cached/compressed 20190426140740 -->
 </html>
