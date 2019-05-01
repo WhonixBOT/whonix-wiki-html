@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VMware - Whonix
  url: ./VMware
- date: Tue Apr 30 07:42:05 2019
+ date: Wed May  1 07:56:32 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -253,7 +253,7 @@ Example: </p><pre> qemu-img convert image.raw image.vmdk etc etc </pre>
 Example: </p><pre> scp </pre>
 <h4><span class="mw-headline" id="Create_VMs">Create VMs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VMware&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=VMware&amp;action=edit&amp;section=12.html" title="Edit section: Create VMs">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <ul><li>From ESXi, create a new virtual switch for internal traffic. IMPORTANT: Delete the uplink by  clicking the x! Create a new port group for internal traffic using the virtual switch you just created.</li>
-<li>Create a new virtual machine named <a class="new" data-href="/w/index.php?title=Template:Product_name_workstation&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Product_name_workstation&amp;action=edit&amp;redlink=1.html" title="Template:Product name workstation (page does not exist)">Template:Product name workstation</a>: Guest linux Debian 9 64bit, one network interface (change network to internal switch/portgroup), delete disk, add existing disk, select vmdk created for workstation, expand dropdown and select IDE controller. Boot the machine.</li>
+<li>Create a new virtual machine named Whonix-Workstation ™: Guest linux Debian 9 64bit, one network interface (change network to internal switch/portgroup), delete disk, add existing disk, select vmdk created for workstation, expand dropdown and select IDE controller. Boot the machine.</li>
 <li>Create a new virtual machine named Whonix-Gateway ™: Guest linux Debian 9 64bit, two network interfaces (leave first one default, add second and change to internal switch. Delete disk, add existing disk, select .vmdk created for gateway, expand dropdown and select IDE controller. Boot the machine. Note: This machine will have no WAN access unless one of the following actions is taken: addition of static route or modification of eth0 to DHCP.</li></ul>
 <h3><span class="mw-headline" id="Using_VMWare_Workstation_as_intermediary">Using VMWare Workstation as intermediary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VMware&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=VMware&amp;action=edit&amp;section=13.html" title="Edit section: Using VMWare Workstation as intermediary">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>If VMware Workstation is available, another option that works without manual extraction and repacking is to import both VMs to VMware Workstation, check that all settings are properly applied (as per the guide above) and then either export the VMs to ovf and import them on the ESXi server or, if the server is connected to the Workstation instance, migrate via VMware Workstation. This generally works out of the box, although the networking should be reviewed and isolated as per the guide above.
@@ -339,7 +339,7 @@ You are ignoring the author of this comment<div class="c-ignored-links">
 <div class="c-user">
 <p>Anonymous user #1<span class="c-user-level"></span>
 </p>
-<div class="c-time">one month  ago</div>
+<div class="c-time">2 months  ago</div>
 <div class="c-score">
 <span class="c-score-title">Score <span id="Comment69">0</span></span> You</div>
 </div>
@@ -383,7 +383,7 @@ You are ignoring the author of this comment<div class="c-ignored-links">
 <div class="c-user">
 <p>Anonymous user #1<span class="c-user-level"></span>
 </p>
-<div class="c-time">one month  ago</div>
+<div class="c-time">2 months  ago</div>
 <div class="c-score">
 <span class="c-score-title">Score <span id="Comment70">0</span></span> You</div>
 </div>
@@ -460,7 +460,7 @@ Leaving Adapter 1 set to NAT and turning on DHCP will allow TOR connection but a
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/VMware" href="https://www.Whonix.org/wiki/VMware" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VMware" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VMware" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -474,35 +474,35 @@ Leaving Adapter 1 set to NAT and turning on DHCP will allow TOR connection but a
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425135151
+Cached time: 20190430144257
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.055 seconds
-Real time usage: 0.082 seconds
-Preprocessor visited node count: 355/1000000
-Preprocessor generated node count: 1169/1000000
-Post‐expand include size: 3089/2097152 bytes
+CPU time usage: 0.052 seconds
+Real time usage: 0.084 seconds
+Preprocessor visited node count: 354/1000000
+Preprocessor generated node count: 1157/1000000
+Post‐expand include size: 3079/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 11713/5000000 bytes
+Unstrip post‐expand size: 11857/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   63.161      1 -total
- 52.26%   33.005      1 Template:Header
- 31.83%   20.102      1 Template:Footer
-  4.47%    2.821      1 Template:Share
-  3.67%    2.320      1 Template:Reflist
-  3.05%    1.929     11 Template:Project_name_short
-  2.78%    1.757      1 Template:Edit_it
-  1.78%    1.122     13 Template:Project_name
-  1.41%    0.891      1 Template:RandomNews
-  1.16%    0.734      1 Template:Workstation_product_name_short
+100.00%   65.606      1 -total
+ 49.47%   32.454      1 Template:Header
+ 33.90%   22.238      1 Template:Footer
+  5.20%    3.414      1 Template:Reflist
+  3.80%    2.493      1 Template:Share
+  3.43%    2.253      1 Template:Edit_it
+  1.56%    1.026      1 Template:RandomNews
+  1.34%    0.880     13 Template:Project_name
+  1.13%    0.741      1 Template:Gateway_product_name_short
+  1.09%    0.716     12 Template:Project_name_short
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46123" dir="ltr" href="https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46123">https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46123</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46796" dir="ltr" href="https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46796">https://www.whonix.org/w/index.php?title=VMware&amp;oldid=46796</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -513,7 +513,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VMware&am
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:38.</li>
+<li id="footer-lastmod"> This page was last edited on 30 April 2019, at 16:00.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -534,5 +534,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VMware&am
 </div>
 
 </body>
-<!-- Cached/compressed 20190425135151 -->
+<!-- Cached/compressed 20190430144257 -->
 </html>

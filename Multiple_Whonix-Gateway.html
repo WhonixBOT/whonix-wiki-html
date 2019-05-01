@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Multiple Whonix-Gateway ™ - Whonix
  url: ./Multiple_Whonix-Gateway
- date: Tue Apr 30 07:38:02 2019
+ date: Wed May  1 07:43:33 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -30,12 +30,12 @@
 <link data-href="/w/index.php?title=Multiple_Whonix-Gateway&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Multiple_Whonix-Gateway&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://www.kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://www.kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Multiple Whonix-Gateway" property="og:title"/>
-<meta content="http://www.kkkkkkkkkk63ava6.onion/wiki/Multiple_Whonix-Gateway" property="og:url"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Multiple_Whonix-Gateway" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/2/25/Multiplegateways131231.jpg" property="og:image"/>
 <meta content="Compartmentalization. Managing multiple Whonix-Gateway ™." property="og:description"/>
 
@@ -179,7 +179,7 @@ Non-Qubes-Whonix ™ means all Whonix ™ platforms except <a class="mw-redirect
 </p><p>In Virtual Machine Manager: <code>Highlight VM</code> -&gt; <code>Open</code> -&gt; <code>Virtual Machine</code> -&gt; <code>Clone...</code> -&gt; <code>Clone</code>
 </p><p><b>2.</b> Export Whonix ™ internal network settings.
 </p>
-<pre>sudo virsh net-dumpxml internal &gt; internal2.xml
+<pre>sudo virsh net-dumpxml Whonix-Internal &gt; Whonix-Internal2.xml
 </pre>
 <p><b>3.</b> Edit the network configuration to make it unique.
 </p>
@@ -188,7 +188,7 @@ Non-Qubes-Whonix ™ means all Whonix ™ platforms except <a class="mw-redirect
 <p>Alternatively, replace the configuration with the example below (this assumes the only custom networks are Whonix ™-related).
 </p>
 <pre style="white-space: pre-wrap;">&lt;network&gt;
-  &lt;name&gt;internal2&lt;/name&gt;
+  &lt;name&gt;Whonix-Internal2&lt;/name&gt;
   &lt;bridge name='virbr3' stp='on' delay='0'/&gt;
 &lt;/network&gt;
 </pre>
@@ -200,24 +200,24 @@ CTRL-M
 </pre>
 <p>Note:
 </p>
-<ul><li><code>virbr1</code> is assigned to the <u>external</u> network (NAT NIC); and</li>
-<li><code>virbr2</code> is assigned to the <u>internal</u> network (Whonix ™ NIC).</li></ul>
+<ul><li><code>virbr1</code> is assigned to the <u>Whonix-External</u> network (NAT NIC); and</li>
+<li><code>virbr2</code> is assigned to the <u>Whonix-Internal</u> network (Whonix ™ NIC).</li></ul>
 <p>Therefore, the network name was changed to <code>internal2</code> and the bridge name to <code>virbr3</code>.
 </p><p><b>4.</b> Import and start the new network.
 </p>
-<pre>virsh -c qemu:///system net-define internal2.xml
+<pre>virsh -c qemu:///system net-define Whonix-Internal2.xml
 </pre>
-<pre>virsh -c qemu:///system net-autostart internal2
+<pre>virsh -c qemu:///system net-autostart Whonix-Internal2
 </pre>
-<pre>virsh -c qemu:///system net-start internal2
+<pre>virsh -c qemu:///system net-start Whonix-Internal2
 </pre>
 <p><b>5.</b> Attach the Gateway and Workstation VM NICs to the new network. 
 </p><p>Ensure that one Gateway NIC is attached to the external network. It is important to carefully match internal network interfaces to the new ones and not accidentally switch to a NIC that connects outside. 
 </p><p>To edit the VM virtual NIC settings: <br/>
-<code>Highlight VM</code> -&gt; <code>Open</code> -&gt; <code>Settings</code> -&gt; <code>NIC virtual hardware</code> -&gt; Set Network Source to: <code>Virtual network 'internal2' : Isolated network, internal and host routing only</code>
+<code>Highlight VM</code> -&gt; <code>Open</code> -&gt; <code>Settings</code> -&gt; <code>NIC virtual hardware</code> -&gt; Set Network Source to: <code>Virtual network 'Whonix-Internal2' : Isolated network, internal and host routing only</code>
 </p><p>Note that the network is exclusively internal and does not communicate with the host in any way.
 </p><p><b>6.</b> Change the number of pinned CPUs.
-</p><p>It is recommended to <a data-href="/wiki/KVM#Editing_an_imported_Machine.27s_XML_Configuration" href="./KVM.html" title="KVM">edit</a> the cloned workstation's configuration and change the number of pinned CPUs to a different value (3 or 4) compared to the existing gateway and primary workstation. This only works if users have a quadcore system.
+</p><p>It is recommended to <a data-href="/wiki/KVM#Editing_an_imported_Machine.27s_XML_Configuration" href="./KVM.html" title="KVM">edit</a> the cloned workstation's configuration and change the number of pinned CPUs to a different value (3 or 4) compared to the existing gateway and primary workstation. This only works if users have a quad-core system.
 </p>
 <h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Multiple_Whonix-Gateway&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Multiple_Whonix-Gateway&amp;action=edit&amp;section=4.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In this case, it is necessary to change the Whonix-Gateway ™ network <i>interface2</i> and Whonix-Workstation ™ network <i>interface1</i> from internal network <code>Whonix</code> to something else.
@@ -260,7 +260,7 @@ CTRL-M
 <div id="allcomments"></div><form action="" method="post" name="commentForm">
 <div class="c-form-title">Add your comment</div>
 <div class="c-form-reply-to" id="replyto"></div>
-<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="http://www.kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup" href="http://www.kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup">register</a> or <a data-href="http://www.kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin" href="http://www.kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin">log in</a>. It is free.</div>
+<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup">register</a> or <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin">log in</a>. It is free.</div>
 <p><textarea cols="64" id="comment" name="commentText" rows="5"></textarea>
 </p>
 <div class="c-form-button"><input class="site-button" type="button" value="Post comment"/></div>
@@ -275,7 +275,7 @@ CTRL-M
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Multiple_Whonix-Gateway" href="https://www.Whonix.org/wiki/Multiple_Whonix-Gateway" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Multiple_Whonix-Gateway" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Multiple_Whonix-Gateway" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -289,11 +289,11 @@ CTRL-M
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425144230
+Cached time: 20190430235123
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.089 seconds
-Real time usage: 0.178 seconds
+CPU time usage: 0.078 seconds
+Real time usage: 0.132 seconds
 Preprocessor visited node count: 382/1000000
 Preprocessor generated node count: 1453/1000000
 Post‐expand include size: 5649/2097152 bytes
@@ -301,26 +301,26 @@ Template argument size: 197/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3377/5000000 bytes
-Lua time usage: 0.040/7.000 seconds
+Unstrip post‐expand size: 3747/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
 Lua virtual size: 7.63 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  163.445      1 -total
- 54.09%   88.408      2 Template:Mbox
- 18.51%   30.253      1 Template:Header
-  6.34%   10.359      1 Template:Footer
-  5.52%    9.024      1 Template:Maintainer
-  2.70%    4.416      1 Template:Code2
-  2.38%    3.897      1 Template:Title
-  2.23%    3.649      1 Template:Non-q-project
-  2.03%    3.317      1 Template:Reflist
-  1.72%    2.810     14 Template:Gateway_product_name
+100.00%  116.815      1 -total
+ 42.09%   49.165      2 Template:Mbox
+ 25.92%   30.273      1 Template:Header
+  8.44%    9.858      1 Template:Footer
+  5.07%    5.918      1 Template:Maintainer
+  3.09%    3.604      1 Template:Title
+  2.55%    2.982     14 Template:Gateway_product_name
+  2.39%    2.793      1 Template:Non-q-project
+  2.29%    2.679      1 Template:Code2
+  2.29%    2.679      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46153" dir="ltr" href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46153">http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46153</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46809" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46809">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Multiple_Whonix-Gateway&amp;oldid=46809</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -331,7 +331,7 @@ Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?titl
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:42.</li>
+<li id="footer-lastmod"> This page was last edited on 30 April 2019, at 22:59.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -352,5 +352,5 @@ Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?titl
 </div>
 
 </body>
-<!-- Cached/compressed 20190425144230 -->
+<!-- Cached/compressed 20190430235124 -->
 </html>

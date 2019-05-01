@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Flash Proxy - Whonix
  url: ../Dev/Flash_Proxy
- date: Tue Apr 30 07:33:58 2019
+ date: Wed May  1 07:35:06 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -30,12 +30,12 @@
 <link data-href="/w/index.php?title=Dev/Flash_Proxy&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Flash_Proxy&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Flash Proxy" property="og:title"/>
-<meta content="../Dev/Flash_Proxy" property="og:url"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Dev/Flash_Proxy" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="Development Notes for adding Flash Proxy / Snowflake (circumvention) support to Whonix ™." property="og:description"/>
 
@@ -137,7 +137,7 @@ Whonix requires Donations to stay alive.
 <ul><li>Each flashproxy client requires a listening port on the open Internet. That's something we've never had in Whonix ™ before, neither by default or through some options (our firewall even blocks it). That enables fingerprintability when scanning the ports of a Whonix ™ host.</li>
 <li>Listening on a port like that also increases the attack surface dramatically; before this, no random host could try to attack Whonix ™ by connecting to it -- the Whonix ™ host had to (some how) connect to them first. So, yeah, these two things are quite contradictory.</li>
 <li>The above point also raises some practical issues: in order to listen on an Internet-exposed port, the user must either use IPv6 (which is not served by all ISPs, and is unsupported/disabled by default in many routers in use) or, in the case of IPv4, set up port-forwarding (since most people are behind NAT). This limits the usefulness of flashproxy.</li>
-<li>The flashproxy client requires a direct connection to gmail.com, which I feel a bit uncomfortable with for a number of reasons. Currently Whonix ™ only "speaks Tor" outwards, i.e. it communicates directly only with the Tor network or Tor bridges (exceptions: unsafe user on <a class="new" data-href="/w/index.php?title=Template:Product_name_gateway&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Product_name_gateway&amp;action=edit&amp;redlink=1.html" title="Template:Product name gateway (page does not exist)">Template:Product name gateway</a> (e.g. for physical isolation users and captive portal login).</li>
+<li>The flashproxy client requires a direct connection to gmail.com, which I feel a bit uncomfortable with for a number of reasons. Currently Whonix ™ only "speaks Tor" outwards, i.e. it communicates directly only with the Tor network or Tor bridges (exceptions: unsafe user on Whonix-Gateway ™ (e.g. for physical isolation users and captive portal login).</li>
 <li><a data-href="/wiki/Bridges#flashproxy" href="../Bridges.html" title="Bridges">Bridges#flashproxy</a></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/ideas-topics-related-to-chaining-pluggable-transports-flashproxy/348" href="https://forums.whonix.org/t/ideas-topics-related-to-chaining-pluggable-transports-flashproxy/348" rel="noreferrer noopener" target="_blank">forum discussion</a></li></ul>
 <h1><span class="mw-headline" id="Snowflake">Snowflake</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Flash_Proxy&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Flash_Proxy&amp;action=edit&amp;section=2.html" title="Edit section: Snowflake">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -176,7 +176,7 @@ Whonix requires Donations to stay alive.
 <div id="allcomments"></div><form action="" method="post" name="commentForm">
 <div class="c-form-title">Add your comment</div>
 <div class="c-form-reply-to" id="replyto"></div>
-<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="../Special:UserLogin/signup" href="../Special:UserLogin/signup">register</a> or <a data-href="../Special:UserLogin" href="../Special:UserLogin">log in</a>. It is free.</div>
+<div class="c-form-message">Whonix welcomes <b>all comments</b>. If you do not want to be anonymous, <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin/signup">register</a> or <a data-href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin" href="http://kkkkkkkkkk63ava6.onion/wiki/Special:UserLogin">log in</a>. It is free.</div>
 <p><textarea cols="64" id="comment" name="commentText" rows="5"></textarea>
 </p>
 <div class="c-form-button"><input class="site-button" type="button" value="Post comment"/></div>
@@ -191,7 +191,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Flash_Proxy" href="https://www.Whonix.org/wiki/Dev/Flash_Proxy" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Flash_Proxy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Flash_Proxy" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -205,35 +205,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190427195326
+Cached time: 20190430135037
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.024 seconds
 Real time usage: 0.028 seconds
-Preprocessor visited node count: 155/1000000
-Preprocessor generated node count: 743/1000000
-Post‐expand include size: 2901/2097152 bytes
+Preprocessor visited node count: 156/1000000
+Preprocessor generated node count: 745/1000000
+Post‐expand include size: 2885/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2712/5000000 bytes
+Unstrip post‐expand size: 2922/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   21.709      1 -total
- 43.68%    9.483      1 Template:Footer
- 27.31%    5.928      1 Template:Header
- 10.45%    2.268      1 Template:Reflist
-  9.41%    2.043      1 Template:Share
-  8.48%    1.841      1 Template:Edit_it
-  4.60%    0.998     13 Template:Project_name
-  4.45%    0.967     10 Template:Project_name_short
-  3.85%    0.835      1 Template:RandomNews
-  2.47%    0.537      2 Template:Name
+100.00%   20.688      1 -total
+ 49.13%   10.165      1 Template:Footer
+ 25.26%    5.226      1 Template:Header
+ 11.81%    2.443      1 Template:Share
+ 10.12%    2.093      1 Template:Reflist
+  8.64%    1.788      1 Template:Edit_it
+  5.50%    1.137      1 Template:RandomNews
+  3.73%    0.771     13 Template:Project_name
+  3.70%    0.766     10 Template:Project_name_short
+  3.05%    0.631      1 Template:Gateway_product_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46346" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46346">https://www.whonix.org/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46346</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46785" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46785">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Flash_Proxy&amp;oldid=46785</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -244,7 +244,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Flash
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:50.</li>
+<li id="footer-lastmod"> This page was last edited on 30 April 2019, at 15:33.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -265,5 +265,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Flash
 </div>
 
 </body>
-<!-- Cached/compressed 20190427195326 -->
+<!-- Cached/compressed 20190430135037 -->
 </html>

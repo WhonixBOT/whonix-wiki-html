@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Redirect Whonix-Workstation Ports or Unix Domain Socket Files to Whonix-Gateway - Whonix
  url: ./Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway
- date: Tue Apr 30 07:39:46 2019
+ date: Wed May  1 07:51:21 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -167,7 +167,7 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 <p>Then either add a port redirection.
-</p><p>For example to redirect Whonix-Workstation ™ port 9100 to Whonix-Gateway ™ port 9050. Note: adjust the port numbers for your needs.
+</p><p>For example to redirect Whonix-Workstation ™ port <code>9100</code> to Whonix-Gateway ™ port <code>9050</code>. Note: adjust the port numbers for your needs.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>file_port_tuples+=" port#9100:9050 "</pre>
@@ -176,7 +176,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">file_port_tuples+=" port#9100:9050 "</textarea>
 </div>
 </div>
-<p>Or create a unix domain socket file and have it forwarded to Whonix-Gateway ™ port 9050.
+<p>Or create a unix domain socket file <code>/var/run/anon-ws-disable-stacked-tor/unix-domain-socket-file.sock</code> and have it forwarded to Whonix-Gateway ™ port <code>9050</code>.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>file_port_tuples+=" /var/run/anon-ws-disable-stacked-tor/unix-domain-socket-file.sock#9050 "</pre>
@@ -186,7 +186,7 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 <p>Save.
-</p><p>Run the <code>systemd-socket-proxyd</code> <code>systemd-unit-files-generator</code>.
+</p><p>Run the <code>systemd-socket-proxyd</code> <code>systemd-unit-files-generator</code>. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo /usr/share/anon-ws-disable-stacked-tor/systemd-unit-files-generator</pre>
@@ -201,6 +201,9 @@ Whonix requires Donations to stay alive.
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/etc/anon-ws-disable-stacked-tor.d/30_anon-dist.conf" href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/etc/anon-ws-disable-stacked-tor.d/30_anon-dist.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/etc/anon-ws-disable-stacked-tor.d/30_anon-dist.conf</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/systemd-unit-files-generator" href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/systemd-unit-files-generator" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/systemd-unit-files-generator</a></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -243,7 +246,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway" href="https://www.Whonix.org/wiki/Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -257,35 +260,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190425171842
+Cached time: 20190501055120
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.041 seconds
-Real time usage: 0.050 seconds
-Preprocessor visited node count: 236/1000000
-Preprocessor generated node count: 981/1000000
+CPU time usage: 0.032 seconds
+Real time usage: 0.035 seconds
+Preprocessor visited node count: 250/1000000
+Preprocessor generated node count: 1013/1000000
 Post‐expand include size: 5455/2097152 bytes
 Template argument size: 1139/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3177/5000000 bytes
+Unstrip post‐expand size: 3829/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   43.005      1 -total
- 32.65%   14.042      7 Template:CodeSelect
- 24.58%   10.572      1 Template:Footer
- 23.06%    9.915      1 Template:Open_with_root_rights
- 17.69%    7.609      1 Template:Box
- 13.47%    5.793      1 Template:Header
-  5.62%    2.416      1 Template:Reflist
-  4.40%    1.893      1 Template:Share
-  4.31%    1.855      1 Template:Edit_it
-  2.49%    1.073      1 Template:Project_onion
+100.00%   28.703      1 -total
+ 31.64%    9.082      1 Template:Footer
+ 29.45%    8.454      7 Template:CodeSelect
+ 21.96%    6.303      1 Template:Open_with_root_rights
+ 17.40%    4.994      1 Template:Box
+  9.95%    2.857      1 Template:Header
+  7.03%    2.017      1 Template:Reflist
+  6.09%    1.749      1 Template:Share
+  5.56%    1.596      1 Template:Edit_it
+  3.11%    0.894      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=45411" dir="ltr" href="https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=45411">https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=45411</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=46838" dir="ltr" href="https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=46838">https://www.whonix.org/w/index.php?title=Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway&amp;oldid=46838</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -296,7 +299,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Redirect_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 13:39.</li>
+<li id="footer-lastmod"> This page was last edited on 1 May 2019, at 03:04.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -317,5 +320,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Redirect_
 </div>
 
 </body>
-<!-- Cached/compressed 20190425171842 -->
+<!-- Cached/compressed 20190501055120 -->
 </html>
