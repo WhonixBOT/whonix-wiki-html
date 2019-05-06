@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Logging in to captive portals - Whonix
  url: ./Logging_in_to_captive_portals
- date: Sun May  5 07:43:06 2019
+ date: Mon May  6 07:42:59 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -128,9 +128,10 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-2 tocsection-2"><a href="#When_Using_VMs"><span class="tocnumber">1.1</span> <span class="toctext">When Using VMs</span></a></li>
 <li class="toclevel-2 tocsection-3"><a href="#When_Using_Physical_Isolation"><span class="tocnumber">1.2</span> <span class="toctext">When Using Physical Isolation</span></a></li>
 <li class="toclevel-2 tocsection-4"><a href="#Security_recommendations"><span class="tocnumber">1.3</span> <span class="toctext">Security recommendations</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Unsafe_Browser_Installation"><span class="tocnumber">1.4</span> <span class="toctext">Unsafe Browser Installation</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-5"><a href="#License"><span class="tocnumber">2</span> <span class="toctext">License</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#License"><span class="tocnumber">2</span> <span class="toctext">License</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Logging_in_to_captive_portals">Logging in to captive portals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=1.html" title="Edit section: Logging in to captive portals">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -138,13 +139,99 @@ Whonix requires Donations to stay alive.
 <p>Many publicly accessible Internet connections (usually available through a wireless network connection) require its users to register and login in order to get access to the Internet. This include both free and paid for services that may be found at Internet cafes, libraries, airports, hotels, universities etc. Normally in these situations, a so called <i>captive portal</i> intercepts any website request made and redirects the web browser to a login page. None of that works inside Whonix-Workstation ™, so a browser with unrestricted network access is necessary. The browser on the host operating system must be used for this purpose. Note that this means that <b>the browser on the host is NOT anonymous</b>, so use it carefully.
 </p>
 <h2><span class="mw-headline" id="When_Using_Physical_Isolation">When Using Physical Isolation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=3.html" title="Edit section: When Using Physical Isolation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>There is no unsafe browser on Whonix-Gateway ™. You could use a third machine, which has access to clearnet or boot the hardware which runs Whonix-Gateway ™ with another operating system (from USB), which is not torified.
+<p>There is no unsafe browser on Whonix-Gateway ™ installed by default. You could use a third machine, which has access to clearnet or boot the hardware which runs Whonix-Gateway ™ with another operating system (from USB), which is not torified.
 </p>
 <h2><span class="mw-headline" id="Security_recommendations">Security recommendations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=4.html" title="Edit section: Security recommendations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>While this browser can be used unrestrictively for anything, it is <i>highly</i> recommended to only use it for the purpose stated above, i.e. to access and login on captive portals.</li>
 <li>Do not run this browser at the same time as the normal, anonymous web browser. This makes it easy to not mistake one browser for the other, which could have catastrophic consequences for your anonymity.</li>
 <li>Run this browser from a dedicated VM and lock it down with NoScript and isolation programs like FireJail (Linux only).</li></ul>
-<h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=5.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Unsafe_Browser_Installation">Unsafe Browser Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=5.html" title="Edit section: Unsafe Browser Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Discouraged!
+</p><p>This has to be done while you already/still have an internet connection. It cannot be done on the go when you need an internet connection since no unsafe browser is installed by default.
+</p><p>The following instructions are to be applied on Whonix-Gateway ™.
+</p><p>Configure user home of user <code>clearnet</code> to <code>/home/clearnet</code> as it is not set by Whonix default.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo usermod -m -d /home/clearnet clearnet</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo usermod -m -d /home/clearnet clearnet</textarea>
+</div>
+</div>
+<p>Create folder <code>/home/clearnet</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir -p /home/clearnet</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /home/clearnet</textarea>
+</div>
+</div>
+<p>Set owner of folder <code>/home/clearnet</code> to be user <code>clearnet</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chown -R clearnet:clearnet /home/clearnet</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chown -R clearnet:clearnet /home/clearnet</textarea>
+</div>
+</div>
+<p>Install a browser.
+</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<p>Upgrade the system.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get dist-upgrade</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+</div>
+</div>
+<p>Install the <code>firefox-esr</code> package.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install firefox-esr</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install firefox-esr</textarea>
+</div>
+</div>
+<p>The procedure of installing <code>firefox-esr</code> is now complete.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo --set-home -u clearnet bash</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo --set-home -u clearnet bash</textarea>
+</div>
+</div>
+<p>Change directory into user <code>clearnet</code> home folder.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cd ~</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd ~</textarea>
+</div>
+</div>
+<p>Start a browser.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>firefox</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">firefox</textarea>
+</div>
+</div>
+<h1><span class="mw-headline" id="License">License</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;action=edit&amp;section=6.html" title="Edit section: License">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <blockquote>
 <p>Whonix ™ Logging in to captive portals wiki page Copyright (C) Amnesia &lt;amnesia at boum dot org&gt;<br/>
 Whonix ™ Logging in to captive portals wiki page Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP &lt;adrelanos@riseup.net&gt;<br/>
@@ -193,7 +280,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Logging_in_to_captive_portals" href="https://www.Whonix.org/wiki/Logging_in_to_captive_portals" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Logging_in_to_captive_portals" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Logging_in_to_captive_portals" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -207,35 +294,35 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190430151905
+Cached time: 20190505062414
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.020 seconds
-Real time usage: 0.061 seconds
-Preprocessor visited node count: 124/1000000
-Preprocessor generated node count: 428/1000000
-Post‐expand include size: 3390/2097152 bytes
-Template argument size: 58/2097152 bytes
+CPU time usage: 0.032 seconds
+Real time usage: 0.060 seconds
+Preprocessor visited node count: 217/1000000
+Preprocessor generated node count: 648/1000000
+Post‐expand include size: 4434/2097152 bytes
+Template argument size: 326/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2239/5000000 bytes
+Unstrip post‐expand size: 2376/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   54.595      1 -total
- 75.22%   41.069      1 Template:Header
- 17.97%    9.813      1 Template:Footer
-  4.00%    2.182      1 Template:Share
-  3.49%    1.905      1 Template:Edit_it
-  1.70%    0.928      1 Template:RandomNews
-  1.57%    0.858      9 Template:Project_name
-  1.38%    0.753      1 Template:Project_onion
-  1.27%    0.692      1 Template:License_Amnesia
-  1.17%    0.640     10 Template:Project_name_short
+100.00%   52.324      1 -total
+ 50.12%   26.227      1 Template:Header
+ 21.40%   11.197      9 Template:CodeSelect
+ 18.21%    9.529      1 Template:Footer
+  8.67%    4.538      1 Template:Install_Package
+  3.81%    1.993      1 Template:Share
+  3.41%    1.784      1 Template:Edit_it
+  1.98%    1.036      1 Template:License_Amnesia
+  1.96%    1.023      1 Template:RandomNews
+  1.57%    0.819      9 Template:Project_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=45389" dir="ltr" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=45389">https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=45389</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=47000" dir="ltr" href="https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=47000">https://www.whonix.org/w/index.php?title=Logging_in_to_captive_portals&amp;oldid=47000</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -246,7 +333,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Logging_i
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 13:39.</li>
+<li id="footer-lastmod"> This page was last edited on 5 May 2019, at 08:23.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -267,5 +354,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Logging_i
 </div>
 
 </body>
-<!-- Cached/compressed 20190430151905 -->
+<!-- Cached/compressed 20190505062414 -->
 </html>
