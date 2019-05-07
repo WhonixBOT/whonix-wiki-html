@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: ZeroNet: Decentralized Censorship-resistant Network - Whonix
  url: ./ZeroNet
- date: Mon May  6 07:59:58 2019
+ date: Tue May  7 08:00:08 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -125,19 +125,19 @@ Whonix requires Donations to stay alive.
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Connecting_to_Tor_before_ZeroNet"><span class="tocnumber">2</span> <span class="toctext">Connecting to Tor before ZeroNet</span></a>
+<li class="toclevel-1 tocsection-2"><a href="#Connecting_to_Tor_before_ZeroNet"><span class="tocnumber">2</span> <span class="toctext">Connecting to Tor before ZeroNet</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Installation"><span class="tocnumber">3</span> <span class="toctext">Installation</span></a>
 <ul>
-<li class="toclevel-2 tocsection-3"><a href="#Installation"><span class="tocnumber">2.1</span> <span class="toctext">Installation</span></a>
-<ul>
-<li class="toclevel-3 tocsection-4"><a href="#onion-grater_Adjustments"><span class="tocnumber">2.1.1</span> <span class="toctext">onion-grater Adjustments</span></a></li>
-<li class="toclevel-3 tocsection-5"><a href="#Install_Dependencies"><span class="tocnumber">2.1.2</span> <span class="toctext">Install Dependencies</span></a></li>
-<li class="toclevel-3 tocsection-6"><a href="#Install_ZeroNet"><span class="tocnumber">2.1.3</span> <span class="toctext">Install ZeroNet</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#onion-grater_Profile_Update"><span class="tocnumber">3.1</span> <span class="toctext">onion-grater Profile Update</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#onion-grater_Adjustments"><span class="tocnumber">3.2</span> <span class="toctext">onion-grater Adjustments</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Modify_Firewall_Settings"><span class="tocnumber">3.3</span> <span class="toctext">Modify Firewall Settings</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Install_Dependencies"><span class="tocnumber">3.4</span> <span class="toctext">Install Dependencies</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Get_Signing_Key"><span class="tocnumber">3.5</span> <span class="toctext">Get Signing Key</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Install_ZeroNet"><span class="tocnumber">3.6</span> <span class="toctext">Install ZeroNet</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-7"><a href="#Launch_ZeroNet"><span class="tocnumber">2.2</span> <span class="toctext">Launch ZeroNet</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-8"><a href="#Footnotes"><span class="tocnumber">3</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Launch_ZeroNet"><span class="tocnumber">4</span> <span class="toctext">Launch ZeroNet</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <hr/>
@@ -165,10 +165,48 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 <p>These instructions lead to the following connection scheme in Whonix:
 </p><p><b><code>User</code> -&gt; <code>Tor</code> -&gt; <code>ZeroNet</code> -&gt; <code>Internet</code></b>
 </p>
-<h2><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=3.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>ZeroNet is not yet packaged for Debian, so it must be manually installed. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
-</p>
-<h3><span class="mw-headline" id="onion-grater_Adjustments">onion-grater Adjustments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=4.html" title="Edit section: onion-grater Adjustments">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h1><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=3.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h3><span class="mw-headline" id="onion-grater_Profile_Update">onion-grater Profile Update</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=4.html" title="Edit section: onion-grater Profile Update">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Download the updated ZeroNet onion-grater profile. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: Download to be done in an AppVM <code>anon-whonix</code> and then copy over the profile to the <code>whonix-gw-14</code> TemplateVM.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>scurl-download https://raw.githubusercontent.com/Whonix/onion-grater/master/usr/share/doc/onion-grater-merger/examples/40_zeronet.yml</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">scurl-download https://raw.githubusercontent.com/Whonix/onion-grater/master/usr/share/doc/onion-grater-merger/examples/40_zeronet.yml</textarea>
+</div>
+</div>
+<p>Review its contents.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cat 40_zeronet.yml</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cat 40_zeronet.yml</textarea>
+</div>
+</div>
+<p>Move the updated ZeroNet onion-grater profile.
+</p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: TemplateVM <code>whonix-ws-14</code>)
+</p><p>Whonix 14:
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv 40_zeronet.yml /usr/share/onion-grater-merger/examples/40_zeronet.yml</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv 40_zeronet.yml /usr/share/onion-grater-merger/examples/40_zeronet.yml</textarea>
+</div>
+</div>
+<p>Whonix 15 and above: <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mv 40_zeronet.yml /usr/share/doc/onion-grater-merger/examples/40_zeronet.yml</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mv 40_zeronet.yml /usr/share/doc/onion-grater-merger/examples/40_zeronet.yml</textarea>
+</div>
+</div>
+<h3><span class="mw-headline" id="onion-grater_Adjustments">onion-grater Adjustments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=5.html" title="Edit section: onion-grater Adjustments">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Complete the following steps in Whonix-Gateway ™ (<code>sys-whonix</code>).
 </p><p><b>Extend onion-grater Whitelist</b>
 </p>
@@ -212,8 +250,110 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 </div>
 </div>
 </div>
-<h3><span class="mw-headline" id="Install_Dependencies">Install Dependencies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=5.html" title="Edit section: Install Dependencies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>To download and verify ZeroNet via git, run the following commands in Whonix-Workstation ™ (<code>whonix-ws-14</code>) terminal.
+<h3><span class="mw-headline" id="Modify_Firewall_Settings">Modify Firewall Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=6.html" title="Edit section: Modify Firewall Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Modify the Whonix-Workstation ™ (<code>anon-whonix</code>) user firewall settings and reload them.
+</p><p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+In Whonix-Workstation ™ AppVM.
+</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+</div>
+</div>
+<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">kdesudo kwrite /rw/config/whonix_firewall.d/50_user.conf</textarea>
+</div>
+</div>
+<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
+</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+</div>
+</div>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For more help, press on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
+</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+</p>
+<pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
+## which will override the defaults found here. When Whonix is updated, this
+## file may be overwritten.
+</pre>
+<p>See also <a data-href="/wiki/Configuration_Files" href="./Configuration_Files.html" title="Configuration Files">Whonix modular flexible .d style configuration folders</a>.
+</p><p>To view the file, follow these instructions.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-ws-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Add.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>EXTERNAL_OPEN_PORTS+=" 15441 "
+EXTERNAL_OPEN_PORTS+=" 33750 "</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">EXTERNAL_OPEN_PORTS+=" 15441 "
+EXTERNAL_OPEN_PORTS+=" 33750 "</textarea>
+</div>
+</div>
+<p>Save.
+</p><p><b>Reload Whonix-Workstation ™ Firewall.</b>
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Workstation ™ AppVM (commonly named anon-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><u>If you are using a graphical Whonix-Workstation ™</u>, complete the following steps.
+</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><u>If you are using a terminal-only Whonix-Workstation ™</u>, run.
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo whonix_firewall</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo whonix_firewall</textarea>
+</div>
+</div>
+</div>
+<h3><span class="mw-headline" id="Install_Dependencies">Install Dependencies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=7.html" title="Edit section: Install Dependencies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Run the following commands in Whonix-Workstation ™ terminal. (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: TemplateVM <code>whonix-ws-14</code>)
 </p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -232,8 +372,8 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install git python-msgpack python-gevent</textarea>
 </div>
 </div>
-<h3><span class="mw-headline" id="Install_ZeroNet">Install ZeroNet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=6.html" title="Edit section: Install ZeroNet">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: This step can be completed in the ZeroNet qube (AppVM; <code>anon-whonix-zeronet</code>).
+<h3><span class="mw-headline" id="Get_Signing_Key">Get Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=8.html" title="Edit section: Get Signing Key">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Run the following commands in Whonix-Workstation ™ terminal. (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: AppVM <code>anon-whonix</code>)
 </p><p>Retrieve the ZeroNet signing key. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -243,7 +383,10 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">gpg --recv-keys "960F FF2D 6C14 5AA6 13E8 491B 5B63 BAE6 CB96 13AE"</textarea>
 </div>
 </div>
-<p>Download ZeroNet.
+<h3><span class="mw-headline" id="Install_ZeroNet">Install ZeroNet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=9.html" title="Edit section: Install ZeroNet">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Run the following commands in Whonix-Workstation ™ terminal. (<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: AppVM <code>anon-whonix</code>)
+</p><p>ZeroNet is not yet packaged for Debian, so it must be manually installed. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p>Download ZeroNet.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone https://github.com/HelloZeroNet/ZeroNet.git</pre>
@@ -270,7 +413,7 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git log --show-signature</textarea>
 </div>
 </div>
-<h2><span class="mw-headline" id="Launch_ZeroNet">Launch ZeroNet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=7.html" title="Edit section: Launch ZeroNet">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Launch_ZeroNet">Launch ZeroNet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=10.html" title="Edit section: Launch ZeroNet">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>:
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -308,7 +451,7 @@ In any case, Whonix ™ is the safest choice if you would like to run it. <sup c
 </div>
 </div>
 <hr/>
-<p>Note: The following steps will no longer be required once Whonix releases a custom Tor Browser for connecting to alternative networks. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+<p>Note: The following steps will no longer be required once Whonix releases a custom Tor Browser for connecting to alternative networks. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p><p>Configure <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a> to connect to localhost.
 </p>
 <table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span"><b>Warning:</b>
@@ -323,9 +466,9 @@ In Tor Browser:
 <li>Set to <code>0</code></li></ol>
 <hr/>
 <p>Navigate to the ZeroNet web interface. Paste <a class="external free" data-href="http://127.0.0.1:43110" href="http://127.0.0.1:43110" rel="noreferrer noopener" target="_blank">http://127.0.0.1:43110</a> into Tor Browser's URL field and press enter. For additional tips on visiting sites, see: <a class="external text" data-href="https://zeronet.readthedocs.io/en/latest/#how-does-it-work" href="https://zeronet.readthedocs.io/en/latest/" rel="noreferrer noopener" target="_blank">How does it work?</a>
-</p><p>The process is now complete and ZeroNet should be fully functional in Whonix ™. <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p>The process is now complete and ZeroNet should be fully functional in Whonix ™. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=8.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=ZeroNet&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-Zeronet_wiki-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-Zeronet_wiki_1-0">1.0</a></sup> <sup><a href="#cite_ref-Zeronet_wiki_1-1">1.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://zeronet.readthedocs.io/en/latest/" href="https://zeronet.readthedocs.io/en/latest/" rel="noreferrer noopener" target="_blank">https://zeronet.readthedocs.io/en/latest/</a></span>
@@ -352,18 +495,24 @@ Security considerations:
 
 In conclusion, Whonix ™ is the safest and correct choice for running this application.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/HelloZeroNet/ZeroNet/issues/241" href="https://github.com/HelloZeroNet/ZeroNet/issues/241" rel="noreferrer noopener" target="_blank">https://github.com/HelloZeroNet/ZeroNet/issues/241</a></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/Whonix/onion-grater/blob/master/usr/share/doc/onion-grater-merger/examples/40_zeronet.yml" href="https://github.com/Whonix/onion-grater/blob/master/usr/share/doc/onion-grater-merger/examples/40_zeronet.yml" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/onion-grater/blob/master/usr/share/doc/onion-grater-merger/examples/40_zeronet.yml</a></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474" rel="noreferrer noopener" target="_blank">http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474</a></span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+So no longer required after package upgrades.</span>
 </li>
 <li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> TemplateBased ProxyVMs, i.e. Whonix-Gateway ™ (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users could also use <code>/etc/onion-grater-merger.d/</code>. <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users could also use <code>/etc/onion-grater-merger.d/</code> but then users would have to make <code>/etc/onion-grater-merger.d/</code> persistent, which would require doing this inside the Whonix-Gateway ™ TemplateVM (commonly called <code>whonix-gw-14</code>) and restart their Whonix-Gateway ™ ProxyVM or to use <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a>. Both is more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code> which is persistent either way and even allows multiple Whonix-Gateway ™ ProxyVMs based on the same Whonix-Gateway ™ TemplateVM for lets say one Whonix-Gateway ™ ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ™ ProxyVM with the default more restricted onion-grater whitelist.</span>
 </li>
 <li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/HelloZeroNet/ZeroNet/issues/759" href="https://github.com/HelloZeroNet/ZeroNet/issues/759" rel="noreferrer noopener" target="_blank">https://github.com/HelloZeroNet/ZeroNet/issues/759</a></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">Except in the case of <a data-href="/wiki/YaCy" href="./YaCy.html" title="YaCy">YaCy</a>, which needs internet access.</span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/HelloZeroNet/ZeroNet/issues/241" href="https://github.com/HelloZeroNet/ZeroNet/issues/241" rel="noreferrer noopener" target="_blank">https://github.com/HelloZeroNet/ZeroNet/issues/241</a></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">Functionality was last confirmed in May 2018.</span>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474" rel="noreferrer noopener" target="_blank">http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850474</a></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">Except in the case of <a data-href="/wiki/YaCy" href="./YaCy.html" title="YaCy">YaCy</a>, which needs internet access.</span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">Functionality was last confirmed in May 2018.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -406,7 +555,7 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a>.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/ZeroNet" href="https://www.Whonix.org/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -420,38 +569,38 @@ Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grat
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190430132529
+Cached time: 20190506201551
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.081 seconds
-Real time usage: 0.117 seconds
-Preprocessor visited node count: 591/1000000
-Preprocessor generated node count: 1900/1000000
-Post‐expand include size: 10692/2097152 bytes
-Template argument size: 1723/2097152 bytes
-Highest expansion depth: 7/40
+CPU time usage: 0.098 seconds
+Real time usage: 0.166 seconds
+Preprocessor visited node count: 843/1000000
+Preprocessor generated node count: 2442/1000000
+Post‐expand include size: 22262/2097152 bytes
+Template argument size: 7925/2097152 bytes
+Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9343/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
-Lua virtual size: 7.61 MB/50 MB
+Unstrip post‐expand size: 10556/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
+Lua virtual size: 7.62 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   98.447      1 -total
- 43.39%   42.712      2 Template:Mbox
- 42.02%   41.365      1 Template:Onion-grater-warning
- 16.98%   16.714     13 Template:CodeSelect
-  9.93%    9.778      2 Template:Box
-  9.76%    9.606      1 Template:Footer
-  8.59%    8.453      1 Template:Control_Port_Filter_Python_Profile_Add
-  7.23%    7.117      1 Template:Reflist
-  3.83%    3.768      1 Template:TBB_localhost
-  3.30%    3.249      1 Template:Tor_Browser_Start
+100.00%  142.089      1 -total
+ 27.84%   39.560      1 Template:Header
+ 22.82%   32.422      2 Template:Mbox
+ 22.07%   31.360      1 Template:Onion-grater-warning
+ 19.89%   28.262     23 Template:CodeSelect
+ 15.39%   21.866      6 Template:Box
+  6.88%    9.780      1 Template:Firewall_Settings_Workstation
+  6.64%    9.432      1 Template:Footer
+  5.19%    7.379      1 Template:Control_Port_Filter_Python_Profile_Add
+  4.35%    6.187      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=46740" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=46740">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=46740</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=47088" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=47088">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=47088</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -462,7 +611,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 30 April 2019, at 15:10.</li>
+<li id="footer-lastmod"> This page was last edited on 6 May 2019, at 21:46.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -483,5 +632,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 </div>
 
 </body>
-<!-- Cached/compressed 20190430132529 -->
+<!-- Cached/compressed 20190506201551 -->
 </html>
