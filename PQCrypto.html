@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Post-Quantum Cryptography (PQCrypto) - Whonix
  url: ./PQCrypto
- date: Fri May 10 07:44:38 2019
+ date: Sat May 11 07:44:46 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -138,16 +138,17 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-4 tocsection-8"><a href="#Basic_Commands"><span class="tocnumber">5.1.1.1</span> <span class="toctext">Basic Commands</span></a></li>
 <li class="toclevel-4 tocsection-9"><a href="#Key_Management"><span class="tocnumber">5.1.1.2</span> <span class="toctext">Key Management</span></a></li>
-<li class="toclevel-4 tocsection-10"><a href="#Message_Formatting"><span class="tocnumber">5.1.1.3</span> <span class="toctext">Message Formatting</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#Encryption.2FDecryption.2C_Signing_and_Verification"><span class="tocnumber">5.1.1.3</span> <span class="toctext">Encryption/Decryption, Signing and Verification</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#Message_Formatting"><span class="tocnumber">5.1.1.4</span> <span class="toctext">Message Formatting</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-11"><a href="#OneTime"><span class="tocnumber">5.2</span> <span class="toctext">OneTime</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#OneTime"><span class="tocnumber">5.2</span> <span class="toctext">OneTime</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-12"><a href="#Miscellaneous"><span class="tocnumber">6</span> <span class="toctext">Miscellaneous</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Miscellaneous"><span class="tocnumber">6</span> <span class="toctext">Miscellaneous</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Quantum_Computers">Quantum Computers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1.html" title="Edit section: Quantum Computers">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -259,7 +260,18 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -g ENC-256 -N [keyname]</textarea>
 </div>
 </div>
-<p>Export specified public key for sharing with contacts.
+<p>Generate a strong(er) signature key.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -g SIG-256 -N [keyname]</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -g SIG-256 -N [keyname]</textarea>
+</div>
+</div>
+<h4><span class="mw-headline" id="Key_Management">Key Management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9.html" title="Edit section: Key Management">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Back-up keys: It is easier to backup the ccr folder in the home directory, changing its name from/to <code>.ccr</code> upon restore. Enable hidden file view in the file browser to see it.
+</p><p>Export specified public key for sharing with contacts. If a signature key was also created, both types of keys will be exported for distribution in a single file if they share the same name.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -F [keyname] -ap &gt; [keyname]</pre>
@@ -277,9 +289,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -F [keyname] -aP &gt; [keyname]</textarea>
 </div>
 </div>
-<h4><span class="mw-headline" id="Key_Management">Key Management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9.html" title="Edit section: Key Management">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Back-up keys: It is easier to backup the ccr folder in the home directory, changing its name from/to <code>.ccr</code> upon restore. Enable hidden file view with <code>alt + .</code>  to see it.
-</p><p>Import a public key.
+<p>Import a public key.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -ai &lt; [contactkey]</pre>
@@ -297,6 +307,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -aI &lt; [myprivatekey]</textarea>
 </div>
 </div>
+<h4><span id="Encryption/Decryption,_Signing_and_Verification"></span><span class="mw-headline" id="Encryption.2FDecryption.2C_Signing_and_Verification">Encryption/Decryption, Signing and Verification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10.html" title="Edit section: Encryption/Decryption, Signing and Verification">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Encrypt a plaintext message file only to an already imported contact key. Note this will be inaccessible to you. Save a plaintext copy for archival purposes.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -304,6 +315,17 @@ Whonix requires Donations to stay alive.
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -aer [contactkey] -R plaintext &gt; ciphertext</textarea>
+</div>
+</div>
+<p>Encrypt and sign a plaintext message file only to an already imported contact key. 
+</p>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Note: A FMTSeq master signature key has a limited number (65536) of subkeys each only used once to sign data. Reusing a subkey would break its security properties. Beware: Rolling back a VM snapshot or restoring a stale snapshot of the private key folder will result in key reuse. Codecrypt issues a warning after every time you sign "notice: 65535 signatures remaining". Backup/restore the private keys everytime after a signature is made.<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></div></td></tr></tbody></table>
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -sea -r [contactkey] -R plaintext &gt; ciphertext</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -sea -r [contactkey] -R plaintext &gt; ciphertext</textarea>
 </div>
 </div>
 <p>Decrypt a ciphertext message creating plaintext output.
@@ -315,7 +337,70 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -adR ciphertext &gt; plaintext</textarea>
 </div>
 </div>
-<h4><span class="mw-headline" id="Message_Formatting">Message Formatting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10.html" title="Edit section: Message Formatting">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Decrypt and verify a signed ciphertext message creating plaintext output. A contact's public signature key must be imported beforehand.<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -advR ciphertext &gt; plaintext</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -advR ciphertext &gt; plaintext</textarea>
+</div>
+</div>
+<p>Create clearsigned text output.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -s -C -R plaintext &gt; clearsigned</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -s -C -R plaintext &gt; clearsigned</textarea>
+</div>
+</div>
+<p>If multiple private signature keys have been created, a single one must be specified for clearsigning using <code>-u</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -u [keyname] -s -C -R plaintext &gt; clearsigned</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -u [keyname] -s -C -R plaintext &gt; clearsigned</textarea>
+</div>
+</div>
+<p>Create a detached signature for a binary such as a code package.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -sab package.ccr &lt; package</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -sab package.ccr &lt; package</textarea>
+</div>
+</div>
+<p>Verify detached signature.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -vab package.ccr &lt; package</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -vab package.ccr &lt; package</textarea>
+</div>
+</div>
+<p>Create hashfile from a large file. Contents are not signed asymmetrically in this case, but instead a file with cryptographic hashes that can later be used to verify if the contents of input was changed, is generated. The contents of the hashfile could then be clearsigned asymmetrically, making it act as a detached signature file.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -saS hashfile.ccr &lt; big_data.iso</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -saS hashfile.ccr &lt; big_data.iso</textarea>
+</div>
+</div>
+<p>Verify the hashfile.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>ccr -vaS hashfile.ccr &lt; the_same_big_data.iso</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">ccr -vaS hashfile.ccr &lt; the_same_big_data.iso</textarea>
+</div>
+</div>
+<h4><span class="mw-headline" id="Message_Formatting">Message Formatting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11.html" title="Edit section: Message Formatting">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Even without direct Thunderbird support, it is still possible to format messages to account for replies. However users should be careful to not mistakenly send unencrypted replies. TorBirdy disables draft syncing on the host e-mail server, however it is still advisable to disable the Internet connection temporarily in case the send button is accidentally pressed before the message is encrypted with Codecrypt. 
 </p><p>Steps: 
 </p>
@@ -325,19 +410,19 @@ Whonix requires Donations to stay alive.
 <li>Save and encrypt.</li>
 <li>Paste the ciphertext into the Thunderbird reply window and completely replace the existing text.</li>
 <li>Re-establish the Internet connection, then press send.</li></ul>
-<h2><span class="mw-headline" id="OneTime">OneTime</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11.html" title="Edit section: OneTime">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>One-time pads are the only provably unbreakable encryption scheme ever invented, assuming a functional and non-backdoored random number generator (RNG). <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <a class="external text" data-href="http://red-bean.com/onetime/" href="http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> is a program that sets up a one-time pad on a user's computer, and helps to protect from reuse of pads which breaks the overall security model. OneTime is available in Debian. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<h2><span class="mw-headline" id="OneTime">OneTime</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12.html" title="Edit section: OneTime">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>One-time pads are the only provably unbreakable encryption scheme ever invented, assuming a functional and non-backdoored random number generator (RNG). <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> <a class="external text" data-href="http://red-bean.com/onetime/" href="http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> is a program that sets up a one-time pad on a user's computer, and helps to protect from reuse of pads which breaks the overall security model. OneTime is available in Debian. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p><p>OneTime can encrypt any kind of file -- it does not matter if the file's contents are Base64-encoded or not, because OneTime is not interpreting the contents. OneTime simply treats the file as a string of bits. Notably this is true for most encryption software; OneTime is not unique in this regard.
-</p><p>One-time pads should be completely secure against cryptographic attacks by quantum computers or other avenues. So long as the encryption key is truly random and the key is as long as the message, then all possible plaintexts are equally likely. Quantum computers are not telepathic, so messages properly encrypted with a one-time pad will remain impervious to cryptographic attacks. Of course, using the system is difficult in practice due to the logistics of key exchange, but quantum computing does not affect that reality. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</p><p>One-time pads should be completely secure against cryptographic attacks by quantum computers or other avenues. So long as the encryption key is truly random and the key is as long as the message, then all possible plaintexts are equally likely. Quantum computers are not telepathic, so messages properly encrypted with a one-time pad will remain impervious to cryptographic attacks. Of course, using the system is difficult in practice due to the logistics of key exchange, but quantum computing does not affect that reality. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
 </p><p>One-time pads come with several limitations:
 </p>
 <ul><li>The message and the key are identical in size; this issue is negated by the large size of contemporary HDD/SSDs.</li>
 <li>It is impossible to securely contact strangers because the pad file must be exchanged in person or by other trustworthy peers. Sending the pad online only makes it as strong as the asymmetric cryptography that is in use.</li>
 <li>Message integrity cannot be verified, meaning there is no way for the recipient to discover if the ciphertext was  tampered with during transit.</li>
-<li>The pad can never be used to encrypt additional messages. If this advice is ignored, the encryption is broken. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<li>The old pad material must never be reused to encrypt additional different messages. If this advice is ignored, the encryption is completely broken. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup></li></ul>
+<h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" rel="noreferrer noopener" target="_blank">Forum discussion about this wiki page</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=14.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Quantum_computer" href="https://en.wikipedia.org/wiki/Quantum_computer" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Quantum_computer</a></span>
@@ -360,17 +445,23 @@ Whonix requires Donations to stay alive.
 </li>
 <li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://e-x-a.org/codecrypt/" href="http://e-x-a.org/codecrypt/" rel="noreferrer noopener" target="_blank">http://e-x-a.org/codecrypt/</a></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/One-time_pad" href="https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/One-time_pad</a></span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://e-x-a.org/codecrypt/ccr.1.html" href="https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">https://e-x-a.org/codecrypt/ccr.1.html</a></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">http://users.telenet.be/d.rijmenants/en/onetimepad.htm</a></span>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" rel="noreferrer noopener" target="_blank">https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf</a></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime" href="https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime</a></span>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" rel="noreferrer noopener" target="_blank">https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1</a></span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">https://packages.debian.org/search?searchon=names&amp;keywords=onetime</a></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/One-time_pad" href="https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/One-time_pad</a></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898</a></span>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">http://users.telenet.be/d.rijmenants/en/onetimepad.htm</a></span>
 </li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Venona_project#Decryption</a></span>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime" href="https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime</a></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">https://packages.debian.org/search?searchon=names&amp;keywords=onetime</a></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898</a></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Venona_project#Decryption</a></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -413,7 +504,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Don't mind having your name connected to Whonix ™? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/PQCrypto" href="https://www.Whonix.org/wiki/PQCrypto" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/PQCrypto" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/PQCrypto" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -427,38 +518,38 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190506180750
+Cached time: 20190510231110
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.109 seconds
-Real time usage: 0.160 seconds
-Preprocessor visited node count: 473/1000000
-Preprocessor generated node count: 1460/1000000
-Post‐expand include size: 4153/2097152 bytes
-Template argument size: 251/2097152 bytes
+CPU time usage: 0.080 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 618/1000000
+Preprocessor generated node count: 1806/1000000
+Post‐expand include size: 6353/2097152 bytes
+Template argument size: 586/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8898/5000000 bytes
-Lua time usage: 0.030/7.000 seconds
-Lua virtual size: 7.5 MB/50 MB
+Unstrip post‐expand size: 10482/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
+Lua virtual size: 7.63 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  138.416      1 -total
- 44.91%   62.161      1 Template:Mbox
- 14.03%   19.420      7 Template:CodeSelect
- 12.52%   17.336      1 Template:Header
-  8.53%   11.800      1 Template:Footer
-  4.51%    6.243      1 Template:Reflist
-  3.74%    5.170     10 Template:Project_name_short
-  2.77%    3.828      1 Template:Title
-  1.68%    2.324      1 Template:Share
-  1.57%    2.168      1 Template:Edit_it
+100.00%  117.360      1 -total
+ 29.16%   34.221      1 Template:Header
+ 29.05%   34.094      2 Template:Mbox
+ 16.79%   19.700     16 Template:CodeSelect
+  8.38%    9.830      1 Template:Footer
+  4.27%    5.006      1 Template:Reflist
+  3.03%    3.561      1 Template:Title
+  1.75%    2.056      1 Template:Share
+  1.55%    1.816      1 Template:Edit_it
+  1.01%    1.185      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=43359" dir="ltr" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=43359">https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=43359</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=47205" dir="ltr" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=47205">https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=47205</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -469,7 +560,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=PQCrypto&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 April 2019, at 13:23.</li>
+<li id="footer-lastmod"> This page was last edited on 11 May 2019, at 01:00.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -490,5 +581,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=PQCrypto&
 </div>
 
 </body>
-<!-- Cached/compressed 20190506180750 -->
+<!-- Cached/compressed 20190510231110 -->
 </html>
