@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Hardware Threat Minimization - Whonix
  url: ./Microphone
- date: Thu May 23 07:43:54 2019
+ date: Fri May 24 07:43:45 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -159,6 +159,11 @@ Whonix requires Donations to stay alive.
 <h2><span class="mw-headline" id="Disabling_or_Removing_Microphones">Disabling or Removing Microphones</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=4.html" title="Edit section: Disabling or Removing Microphones">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>By default, microphones that are connected to the host are made available to virtual machines like Whonix-Workstation ™ (except for Whonix ™ KVM on Buster hosts and <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>, see further below).
 </p><p>For best security, external microphones should be unplugged. If the microphone is built-in and the user decides to disable it, there might be a BIOS option available. Suitably skilled users can also attempt to remove built-in microphones, although this is more difficult.
+</p><p>The drivers for the sound card can also be disabled, which prevents all output/input audio:
+</p>
+<ul><li>Linux: the names of the drivers can be found in <code>/proc/asound/modules</code>. To blacklist them, create a file in <code>/etc/modprobe.d</code> folder containing <code>blacklist (module)</code>, for example <code>blacklist snd_hda_intel</code>.</li>
+<li>Windows: the drivers can be disabled from the Device Manager.</li></ul>
+<p>The microphone can also be muted on Linux by running <code>alsamixer</code> and entering "M" on the microphone channel.
 </p>
 <h2><span class="mw-headline" id="Select_Use_of_Microphones">Select Use of Microphones</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=5.html" title="Edit section: Select Use of Microphones">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a data-href="/wiki/Multiple_Whonix-Workstation" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a> should be used for: 
@@ -223,7 +228,10 @@ Whonix requires Donations to stay alive.
 Webcams on infected machines can be used to take snapshots, record video or eavesdrop using the built-in microphone. <a class="external text" data-href="https://arstechnica.com/information-technology/2018/08/researchers-find-way-to-spy-on-remote-screens-through-the-webcam-mic/" href="https://arstechnica.com/information-technology/2018/08/researchers-find-way-to-spy-on-remote-screens-through-the-webcam-mic/" rel="noreferrer noopener" target="_blank">Recent research</a> reveals that even remote screen views can be accurately determined via webcams, due to "content-dependent acoustic leakage from LCD screens." <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
 </p><p>Always check if the computer or notebook has a webcam; one might be built-in, but have gone unnoticed. Check the computer's datasheet and operating system hardware manager to be sure. It is recommended that (external) webcams are disabled or removed, unless there are immediate plans to use it inside Whonix-Workstation ™ (<code>anon-whonix</code>). Once a webcam session has finished, it should be disabled and preferably unplugged straight away. 
 </p><p>If the webcam is built-in, check whether it can be disabled with a BIOS setting. Suitably skilled users can attempt to remove built-in webcams, although this may be difficult. As a stop-gap measure, the webcam can always be covered with thick adhesive tape or a cap, so long as it is opaque.
+</p><p>If a BIOS option is unavailable or it is impossible to physically disable the webcam, then the webcam drivers should be disabled:
 </p>
+<ul><li>Linux: a file must be added to <code>/etc/modprobe.d</code> folder that contains <code>blacklist uvcvideo</code>. This blacklists the webcam driver from loading.</li>
+<li>Windows: the webcam driver can be disabled from the Device Manager.</li></ul>
 <h1><span class="mw-headline" id="Wireless_Input_Devices">Wireless Input Devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;action=edit&amp;section=11.html" title="Edit section: Wireless Input Devices">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Avoid using wireless keyboards and mice because most send data unencrypted. Even if this was not the case, the robustness of the cryptography involved in proprietary products cannot be verified. A local adversary up to 100 meters away can sniff keystrokes and inject their own, allowing them to take over the machine.<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
 </p>
@@ -319,7 +327,7 @@ Webcams on infected machines can be used to take snapshots, record video or eave
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Hardware_Threat_Minimization" href="https://www.Whonix.org/wiki/Hardware_Threat_Minimization" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Hardware_Threat_Minimization" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Hardware_Threat_Minimization" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -335,38 +343,38 @@ Webcams on infected machines can be used to take snapshots, record video or eave
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190523054353
+Cached time: 20190524054344
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.058 seconds
-Real time usage: 0.078 seconds
-Preprocessor visited node count: 591/1000000
-Preprocessor generated node count: 1793/1000000
-Post‐expand include size: 5751/2097152 bytes
+CPU time usage: 0.065 seconds
+Real time usage: 0.085 seconds
+Preprocessor visited node count: 593/1000000
+Preprocessor generated node count: 1801/1000000
+Post‐expand include size: 5761/2097152 bytes
 Template argument size: 101/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 12474/5000000 bytes
+Unstrip post‐expand size: 12345/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.63 MB/50 MB
+Lua virtual size: 7.64 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   59.536      1 -total
- 42.15%   25.097      2 Template:Mbox
- 16.51%    9.832      1 Template:Footer
- 10.79%    6.423      1 Template:Reflist
-  5.75%    3.421      2 Template:CodeSelect
-  5.00%    2.974      1 Template:Header
-  3.47%    2.067      1 Template:Share
-  3.13%    1.865      1 Template:Edit_it
-  1.47%    0.878      1 Template:RandomNews
-  1.06%    0.634     10 Template:Project_name_short
+100.00%   60.935      1 -total
+ 43.00%   26.204      2 Template:Mbox
+ 15.85%    9.657      1 Template:Footer
+ 10.20%    6.214      1 Template:Reflist
+  5.66%    3.451      2 Template:CodeSelect
+  4.42%    2.693      1 Template:Header
+  3.17%    1.933      1 Template:Share
+  2.88%    1.754      1 Template:Edit_it
+  1.77%    1.077      1 Template:RandomNews
+  1.39%    0.844      1 Template:Anchor
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47253#Microphone" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47253">https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47253#Microphone</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47362#Microphone" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47362">https://www.whonix.org/w/index.php?title=Hardware_Threat_Minimization&amp;oldid=47362#Microphone</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -377,7 +385,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardware_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 12 May 2019, at 16:10.</li>
+<li id="footer-lastmod"> This page was last edited on 24 May 2019, at 00:53.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
