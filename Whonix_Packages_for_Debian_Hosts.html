@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Packages for Debian Hosts - Whonix
  url: ./Whonix_Packages_for_Debian_Hosts
- date: Fri May 24 07:58:56 2019
+ date: Sat May 25 07:59:17 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -17,14 +17,14 @@
 
 <meta content="MediaWiki 1.31.1" name="generator"/>
 <meta content="" name="google-site-verification"/>
+<meta content="How to install packages developed by Whonix ™ in other Linux distributions such as your host operating system." name="description"/>
+<meta content="How to install packages developed by Whonix ™ in other Linux distributions such as your host operating system." name="twitter:description"/>
 <meta content="https://www.whonix.org/w/images/0/04/Packages-1865510640.jpg" name="image"/>
 <meta content="https://www.whonix.org/w/images/0/04/Packages-1865510640.jpg" name="twitter:image:src"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@Whonix" name="twitter:site"/>
 <meta content="Whonix" name="twitter:domain"/>
 <meta content="@Whonix" name="twitter:creator"/>
-<meta content="How to install packages developed by Whonix ™ in other Linux distributions such as your host operating system." name="description"/>
-<meta content="How to install packages developed by Whonix ™ in other Linux distributions such as your host operating system." name="twitter:description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -36,8 +36,8 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Whonix Packages for Debian Hosts" property="og:title"/>
 <meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Packages_for_Debian_Hosts" property="og:url"/>
-<meta content="https://www.whonix.org/w/images/0/04/Packages-1865510640.jpg" property="og:image"/>
 <meta content="How to install packages developed by Whonix ™ in other Linux distributions such as your host operating system." property="og:description"/>
+<meta content="https://www.whonix.org/w/images/0/04/Packages-1865510640.jpg" property="og:image"/>
 
 <meta content="" property="fb:app_id"/>
 <meta content="" property="fb:admins"/>
@@ -230,13 +230,39 @@ Whonix requires Donations to stay alive.
 </div>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>Add Whonix ™ Repository.
-</p><p>Choose either, Option A <u><b>OR</b></u> Option B.
+</p><p>Choose either, Option <u>A</u>, Option <u>B</u>, <u><b>OR</b></u> Option <u>C</u>.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <div class="toccolours mw-collapsible mw-collapsed">
-<p><b>Option A</b>: Add Whonix ™ Onion Repository.
-</p><p>To add Whonix ™ Onion Repository please press on expand on the right.
-</p><p>Note: Adding Whonix ™ Onion Repository (this) should be preferred over adding Whonix ™ Clearnet Repository (below).
+<p><b>Option <u>A</u></b>: Add Whonix ™ Onion Repository.
+</p><p>To add Whonix ™ Repository over Onion please press on expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>Install apt-transport-tor from the Debian repository.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install apt-transport-tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install apt-transport-tor</textarea>
+</div>
+</div>
+<p>Add <a data-href="/wiki/Project-APT-Repository" href="./Project-APT-Repository.html" title="Project-APT-Repository">Whonix's APT repository</a> for default Whonix using Debian <i><span style="background-color:#FBFBFB">stable</span></i>. At the time of writing this was <code>stretch</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>echo "deb tor+http://deb.Whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb tor+http://deb.Whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<div class="toccolours mw-collapsible mw-collapsed">
+<p><b>Option <u>B</u></b>: Add Whonix ™ Clearnet Repository over Tor.
+</p><p>To add Whonix ™ Repository over torified clearnet please press on expand on the right.
 </p>
 <div class="mw-collapsible-content">
 <p>Install apt-transport-tor from the Debian repository.
@@ -262,26 +288,17 @@ Whonix requires Donations to stay alive.
 </div>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <div class="toccolours mw-collapsible mw-collapsed">
-<p><b>Option B</b>: Add Whonix ™ Clearnet Repository.
-</p><p>To add Whonix ™ Clearnet Repository please press on expand on the right.
+<p><b>Option <u>C</u></b>: Add Whonix ™ Clearnet Repository over clearnet.
+</p><p>To add Whonix ™ Repository over clearnet please press on expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>Install apt-transport-tor from the Debian repository.
+<p>Add Whonix's APT repository for default Whonix using Debian stable. At the time of writing this was <code>stretch</code>.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get install apt-transport-tor</pre>
+<pre>echo "deb http://deb.Whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install apt-transport-tor</textarea>
-</div>
-</div>
-<p>Add <a data-href="/wiki/Project-APT-Repository" href="./Project-APT-Repository.html" title="Project-APT-Repository">Whonix's APT repository</a> for default Whonix using Debian <i><span style="background-color:#FBFBFB">stable</span></i>. At the time of writing this was <code>stretch</code>.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>echo "deb tor+http://deb.whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb tor+http://deb.whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb http://deb.Whonix.org stretch main contrib non-free" | sudo tee /etc/apt/sources.list.d/whonix.list</textarea>
 </div>
 </div>
 </div>
@@ -351,38 +368,38 @@ This will hopefully be fixed in Debian buster.</span>
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20190425161352
+Cached time: 20190524145757
 Cache expiry: 2592000
 Dynamic content: false
-CPU time usage: 0.044 seconds
-Real time usage: 0.073 seconds
-Preprocessor visited node count: 315/1000000
-Preprocessor generated node count: 916/1000000
-Post‐expand include size: 9420/2097152 bytes
-Template argument size: 5556/2097152 bytes
-Highest expansion depth: 7/40
+CPU time usage: 0.038 seconds
+Real time usage: 0.044 seconds
+Preprocessor visited node count: 334/1000000
+Preprocessor generated node count: 894/1000000
+Post‐expand include size: 12108/2097152 bytes
+Template argument size: 6522/2097152 bytes
+Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
 Unstrip post‐expand size: 953/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   65.677      1 -total
- 58.83%   38.635      6 Template:Box
- 41.88%   27.507      1 Template:Header
- 28.17%   18.500     14 Template:CodeSelect
- 17.91%   11.760      1 Template:W-APT-Repository-Key
- 14.61%    9.596      2 Template:Install_Package
-  7.69%    5.052      1 Template:Project-APT-Repository-Tor
-  6.34%    4.167      1 Template:Project-APT-Repository-Add
-  5.27%    3.460      1 Template:Maintainer
-  3.20%    2.101      1 Template:Apt-key
+100.00%   37.029      1 -total
+ 93.17%   34.501      7 Template:Box
+ 51.77%   19.170     15 Template:CodeSelect
+ 28.93%   10.712      1 Template:W-APT-Repository-Key
+ 25.98%    9.619      1 Template:Project-APT-Repository-Add
+ 24.43%    9.048      2 Template:Install_Package
+  8.96%    3.316      1 Template:Header
+  5.63%    2.084      1 Template:Apt-key
+  4.48%    1.660      1 Template:Maintainer
+  2.26%    0.838     10 Template:Project_name
 -->
 </div>
-<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4993-0!canonical and timestamp 20190425161352 and revision id 46130
+<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4993-0!canonical and timestamp 20190524145757 and revision id 47391
  -->
 </div><div class="printfooter">
-Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=46130" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=46130">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=46130</a>"</div>
+Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=47391" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=47391">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Whonix_Packages_for_Debian_Hosts&amp;oldid=47391</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -393,7 +410,7 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:41.</li>
+<li id="footer-lastmod"> This page was last edited on 24 May 2019, at 16:55.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -414,5 +431,5 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 </div>
 
 </body>
-<!-- Cached/compressed 20190425161352 -->
+<!-- Cached/compressed 20190524152240 -->
 </html>

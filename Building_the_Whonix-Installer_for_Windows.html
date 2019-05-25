@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Building the Whonix-Installer for Windows - Whonix
  url: ./Building_the_Whonix-Installer_for_Windows
- date: Fri May 24 07:32:30 2019
+ date: Sat May 25 07:32:30 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -140,10 +140,12 @@ Whonix requires Donations to stay alive.
 </p>
 <h1><span id="What_you'll_need"></span><span class="mw-headline" id="What_you.27ll_need">What you'll need</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=3.html" title="Edit section: What you'll need">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>The Whonix ™ VirtualBox XFCE ova found here: <a data-href="/wiki/VirtualBox/XFCE" href="./VirtualBox/XFCE.html" title="VirtualBox/XFCE">VirtualBox/XFCE</a> <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
-<li>The newest build of the VirtualBox-Installer found here under "Windows hosts": <a class="external free" data-href="https://www.virtualbox.org/wiki/Downloads?replytocom=98578" href="https://www.virtualbox.org/wiki/Downloads?replytocom=98578" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/wiki/Downloads?replytocom=98578</a></li>
-<li>"7zSD.sfx" which you may obtain under "7-Zip 9.20 Extra" here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a></li>
-<li>"7za.exe" which you may obtain under "7-Zip 16.04 Extra" here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a></li>
-<li>The newest version of Inno Setup Unicode, a tool for easily creating installers, found here: <a class="external free" data-href="http://www.jrsoftware.org/isdl.php" href="http://www.jrsoftware.org/isdl.php" rel="noreferrer noopener" target="_blank">http://www.jrsoftware.org/isdl.php</a></li>
+<li>The newest build of the VirtualBox-Installer found here under <code>Windows hosts</code>: <a class="external free" data-href="https://www.virtualbox.org/wiki/Downloads?replytocom=98578" href="https://www.virtualbox.org/wiki/Downloads?replytocom=98578" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/wiki/Downloads?replytocom=98578</a></li></ul>
+<ul><li><code>7zSD.sfx</code> which you may obtain under <code>7-Zip 9.20 Extra</code> here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a>
+<ul><li>You need to download the <code>.7z</code> compressed archive file and extract it.</li></ul></li>
+<li><code>7za.exe</code> which you may obtain under <code>7-Zip 16.04 Extra</code> here: <a class="external free" data-href="http://www.7-zip.org/download.html" href="http://www.7-zip.org/download.html" rel="noreferrer noopener" target="_blank">http://www.7-zip.org/download.html</a>
+<ul><li>You need to download the <code>.7z</code> compressed archive file and extract it.</li></ul></li></ul>
+<ul><li>The newest version of Inno Setup Unicode, a tool for easily creating installers, found here: <a class="external free" data-href="http://www.jrsoftware.org/isdl.php" href="http://www.jrsoftware.org/isdl.php" rel="noreferrer noopener" target="_blank">http://www.jrsoftware.org/isdl.php</a></li>
 <li>Whonix ™-Windows-UI, which can be built from source via this guide: <a data-href="/wiki/Dev/Building_Whonix-UI_for_Windows" href="./Dev/Building_Whonix-UI_for_Windows.html" title="Dev/Building Whonix-UI for Windows">Dev/Building Whonix-UI for Windows</a></li>
 <li>The Source for the installer, the logo, the license text, configuration files and the batch file handling the compilation, found here: <a class="external free" data-href="https://github.com/Whonix/Whonix-Windows-Installer" href="https://github.com/Whonix/Whonix-Windows-Installer" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix-Windows-Installer</a></li></ul>
 <h1><span class="mw-headline" id="Preparing_the_files">Preparing the files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;action=edit&amp;section=4.html" title="Edit section: Preparing the files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -154,7 +156,7 @@ Whonix requires Donations to stay alive.
 </pre>
 <p>Once this has been finished, a window will open telling you where these three files (<code>VirtualBox[Characters based on your version]amd64.msi</code>, <code>common.cab</code>) have been extracted in.
 </p><p>3) Rename <code>VirtualBox[Characters based on your version]amd64.msi</code> to <code>virtualbox_x64.msi</code> and save all of them in a folder, because they will be needed later.
-</p><p>4) Put the Whonix ™ ova image in the same folder and rename them <code>whonix.ova</code>.
+</p><p>4) Put the Whonix ™ ova image in the same folder and rename it to <code>whonix.ova</code>.
 </p><p>5) Put the source files (<code>Whonix.iss</code>, <code>logo.ico</code>, <code>license.txt</code>, <code>MakeInstaller.bat</code>, <code>config.txt</code>) inside the same folder as the other files.
 </p><p>6) Include Whonix ™-Windows-UI (<code>Whonix.exe</code>), as well as <code>7zSD.sfx</code> and <code>7za.exe</code>.
 </p><p>Now, you should have the following files in the folder:
@@ -219,7 +221,7 @@ Whonix requires Donations to stay alive.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a>.
+<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Building_the_Whonix-Installer_for_Windows" href="https://www.Whonix.org/wiki/Dev/Building_the_Whonix-Installer_for_Windows" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Building_the_Whonix-Installer_for_Windows" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Building_the_Whonix-Installer_for_Windows" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -239,11 +241,11 @@ Whonix requires Donations to stay alive.
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20190524053229
+Cached time: 20190525053229
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.057 seconds
-Real time usage: 0.090 seconds
+CPU time usage: 0.024 seconds
+Real time usage: 0.027 seconds
 Preprocessor visited node count: 186/1000000
 Preprocessor generated node count: 568/1000000
 Post‐expand include size: 3663/2097152 bytes
@@ -251,23 +253,23 @@ Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2365/5000000 bytes
+Unstrip post‐expand size: 2462/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   76.037      1 -total
- 39.80%   30.262      1 Template:Header
- 39.37%   29.934      1 Template:Footer
-  7.80%    5.930      1 Template:Share
-  5.08%    3.859      1 Template:Edit_it
-  4.64%    3.527      1 Template:RandomNews
-  3.76%    2.856     19 Template:Project_name
-  3.33%    2.535      1 Template:Forkme
-  2.53%    1.923      1 Template:Project_onion
-  1.61%    1.226     20 Template:Project_name_short
+100.00%   16.636      1 -total
+ 59.03%    9.821      1 Template:Footer
+ 19.09%    3.175      1 Template:Header
+ 13.06%    2.172      1 Template:Share
+ 11.47%    1.908      1 Template:Edit_it
+  5.37%    0.893      1 Template:RandomNews
+  4.97%    0.828     20 Template:Project_name_short
+  4.19%    0.698     19 Template:Project_name
+  3.30%    0.549      1 Template:Forkme
+  3.22%    0.535      1 Template:Project_onion
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47017" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47017">https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47017</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47395" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47395">https://www.whonix.org/w/index.php?title=Dev/Building_the_Whonix-Installer_for_Windows&amp;oldid=47395</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -278,7 +280,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 5 May 2019, at 10:32.</li>
+<li id="footer-lastmod"> This page was last edited on 24 May 2019, at 17:10.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

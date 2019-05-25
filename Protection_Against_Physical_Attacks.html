@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Protection against Physical Attacks - Whonix
  url: ./Protection_Against_Physical_Attacks
- date: Fri May 24 07:50:55 2019
+ date: Sat May 25 07:51:13 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div></div> </div>
+</div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -240,17 +240,59 @@ Side-channel attacks are made possible by physical effects caused by cryptosyste
 </p>
 <blockquote><p>...any attack based on information gained from the physical implementation of a cryptosystem, rather than brute force or theoretical weaknesses in the algorithms (compare cryptanalysis). For example, timing information, power consumption, electromagnetic leaks or even sound can provide an extra source of information, which can be exploited to break the system.</p></blockquote>
 <p>Side-channels emerge because computation takes place on a non-ideal system, composed of transistors, wires, power supplies, memory, and peripherals. Component characteristics vary with the instructions and data that are processed, allowing measurable variance to be used by attackers. <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>
-</p><p>The main side-channel attack classes are: <sup class="reference" id="cite_ref-sidechannel_attack_28-1"><a href="#cite_note-sidechannel_attack-28">[28]</a></sup>
+</p><p><b>Table:</b> <i>Primary Side-channel Attack Classes</i> <sup class="reference" id="cite_ref-sidechannel_attack_28-1"><a href="#cite_note-sidechannel_attack-28">[28]</a></sup>
 </p>
-<ul><li><b>Acoustic cryptanalysis:</b> Sound produced during computation is used for attacks.</li>
-<li><b>Cache attacks:</b> Attackers monitor cache accesses made by the user in shared physical systems like virtualized environments or cloud services.</li>
-<li><b>Data remanence:</b> Sensitive data are read after supposedly being deleted.</li>
-<li><b>Differential fault analysis:</b> Secrets are discovered by introducing faults in a computation.</li>
-<li><b>Electromagnetic attacks:</b> Leaked electromagnetic radiation allows attacks that can provide plaintexts and other information. Cryptographic keys can be inferred via this method; for example, see <a class="external text" data-href="https://en.wikipedia.org/wiki/TEMPEST" href="https://en.wikipedia.org/wiki/TEMPEST" rel="noreferrer noopener" target="_blank">TEMPEST</a>.</li>
-<li><b>Optical:</b> Secrets and sensitive data are read by visual recordings with a high resolution camera, or other devices.</li>
-<li><b>Power-monitoring attacks:</b> Attacks use measurements of varying hardware power consumption during computation.</li>
-<li><b>Software-initiated fault attacks:</b> <a class="external text" data-href="https://en.wikipedia.org/wiki/Row_hammer" href="https://en.wikipedia.org/wiki/Row_hammer" rel="noreferrer noopener" target="_blank">Row hammer</a> is an example of this attack, whereby off-limits memory is changed by rapidly accessing adjacent memory, leading to state retention loss.</li>
-<li><b>Timing attacks:</b> Attacks are based on measuring how long various computations take to perform, such as the attacker's password compared to the user's unknown one.</li></ul>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Attack Class</b>
+</th>
+<th scope="col"><b>Description</b>
+</th></tr>
+<tr>
+<th scope="row">Acoustic Cryptanalysis
+</th>
+<td>Sound produced during computation is used for attacks.
+</td></tr>
+<tr>
+<th scope="row">Cache Attacks
+</th>
+<td>Attackers monitor cache accesses made by the user in shared physical systems like virtualized environments or cloud services.
+</td></tr>
+<tr>
+<th scope="row">Data Remanence
+</th>
+<td>Sensitive data are read after supposedly being deleted.
+</td></tr>
+<tr>
+<th scope="row">Differential Fault Analysis
+</th>
+<td>Secrets are discovered by introducing faults in a computation.
+</td></tr>
+<tr>
+<th scope="row">Electromagnetic Attacks
+</th>
+<td>Leaked electromagnetic radiation allows attacks that can provide plaintexts and other information. Cryptographic keys can be inferred via this method; for example, see <a class="external text" data-href="https://en.wikipedia.org/wiki/TEMPEST" href="https://en.wikipedia.org/wiki/TEMPEST" rel="noreferrer noopener" target="_blank">TEMPEST</a>.
+</td></tr>
+<tr>
+<th scope="row">Optical
+</th>
+<td>Secrets and sensitive data are read by visual recordings with a high resolution camera, or other devices.
+</td></tr>
+<tr>
+<th scope="row">Power-monitoring Attacks
+</th>
+<td>Attacks use measurements of varying hardware power consumption during computation.
+</td></tr>
+<tr>
+<th scope="row">Software-initiated Fault Attacks
+</th>
+<td><a class="external text" data-href="https://en.wikipedia.org/wiki/Row_hammer" href="https://en.wikipedia.org/wiki/Row_hammer" rel="noreferrer noopener" target="_blank">Row hammer</a> is an example of this attack, whereby off-limits memory is changed by rapidly accessing adjacent memory, leading to state retention loss.
+</td></tr>
+<tr>
+<th scope="row">Timing Attacks
+</th>
+<td>Attacks are based on measuring how long various computations take to perform, such as the attacker's password compared to the user's unknown one.
+</td></tr></tbody></table>
 <p>While Whonix ™ has <a data-href="/wiki/Advanced_Deanonymization_Attacks" href="./Advanced_Deanonymization_Attacks.html" title="Advanced Deanonymization Attacks">some limited countermeasures</a> to side-channel attacks, in general it <i>cannot</i> provide protection against most classes, nor <a class="external text" data-href="https://en.wikipedia.org/wiki/Hardware_keylogger" href="https://en.wikipedia.org/wiki/Hardware_keylogger" rel="noreferrer noopener" target="_blank">hardware keyloggers</a>, TEMPEST, miniature cameras and so on. Full disk encryption is also helpless against these attacks.
 </p><p>For further reading on this complex topic, see <a class="external text" data-href="https://www.owasp.org/images/c/cd/Side_Channel_Vulnerabilities.pdf" href="https://www.owasp.org/images/c/cd/Side_Channel_Vulnerabilities.pdf" rel="noreferrer noopener" target="_blank">here</a>, <a class="external text" data-href="http://gauss.ececs.uc.edu/Courses/c653/lectures/SideC/intro.pdf" href="http://gauss.ececs.uc.edu/Courses/c653/lectures/SideC/intro.pdf" rel="noreferrer noopener" target="_blank">here</a> and <a class="external text" data-href="http://scl.uconn.edu/courses/ece6095/lectures/side_channels.pdf" href="http://scl.uconn.edu/courses/ece6095/lectures/side_channels.pdf" rel="noreferrer noopener" target="_blank">here</a>.
 </p>
@@ -365,7 +407,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
+<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Protection_Against_Physical_Attacks" href="https://www.Whonix.org/wiki/Protection_Against_Physical_Attacks" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protection_Against_Physical_Attacks" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protection_Against_Physical_Attacks" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -381,11 +423,11 @@ This is free software, and you are welcome to redistribute it under certain cond
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190511083429
+Cached time: 20190524151257
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.077 seconds
-Real time usage: 0.128 seconds
+CPU time usage: 0.069 seconds
+Real time usage: 0.094 seconds
 Preprocessor visited node count: 699/1000000
 Preprocessor generated node count: 2074/1000000
 Post‐expand include size: 8338/2097152 bytes
@@ -393,26 +435,26 @@ Template argument size: 105/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 15428/5000000 bytes
+Unstrip post‐expand size: 15317/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.74 MB/50 MB
+Lua virtual size: 7.73 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  101.898      1 -total
- 39.78%   40.538      5 Template:Mbox
- 26.01%   26.503      1 Template:Header
-  9.08%    9.249      1 Template:Footer
-  7.08%    7.215      1 Template:Reflist
-  3.17%    3.235      1 Template:Title
-  2.11%    2.149      1 Template:Share
-  1.61%    1.637      1 Template:Edit_it
-  1.03%    1.048      1 Template:License_Amnesia
-  0.86%    0.878      1 Template:RandomNews
+100.00%   67.561      1 -total
+ 47.37%   32.005      5 Template:Mbox
+ 15.44%   10.430      1 Template:Footer
+ 11.06%    7.472      1 Template:Reflist
+  5.05%    3.413      1 Template:Header
+  3.50%    2.365      1 Template:Share
+  3.08%    2.079      1 Template:Edit_it
+  1.48%    0.999      1 Template:RandomNews
+  1.39%    0.938      1 Template:License_Amnesia
+  1.33%    0.899     16 Template:Project_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=46731" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=46731">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=46731</a>"</div>
+Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=47380" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=47380">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Protection_Against_Physical_Attacks&amp;oldid=47380</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -423,7 +465,7 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 30 April 2019, at 15:10.</li>
+<li id="footer-lastmod"> This page was last edited on 24 May 2019, at 11:53.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -444,5 +486,5 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 </div>
 
 </body>
-<!-- Cached/compressed 20190511083429 -->
+<!-- Cached/compressed 20190524151257 -->
 </html>
