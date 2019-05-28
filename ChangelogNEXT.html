@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Old Changelog - Whonix
  url: ./ChangelogNEXT
- date: Mon May 27 07:32:40 2019
+ date: Tue May 28 07:32:34 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -122,8 +122,7 @@ Whonix requires Donations to stay alive.
 <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="./Dev.html" title="Dev">Dev</a></span><span class="mw-redirectedfrom">(Redirected from <a class="mw-redirect" data-href="/w/index.php?title=ChangelogNEXT&amp;redirect=no" href="https://www.whonix.org/w/index.php?title=ChangelogNEXT&amp;redirect=no.html" title="ChangelogNEXT">ChangelogNEXT</a>)</span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><br/>
-</p>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
 <div class="toc" id="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Next"><span class="tocnumber">1</span> <span class="toctext">Next</span></a></li>
@@ -383,7 +382,7 @@ Source Code
 <li>fixed the bug where the uwt wrappers gave wrong arguments to curl and therefore broke applications dependent on curl, such as apt-file, update-flashplugin</li>
 <li>added libgl1-mesa-dri to prevent error (EE) AIGLX error: dlopen of /usr/lib/i386-linux-gnu/dri/swrast_dri.so failed (/usr/lib/i386-linux-gnu/dri/swrast_dri.so: cannot open shared object file: No such file or directory) in /var/log/Xorg.0.log</li>
 <li>Removed xdg-utils, since we do not need them to create desktop icons and start menu entries.</li>
-<li>Check total RAM. If more than 512 MB -&gt; start KDE. If less (like 128 MB) -&gt; do not start KDE. This should be quite convenient, because users with low RAM could reduce (Whonix-Gateway) RAM to 128 MB and even if they sometimes wanted to configure/check something, they could assign 512 RAM and automagically boot into the graphical KDE desktop. There are also many settings in /etc/whonix.d/ to configure this feature, so if you want you can also add much RAM and still don't boot a desktop environment, use different display managers and so on.</li>
+<li>Check total RAM. If more than 512 MB → start KDE. If less (like 128 MB) → do not start KDE. This should be quite convenient, because users with low RAM could reduce (Whonix-Gateway) RAM to 128 MB and even if they sometimes wanted to configure/check something, they could assign 512 RAM and automagically boot into the graphical KDE desktop. There are also many settings in /etc/whonix.d/ to configure this feature, so if you want you can also add much RAM and still don't boot a desktop environment, use different display managers and so on.</li>
 <li>whonixcheck: now reading /etc/whonix.d/ configuration folder</li>
 <li>whonixcheck: added option WHONIXCHECK_NO_EXIT_ON_TRANS_PORT_DETECTION_FAILURE</li>
 <li>whonixcheck, timesync: bugfix: will now kill the process, if the cancel button in zenity is pressed</li>
@@ -464,7 +463,7 @@ Source Code
 <li>whonix_shared/usr/bin/scurl: better way to forward extra arguments, using &lt;math&gt;{1+"&lt;/math&gt;@"} instead of $*</li>
 <li>whonix_shared/usr/share/whonix/chroot-scripts-pre.d/70_banned_packages: Removed code 'echo "package-name hold" | dpkg --set-selections', because it is no longer necessary, we're now using /etc/apt/preferences.d/ instead.</li>
 <li>build-steps/10_prepare-build-machine: added ruby-ronn to build dependencies (required for creating man pages)</li>
-<li>whonixcheck, timesync: better handling of short and long options; -help -&gt; --help -autostart -&gt; --autostart -cron -&gt; --cron</li>
+<li>whonixcheck, timesync: better handling of short and long options; -help → --help -autostart → --autostart -cron → --cron</li>
 <li>whonixcheck: now using whonix-keys.d folder</li>
 <li>whonixcheck, timesync: output and startup functions are now the same on Whonix-Gateway ™ and Whonix-Workstation ™, since Whonix-Gateway ™ is now graphical as well</li>
 <li>DummyTor now gets created along with the other packages in debian/control</li>
@@ -527,18 +526,18 @@ Source Code
 <p>Source Code
 </p>
 <ul><li>whonix_shared/usr/local/share/whonix/chroot-scripts/50_adduser-user: Not re-creating user "user", and therefore perhaps changing an existing password. That should support re-running the script and bare metal better.</li>
-<li>gateway firewall: renamed variable, GATEWAY_ALLOW_INCOMMING_SSH -&gt; GATEWAY_ALLOW_INCOMING_SSH; typo fixes</li>
-<li>renamed: whonix_shared/etc/profile.d/whonixcheck.sh -&gt; whonix_shared/etc/profile.d/20_whonixcheck.sh</li>
+<li>gateway firewall: renamed variable, GATEWAY_ALLOW_INCOMMING_SSH → GATEWAY_ALLOW_INCOMING_SSH; typo fixes</li>
+<li>renamed: whonix_shared/etc/profile.d/whonixcheck.sh → whonix_shared/etc/profile.d/20_whonixcheck.sh</li>
 <li>whonix_shared/usr/local/bin/delay: added small help file. It is required to prevent getting the logins sparred.</li>
 <li>whonix_shared/usr/local/bin/whonixcheck-scripts/15_kill-old-instances fixed</li>
 <li>whonixcheck: load help_output module earlier so it also works for the check_autostart module whonix_shared/usr/local/bin/whonixcheck-scripts/25_autostart: disable debugging</li>
 <li>build-steps/30_copy-into-img: Remove symlink /etc/localtime before copying to prevent "cp: <code>/usr/share/zoneinfo/UTC' and</code>/etc/localtime' are the same file" error.</li>
 <li>whonixcheck: better way to autostart</li>
 <li>timesync: added option for -autostart</li>
-<li>chown --recursive user:user -&gt; chown --recursive "&lt;math&gt;USERNAME":"&lt;/math&gt;USERNAME"</li>
+<li>chown --recursive user:user → chown --recursive "&lt;math&gt;USERNAME":"&lt;/math&gt;USERNAME"</li>
 <li>build-steps/15_prepare-build-machine: using "$USERNAME" instead of user</li>
-<li>chown --recursive user:user -&gt; chown --recursive "&lt;math&gt;USERNAME":"&lt;/math&gt;USERNAME"</li>
-<li>more consistency: /home/"&lt;math&gt;USERNAME" -&gt; "&lt;/math&gt;HOMEVAR"</li>
+<li>chown --recursive user:user → chown --recursive "&lt;math&gt;USERNAME":"&lt;/math&gt;USERNAME"</li>
+<li>more consistency: /home/"&lt;math&gt;USERNAME" → "&lt;/math&gt;HOMEVAR"</li>
 <li>build-steps/15_prepare-build-machine: added creation of user "user".</li>
 <li>build-steps/20_create-debian-img: arch as variable $ARCH; comments for alternative architectures for custom builds</li>
 <li>help-steps/variables: added "export DEBIAN_FRONTEND=noninteractive "</li>
@@ -1013,7 +1012,7 @@ Source Code
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> page.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Old_Changelog" href="https://www.Whonix.org/wiki/Dev/Old_Changelog" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Old_Changelog" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Old_Changelog" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1029,35 +1028,35 @@ Source Code
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190527053239
+Cached time: 20190528053233
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.059 seconds
-Real time usage: 0.061 seconds
-Preprocessor visited node count: 700/1000000
-Preprocessor generated node count: 1926/1000000
-Post‐expand include size: 5813/2097152 bytes
+CPU time usage: 0.094 seconds
+Real time usage: 0.128 seconds
+Preprocessor visited node count: 697/1000000
+Preprocessor generated node count: 1918/1000000
+Post‐expand include size: 5803/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 6832/5000000 bytes
+Unstrip post‐expand size: 6747/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   26.523      1 -total
- 37.46%    9.936      1 Template:Footer
- 11.98%    3.178      1 Template:Header
-  9.21%    2.442      1 Template:Share
-  6.50%    1.723      1 Template:Edit_it
-  4.23%    1.123      1 Template:RandomNews
-  4.17%    1.106     75 Template:Project_name
-  3.26%    0.865     41 Template:Project_name_short
-  3.24%    0.860     41 Template:Gateway_product_name
-  3.15%    0.836     40 Template:Workstation_product_name
+100.00%   93.131      1 -total
+ 35.12%   32.711      1 Template:Header
+ 14.54%   13.545      1 Template:Footer
+  4.01%    3.732     74 Template:Project_name
+  4.00%    3.729     41 Template:Gateway_product_name
+  3.54%    3.296     40 Template:Workstation_product_name
+  3.16%    2.939      1 Template:Share
+  2.48%    2.310      9 Template:Gateway_product_name_short
+  2.45%    2.280      1 Template:Edit_it
+  1.71%    1.595     41 Template:Project_name_short
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=46219" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=46219">https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=46219</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=47679" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=47679">https://www.whonix.org/w/index.php?title=Dev/Old_Changelog&amp;oldid=47679</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Noindexed_pages&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Noindexed_pages&amp;action=edit&amp;redlink=1.html" title="Category:Noindexed pages (page does not exist)">Noindexed pages</a></li><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -1068,7 +1067,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Old_C
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:49.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:18.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: File Transfer - Whonix
  url: ./File_Transfer
- date: Mon May 27 07:39:20 2019
+ date: Tue May 28 07:39:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -46,7 +46,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-File_Transfer rootpage-File_Transfer skin-foreground action-view"><div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-File_Transfer rootpage-File_Transfer skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -204,7 +204,7 @@ SSH:
 </p>
 <ul><li>Works with ssh, scp, sshfs. Instructions below.</li></ul>
 <p><br/>
-ISO Images, Host -&gt; Whonix-Gateway ™/Workstation:
+ISO Images, Host → Whonix-Gateway ™/Workstation:
 </p>
 <ul><li>Safest method of getting files into Whonix-Workstation ™.</li></ul>
 <p><br/>
@@ -437,7 +437,7 @@ in the terminal.
 </div>
 in the terminal.
 <p>14. At this point, you can copy whichever files you desire to your new drive by copying them to the "temp" folder. You can do this in the terminal, with the file browser, etc.  Once you have finished copying the files you want to the "temp" folder, shut down the Whonix ™ Workstation.
-</p><p>15. After the Whonix ™ Workstation is closed, open the "Virtual Media Manager" in VirtualBox by clicking on "File -&gt; Virtual Media Manager."
+</p><p>15. After the Whonix ™ Workstation is closed, open the "Virtual Media Manager" in VirtualBox by clicking on "File → Virtual Media Manager."
 </p><p>16. Locate the new VDI file you created in steps 1-7 and click on it. Then, click the "copy" button. When the next window appears, click the "next" button.
 </p><p>17. When prompted to choose a "hard drive file type,"  select "VDI."
 </p><p>18. When prompted to choose "storage on physical hard drive," choose "dynamically allocated."
@@ -483,7 +483,7 @@ in the terminal.
 </p><p>Anyway, VirtualBox does not support USB out of the box. There are closed source additional extensions for usb support. You can download them from the <a class="external text" data-href="https://www.virtualbox.org/wiki/Downloads" href="https://www.virtualbox.org/wiki/Downloads" rel="noreferrer noopener" target="_blank">VirtualBox download page</a>.
 </p><p>Install them on the host.
 </p><p>We don't know if reboot is required. Then you can plug USB devices into Virtual Machines through the device menu in VirtualBox.
-</p><p>Note that automount of USB devices is disabled in Whonix ™ by default. Try, Start menu -&gt; System Settings -&gt; Removable Media or manually mount. <a class="external text" data-href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" rel="noreferrer noopener" target="_blank">(Old forum topic.)</a> <a class="external text" data-href="https://forums.whonix.org" href="https://forums.whonix.org" rel="noreferrer noopener" target="_blank">(You could start a new forum discussion to share your results.)</a>
+</p><p>Note that automount of USB devices is disabled in Whonix ™ by default. Try, Start menu → System Settings → Removable Media or manually mount. <a class="external text" data-href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" rel="noreferrer noopener" target="_blank">(Old forum topic.)</a> <a class="external text" data-href="https://forums.whonix.org" href="https://forums.whonix.org" rel="noreferrer noopener" target="_blank">(You could start a new forum discussion to share your results.)</a>
 </p><p>Note, if you USB device is formatted with NTFS, you need to install the ntfs-3g package, and a special mount command, see <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>.
 </p><p><a class="external free" data-href="https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" href="https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7</a>
 </p>
@@ -597,7 +597,7 @@ Look for the lines beginning with NIC. e.g. NIC 1 Rule(0):   name = ssh, protoco
 </p><p>These instructions assume connecting from a local host into Whonix ™, not ssh to a remotely running Whonix ™.
 </p><p>You can not directly SSH into Whonix-Workstation ™, because Whonix-Workstation ™ has only an internal network interface and no NAT interface. Adding one would defeat the purpose of Whonix ™. (See <a data-href="/wiki/Security_Guide" href="./Security_Guide.html" title="Security Guide">Security Guide</a> for details why.)
 </p><p>Required: You mastered the steps "SSH into Whonix-Gateway ™" above.
-</p><p>Connection will look like this: host -&gt; ssh -&gt; Whonix-Gateway ™ -&gt; ssh -&gt; Whonix-Workstation ™.
+</p><p>Connection will look like this: host → ssh → Whonix-Gateway ™ → ssh → Whonix-Workstation ™.
 </p><p>On Whonix-Workstation ™:
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -617,7 +617,7 @@ Look for the lines beginning with NIC. e.g. NIC 1 Rule(0):   name = ssh, protoco
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">/usr/bin/ssh.anondist-orig root@10.152.152.11</textarea>
 </div>
 </div>
-<p>Then SSH from the host into Whonix-Gateway ™ (host -&gt; Whonix-Gateway ™). From there, SSH into Whonix-Workstation ™ (Whonix-Gateway ™ -&gt; Whonix-Workstation ™). You can also do that with one command (called SSH hopping).
+<p>Then SSH from the host into Whonix-Gateway ™ (host → Whonix-Gateway ™). From there, SSH into Whonix-Workstation ™ (Whonix-Gateway ™ → Whonix-Workstation ™). You can also do that with one command (called SSH hopping).
 </p><p>On the host!
 </p><p>Or <span style="border:1px dotted #005cb9">root@</span>.
 </p><p></p><div class="codeContainerNew">
@@ -1007,7 +1007,7 @@ If you look for a simpler way out of the situation, if you need USB support in t
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Did you know that anyone can edit the <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/File_Transfer" href="https://www.Whonix.org/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1023,13 +1023,13 @@ If you look for a simpler way out of the situation, if you need USB support in t
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190518145621
+Cached time: 20190527102520
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.159 seconds
-Real time usage: 0.198 seconds
-Preprocessor visited node count: 1217/1000000
-Preprocessor generated node count: 3337/1000000
+CPU time usage: 0.156 seconds
+Real time usage: 0.200 seconds
+Preprocessor visited node count: 1214/1000000
+Preprocessor generated node count: 3317/1000000
 Post‐expand include size: 11708/2097152 bytes
 Template argument size: 2847/2097152 bytes
 Highest expansion depth: 5/40
@@ -1037,24 +1037,24 @@ Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
 Unstrip post‐expand size: 6211/5000000 bytes
 Lua time usage: 0.000/7.000 seconds
-Lua virtual size: 7.47 MB/50 MB
+Lua virtual size: 7.46 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  168.199      1 -total
- 51.37%   86.401     65 Template:CodeSelect
- 14.82%   24.923      1 Template:Mbox
-  8.77%   14.743      1 Template:Footer
-  6.52%   10.968      1 Template:Header
-  3.30%    5.557      1 Template:Reflist
-  1.93%    3.247      1 Template:Non-q-project
-  1.50%    2.515     13 Template:Project_name_short
-  1.34%    2.262      1 Template:Share
-  1.29%    2.166     45 Template:Project_name
+100.00%  172.026      1 -total
+ 50.46%   86.809     65 Template:CodeSelect
+ 13.15%   22.615      1 Template:Mbox
+ 12.94%   22.261      1 Template:Header
+  6.64%   11.418      1 Template:Footer
+  2.74%    4.721      1 Template:Reflist
+  1.73%    2.971      1 Template:Non-q-project
+  1.07%    1.835      1 Template:Share
+  0.91%    1.569     45 Template:Project_name
+  0.86%    1.481      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=46830" dir="ltr" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=46830">https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=46830</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=47673" dir="ltr" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=47673">https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=47673</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -1065,7 +1065,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Tran
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 May 2019, at 02:50.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:13.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1086,5 +1086,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Tran
 </div>
 
 </body>
-<!-- Cached/compressed 20190518145621 -->
+<!-- Cached/compressed 20190527102520 -->
 </html>

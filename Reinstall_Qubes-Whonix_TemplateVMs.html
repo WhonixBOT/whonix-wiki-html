@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Reinstall Qubes-Whonix ™ TemplateVMs - Stable Version - Whonix
  url: ./Reinstall_Qubes-Whonix_TemplateVMs
- date: Mon May 27 07:52:21 2019
+ date: Tue May 28 07:51:43 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -192,7 +192,7 @@ You can either:
 </p><p><b>1.</b> Create a new VM named <code>dom0-updatevm</code>.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<ul><li><code>Qubes VM Manager</code> -&gt; <code>VM</code> -&gt; <code>Create AppVM</code>
+<ul><li><code>Qubes VM Manager</code> → <code>VM</code> → <code>Create AppVM</code>
 <ul><li>Name and label: Name the AppVM. Don't include any personal information (if the AppVM is compromised, the attacker could run <code>qubesdb-read /name</code> to reveal the VM name). Name the AppVM something generic, for example: <code>dom0-updatevm</code>.</li>
 <li>Color: Choose a color label for the UpdateVM.</li>
 <li>Use this template: Choose the <u>Fedora</u> based TemplateVM. For example: <code>fedora-28</code>.</li>
@@ -206,12 +206,12 @@ You can either:
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <ul><li><u><b>Option A)</b></u> If the user wants non-torified, clearnet Qubes dom0 updates, set the NetVM of <code>dom0-updatevm</code> for example to <code>sys-firewall</code>.</li></ul>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><code>Qube Manager</code> -&gt; <code>dom0-updatevm</code> -&gt; <code>Qube s<u>e</u>ttings</code> -&gt; <code>Networking: sys-firewall</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+<p><code>Qube Manager</code> → <code>dom0-updatevm</code> → <code>Qube s<u>e</u>ttings</code> → <code>Networking: sys-firewall</code> → <code>OK</code> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 </div>
 <ul><li><u><b>Option B)</b></u> If the user wants torified Qubes dom0 updates, set the NetVM of <code>dom0-updatevm</code> to Whonix-Gateway ™.</li></ul>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><code>Qube Manager</code> -&gt; <code>dom0-updatevm</code> -&gt; <code>Qube s<u>e</u>ttings</code> -&gt; <code>Networking: sys-whonix</code> -&gt; <code>OK</code> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+<p><code>Qube Manager</code> → <code>dom0-updatevm</code> → <code>Qube s<u>e</u>ttings</code> → <code>Networking: sys-whonix</code> → <code>OK</code> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p>
 </div>
 </div>
@@ -354,13 +354,13 @@ You can either:
 <p>To force dom0 updates over Tor, set Qubes' dom0 UpdateVM to <code>sys-whonix</code>. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><code>Qube Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> -&gt; <code>OK</code>
+<p><code>Qube Manager</code> → <code><u>S</u>ystem</code> → <code><u>G</u>lobal Settings</code> → <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> → <code>OK</code>
 </p>
 </div>
 <p>To revert this change, set Qubes' dom0 UpdateVM to <code>sys-firewall</code> or another preferred VM. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><code>Qubes Manager</code> -&gt; <code><u>S</u>ystem</code> -&gt; <code><u>G</u>lobal Settings</code> -&gt; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> -&gt; <code>OK</code>
+<p><code>Qubes Manager</code> → <code><u>S</u>ystem</code> → <code><u>G</u>lobal Settings</code> → <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> → <code>OK</code>
 </p>
 </div>
 <h2><span class="mw-headline" id="Optional:_Enable_AppArmor">Optional: Enable AppArmor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -373,7 +373,7 @@ You can either:
 </p>
 <h3><span id="Whonix-Gateway_™"></span><span class="mw-headline" id="Whonix-Gateway_.E2.84.A2">Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
 </p><p></p><div class="codeContainerNew">
@@ -428,7 +428,7 @@ You can either:
 </p>
 <h3><span id="Whonix-Workstation_™"></span><span class="mw-headline" id="Whonix-Workstation_.E2.84.A2">Whonix-Workstation ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
 </p><p></p><div class="codeContainerNew">
@@ -489,7 +489,7 @@ You can either:
 <h2><span class="mw-headline" id="Update_and_Launch_Applications">Update and Launch Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-12" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-12.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Before starting applications in the Whonix-Workstation ™ AppVM, <a data-href="/wiki/Qubes/Update" href="./Qubes/Update.html" title="Qubes/Update">update both Whonix-Gateway ™ and Whonix-Workstation ™ TemplateVMs</a>. 
 </p><p>To launch an application like <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a>:
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code><i><span style="background-color:#FBFBFB">Domain: anon-whonix</span></i></code> -&gt; <code>Tor Browser (AnonDist)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code><i><span style="background-color:#FBFBFB">Domain: anon-whonix</span></i></code> → <code>Tor Browser (AnonDist)</code>
 </p><p>To learn about known bugs affecting this release, see <a data-href="/wiki/Known_Issues#Qubes-Whonix_.E2.84.A2" href="./Known_Issues.html" title="Known Issues">here</a>.
 </p>
 <h2><span class="mw-headline" id="Done">Done</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-13" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-13.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -507,8 +507,8 @@ You can either:
 Using salt.</span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
-<ul><li><code>sys-net</code> -&gt; <code>sys-firewall</code> -&gt; <code>sys-whonix</code> -&gt; <code>UpdateVM</code></li>
-<li><code>UpdateVM</code> -&gt; <code>sys-whonix</code> -&gt; <code>sys-firewall</code> -&gt; <code>sys-net</code></li></ul>
+<ul><li><code>sys-net</code> → <code>sys-firewall</code> → <code>sys-whonix</code> → <code>UpdateVM</code></li>
+<li><code>UpdateVM</code> → <code>sys-whonix</code> → <code>sys-firewall</code> → <code>sys-net</code></li></ul>
 </span></li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 <div class="codeContainerNew">
@@ -624,7 +624,7 @@ To revert this change in dom0 terminal, run.
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Qubes/Reinstall" href="https://www.Whonix.org/wiki/Qubes/Reinstall" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -640,35 +640,35 @@ To revert this change in dom0 terminal, run.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190527055220
+Cached time: 20190528055142
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.101 seconds
-Real time usage: 0.130 seconds
+CPU time usage: 0.111 seconds
+Real time usage: 0.137 seconds
 Preprocessor visited node count: 660/1000000
 Preprocessor generated node count: 1968/1000000
-Post‐expand include size: 41779/2097152 bytes
-Template argument size: 9662/2097152 bytes
+Post‐expand include size: 42035/2097152 bytes
+Template argument size: 9766/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 9460/5000000 bytes
+Unstrip post‐expand size: 9822/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
 Lua virtual size: 7.61 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  101.180      1 -total
- 95.21%   96.335      1 Template:Qubes/Reinstall
- 29.68%   30.027     24 Template:CodeSelect
- 28.78%   29.119      4 Template:Mbox
- 17.29%   17.491      9 Template:Box
- 16.40%   16.591      1 Template:Qubes_AppArmor
- 10.73%   10.861      1 Template:Reflist
-  9.76%    9.875      1 Template:Footer
-  3.46%    3.502      1 Template:Qubes_upgrade_dom0
-  3.32%    3.355      1 Template:Qubes_Install_Updates_over_Tor
+100.00%  104.491      1 -total
+ 95.27%   99.552      1 Template:Qubes/Reinstall
+ 30.64%   32.019      4 Template:Mbox
+ 29.11%   30.418     24 Template:CodeSelect
+ 19.04%   19.897      9 Template:Box
+ 15.95%   16.667      1 Template:Qubes_AppArmor
+  9.44%    9.866      1 Template:Reflist
+  9.33%    9.745      1 Template:Footer
+  3.37%    3.524      1 Template:Qubes_Install_Updates_over_Tor
+  3.34%    3.489      1 Template:Qubes_upgrade_dom0
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=46697" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=46697">https://www.whonix.org/w/index.php?title=Qubes/Reinstall&amp;oldid=46697</a>"</div>

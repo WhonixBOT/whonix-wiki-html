@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Verifiable Builds - Whonix
  url: ./Verifiable_Builds
- date: Mon May 27 07:57:45 2019
+ date: Tue May 28 07:57:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -275,7 +275,7 @@ Whonix previously had a feature which allows the community to check that Whonix 
 <p>The <i><span style="background-color:#FBFBFB">/help-steps/analyze_image</span></i> script is supposed to execute no code from the image you are analyzing. The risk running that script on images you did not create yourself such as on the official images should be low, but not non-existent. Audits of the analyzing script itself are most welcome. In order to analyze the image, tools which are available in Debian's repository are used. Such as extracting the .ova requires <i><span style="background-color:#FBFBFB">tar</span></i><sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>. In theory, the <i><span style="background-color:#FBFBFB">.ova</span></i> could be malformed in a way to exploit the auditor's machine while extracting it to coerce the auditor's machine create a legit report hiding the actual backdoor (and infecting the auditor's machine with a backdoor). To find out what other tools are used and for what, please have a look at the <i><span style="background-color:#FBFBFB">/help-steps/analyze_image</span></i> script.
 </p>
 <h3><span class="mw-headline" id="Theoretical_Holes">Theoretical Holes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Verifiable_Builds&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;action=edit&amp;section=7.html" title="Edit section: Theoretical Holes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Unfortunately, we can not directly mount the <i><span style="background-color:#FBFBFB">.ova</span></i>. We have to extract it first. Rather, VirtualBox does not support creating <i><span style="background-color:#FBFBFB">.ova</span></i> containing <i><span style="background-color:#FBFBFB">.img</span></i> (raw images). Img's would be ideal, since low level tools such as <i><span style="background-color:#FBFBFB">dd</span></i> understand them. Even worse, <i><span style="background-color:#FBFBFB">.ova</span>'</i>s created by VirtualBox always include <i><span style="background-color:#FBFBFB">.vmdk</span></i>. <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" rel="noreferrer noopener" target="_blank">export VM using VDI instead of VMDK is not possible</a>. Rather <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" rel="noreferrer noopener" target="_blank">Mounting VMDK's on Debian testing/jessie</a> using Free Software is currently not possible since no software supports that. During the convert process <i><span style="background-color:#FBFBFB">ova -&gt; vmdk -&gt; vdi -&gt; img</span></i>, the MBR, bootloader, VBR and/or other obscure differences could occur. There is no reason to believe that is actually the case, but we're not aware of any research on that topic.
+<p>Unfortunately, we can not directly mount the <i><span style="background-color:#FBFBFB">.ova</span></i>. We have to extract it first. Rather, VirtualBox does not support creating <i><span style="background-color:#FBFBFB">.ova</span></i> containing <i><span style="background-color:#FBFBFB">.img</span></i> (raw images). Img's would be ideal, since low level tools such as <i><span style="background-color:#FBFBFB">dd</span></i> understand them. Even worse, <i><span style="background-color:#FBFBFB">.ova</span>'</i>s created by VirtualBox always include <i><span style="background-color:#FBFBFB">.vmdk</span></i>. <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" href="https://forums.virtualbox.org/viewtopic.php?f=1&amp;t=58460" rel="noreferrer noopener" target="_blank">export VM using VDI instead of VMDK is not possible</a>. Rather <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58461" rel="noreferrer noopener" target="_blank">Mounting VMDK's on Debian testing/jessie</a> using Free Software is currently not possible since no software supports that. During the convert process <i><span style="background-color:#FBFBFB">ova → vmdk → vdi → img</span></i>, the MBR, bootloader, VBR and/or other obscure differences could occur. There is no reason to believe that is actually the case, but we're not aware of any research on that topic.
 </p>
 <h3><span class="mw-headline" id="Your_Own_Alternatives">Your Own Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Verifiable_Builds&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;action=edit&amp;section=8.html" title="Edit section: Your Own Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>The <i><span style="background-color:#FBFBFB">/help-steps/analyze_image</span></i> script is the tool which comes with Whonix ™ source code to audit <i><span style="background-color:#FBFBFB">Whonix ™.ova</span></i>. Nothing prevents you from cooking up your own custom method to verify <i><span style="background-color:#FBFBFB">Whonix ™.ova</span></i>. On the contrary, we'd be very happy to hear about your methods, source code and results. Since this hasn't ever happened in past, Whonix ™ came up with its own <i><span style="background-color:#FBFBFB">/help-steps/analyze_image</span></i> script.
@@ -509,7 +509,7 @@ It is therefore impossible to claim that non-trivial source code is backdoor-fre
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Verifiable_Builds" href="https://www.Whonix.org/wiki/Verifiable_Builds" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Verifiable_Builds" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Verifiable_Builds" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -525,38 +525,38 @@ It is therefore impossible to claim that non-trivial source code is backdoor-fre
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190511074423
+Cached time: 20190527160639
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.173 seconds
-Real time usage: 0.276 seconds
-Preprocessor visited node count: 1514/1000000
-Preprocessor generated node count: 4514/1000000
-Post‐expand include size: 25130/2097152 bytes
-Template argument size: 2068/2097152 bytes
+CPU time usage: 0.118 seconds
+Real time usage: 0.173 seconds
+Preprocessor visited node count: 1512/1000000
+Preprocessor generated node count: 4506/1000000
+Post‐expand include size: 25136/2097152 bytes
+Template argument size: 2080/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 26843/5000000 bytes
-Lua time usage: 0.070/7.000 seconds
+Unstrip post‐expand size: 26929/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
 Lua virtual size: 7.61 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  236.793      1 -total
- 71.46%  169.214      1 Template:Verifiable_Ovas_Introduction
- 52.64%  124.649      2 Template:Mbox
- 10.36%   24.536      1 Template:Verifiable_Builds_Comparsion_Table
-  8.65%   20.488      1 Template:Header
-  4.64%   10.993      1 Template:Reflist
-  4.00%    9.471      1 Template:Footer
-  2.84%    6.720     55 Template:Code2
-  1.87%    4.427      1 Template:Verifiable_Pkgs_Introduction
-  1.20%    2.845     34 Template:Project_name
+100.00%  127.560      1 -total
+ 36.08%   46.023      1 Template:Verifiable_Ovas_Introduction
+ 30.17%   38.482      1 Template:Header
+ 20.42%   26.054      2 Template:Mbox
+ 12.80%   16.327      1 Template:Verifiable_Builds_Comparsion_Table
+  8.21%   10.469      1 Template:Reflist
+  8.16%   10.415      1 Template:Footer
+  3.16%    4.027     55 Template:Code2
+  3.08%    3.933      1 Template:Verifiable_Pkgs_Introduction
+  1.86%    2.370      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=46350" dir="ltr" href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=46350">https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=46350</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=47632" dir="ltr" href="https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=47632">https://www.whonix.org/w/index.php?title=Verifiable_Builds&amp;oldid=47632</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -567,7 +567,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Verifiabl
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:50.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:08.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -588,5 +588,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Verifiabl
 </div>
 
 </body>
-<!-- Cached/compressed 20190511074423 -->
+<!-- Cached/compressed 20190527160639 -->
 </html>

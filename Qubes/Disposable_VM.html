@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Qubes DisposableVMs - Whonix
  url: ../Qubes/Disposable_VM
- date: Mon May 27 07:52:03 2019
+ date: Tue May 28 07:51:26 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -278,7 +278,7 @@ A <a href="#Warnings">few usability issues</a> in DispVMs affect anonymity. If t
 </th>
 <td>
 <ul><li>If a DispVM is spawned from within a VM that is not connected to Whonix-Gateway ™, the new DispVM may route its traffic over clearnet. <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup> <br/></li>
-<li>The reason is because DispVMs inherit their NetVMs from the calling VM, or the calling VM's <code>dispvm_netvm</code> setting (if different). The <code>dispvm_netvm</code> setting can be configured per VM via: <code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>VM Settings</code> -&gt; <code>Advanced</code> -&gt; <code>NetVM for DisposableVM</code> <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> <br/></li>
+<li>The reason is because DispVMs inherit their NetVMs from the calling VM, or the calling VM's <code>dispvm_netvm</code> setting (if different). The <code>dispvm_netvm</code> setting can be configured per VM via: <code>dom0</code> → <code>Qube Manager</code> → <code>VM Settings</code> → <code>Advanced</code> → <code>NetVM for DisposableVM</code> <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> <br/></li>
 <li>If the calling VM is connected to Whonix-Gateway ™, this step is not necessary and the DispVM's traffic will be routed over Tor. See: <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1954" href="https://github.com/QubesOS/qubes-issues/issues/1954" rel="noreferrer noopener" target="_blank">Whonix ™ default NetVM settings fixes</a>.</li></ul>
 </td></tr>
 <tr>
@@ -296,7 +296,7 @@ A <a href="#Warnings">few usability issues</a> in DispVMs affect anonymity. If t
 </th>
 <td>
 <ul><li>When using DispVMs, use the <a data-href="/wiki/Tor_Browser#Tor_Browser_Internal_Updater" href="../Tor_Browser.html" title="Tor Browser">Tor Browser Internal Updater</a> daily to check the browser is up-to-date! <br/></li>
-<li>To learn about recent Tor Browser versions, follow <a class="external text" data-href="https://blog.torproject.org" href="https://blog.torproject.org" rel="noreferrer noopener" target="_blank">The Tor Project blog</a> or look at raw data for the latest <a class="external text" data-href="https://www.torproject.org/projects/torbrowser/RecommendedTBBVersions" href="https://www.torproject.org/projects/torbrowser/RecommendedTBBVersions" rel="noreferrer noopener" target="_blank">Recommended TBB Versions</a>. Tor Browser's version number can also be checked manually: <code>Tor Browser</code> -&gt; <code>Menu</code> -&gt; <code><u>H</u>elp</code> -&gt; <code>About Tor Browser</code>. See <a href="#Keep_Tor_Browser_Up-to-date">Keep Tor Browser Up-to-date</a>.</li></ul>
+<li>To learn about recent Tor Browser versions, follow <a class="external text" data-href="https://blog.torproject.org" href="https://blog.torproject.org" rel="noreferrer noopener" target="_blank">The Tor Project blog</a> or look at raw data for the latest <a class="external text" data-href="https://www.torproject.org/projects/torbrowser/RecommendedTBBVersions" href="https://www.torproject.org/projects/torbrowser/RecommendedTBBVersions" rel="noreferrer noopener" target="_blank">Recommended TBB Versions</a>. Tor Browser's version number can also be checked manually: <code>Tor Browser</code> → <code>Menu</code> → <code><u>H</u>elp</code> → <code>About Tor Browser</code>. See <a href="#Keep_Tor_Browser_Up-to-date">Keep Tor Browser Up-to-date</a>.</li></ul>
 </td></tr>
 <tr>
 <th scope="row">Verify DisposableVM Status
@@ -315,7 +315,7 @@ A <a href="#Warnings">few usability issues</a> in DispVMs affect anonymity. If t
 </p>
 <h2><span id="Create_a_Whonix_™_Default_DVM_Template_based_on_Whonix-Workstation_™"></span><span class="mw-headline" id="Create_a_Whonix_.E2.84.A2_Default_DVM_Template_based_on_Whonix-Workstation_.E2.84.A2">Create a Whonix ™ Default DVM Template based on Whonix-Workstation ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=6.html" title="Edit section: Create a Whonix ™ Default DVM Template based on Whonix-Workstation ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ol><li><a data-href="/wiki/Qubes/Update" href="../Qubes/Update.html" title="Qubes/Update">Update</a> <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>.</li>
-<li>Open a dom0 terminal: <code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Konsole or Xfce Terminal</code></li>
+<li>Open a dom0 terminal: <code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Konsole or Xfce Terminal</code></li>
 <li>Create <code>whonix-ws-14-dvm</code> DVM Template.</li></ol>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -383,7 +383,7 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 </div>
 </div>
 <p>Or use Qube Manager:
-</p><p><code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>right-click 'whonix-ws-14-dvm'</code> -&gt; <code>Run command in qube</code> -&gt; <code>type name of the &lt;app&gt;</code>
+</p><p><code>dom0</code> → <code>Qube Manager</code> → <code>right-click 'whonix-ws-14-dvm'</code> → <code>Run command in qube</code> → <code>type name of the &lt;app&gt;</code>
 </p><p><b>2.</b> Customize application settings.
 </p><p>Customize the application as per normal procedures.
 </p><p><b>3.</b> Exit the application.
@@ -399,18 +399,18 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 </div>
 </div>
 <p>Or use Qube Manager:
-</p><p><code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>right-click 'whonix-ws-14-dvm'</code> -&gt; <code>left-click 'Shutdown qube'</code>
+</p><p><code>dom0</code> → <code>Qube Manager</code> → <code>right-click 'whonix-ws-14-dvm'</code> → <code>left-click 'Shutdown qube'</code>
 </p><p>The changes will be available when the DispVM is restarted.
 </p>
 <h2><span class="mw-headline" id="Delete_a_DVM_Template">Delete a DVM Template</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=12.html" title="Edit section: Delete a DVM Template">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If a DVM Template has been customized and it is necessary to revert these changes, a DVM Template can be deleted the same way as any other VM.
 </p><p>Note the DVM Template cannot be deleted while it is the default DispVM of another VM, otherwise an error message appears. In that case, follow tips found <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/3993" href="https://github.com/QubesOS/qubes-issues/issues/3993" rel="noreferrer noopener" target="_blank">here</a> on how to manually change the default DispVM of VMs to another setting, then repeat the procedure.
-</p><p><code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>right-click 'whonix-ws-14-dvm'</code> -&gt; <code>left-click 'Delete qube'</code>
+</p><p><code>dom0</code> → <code>Qube Manager</code> → <code>right-click 'whonix-ws-14-dvm'</code> → <code>left-click 'Delete qube'</code>
 <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Keep_Tor_Browser_Up-to-date">Keep Tor Browser Up-to-date</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=13.html" title="Edit section: Keep Tor Browser Up-to-date">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>To obtain the latest Tor Browser, the simplest method is to use Whonix ™ built-in Tor Browser downloader functionality. Simply update using <a data-href="/wiki/Tor_Browser#Tor_Browser_Downloader_by_Whonix_.E2.84.A2" href="../Tor_Browser.html" title="Tor Browser">Tor Browser Downloader by Whonix ™ (tb-updater)</a> in Whonix-Workstation ™ TemplateVM (<code>whonix-ws-14</code>) when performing your usual maintenance <a data-href="/wiki/Qubes/Update" href="../Qubes/Update.html" title="Qubes/Update">updating</a>:
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>whonix-ws-14</code> -&gt; <code>Konsole</code> <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup> <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>whonix-ws-14</code> → <code>Konsole</code> <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup> <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>
 </p><p><a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -440,7 +440,7 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 </div>
 </div>
 <p>Shutdown the DVM Template: <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>
-</p><p><code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Shutdown qube'</code>
+</p><p><code>dom0</code> → <code>Qube Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Shutdown qube'</code>
 </p>
 <h2><span class="mw-headline" id="Update_a_DVM_Template">Update a DVM Template</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;action=edit&amp;section=14.html" title="Edit section: Update a DVM Template">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Changes to the underlying TemplateVM (<code>whonix-ws-14</code>) are detected automatically and the DVM Template is updated without user intervention. That means package updates that are applied to <code>whonix-ws-14</code> are also applied to the <code>whonix-ws-14-dvm</code>.
@@ -492,10 +492,10 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 <ul><li>There are several ways to spawn DispVMs from TemplateBased AppVMs. In fact, in addition to the dom0 terminal and application menu, users can also spawn DispVMs from the AppVM konsole or context-menu. <sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> These tools provide a safe and convenient way to open files and email attachments that could contain malicious code. There is also an option to convert potentially dangerous <a class="external text" data-href="https://en.wikipedia.org/wiki/Portable_Document_Format" href="https://en.wikipedia.org/wiki/Portable_Document_Format" rel="noreferrer noopener" target="_blank">PDFs</a> into trusted PDFs and open it in a DispVM. <sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup> <br/></li>
 <li>The most commonly used methods to spawn DispVMs from TemplateBased AppVMs are listed below. It is recommended to read the <a href="#Warnings">"Spawning DisposableVMs" warning</a> detailing DispVM network settings before proceeding: <br/></li></ul>
 <ol><li>Context-menu <br/></li>
-<li>Dolphin file manager - open file in DispVM: <code>File</code> -&gt; <code>Actions</code> -&gt; <code>Edit/View in DisposableVM</code> <br/></li>
-<li>Nautilus file manager - open file in DispVM: <code>File</code> -&gt; <code>Edit/View in DisposableVM</code> <br/></li>
-<li>Nautilus file manager- sanitize PDF: <code>PDF</code> -&gt; <code>Convert to Trusted PDF</code> <br/></li>
-<li><a data-href="/wiki/Encrypted_Email_with_Thunderbird_and_Enigmail" href="../Encrypted_Email_with_Thunderbird_and_Enigmail.html" title="Encrypted Email with Thunderbird and Enigmail">Thunderbird</a> E-<a data-href="/wiki/E-Mail" href="../E-Mail.html" title="E-Mail">mail</a> client - open email attachment in DispVM: <code>Email</code> -&gt; <code>Attachments</code> -&gt; <code>Open in DispVM</code> <br/></li>
+<li>Dolphin file manager - open file in DispVM: <code>File</code> → <code>Actions</code> → <code>Edit/View in DisposableVM</code> <br/></li>
+<li>Nautilus file manager - open file in DispVM: <code>File</code> → <code>Edit/View in DisposableVM</code> <br/></li>
+<li>Nautilus file manager- sanitize PDF: <code>PDF</code> → <code>Convert to Trusted PDF</code> <br/></li>
+<li><a data-href="/wiki/Encrypted_Email_with_Thunderbird_and_Enigmail" href="../Encrypted_Email_with_Thunderbird_and_Enigmail.html" title="Encrypted Email with Thunderbird and Enigmail">Thunderbird</a> E-<a data-href="/wiki/E-Mail" href="../E-Mail.html" title="E-Mail">mail</a> client - open email attachment in DispVM: <code>Email</code> → <code>Attachments</code> → <code>Open in DispVM</code> <br/></li>
 <li>Command line interface - open file in DispVM:<div class="codeContainerNew">
 <div class="preDiv">
 <pre>qvm-open-in-dvm &lt;file_name&gt;</pre>
@@ -517,7 +517,7 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a GUI</u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Disposable: whonix-ws-14-dvm</code> -&gt; <code>Tor Browser (AnonDist)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Disposable: whonix-ws-14-dvm</code> → <code>Tor Browser (AnonDist)</code>
 </p><p><u>If you are using a terminal</u>, complete the following steps.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -535,7 +535,7 @@ Do <i>not</i> include <code>-dvm</code> when naming DispVMs! Tor Browser will no
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a GUI</u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Disposable: whonix-ws-14-dvm</code> -&gt; <code>Konsole</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Disposable: whonix-ws-14-dvm</code> → <code>Konsole</code>
 </p><p><u>If you are using a terminal</u>, complete the following steps.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -616,7 +616,7 @@ Apart from <a class="external text" data-href="https://www.qubes-os.org/doc/dom0
 </div>
 </div>
 <code>Edit/View in DisposableVM</code>. From the GUI context-menu (domU). 
-<code>File</code> -&gt; <code>Actions</code> -&gt; <code>Edit/View in DisposableVM</code> </span>
+<code>File</code> → <code>Actions</code> → <code>Edit/View in DisposableVM</code> </span>
 </li>
 <li id="cite_note-27"><span class="mw-cite-backlink"><a href="#cite_ref-27">↑</a></span> <span class="reference-text">On the command line (dom0), run. <div class="codeContainerNew">
 <div class="preDiv">
@@ -649,7 +649,7 @@ Apart from <a class="external text" data-href="https://www.qubes-os.org/doc/dom0
 </div></span>
 </li>
 <li id="cite_note-35"><span class="mw-cite-backlink"><a href="#cite_ref-35">↑</a></span> <span class="reference-text">
-<code>dom0</code> -&gt; <code>Qube Manager</code> -&gt; <code>right-click on 'whonix-ws-14'</code> -&gt; <code>click 'Run command in qube'</code> -&gt; <code>type 'konsole'</code></span>
+<code>dom0</code> → <code>Qube Manager</code> → <code>right-click on 'whonix-ws-14'</code> → <code>click 'Run command in qube'</code> → <code>type 'konsole'</code></span>
 </li>
 <li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text">
 On the command line (dom0), run.
@@ -748,7 +748,7 @@ DVM Template command line (domU), run. <div class="codeContainerNew">
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Qubes/DisposableVM" href="https://www.Whonix.org/wiki/Qubes/DisposableVM" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/DisposableVM" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/DisposableVM" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -764,38 +764,38 @@ DVM Template command line (domU), run. <div class="codeContainerNew">
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190527055202
+Cached time: 20190528055125
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.122 seconds
-Real time usage: 0.147 seconds
-Preprocessor visited node count: 1259/1000000
-Preprocessor generated node count: 3622/1000000
-Post‐expand include size: 11392/2097152 bytes
-Template argument size: 1444/2097152 bytes
+CPU time usage: 0.125 seconds
+Real time usage: 0.152 seconds
+Preprocessor visited node count: 1257/1000000
+Preprocessor generated node count: 3614/1000000
+Post‐expand include size: 11402/2097152 bytes
+Template argument size: 1460/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 18766/5000000 bytes
+Unstrip post‐expand size: 18858/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.62 MB/50 MB
+Lua virtual size: 7.61 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  105.019      1 -total
- 29.56%   31.046      3 Template:Mbox
- 21.66%   22.747     19 Template:CodeSelect
- 18.21%   19.127      1 Template:Reflist
-  8.95%    9.402      1 Template:Footer
-  2.88%    3.024      2 Template:Box
-  2.43%    2.557      1 Template:Header
-  1.86%    1.948      1 Template:Qubes_persistence
-  1.74%    1.824      1 Template:Share
-  1.68%    1.767      1 Template:Edit_it
+100.00%  110.102      1 -total
+ 29.64%   32.637      3 Template:Mbox
+ 22.98%   25.298     19 Template:CodeSelect
+ 18.87%   20.772      1 Template:Reflist
+  7.92%    8.721      1 Template:Footer
+  3.15%    3.463      2 Template:Box
+  2.68%    2.948      1 Template:Header
+  1.74%    1.919      1 Template:Qubes_persistence
+  1.62%    1.786      1 Template:Edit_it
+  1.62%    1.780      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47265" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47265">https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47265</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47550" dir="ltr" href="https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47550">https://www.whonix.org/w/index.php?title=Qubes/DisposableVM&amp;oldid=47550</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -806,7 +806,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Dis
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 16 May 2019, at 10:42.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 11:46.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

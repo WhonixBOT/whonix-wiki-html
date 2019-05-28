@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VPN-Firewall - enforces that your VPN gets actually used - Whonix
  url: ./VPN-Firewall
- date: Mon May 27 07:57:44 2019
+ date: Tue May 28 07:57:02 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -228,7 +228,7 @@ sudo rm /etc/init.d/vpn-firewall
 </p><p>1) If you are using <a class="external text" data-href="https://www.qubes-os.org" href="https://www.qubes-os.org" rel="noreferrer noopener" target="_blank">Qubes OS</a> as your host operating system, it is recommended to use a StandaloneVM for this. For more information, see footnote. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>2) Enable netfilter-persistent Qubes qvm-service.
 </p>
-<pre>Qubes VM Manager -&gt; right click on VM -&gt; services -&gt; enter (without the single quotes) 'netfilter-persistent' -&gt; click on + -&gt; OK
+<pre>Qubes VM Manager → right click on VM → services → enter (without the single quotes) 'netfilter-persistent' → click on + → OK
 </pre>
 <h2><span class="mw-headline" id="VPN_Setup">VPN Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=8.html" title="Edit section: VPN Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h6><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=9.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
@@ -608,7 +608,7 @@ May 11 19:21:36 work systemd[1]: Started netfilter persistent configuration.
 </p><p>Untested! Please test and leave feedback!
 </p><p>The following is great for users for additional protection from leaks. This fallback is as safe as previous ways to firewall VPNs. It however would not defeat the <a class="external text" data-href="https://github.com/adrelanos/vpn-firewall/issues/12" href="https://github.com/adrelanos/vpn-firewall/issues/12" rel="noreferrer noopener" target="_blank">shared VPN/Tor server leak bug</a>. (It however is awful for developers since this would cloak eventual leaks in VPN-Firewall.)
 </p>
-<pre>Qubes VM Manager -&gt; sys-vpn -&gt; right click -&gt; VM Settings -&gt; Firewall rules -&gt; choose "deny all network access except..." -&gt; add the IP and port of your VPN server -&gt; OK
+<pre>Qubes VM Manager → sys-vpn → right click → VM Settings → Firewall rules → choose "deny all network access except..." → add the IP and port of your VPN server → OK
 </pre>
 <h5><span class="mw-headline" id="Done">Done</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=27.html" title="Edit section: Done">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Done.
@@ -728,11 +728,11 @@ Be sure to use the right version of ip unpriv according to whether the VPN-FIREW
 <h6><span class="mw-headline" id="Terminology_for_Support_Requests">Terminology for Support Requests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-9" href="https://www.whonix.org/w/index.php?title=Template:VPN-Firewall/Troubleshooting&amp;action=edit&amp;section=T-9.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <p>Phrases such as "over Tor" are ambiguous. Please do not coin idiosyncratic words or phrases, otherwise this leads to confusion. Please use the same terms that are consistently referenced in documentation, such as:
 </p>
-<ul><li>How to Connect to a VPN Before Tor (User -&gt; VPN -&gt; Tor -&gt; Internet).</li>
-<li>How to Connect to Tor Before a VPN (User -&gt; Tor -&gt; VPN -&gt; Internet).</li>
+<ul><li>How to Connect to a VPN Before Tor (User → VPN → Tor → Internet).</li>
+<li>How to Connect to Tor Before a VPN (User → Tor → VPN → Internet).</li>
 <li>And so on.</li></ul>
 <p><br/>
-Always refer to the connection scheme when requesting support: <i><span style="background-color:#FBFBFB">User -&gt; VPN -&gt; Tor -&gt; Internet</span></i> or <i><span style="background-color:#FBFBFB">User -&gt; Tor -&gt; VPN -&gt; Internet</span></i> and so on.
+Always refer to the connection scheme when requesting support: <i><span style="background-color:#FBFBFB">User → VPN → Tor → Internet</span></i> or <i><span style="background-color:#FBFBFB">User → Tor → VPN → Internet</span></i> and so on.
 </p>
 <h5><span class="mw-headline" id="Unload_VPN_Firewall">Unload VPN Firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=30.html" title="Edit section: Unload VPN Firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>How to unload VPN Firewall? If you know what you are doing... Either...
@@ -939,7 +939,7 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/VPN-Firewall" href="https://www.Whonix.org/wiki/VPN-Firewall" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -955,38 +955,38 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190511134710
+Cached time: 20190527105217
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.133 seconds
-Real time usage: 0.189 seconds
-Preprocessor visited node count: 1184/1000000
-Preprocessor generated node count: 2799/1000000
-Post‐expand include size: 25070/2097152 bytes
-Template argument size: 4575/2097152 bytes
+CPU time usage: 0.163 seconds
+Real time usage: 0.233 seconds
+Preprocessor visited node count: 1185/1000000
+Preprocessor generated node count: 2811/1000000
+Post‐expand include size: 25132/2097152 bytes
+Template argument size: 4599/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 12600/5000000 bytes
-Lua time usage: 0.020/7.000 seconds
-Lua virtual size: 7.6 MB/50 MB
+Unstrip post‐expand size: 12741/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
+Lua virtual size: 7.61 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  155.104      1 -total
- 29.96%   46.473     35 Template:CodeSelect
- 26.77%   41.518      4 Template:Mbox
- 17.86%   27.707      5 Template:Open_with_root_rights
- 16.52%   25.629      5 Template:Box
- 12.81%   19.875      1 Template:Header
-  8.20%   12.723      1 Template:Reflist
-  6.95%   10.779      1 Template:VPN/Setup/VPN_Credentials
-  6.30%    9.769      1 Template:VPN-Firewall/Troubleshooting
-  5.71%    8.863      1 Template:Footer
+100.00%  199.782      1 -total
+ 49.25%   98.398     35 Template:CodeSelect
+ 26.88%   53.694      5 Template:Open_with_root_rights
+ 24.51%   48.969      5 Template:Box
+ 17.07%   34.100      1 Template:VPN/Setup/Get_VPN_Certificate
+ 16.52%   32.998      1 Template:VPN/Setup/VPN_Credentials
+ 16.29%   32.554      4 Template:Mbox
+  6.37%   12.724      1 Template:Reflist
+  5.93%   11.853      1 Template:VPN-Firewall/Troubleshooting
+  5.45%   10.879      1 Template:VPN/Setup/VPN_IP_Address
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=46247" dir="ltr" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=46247">https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=46247</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=47595" dir="ltr" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=47595">https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=47595</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -997,7 +997,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firew
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:49.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1018,5 +1018,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firew
 </div>
 
 </body>
-<!-- Cached/compressed 20190511134710 -->
+<!-- Cached/compressed 20190527105217 -->
 </html>

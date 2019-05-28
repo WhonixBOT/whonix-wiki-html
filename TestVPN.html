@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VPN Tunnel Setup Examples - Whonix
  url: ./TestVPN
- date: Mon May 27 07:56:17 2019
+ date: Tue May 28 07:55:36 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -146,26 +146,26 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </ul>
 </div>
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The purpose of this page is mainly to demonstrate how easy it is to add a VPN to Whonix ™, whether is to use a VPN tunnel-link before or after Tor (i.e. User -&gt; Tor -&gt; VPN -&gt; Internet or User -&gt; VPN -&gt; Tor -&gt; Internet).
-</p><p>The examples given below were mainly for testing purposes. You may setup accounts for the same reasons, or use the information below as a very rough "guide" for setting up a VPN with Whonix ™. When setting up the accounts within the examples, make sure not to enter personal information while signing up. Use an extra e-mail address for registration, which you will never use for anything else. If you plan to use User -&gt; Tor -&gt; VPN, you should obviously also sign up through Tor. When using User -&gt; VPN -&gt; Tor, it is unknown what is best (to sign up through Tor or not), but using probably Tor can't hurt.
+<p>The purpose of this page is mainly to demonstrate how easy it is to add a VPN to Whonix ™, whether is to use a VPN tunnel-link before or after Tor (i.e. User → Tor → VPN → Internet or User → VPN → Tor → Internet).
+</p><p>The examples given below were mainly for testing purposes. You may setup accounts for the same reasons, or use the information below as a very rough "guide" for setting up a VPN with Whonix ™. When setting up the accounts within the examples, make sure not to enter personal information while signing up. Use an extra e-mail address for registration, which you will never use for anything else. If you plan to use User → Tor → VPN, you should obviously also sign up through Tor. When using User → VPN → Tor, it is unknown what is best (to sign up through Tor or not), but using probably Tor can't hurt.
 </p>
 <h2><span class="mw-headline" id="Riseup.net">Riseup.net</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=2.html" title="Edit section: Riseup.net">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Riseup.net_Quick_VPN_Command_Line_Test">Riseup.net Quick VPN Command Line Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=3.html" title="Edit section: Riseup.net Quick VPN Command Line Test">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Known to support TCP, UDP, SSL.
 </p><p>(1) You need a riseup.net account.<br/>
 (2) You need to know your riseup account name.<br/>
-(3) Go to riseup.net -&gt; help -&gt; VPN and obtain your VPN secret. (VPN password)<br/>
+(3) Go to riseup.net → help → VPN and obtain your VPN secret. (VPN password)<br/>
 (4) Look inside the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> and download it.<br/>
 (5) Open a terminal. (konsole) Get into the same folder, you stored <code>RiseupCA.pem</code>.<br/>
 (6) Install openvpn.
 <code>
 sudo apt-get update &amp;&amp; sudo apt-get install openvpn
 </code>
-(7) The following line from the riseup OpenVPN help page<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> won't work for user -&gt; Tor -&gt; VPN -&gt; Internet, because the Tor network does not support UDP.<br/>
+(7) The following line from the riseup OpenVPN help page<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> won't work for user → Tor → VPN → Internet, because the Tor network does not support UDP.<br/>
 <code>
 sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem
 </code>
-The following line works for user -&gt; Tor -&gt; VPN -&gt; Internet.<br/>
+The following line works for user → Tor → VPN → Internet.<br/>
 <code>
 sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem --proto tcp
 </code>
@@ -277,7 +277,7 @@ nslookup idnxcnkne4qt76tg.onion
 Address:        172.27.100.1#53
 ** server can't find idnxcnkne4qt76tg.onion: NXDOMAIN
 </pre>
-<p>Because you can not access .onion domains when a VPN has be chained. (user -&gt; Tor -&gt; VPN -&gt; Internet)
+<p>Because you can not access .onion domains when a VPN has be chained. (user → Tor → VPN → Internet)
 </p><p>Resolving clearnet DNS should work.
 </p><p><code>
 nslookup riseup.net
@@ -323,7 +323,7 @@ If you would like to see more information, please press on expand on the right.
 <p><code>
 sudo apt-get install network-manager-kde
 </code>
-</p><p>Start menu -&gt; System Settings -&gt; Network Settings
+</p><p>Start menu → System Settings → Network Settings
 </p><p>At time of writing the <a class="external text" data-href="https://www.riseup.net/en/openvpn-linux#kde" href="https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">riseup.net OpenVPN instructions for KDE</a> were not finished. Perhaps you'll find out yourself, use another guide for KDE Network Manager or use the command line based examples above.
 </p><p>Don't wonder if you don't see Whonix-Workstation ™ (virtual) wired network interface to Whonix-Gateway ™. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
@@ -454,7 +454,7 @@ NotShowIn=KDE;
 </code>
 </p><p>Then you could open the settings.
 </p>
-<pre>Applications -&gt; Settings -&gt; Network Connections
+<pre>Applications → Settings → Network Connections
 </pre>
 <p>You could try the <a class="external text" data-href="https://www.riseup.net/en/openvpn-linux#gnome" href="https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">riseup.net OpenVPN instructions for GNOME</a>.
 </p>
@@ -474,11 +474,11 @@ See <a data-href="/wiki/Dev/Network_Manager" href="./Dev/Network_Manager.html" t
 </ol></div></div>
 <!-- 
 NewPP limit report
-Cached time: 20190527055616
+Cached time: 20190528055535
 Cache expiry: 2592000
 Dynamic content: false
 CPU time usage: 0.053 seconds
-Real time usage: 0.071 seconds
+Real time usage: 0.073 seconds
 Preprocessor visited node count: 583/1000000
 Preprocessor generated node count: 1448/1000000
 Post‐expand include size: 10542/2097152 bytes
@@ -486,29 +486,29 @@ Template argument size: 3639/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2022/5000000 bytes
+Unstrip post‐expand size: 2024/5000000 bytes
 Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.61 MB/50 MB
+Lua virtual size: 7.6 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   54.367      1 -total
- 49.43%   26.876      1 Template:Tunnels_Introduction
- 46.73%   25.405      2 Template:Mbox
- 33.11%   18.003      4 Template:Open_with_root_rights
- 30.21%   16.423      4 Template:Box
- 24.73%   13.445     12 Template:CodeSelect
-  6.76%    3.678      1 Template:Tunnel_Automation_Sale
-  4.94%    2.688     17 Template:CodeSelect2
-  3.66%    1.990      1 Template:Reflist
-  1.15%    0.625      1 Template:Title
+100.00%   57.105      1 -total
+ 47.68%   27.228      1 Template:Tunnels_Introduction
+ 44.71%   25.530      2 Template:Mbox
+ 34.84%   19.895      4 Template:Open_with_root_rights
+ 31.68%   18.093      4 Template:Box
+ 25.98%   14.838     12 Template:CodeSelect
+  7.10%    4.057      1 Template:Tunnel_Automation_Sale
+  5.15%    2.940     17 Template:CodeSelect2
+  3.67%    2.098      1 Template:Reflist
+  1.28%    0.729      1 Template:Curl_Plain
 -->
 </div>
-<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4518-0!canonical and timestamp 20190527055616 and revision id 46248
+<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4518-0!canonical and timestamp 20190528055535 and revision id 47629
  -->
 </div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=46248" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=46248">https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=46248</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629">https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -519,7 +519,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/E
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:49.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Hosting a (private) (obfuscated) bridge or (exit) relay - Whonix
  url: ./Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay
- date: Mon May 27 07:41:45 2019
+ date: Tue May 28 07:41:22 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -140,16 +140,16 @@ For KVM, follow the NAT port forwarding instructions for Whonix-Gateway ™. <su
 </p>
 <h2><span id="Inside_the_Whonix-Gateway_™"></span><span class="mw-headline" id="Inside_the_Whonix-Gateway_.E2.84.A2">Inside the Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;action=edit&amp;section=3.html" title="Edit section: Inside the Whonix-Gateway ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This chapter hasn't been tested for a long time. Get in contact if you are interested in this configuration.
-</p><p>Simply follow all the usual instructions given on torproject.org inside the Whonix-Gateway ™ just as you would, if Tor wouldn't run inside a virtual machine. The only additional thing to do is to set up a port forwarding from the host to the virtual machine. That is simple. It is a VirtualBox feature. You can also do this with the VirtualBox graphical user interface. Go to Whonix-Gateway ™ -&gt; Settings -&gt; Network Interface -&gt; Port Forwarding.
+</p><p>Simply follow all the usual instructions given on torproject.org inside the Whonix-Gateway ™ just as you would, if Tor wouldn't run inside a virtual machine. The only additional thing to do is to set up a port forwarding from the host to the virtual machine. That is simple. It is a VirtualBox feature. You can also do this with the VirtualBox graphical user interface. Go to Whonix-Gateway ™ → Settings → Network Interface → Port Forwarding.
 </p><p>What's left are the firewall rules. On the Whonix-Gateway ™ look at <a class="external text" data-href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/whonix_firewall.d/30_default.conf" href="https://github.com/Whonix/Whonix/blob/master/whonix_gateway/etc/whonix_firewall.d/30_default.conf" rel="noreferrer noopener" target="_blank"><span style="border:1px dotted #005cb9">/etc/whonix_firewall/30_default.conf</span></a>. Read the introduction comment (which is about <a class="mw-redirect" data-href="/wiki/Whonix_Configuration_Files" href="./Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix ™ flexible modular configuration files</a>) and Tor Relay Settings.
 </p><p><b>Modify Whonix User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix User Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-14</code> → <code>Whonix User Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -175,9 +175,9 @@ For KVM, follow the NAT port forwarding instructions for Whonix-Gateway ™. <su
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-14</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -225,9 +225,9 @@ OR_PORT=443</textarea>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>System</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, run.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -302,15 +302,15 @@ OR_PORT=443</textarea>
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20190511235213
+Cached time: 20190527182138
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.046 seconds
-Real time usage: 0.054 seconds
+CPU time usage: 0.032 seconds
+Real time usage: 0.039 seconds
 Preprocessor visited node count: 253/1000000
 Preprocessor generated node count: 776/1000000
-Post‐expand include size: 13098/2097152 bytes
-Template argument size: 5193/2097152 bytes
+Post‐expand include size: 13258/2097152 bytes
+Template argument size: 5293/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -318,19 +318,19 @@ Unstrip post‐expand size: 2698/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   42.824      1 -total
- 42.92%   18.382      4 Template:Box
- 30.52%   13.069      1 Template:Footer
- 29.41%   12.594      1 Template:Firewall_Settings
- 19.03%    8.148      4 Template:CodeSelect
- 14.03%    6.009      1 Template:Header
-  8.43%    3.608      1 Template:Reload_Firewall
-  6.55%    2.803      1 Template:Share
-  5.46%    2.338      1 Template:Edit_it
-  4.11%    1.759      2 Template:Whonix-gw
+100.00%   28.753      1 -total
+ 43.74%   12.576      4 Template:Box
+ 33.44%    9.614      1 Template:Footer
+ 30.29%    8.710      1 Template:Firewall_Settings
+ 19.58%    5.630      4 Template:CodeSelect
+ 10.14%    2.915      1 Template:Header
+  8.74%    2.514      1 Template:Reload_Firewall
+  7.08%    2.035      1 Template:Share
+  6.43%    1.848      1 Template:Edit_it
+  4.38%    1.258      2 Template:Whonix-gw
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=46274" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=46274">https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=46274</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=47576" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=47576">https://www.whonix.org/w/index.php?title=Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay&amp;oldid=47576</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -341,7 +341,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hosting_a
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 15:49.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -362,5 +362,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hosting_a
 </div>
 
 </body>
-<!-- Cached/compressed 20190511235213 -->
+<!-- Cached/compressed 20190527182138 -->
 </html>

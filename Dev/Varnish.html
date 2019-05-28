@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Varnish - Whonix
  url: ../Dev/Varnish
- date: Mon May 27 07:36:44 2019
+ date: Tue May 28 07:36:32 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -190,10 +190,10 @@ check (Resets Age in http header to 0.): <code>curl --head <a class="external fr
 <pre>netstat -anp | grep :443 | grep ESTABLISHED | wc -l
 </pre>
 <h2><span class="mw-headline" id="wordpress_Total_Cache_varnish_setup">wordpress Total Cache varnish setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Varnish&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;action=edit&amp;section=12.html" title="Edit section: wordpress Total Cache varnish setup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>wordpress -&gt; Performance (on the side) -&gt; General Settings -&gt; Reverse Proxy<br/>
+<p>wordpress → Performance (on the side) → General Settings → Reverse Proxy<br/>
 <code>127.0.0.1:6081</code>
 run in shell: <code>varnishlog -q "VCL_return eq purge"</code><br/>
-test: wordpress -&gt; Performance (at the top) -&gt; empty all cache
+test: wordpress → Performance (at the top) → empty all cache
 </p>
 <h2><span class="mw-headline" id="list_of_all_variables_such_as_client.ip">list of all variables such as client.ip</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Varnish&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;action=edit&amp;section=13.html" title="Edit section: list of all variables such as client.ip">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external free" data-href="https://www.varnish-cache.org/docs/trunk/reference/vcl.html" href="https://www.varnish-cache.org/docs/trunk/reference/vcl.html" rel="noreferrer noopener" target="_blank">https://www.varnish-cache.org/docs/trunk/reference/vcl.html</a>
@@ -262,7 +262,7 @@ test: wordpress -&gt; Performance (at the top) -&gt; empty all cache
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> links yet?
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Varnish" href="https://www.Whonix.org/wiki/Dev/Varnish" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Varnish" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Varnish" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -278,35 +278,35 @@ test: wordpress -&gt; Performance (at the top) -&gt; empty all cache
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190511100052
+Cached time: 20190528002318
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.028 seconds
-Real time usage: 0.062 seconds
-Preprocessor visited node count: 277/1000000
-Preprocessor generated node count: 662/1000000
-Post‐expand include size: 3153/2097152 bytes
+CPU time usage: 0.031 seconds
+Real time usage: 0.065 seconds
+Preprocessor visited node count: 279/1000000
+Preprocessor generated node count: 670/1000000
+Post‐expand include size: 3159/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3181/5000000 bytes
+Unstrip post‐expand size: 3070/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   49.432      1 -total
- 71.55%   35.369      1 Template:Header
- 24.78%   12.251      1 Template:Footer
-  4.34%    2.143      1 Template:Share
-  3.64%    1.801      1 Template:Edit_it
-  2.39%    1.182     10 Template:Project_name_short
-  2.32%    1.146      1 Template:RandomNews
-  2.02%    0.999      8 Template:Project_name
-  2.02%    0.998      1 Template:Project_onion
-  2.00%    0.991      1 Template:Forkme
+100.00%   50.576      1 -total
+ 76.46%   38.671      1 Template:Header
+ 20.16%   10.194      1 Template:Footer
+  4.19%    2.121      1 Template:Share
+  3.31%    1.673     11 Template:Project_name_short
+  3.10%    1.570      1 Template:Edit_it
+  2.18%    1.105      1 Template:RandomNews
+  2.04%    1.032      1 Template:Forkme
+  1.16%    0.588      1 Template:Project_onion
+  1.11%    0.563      8 Template:Project_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=27040" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=27040">https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=27040</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=47623" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=47623">https://www.whonix.org/w/index.php?title=Dev/Varnish&amp;oldid=47623</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -317,7 +317,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Varni
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 24 December 2016, at 04:44.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -338,5 +338,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Varni
 </div>
 
 </body>
-<!-- Cached/compressed 20190511100052 -->
+<!-- Cached/compressed 20190528002318 -->
 </html>

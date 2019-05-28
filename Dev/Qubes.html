@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes - Whonix
  url: ../Dev/Qubes
- date: Mon May 27 07:36:14 2019
+ date: Tue May 28 07:36:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -812,9 +812,9 @@ All that settings are in separate file in the VM directory - dom0 /var/lib/qubes
 <li>Whonix ™ TemplateVMs connected to a ProxyVM other than sys-whonix should refuse to connect and show a warning [done]</li></ul>
 <p>Qubes tickets:<br/>
 </p>
-<ul><li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1815" href="https://github.com/QubesOS/qubes-issues/issues/1815" rel="noreferrer noopener" target="_blank">Implement new firewall dom0-&gt;VM interface</a></li>
+<ul><li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1815" href="https://github.com/QubesOS/qubes-issues/issues/1815" rel="noreferrer noopener" target="_blank">Implement new firewall dom0→VM interface</a></li>
 <li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1323" href="https://github.com/QubesOS/qubes-issues/issues/1323" rel="noreferrer noopener" target="_blank">mechanism to hide Qubes VM Manager 'Firewall rules' tab</a></li>
-<li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1637" href="https://github.com/QubesOS/qubes-issues/issues/1637" rel="noreferrer noopener" target="_blank">Template policy, services-&gt;features, core plugins</a></li></ul>
+<li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1637" href="https://github.com/QubesOS/qubes-issues/issues/1637" rel="noreferrer noopener" target="_blank">Template policy, services→features, core plugins</a></li></ul>
 <p>Tickets:<br/>
 </p>
 <ul><li><a class="external text" data-href="https://phabricator.whonix.org/T372" href="https://phabricator.whonix.org/T372" rel="noreferrer noopener" target="_blank">Qubes-Whonix ™ Whonix-Workstation ™ TemplateVMs block access to (torified) open internet</a></li></ul>
@@ -918,10 +918,10 @@ HVM Template
 <p>See <a data-href="/wiki/Troubleshooting#Qubes_specific" href="../Troubleshooting.html" title="Troubleshooting">Troubleshooting#Qubes_specific</a>.
 </p>
 <h1><span class="mw-headline" id="bind-dirs_flow_chart">bind-dirs flow chart</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=59" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=59.html" title="Edit section: bind-dirs flow chart">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>qubes-mount-dirs.service -&gt; /usr/lib/qubes/init/mount-dirs.sh -&gt; /usr/lib/qubes/bind-dirs.sh
+<p>qubes-mount-dirs.service → /usr/lib/qubes/init/mount-dirs.sh → /usr/lib/qubes/bind-dirs.sh
 </p>
 <h1><span class="mw-headline" id="qubes-whonix-postinit.service_flow_chart">qubes-whonix-postinit.service flow chart</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=60" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=60.html" title="Edit section: qubes-whonix-postinit.service flow chart">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>qubes-whonix-postinit.service -&gt; /usr/lib/qubes-whonix/init/qubes-whonix-postinit -&gt;
+<p>qubes-whonix-postinit.service → /usr/lib/qubes-whonix/init/qubes-whonix-postinit →
 </p>
 <ul><li>/usr/lib/qubes-whonix/bind-directories</li>
 <li>/usr/lib/qubes-whonix/replace-ips</li>
@@ -1349,7 +1349,7 @@ whonix-gw-14 $anyvm deny</textarea>
 <li><a class="external free" data-href="https://github.com/QubesOS/qubes-template-configs/pull/6" href="https://github.com/QubesOS/qubes-template-configs/pull/6" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-template-configs/pull/6</a></li></ul>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=85" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=85.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Dev/Test" href="../Dev/Test.html" title="Dev/Test">Dev/Test - How to "UnWhonix" - Instructions on how to remove Whonix ™ Tor default networking for Whonix-Gateway ™. After applying these instructions, Whonix-Gateway ™ will connect to clearnet.</a></li>
-<li><a class="external text" data-href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" rel="noreferrer noopener" target="_blank">How to add a ProxyVM between anon-whonix and sys-whonix? (whonix-ws-email -&gt; sys-fw-whonix -&gt; whonix-gw-14 -&gt; sys-firewall -&gt; sys-net)</a></li></ul>
+<li><a class="external text" data-href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-14-sys-firewall-sys-net" rel="noreferrer noopener" target="_blank">How to add a ProxyVM between anon-whonix and sys-whonix? (whonix-ws-email → sys-fw-whonix → whonix-gw-14 → sys-firewall → sys-net)</a></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=86" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=86.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
@@ -1436,7 +1436,7 @@ whonix-gw-14 $anyvm deny</textarea>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="../Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Qubes" href="https://www.Whonix.org/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1452,35 +1452,35 @@ whonix-gw-14 $anyvm deny</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190522191524
+Cached time: 20190527132616
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.151 seconds
-Real time usage: 0.196 seconds
-Preprocessor visited node count: 1883/1000000
-Preprocessor generated node count: 4331/1000000
-Post‐expand include size: 12300/2097152 bytes
+CPU time usage: 0.143 seconds
+Real time usage: 0.172 seconds
+Preprocessor visited node count: 1881/1000000
+Preprocessor generated node count: 4323/1000000
+Post‐expand include size: 12294/2097152 bytes
 Template argument size: 2785/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 28253/5000000 bytes
+Unstrip post‐expand size: 28116/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  140.828      1 -total
- 23.45%   33.029      1 Template:Header
- 19.47%   27.423     24 Template:CodeSelect
- 10.62%   14.963      3 Template:Open_with_root_rights
-  9.73%   13.708      3 Template:Box
-  6.91%    9.733      1 Template:Footer
-  6.42%    9.036      1 Template:Qubes_persistence
-  3.66%    5.160      8 Template:Whonix-gw
-  3.65%    5.141      1 Template:Reflist
-  3.25%    4.574      8 Template:Code
+100.00%  112.478      1 -total
+ 25.43%   28.598     24 Template:CodeSelect
+ 23.89%   26.872      1 Template:Header
+ 13.47%   15.152      3 Template:Open_with_root_rights
+ 12.40%   13.946      3 Template:Box
+  8.27%    9.306      1 Template:Footer
+  3.99%    4.491      1 Template:Reflist
+  2.92%    3.283      1 Template:Qubes_persistence
+  1.97%    2.210     17 Template:Q_project_name
+  1.84%    2.075      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47340" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47340">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47340</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47604" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47604">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=47604</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1491,7 +1491,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 May 2019, at 19:20.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1512,5 +1512,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes
 </div>
 
 </body>
-<!-- Cached/compressed 20190522191524 -->
+<!-- Cached/compressed 20190527132616 -->
 </html>

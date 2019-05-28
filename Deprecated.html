@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Deprecated - Whonix
  url: ./Deprecated
- date: Mon May 27 07:33:35 2019
+ date: Tue May 28 07:33:29 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -909,7 +909,7 @@ The "Restrict Flash Settings" chapter of the Whonix ™ BrowserPlugins wiki page
 <h5><span id="Qubes_3.2_/_XFCE4_(Untested)"></span><span class="mw-headline" id="Qubes_3.2_.2F_XFCE4_.28Untested.29">Qubes 3.2 / XFCE4 (Untested)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=24.html" title="Edit section: Qubes 3.2 / XFCE4 (Untested)">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Make a <i>.desktop</i> file for every DisposableVM shortcut that will be added to the menu.<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> These .desktop files must be placed in <i>~/.local/share/applications/</i>.
 </p><p>Open a terminal in the DVM Template.
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Run command in VM'</code> -&gt; <code>type 'konsole'</code> <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Run command in VM'</code> → <code>type 'konsole'</code> <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>
 </p><p>Create a local applications directory.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -993,7 +993,7 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </div>
 </div>
 <p>The use the menu editor.
-</p><p><code>Qubes Start Menu</code> -&gt; <code>System Tools</code> -&gt; <code>Menu Editor</code>
+</p><p><code>Qubes Start Menu</code> → <code>System Tools</code> → <code>Menu Editor</code>
 </p>
 </div>
 </div>
@@ -1002,7 +1002,7 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </p>
 <h2><span class="mw-headline" id="new_DVM_Template">new DVM Template</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=27.html" title="Edit section: new DVM Template">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Step 4: Configure Whonix-Gateway ™ as the NetVM. <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>VM Settings</code> -&gt; <code>NetVM</code> -&gt; <code>sys-whonix</code>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>VM Settings</code> → <code>NetVM</code> → <code>sys-whonix</code>
 </p>
 <h2><span class="mw-headline" id="Updating_Tor_Browser">Updating Tor Browser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=28.html" title="Edit section: Updating Tor Browser">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Tor Browser presents a special situation because it is installed in a user's home directory. As a result, the TemplateVM (<code>whonix-ws-14</code>) never updates existing Tor Browser installations.
@@ -1019,7 +1019,7 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </div>
 <p>Then, create a new DisposableVM to overwrite the existing one.
 </p><p>Open a dom0 terminal.
-</p><p><code> Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Konsole or Xfce Terminal</code>
+</p><p><code> Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Konsole or Xfce Terminal</code>
 </p><p>Create a new DVM Template using the updated <code>whonix-ws-14</code> TemplateVM.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1036,7 +1036,7 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 <li><a data-href="/wiki/Tor_Browser#Tor_Browser_Internal_Updater" href="./Tor_Browser.html" title="Tor Browser">Tor Browser's internal updater</a>.</li></ol>
 <p><br/>
 <b>Option #1: Use <i><span style="background-color:#FBFBFB">update-torbrowser</span></i> to download a new copy of Tor Browser</b>
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Run command in VM'</code> -&gt; <code>type 'konsole'</code> <sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Run command in VM'</code> → <code>type 'konsole'</code> <sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>
 </p><p>Launch Tor Browser Downloader by Whonix ™ and follow the instructions.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1047,10 +1047,10 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </div>
 </div>
 <p>Shutdown the DVM Template. <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup>
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Shutdown VM'</code>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Shutdown VM'</code>
 </p><p>Regenerate the DVM Template.
 </p><p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Konsole or Xfce Terminal</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Konsole or Xfce Terminal</code>
 </p><p>Then run.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1061,13 +1061,13 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </div>
 </div>
 <p><b>Option #2: Use Tor Browser's internal updater and download new updates only</b>
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Run command in VM'</code> -&gt; <code>type 'torbrowser'</code> <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Run command in VM'</code> → <code>type 'torbrowser'</code> <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>
 </p><p>Use Tor Browser's Internal Updater by clicking TorButton and selecting <code>Check for Tor Browser Update</code>. Close and restart Tor Browser.
 </p><p>Shutdown the DVM Template. <sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup>
-</p><p><code>dom0</code> -&gt; <code>Qubes VM Manager</code> -&gt; <code>right-click on 'whonix-ws-14-dvm'</code> -&gt; <code>click 'Shutdown VM'</code>
+</p><p><code>dom0</code> → <code>Qubes VM Manager</code> → <code>right-click on 'whonix-ws-14-dvm'</code> → <code>click 'Shutdown VM'</code>
 </p><p>Regenerate the DVM Template.
 </p><p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Konsole or Xfce Terminal</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Konsole or Xfce Terminal</code>
 </p><p>Regenerate the template.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1080,12 +1080,12 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 <h2><span id="Edit_Qubes'_DisposableVM_Start_Menu"></span><span class="mw-headline" id="Edit_Qubes.27_DisposableVM_Start_Menu">Edit Qubes' DisposableVM Start Menu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=29.html" title="Edit section: Edit Qubes' DisposableVM Start Menu">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Complete the following to work around <a href="#Warning:_Do_not_use_Firefox_from_Qubes_DisposableVM_default_start_menu">#Warning: Do not use Firefox from Qubes DisposableVM default start menu</a>.
 </p><p>In Qubes dom0.
-</p><p><code>alt + F3</code> -&gt; <code>on the left side, click 'DisposableVM'</code> -&gt; <code>right-click on 'Firefox'</code> -&gt; <code>edit</code> -&gt; 
+</p><p><code>alt + F3</code> → <code>on the left side, click 'DisposableVM'</code> → <code>right-click on 'Firefox'</code> → <code>edit</code> -&gt; 
 </p>
 <ul><li>Name: <code>DisposableVM: Tor Browser</code></li>
 <li>Command: <code>sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0 DEFAULT red'</code></li></ul>
 <p><br/>
--&gt; <code>click 'Save'</code>
+→ <code>click 'Save'</code>
 </p><p>While editing entries, it is also possible to edit the xterm entry and change it to konsole. This is not important for security, but may be a personal preference.
 </p>
 <h2><span class="mw-headline" id="R3.2_If_you_wish_to_install_the_alpha_version_of_Tor_Browser">R3.2 If you wish to install the alpha version of Tor Browser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=30.html" title="Edit section: R3.2 If you wish to install the alpha version of Tor Browser">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -1215,9 +1215,9 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 </div>
 </div>
 <h4><span id="Warning:_Do_not_Use_Firefox_from_Qubes'_DisposableVM_Default_Start_Menu"></span><span class="mw-headline" id="Warning:_Do_not_Use_Firefox_from_Qubes.27_DisposableVM_Default_Start_Menu">Warning: Do not Use Firefox from Qubes' DisposableVM Default Start Menu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=31" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=31.html" title="Edit section: Warning: Do not Use Firefox from Qubes' DisposableVM Default Start Menu">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Do <b>not</b> expect anonymity when selecting <code>Qubes Start Menu</code> -&gt; <code>DisposableVM</code> -&gt; <code>Firefox</code>! <br/> <br/>Using any browser other than Tor Browser is strongly discouraged if anonymity is desired, see <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a>. The default Qubes start menu option is best not used at all, unless the <a href="#Edit_Qubes_DisposableVM_start_menu">menu entry is manually edited</a> to launch Tor Browser in place of Firefox. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup></div></td></tr></tbody></table>
+<table class="plainlinks metadata ambox ambox-notice" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" height="35" src="data:image/png;base64,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" width="40"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">Do <b>not</b> expect anonymity when selecting <code>Qubes Start Menu</code> → <code>DisposableVM</code> → <code>Firefox</code>! <br/> <br/>Using any browser other than Tor Browser is strongly discouraged if anonymity is desired, see <a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a>. The default Qubes start menu option is best not used at all, unless the <a href="#Edit_Qubes_DisposableVM_start_menu">menu entry is manually edited</a> to launch Tor Browser in place of Firefox. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup></div></td></tr></tbody></table>
 <h5><span id="Qubes_3.1_/_KDE4"></span><span class="mw-headline" id="Qubes_3.1_.2F_KDE4">Qubes 3.1 / KDE4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=32" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=32.html" title="Edit section: Qubes 3.1 / KDE4">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p><code>dom0</code> -&gt; <code>right-click Application Launcher Menu</code> -&gt; <code>click `Edit Applications`</code> -&gt; <code>Select DisposableVM from the VM entries on the left panel</code> -&gt; <code>Press the arrow button to expand the menu</code> -&gt; <code>Click New Item on the Toolbar</code> -&gt; <code>Type in a Name for the shortcut</code> -&gt;
+<p><code>dom0</code> → <code>right-click Application Launcher Menu</code> → <code>click `Edit Applications`</code> → <code>Select DisposableVM from the VM entries on the left panel</code> → <code>Press the arrow button to expand the menu</code> → <code>Click New Item on the Toolbar</code> → <code>Type in a Name for the shortcut</code> -&gt;
 </p><p>Type in the specific command to launch the program in the DisposableVM. Tor Browser, konsole and dolphin are provided as examples below.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1243,7 +1243,7 @@ Exec=sh -c 'echo torbrowser | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sh -c 'echo dolphin | /usr/lib/qubes/qfile-daemon-dvm qubes.VMShell dom0 DEFAULT red'</textarea>
 </div>
 </div>
-<p>-&gt; <code>Click on the square in the upper right in order to choose an icon</code> <sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup> -&gt; <code>Click Save</code>.
+<p>→ <code>Click on the square in the upper right in order to choose an icon</code> <sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup> → <code>Click Save</code>.
 </p>
 <hr/>
 <h1><span class="mw-headline" id="VLC">VLC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Deprecated&amp;action=edit&amp;section=33" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;action=edit&amp;section=33.html" title="Edit section: VLC">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -1355,9 +1355,9 @@ Tor Browser is free software, so there is nothing preventing you from modifying 
 </div>
 </div>
 <p>Navigate to addons.mozilla.org.
-</p><p><code>Tor Browser Menu</code> -&gt; <code>Tools</code> -&gt; <code>Add-ons</code>
+</p><p><code>Tor Browser Menu</code> → <code>Tools</code> → <code>Add-ons</code>
 </p><p>Download and install the FoxyProxy add-on. <sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>
-</p><p><code>Search: "foxyproxy"</code> -&gt; <code>Install: FoxyProxy Standard</code>
+</p><p><code>Search: "foxyproxy"</code> → <code>Install: FoxyProxy Standard</code>
 </p><p>Restart Tor Browser.
 </p><p>When prompted, select <code>Restart now</code>.
 </p><p>After restart, the FoxyProxy icon should appear in the Tor Browser toolbar and be enabled. Check you can interact with it and change proxy settings as required.
@@ -1384,7 +1384,7 @@ by removing the #.
 </p>
 <ul><li><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a>: It is best to use a VM snapshot taken before installing the add-on.</li>
 <li><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: FoxyProxy should be installed to a specific Whonix-Workstation ™ AppVM set up for proxy purposes. The AppVM can be discarded at leisure.</li></ul>
-<p>If <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users did not take a snapshot prior to these changes, Tor Browser can be downloaded again. Alternatively, FoxyProxy can be removed via the <code>about:addons</code> -&gt; <code>Extensions</code> menu.
+<p>If <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users did not take a snapshot prior to these changes, Tor Browser can be downloaded again. Alternatively, FoxyProxy can be removed via the <code>about:addons</code> → <code>Extensions</code> menu.
 </p><p>For further technical discussion of FoxyProxy, see the <a class="external text" data-href="https://forums.whonix.org/t/new-version-of-tbb-no-longer-accepts-foxyproxy-plugin" href="https://forums.whonix.org/t/new-version-of-tbb-no-longer-accepts-foxyproxy-plugin" rel="noreferrer noopener" target="_blank">Whonix ™ forum</a>.
 </p>
 </div>
@@ -1655,9 +1655,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><div class="codeContainerNew">
@@ -1709,9 +1709,9 @@ HiddenServiceVersion 3</textarea>
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
 </p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> → <code>Reload Tor</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -1920,9 +1920,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><div class="codeContainerNew">
@@ -1941,9 +1941,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
 </p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> → <code>Reload Tor</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -2068,9 +2068,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><div class="codeContainerNew">
@@ -2102,9 +2102,9 @@ HiddenServiceVersion 3</textarea>
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
 </p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> → <code>Reload Tor</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -2416,7 +2416,7 @@ editing its configuration file:
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Deprecated" href="https://www.Whonix.org/wiki/Deprecated" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -5603,9 +5603,9 @@ Might work. In short: just forget about it. <sup class="reference" id="cite_ref-
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix User Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-14</code> → <code>Whonix User Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -5631,9 +5631,9 @@ Might work. In short: just forget about it. <sup class="reference" id="cite_ref-
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-gw-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-14</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -5664,9 +5664,9 @@ FLASHPROXY_PORT=9000</textarea>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>System</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, run.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -5693,9 +5693,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><div class="codeContainerNew">
@@ -5747,9 +5747,9 @@ ClientTransportPlugin flashproxy exec /usr/bin/flashproxy-client --register :0 :
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
 </p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> → <code>Reload Tor</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -6016,7 +6016,7 @@ In Whonix-Workstation ™ AppVM.
 </div>
 </div>
 <p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>User Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
@@ -6044,9 +6044,9 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Template:</code> <code>whonix-ws-14</code> -&gt; <code>Whonix Global Firewall Settings</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-14</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Global Firewall Settings</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
@@ -6076,9 +6076,9 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Workstation ™ AppVM (commonly named anon-whonix)</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly named anon-whonix)</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a graphical Whonix-Workstation ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Reload Whonix Firewall</code>
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>System</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a terminal-only Whonix-Workstation ™</u>, run.
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -6255,7 +6255,7 @@ true $?
 </p>
 <h3><span id="Whonix-Gateway_™"></span><span class="mw-headline" id="Whonix-Gateway_.E2.84.A2">Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
 </p><p></p><div class="codeContainerNew">
@@ -6310,7 +6310,7 @@ true $?
 </p>
 <h3><span id="Whonix-Workstation_™"></span><span class="mw-headline" id="Whonix-Workstation_.E2.84.A2">Whonix-Workstation ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Open a dom0 terminal.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>System Tools</code> -&gt; <code>Xfce Terminal
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Xfce Terminal
 </code>
 </p><p>List the current kernel parameters.
 </p><p></p><div class="codeContainerNew">
@@ -6418,10 +6418,10 @@ NetVM: -&gt; sys-whonix -&gt; OK
 <li>Read <a class="external free" data-href="http://expyuzz4wqqyqhjn.onion/docs/signing-keys.html" href="http://expyuzz4wqqyqhjn.onion/docs/signing-keys.html" rel="noreferrer noopener" target="_blank">http://expyuzz4wqqyqhjn.onion/docs/signing-keys.html</a> to learn which PGP keys sign which packages.</li>
 <li>Read <a class="external free" data-href="http://expyuzz4wqqyqhjn.onion/docs/verifying-signatures.html" href="http://expyuzz4wqqyqhjn.onion/docs/verifying-signatures.html" rel="noreferrer noopener" target="_blank">http://expyuzz4wqqyqhjn.onion/docs/verifying-signatures.html</a> and learn how to perform GPG verification. Download and import the necessary keys.</li>
 <li>Verify the Tor Messenger download.</li>
-<li>Navigate to <i>/home/user/</i> with the file manger. Dolphin example: <code>Dolphin</code> -&gt; <code>View</code> -&gt; <code>Show Hidden Files</code></li>
+<li>Navigate to <i>/home/user/</i> with the file manger. Dolphin example: <code>Dolphin</code> → <code>View</code> → <code>Show Hidden Files</code></li>
 <li>If the old version of Tor Messenger is still open, close it.</li>
 <li>Rename the old /home/user/tor-messenger_en-US to something else.</li>
-<li>Extract Tor Messenger: <code>Right-click on the downloaded archive</code> -&gt; <code>extract</code> -&gt; <code>extract archive here</code></li>
+<li>Extract Tor Messenger: <code>Right-click on the downloaded archive</code> → <code>extract</code> → <code>extract archive here</code></li>
 <li>The process is complete.</li>
 <li>To start Tor Browser:</li></ol>
 <ul><li><u>If the user intends to use the graphical user interface</u>: Navigate to the <i>/home/user/tor-messenger_en-US</i> folder and double-click <i>start-tor-messenger</i>.</li>
@@ -6704,9 +6704,9 @@ Open <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.co
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Tor User Config (Torrc)</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>/usr/local/etc/torrc.d/50_user.conf
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
 </code>
 </p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
 </p><div class="codeContainerNew">
@@ -6796,10 +6796,10 @@ bridge obfs4 161.217.177.95:10703 B3B8009D01BB7E5FDFAEC cert=4RaIqGiOytEXm6Hw ia
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
 </p><p><code>
-Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> -&gt; <code>Anon Connection Wizard</code>
+Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Anon Connection Wizard</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
 </p><p><code>
-Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt; <code>Anon Connection Wizard
+Start Menu</code> → <code>Applications</code> → <code>System</code> → <code>Anon Connection Wizard
 </code>
 </p><p><u>If you are using a terminal Whonix-Gateway ™</u>, type.
 </p><p></p><div class="codeContainerNew">
@@ -6820,9 +6820,9 @@ Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>System</code> -&gt
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
 </p><p><b>Note:</b> If Tor does not connect after completing all these steps, then a user mistake is the most likely explanation. Recheck <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i> and repeat the steps outlined in the sections above. If Tor then connects successfully, all the necessary changes have been made.
 </p><p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> -&gt; <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> -&gt; <code>Reload Tor</code>
+</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named 'sys-whonix')</code> → <code>Reload Tor</code>
 </p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> -&gt; <code>Applications</code> -&gt; <code>Settings</code> -&gt; <code>Reload Tor
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Reload Tor
 </code>
 </p>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -7318,7 +7318,7 @@ Source:
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> page.
 </p>
 </div>
 <hr/><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Deprecated" href="https://www.Whonix.org/wiki/Deprecated" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Deprecated" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -7334,38 +7334,38 @@ Source:
 </p></div>
 <!-- 
 NewPP limit report
-Cached time: 20190526104512
+Cached time: 20190527094654
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 1.045 seconds
-Real time usage: 1.160 seconds
-Preprocessor visited node count: 11778/1000000
-Preprocessor generated node count: 27524/1000000
-Post‐expand include size: 139757/2097152 bytes
-Template argument size: 40305/2097152 bytes
+CPU time usage: 1.046 seconds
+Real time usage: 1.203 seconds
+Preprocessor visited node count: 11777/1000000
+Preprocessor generated node count: 27512/1000000
+Post‐expand include size: 140435/2097152 bytes
+Template argument size: 40573/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 129309/5000000 bytes
-Lua time usage: 0.050/7.000 seconds
-Lua virtual size: 8.01 MB/50 MB
+Unstrip post‐expand size: 129663/5000000 bytes
+Lua time usage: 0.080/7.000 seconds
+Lua virtual size: 8 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  759.119      1 -total
- 36.75%  278.976    221 Template:CodeSelect
- 10.52%   79.856     22 Template:Box
- 10.43%   79.158     23 Template:Mbox
-  9.18%   69.684      4 Template:Reflist
-  3.59%   27.219      6 Template:Open_with_root_rights
-  1.99%   15.133      1 Template:Qubes_AppArmor
-  1.30%    9.833      2 Template:Footer
-  1.07%    8.117      2 Template:Backups_Tor_Onion_Service_private_key
-  1.02%    7.759      1 Template:Firewall_Settings_Workstation
+100.00%  854.212      1 -total
+ 33.63%  287.276    221 Template:CodeSelect
+ 14.84%  126.777     23 Template:Mbox
+  9.00%   76.887     22 Template:Box
+  8.02%   68.486      4 Template:Reflist
+  3.86%   32.990      1 Template:Header
+  3.01%   25.695      6 Template:Open_with_root_rights
+  1.72%   14.656      1 Template:Qubes_AppArmor
+  0.97%    8.288      2 Template:Footer
+  0.97%    8.247      2 Template:Backups_Tor_Onion_Service_private_key
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47350" dir="ltr" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47350">https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47350</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47512" dir="ltr" href="https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47512">https://www.whonix.org/w/index.php?title=Deprecated&amp;oldid=47512</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a class="new" data-href="/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Pages_with_reference_errors&amp;action=edit&amp;redlink=1.html" title="Category:Pages with reference errors (page does not exist)">Pages with reference errors</a></li><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a class="new" data-href="/w/index.php?title=Category:Deprecated&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Category:Deprecated&amp;action=edit&amp;redlink=1.html" title="Category:Deprecated (page does not exist)">Deprecated</a></li></ul></div></div></div>
@@ -7376,7 +7376,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecate
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 May 2019, at 12:28.</li>
+<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 11:46.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -7397,5 +7397,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecate
 </div>
 
 </body>
-<!-- Cached/compressed 20190526104512 -->
+<!-- Cached/compressed 20190527094654 -->
 </html>
