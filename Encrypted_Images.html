@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Encrypted Images - Whonix
  url: ./Encrypted_Images
- date: Sat Jun  1 07:39:04 2019
+ date: Sun Jun  2 07:39:01 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -171,7 +171,7 @@ The greatest security benefit comes from applying full disk encryption <a data-h
 </p>
 <h2><span class="mw-headline" id="Full_Disk_Encryption_within_the_Virtual_Machine">Full Disk Encryption within the Virtual Machine</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=2.html" title="Edit section: Full Disk Encryption within the Virtual Machine">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>When using FDE within the VM, never save (suspend/pause) the VM machine state, but instead shut it down completely. If this advice is ignored, the saved machine state could be stored outside of the encrypted image. This includes a RAM dump, which contains the encryption key required to decrypt the image. Upon resuming the VM, that stored file is not necessarily securely deleted, since it is virtualizer-specific.
-</p><p>While the VM is running, users should not use the host system's sleep, suspend, or hibernate functions. Similar to the first scenario, these actions leave a RAM dump on disk, but this time it belongs to the host. This also contains sensitive data, such as encryption keys.
+</p><p>While the VM is running, the host system's sleep, suspend, or hibernate functions should not be used. Similar to the first scenario, these actions leave a RAM dump on disk, but this time it belongs to the host. This also contains sensitive data, such as encryption keys.
 </p>
 <h2><span class="mw-headline" id="Virtual_Machine_Files_in_an_Encrypted_Container">Virtual Machine Files in an Encrypted Container</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=3.html" title="Edit section: Virtual Machine Files in an Encrypted Container">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>VM files can also be stored in an encrypted container, such as a LUKS container. Newer and native support for LUKS encryption of disk images is available as of libvirt 2.10 <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
@@ -218,10 +218,10 @@ The same precautions should be taken as outlined in the previous section, as the
 <li>Potential setup configurations:
 <ul><li>Theoretically, a fully encrypted operating system (currently: Debian) could be installed inside a VM and Whonix ™ could be built using <code>--target root</code> inside another VM. This is analogous to the <a data-href="/wiki/Dev/Build_Documentation/Physical_Isolation" href="./Dev/Build_Documentation/Physical_Isolation.html" title="Dev/Build Documentation/Physical Isolation">physical isolation</a> model, but secure VM settings would be missing (similar to <a data-href="/wiki/Manually_Create_Whonix_VM_Settings" href="./Manually_Create_Whonix_VM_Settings.html" title="Manually Create Whonix VM Settings">Manually Create Whonix ™ VM Settings</a>).</li>
 <li>An encryption feature could be added to <a class="external text" data-href="https://grml.org/grml-debootstrap/" href="https://grml.org/grml-debootstrap/" rel="noreferrer noopener" target="_blank"><code>grml-debootstrap</code></a> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> and/or the Whonix ™ build script. There was an  <a class="external text" data-href="https://forums.whonix.org/t/whonix-container-encryption-options/193" href="https://forums.whonix.org/t/whonix-container-encryption-options/193" rel="noreferrer noopener" target="_blank">attempt</a> to do that, but this effort has stalled.</li>
-<li>cryptsetup-reencrypt could be used, allowing for the shipping of encrypted Whonix ™ images. The master key and the password (potentially blank) would be known to the public at first. Later, users would use cryptsetup-reencrypt to fix the master key and password, that is, to make the encryption effective.</li></ul></li></ul>
+<li>cryptsetup-reencrypt could be used, allowing for the shipping of encrypted Whonix ™ images. The master key and the password (potentially blank) would be known to the public at first. Later on, cryptsetup-reencrypt would be used to fix the master key and password, that is, to make the encryption effective.</li></ul></li></ul>
 <h1><span class="mw-headline" id="Conclusion">Conclusion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=6.html" title="Edit section: Conclusion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The host of security considerations suggest that an unrealistic set of operational rules are required to defend the integrity of a purely encrypted guest image. Use of <a data-href="/wiki/Full_Disk_Encryption" href="./Full_Disk_Encryption.html" title="Full Disk Encryption">Full Disk Encryption</a> is recommended instead.
-</p><p>For further information about encrypted images, see <a class="external text" data-href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" rel="noreferrer noopener" target="_blank">How Useful is In-Guest Encryption?</a> Users interested in running Whonix ™ as a live OS should read <a data-href="/wiki/Whonix_Live" href="./Whonix_Live.html" title="Whonix Live">Whonix Live</a>. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>For further information about encrypted images, see <a class="external text" data-href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" href="https://forums.whonix.org/t/how-useful-is-in-guest-encryption/1253" rel="noreferrer noopener" target="_blank">How Useful is In-Guest Encryption?</a> Readers interested in running Whonix ™ as a live OS should refer to <a data-href="/wiki/Whonix_Live" href="./Whonix_Live.html" title="Whonix Live">Whonix Live</a>. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
 </p>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Encrypted_Images&amp;action=edit&amp;section=7.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
@@ -291,7 +291,7 @@ The same precautions should be taken as outlined in the previous section, as the
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
+<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a>)
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Encrypted_Images" href="https://www.Whonix.org/wiki/Encrypted_Images" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Encrypted_Images" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Encrypted_Images" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -307,11 +307,11 @@ The same precautions should be taken as outlined in the previous section, as the
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190511091602
+Cached time: 20190602005513
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.055 seconds
-Real time usage: 0.073 seconds
+CPU time usage: 0.076 seconds
+Real time usage: 0.152 seconds
 Preprocessor visited node count: 370/1000000
 Preprocessor generated node count: 1359/1000000
 Post‐expand include size: 5371/2097152 bytes
@@ -319,26 +319,26 @@ Template argument size: 648/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8184/5000000 bytes
-Lua time usage: 0.010/7.000 seconds
-Lua virtual size: 7.49 MB/50 MB
+Unstrip post‐expand size: 8127/5000000 bytes
+Lua time usage: 0.030/7.000 seconds
+Lua virtual size: 7.51 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   57.390      1 -total
- 45.99%   26.395      1 Template:Mbox
- 21.20%   12.166      1 Template:Footer
- 10.85%    6.226      1 Template:Reflist
-  6.08%    3.487      1 Template:Header
-  4.67%    2.682      1 Template:Share
-  3.67%    2.109      1 Template:Edit_it
-  2.45%    1.408      1 Template:Maintainer
-  2.06%    1.182      1 Template:RandomNews
-  1.70%    0.975      1 Template:Project_onion
+100.00%  133.285      1 -total
+ 45.61%   60.790      1 Template:Mbox
+ 26.83%   35.767      1 Template:Header
+  9.96%   13.274      1 Template:Footer
+  5.89%    7.847      1 Template:Maintainer
+  4.03%    5.373      1 Template:Reflist
+  2.80%    3.737      4 Template:Code2
+  2.22%    2.955      1 Template:Share
+  1.89%    2.516      1 Template:Edit_it
+  0.92%    1.227      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=45535" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=45535">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=45535</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=47751" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=47751">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Encrypted_Images&amp;oldid=47751</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -349,7 +349,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=En
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 13:40.</li>
+<li id="footer-lastmod"> This page was last edited on 2 June 2019, at 02:14.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -370,5 +370,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=En
 </div>
 
 </body>
-<!-- Cached/compressed 20190511091602 -->
+<!-- Cached/compressed 20190602005513 -->
 </html>
