@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation - Whonix
  url: ../Dev/CPFP
- date: Sun Jun  2 07:34:27 2019
+ date: Mon Jun  3 07:34:25 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -133,23 +133,24 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-7"><a href="#TorButton_Network_Settings"><span class="tocnumber">7</span> <span class="toctext">TorButton Network Settings</span></a></li>
 <li class="toclevel-1 tocsection-8"><a href="#TorLauncher"><span class="tocnumber">8</span> <span class="toctext">TorLauncher</span></a></li>
 <li class="toclevel-1 tocsection-9"><a href="#Debugging_Inspiration"><span class="tocnumber">9</span> <span class="toctext">Debugging Inspiration</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Talking_to_the_real_Tor_Control_Port"><span class="tocnumber">10</span> <span class="toctext">Talking to the real Tor Control Port</span></a></li>
-<li class="toclevel-1 tocsection-11"><a href="#Indicator_for_current_Circuit_Status_and_Exit_IP"><span class="tocnumber">11</span> <span class="toctext">Indicator for current Circuit Status and Exit IP</span></a></li>
-<li class="toclevel-1 tocsection-12"><a href="#UI_for_ExitNode_country_selection_in_tor-launcher"><span class="tocnumber">12</span> <span class="toctext">UI for ExitNode country selection in tor-launcher</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#feedback_mechanism_for_clock-skew_and_other_bad_problems"><span class="tocnumber">13</span> <span class="toctext">feedback mechanism for clock-skew and other bad problems</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#Whonix_.E2.84.A2_Forum_Discussion"><span class="tocnumber">14</span> <span class="toctext">Whonix ™ Forum Discussion</span></a></li>
-<li class="toclevel-1 tocsection-15"><a href="#Comparison_of_Control_Port_Filters"><span class="tocnumber">15</span> <span class="toctext">Comparison of Control Port Filters</span></a>
+<li class="toclevel-1 tocsection-10"><a href="#onion-grater_passthrough_allow_all_commands"><span class="tocnumber">10</span> <span class="toctext">onion-grater passthrough allow all commands</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Talking_to_the_real_Tor_Control_Port"><span class="tocnumber">11</span> <span class="toctext">Talking to the real Tor Control Port</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Indicator_for_current_Circuit_Status_and_Exit_IP"><span class="tocnumber">12</span> <span class="toctext">Indicator for current Circuit Status and Exit IP</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#UI_for_ExitNode_country_selection_in_tor-launcher"><span class="tocnumber">13</span> <span class="toctext">UI for ExitNode country selection in tor-launcher</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#feedback_mechanism_for_clock-skew_and_other_bad_problems"><span class="tocnumber">14</span> <span class="toctext">feedback mechanism for clock-skew and other bad problems</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Whonix_.E2.84.A2_Forum_Discussion"><span class="tocnumber">15</span> <span class="toctext">Whonix ™ Forum Discussion</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Comparison_of_Control_Port_Filters"><span class="tocnumber">16</span> <span class="toctext">Comparison of Control Port Filters</span></a>
 <ul>
-<li class="toclevel-2 tocsection-16"><a href="#roflcoptor_by_subgraph_os"><span class="tocnumber">15.1</span> <span class="toctext">roflcoptor by subgraph os</span></a></li>
-<li class="toclevel-2 tocsection-17"><a href="#surrogate.go_by_Yawning_Angel"><span class="tocnumber">15.2</span> <span class="toctext">surrogate.go by Yawning Angel</span></a></li>
-<li class="toclevel-2 tocsection-18"><a href="#onion-grater_by_Tails"><span class="tocnumber">15.3</span> <span class="toctext">onion-grater by Tails</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#onion-grater_by_Tails_forked_by_Whonix_.E2.84.A2"><span class="tocnumber">15.4</span> <span class="toctext">onion-grater by Tails forked by Whonix ™</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#legacy_control-port-filter-python_by_Whonix_.E2.84.A2"><span class="tocnumber">15.5</span> <span class="toctext">legacy control-port-filter-python by Whonix ™</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#legacy2_control-port-filter_by_Whonix_.E2.84.A2"><span class="tocnumber">15.6</span> <span class="toctext">legacy2 control-port-filter by Whonix ™</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#roflcoptor_by_subgraph_os"><span class="tocnumber">16.1</span> <span class="toctext">roflcoptor by subgraph os</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#surrogate.go_by_Yawning_Angel"><span class="tocnumber">16.2</span> <span class="toctext">surrogate.go by Yawning Angel</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#onion-grater_by_Tails"><span class="tocnumber">16.3</span> <span class="toctext">onion-grater by Tails</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#onion-grater_by_Tails_forked_by_Whonix_.E2.84.A2"><span class="tocnumber">16.4</span> <span class="toctext">onion-grater by Tails forked by Whonix ™</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#legacy_control-port-filter-python_by_Whonix_.E2.84.A2"><span class="tocnumber">16.5</span> <span class="toctext">legacy control-port-filter-python by Whonix ™</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#legacy2_control-port-filter_by_Whonix_.E2.84.A2"><span class="tocnumber">16.6</span> <span class="toctext">legacy2 control-port-filter by Whonix ™</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-22"><a href="#See_Also"><span class="tocnumber">16</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-23"><a href="#Footnotes"><span class="tocnumber">17</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#See_Also"><span class="tocnumber">17</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Footnotes"><span class="tocnumber">18</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -278,7 +279,29 @@ Whonix requires Donations to stay alive.
 </p>
 <pre>QUIT
 </pre>
-<h1><span class="mw-headline" id="Talking_to_the_real_Tor_Control_Port">Talking to the real Tor Control Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=10.html" title="Edit section: Talking to the real Tor Control Port">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="onion-grater_passthrough_allow_all_commands">onion-grater passthrough allow all commands</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=10.html" title="Edit section: onion-grater passthrough allow all commands">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>This disables filtering and should be used during development only.
+</p><p>On Whonix-Gateway ™.
+</p>
+<pre>sudo systemctl stop onion-grater
+</pre>
+<pre>sudo /usr/lib/onion-grater-merger
+</pre>
+<pre>sudo -u onion-grater /usr/lib/onion-grater --debug --listen-interface eth1 --complain
+</pre>
+<p>In Whonix-Workstation ™.
+</p>
+<pre>sudo apt-get install netcat-openbsd
+</pre>
+<pre>netcat 127.0.0.1 9051
+</pre>
+<p>Type.
+</p>
+<pre>getinfo status/bootstrap-phase
+</pre>
+<p>Press <code>Enter</code>.
+</p>
+<h1><span class="mw-headline" id="Talking_to_the_real_Tor_Control_Port">Talking to the real Tor Control Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=11.html" title="Edit section: Talking to the real Tor Control Port">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>On Whonix-Gateway ™. (<i><span style="background-color:#FBFBFB">test</span></i> is the example password being used. Feel free to use a different/stronger one.
 </p>
 <pre>tor --hash-password test
@@ -387,24 +410,24 @@ Configuration was valid</pre>
 <pre>650 STREAM 211 NEW 0 pop.riseup.net:995 SOURCE_ADDR=10.152.152.11:47036 PURPOSE=USER
 ...
 </pre>
-<h1><span class="mw-headline" id="Indicator_for_current_Circuit_Status_and_Exit_IP">Indicator for current Circuit Status and Exit IP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=11.html" title="Edit section: Indicator for current Circuit Status and Exit IP">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Indicator_for_current_Circuit_Status_and_Exit_IP">Indicator for current Circuit Status and Exit IP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=12.html" title="Edit section: Indicator for current Circuit Status and Exit IP">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>The Tor Project Ticket: <a class="external text" data-href="https://trac.torproject.org/projects/tor/ticket/8641" href="https://trac.torproject.org/projects/tor/ticket/8641" rel="noreferrer noopener" target="_blank">Create Browser UI indication for current circuit status and exit IP </a></li>
 <li>Screenshots:
 <ul><li><a class="external free" data-href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png</a></li>
 <li><a class="external free" data-href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png</a></li></ul></li>
 <li>The Tor Project source code: <a class="external free" data-href="https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" href="https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" rel="noreferrer noopener" target="_blank">https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js</a></li>
 <li>Requires "setevents stream" which we do not want because we do not wish the workstation to know its Tor entry and/or Tor middle relay.</li></ul>
-<h1><span class="mw-headline" id="UI_for_ExitNode_country_selection_in_tor-launcher">UI for ExitNode country selection in tor-launcher</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=12.html" title="Edit section: UI for ExitNode country selection in tor-launcher">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="UI_for_ExitNode_country_selection_in_tor-launcher">UI for ExitNode country selection in tor-launcher</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=13.html" title="Edit section: UI for ExitNode country selection in tor-launcher">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/11406" href="https://trac.torproject.org/projects/tor/ticket/11406" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/11406</a>
 </p>
-<h1><span class="mw-headline" id="feedback_mechanism_for_clock-skew_and_other_bad_problems">feedback mechanism for clock-skew and other bad problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=13.html" title="Edit section: feedback mechanism for clock-skew and other bad problems">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="feedback_mechanism_for_clock-skew_and_other_bad_problems">feedback mechanism for clock-skew and other bad problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=14.html" title="Edit section: feedback mechanism for clock-skew and other bad problems">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/9675" href="https://trac.torproject.org/projects/tor/ticket/9675" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/9675</a>
 </p>
-<h1><span id="Whonix_™_Forum_Discussion"></span><span class="mw-headline" id="Whonix_.E2.84.A2_Forum_Discussion">Whonix ™ Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=14.html" title="Edit section: Whonix ™ Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span id="Whonix_™_Forum_Discussion"></span><span class="mw-headline" id="Whonix_.E2.84.A2_Forum_Discussion">Whonix ™ Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=15.html" title="Edit section: Whonix ™ Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external text" data-href="https://forums.whonix.org/t/new-tor-controlport-commands-wanted-by-tbb-4-5-and-above" href="https://forums.whonix.org/t/new-tor-controlport-commands-wanted-by-tbb-4-5-and-above" rel="noreferrer noopener" target="_blank">new Tor ControlPort commands wanted by TBB 4.5 and above</a>
 </p>
-<h1><span class="mw-headline" id="Comparison_of_Control_Port_Filters">Comparison of Control Port Filters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=15.html" title="Edit section: Comparison of Control Port Filters">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="roflcoptor_by_subgraph_os">roflcoptor by subgraph os</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=16.html" title="Edit section: roflcoptor by subgraph os">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Comparison_of_Control_Port_Filters">Comparison of Control Port Filters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=16.html" title="Edit section: Comparison of Control Port Filters">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="roflcoptor_by_subgraph_os">roflcoptor by subgraph os</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=17.html" title="Edit section: roflcoptor by subgraph os">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://github.com/subgraph/roflcoptor" href="https://github.com/subgraph/roflcoptor" rel="noreferrer noopener" target="_blank">roflcoptor</a> by subgraph os
 </p>
 <ul><li>Many golang dependencies that are not packaged for Debian.</li>
@@ -412,7 +435,7 @@ Configuration was valid</pre>
 <li>Wildcard support.</li>
 <li>TODO: expand</li></ul>
 <hr/>
-<h2><span class="mw-headline" id="surrogate.go_by_Yawning_Angel">surrogate.go by Yawning Angel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=17.html" title="Edit section: surrogate.go by Yawning Angel">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="surrogate.go_by_Yawning_Angel">surrogate.go by Yawning Angel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=18.html" title="Edit section: surrogate.go by Yawning Angel">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://gitweb.torproject.org/tor-browser/sandboxed-tor-browser.git/tree/src/cmd/sandboxed-tor-browser/internal/tor/surrogate.go" href="https://gitweb.torproject.org/tor-browser/sandboxed-tor-browser.git/tree/src/cmd/sandboxed-tor-browser/internal/tor/surrogate.go" rel="noreferrer noopener" target="_blank">surrogate.go (tor project gitweb)</a> by Yawning Angel
 </p>
 <ul><li>golang (build dep, not run dep)</li>
@@ -422,7 +445,7 @@ Configuration was valid</pre>
 <li>Observed version: <a class="external text" data-href="https://gitweb.torproject.org/tor-browser/sandboxed-tor-browser.git/commit/src/cmd/sandboxed-tor-browser/internal/tor/surrogate.go?id=6ff4802a9f4b76c791c2bf864b5446170474215f" href="https://gitweb.torproject.org/tor-browser/sandboxed-tor-browser.git/commit/src/cmd/sandboxed-tor-browser/internal/tor/surrogate.go?id=6ff4802a9f4b76c791c2bf864b5446170474215f" rel="noreferrer noopener" target="_blank">6ff4802</a></li>
 <li>So, official TPO Tor Browser variant also has this problem. Oops!</li></ul>
 <hr/>
-<h2><span class="mw-headline" id="onion-grater_by_Tails">onion-grater by Tails</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=18.html" title="Edit section: onion-grater by Tails">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="onion-grater_by_Tails">onion-grater by Tails</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19.html" title="Edit section: onion-grater by Tails">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/lib/onion-grater" href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/lib/onion-grater" rel="noreferrer noopener" target="_blank">onion-grater</a> by Tails (<a class="external text" data-href="https://git-tails.immerda.ch/tails/tree/config/chroot_local-includes/etc/onion-grater.d/" href="https://git-tails.immerda.ch/tails/tree/config/chroot_local-includes/etc/onion-grater.d/" rel="noreferrer noopener" target="_blank">config folder</a>)
 </p>
 <ul><li>Written in python3.</li>
@@ -436,7 +459,7 @@ Configuration was valid</pre>
 <li>Honors signals sigterm, sigint.</li>
 <li>Supports subscribing Tor ControlPort events (<i><span style="background-color:#FBFBFB">setevent</span></i>).</li></ul>
 <hr/>
-<h2><span id="onion-grater_by_Tails_forked_by_Whonix_™"></span><span class="mw-headline" id="onion-grater_by_Tails_forked_by_Whonix_.E2.84.A2">onion-grater by Tails forked by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19.html" title="Edit section: onion-grater by Tails forked by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="onion-grater_by_Tails_forked_by_Whonix_™"></span><span class="mw-headline" id="onion-grater_by_Tails_forked_by_Whonix_.E2.84.A2">onion-grater by Tails forked by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=20.html" title="Edit section: onion-grater by Tails forked by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://github.com/Whonix/onion-grater" href="https://github.com/Whonix/onion-grater" rel="noreferrer noopener" target="_blank">onion-grater</a> (<a class="external text" data-href="https://github.com/Whonix/onion-grater/tree/master/etc/onion-grater-merger.d" href="https://github.com/Whonix/onion-grater/tree/master/etc/onion-grater-merger.d" rel="noreferrer noopener" target="_blank">config folder</a>) (<a class="external text" data-href="https://github.com/Whonix/onion-grater/tree/master/usr/share/onion-grater-merger/examples" href="https://github.com/Whonix/onion-grater/tree/master/usr/share/onion-grater-merger/examples" rel="noreferrer noopener" target="_blank">additional onion-grater-<b>merger</b> example profiles</a>) (<a class="external text" data-href="https://phabricator.whonix.org/project/view/72/" href="https://phabricator.whonix.org/project/view/72/" rel="noreferrer noopener" target="_blank">issue tracker</a>)
 </p>
 <ul><li>mostly same as <a href="#onion-grater_by_Tails">#onion-grater by Tails</a></li>
@@ -449,7 +472,7 @@ Configuration was valid</pre>
 <li>AppArmor profile</li>
 <li>seccomp hardening soon - <a class="external free" data-href="https://phabricator.whonix.org/T631" href="https://phabricator.whonix.org/T631" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T631</a> - <a class="external free" data-href="https://phabricator.whonix.org/T362" href="https://phabricator.whonix.org/T362" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T362</a></li></ul>
 <hr/>
-<h2><span id="legacy_control-port-filter-python_by_Whonix_™"></span><span class="mw-headline" id="legacy_control-port-filter-python_by_Whonix_.E2.84.A2">legacy control-port-filter-python by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=20.html" title="Edit section: legacy control-port-filter-python by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="legacy_control-port-filter-python_by_Whonix_™"></span><span class="mw-headline" id="legacy_control-port-filter-python_by_Whonix_.E2.84.A2">legacy control-port-filter-python by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=21.html" title="Edit section: legacy control-port-filter-python by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>legacy <a class="external text" data-href="https://github.com/Whonix/control-port-filter-python" href="https://github.com/Whonix/control-port-filter-python" rel="noreferrer noopener" target="_blank">control-port-filter-python</a> (<a class="external text" data-href="https://github.com/Whonix/control-port-filter-python/blob/master/usr/sbin/cpfpd" href="https://github.com/Whonix/control-port-filter-python/blob/master/usr/sbin/cpfpd" rel="noreferrer noopener" target="_blank">main script</a>) [Whonix ™ 10 to Whonix ™ 13 (<a class="external text" data-href="https://github.com/Whonix/control-port-filter-python/releases/tag/1.7-1" href="https://github.com/Whonix/control-port-filter-python/releases/tag/1.7-1" rel="noreferrer noopener" target="_blank">version 1.7-1</a>] (last git commit <a class="external text" data-href="https://github.com/Whonix/control-port-filter-python/commit/99e8395fbafcb7789c7d1b5cbf7410ed65192e9a" href="https://github.com/Whonix/control-port-filter-python/commit/99e8395fbafcb7789c7d1b5cbf7410ed65192e9a" rel="noreferrer noopener" target="_blank">up to 99e8395fbafcb7789c7d1b5cbf7410ed65192e9a</a>) (<a class="external text" data-href="https://phabricator.whonix.org/tag/control-port-filter-python/" href="https://phabricator.whonix.org/tag/control-port-filter-python/" rel="noreferrer noopener" target="_blank">issue tracker</a>) [deprecated]
 </p>
 <ul><li>A fork of (very early) <a class="external text" data-href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" rel="noreferrer noopener" target="_blank">tor-controlport-filter</a> by Tails. (See above.)</li>
@@ -468,7 +491,7 @@ Configuration was valid</pre>
 <li>Lintian clean <i><span style="background-color:#FBFBFB">/debian</span></i> packaging folder.</li>
 <li>Will be deprecated when Whonix ™ 14 get released.</li></ul>
 <hr/>
-<h2><span id="legacy2_control-port-filter_by_Whonix_™"></span><span class="mw-headline" id="legacy2_control-port-filter_by_Whonix_.E2.84.A2">legacy2 control-port-filter by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=21.html" title="Edit section: legacy2 control-port-filter by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="legacy2_control-port-filter_by_Whonix_™"></span><span class="mw-headline" id="legacy2_control-port-filter_by_Whonix_.E2.84.A2">legacy2 control-port-filter by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=22.html" title="Edit section: legacy2 control-port-filter by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>legacy^2 control-port-filter [up to Whonix ™ 9.x] [deprecated]
 </p>
 <ul><li>Supports parallel connections.</li>
@@ -483,9 +506,9 @@ Configuration was valid</pre>
 <li>Complete sysvinit script.</li>
 <li>Lintian clean <i><span style="background-color:#FBFBFB">/debian</span></i> packaging folder.</li>
 <li>Deprecated since the release of Whonix ™ 10.</li></ul>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=22.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=23.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" rel="noreferrer noopener" target="_blank">Tor Control Protocol</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=23.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=24.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -585,38 +608,38 @@ Find out what <i><span style="background-color:#FBFBFB">status/circuit-establish
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190602053426
+Cached time: 20190603053424
 Cache expiry: 0
 Dynamic content: true
 CPU time usage: 0.075 seconds
-Real time usage: 0.094 seconds
-Preprocessor visited node count: 1094/1000000
-Preprocessor generated node count: 3112/1000000
-Post‐expand include size: 14003/2097152 bytes
+Real time usage: 0.097 seconds
+Preprocessor visited node count: 1158/1000000
+Preprocessor generated node count: 3252/1000000
+Post‐expand include size: 14043/2097152 bytes
 Template argument size: 3024/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 8771/5000000 bytes
-Lua time usage: 0.000/7.000 seconds
-Lua virtual size: 7.49 MB/50 MB
+Unstrip post‐expand size: 9085/5000000 bytes
+Lua time usage: 0.010/7.000 seconds
+Lua virtual size: 7.46 MB/50 MB
 Lua estimated memory usage: 0 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   64.243      1 -total
- 41.66%   26.766      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
- 35.42%   22.753      1 Template:Mbox
- 15.31%    9.833      1 Template:Footer
- 11.29%    7.250      2 Template:Box
-  8.38%    5.384      4 Template:CodeSelect
-  7.48%    4.804      1 Template:Reload_Tor
-  6.50%    4.174      1 Template:Reflist
-  4.27%    2.740      1 Template:Header
-  3.21%    2.065      1 Template:Share
+100.00%   67.489      1 -total
+ 40.89%   27.595      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+ 34.42%   23.228      1 Template:Mbox
+ 15.02%   10.136      1 Template:Footer
+ 11.38%    7.683      2 Template:Box
+  8.76%    5.909      4 Template:CodeSelect
+  8.00%    5.397      1 Template:Reload_Tor
+  6.32%    4.265      1 Template:Reflist
+  4.36%    2.945      1 Template:Header
+  3.33%    2.246      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47585" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47585">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47585</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47767" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47767">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=47767</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -627,7 +650,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Contr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 27 May 2019, at 12:07.</li>
+<li id="footer-lastmod"> This page was last edited on 2 June 2019, at 21:24.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
