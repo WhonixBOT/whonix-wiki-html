@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Source Code Intro - Whonix
  url: ../Dev/Source_Code_Intro
- date: Tue Jun  4 07:36:16 2019
+ date: Wed Jun  5 07:36:17 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -59,7 +59,7 @@
 <!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius">Whonix may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.</div>
 				<![endif]-->
-<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><p><style type="text/css">
+<div class="sitenotice" id="siteNotice"><div dir="ltr" id="localNotice" lang="en"><div class="mw-parser-output"><p><style type="text/css">
 
 #banner {
  position: relative;
@@ -105,7 +105,7 @@ Whonix requires Donations to stay alive.
      </div>
 </a>
 </div>
-</div></div> </div>
+</div></div></div> </div>
 </div>
 <div id="mw-js-message" style="display:none;"></div>
 <div class="row">
@@ -176,7 +176,8 @@ Whonix requires Donations to stay alive.
 </ul>
 </li>
 <li class="toclevel-1 tocsection-29"><a href="#Notes"><span class="tocnumber">10</span> <span class="toctext">Notes</span></a></li>
-<li class="toclevel-1 tocsection-30"><a href="#Footnotes"><span class="tocnumber">11</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Why_not_Replace_grml-debootstrap_with_.27X.27.3F"><span class="tocnumber">11</span> <span class="toctext">Why not Replace grml-debootstrap with 'X'?</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#Footnotes"><span class="tocnumber">12</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -599,7 +600,25 @@ Whonix-Gateway-disk1.vmdk</textarea>
 <h1><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=29.html" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <pre>sudo ~/Whonix/packages/whonix-developer-meta-files/debug-steps/interactive-chroot-raw --target raw --flavor whonix-host-xfce --build --freedom false
 </pre>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span id="Why_not_Replace_grml-debootstrap_with_'X'?"></span><span class="mw-headline" id="Why_not_Replace_grml-debootstrap_with_.27X.27.3F">Why not Replace grml-debootstrap with 'X'?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=30.html" title="Edit section: Why not Replace grml-debootstrap with 'X'?">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Whonix ™ developers are not remotely close to exhausting grml-debootstrap's extensive feature-set yet. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p><p>There are two sorts of VM image creation tools:
+</p>
+<pre>   [A] Those that use virtualization, boot the image and perform actions.
+   [B] Those that use chroot (or maybe systemd-spawn).
+</pre>
+<p>[A] is incompatible with Whonix ™ design principles due to files being created during boot, such as entropy seeds. This is a less clean method and is not suitable for redistribution.
+</p><p>In either case it would be necessary to diff:
+</p>
+<pre>   The image created by grml-debootstrap versus the new tool.
+   Create an image twice using the new tool and inspect the diff.
+</pre>
+<p>Related:
+</p>
+<pre>   <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/help-steps/analyze_image" href="https://github.com/Whonix/Whonix/blob/master/help-steps/analyze_image" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/help-steps/analyze_image</a>
+   <a class="external free" data-href="../Verifiable_Builds" href="../Verifiable_Builds" rel="noreferrer noopener" target="_blank">../Verifiable_Builds</a>
+</pre>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=31" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;action=edit&amp;section=31.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">If something would go wrong, you would have to reinstall the whole operating system every time again. That's why we use separate steps.</span>
@@ -609,6 +628,8 @@ Whonix-Gateway-disk1.vmdk</textarea>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">(replace X with g or w)</span>
 </li>
 <li id="cite_note-bash-array-4"><span class="mw-cite-backlink"><a href="#cite_ref-bash-array_4-0">↑</a></span> <span class="reference-text">We are expanding a bash array.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://forums.whonix.org/t/replacing-grml-debootstrap-debos-build-platform/5582/3" href="https://forums.whonix.org/t/replacing-grml-debootstrap-debos-build-platform/5582/3" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/replacing-grml-debootstrap-debos-build-platform/5582/3</a></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -651,7 +672,7 @@ Whonix-Gateway-disk1.vmdk</textarea>
 <a id="end" rel="nofollow"></a></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;"><u>Random News:</u>
-<p>Did you know that anyone can edit the <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <hr/><p><font size="-1"><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Source_Code_Intro" href="https://www.Whonix.org/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Source_Code_Intro" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -667,35 +688,35 @@ Whonix-Gateway-disk1.vmdk</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20190513095052
+Cached time: 20190604185324
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.100 seconds
-Real time usage: 0.135 seconds
-Preprocessor visited node count: 1044/1000000
-Preprocessor generated node count: 2892/1000000
-Post‐expand include size: 7667/2097152 bytes
+CPU time usage: 0.066 seconds
+Real time usage: 0.104 seconds
+Preprocessor visited node count: 1074/1000000
+Preprocessor generated node count: 2960/1000000
+Post‐expand include size: 7699/2097152 bytes
 Template argument size: 1334/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 7247/5000000 bytes
+Unstrip post‐expand size: 7608/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  105.845      1 -total
- 28.84%   30.523      1 Template:Header
- 13.55%   14.346      8 Template:CodeSelect
- 12.04%   12.739      1 Template:Open_with_root_rights
- 10.09%   10.680      1 Template:Box
-  9.47%   10.027      1 Template:Footer
-  4.39%    4.652      9 Template:Code2
-  3.37%    3.567     45 Template:Project_name
-  2.81%    2.975      1 Template:Forkme
-  2.58%    2.730      1 Template:Reflist
+100.00%   75.736      1 -total
+ 47.65%   36.087      1 Template:Header
+ 13.87%   10.502      8 Template:CodeSelect
+ 11.79%    8.926      1 Template:Footer
+  8.88%    6.728      1 Template:Open_with_root_rights
+  7.81%    5.916      1 Template:Box
+  3.79%    2.870      1 Template:Reflist
+  2.38%    1.805      1 Template:Share
+  2.29%    1.732      1 Template:Edit_it
+  1.60%    1.215     15 Template:Code
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47258" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47258">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47258</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47784" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47784">https://www.whonix.org/w/index.php?title=Dev/Source_Code_Intro&amp;oldid=47784</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -706,7 +727,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Sourc
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 13 May 2019, at 09:34.</li>
+<li id="footer-lastmod"> This page was last edited on 4 June 2019, at 17:42.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -727,5 +748,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Sourc
 </div>
 
 </body>
-<!-- Cached/compressed 20190513095052 -->
+<!-- Cached/compressed 20190604185324 -->
 </html>
