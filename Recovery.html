@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Recovery - Whonix
  url: ./Recovery
- date: Sat Oct 26 07:55:33 2019
+ date: Sun Oct 27 07:55:02 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -21,8 +21,8 @@
 <meta content="@Whonix" name="twitter:site"/>
 <meta content="Whonix" name="twitter:domain"/>
 <meta content="@Whonix" name="twitter:creator"/>
-<meta content="Recovery Mode, Emergency, Chroot" name="description"/>
-<meta content="Recovery Mode, Emergency, Chroot" name="twitter:description"/>
+<meta content="Recovery Mode, Emergency, Chroot, Debugging, Capturing Diagnostic Output from Serial Console" name="description"/>
+<meta content="Recovery Mode, Emergency, Chroot, Debugging, Capturing Diagnostic Output from Serial Console" name="twitter:description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Recovery&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Recovery&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -34,7 +34,7 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Recovery" property="og:title"/>
 <meta content="./Recovery" property="og:url"/>
-<meta content="Recovery Mode, Emergency, Chroot" property="og:description"/>
+<meta content="Recovery Mode, Emergency, Chroot, Debugging, Capturing Diagnostic Output from Serial Console" property="og:description"/>
 
 <meta content="" property="fb:app_id"/>
 <meta content="" property="fb:admins"/>
@@ -130,7 +130,25 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-2 tocsection-7"><a href="#Booting_into_the_Live_CD"><span class="tocnumber">3.4</span> <span class="toctext">Booting into the Live CD</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-8"><a href="#Footnotes"><span class="tocnumber">4</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Serial_Console"><span class="tocnumber">4</span> <span class="toctext">Serial Console</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#VirtualBox_2"><span class="tocnumber">4.1</span> <span class="toctext">VirtualBox</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Preparation"><span class="tocnumber">4.1.1</span> <span class="toctext">Preparation</span></a>
+<ul>
+<li class="toclevel-4 tocsection-11"><a href="#Host_Preparation"><span class="tocnumber">4.1.1.1</span> <span class="toctext">Host Preparation</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#VM_Preparation"><span class="tocnumber">4.1.1.2</span> <span class="toctext">VM Preparation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-13"><a href="#Read_Only_Serial_Console"><span class="tocnumber">4.1.2</span> <span class="toctext">Read Only Serial Console</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Interactive_Serial_Console"><span class="tocnumber">4.1.3</span> <span class="toctext">Interactive Serial Console</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Forum_Discussion"><span class="tocnumber">4.1.4</span> <span class="toctext">Forum Discussion</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#KVM_2"><span class="tocnumber">4.2</span> <span class="toctext">KVM</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Recovery_Mode">Recovery Mode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=1.html" title="Edit section: Recovery Mode">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -212,11 +230,166 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 </div>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=8.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Serial_Console">Serial Console</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=8.html" title="Edit section: Serial Console">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="VirtualBox_2">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=9.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Preparation">Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=10.html" title="Edit section: Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Host_Preparation">Host Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=11.html" title="Edit section: Host Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>On the host operating system. Assuming Linux.
+</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<p>Upgrade the system.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get dist-upgrade</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+</div>
+</div>
+<p>Install the <code>socat</code> package.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install socat</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install socat</textarea>
+</div>
+</div>
+<p>The procedure is complete.
+</p><p>Windows and macOS hosts are currently <a class="mw-redirect" data-href="/wiki/Undocumented" href="./Undocumented.html" title="Undocumented">undocumented</a>. These should work in theory as well.
+</p>
+<h4><span class="mw-headline" id="VM_Preparation">VM Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=12.html" title="Edit section: VM Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Inside the virtual machine.
+</p><p>Install the <code>serial-console-enable</code> package inside the Whonix ™ virtual machine in which you like to enable the serial console.
+</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<p>Upgrade the system.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get dist-upgrade</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+</div>
+</div>
+<p>Install the <code>serial-console-enable</code> package.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install serial-console-enable</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install serial-console-enable</textarea>
+</div>
+</div>
+<p>The procedure is complete.
+</p><p>From Whonix ™ <code>15.0.0.6.6</code> and above (unreleased at time of writing) this VM preparation step will probably be no longer required since the <code>serial-console-enable</code> package will be installed by default.
+</p>
+<h3><span class="mw-headline" id="Read_Only_Serial_Console">Read Only Serial Console</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=13.html" title="Edit section: Read Only Serial Console">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This option is very useful for capturing diagnostic output from a virtual machine. It allows to obtain a log of everything written to the kernel console. Logs all console output to a plain text file from boot until shutdown. The logfile persists after VM shutdown. The logfile will be overwritten after VM is shutdown and powered on again.
+</p><p>Whonix-Workstation VM settings -&gt; Serial Ports -&gt; Tick enable then:
+</p>
+<ul><li>Port Number: <code>COM1</code> (default)</li>
+<li>Port Mode: <code>Raw File</code></li>
+<li>Path/Address: <code>/home/user/vbox-raw-file</code></li></ul>
+<p>It is possible to view the file with any text editor. For example with mousepad.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>mousepad /home/user/vbox-raw-file</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">mousepad /home/user/vbox-raw-file</textarea>
+</div>
+</div>
+<p>The logfile is also compatible with other standard linux utlitites such as <code>tail</code>. To view the file as it is being appended to from a terminal emulator you could use the following command.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>tail -f /home/user/vbox-raw-file</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">tail -f /home/user/vbox-raw-file</textarea>
+</div>
+</div>
+<p>After VM shutdown it may be useful to retain its contents by copying the <code>vbox-raw-file</code> elsewhere to make it a persistent log file.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cp /home/user/vbox-raw-file /home/user/vbox-console-log</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cp /home/user/vbox-raw-file /home/user/vbox-console-log</textarea>
+</div>
+</div>
+<h3><span class="mw-headline" id="Interactive_Serial_Console">Interactive Serial Console</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=14.html" title="Edit section: Interactive Serial Console">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Does not work during grub boot menu yet.
+</p><p>On the host. Whonix-Workstation VM settings -&gt; Serial Ports -&gt; Tick enable then:
+</p>
+<ul><li>Port Number: <code>COM1</code> (default)</li>
+<li>Port Mode: <code>Host Pipe</code></li>
+<li><b>un</b>check <code>Connect to existing pipe/socket</code></li>
+<li>Path/Address: <code>/home/user/vbox-socket-file</code></li></ul>
+<p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>On the host. Run the following socat command to connect to the unix domain socket file which is connected to the operating system running inside the virtual machine.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>socat - UNIX-CONNECT:/home/user/vbox-socket-file</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">socat - UNIX-CONNECT:/home/user/vbox-socket-file</textarea>
+</div>
+</div>
+<p>You might see nothing. That depends on when you run above command. That is because an interactive serial console will only show messages once connected to the serial console. Old messages cannot be viewed that way. If you run above command during early boot you will see verbose messages during boot. However, if you press <code>enter</code> that should result in the virtual console asking to authenticate.
+</p><p>Press <code>enter</code>.
+</p><p>Will show
+</p>
+<pre>host login:
+</pre>
+<p>Do not enter your host login username! Enter your Whonix user login name. Most likely <code>user</code>. Press <code>enter</code>.
+</p><p>Will show
+</p>
+<pre>Password:
+</pre>
+<p>Enter the password for that user account. <a data-href="/wiki/Default_Passwords" href="./Default_Passwords.html" title="Default Passwords">Default Passwords</a>. Press <code>enter</code>.
+</p><p>Warning: Password will not be hidden by asterisk ("<code>*</code>") symbols. In other words, the password will be written in cleartext. Someone looking over your shoulder could read it.
+</p><p>Note: By default no root login is possible as per <a data-href="/wiki/Root" href="./Root.html" title="Root">root</a>.
+</p>
+<h3><span class="mw-headline" id="Forum_Discussion">Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=15.html" title="Edit section: Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="external free" data-href="https://forums.whonix.org/t/serial-console-in-virtualbox/8021" href="https://forums.whonix.org/t/serial-console-in-virtualbox/8021" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/serial-console-in-virtualbox/8021</a>
+</p>
+<h2><span class="mw-headline" id="KVM_2">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=16.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>See <a data-href="/wiki/KVM" href="./KVM.html" title="KVM">KVM</a>, <a data-href="/wiki/KVM#Command_Line_Interface_.28CLI.29" href="./KVM.html" title="KVM">serial console</a>.
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Recovery&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Recovery&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">See also: <a data-href="/wiki/Default_Passwords" href="./Default_Passwords.html" title="Default Passwords">Whonix Default Passwords</a>.</span>
 </li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+If you see something like the following error.
+
+<pre>Failed to open a session for the virtual machine Whonix-Gateway-XFCE_15.0.0.4.9.
+</pre>
+<pre>NamedPipe#0 failed to connect to local socket /home/user/vbox-socket-file (VERR_FILE_NOT_FOUND).
+</pre>
+<pre>Result Code: NS_ERROR_FAILURE (0x80004005)
+Component: ConsoleWrap
+Interface: IConsole {872da645-4a9b-1727-bee2-5585105b9eed}
+</pre>
+<p>Then you must <u>un</u>check <code>Connect to existing pipe/socket</code>.
+</p>
+</span></li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -226,7 +399,7 @@ Whonix requires Donations to stay alive.
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Recovery" href="https://www.Whonix.org/wiki/Recovery" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -243,35 +416,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191017174913
+Cached time: 20191026124819
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.037 seconds
-Real time usage: 0.041 seconds
-Preprocessor visited node count: 218/1000000
-Preprocessor generated node count: 925/1000000
-Post‐expand include size: 4895/2097152 bytes
-Template argument size: 632/2097152 bytes
+CPU time usage: 0.055 seconds
+Real time usage: 0.066 seconds
+Preprocessor visited node count: 397/1000000
+Preprocessor generated node count: 1277/1000000
+Post‐expand include size: 6244/2097152 bytes
+Template argument size: 1008/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1051/5000000 bytes
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 2021/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   25.012      1 -total
- 38.49%    9.626      1 Template:Footer
- 28.13%    7.036      2 Template:Box
- 24.05%    6.015      4 Template:CodeSelect
- 12.76%    3.192      1 Template:Header
-  9.91%    2.480      1 Template:Share
-  9.29%    2.324      1 Template:Edit_it
-  7.86%    1.965      1 Template:Reflist
-  5.91%    1.477      1 Template:Mbox
-  4.09%    1.022      1 Template:RandomNews
+100.00%   46.064      1 -total
+ 52.10%   23.997     14 Template:CodeSelect
+ 18.50%    8.522      2 Template:Install_Package
+ 17.57%    8.093      1 Template:Footer
+ 16.07%    7.403      2 Template:Box
+  8.94%    4.116      1 Template:Header
+  5.65%    2.601      1 Template:Reflist
+  4.44%    2.045      1 Template:Mbox
+  4.41%    2.032      1 Template:Share
+  3.88%    1.789      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=50225" dir="ltr" href="https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=50225">https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=50225</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=51739" dir="ltr" href="https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=51739">https://www.whonix.org/w/index.php?title=Recovery&amp;oldid=51739</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -282,7 +455,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Recovery&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 16 August 2019, at 22:14.</li>
+<li id="footer-lastmod"> This page was last edited on 26 October 2019, at 14:48.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -303,5 +476,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Recovery&
 </div>
 
 </body>
-<!-- Cached/compressed 20191017174913 -->
+<!-- Cached/compressed 20191026124819 -->
 </html>
