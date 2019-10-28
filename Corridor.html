@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Using corridor, a Tor traffic whitelisting gateway with Whonix ™ - Whonix
  url: ./Corridor
- date: Sun Oct 27 07:33:55 2019
+ date: Mon Oct 28 07:33:50 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -28,12 +28,12 @@
 <link data-href="/w/index.php?title=Corridor&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Corridor" property="og:title"/>
-<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Corridor" property="og:url"/>
+<meta content="./Corridor" property="og:url"/>
 <meta content="Using corridor, a Tor traffic whitelisting gateway with Whonix" property="og:description"/>
 
 <meta content="" property="fb:app_id"/>
@@ -194,7 +194,9 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 <p>Complete the following steps to add the <a data-href="/wiki/Whonix_Signing_Key" href="./Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> to the system's APT keyring. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p>Open a terminal.
 </p><p>Install <code>curl</code>.
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -203,7 +205,7 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -212,7 +214,7 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>curl</code> package.
+<p><b>3.</b> Install the <code>curl</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install curl</pre>
@@ -222,7 +224,9 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 </div>
 </div>
 <p>The procedure is complete.
-</p><p>Download Whonix signing key.
+</p>
+</div>
+<p>Download Whonix signing key.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a Qubes TemplateVM</u>, run.
@@ -336,7 +340,9 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 </div>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>Install <code>corridor</code>.
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -345,7 +351,7 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -354,7 +360,7 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>corridor</code> package.
+<p><b>3.</b> Install the <code>corridor</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install corridor</pre>
@@ -365,6 +371,7 @@ It is possible to configure Whonix-Gateway ™ (<code>sys-whonix</code>) to use 
 </div>
 <p>The procedure is complete.
 </p>
+</div>
 </div>
 <p>While these instructions remain experimental, it is advised to run the following systemctl commands to check everything is functioning correctly.
 </p><p></p><div class="codeContainerNew">
@@ -600,7 +607,7 @@ This will hopefully be fixed in Debian buster.</span>
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a>).
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Corridor" href="https://www.Whonix.org/wiki/Corridor" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Corridor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Corridor" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -617,35 +624,35 @@ This will hopefully be fixed in Debian buster.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191022124903
+Cached time: 20191027110836
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.099 seconds
-Real time usage: 0.107 seconds
-Preprocessor visited node count: 846/1000000
-Preprocessor generated node count: 2404/1000000
-Post‐expand include size: 21360/2097152 bytes
-Template argument size: 9391/2097152 bytes
+CPU time usage: 0.110 seconds
+Real time usage: 0.121 seconds
+Preprocessor visited node count: 860/1000000
+Preprocessor generated node count: 2426/1000000
+Post‐expand include size: 23009/2097152 bytes
+Template argument size: 10268/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4294/5000000 bytes
+Unstrip post‐expand size: 4314/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   77.263      1 -total
- 59.12%   45.677     12 Template:Box
- 49.57%   38.302     27 Template:CodeSelect
- 15.09%   11.657      1 Template:W-APT-Repository-Key
- 13.22%   10.216      2 Template:Install_Package
- 13.22%   10.213      1 Template:Project-APT-Repository-Add
- 11.02%    8.512      1 Template:Footer
-  8.05%    6.220      1 Template:Reflist
-  7.30%    5.644      3 Template:Mbox
-  5.23%    4.044      1 Template:Open_File
+100.00%   87.250      1 -total
+ 70.37%   61.400     14 Template:Box
+ 47.81%   41.716     27 Template:CodeSelect
+ 15.07%   13.150      1 Template:W-APT-Repository-Key
+ 13.88%   12.106      2 Template:Install_Package
+ 13.51%   11.783      1 Template:Project-APT-Repository-Add
+ 11.61%   10.130      1 Template:Footer
+  8.13%    7.092      1 Template:Reflist
+  7.11%    6.200      3 Template:Mbox
+  5.13%    4.473      1 Template:Open_File
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Corridor&amp;oldid=49540" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Corridor&amp;oldid=49540">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Corridor&amp;oldid=49540</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=49540" dir="ltr" href="https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=49540">https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=49540</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -656,7 +663,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Co
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 20 July 2019, at 14:42.</li>
+<li id="footer-lastmod"> This page was last edited on 20 July 2019, at 13:42.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -677,5 +684,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Co
 </div>
 
 </body>
-<!-- Cached/compressed 20191022124903 -->
+<!-- Cached/compressed 20191027110836 -->
 </html>

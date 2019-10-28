@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Other Operating Systems - Whonix
  url: ./OtherOperatingSystems
- date: Sun Oct 27 07:47:18 2019
+ date: Mon Oct 28 07:47:26 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -1019,7 +1019,9 @@ TODO development: Can't you use a static IP?<br/>
 </p>
 <h2><span class="mw-headline" id="Other_Hypervisors">Other Hypervisors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;action=edit&amp;section=16.html" title="Edit section: Other Hypervisors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Install a DHCP server package:
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -1028,7 +1030,7 @@ TODO development: Can't you use a static IP?<br/>
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -1037,7 +1039,7 @@ TODO development: Can't you use a static IP?<br/>
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>isc-dhcp-server</code> package.
+<p><b>3.</b> Install the <code>isc-dhcp-server</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install isc-dhcp-server</pre>
@@ -1047,7 +1049,9 @@ TODO development: Can't you use a static IP?<br/>
 </div>
 </div>
 <p>The procedure is complete.
-</p><p>Note: It won't start, because it is not configured yet.
+</p>
+</div>
+<p>Note: It won't start, because it is not configured yet.
 </p><p>Open file <code>/etc/dhcp/dhcpd.conf</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
@@ -1470,7 +1474,7 @@ For explanation of the about:tor "Something went wrong" error, please see this <
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video production specialists</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Other_Operating_Systems" href="https://www.Whonix.org/wiki/Other_Operating_Systems" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Other_Operating_Systems" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1487,32 +1491,32 @@ For explanation of the about:tor "Something went wrong" error, please see this <
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191027064717
+Cached time: 20191028064725
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.187 seconds
-Real time usage: 0.206 seconds
-Preprocessor visited node count: 1870/1000000
-Preprocessor generated node count: 4610/1000000
-Post‐expand include size: 43495/2097152 bytes
-Template argument size: 10497/2097152 bytes
+CPU time usage: 0.181 seconds
+Real time usage: 0.199 seconds
+Preprocessor visited node count: 1876/1000000
+Preprocessor generated node count: 4622/1000000
+Post‐expand include size: 44081/2097152 bytes
+Template argument size: 10782/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 16686/5000000 bytes
+Unstrip post‐expand size: 16561/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  142.678      1 -total
- 34.96%   49.886     34 Template:CodeSelect
- 16.68%   23.792      2 Template:VM_Settings_Easy_Common
-  8.63%   12.306      1 Template:Reflist
-  8.50%   12.128     12 Template:Box
-  6.91%    9.863      1 Template:Footer
-  6.67%    9.518      5 Template:Open_with_root_rights
-  3.95%    5.630      1 Template:Install_Package
-  2.91%    4.147      2 Template:Tor_Browser_Manual_Proxy_Configuration
-  2.87%    4.094      1 Template:Open_File
+100.00%  134.965      1 -total
+ 34.41%   46.447     34 Template:CodeSelect
+ 16.97%   22.910      2 Template:VM_Settings_Easy_Common
+ 11.11%   14.995     13 Template:Box
+  9.38%   12.655      1 Template:Reflist
+  6.57%    8.870      1 Template:Footer
+  6.51%    8.791      5 Template:Open_with_root_rights
+  3.23%    4.359      1 Template:Install_Package
+  2.93%    3.955      2 Template:Tor_Browser_Manual_Proxy_Configuration
+  2.80%    3.779      1 Template:Open_File
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=49587" dir="ltr" href="https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=49587">https://www.whonix.org/w/index.php?title=Other_Operating_Systems&amp;oldid=49587</a>"</div>

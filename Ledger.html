@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: HowTo: Ledger Hardware Wallet with Qubes - Whonix
  url: ./Ledger
- date: Sun Oct 27 07:45:20 2019
+ date: Mon Oct 28 07:45:24 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -207,7 +207,9 @@ Whonix requires Donations to stay alive.
 <h2><span class="mw-headline" id="Qubes_USB_Proxy_Installation">Qubes USB Proxy Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=7.html" title="Edit section: Qubes USB Proxy Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Mandatory for <a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users.
 </p><p>Install Qubes USB Proxy. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -216,7 +218,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -225,7 +227,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>qubes-usb-proxy</code> package.
+<p><b>3.</b> Install the <code>qubes-usb-proxy</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install qubes-usb-proxy</pre>
@@ -236,12 +238,15 @@ Whonix requires Donations to stay alive.
 </div>
 <p>The procedure is complete.
 </p>
+</div>
 <h2><span class="mw-headline" id="Chromium_Installation">Chromium Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=8.html" title="Edit section: Chromium Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Chromium is required to use the run the Chrome applications ledger bitcoin and ledger ethereum. No additional software installation or account creation is needed.
 </p><p>In Qubes TemplateVM.
 </p><p>Open a terminal (konsole). 
 </p><p>Install Chromium.
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -250,7 +255,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -259,7 +264,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>chromium</code> package.
+<p><b>3.</b> Install the <code>chromium</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install chromium</pre>
@@ -270,11 +275,14 @@ Whonix requires Donations to stay alive.
 </div>
 <p>The procedure is complete.
 </p>
+</div>
 <h2><span class="mw-headline" id="electrum_Installation">electrum Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;action=edit&amp;section=9.html" title="Edit section: electrum Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Optional. Only in case you want to install electrum.
 </p><p>Install electrum and dependencies for electrum ledger hardware wallet support. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p><p>Install <code>libudev-dev</code> and <code>python3-pip</code>.
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -283,7 +291,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -292,7 +300,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>libudev-dev python3-pip</code> package.
+<p><b>3.</b> Install the <code>libudev-dev python3-pip</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install libudev-dev python3-pip</pre>
@@ -302,7 +310,9 @@ Whonix requires Donations to stay alive.
 </div>
 </div>
 <p>The procedure is complete.
-</p><p>Install <code>electrum</code> from Debian Backports repository.
+</p>
+</div>
+<p>Install <code>electrum</code> from Debian Backports repository.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>Package <a class="external text" data-href="https://packages.debian.org/buster-backports/electrum" href="https://packages.debian.org/buster-backports/electrum" rel="noreferrer noopener" target="_blank">libusb-1.0-0-dev python-btchip <code>electrum libusb-1.0-0-dev python-btchip</code></a> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
@@ -694,7 +704,7 @@ This bug is in the Debian stretch version of electrum and only fixed in a later 
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="./Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Ledger_Hardware_Wallet" href="https://www.Whonix.org/wiki/Ledger_Hardware_Wallet" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ledger_Hardware_Wallet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ledger_Hardware_Wallet" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -711,32 +721,32 @@ This bug is in the Debian stretch version of electrum and only fixed in a later 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191027064519
+Cached time: 20191028064523
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.109 seconds
-Real time usage: 0.119 seconds
-Preprocessor visited node count: 887/1000000
-Preprocessor generated node count: 2377/1000000
-Post‐expand include size: 17306/2097152 bytes
-Template argument size: 7419/2097152 bytes
+CPU time usage: 0.118 seconds
+Real time usage: 0.132 seconds
+Preprocessor visited node count: 905/1000000
+Preprocessor generated node count: 2393/1000000
+Post‐expand include size: 19057/2097152 bytes
+Template argument size: 8267/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8155/5000000 bytes
+Unstrip post‐expand size: 8105/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   85.360      1 -total
- 45.21%   38.588     28 Template:CodeSelect
- 20.18%   17.224      8 Template:Box
- 16.08%   13.730      3 Template:Install_Package
- 15.24%   13.009      1 Template:Install_Backport
-  9.97%    8.510      1 Template:Reflist
-  9.25%    7.893      1 Template:Footer
-  5.50%    4.696      5 Template:Mbox
-  4.05%    3.454      1 Template:Header
-  3.85%    3.287      1 Template:Prefer_stable_APT
+100.00%   96.111      1 -total
+ 46.03%   44.244     28 Template:CodeSelect
+ 36.47%   35.053     11 Template:Box
+ 17.16%   16.492      3 Template:Install_Package
+ 16.10%   15.475      1 Template:Install_Backport
+  9.72%    9.346      1 Template:Footer
+  9.42%    9.049      1 Template:Reflist
+  4.77%    4.588      5 Template:Mbox
+  3.64%    3.494      1 Template:Header
+  3.45%    3.319      1 Template:Prefer_stable_APT
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=49702" dir="ltr" href="https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=49702">https://www.whonix.org/w/index.php?title=Ledger_Hardware_Wallet&amp;oldid=49702</a>"</div>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Onion Services - Whonix
  url: ./Hidden_Services
- date: Sun Oct 27 07:41:35 2019
+ date: Mon Oct 28 07:41:31 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -373,7 +373,9 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <h5><span class="mw-headline" id="Step_1:_Install_Server_Software">Step 1: Install Server Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=13.html" title="Edit section: Step 1: Install Server Software">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p>Either,
 </p><p><b>A)</b> Run the following commands to install micro-httpd. <u>OR</u>
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -382,7 +384,7 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -391,7 +393,7 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>micro-httpd</code> package.
+<p><b>3.</b> Install the <code>micro-httpd</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install micro-httpd</pre>
@@ -401,8 +403,12 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 </div>
 </div>
 <p>The procedure is complete.
-</p><p><b>B)</b> Run the following commands to install nginx.
-</p><p><a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p>
+</div>
+<p><b>B)</b> Run the following commands to install nginx.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -411,7 +417,7 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p>Upgrade the system.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
@@ -420,7 +426,7 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>Install the <code>nginx</code> package.
+<p><b>3.</b> Install the <code>nginx</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install nginx</pre>
@@ -431,6 +437,7 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 </div>
 <p>The procedure is complete.
 </p>
+</div>
 <h5><span id="Step_2:_Open_Whonix-Workstation_™_Firewall_Port"></span><span class="mw-headline" id="Step_2:_Open_Whonix-Workstation_.E2.84.A2_Firewall_Port">Step 2: Open Whonix-Workstation ™ Firewall Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14.html" title="Edit section: Step 2: Open Whonix-Workstation ™ Firewall Port">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
 <p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
@@ -922,9 +929,9 @@ Configuration was valid</pre>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
 It is advised to install <a class="external text" data-href="https://packages.debian.org/" href="https://packages.debian.org/" rel="noreferrer noopener" target="_blank"></a><a class="new" data-href="/w/index.php?title=Template:Stable_Whonix_%E2%84%A2_based_on_Debian_codename&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Template:Stable_Whonix_%E2%84%A2_based_on_Debian_codename&amp;action=edit&amp;redlink=1.html" title="Template:Stable Whonix ™ based on Debian codename (page does not exist)">Template:Stable Whonix ™ based on Debian codename</a>/libapache2-mod-removeip libapache2-mod-removeip.
 
-<a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
-
-<div class="codeContainerNew">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
 </div>
@@ -932,10 +939,8 @@ It is advised to install <a class="external text" data-href="https://packages.de
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-
-Upgrade the system.
-
-<div class="codeContainerNew">
+<p><b>2.</b> Upgrade the system.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get dist-upgrade</pre>
 </div>
@@ -943,10 +948,8 @@ Upgrade the system.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-
-Install the <code>libapache2-mod-removeip</code> package.
-
-<div class="codeContainerNew">
+<p><b>3.</b> Install the <code>libapache2-mod-removeip</code> package.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get install libapache2-mod-removeip</pre>
 </div>
@@ -954,8 +957,9 @@ Install the <code>libapache2-mod-removeip</code> package.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install libapache2-mod-removeip</textarea>
 </div>
 </div>
-
-The procedure is complete.</span>
+<p>The procedure is complete.
+</p>
+</div></span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 (Source: <a class="external text" data-href="http://sourceforge.net/p/whonix/discussion/general/thread/407fce8f/?limit=25#478a" href="http://sourceforge.net/p/whonix/discussion/general/thread/407fce8f/?limit=25" rel="noreferrer noopener" target="_blank">old forum</a>)
@@ -1029,7 +1033,7 @@ Application Layer]</span>
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Did you know that anyone can edit the <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Whonix wiki</a> to improve it?
+<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> about Whonix on your website, blog or social media.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Onion_Services" href="https://www.Whonix.org/wiki/Onion_Services" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -1046,32 +1050,32 @@ Application Layer]</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191027064134
+Cached time: 20191028064130
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.138 seconds
-Real time usage: 0.159 seconds
-Preprocessor visited node count: 1286/1000000
-Preprocessor generated node count: 3421/1000000
-Post‐expand include size: 39524/2097152 bytes
-Template argument size: 13845/2097152 bytes
+CPU time usage: 0.139 seconds
+Real time usage: 0.158 seconds
+Preprocessor visited node count: 1304/1000000
+Preprocessor generated node count: 3437/1000000
+Post‐expand include size: 41276/2097152 bytes
+Template argument size: 14694/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 13261/5000000 bytes
+Unstrip post‐expand size: 13506/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  112.241      1 -total
- 49.93%   56.047     33 Template:CodeSelect
- 37.25%   41.808     12 Template:Box
- 15.12%   16.968      1 Template:Reflist
- 14.45%   16.215      3 Template:Install_Package
-  8.01%    8.989      1 Template:Firewall_Settings_Workstation
-  7.93%    8.898      1 Template:Footer
-  4.84%    5.428      3 Template:Reload_Tor
-  4.54%    5.096      1 Template:Backups_Tor_Onion_Service_private_key
-  4.44%    4.985      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+100.00%  110.956      1 -total
+ 55.40%   61.471     15 Template:Box
+ 44.49%   49.359     33 Template:CodeSelect
+ 13.24%   14.691      3 Template:Install_Package
+ 12.81%   14.210      1 Template:Reflist
+  9.11%   10.110      1 Template:Firewall_Settings_Workstation
+  8.12%    9.010      1 Template:Footer
+  5.86%    6.507      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  5.47%    6.069      3 Template:Reload_Tor
+  4.75%    5.274      1 Template:Backups_Tor_Onion_Service_private_key
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902</a>"</div>
