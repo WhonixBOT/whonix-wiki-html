@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Combining Tunnels with Tor - Whonix
  url: ./Tunnel_Proxy_or_SSH_or_VPN_through_Tor
- date: Tue Oct 29 08:01:15 2019
+ date: Wed Oct 30 08:01:31 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -123,7 +123,7 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Warnings"><span class="tocnumber">2</span> <span class="toctext">Warnings</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Challenges_in_Provider_Location_Selection"><span class="tocnumber">3</span> <span class="toctext">Challenges in Provider Location Selection</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Challenges_in_Tunnel-link_Provider_Selection"><span class="tocnumber">3</span> <span class="toctext">Challenges in Tunnel-link Provider Selection</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Comparison_Table"><span class="tocnumber">4</span> <span class="toctext">Comparison Table</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Connecting_to_a_Tunnel-link_.28Proxy.2FVPN.2FSSH.29_before_Tor"><span class="tocnumber">5</span> <span class="toctext">Connecting to a Tunnel-link (Proxy/VPN/SSH) before Tor</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Connecting_to_Tor_before_a_Tunnel-link_.28Proxy.2FVPN.2FSSH.29"><span class="tocnumber">6</span> <span class="toctext">Connecting to Tor before a Tunnel-link (Proxy/VPN/SSH)</span></a></li>
@@ -183,30 +183,67 @@ Example:
 <p>The previous example also holds true if the tunnel-link is first used with tunnel-chain 2 and then reused in tunnel-chain 1. In this case, all anonymous activities conducted with tunnel-chain 2 would be linked with the user's ISP-assigned IP address.
 </p>
 </td></tr></tbody></table>
-<h1><span class="mw-headline" id="Challenges_in_Provider_Location_Selection">Challenges in Provider Location Selection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=3.html" title="Edit section: Challenges in Provider Location Selection">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li>Tor avoids using more than one relay belonging to the same operator  in the circuits it is building. Legitimate Tor relay operators adhere to Tor's relay operator practices of announcing which relays belong to them by declaring this in the Tor relay family setting. Tor also avoids using Tor relays that are within the same network by not using relays within the same /16 subnet. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Tor however does not take into account your real external IP nor destination IP addresses. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> In essence, you must avoid using the same network/operator as your first and last Tor relays since this would open up <a data-href="/wiki/Warning#Confirmation_attacks" href="./Warning.html" title="Warning">end-to-end correlation attacks</a>.</li>
-<li>Many tunnel providers use shared IP addresses which means that many users share the same external IP address. On one hand this is good since that is similar to Tor, where many users share the same Tor exit relays. On the other hand, this can in some situations lead to actually making you less safe.</li>
-<li>It is possible to host Tor relays [any... bridges, entry, middle or exit] behind VPNs or tunnel-links. For example, there are VPN providers that support VPN port forwarding. This is an interesting way to contribute to Tor while not exposing oneself to too much legal risk. Therefore, there can be situation, where a VPN or other tunnel-link and a Tor relays could be hosted by the same operator, in the same network or even on the same IP.</li>
-<li>In an economy with a deep labor division, ones are providing the service to host servers (VPS etc.). Others provide VPN and other tunnel-link services and rent such servers. It is common, that diverse customers run share the same IP address. This is another situation where a VPN or other tunnel-link and a Tor relays could be hosted by the same operator, in the same network or even on the same IP.</li>
-<li>By adding arbitrary tunnel-links to your connection chain, you could unknowingly use the same operator/network twice in your connection chain.
-<ul><li>scenario 1)
-<ul><li>a) User uses VPN IP A on the host, thereby using it as it is first relay.
-<ul><li>b) User's Tor client happens to pick a Tor exit relay running on VPN IP A.</li>
-<li>Conditions a and b match at the same time. The user is now using the same IP as first and last proxy.
-<ul><li>-→ By using the VPN the user did not get more, but less secure.</li></ul></li></ul></li></ul></li>
-<li>different scenario 2)
-<ul><li>a) User sets up a VPN inside Whonix-Workstation ™. Thereby that results in <code>User</code> → <code>Tor</code> → <code>VPN</code> → <code>Internet</code>. Using VPN IP A.</li>
-<li>b) A Tor entry guard is being hosted on VPN IP A.</li>
-<li>Conditions a and b match at the same time. The user is now using the same IP as first and last proxy.
-<ul><li>-→ By using the VPN the user did not get more, but less secure.</li></ul></li></ul></li></ul></li>
-<li>Choose your tunnel providers wisely.
-<ul><li>Find out in which physical and legal jurisdiction and network their servers are located.</li>
-<li>Perhaps avoid using VPN or SSH providers that support port forwarding.</li>
-<li>Perhaps use only tunnel-link providers that are assigning private - as in not shared with others - unique - IP addresses, however it is not clear if this does more harm than gain as noted above.</li>
-<li>Perhaps use tunnel-link providers that run their own servers rather than relying on shared infrastructure.</li></ul></li>
-<li>Perhaps manually pick your Tor relay[s]. Specifically your entry guard[s] or <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">bridge[s]</a>).
-<ul><li>Tor documentation generally discourages tampering with Tor's routing algorithm by manually choosing your relays, but since you are trying to be more clever by extending your Tor chain despite all information about the difficulty of this endeavor, perhaps it would make sense to pick your entry guard manually.</li>
-<li>Using <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> might be an alternative, but note the following quote. "<i>Bridges are less reliable and tend to have lower performance than other entry points. If you live in a uncensored area, they are not necessarily more secure than entry guards.</i> <i>Source: <a class="external text" data-href="https://lists.torproject.org/pipermail/tor-talk/2012-May/024378.html" href="https://lists.torproject.org/pipermail/tor-talk/2012-May/024378.html" rel="noreferrer noopener" target="_blank">bridge vs non-bridge users anonymity</a>.</i>"</li></ul></li></ul>
+<h1><span class="mw-headline" id="Challenges_in_Tunnel-link_Provider_Selection">Challenges in Tunnel-link Provider Selection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=3.html" title="Edit section: Challenges in Tunnel-link Provider Selection">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>It is essential to consider the following factors when selecting a tunnel-link provider. Anonymity can be materially affected by the chosen network/operator's location, network/operator/IP address commonality with Tor relays, use of shared infrastructure, and other variables.
+</p><p><b>Table:</b> <i>Provider Selection Considerations</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Domain</b>
+</th>
+<th scope="col"><b>Description</b>
+</th></tr>
+<tr>
+<th scope="row">End-to-end Correlation (Confirmation) Attacks
+</th>
+<td>
+<ul><li>Tor avoids using more than one relay belonging to the same operator in the circuits it is building. Legitimate Tor relay operators adhere to Tor's relay operator practices of announcing which relays belong to them by declaring this in the Tor relay family setting. Tor also avoids using Tor relays that are within the same network by not using relays within the same /16 subnet. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>  Tor however does not take into account your real external IP address nor destination IP addresses. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <br/></li>
+<li>In essence, you must avoid using the same network/operator as your first and last Tor relays since this would open up <a data-href="/wiki/Warning#Confirmation_attacks" href="./Warning.html" title="Warning">Confirmation Attacks</a>.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Shared IP Addresses
+</th>
+<td>
+<ul><li>Many tunnel providers use shared IP addresses which means that many users share the same external IP address. On the one hand this configuration is beneficial, since it is similar to Tor whereby many users share the same Tor exit relays. On the other hand, in some circumstances this may result in making you <u>less</u> anonymous.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Operator/Network Shared Infrastructure
+</th>
+<td>
+<ul><li>It is possible to host Tor relays -- including bridges, entry, middle or exit relays -- behind VPNs or tunnel-links. For example, there are VPN providers that support <a class="external text" data-href="https://proprivacy.com/guides/vpn-port-forwarding-guide" href="https://proprivacy.com/guides/vpn-port-forwarding-guide" rel="noreferrer noopener" target="_blank">VPN port forwarding</a>. This is an interesting way to contribute to Tor while not exposing oneself to too much legal risk. This also means in certain situations a VPN or other tunnel-link could be hosted by the same operator providing support to Tor relays, in the same network or even on the same IP address. <br/></li>
+<li>In an economy with deep labor division, certain operators are providing a service to host servers (VPS etc.), while others provide VPN and other tunnel-link services and rent such servers. It is therefore not uncommon for diverse customers to run or share the same IP address. This is another situation where a VPN or other tunnel-link could be hosted by the same operator supporting Tor relays, in the same network or even on the same IP address.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Tunnel-link Connection Chain Risk
+</th>
+<td>
+<ul><li>Based on the section immediately above, it follows that adding arbitrary tunnel-links might lead to the same operator/network being used twice in your connection chain. Consider the scenarios below. <br/></li>
+<li><u>Scenario 1</u>:
+<ul><li>A VPN with a fixed IP address is used on the host, thereby it acts as the first relay. <br/></li>
+<li>The same user's Tor client coincidentally selects a Tor exit relay running on the same VPN IP address. <br/></li>
+<li>The user is now using the same IP address as the first and last proxy, meaning overall anonymity is reduced in this scenario.<br/></li></ul></li>
+<li><u>Scenario 2</u>:
+<ul><li>A VPN with a fixed IP address is set up inside Whonix-Workstation ™. This results in the connection scheme <code>User</code> → <code>Tor</code> → <code>VPN</code> → <code>Internet</code>. <br/></li>
+<li>A Tor entry guard is also hosted on the VPN IP address. <br/></li>
+<li>The user is now using the same IP address as the first and last proxy, meaning overall anonymity is reduced in this scenario.</li></ul></li></ul>
+</td></tr>
+<tr>
+<th scope="row">Tunnel Provider Criteria
+</th>
+<td>
+<ul><li>Consider the physical location of networks/servers and the legal jurisdiction(s) they are operating in. <br/></li>
+<li>Perhaps avoid using VPN or SSH providers that support port forwarding. <br/></li>
+<li>Perhaps only use tunnel-link providers that are assigning private (non-shared), unique IP addresses. However, as noted earlier it is unclear if this does more harm than good. <br/></li>
+<li>Perhaps use tunnel-link providers that run their own servers rather than relying on shared infrastructure.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Tor Relay Selection
+</th>
+<td>
+<ul><li>It might be safer to manually select your Tor relay(s), specifically the <a data-href="/wiki/Tor_Entry_Guards" href="./Tor_Entry_Guards.html" title="Tor Entry Guards">Entry Guard(s)</a> or <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridge(s)</a> in operation. <br/></li>
+<li>Tor documentation generally discourages tampering with Tor's routing algorithm by manually choosing relays. However, if you have decided to extend the length of the Tor chain -- despite the difficulty of this endeavor and potential adverse anonymity impacts -- then it might make sense to pick the entry guard(s) by hand. <br/></li>
+<li>Using <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> might be an alternative, but note this <a class="external text" data-href="https://lists.torproject.org/pipermail/tor-talk/2012-May/024378.html" href="https://lists.torproject.org/pipermail/tor-talk/2012-May/024378.html" rel="noreferrer noopener" target="_blank">warning from experienced Tor developers</a>: <blockquote><p>Bridges are less reliable and tend to have lower performance than other entry points. If you live in a uncensored area, they are not necessarily more secure than entry guards.</p></blockquote></li></ul>
+</td></tr></tbody></table>
 <h1><span class="mw-headline" id="Comparison_Table">Comparison Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;action=edit&amp;section=4.html" title="Edit section: Comparison Table">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <table class="wikitable" style="background-color: #fff;text-align: center">
 <tbody><tr>
@@ -402,11 +439,9 @@ SSH: <a data-href="/wiki/Tunnel_UDP_over_Tor#SSH_method_.28NOT_DOCUMENTED.29" hr
 <p>This means if file <code>/var/run/qubes-service/whonix-template</code> exists, which is the case in Whonix ™ TemplateVMs, the <i><span style="background-color:#FBFBFB">openvpn@openvpn</span></i> service will not start.
 </p>
 </span></li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
-<a class="external free" data-href="http://tor.stackexchange.com/a/114/80" href="http://tor.stackexchange.com/a/114/80" rel="noreferrer noopener" target="_blank">http://tor.stackexchange.com/a/114/80</a></span>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://tor.stackexchange.com/a/114/80" href="http://tor.stackexchange.com/a/114/80" rel="noreferrer noopener" target="_blank">http://tor.stackexchange.com/a/114/80</a></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
-<a class="external free" data-href="https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html" href="https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html" rel="noreferrer noopener" target="_blank">https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html</a></span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html" href="https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html" rel="noreferrer noopener" target="_blank">https://lists.torproject.org/pipermail/tor-talk/2016-July/041753.html</a></span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">See <a class="mw-redirect" data-href="/wiki/Hide_Tor_and_Whonix_from_your_ISP#Using_a_Proxy" href="./Hide_Tor_and_Whonix_from_your_ISP.html" title="Hide Tor and Whonix from your ISP">Hide_Tor_and_Whonix_from_your_ISP#Using_a_Proxy</a>.</span>
 </li>
@@ -446,7 +481,7 @@ The methods described in the tunnel documentation are all tested and should all 
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a>!
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Tunnels/Introduction" href="https://www.Whonix.org/wiki/Tunnels/Introduction" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Introduction" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Introduction" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -463,35 +498,35 @@ The methods described in the tunnel documentation are all tested and should all 
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191029070114
+Cached time: 20191030070130
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.070 seconds
-Real time usage: 0.080 seconds
-Preprocessor visited node count: 734/1000000
-Preprocessor generated node count: 2244/1000000
-Post‐expand include size: 8867/2097152 bytes
+CPU time usage: 0.075 seconds
+Real time usage: 0.086 seconds
+Preprocessor visited node count: 743/1000000
+Preprocessor generated node count: 2246/1000000
+Post‐expand include size: 8861/2097152 bytes
 Template argument size: 1492/2097152 bytes
 Highest expansion depth: 6/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 9979/5000000 bytes
+Unstrip post‐expand size: 10166/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   47.857      1 -total
- 19.96%    9.552      1 Template:Footer
- 14.65%    7.013      1 Template:Header
- 13.19%    6.313      1 Template:Reflist
-  7.73%    3.701      1 Template:Tunnel_Automation_Sale
-  7.15%    3.420      2 Template:Mbox
-  5.43%    2.597      1 Template:Share
-  4.88%    2.336      2 Template:Box
-  4.65%    2.226      1 Template:Edit_it
-  3.71%    1.774      2 Template:Whonix-gw
+100.00%   51.082      1 -total
+ 22.86%   11.676      1 Template:Footer
+ 13.76%    7.028      1 Template:Reflist
+  8.51%    4.346      1 Template:Header
+  8.24%    4.211      1 Template:Tunnel_Automation_Sale
+  7.72%    3.943      2 Template:Mbox
+  6.26%    3.196      1 Template:Share
+  5.63%    2.874      2 Template:Box
+  5.11%    2.613      1 Template:Edit_it
+  4.04%    2.064     13 Template:No
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51699" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51699">https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51699</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51781" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51781">https://www.whonix.org/w/index.php?title=Tunnels/Introduction&amp;oldid=51781</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -502,7 +537,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/I
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 26 October 2019, at 02:25.</li>
+<li id="footer-lastmod"> This page was last edited on 29 October 2019, at 13:01.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
