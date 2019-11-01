@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VPN-Firewall - enforces that your VPN gets actually used - Whonix
  url: ./VPN-Firewall
- date: Thu Oct 31 08:03:49 2019
+ date: Fri Nov  1 08:02:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -15,14 +15,8 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
-<meta content="MediaWiki 1.33.0" name="generator"/>
-<meta content="" name="google-site-verification"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@Whonix" name="twitter:site"/>
-<meta content="Whonix" name="twitter:domain"/>
-<meta content="@Whonix" name="twitter:creator"/>
-<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents..." name="description"/>
-<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents..." name="twitter:description"/>
+<meta content="MediaWiki 1.33.1" name="generator"/>
+<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents shared VPN/Tor server leak bug." name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=VPN-Firewall&amp;action=edit" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=VPN-Firewall&amp;action=edit" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -34,12 +28,18 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="VPN-Firewall" property="og:title"/>
 <meta content="./VPN-Firewall" property="og:url"/>
-<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents..." property="og:description"/>
+<meta content="VPN-Firewall - enforces that your VPN gets actually used - Whonix" property="og:title"/>
+<meta content="./VPN-Firewall" property="og:url"/>
+<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents shared VPN/Tor server leak bug." property="og:description"/>
+<meta content="https://www.whonix.org/w/images/1/1e/Vpnfirewall-29940640.png" property="og:image"/>
+<meta content="2019-06-18T03:23:33Z" property="article:modified_time"/>
+<meta content="2019-06-18T03:23:33Z" property="article:published_time"/>
+<meta content="@Whonix" property="twitter:site"/>
+<meta content="VPN-Firewall - enforces that your VPN gets actually used - Whonix" property="twitter:title"/>
+<meta content="Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents shared VPN/Tor server leak bug." property="twitter:description"/>
+<meta content="https://www.whonix.org/w/images/1/1e/Vpnfirewall-29940640.png" property="twitter:image"/>
+<meta content="summary" property="twitter:card"/>
 
-<meta content="" property="fb:app_id"/>
-<meta content="" property="fb:admins"/>
-<meta content="https://www.facebook.com/Whonix" property="article:author"/>
-<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
@@ -117,7 +117,10 @@ Whonix requires Donations to stay alive.
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><br/>
+</p><p>
+</p><p><br/>
+</p>
 <h1><span class="mw-headline" id="Why">Why</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;action=edit&amp;section=1.html" title="Edit section: Why">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>If you simply add a VPN using common instructions, it generally fails open. That means, if the VPN breaks down, because the connection is interrupted, traffic will be send without the VPN.
 </p><p>It’s much safer when it fails closed, i.e. when the VPN connection breaks down, the whole internet connection must be down as long as the VPN connection isn’t restored.
@@ -831,7 +834,7 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="./Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a>.
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a>? See <a class="external text" data-href="./Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a>. Help is wanted and welcomed.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/VPN-Firewall" href="https://www.Whonix.org/wiki/VPN-Firewall" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VPN-Firewall" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -848,32 +851,32 @@ Debian feature request: <a class="external text" data-href="http://bugs.debian.o
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191031070348
+Cached time: 20191031164547
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.143 seconds
-Real time usage: 0.199 seconds
-Preprocessor visited node count: 1070/1000000
-Preprocessor generated node count: 2709/1000000
-Post‐expand include size: 23277/2097152 bytes
-Template argument size: 4838/2097152 bytes
+CPU time usage: 0.123 seconds
+Real time usage: 0.140 seconds
+Preprocessor visited node count: 1064/1000000
+Preprocessor generated node count: 2675/1000000
+Post‐expand include size: 23194/2097152 bytes
+Template argument size: 4894/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 11268/5000000 bytes
+Unstrip post‐expand size: 10740/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  162.049      1 -total
- 27.01%   43.769     25 Template:CodeSelect
- 22.28%   36.110      1 Template:Header
- 10.29%   16.681      1 Template:VPN/Setup/Get_VPN_Certificate
-  9.87%   15.990      9 Template:Box
-  8.71%   14.109      5 Template:Open_with_root_rights
-  7.00%   11.338      1 Template:VPN-Firewall/Troubleshooting
-  6.71%   10.879      4 Template:Mbox
-  5.37%    8.700      1 Template:VPN/Setup/VPN_Credentials
-  5.16%    8.361      1 Template:Footer
+100.00%  102.316      1 -total
+ 37.74%   38.610     25 Template:CodeSelect
+ 11.41%   11.678      5 Template:Open_with_root_rights
+ 11.32%   11.579      1 Template:VPN-Firewall/Troubleshooting
+ 10.91%   11.162      9 Template:Box
+  9.21%    9.423      1 Template:Footer
+  7.93%    8.112      1 Template:Header
+  7.58%    7.756      1 Template:Reflist
+  7.30%    7.474      1 Template:VPN/Setup/Get_VPN_Certificate
+  6.50%    6.647      1 Template:VPN/Setup/Systemd
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=48595" dir="ltr" href="https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=48595">https://www.whonix.org/w/index.php?title=VPN-Firewall&amp;oldid=48595</a>"</div>
@@ -908,5 +911,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VPN-Firew
 </div>
 
 </body>
-<!-- Cached/compressed 20191031070348 -->
+<!-- Cached/compressed 20191031164547 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Electrum Bitcoin Wallet in Whonix ™ Development Notes - Whonix
  url: ../Dev/electrum
- date: Thu Oct 31 07:38:33 2019
+ date: Fri Nov  1 07:38:17 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -15,14 +15,8 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
-<meta content="MediaWiki 1.33.0" name="generator"/>
-<meta content="" name="google-site-verification"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@Whonix" name="twitter:site"/>
-<meta content="Whonix" name="twitter:domain"/>
-<meta content="@Whonix" name="twitter:creator"/>
+<meta content="MediaWiki 1.33.1" name="generator"/>
 <meta content="outdated packages.debian.org, binaries-freedom package, etc." name="description"/>
-<meta content="outdated packages.debian.org, binaries-freedom package, etc." name="twitter:description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Dev/electrum&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/electrum&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Dev/electrum&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/electrum&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -34,12 +28,18 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/electrum" property="og:title"/>
 <meta content="../Dev/electrum" property="og:url"/>
+<meta content="Electrum Bitcoin Wallet in Whonix ™ Development Notes - Whonix" property="og:title"/>
+<meta content="../Dev/electrum" property="og:url"/>
 <meta content="outdated packages.debian.org, binaries-freedom package, etc." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="2019-08-11T12:09:23Z" property="article:modified_time"/>
+<meta content="2019-08-11T12:09:23Z" property="article:published_time"/>
+<meta content="@Whonix" property="twitter:site"/>
+<meta content="Electrum Bitcoin Wallet in Whonix ™ Development Notes - Whonix" property="twitter:title"/>
+<meta content="outdated packages.debian.org, binaries-freedom package, etc." property="twitter:description"/>
+<meta content="" property="twitter:image"/>
+<meta content="summary" property="twitter:card"/>
 
-<meta content="" property="fb:app_id"/>
-<meta content="" property="fb:admins"/>
-<meta content="https://www.facebook.com/Whonix" property="article:author"/>
-<meta content="https://www.facebook.com/Whonix" property="article:publisher"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
@@ -117,8 +117,10 @@ Whonix requires Donations to stay alive.
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output">
-<p>To mitigate the risk of a known exploit, Electrum versions older than v3.3 are prevented from connecting to public servers. <sup class="reference" id="cite_ref-elecrum_fishing_exploit_1-0"><a href="#cite_note-elecrum_fishing_exploit-1">[1]</a></sup> <sup class="reference" id="cite_ref-elecrum_fishing_expoit2_2-0"><a href="#cite_note-elecrum_fishing_expoit2-2">[2]</a></sup> This step was necessary to prevent user exposure to phishing messages. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> If you have an Electrum version older than v3.3 installed, then it is necessary to upgrade.
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>
+</p><p><br/>
+</p><p><br/>
+To mitigate the risk of a known exploit, Electrum versions older than v3.3 are prevented from connecting to public servers. <sup class="reference" id="cite_ref-elecrum_fishing_exploit_1-0"><a href="#cite_note-elecrum_fishing_exploit-1">[1]</a></sup> <sup class="reference" id="cite_ref-elecrum_fishing_expoit2_2-0"><a href="#cite_note-elecrum_fishing_expoit2-2">[2]</a></sup> This step was necessary to prevent user exposure to phishing messages. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> If you have an Electrum version older than v3.3 installed, then it is necessary to upgrade.
 </p><p>At the time of writing (July 20, 2019) the Electrum website (<a class="external free" data-href="https://electrum.org" href="https://electrum.org" rel="noreferrer noopener" target="_blank">https://electrum.org</a>) was the target of a large <a class="external text" data-href="https://en.wikipedia.org/wiki/Denial-of-service_attack" href="https://en.wikipedia.org/wiki/Denial-of-service_attack" rel="noreferrer noopener" target="_blank">DDoS attack</a>. 
 To follow developments, refer to this <a class="external text" data-href="https://forums.whonix.org/t/i-can-not-install-electrum/7794" href="https://forums.whonix.org/t/i-can-not-install-electrum/7794" rel="noreferrer noopener" target="_blank">Whonix forum thread</a>.
 </p><p>This prevents users from downloading the Electrum AppImage using file downloaders like <a class="external text" data-href="https://whonix.org/wiki/Secure_Downloads" href="https://whonix.org/wiki/Secure_Downloads" rel="noreferrer noopener" target="_blank">scurl</a> and <a class="external text" data-href="https://www.gnu.org/software/wget/" href="https://www.gnu.org/software/wget/" rel="noreferrer noopener" target="_blank">wget</a>. If you are affected by this issue, the downloaded AppImage and signature will show the corresponding file to be composed of an HTML document and ASCII text. This means there are limited options for securely downloading a functional Electrum version right now.
@@ -164,7 +166,7 @@ The latter package has been added to <code>whonix-workstation-packages-recommend
 <p><br/>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
+<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/electrum" href="https://www.Whonix.org/wiki/Dev/electrum" rel="noreferrer noopener" target="_blank">https</a> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/electrum" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/electrum" rel="noreferrer noopener" target="_blank">onion</a><br/>
@@ -181,32 +183,32 @@ The latter package has been added to <code>whonix-workstation-packages-recommend
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191031063832
+Cached time: 20191031145035
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.033 seconds
-Real time usage: 0.036 seconds
-Preprocessor visited node count: 224/1000000
-Preprocessor generated node count: 941/1000000
-Post‐expand include size: 5943/2097152 bytes
-Template argument size: 2110/2097152 bytes
+CPU time usage: 0.036 seconds
+Real time usage: 0.042 seconds
+Preprocessor visited node count: 220/1000000
+Preprocessor generated node count: 915/1000000
+Post‐expand include size: 5866/2097152 bytes
+Template argument size: 2165/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4290/5000000 bytes
+Unstrip post‐expand size: 3912/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   23.902      1 -total
- 39.21%    9.373      1 Template:Footer
- 27.22%    6.505      1 Template:Reflist
- 13.59%    3.249      1 Template:Header
-  9.91%    2.368      1 Template:Share
-  9.70%    2.319      1 Template:Edit_it
-  6.37%    1.523      1 Template:Title
-  6.10%    1.459      1 Template:Mbox
-  4.13%    0.987      1 Template:RandomNews
-  3.63%    0.867      2 Template:Name
+100.00%   29.637      1 -total
+ 35.53%   10.530      1 Template:Footer
+ 30.04%    8.903      1 Template:Reflist
+ 14.19%    4.204      1 Template:Header
+  9.08%    2.690      1 Template:Title
+  8.36%    2.478      1 Template:Mbox
+  8.25%    2.444      1 Template:Edit_it
+  8.19%    2.426      1 Template:Share
+  4.28%    1.269      1 Template:RandomNews
+  3.82%    1.133      1 Template:Box
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/electrum&amp;oldid=49970" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/electrum&amp;oldid=49970">https://www.whonix.org/w/index.php?title=Dev/electrum&amp;oldid=49970</a>"</div>
@@ -241,5 +243,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/elect
 </div>
 
 </body>
-<!-- Cached/compressed 20191031063832 -->
+<!-- Cached/compressed 20191031145035 -->
 </html>
