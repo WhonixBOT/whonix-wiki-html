@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Authority control - Whonix
  url: ./Authority_control
- date: Mon Nov  4 07:31:53 2019
+ date: Tue Nov  5 07:31:57 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -147,7 +147,7 @@ end
 	if not string.match( id, '^[1-9]%d*$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://www.iaaf.org/athletes/biographies/athcode='" href="https://www.iaaf.org/athletes/biographies/athcode='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'IAAF' )
+	return '<a class="external text" data-href="https://www.iaaf.org/athletes/biographies/athcode='" href="https://www.iaaf.org/athletes/biographies/athcode='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://www.iaaf.org/athletes/biographies/athcode='" href="https://web.archive.org/web/https://www.iaaf.org/athletes/biographies/athcode='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'IAAF' )
 end
 </p><p>function p.viafLink( id )
 	--P214's format regex: [1-9]\d(\d{0,7}|\d{17,20}) (e.g. 123456789, 1234567890123456789012)
@@ -155,21 +155,21 @@ end
 	   not string.match( id, '^[1-9]%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://viaf.org/viaf/'" href="https://viaf.org/viaf/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'VIAF' )
+	return '<a class="external text" data-href="https://viaf.org/viaf/'" href="https://viaf.org/viaf/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://viaf.org/viaf/'" href="https://web.archive.org/web/https://viaf.org/viaf/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'VIAF' )
 end
 </p><p>function p.kulturnavLink( id )
 	--P1248's format regex: [0-9a-f]{8}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{12} (e.g. 12345678-1234-1234-1234-1234567890AB)
 	if not string.match( id, '^%x%x%x%x%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%x%x%x%x%x%x%x%x$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://kulturnav.org/'" href="http://kulturnav.org/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'KULTURNAV' )
+	return '<a class="external text" data-href="http://kulturnav.org/'" href="http://kulturnav.org/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://kulturnav.org/'" href="https://web.archive.org/web/http://kulturnav.org/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'KULTURNAV' )
 end
 </p><p>function p.sikartLink( id )
 	--P781's format regex: \d{7,9} (e.g. 123456789)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www.sikart.ch/KuenstlerInnen.aspx?id='" href="http://www.sikart.ch/KuenstlerInnen.aspx?id='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;lng=en ' .. id .. '</a>' .. p.getCatForId( 'SIKART' )
+	return '<a class="external text" data-href="http://www.sikart.ch/KuenstlerInnen.aspx?id='" href="http://www.sikart.ch/KuenstlerInnen.aspx?id='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;lng=en ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.sikart.ch/KuenstlerInnen.aspx?id='" href="https://web.archive.org/web/http://www.sikart.ch/KuenstlerInnen.aspx?id='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'SIKART' )
 end
 </p><p>function p.tlsLink( id )
 	local id2 = id:gsub(' +', '_')
@@ -179,14 +179,14 @@ end
 	if not mw.ustring.match( id2, regex ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://tls.theaterwissenschaft.ch/wiki/'" href="http://tls.theaterwissenschaft.ch/wiki/'" rel="noreferrer noopener" target="_blank">.. id2 .. ' ' .. id .. '</a>' .. p.getCatForId( 'TLS' )
+	return '<a class="external text" data-href="http://tls.theaterwissenschaft.ch/wiki/'" href="http://tls.theaterwissenschaft.ch/wiki/'" rel="noreferrer noopener" target="_blank">.. id2 .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://tls.theaterwissenschaft.ch/wiki/'" href="https://web.archive.org/web/http://tls.theaterwissenschaft.ch/wiki/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'TLS' )
 end
 </p><p>function p.ciniiLink( id )
 	--P271's format regex: DA\d{7}[\dX] (e.g. DA12345678)
 	if not string.match( id, '^DA%d%d%d%d%d%d%d[%dX]$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://ci.nii.ac.jp/author/'" href="https://ci.nii.ac.jp/author/'" rel="noreferrer noopener" target="_blank">.. id .. '?l=en ' .. id .. '</a>' .. p.getCatForId( 'CINII' )
+	return '<a class="external text" data-href="https://ci.nii.ac.jp/author/'" href="https://ci.nii.ac.jp/author/'" rel="noreferrer noopener" target="_blank">.. id .. '?l=en ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://ci.nii.ac.jp/author/'" href="https://web.archive.org/web/https://ci.nii.ac.jp/author/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'CINII' )
 end
 </p><p>function p.bneLink( id )
 	--P950's format regex: (XX|FF|a)\d{4,7}|(bima|bimo|bica|bis[eo]|bivi|Mise|Mimo|Mima)\d{10} (e.g. XX1234567)
@@ -196,21 +196,21 @@ end
 	   not string.match( id, '^Mi[sm][eoa]%d%d%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'BNE' )
+	return '<a class="external text" data-href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" href="https://web.archive.org/web/http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'BNE' )
 end
 </p><p>function p.uscongressLink( id )
 	--P1157's format regex: [A-Z]00[01]\d{3} (e.g. A000123)
 	if not string.match( id, '^[A-Z]00[01]%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://bioguide.congress.gov/scripts/biodisplay.pl?index='" href="http://bioguide.congress.gov/scripts/biodisplay.pl?index='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'USCongress' )
+	return '<a class="external text" data-href="http://bioguide.congress.gov/scripts/biodisplay.pl?index='" href="http://bioguide.congress.gov/scripts/biodisplay.pl?index='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://bioguide.congress.gov/scripts/biodisplay.pl?index='" href="https://web.archive.org/web/http://bioguide.congress.gov/scripts/biodisplay.pl?index='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'USCongress' )
 end
 </p><p>function p.naraLink( id )
 	--P1225's format regex: ^([1-9]\d{0,7})$ (e.g. 12345678)
 	if not string.match( id, '^[1-9]%d?%d?%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://catalog.archives.gov/id/'" href="https://catalog.archives.gov/id/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'NARA' )
+	return '<a class="external text" data-href="https://catalog.archives.gov/id/'" href="https://catalog.archives.gov/id/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://catalog.archives.gov/id/'" href="https://web.archive.org/web/https://catalog.archives.gov/id/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NARA' )
 end
 </p><p>function p.botanistLink( id )
 	--P428's format regex: ('t )?(d')?(de )?(la )?(van (der )?)?(Ma?c)?(De)?(Di)?\p{Lu}?C?['\p{Ll}]*([-'. ]*(van )?(y )?(d[ae][nr]?[- ])?(Ma?c)?[\p{Lu}bht]?C?['\p{Ll}]*)*\.? ?f?\.? (e.g. L.)
@@ -219,21 +219,21 @@ end
 		return false
 	end
 	local id2 = id:gsub(' +', '%%20')
-	return '<a class="external text" data-href="http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" href="http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" rel="noreferrer noopener" target="_blank">.. id2 .. ' ' .. id .. '</a>' .. p.getCatForId( 'Botanist' )
+	return '<a class="external text" data-href="http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" href="http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" rel="noreferrer noopener" target="_blank">.. id2 .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" href="https://web.archive.org/web/http://www.ipni.org/ipni/advAuthorSearch.do?find_abbreviation='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'Botanist' )
 end
 </p><p>function p.mgpLink( id )
 	--P549's format regex: \d{1,6} (e.g. 123456)
 	if not string.match( id, '^%d%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www.genealogy.ams.org/id.php?id='" href="http://www.genealogy.ams.org/id.php?id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'MGP' )
+	return '<a class="external text" data-href="http://www.genealogy.ams.org/id.php?id='" href="http://www.genealogy.ams.org/id.php?id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.genealogy.ams.org/id.php?id='" href="https://web.archive.org/web/http://www.genealogy.ams.org/id.php?id='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'MGP' )
 end
 </p><p>function p.rslLink( id )
 	--P947's format regex: \d{1,9} (e.g. 123456789)
 	if not string.match( id, '^%d%d?%d?%d?%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" href="http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a>' .. p.getCatForId( 'RSL' )
+	return '<a class="external text" data-href="http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" href="http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" href="https://web.archive.org/web/http://aleph.rsl.ru/F?func=find-b&amp;find_code=SYS&amp;adjacent=Y&amp;local_base=RSL11&amp;request='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'RSL' )
 end
 </p><p>function p.leonoreLink( id )
 	--P640's format regex: LH/\d{1,4}/\d{1,3}|19800035/\d{1,4}/\d{1,5}(Bis)?|C/0/\d{1,2} (e.g. LH/2064/18)
@@ -242,7 +242,7 @@ end
 	   not id:match( '^C/0/%d%d?$' ) then                          --IDs from        C/0/1 to             C/0/84 (84 famous legionaries)
 		return false
 	end
-	return '<a class="external text" data-href="http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" href="http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'Léonore' )
+	return '<a class="external text" data-href="http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" href="http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" href="https://web.archive.org/web/http://www.culture.gouv.fr/public/mistral/leonore_fr?ACTION=CHERCHER&amp;FIELD_1=COTE&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'Léonore' )
 end
 </p><p>function p.sbnLink( id )
 	--P396's format regex: IT\\ICCU\\(\d{10}|\D\D[\D\d]\D\\\d{6}) (e.g. IT\ICCU\CFIV\000163)
@@ -250,35 +250,35 @@ end
 	   not string.match( id, '^IT\\ICCU\\%u%u[%u%d]%u\\%d%d%d%d%d%d$' ) then --legacy: %u used here instead of %D (but the faulty ID cat is empty, out of ~12k uses)
 		return false
 	end
-	return '<a class="external text" data-href="http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" href="http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'SBN' )
+	return '<a class="external text" data-href="http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" href="http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" href="https://web.archive.org/web/http://opac.sbn.it/opacsbn/opac/iccu/scheda_authority.jsp?bid='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'SBN' )
 end
 </p><p>function p.nkcLink( id )
 	--P691's format regex: [a-z]{2,4}[0-9]{2,14} (e.g. abcd12345678901234)
 	if not string.match( id, '^[a-z][a-z][a-z]?[a-z]?%d%d%d?%d?%d?%d?%d?%d?%d?%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" href="https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a>' .. p.getCatForId( 'NKC' )
+	return '<a class="external text" data-href="https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" href="https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" href="https://web.archive.org/web/https://aleph.nkp.cz/F/?func=find-c&amp;local_base=aut&amp;ccl_term=ica='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NKC' )
 end
 </p><p>function p.nclLink( id )
 	--P1048's format regex: \d+ (e.g. 1081436)
 	if not string.match( id, '^%d+$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" href="http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a>' .. p.getCatForId( 'NCL' )
+	return '<a class="external text" data-href="http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" href="http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;CON_LNG=ENG ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" href="https://web.archive.org/web/http://aleweb.ncl.edu.tw/F/?func=accref&amp;acc_sequence='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NCL' )
 end
 </p><p>function p.ndlLink( id )
 	--P349's format regex: 0?\d{8} (e.g. 012345678)
 	if not string.match( id, '^0?%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://id.ndl.go.jp/auth/ndlna/'" href="https://id.ndl.go.jp/auth/ndlna/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'NDL' )
+	return '<a class="external text" data-href="https://id.ndl.go.jp/auth/ndlna/'" href="https://id.ndl.go.jp/auth/ndlna/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://id.ndl.go.jp/auth/ndlna/'" href="https://web.archive.org/web/https://id.ndl.go.jp/auth/ndlna/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NDL' )
 end
 </p><p>function p.sudocLink( id )
 	--P269's format regex: (\d{8}[\dX]|) (e.g. 026927608)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d[%dxX]$' ) then --legacy: allow lowercase 'x'
 		return false
 	end
-	return '<a class="external text" data-href="https://www.idref.fr/'" href="https://www.idref.fr/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'SUDOC' )
+	return '<a class="external text" data-href="https://www.idref.fr/'" href="https://www.idref.fr/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://www.idref.fr/'" href="https://web.archive.org/web/https://www.idref.fr/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'SUDOC' )
 end
 </p><p>function p.hdsLink( id )
 	--P902's format regex: 50\d{3}|[1-4]\d{4}|[1-9]\d{0,3}| (e.g. 50123)
@@ -287,14 +287,14 @@ end
 	   not string.match( id, '^[1-9]%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www.hls-dhs-dss.ch/textes/f/F'" href="http://www.hls-dhs-dss.ch/textes/f/F'" rel="noreferrer noopener" target="_blank">.. id .. '.php ' .. id .. '</a>' .. p.getCatForId( 'HDS' )
+	return '<a class="external text" data-href="http://www.hls-dhs-dss.ch/textes/f/F'" href="http://www.hls-dhs-dss.ch/textes/f/F'" rel="noreferrer noopener" target="_blank">.. id .. '.php ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.hls-dhs-dss.ch/textes/f/F'" href="https://web.archive.org/web/http://www.hls-dhs-dss.ch/textes/f/F'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'HDS' )
 end
 </p><p>function p.lirLink( id )
 	--P886's format regex: \d+ (e.g. 1)
 	if not string.match( id, '^%d+$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www.e-lir.ch/e-LIR___Lexicon.'" href="http://www.e-lir.ch/e-LIR___Lexicon.'" rel="noreferrer noopener" target="_blank">.. id .. '.450.0.html ' .. id .. '</a>' .. p.getCatForId( 'LIR' )
+	return '<a class="external text" data-href="http://www.e-lir.ch/e-LIR___Lexicon.'" href="http://www.e-lir.ch/e-LIR___Lexicon.'" rel="noreferrer noopener" target="_blank">.. id .. '.450.0.html ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.e-lir.ch/e-LIR___Lexicon.'" href="https://web.archive.org/web/http://www.e-lir.ch/e-LIR___Lexicon.'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'LIR' )
 end
 </p><p>function p.splitLccn( id )
 	--P244's format regex: (n|nb|nr|no|ns|sh)([4-9][0-9]|00|20[0-1][0-9])[0-9]{6} (e.g. n78039510)
@@ -319,14 +319,14 @@ end
 	end
 	local lccnType = parts[1] ~= 'sh' and 'names' or 'subjects'
 	id = parts[1] .. parts[2] .. p.append( parts[3], '0', 6 )
-	return '<a class="external text" data-href="http://id.loc.gov/authorities/'" href="http://id.loc.gov/authorities/'" rel="noreferrer noopener" target="_blank">.. lccnType .. '/' .. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'LCCN' )
+	return '<a class="external text" data-href="http://id.loc.gov/authorities/'" href="http://id.loc.gov/authorities/'" rel="noreferrer noopener" target="_blank">.. lccnType .. '/' .. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://id.loc.gov/authorities/'" href="https://web.archive.org/web/http://id.loc.gov/authorities/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'LCCN' )
 end
 </p><p>function p.mbaLink( id )
 	--P434's format regex: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} (e.g. 12345678-1234-1234-1234-1234567890AB)
 	if not string.match( id, '^%x%x%x%x%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%-%x%x%x%x%x%x%x%x%x%x%x%x$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://musicbrainz.org/artist/'" href="https://musicbrainz.org/artist/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'MusicBrainz' )
+	return '<a class="external text" data-href="https://musicbrainz.org/artist/'" href="https://musicbrainz.org/artist/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://musicbrainz.org/artist/'" href="https://web.archive.org/web/https://musicbrainz.org/artist/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'MusicBrainz' )
 end
 </p><p>--Returns the ISNI check digit isni must be a string where the 15 first elements are digits, e.g. 0000000066534145
 function p.getIsniCheckDigit( isni )
@@ -343,7 +343,7 @@ function p.getIsniCheckDigit( isni )
 	return tostring( result )
 end
 </p><p>--Validate ISNI (and ORCID) and retuns it as a 16 characters string or returns false if it's invalid
---See <a class="external free" data-href="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" href="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" rel="noreferrer noopener" target="_blank">http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier</a>
+--See <a class="external free" data-href="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" href="http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" rel="noreferrer noopener" target="_blank">http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier</a> <sup><a data-href="https://web.archive.org/web/http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" href="https://web.archive.org/web/http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 function p.validateIsni( id )
 	--P213 (ISNI) format regex: [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{3}[0-9X] (e.g. 0000-0000-6653-4145)
 	--P496 (ORCID) format regex: 0000-000(1-[5-9]|2-[0-9]|3-[0-4])\d{3}-\d{3}[\dX] (e.g. 0000-0002-7398-5483)
@@ -361,7 +361,7 @@ end
 	if not id then
 		return false
 	end
-	return '<a class="external text" data-href="http://isni.org/isni/'" href="http://isni.org/isni/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id:sub( 1, 4 ) .. ' ' .. id:sub( 5, 8 ) .. ' '  .. id:sub( 9, 12 ) .. ' '  .. id:sub( 13, 16 ) .. '</a>' .. p.getCatForId( 'ISNI' )
+	return '<a class="external text" data-href="http://isni.org/isni/'" href="http://isni.org/isni/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id:sub( 1, 4 ) .. ' ' .. id:sub( 5, 8 ) .. ' '  .. id:sub( 9, 12 ) .. ' '  .. id:sub( 13, 16 ) .. '</a> <sup><a data-href="https://web.archive.org/web/http://isni.org/isni/'" href="https://web.archive.org/web/http://isni.org/isni/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'ISNI' )
 end
 </p><p>function p.orcidLink( id )
 	id = p.validateIsni( id ) --e.g. 0000-0002-7398-5483
@@ -369,7 +369,7 @@ end
 		return false
 	end
 	id = id:sub( 1, 4 ) .. '-' .. id:sub( 5, 8 ) .. '-'  .. id:sub( 9, 12 ) .. '-'  .. id:sub( 13, 16 )
-	return '<a class="external text" data-href="https://orcid.org/'" href="https://orcid.org/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'ORCID' )
+	return '<a class="external text" data-href="https://orcid.org/'" href="https://orcid.org/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://orcid.org/'" href="https://web.archive.org/web/https://orcid.org/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'ORCID' )
 end
 </p><p>function p.gndLink( id )
 	--P227's format regex: (1|1[01])\d{7}[0-9X]|[47]\d{6}-\d|[1-9]\d{0,7}-[0-9X]|3\d{7}[0-9X] (e.g. 4079154-3)
@@ -379,14 +379,14 @@ end
 	   not string.match( id, '^3%d%d%d%d%d%d%d[0-9X]$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://d-nb.info/gnd/'" href="https://d-nb.info/gnd/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'GND' )
+	return '<a class="external text" data-href="https://d-nb.info/gnd/'" href="https://d-nb.info/gnd/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://d-nb.info/gnd/'" href="https://web.archive.org/web/https://d-nb.info/gnd/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'GND' )
 end
 </p><p>function p.selibrLink( id )
 	--P906's format regex: [1-9]\d{4,5} (e.g. 123456)
 	if not string.match( id, '^[1-9]%d%d%d%d%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://libris.kb.se/auth/'" href="https://libris.kb.se/auth/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'SELIBR' )
+	return '<a class="external text" data-href="https://libris.kb.se/auth/'" href="https://libris.kb.se/auth/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://libris.kb.se/auth/'" href="https://web.archive.org/web/https://libris.kb.se/auth/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'SELIBR' )
 end
 </p><p>function p.bnfLink( id )
 	--P268's format regex: \d{8}[0-9bcdfghjkmnpqrstvwxz] (e.g. 123456789)
@@ -397,14 +397,14 @@ end
 	if not string.match( id, '^cb.+$' ) then
 		id = 'cb' .. id
 	end
-	return '<a class="external text" data-href="http://catalogue.bnf.fr/ark:/12148/'" href="http://catalogue.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <a class="external text" data-href="http://data.bnf.fr/ark:/12148/'" href="http://data.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">.. id .. ' (data)</a>' .. p.getCatForId( 'BNF' )
+	return '<a class="external text" data-href="http://catalogue.bnf.fr/ark:/12148/'" href="http://catalogue.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://catalogue.bnf.fr/ark:/12148/'" href="https://web.archive.org/web/http://catalogue.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <a class="external text" data-href="http://data.bnf.fr/ark:/12148/'" href="http://data.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">.. id .. ' (data)</a> <sup><a data-href="https://web.archive.org/web/http://data.bnf.fr/ark:/12148/'" href="https://web.archive.org/web/http://data.bnf.fr/ark:/12148/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'BNF' )
 end
 </p><p>function p.bpnLink( id )
 	--P651's format regex: \d{8} (e.g. 12345678)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www.biografischportaal.nl/en/persoon/'" href="http://www.biografischportaal.nl/en/persoon/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'BPN' )
+	return '<a class="external text" data-href="http://www.biografischportaal.nl/en/persoon/'" href="http://www.biografischportaal.nl/en/persoon/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www.biografischportaal.nl/en/persoon/'" href="https://web.archive.org/web/http://www.biografischportaal.nl/en/persoon/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'BPN' )
 end
 </p><p>function p.ridLink( id )
 	--P1053's format regex: [A-Z]-\d{4}-(19|20)\d\d (e.g. A-1234-1934)
@@ -412,7 +412,7 @@ end
 	   not string.match( id, '^[A-Z]%-%d%d%d%d%-20%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://www.researcherid.com/rid/'" href="https://www.researcherid.com/rid/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'RID' )
+	return '<a class="external text" data-href="https://www.researcherid.com/rid/'" href="https://www.researcherid.com/rid/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://www.researcherid.com/rid/'" href="https://web.archive.org/web/https://www.researcherid.com/rid/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'RID' )
 end
 </p><p>function p.bibsysLink( id )
 	--P1015's format regex: [1-9]\d* or [1-9](\d{0,8}|\d{12}) (e.g. 1234567890123)
@@ -421,35 +421,35 @@ end
 	   not string.match( id, '^[1-9]%d%d%d%d%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://authority.bibsys.no/authority/rest/authorities/html/'" href="https://authority.bibsys.no/authority/rest/authorities/html/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'BIBSYS' )
+	return '<a class="external text" data-href="https://authority.bibsys.no/authority/rest/authorities/html/'" href="https://authority.bibsys.no/authority/rest/authorities/html/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://authority.bibsys.no/authority/rest/authorities/html/'" href="https://web.archive.org/web/https://authority.bibsys.no/authority/rest/authorities/html/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'BIBSYS' )
 end
 </p><p>function p.ulanLink( id )
 	--P245's format regex: 500\d{6} (e.g. 500123456)
 	if not string.match( id, '^500%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" href="https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'ULAN' )
+	return '<a class="external text" data-href="https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" href="https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" href="https://web.archive.org/web/https://www.getty.edu/vow/ULANFullDisplay?find=&amp;role=&amp;nation=&amp;subjectid='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'ULAN' )
 end
 </p><p>function p.nlaLink( id )
 	--P409's format regex: [1-9][0-9]{0,11} (e.g. 123456789012)
 	if not string.match( id, '^[1-9]%d?%d?%d?%d?%d?%d?%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://nla.gov.au/anbd.aut-an'" href="https://nla.gov.au/anbd.aut-an'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'NLA' )
+	return '<a class="external text" data-href="https://nla.gov.au/anbd.aut-an'" href="https://nla.gov.au/anbd.aut-an'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://nla.gov.au/anbd.aut-an'" href="https://web.archive.org/web/https://nla.gov.au/anbd.aut-an'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NLA' )
 end
 </p><p>function p.rkdartistsLink( id )
 	--P650's format regex: [1-9]\d{0,5} (e.g. 123456)
 	if not string.match( id, '^[1-9]%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://rkd.nl/en/explore/artists/'" href="https://rkd.nl/en/explore/artists/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'RKDartists' )
+	return '<a class="external text" data-href="https://rkd.nl/en/explore/artists/'" href="https://rkd.nl/en/explore/artists/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://rkd.nl/en/explore/artists/'" href="https://web.archive.org/web/https://rkd.nl/en/explore/artists/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'RKDartists' )
 end
 </p><p>function p.snacLink( id )
 	--P3430's format regex: \d*[A-Za-z][0-9A-Za-z]* (e.g. A)
 	if not string.match( id, '^%d*[A-Za-z][0-9A-Za-z]*$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://socialarchive.iath.virginia.edu/ark:/99166/'" href="http://socialarchive.iath.virginia.edu/ark:/99166/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'SNAC-ID' )
+	return '<a class="external text" data-href="http://socialarchive.iath.virginia.edu/ark:/99166/'" href="http://socialarchive.iath.virginia.edu/ark:/99166/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://socialarchive.iath.virginia.edu/ark:/99166/'" href="https://web.archive.org/web/http://socialarchive.iath.virginia.edu/ark:/99166/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'SNAC-ID' )
 end
 </p><p>function p.dblpLink( id )
 	--P2456's format regex: \d{2,3} /\d+(-\d+)?|[a-z] /[a-zA-Z][0-9A-Za-z]*(-\d+)? (e.g. 123/123)
@@ -459,35 +459,35 @@ end
 	   not string.match( id, '^[a-z]/[a-zA-Z][0-9A-Za-z]*%-%d+$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://dblp.org/pid/'" href="https://dblp.org/pid/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'DBLP' )
+	return '<a class="external text" data-href="https://dblp.org/pid/'" href="https://dblp.org/pid/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://dblp.org/pid/'" href="https://web.archive.org/web/https://dblp.org/pid/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'DBLP' )
 end
 </p><p>function p.acmLink( id )
 	--P864's format regex: \d{11} (e.g. 12345678901)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://dl.acm.org/author_page.cfm?id='" href="https://dl.acm.org/author_page.cfm?id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'ACM-DL' )
+	return '<a class="external text" data-href="https://dl.acm.org/author_page.cfm?id='" href="https://dl.acm.org/author_page.cfm?id='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://dl.acm.org/author_page.cfm?id='" href="https://web.archive.org/web/https://dl.acm.org/author_page.cfm?id='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'ACM-DL' )
 end
 </p><p>function p.autoresuyLink( id )
 	--P2558's format regex: [1-9]\d{0,4} (e.g. 12345)
 	if not string.match( id, '^[1-9]%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://autores.uy/autor/'" href="http://autores.uy/autor/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' ..  p.getCatForId( 'autores.uy' )
+	return '<a class="external text" data-href="http://autores.uy/autor/'" href="http://autores.uy/autor/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://autores.uy/autor/'" href="https://web.archive.org/web/http://autores.uy/autor/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' ..  p.getCatForId( 'autores.uy' )
 end
 </p><p>function p.picLink( id )
 	--P2750's format regex: [1-9]\d* (e.g. 1)
 	if not string.match( id, '^[1-9]%d*$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://pic.nypl.org/constituents/'" href="https://pic.nypl.org/constituents/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'PIC' )
+	return '<a class="external text" data-href="https://pic.nypl.org/constituents/'" href="https://pic.nypl.org/constituents/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://pic.nypl.org/constituents/'" href="https://web.archive.org/web/https://pic.nypl.org/constituents/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'PIC' )
 end
 </p><p>function p.bildLink( id )
 	--P2092's format regex: \d+ (e.g. 1)
 	if not string.match( id, '^%d+$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://www.bildindex.de/document/obj'" href="https://www.bildindex.de/document/obj'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'Bildindex' )
+	return '<a class="external text" data-href="https://www.bildindex.de/document/obj'" href="https://www.bildindex.de/document/obj'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://www.bildindex.de/document/obj'" href="https://web.archive.org/web/https://www.bildindex.de/document/obj'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'Bildindex' )
 end
 </p><p>function p.jocondeLink( id )
 	--P347's format regex: [\-0-9A-Za-z]{11} (e.g. 12345678901)
@@ -495,35 +495,35 @@ end
 	if not string.match( id, regex ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" href="http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'Joconde' )
+	return '<a class="external text" data-href="http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" href="http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" href="https://web.archive.org/web/http://www2.culture.gouv.fr/public/mistral/joconde_fr?ACTION=CHERCHER&amp;FIELD_1=REF&amp;VALUE_1='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'Joconde' )
 end
 </p><p>function p.rkdidLink( id )
 	--P350's format regex: [1-9]\d{0,5} (e.g. 123456)
 	if not string.match( id, '^[1-9]%d?%d?%d?%d?%d?$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://rkd.nl/nl/explore/images/'" href="https://rkd.nl/nl/explore/images/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'RKDID' )
+	return '<a class="external text" data-href="https://rkd.nl/nl/explore/images/'" href="https://rkd.nl/nl/explore/images/'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://rkd.nl/nl/explore/images/'" href="https://web.archive.org/web/https://rkd.nl/nl/explore/images/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'RKDID' )
 end
 </p><p>function p.balatLink( id )
 	--P3293's format regex: \d+ (e.g. 1)
 	if not string.match( id, '^%d+$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://balat.kikirpa.be/object/104257'" href="http://balat.kikirpa.be/object/104257'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a>' .. p.getCatForId( 'BALaT' )
+	return '<a class="external text" data-href="http://balat.kikirpa.be/object/104257'" href="http://balat.kikirpa.be/object/104257'" rel="noreferrer noopener" target="_blank">.. id .. ' ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://balat.kikirpa.be/object/104257'" href="https://web.archive.org/web/http://balat.kikirpa.be/object/104257'" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'BALaT' )
 end
 </p><p>function p.lnbLink( id )
 	--P1368's format regex: \d{9} (e.g. 123456789)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" href="https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;P_CON_LNG=ENG ' .. id .. '</a>' .. p.getCatForId( 'LNB' )
+	return '<a class="external text" data-href="https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" href="https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;P_CON_LNG=ENG ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" href="https://web.archive.org/web/https://kopkatalogs.lv/F?func=direct&amp;local_base=lnc10&amp;doc_number='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'LNB' )
 end
 </p><p>function p.nskLink( id )
 	--P1375's format regex: \d{9} (e.g. 123456789)
 	if not string.match( id, '^%d%d%d%d%d%d%d%d%d$' ) then
 		return false
 	end
-	return '<a class="external text" data-href="http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" href="http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;local_base=nsk10 ' .. id .. '</a>' .. p.getCatForId( 'NSK' )
+	return '<a class="external text" data-href="http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" href="http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" rel="noreferrer noopener" target="_blank">.. id .. '&amp;local_base=nsk10 ' .. id .. '</a> <sup><a data-href="https://web.archive.org/web/http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" href="https://web.archive.org/web/http://katalog.nsk.hr/F/?func=direct&amp;doc_number='" rel="noreferrer noopener" target="_blank">[archive]</a></sup>' .. p.getCatForId( 'NSK' )
 end
 </p><p>--<a class="new" data-href="/w/index.php?title=%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D&amp;action=edit&amp;redlink=1.html" title="========================================================================== (page does not exist)">==========================================================================</a>
 --<a class="new" data-href="/w/index.php?title=Wikidata,_navigation_bar,_and_documentation_functions&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Wikidata,_navigation_bar,_and_documentation_functions&amp;action=edit&amp;redlink=1.html" title="Wikidata, navigation bar, and documentation functions (page does not exist)">Wikidata, navigation bar, and documentation functions           </a>
@@ -734,13 +734,13 @@ p.deprecated = {
 	end	end	end	end	end	end	end
 </p><p>	--Worldcat
 	if parentArgs['WORLDCATID'] and parentArgs['WORLDCATID'] ~= <i> then</i>
-		table.insert( elements, p.createRow( 'WORLDCATID', <i>, parentArgs['WORLDCATID'], '<a class="external text" data-href="https://www.worldcat.org/identities/'" href="https://www.worldcat.org/identities/'" rel="noreferrer noopener" target="_blank">.. parentArgs['WORLDCATID'</a> .. ' WorldCat Identities]', false ) ) --Validation?</i>
+		table.insert( elements, p.createRow( 'WORLDCATID', <i>, parentArgs['WORLDCATID'], '<a class="external text" data-href="https://www.worldcat.org/identities/'" href="https://www.worldcat.org/identities/'" rel="noreferrer noopener" target="_blank">.. parentArgs['WORLDCATID'</a> <sup><a data-href="https://web.archive.org/web/https://www.worldcat.org/identities/'" href="https://web.archive.org/web/https://www.worldcat.org/identities/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup> .. ' WorldCat Identities]', false ) ) --Validation?</i>
 	elseif parentArgs['VIAF'] and string.match( parentArgs['VIAF'], '^%d+$' ) then -- Hackishly copy the validation code; this should go away when we move to using P1793 and P1630
-		table.insert( elements, p.createRow( 'VIAF', <i>, parentArgs['VIAF'], '<a class="external text" data-href="https://www.worldcat.org/identities/containsVIAFID/'" href="https://www.worldcat.org/identities/containsVIAFID/'" rel="noreferrer noopener" target="_blank">.. parentArgs['VIAF'</a> .. ' WorldCat Identities]', false ) )</i>
+		table.insert( elements, p.createRow( 'VIAF', <i>, parentArgs['VIAF'], '<a class="external text" data-href="https://www.worldcat.org/identities/containsVIAFID/'" href="https://www.worldcat.org/identities/containsVIAFID/'" rel="noreferrer noopener" target="_blank">.. parentArgs['VIAF'</a> <sup><a data-href="https://web.archive.org/web/https://www.worldcat.org/identities/containsVIAFID/'" href="https://web.archive.org/web/https://www.worldcat.org/identities/containsVIAFID/'" rel="noreferrer noopener" target="_blank">[archive]</a></sup> .. ' WorldCat Identities]', false ) )</i>
 	elseif parentArgs['LCCN'] and parentArgs['LCCN'] ~= <i> then</i>
 		local lccnParts = p.splitLccn( parentArgs['LCCN'] )
 		if lccnParts and lccnParts[1] ~= 'sh' then
-			table.insert( elements, p.createRow( 'LCCN', <i>, parentArgs['LCCN'], '<a class="external text" data-href="https://www.worldcat.org/identities/lccn-'" href="https://www.worldcat.org/identities/lccn-'" rel="noreferrer noopener" target="_blank">.. lccnParts[1</a> .. lccnParts[2] .. '-' .. lccnParts[3] .. ' WorldCat Identities]', false ) )</i>
+			table.insert( elements, p.createRow( 'LCCN', <i>, parentArgs['LCCN'], '<a class="external text" data-href="https://www.worldcat.org/identities/lccn-'" href="https://www.worldcat.org/identities/lccn-'" rel="noreferrer noopener" target="_blank">.. lccnParts[1</a> <sup><a data-href="https://web.archive.org/web/https://www.worldcat.org/identities/lccn-'" href="https://web.archive.org/web/https://www.worldcat.org/identities/lccn-'" rel="noreferrer noopener" target="_blank">[archive]</a></sup> .. lccnParts[2] .. '-' .. lccnParts[3] .. ' WorldCat Identities]', false ) )</i>
 		end
 	end
 </p><p>	--Configured rows
@@ -784,11 +784,11 @@ end
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191031160929
+Cached time: 20191104182929
 Cache expiry: 2592000
 Dynamic content: false
-CPU time usage: 0.015 seconds
-Real time usage: 0.015 seconds
+CPU time usage: 0.032 seconds
+Real time usage: 0.032 seconds
 Preprocessor visited node count: 5/1000000
 Preprocessor generated node count: 12/1000000
 Post‐expand include size: 0/2097152 bytes
@@ -802,7 +802,7 @@ Unstrip post‐expand size: 0/5000000 bytes
 Transclusion expansion time report (%,ms,calls,template)
 100.00%    0.000      1 -total
 -->
-<!-- Saved in parser cache with key wiki:pcache:idhash:6170-0!canonical and timestamp 20191031160929 and revision id 37554
+<!-- Saved in parser cache with key wiki:pcache:idhash:6170-0!canonical and timestamp 20191104182929 and revision id 37554
  -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Authority_control&amp;oldid=37554" dir="ltr" href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Authority_control&amp;oldid=37554">http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Authority_control&amp;oldid=37554</a>"</div>
@@ -837,5 +837,5 @@ Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?titl
 </div>
 
 </body>
-<!-- Cached/compressed 20191031160929 -->
+<!-- Cached/compressed 20191104182929 -->
 </html>
