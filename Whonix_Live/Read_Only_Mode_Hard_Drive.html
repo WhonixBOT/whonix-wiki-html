@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: Combine Whonix Live VMs with Read-Only Mode for Virtual Hard Drives - Whonix
+ title: Combine Whonix Live VMs with Read-only Mode for Virtual Hard Drives - Whonix
  url: ../Whonix_Live/Read_Only_Mode_Hard_Drive
- date: Thu Nov  7 08:04:27 2019
+ date: Fri Nov  8 08:04:13 2019
 -->
 <head>
 <meta charset="utf-8"/>
-<title>Combine Whonix Live VMs with Read-Only Mode for Virtual Hard Drives - Whonix</title>
+<title>Combine Whonix Live VMs with Read-only Mode for Virtual Hard Drives - Whonix</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 
 
@@ -28,14 +28,14 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Whonix Live/Read Only Mode Hard Drive" property="og:title"/>
 <meta content="../Whonix_Live/Read_Only_Mode_Hard_Drive" property="og:url"/>
-<meta content="Combine Whonix Live VMs with Read-Only Mode for Virtual Hard Drives - Whonix" property="og:title"/>
+<meta content="Combine Whonix Live VMs with Read-only Mode for Virtual Hard Drives - Whonix" property="og:title"/>
 <meta content="../Whonix_Live/Read_Only_Mode_Hard_Drive" property="og:url"/>
 <meta content="Set virtual machine (VM) hard drives to read only. Prevent write access to VM drives." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/1c/Read-live23231.jpg" property="og:image"/>
-<meta content="2019-11-05T11:29:11Z" property="article:modified_time"/>
-<meta content="2019-11-05T11:29:11Z" property="article:published_time"/>
+<meta content="2019-11-07T11:25:26Z" property="article:modified_time"/>
+<meta content="2019-11-07T11:25:26Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="Combine Whonix Live VMs with Read-Only Mode for Virtual Hard Drives - Whonix" property="twitter:title"/>
+<meta content="Combine Whonix Live VMs with Read-only Mode for Virtual Hard Drives - Whonix" property="twitter:title"/>
 <meta content="Set virtual machine (VM) hard drives to read only. Prevent write access to VM drives." property="twitter:description"/>
 <meta content="https://www.whonix.org/w/images/1/1c/Read-live23231.jpg" property="twitter:image"/>
 <meta content="summary" property="twitter:card"/>
@@ -113,7 +113,7 @@ Whonix requires Donations to stay alive.
 <li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" href="../Whonix_Live/Read_Only_Mode_Hard_Drive.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=history" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
-<h1 class="title" id="firstHeading">Combine Whonix Live VMs with Read-Only Mode for Virtual Hard Drives</h1>
+<h1 class="title" id="firstHeading">Combine Whonix Live VMs with Read-only Mode for Virtual Hard Drives</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a data-href="/wiki/Whonix_Live" href="../Whonix_Live.html" title="Whonix Live">Whonix Live</a></span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
@@ -123,21 +123,25 @@ Whonix requires Donations to stay alive.
 </p>
 <div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Qubes"><span class="tocnumber">1</span> <span class="toctext">Qubes</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#VirtualBox"><span class="tocnumber">2</span> <span class="toctext">VirtualBox</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#KVM"><span class="tocnumber">3</span> <span class="toctext">KVM</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Alternative_Configurations"><span class="tocnumber">4</span> <span class="toctext">Alternative Configurations</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Qubes"><span class="tocnumber">2</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#VirtualBox"><span class="tocnumber">3</span> <span class="toctext">VirtualBox</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#KVM"><span class="tocnumber">4</span> <span class="toctext">KVM</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Alternative_Configurations"><span class="tocnumber">5</span> <span class="toctext">Alternative Configurations</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
-<h2><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=1.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is possible to optionally set the virtual machine (VM) disks to read-only. This increases the security of the Whonix ™ Live configuration, because otherwise malware running as root in the VM could theoretically mount the image read-write and gain persistence in this way.
+</p>
+<h2><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><code>grub-live</code> is currently <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a> on <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes</a>, but may become available in the future. Refer to the following <a class="external text" data-href="https://forums.whonix.org/t/whonix-live-mode/3894/31" href="https://forums.whonix.org/t/whonix-live-mode/3894/31" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-live-mode/3894/31" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-live-mode/3894/31" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for further information.
 </p><p>In Qubes R4, <a data-href="/wiki/Qubes/DisposableVM" href="../Qubes/DisposableVM.html" title="Qubes/DisposableVM">Qubes DisposableVMs</a> are a suitable alternative, as well as the <a class="external text" data-href="https://www.qubes-os.org/doc/live-usb/" href="https://www.qubes-os.org/doc/live-usb/" rel="noreferrer noopener" target="_blank">Qubes Live USB</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/live-usb/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/live-usb/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> <i>Optional:</i> Set the VM disks to read-only.
-</p><p>This setting increases security, because otherwise malware running as root in the VM could theoretically mount the image read-write and gain persistence in this way. Follow these steps: 
+<p><b>1.</b> Set the VM disks to read-only.
+</p><p>Follow these steps: 
 </p>
 <ul><li>Power off the virtual machine (VM).</li>
 <li>Set the disk to read-only.
@@ -166,10 +170,10 @@ Whonix requires Donations to stay alive.
 <p>The normal boot option can now be selected in the GRUB menu.
 </p>
 </div>
-<h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> <i>Optional:</i> Set the virtual machine (VM) disks to read-only.
-</p><p>This increases security, since otherwise malware running as root in the VM could theoretically mount the image read-write and gain persistence in this way. Follow these steps:
+<p><b>1.</b> Set the VM disks to read-only.
+</p><p>Follow these steps:
 </p>
 <ul><li>Power off the machine.</li>
 <li>Set the hard disk to read-only in the virt-manager GUI before booting into live mode.</li></ul>
@@ -179,7 +183,7 @@ Whonix requires Donations to stay alive.
 </p><p>To boot into normal mode again, simply revert the change from step 1 and choose the normal boot option in the GRUB menu.
 </p>
 </div>
-<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> Skip this section if the <a href="#KVM">KVM Live-mode</a> or <a href="#VirtualBox">Virtualbox Live-mode</a> configuration steps above have already been completed.
 </p>
@@ -190,12 +194,12 @@ Whonix requires Donations to stay alive.
 <p>VirtualBox only:
 </p>
 <ul><li><a data-href="/wiki/Whonix_Live/Immutable_Disk_Method_on_VirtualBox" href="../Whonix_Live/Immutable_Disk_Method_on_VirtualBox.html" title="Whonix Live/Immutable Disk Method on VirtualBox">Whonix Live-mode: Immutable Disk Method on VirtualBox</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=6.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Don't mind having your name connected to Whonix ™? Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/Whonix" href="https://web.archive.org/web/https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> <sup><a data-href="https://web.archive.org/web/https://www.facebook.com/Whonix" href="https://web.archive.org/web/https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" href="https://www.Whonix.org/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -212,35 +216,35 @@ Whonix requires Donations to stay alive.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191106042025
+Cached time: 20191107144451
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.039 seconds
-Real time usage: 0.047 seconds
-Preprocessor visited node count: 193/1000000
-Preprocessor generated node count: 913/1000000
-Post‐expand include size: 6546/2097152 bytes
-Template argument size: 2490/2097152 bytes
+CPU time usage: 0.037 seconds
+Real time usage: 0.046 seconds
+Preprocessor visited node count: 195/1000000
+Preprocessor generated node count: 901/1000000
+Post‐expand include size: 6166/2097152 bytes
+Template argument size: 2122/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 571/5000000 bytes
+Unstrip post‐expand size: 678/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   29.054      1 -total
- 39.24%   11.402      1 Template:Footer
- 27.88%    8.101      3 Template:Box
- 17.12%    4.974      1 Template:Header
- 14.13%    4.104      2 Template:CodeSelect
-  8.64%    2.509      1 Template:Share
-  8.55%    2.484      1 Template:RandomNews
-  8.24%    2.393      1 Template:Edit_it
-  5.28%    1.533      1 Template:Reflist
-  4.58%    1.332      1 Template:Title
+100.00%   28.984      1 -total
+ 40.69%   11.795      1 Template:Footer
+ 26.02%    7.541      3 Template:Box
+ 14.77%    4.281      2 Template:CodeSelect
+ 13.90%    4.030      1 Template:Header
+  9.23%    2.675      1 Template:Share
+  8.87%    2.572      1 Template:Edit_it
+  7.91%    2.293      1 Template:RandomNews
+  5.55%    1.609      1 Template:Reflist
+  4.57%    1.324      1 Template:Title
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52111" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52111">https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52111</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52277" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52277">https://www.whonix.org/w/index.php?title=Whonix_Live/Read_Only_Mode_Hard_Drive&amp;oldid=52277</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -251,7 +255,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 5 November 2019, at 12:29.</li>
+<li id="footer-lastmod"> This page was last edited on 7 November 2019, at 12:25.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -272,5 +276,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 </div>
 
 </body>
-<!-- Cached/compressed 20191106042025 -->
+<!-- Cached/compressed 20191107144451 -->
 </html>
