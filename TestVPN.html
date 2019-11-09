@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: VPN Tunnel Setup Examples - Whonix
  url: ./TestVPN
- date: Fri Nov  8 08:00:26 2019
+ date: Sat Nov  9 08:02:09 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -168,19 +168,34 @@ Too difficult to set up? Provider specific automation can be created for you by 
 (4) Look inside the <a class="external text" data-href="https://help.riseup.net/vpn" href="https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">riseup VPN help page</a> <sup><a data-href="https://web.archive.org/web/https://help.riseup.net/vpn" href="https://web.archive.org/web/https://help.riseup.net/vpn" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for <a class="external text" data-href="https://help.riseup.net/en/riseup-ca" href="https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank"><code>RiseupCA.pem</code></a> <sup><a data-href="https://web.archive.org/web/https://help.riseup.net/en/riseup-ca" href="https://web.archive.org/web/https://help.riseup.net/en/riseup-ca" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and download it.<br/>
 (5) Open a terminal. (konsole) Get into the same folder, you stored <code>RiseupCA.pem</code>.<br/>
 (6) Install openvpn.
-<code>
-sudo apt-get update &amp;&amp; sudo apt-get install openvpn
-</code>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update &amp;&amp; sudo apt-get install openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update &amp;&amp; sudo apt-get install openvpn</textarea>
+</div>
+</div>
 (7) The following line from the riseup OpenVPN help page<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> won't work for user → Tor → VPN → Internet, because the Tor network does not support UDP.<br/>
-<code>
-sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem
-</code>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem</textarea>
+</div>
+</div>
 The following line works for user → Tor → VPN → Internet.<br/>
-<code>
-sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem --proto tcp
-</code>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem --proto tcp</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo openvpn --client --dev tun --auth-user-pass --remote vpn.riseup.net 1194 --ca RiseupCA.pem --proto tcp</textarea>
+</div>
+</div>
 (8) For DNS, see <a href="#Riseup_DNS">#Riseup DNS</a> below.
-</p>
+
 <h3><span class="mw-headline" id="Riseup.net_riseup.conf">Riseup.net riseup.conf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=4.html" title="Edit section: Riseup.net riseup.conf">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Known to support TCP, UDP, SSL.<br/>
 (1) You need a riseup.net account.<br/>
@@ -209,10 +224,15 @@ proto tcp
 #log /var/log/openvpn.log
 </pre>
 <p>(7) Start OpenVPN.
-</p><p><code>
-sudo openvpn riseup.conf
-</code>
-</p><p>(8) For DNS, see <a href="#Riseup_DNS">#Riseup DNS</a> below.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo openvpn riseup.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo openvpn riseup.conf</textarea>
+</div>
+</div>
+<p>(8) For DNS, see <a href="#Riseup_DNS">#Riseup DNS</a> below.
 </p>
 <h3><span class="mw-headline" id="Riseup_DNS">Riseup DNS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=5.html" title="Edit section: Riseup DNS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <h4><span class="mw-headline" id="Setup">Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=6.html" title="Edit section: Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
@@ -242,17 +262,27 @@ nameserver 172.27.100.1
 <p>If you are not using riseup, you need to replace 172.27.100.1 and enter the virtual LAN IP address of your VPN providers DNS server. You might be able to obtain it from your VPN provider. You can also try to infer it after successfully connecting to the VPN from running "sudo route". The first destination default gateway should function as DNS server also.
 </p><p>Save.
 </p><p>If you want to be sure, that <i>/etc/resolv.conf</i> does not get overwritten by other packages. (Such as DHCP or resolvconf.)
-</p><p><code>
-sudo chattr +i /etc/resolv.conf
-</code>
-</p><p>If you ever want to remove it, use <i>-i</i>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo chattr +i /etc/resolv.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo chattr +i /etc/resolv.conf</textarea>
+</div>
+</div>
+<p>If you ever want to remove it, use <i>-i</i>.
 </p>
 <h4><span class="mw-headline" id="Testing">Testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;action=edit&amp;section=7.html" title="Edit section: Testing">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>When using "<i>nameserver 10.152.152.10</i>"...
-</p><p><code>
-nslookup idnxcnkne4qt76tg.onion
-</code>
-</p><p>Will show.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nslookup idnxcnkne4qt76tg.onion</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup idnxcnkne4qt76tg.onion</textarea>
+</div>
+</div>
+<p>Will show.
 </p>
 <pre>Server:         10.152.152.10
 Address:        10.152.152.10#53
@@ -261,10 +291,15 @@ Name:   idnxcnkne4qt76tg.onion
 Address: 10.192.0.1
 </pre>
 <p>When using "<i>nameserver 172.27.100.1</i>"...
-</p><p><code>
-nslookup idnxcnkne4qt76tg.onion
-</code>
-</p><p>Will show.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nslookup idnxcnkne4qt76tg.onion</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup idnxcnkne4qt76tg.onion</textarea>
+</div>
+</div>
+<p>Will show.
 </p>
 <pre>Server:         172.27.100.1
 Address:        172.27.100.1#53
@@ -272,10 +307,15 @@ Address:        172.27.100.1#53
 </pre>
 <p>Because you can not access .onion domains when a VPN has be chained. (user → Tor → VPN → Internet)
 </p><p>Resolving clearnet DNS should work.
-</p><p><code>
-nslookup riseup.net
-</code>
-</p><p>Should show.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>nslookup riseup.net</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nslookup riseup.net</textarea>
+</div>
+</div>
+<p>Should show.
 </p>
 <pre>Server:         172.27.100.1
 Address:        172.27.100.1#53
@@ -289,19 +329,34 @@ Address: 198.252.153.35
 </p>
 <div class="mw-collapsible-content">
 <p><b>Note, at time of writing, it looked like, that usaip is probably blocking SSL, therefore</b>
-</p><p><code>
-UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https <a class="external free" data-href="https://check.torproject.org" href="https://check.torproject.org" rel="noreferrer noopener" target="_blank">https://check.torproject.org</a> <sup><a data-href="https://web.archive.org/web/https://check.torproject.org" href="https://web.archive.org/web/https://check.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</code>
-</p><p><b>will probably not work.</b>
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https https://check.torproject.org</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">UWT_DEV_PASSTHROUGH=1 curl --tlsv1.2 --proto =https https://check.torproject.org</textarea>
+</div>
+</div>
+<p><b>will probably not work.</b>
 </p><p>Install OpenVPN.
-</p><p><code>
-sudo apt-get install openvpn
-</code>
-</p><p>Go to <a class="external text" data-href="http://usaip.eu/en/index.php" href="http://usaip.eu/en/index.php" rel="noreferrer noopener" target="_blank">usaip.eu</a> <sup><a data-href="https://web.archive.org/web/http://usaip.eu/en/index.php" href="https://web.archive.org/web/http://usaip.eu/en/index.php" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and click on free demo. Download the <i>usaip.zip</i>. It contains the OpenVPN configuration files. Unpack. Open a shell and get into the folder <i>cd usaip</i>. List all files <i>dir</i>. Connect to a VPN, for example:
-</p><p><code>
-sudo openvpn /home/user/usaip/eu-luxemburg.ovpn
-</code>
-</p><p>At time of writing, the page stated, the password was <i>demo</i>, password also <i>demo</i>. Wait until it is connected. When success, it will show "Initialization Sequence Completed". It might happen, that the connection will not succeed for some unknown reason. In this case try replacing the eu-luxemburg.ovpn from the example above with another &lt;country&gt;.ovpn from the usaip folder.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install openvpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install openvpn</textarea>
+</div>
+</div>
+<p>Go to <a class="external text" data-href="http://usaip.eu/en/index.php" href="http://usaip.eu/en/index.php" rel="noreferrer noopener" target="_blank">usaip.eu</a> <sup><a data-href="https://web.archive.org/web/http://usaip.eu/en/index.php" href="https://web.archive.org/web/http://usaip.eu/en/index.php" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and click on free demo. Download the <i>usaip.zip</i>. It contains the OpenVPN configuration files. Unpack. Open a shell and get into the folder <i>cd usaip</i>. List all files <i>dir</i>. Connect to a VPN, for example:
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo openvpn /home/user/usaip/eu-luxemburg.ovpn</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo openvpn /home/user/usaip/eu-luxemburg.ovpn</textarea>
+</div>
+</div>
+<p>At time of writing, the page stated, the password was <i>demo</i>, password also <i>demo</i>. Wait until it is connected. When success, it will show "Initialization Sequence Completed". It might happen, that the connection will not succeed for some unknown reason. In this case try replacing the eu-luxemburg.ovpn from the example above with another &lt;country&gt;.ovpn from the usaip folder.
 </p><p>DNS settings have not been considered for this usaip.eu chapter.
 </p>
 </div>
@@ -313,10 +368,15 @@ sudo openvpn /home/user/usaip/eu-luxemburg.ovpn
 If you would like to see more information, please press on expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p><code>
-sudo apt-get install network-manager-kde
-</code>
-</p><p>Start menu → System Settings → Network Settings
+<p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install network-manager-kde</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install network-manager-kde</textarea>
+</div>
+</div>
+<p>Start menu → System Settings → Network Settings
 </p><p>At time of writing the <a class="external text" data-href="https://www.riseup.net/en/openvpn-linux#kde" href="https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">riseup.net OpenVPN instructions for KDE</a> <sup><a data-href="https://web.archive.org/web/https://www.riseup.net/en/openvpn-linux#kde" href="https://web.archive.org/web/https://www.riseup.net/en/openvpn-linux" rel="noreferrer noopener" target="_blank">[archive]</a></sup> were not finished. Perhaps you'll find out yourself, use another guide for KDE Network Manager or use the command line based examples above.
 </p><p>Don't wonder if you don't see Whonix-Workstation ™ (virtual) wired network interface to Whonix-Gateway ™. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
@@ -330,10 +390,15 @@ If you would like to see more information anyway, please press on expand on the 
 <div class="mw-collapsible-content">
 <p>In case of GNOME Network Manager it just requires some more fiddling because upstream developers wanted to make GNOME and KDE as compatible as possible, which includes that one settings manager won't show up when the other desktop has been started in a dual (KDE, GNOME) installation.
 </p><p>If you want to install the GNOME Network Manager.
-</p><p><code>
-sudo apt-get install network-manager-gnome network-manager-openvpn-gnome
-</code>
-</p><p>If you want to autostart GNOME Network Manager, open /etc/xdg/autostart/nm-applet.desktop with root rights.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install network-manager-gnome network-manager-openvpn-gnome</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install network-manager-gnome network-manager-openvpn-gnome</textarea>
+</div>
+</div>
+<p>If you want to autostart GNOME Network Manager, open /etc/xdg/autostart/nm-applet.desktop with root rights.
 </p><p>Open file <code>/etc/xdg/autostart/nm-applet.desktop</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
@@ -349,10 +414,15 @@ sudo apt-get install network-manager-gnome network-manager-openvpn-gnome
 </div>
 </div>
 <p>And comment out.
-</p><p><code>
-NotShowIn=KDE;
-</code>
-</p><p>If you want to make the nm-applet start menu entries visible and to start it manually, open /usr/share/applications/nm-applet.desktop.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>NotShowIn=KDE;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">NotShowIn=KDE;</textarea>
+</div>
+</div>
+<p>If you want to make the nm-applet start menu entries visible and to start it manually, open /usr/share/applications/nm-applet.desktop.
 </p><p>Open file <code>/usr/share/applications/nm-applet.desktop</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
@@ -368,14 +438,24 @@ NotShowIn=KDE;
 </div>
 </div>
 <p>And comment out.
-</p><p><code>
-NotShowIn=KDE;
-</code>
-</p><p>And add.
-</p><p><code>
-Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;
-</code>
-</p><p>If you want to make the nm-connection-editor start menu entries visible and to start it manually, open nm-connection-editor.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>NotShowIn=KDE;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">NotShowIn=KDE;</textarea>
+</div>
+</div>
+<p>And add.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;</textarea>
+</div>
+</div>
+<p>If you want to make the nm-connection-editor start menu entries visible and to start it manually, open nm-connection-editor.
 </p><p>Open file <code>/usr/share/applications/nm-connection-editor.desktop</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
@@ -391,10 +471,15 @@ Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;
 </div>
 </div>
 <p>And comment out.
-</p><p><code>
-NotShowIn=KDE;
-</code>
-</p><p>Then you could open the settings.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>NotShowIn=KDE;</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">NotShowIn=KDE;</textarea>
+</div>
+</div>
+<p>Then you could open the settings.
 </p>
 <pre>Applications → Settings → Network Connections
 </pre>
@@ -416,15 +501,15 @@ See <a data-href="/wiki/Dev/Network_Manager" href="./Dev/Network_Manager.html" t
 </ol></div></div>
 <!-- 
 NewPP limit report
-Cached time: 20191108070025
+Cached time: 20191109032446
 Cache expiry: 2592000
 Dynamic content: false
-CPU time usage: 0.046 seconds
-Real time usage: 0.078 seconds
-Preprocessor visited node count: 494/1000000
-Preprocessor generated node count: 1381/1000000
-Post‐expand include size: 8772/2097152 bytes
-Template argument size: 3567/2097152 bytes
+CPU time usage: 0.078 seconds
+Real time usage: 0.093 seconds
+Preprocessor visited node count: 528/1000000
+Preprocessor generated node count: 1391/1000000
+Post‐expand include size: 9153/2097152 bytes
+Template argument size: 3570/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -432,18 +517,18 @@ Unstrip post‐expand size: 1922/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   56.383      1 -total
- 69.10%   38.962      4 Template:Open_with_root_rights
- 67.04%   37.798      6 Template:Box
- 63.75%   35.944      4 Template:CodeSelect
-  8.03%    4.527      1 Template:Tunnels_Introduction
-  7.30%    4.114     17 Template:CodeSelect2
-  4.68%    2.640      1 Template:Reflist
-  4.11%    2.316      2 Template:Mbox
-  2.78%    1.570      1 Template:Tunnel_Automation_Sale
-  2.36%    1.328      1 Template:Curl_Plain
+100.00%   73.765      1 -total
+ 58.39%   43.074     17 Template:CodeSelect2
+ 18.00%   13.279      4 Template:Open_with_root_rights
+ 13.26%    9.785      6 Template:Box
+ 10.46%    7.714      4 Template:CodeSelect
+  6.84%    5.043      1 Template:Tunnels_Introduction
+  3.65%    2.695      1 Template:Reflist
+  3.39%    2.499      2 Template:Mbox
+  2.82%    2.077      1 Template:Tunnel_Automation_Sale
+  1.87%    1.376      1 Template:Title
 -->
-<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4518-0!canonical and timestamp 20191108070025 and revision id 47629
+<!-- Saved in parser cache with key wiki:stable-pcache:idhash:4518-0!canonical and timestamp 20191109032446 and revision id 47629
  -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629">https://www.whonix.org/w/index.php?title=Tunnels/Examples&amp;oldid=47629</a>"</div>
