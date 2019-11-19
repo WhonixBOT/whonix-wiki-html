@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/15 full - Whonix
  url: ../Dev/Build_Documentation/15_full
- date: Mon Nov 18 07:35:21 2019
+ date: Tue Nov 19 07:35:14 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -128,11 +128,10 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1"><a href="#Get_the_Signing_Key"><span class="tocnumber">3</span> <span class="toctext">Get the Signing Key</span></a></li>
 <li class="toclevel-1"><a href="#Get_the_Source_Code"><span class="tocnumber">4</span> <span class="toctext">Get the Source Code</span></a></li>
 <li class="toclevel-1"><a href="#OpenPGP_Verify_the_Source_Code"><span class="tocnumber">5</span> <span class="toctext">OpenPGP Verify the Source Code</span></a></li>
-<li class="toclevel-1"><a href="#Choose_Version"><span class="tocnumber">6</span> <span class="toctext">Choose Version</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#VM_Creation"><span class="tocnumber">7</span> <span class="toctext">VM Creation</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Build_Result"><span class="tocnumber">8</span> <span class="toctext">Build Result</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Prepare_Release"><span class="tocnumber">9</span> <span class="toctext">Prepare Release</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">10</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#VM_Creation"><span class="tocnumber">6</span> <span class="toctext">VM Creation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Build_Result"><span class="tocnumber">7</span> <span class="toctext">Build Result</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Prepare_Release"><span class="tocnumber">8</span> <span class="toctext">Prepare Release</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">9</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -338,7 +337,6 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
     .
 </p>
 </blockquote>
-<h2><span class="mw-headline" id="Choose_Version">Choose Version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Build_Documentation_Choose_Version&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Retrieve a list of available git tags.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -357,7 +355,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.4.9-stable</textarea>
 </div>
 </div>
-<p>Replace <code>15.0.0.4.9-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. To learn more about current Whonix ™ versions, follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a>.
+<p>Replace <code>15.0.0.4.9-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
 </p><p>Check if you really got the version you want.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -534,7 +532,12 @@ This is sane since important VM settings were already configured in <a class="ex
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> <sup><a data-href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a> <sup><a data-href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) or <a class="external text" data-href="https://t.me/Whonix_Chat" href="https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">Telegram Chat</a> <sup><a data-href="https://web.archive.org/web/https://t.me/Whonix_Chat" href="https://web.archive.org/web/https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Whonix ™ is <a data-href="https://evolution-host.com/vps-hosting.php" href="https://evolution-host.com/vps-hosting.php">Supported by Evolution Host DDoS Protected VPS</a>
+</p>
+</div>
+<hr/>
+<div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
+<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -554,32 +557,32 @@ This is sane since important VM settings were already configured in <a class="ex
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191117215259
+Cached time: 20191118115054
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.128 seconds
-Real time usage: 0.140 seconds
-Preprocessor visited node count: 605/1000000
-Preprocessor generated node count: 1903/1000000
-Post‐expand include size: 13770/2097152 bytes
+CPU time usage: 0.098 seconds
+Real time usage: 0.106 seconds
+Preprocessor visited node count: 606/1000000
+Preprocessor generated node count: 1907/1000000
+Post‐expand include size: 13872/2097152 bytes
 Template argument size: 1886/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 3908/5000000 bytes
+Unstrip post‐expand size: 3096/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   97.996      1 -total
- 48.97%   47.992     22 Template:CodeSelect
- 36.97%   36.225      1 Template:Build_Documentation_Get_Source_Code
- 11.80%   11.564      1 Template:Footer
- 11.37%   11.138      1 Template:Build_Documentation_Get_Source
-  8.49%    8.317      1 Template:Reflist
-  8.45%    8.278      1 Template:Build_Documentation_Choose_Version
-  4.28%    4.190      1 Template:Gpg_signature_timestamp
-  2.97%    2.912      1 Template:Free
-  2.82%    2.766      1 Template:Mbox
+100.00%   67.604      1 -total
+ 45.75%   30.927     22 Template:CodeSelect
+ 31.36%   21.201      1 Template:Build_Documentation_Get_Source_Code
+ 16.72%   11.305      1 Template:Footer
+  9.83%    6.648      1 Template:Build_Documentation_Get_Source
+  7.56%    5.112      1 Template:Reflist
+  7.30%    4.933      1 Template:Build_Documentation_Choose_Version
+  3.73%    2.523      1 Template:Edit_it
+  3.56%    2.410      1 Template:Gpg_signature_timestamp
+  2.94%    1.986      1 Template:Share
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=52724" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=52724">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=52724</a>"</div>
@@ -614,5 +617,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
-<!-- Cached/compressed 20191117215259 -->
+<!-- Cached/compressed 20191118115054 -->
 </html>
