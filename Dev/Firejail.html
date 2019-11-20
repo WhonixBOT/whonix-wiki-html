@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Firejail - Whonix
  url: ../Dev/Firejail
- date: Tue Nov 19 07:36:38 2019
+ date: Wed Nov 20 07:36:40 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -31,8 +31,8 @@
 <meta content="../Dev/Firejail" property="og:url"/>
 <meta content="https://www.facebook.com/Whonix" property="article:author"/>
 <meta content="" property="og:image"/>
-<meta content="2019-04-25T13:58:07Z" property="article:modified_time"/>
-<meta content="2019-04-25T13:58:07Z" property="article:published_time"/>
+<meta content="2019-11-19T07:53:04Z" property="article:modified_time"/>
+<meta content="2019-11-19T07:53:04Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Firejail - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -41,7 +41,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Firejail rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Firejail rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -128,7 +128,21 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-3"><a href="#See_Also"><span class="tocnumber">2</span> <span class="toctext">See Also</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Comments"><span class="tocnumber">3</span> <span class="toctext">Comments</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Other_Isolation_Frameworks"><span class="tocnumber">4</span> <span class="toctext">Other Isolation Frameworks</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Security"><span class="tocnumber">5</span> <span class="toctext">Security</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Generally"><span class="tocnumber">5.1</span> <span class="toctext">Generally</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#CVE_Annotated"><span class="tocnumber">5.2</span> <span class="toctext">CVE Annotated</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#CVE-2019-12589"><span class="tocnumber">5.3</span> <span class="toctext">CVE-2019-12589</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#CVE-2019-12499"><span class="tocnumber">5.4</span> <span class="toctext">CVE-2019-12499</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#CVE-2017-5940"><span class="tocnumber">5.5</span> <span class="toctext">CVE-2017-5940</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#CVE-2017-5206"><span class="tocnumber">5.6</span> <span class="toctext">CVE-2017-5206</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#CVE-2017-5180"><span class="tocnumber">5.7</span> <span class="toctext">CVE-2017-5180</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#CVE-2016-9016"><span class="tocnumber">5.8</span> <span class="toctext">CVE-2016-9016</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Misc"><span class="tocnumber">5.9</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#TODO"><span class="tocnumber">6</span> <span class="toctext">TODO</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="General_Topics">General Topics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=1.html" title="Edit section: General Topics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -185,7 +199,164 @@ Asked if multiple frameworks stackable and the answer is no. You can't run a set
 </p><p><b>Verdict:</b> I like how Firejail can contain any program arbitrarily without changes needed to be made to it unlike Flatpak. It does not need any support from upstream software developers to support isolation - it remains the preferred framework for us IMO for that reason. Still, its good that DE developers are now going in the right direction to bring more security to users. 
 </p><p>If flatpak is adopted and enabled by default in Debian upstream we can remove Firejail profiles that cover apps already supported by the former - might be complicated but increases protection coverage of system programs as its likely they will cover different sets of software with some overlap. Or we can disable Flatpak and stick with Firejail only.
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=6.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Security">Security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=6.html" title="Edit section: Security">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Generally">Generally</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=7.html" title="Edit section: Generally">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="external text" data-href="https://github.com/netblue30/firejail/issues/3046#issuecomment-555244990" href="https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">Vincent43</a> <sup><a data-href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046#issuecomment-555244990" href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote><blockquote>
+<p>There are two distinct scenarios:
+</p>
+<ul><li>1. app/service runs inside firejail sandbox</li>
+<li>2. app/service runs outside firejail sandbox</li></ul>
+<p>Firejail significantly reduces attack surface for 1 (it may vary across different profiles) and increases attack surface for 2 (more or less). Everyone have to decide themselves what net attack surface impact is for them.
+</p>
+</blockquote></blockquote>
+<blockquote><blockquote>
+<p>Granting access to firejail for untrusted local unprivileged user may be not good idea (this is scenario for which most of past cve were applicable).
+</p>
+</blockquote></blockquote>
+<blockquote><blockquote>
+<p>The question is if today's desktop linux systems are multi-user focused (with some of them being untrusted). I heard many opinions from developers of projects like kernel or systemd stating that's not the case.
+</p>
+</blockquote></blockquote>
+<blockquote><blockquote>
+<p>Yes, bublewrap has less additional attack surface for scenario 2 but merely installing bubblewrap does nothing for scenario 1 unless someone write special wrapper for it with profiles for many specific apps. Something like that, let's call it Firewrap or Bubblejail would be interesting, perhaps more secure solution than firejail but for now it doesn't exist.
+</p>
+</blockquote></blockquote>
+<p>madaidan:
+</p>
+<blockquote>
+<p>If you want full priv esc, then the attacker could have exploited one of the sandbox escape vulnerabilities I listed above and then exploited another priv esc vulnerability in firejail once they're outside the sandbox.
+</p>
+</blockquote>
+<p>Patrick paraphrasing madaidan (posted only here):
+</p>
+<blockquote>
+<p>Care about scenario 2. Because an attacker could use a sandbox escape vulnerability. Then once outside the sandbox, follow-up with a privilege escalation vulnerability in firejail to gain root.
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>Yes, however I consider scenario when malware author writes script that will compromise some app and then go for firejail as rather unlikely. 95+ systems won't have firejail installed. The situation would be different when they have unlimited time and tries like local users have. Also when someone gets arbitrary code execution then they already won even without root access. Most things that matter will be available freely inside home.
+</p>
+</blockquote></blockquote>
+<p><a class="external text" data-href="https://github.com/netblue30/firejail/issues/3046#issuecomment-555326127" href="https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">netblue30</a> <sup><a data-href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046#issuecomment-555326127" href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote><blockquote>
+<p>The attack surface visible to somebody outside the sandbox is large.
+</p>
+</blockquote></blockquote>
+<blockquote><blockquote>
+<p>Don't use this on enterprise servers, or any other multiuser system. Firejail was built for single-user desktops.
+</p>
+</blockquote></blockquote>
+<p>Patrick (posted only here):
+</p>
+<blockquote>
+<p>Would firejail have helped against <a data-href="/wiki/Security_in_Real_World" href="../Security_in_Real_World.html" title="Security in Real World">past attacks against users in the wild</a>? Is that a useful question to ask?
+</p><p>How likely is it that firejail gets specifically targeted?
+</p>
+</blockquote>
+<h2><span class="mw-headline" id="CVE_Annotated">CVE Annotated</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=8.html" title="Edit section: CVE Annotated">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="external text" data-href="https://www.cvedetails.com/vulnerability-list.php?vendor_id=16191&amp;product_id=0&amp;version_id=0&amp;page=1&amp;hasexp=0&amp;opdos=0&amp;opec=0&amp;opov=0&amp;opcsrf=0&amp;opgpriv=0&amp;opsqli=0&amp;opxss=0&amp;opdirt=0&amp;opmemc=0&amp;ophttprs=0&amp;opbyp=0&amp;opfileinc=0&amp;opginf=0&amp;cvssscoremin=0&amp;cvssscoremax=0&amp;year=0&amp;cweid=0&amp;order=1&amp;trc=14&amp;sha=d244c5262e26dc2a9f709379c88db8695f3f5318" href="https://www.cvedetails.com/vulnerability-list.php?vendor_id=16191&amp;product_id=0&amp;version_id=0&amp;page=1&amp;hasexp=0&amp;opdos=0&amp;opec=0&amp;opov=0&amp;opcsrf=0&amp;opgpriv=0&amp;opsqli=0&amp;opxss=0&amp;opdirt=0&amp;opmemc=0&amp;ophttprs=0&amp;opbyp=0&amp;opfileinc=0&amp;opginf=0&amp;cvssscoremin=0&amp;cvssscoremax=0&amp;year=0&amp;cweid=0&amp;order=1&amp;trc=14&amp;sha=d244c5262e26dc2a9f709379c88db8695f3f5318" rel="noreferrer noopener" target="_blank">source cvedetails</a> <sup><a data-href="https://web.archive.org/web/https://www.cvedetails.com/vulnerability-list.php?vendor_id=16191&amp;product_id=0&amp;version_id=0&amp;page=1&amp;hasexp=0&amp;opdos=0&amp;opec=0&amp;opov=0&amp;opcsrf=0&amp;opgpriv=0&amp;opsqli=0&amp;opxss=0&amp;opdirt=0&amp;opmemc=0&amp;ophttprs=0&amp;opbyp=0&amp;opfileinc=0&amp;opginf=0&amp;cvssscoremin=0&amp;cvssscoremax=0&amp;year=0&amp;cweid=0&amp;order=1&amp;trc=14&amp;sha=d244c5262e26dc2a9f709379c88db8695f3f5318" href="https://web.archive.org/web/https://www.cvedetails.com/vulnerability-list.php?vendor_id=16191&amp;product_id=0&amp;version_id=0&amp;page=1&amp;hasexp=0&amp;opdos=0&amp;opec=0&amp;opov=0&amp;opcsrf=0&amp;opgpriv=0&amp;opsqli=0&amp;opxss=0&amp;opdirt=0&amp;opmemc=0&amp;ophttprs=0&amp;opbyp=0&amp;opfileinc=0&amp;opginf=0&amp;cvssscoremin=0&amp;cvssscoremax=0&amp;year=0&amp;cweid=0&amp;order=1&amp;trc=14&amp;sha=d244c5262e26dc2a9f709379c88db8695f3f5318" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://github.com/netblue30/firejail/issues/3046#issuecomment-555266364" href="https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">github discussion</a> <sup><a data-href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046#issuecomment-555266364" href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p><u>underline</u> added by Whonix ™.
+</p>
+<h2><span class="mw-headline" id="CVE-2019-12589">CVE-2019-12589</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=9.html" title="Edit section: CVE-2019-12589">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com:
+</p>
+<blockquote>
+<p>In Firejail before 0.9.60, seccomp filters are writable inside the jail, leading to a lack of intended seccomp restrictions for a process that is joined to the jail after a filter has been modified by an attacker.
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>It makes seccomp ineffective in certain, rare circumstances. It doesn't add additional attack surface on system.
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="CVE-2019-12499">CVE-2019-12499</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=10.html" title="Edit section: CVE-2019-12499">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com
+</p>
+<blockquote>
+<p>Firejail before 0.9.60 allows truncation (resizing to length 0) of the firejail binary on the host by running exploit code inside a firejail sandbox and having the sandbox terminated. To succeed, certain conditions need to be fulfilled: The jail (with the exploit code inside) needs to be started as root, and it also needs to be terminated as root from the host (either by stopping it ungracefully (e.g., SIGKILL), or by using the --shutdown control command). This is similar to CVE-2019-5736. 
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>It works only when firejail is run as root, again it doesn't add additional attack surface on system.
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="CVE-2017-5940">CVE-2017-5940</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=11.html" title="Edit section: CVE-2017-5940">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com
+</p>
+<blockquote>
+<p>Firejail before 0.9.44.6 and 0.9.38.x LTS before 0.9.38.10 LTS does not comprehensively address dotfile cases during its attempt to prevent accessing user files with an euid of zero, which <u>allows local users to conduct sandbox-escape attacks</u> via vectors involving a symlink and the --private option. NOTE: this vulnerability exists because of an incomplete fix for CVE-2017-5180. 
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>Exploit need to be run outside sandbox
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="CVE-2017-5206">CVE-2017-5206</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=12.html" title="Edit section: CVE-2017-5206">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com
+</p>
+<blockquote>
+<p>Firejail before 0.9.44.4, when running on a Linux kernel before 4.8, allows context-dependent attackers to bypass a seccomp-based sandbox protection mechanism via the --allow-debuggers argument.
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>It makes seccomp ineffective in certain, rare circumstances. It doesn't add additional attack surface on system.
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="CVE-2017-5180">CVE-2017-5180</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=13.html" title="Edit section: CVE-2017-5180">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com
+</p>
+<blockquote>
+<p>Firejail before 0.9.44.4 and 0.9.38.x LTS before 0.9.38.8 LTS does not consider the .Xauthority case during its attempt to prevent accessing user files with an euid of zero, which <u>allows local users to conduct sandbox-escape</u> attacks via vectors involving a symlink and the --private option. 
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>Exploit need to be run outside sandbox
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="CVE-2016-9016">CVE-2016-9016</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=14.html" title="Edit section: CVE-2016-9016">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>cvedetails.com
+</p>
+<blockquote>
+<p>Firejail 0.9.38.4 allows local users to execute arbitrary commands outside of the sandbox via a crafted TIOCSTI ioctl call.
+</p>
+</blockquote>
+<p>Vincent43:
+</p>
+<blockquote><blockquote>
+<p>This is sandbox escape but It doesn't add additional attack surface on system. Bubblewrap was also affected and <a class="external text" data-href="https://github.com/containers/bubblewrap/commit/d7fc532c42f0e9bf427923bab85433282b3e5117" href="https://github.com/containers/bubblewrap/commit/d7fc532c42f0e9bf427923bab85433282b3e5117" rel="noreferrer noopener" target="_blank">fixed it couple of months after firejail did</a> <sup><a data-href="https://web.archive.org/web/https://github.com/containers/bubblewrap/commit/d7fc532c42f0e9bf427923bab85433282b3e5117" href="https://web.archive.org/web/https://github.com/containers/bubblewrap/commit/d7fc532c42f0e9bf427923bab85433282b3e5117" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</p>
+</blockquote></blockquote>
+<h2><span class="mw-headline" id="Misc">Misc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=15.html" title="Edit section: Misc">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="external text" data-href="https://github.com/netblue30/firejail/issues/3046#issuecomment-555269503" href="https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">smitsohu</a> <sup><a data-href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046#issuecomment-555269503" href="https://web.archive.org/web/https://github.com/netblue30/firejail/issues/3046" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote><blockquote>
+<p>The descriptions are misleading, unfortunately. You need to read the code and understand the vulnerabilities. There is no sandbox escape there (from the running sandbox), the primary problem is the privesc (edited).
+</p>
+</blockquote></blockquote>
+<blockquote><blockquote>
+<p>Anyway, the thing is that there is little point to discuss Firejail version 0.9.38 or 0.9.44.
+</p><p>Firejail changes very fast, and what will be upcoming 0.9.62 has not so much to do with the early versions that were hit by these vulnerabilities. It would be very cool if we could discuss the present and not the past.
+</p>
+</blockquote></blockquote>
+<h1><span class="mw-headline" id="TODO">TODO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=16.html" title="Edit section: TODO">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>man firejail-users
+</p><p>/etc/firejail/firejail.users
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822693" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822693" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822693</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822693" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822693" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
@@ -214,7 +385,7 @@ Asked if multiple frameworks stackable and the answer is no. You can't run a set
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>There are <a class="external text" data-href="../Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> <sup><a data-href="https://web.archive.org/web/../Dev/git#subscribe_to_code_changes" href="https://web.archive.org/web/../Dev/git" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for subscribing to Whonix source code changes.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Firejail" href="https://www.Whonix.org/wiki/Dev/Firejail" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Firejail" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Firejail" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Firejail" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Firejail" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Firejail" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Firejail" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -234,35 +405,35 @@ Asked if multiple frameworks stackable and the answer is no. You can't run a set
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118170454
+Cached time: 20191119095404
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.091 seconds
-Real time usage: 0.139 seconds
-Preprocessor visited node count: 279/1000000
-Preprocessor generated node count: 989/1000000
-Post‐expand include size: 4231/2097152 bytes
+CPU time usage: 0.062 seconds
+Real time usage: 0.068 seconds
+Preprocessor visited node count: 326/1000000
+Preprocessor generated node count: 1041/1000000
+Post‐expand include size: 4241/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 5209/5000000 bytes
+Unstrip post‐expand size: 5558/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   99.271      1 -total
- 77.33%   76.770      1 Template:Footer
- 11.31%   11.223      1 Template:Share
-  7.62%    7.565      1 Template:Reflist
-  5.78%    5.739      1 Template:Edit_it
-  5.30%    5.261      1 Template:RandomNews
-  3.70%    3.671      1 Template:Bitcoin_Pay
-  3.32%    3.300      1 Template:Header
-  3.25%    3.231      1 Template:Project_onion
-  1.56%    1.552      2 Template:Name
+100.00%   31.393      1 -total
+ 41.10%   12.903      1 Template:Footer
+ 21.76%    6.830      1 Template:Reflist
+  7.89%    2.476      1 Template:Header
+  7.24%    2.274      1 Template:Edit_it
+  7.00%    2.197      1 Template:Share
+  5.27%    1.654      1 Template:RandomNews
+  3.56%    1.119     12 Template:Project_name
+  3.46%    1.085      9 Template:Project_name_short
+  3.19%    1.000      1 Template:Non_q_project_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=46414" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=46414">https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=46414</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=52881" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=52881">https://www.whonix.org/w/index.php?title=Dev/Firejail&amp;oldid=52881</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -273,7 +444,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Firej
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 14:58.</li>
+<li id="footer-lastmod"> This page was last edited on 19 November 2019, at 08:53.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -294,5 +465,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Firej
 </div>
 
 </body>
-<!-- Cached/compressed 20191118170454 -->
+<!-- Cached/compressed 20191119095404 -->
 </html>
