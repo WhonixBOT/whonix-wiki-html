@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: File Transfer - Whonix
  url: ./File_Transfer
- date: Wed Nov 20 07:41:58 2019
+ date: Thu Nov 21 07:42:05 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="./File_Transfer" property="og:url"/>
 <meta content="Copying files into and out of Whonix ™ Virtual Machines." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/2/2c/Filetransfer-2126883640.png" property="og:image"/>
-<meta content="2019-06-18T03:22:17Z" property="article:modified_time"/>
-<meta content="2019-06-18T03:22:17Z" property="article:published_time"/>
+<meta content="2019-11-20T13:11:20Z" property="article:modified_time"/>
+<meta content="2019-11-20T13:11:20Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="File Transfer - Whonix" property="twitter:title"/>
 <meta content="Copying files into and out of Whonix ™ Virtual Machines." property="twitter:description"/>
@@ -475,15 +475,23 @@ in the terminal.
 <p><a class="external free" data-href="https://forums.whonix.org/t/virtualbox-transfer-files-from-whonix-to-host-with-disk-images/2189" href="https://forums.whonix.org/t/virtualbox-transfer-files-from-whonix-to-host-with-disk-images/2189" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/virtualbox-transfer-files-from-whonix-to-host-with-disk-images/2189</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/virtualbox-transfer-files-from-whonix-to-host-with-disk-images/2189" href="https://web.archive.org/web/https://forums.whonix.org/t/virtualbox-transfer-files-from-whonix-to-host-with-disk-images/2189" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Adding_USB_device_to_VirtualBox">Adding USB device to VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=File_Transfer&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;action=edit&amp;section=15.html" title="Edit section: Adding USB device to VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This is not recommended for security reasons. A malicious guest can flash the low level firmware of your USB thumbdrive turning it into an attack vehicle against any machine you plug it into.
-</p><p>Does <b>not</b> require VirtualBox Guest Additions.
-</p><p>Please read the chapter <a data-href="/wiki/About#Whonix_.E2.84.A2_is_based_on_Debian.2C_VirtualBox_and_Tor" href="./About.html" title="About"> Whonix ™ is based on Debian</a>.
-</p><p>Means, you can change your search terms from "How to get USB in Whonix-Workstation ™?" to "How to get USB in VirtualBox?".
-</p><p>Anyway, VirtualBox does not support USB out of the box. There are closed source additional extensions for usb support. You can download them from the <a class="external text" data-href="https://www.virtualbox.org/wiki/Downloads" href="https://www.virtualbox.org/wiki/Downloads" rel="noreferrer noopener" target="_blank">VirtualBox download page</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads" href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-</p><p>Install them on the host.
-</p><p>We don't know if reboot is required. Then you can plug USB devices into Virtual Machines through the device menu in VirtualBox.
+<p>This is not recommended for security reasons. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>Please read the chapter <a data-href="/wiki/About#Whonix_.E2.84.A2_is_based_on_Debian.2C_VirtualBox_and_Tor" href="./About.html" title="About"> Whonix ™ is based on Debian</a>. Means, you can change your search terms from "How to get USB in Whonix-Workstation ™?" to "How to get USB in VirtualBox?".
+</p><p>Anyway, VirtualBox does only support USB 1.1 out of the box.
+</p><p>There are closed source additional extensions for better USB support. You can download them from the <a class="external text" data-href="https://www.virtualbox.org/wiki/Downloads" href="https://www.virtualbox.org/wiki/Downloads" rel="noreferrer noopener" target="_blank">VirtualBox download page</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads" href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. VirtualBox extension pack on the host if you want better USB support. We don't know if reboot is required after installation of the VirtualBox extension pack. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>For Linux hosts, the user that is running VirtualBox needs to be a member of linux user group <code>vboxusers</code>. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Add your current user to group <code>vboxusers</code>.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo adduser $(whoami) vboxusers</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo adduser $(whoami) vboxusers</textarea>
+</div>
+</div>
+<p>Reboot required. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Then you can plug USB devices into Virtual Machines through the device menu in VirtualBox.
 </p><p>Note that automount of USB devices is disabled in Whonix ™ by default. Try, Start menu → System Settings → Removable Media or manually mount. <a class="external text" data-href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" href="https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" rel="noreferrer noopener" target="_blank">(Old forum topic.)</a> <sup><a data-href="https://web.archive.org/web/https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" href="https://web.archive.org/web/https://sourceforge.net/p/whonix/discussion/general/thread/3b4b67c2/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <a class="external text" data-href="https://forums.whonix.org" href="https://forums.whonix.org" rel="noreferrer noopener" target="_blank">(You could start a new forum discussion to share your results.)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org" href="https://web.archive.org/web/https://forums.whonix.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</p><p>Note, if you USB device is formatted with NTFS, you need to install the ntfs-3g package, and a special mount command, see <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>.
+</p><p>Note, if you USB device is formatted with NTFS, you need to install the ntfs-3g package, and a special mount command, see <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>.
 </p><p><a class="external free" data-href="https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" href="https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" href="https://web.archive.org/web/https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
 <h2><span id="SSH_into_Whonix-Gateway_™"></span><span class="mw-headline" id="SSH_into_Whonix-Gateway_.E2.84.A2">SSH into Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=File_Transfer&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;action=edit&amp;section=16.html" title="Edit section: SSH into Whonix-Gateway ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -663,7 +671,7 @@ Look for the lines beginning with NIC. e.g. NIC 1 Rule(0):   name = ssh, protoco
 <p><b>Developers / experts only! Only for debugging!</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> <b>Warning:</b> If a guest image file is mounted and the image is compromised by malware, a user's system can be infected. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAYAAADmOUiuAAAHT0lEQVRYw82XCVBTVxSGQwyIuMCAwUgQkM2wJAGiAYxSRUFwG0brnjJQqmIEgYJWx22qWJSWCmLB0aqtFpC27uIuYEUtAoJaxLogSAVcEBAVMYXTc5+89BFZFKj2zvyTmfdu3vvy33v+c8NiddOYp6sbf0ksboiTSFL8/f2NLCwsOKz/y7Bjs73KR4+G5xMnwsOxY2G1j8/OwMBAga6uLvuDwyGBVpKFRSGBo5UulT4PDwlZ5OXlpfd6Spff0Xl59OwZVD1uHDybMEGlWm9v+NrT8/yiRYuG8/l8Thff0fkv67BY+pkiURUTjtZlFxfl4sDAtdOnTzfU0ND4MIAB/frF1bUCR2uLm1tRaGiol0Ag0OoKYKeGIYslKHJ1VTL3Hi0CVzd+PNwcPhyW+vom+vn5mWlpab3fglnH46W1BfYU92AN7ssnHh6QLJVWfB4WNlMqleq8NzhbRqyoNGUKvExIgFofH6j29IQqjJtHY8ZAsasrrJwyZS/Gjm3fvn3Z7yNWOMxYoV1rSEoCMupTUuAxgj10d4cHo0ZBhZsbHBaL68JDQxUeHh79uiN22h1jtbSoWGmxpHI5NL54AQ8ePIC/8fPxzJlQ+dFHUD5yJPw1YgQUOzvDV56eZ4ODg114PB7nP8vBXoxYYe612zt2ALY2wDlgZmYG+fHxcB/hymQyKMUlLkHA0zY2ysUKxYqpU6e+a+y8PeCnJFYQjKjWy4vaa7UKBUSuWUPB0ZLPmQOVAQFQ6uICd6VSuDNsGNySSGCjTHYNY8fTyspKq9tjhsTKdWdnJbNCH2MhvCoogCVLlrQAHI8/oD4/H4oR7vbQoXDTyQluODjAOSsr+MLfP97X19dEU1Oze/fi2gED0mjX6AqtWbmSKox4XFIm4MKFC6nr5RER8KejI9wQi+G6SAR/2NvDVrG4LCws7GOJRKLdrbFSinuKco2uUIRUlpVRIJmZmS0At27dSl1vKC2FIlzaQqEQrtnZwRUbG7hgbg7Lp01LnT9/vqB3797sLhcJiZVdZmaFtGsPMf9Ihdaia01NTZSePn0KPXr0UAFevXpVda98/Xq4amsLBQh3ecgQyMNl3m1pWR0eFvaZu7t7vy7vwTEYKxWYZ8xcq8AqbqytBeZwxKUkcHp6etDY2Ki6rqyuhmu4Fy9bW0OupSVcQgezTE3hy3HjzgQFBQ3lcrmcTjtIYuWkQFBFu0bnWl1qqsohWphxFOAEhFe/V7l9O+RgDGUj3EWMofMmJpBqZNQQERS01MfHp3+nY8avT584AkZcu49gJNfKZ8yAplev3oDYs2cPBRgVFfXGvcaGBijA51xA584PGgTn+HzIHDgQ1ru65oeEhLibm5tz3nmJSazkicVK2rV7eDIpwVx7fvYstDZKsSAIYHp6eqv3Hx05AlnGxvBbM1z6gAGwV1+/cUlAQIxcLjfGPcx+pyVebWCQRrtGd4PyBQsoR1ob5LqBgQFUVla2eT9/8mTI4PHgjKEhnOZy4STOj7W1vYux4+Pg4KD91g7aaGh4knigXaO6AeplURG0N7Aq2/wBZNTk5FBwp/r3hxMIdxy1H4tq2YwZu+fOnWvdq1cvdocOklj5ns8vpF2ju0Hl6tVv7C11ZWRkdDjnCrZAAnZcXx+OoY6iEk1MqvDM6Ofm5tanQwfdNTUVt7B3MnvoLXRSiSeV7hjPS0rgBO7BowiZhjqCOoCQq7y9T2AHcsJtwm7TQRIrhwcPripGMGYPfZSY2KEzycnJgCcViIyMBKVS2e7colWrVHCHUYdQ2w0N6yOCgyMmTZqk36aDn+joxBEw4hrpoUXYQ29iByFnvfZeqN7qYmJi2p3/qqYGTmBwH8K9eBB1ALUPISNlshyMHTdTU1NOq7GSZW2tpF0jcKSHPtm/v8Nli46ObgFInOxoFGO/puH2E0DUjyR25s3bMGvWLCM2m81uscTL9fTSaNfok8dN/H/RxGhbbY3c3FzA56kAY2NjO/xOI4b9SVwtArYX9SvGzi/4GS0S3cHYmSwUCrVVS0xiJQ+bOe0affK4gblVf+cOvLx3j1K9uvA0Q2vftm3gj/O3rFsHL8i1+/f/VXn5a1VUqPQMg/0UZuxeBKPgUD+jdmPBLJ09e2dAQICltrY2m/oTlMDlFtKuUScPgUB18lDvoerdgASuKtcY0ZGGYhbBQVKtJPeal5NyDUVcI2CpqD2oFNRGc/NHGDtymUymwxrN4SgKEIp2LZ/AMU4evw8eTPXQrOYeetbISNUNCNjJ5sA91ixmfFBwjEJQwam5RsHh81JQyahdOGfFxImHFQqFiJXE41W06hqCvU/XklFJqJ8QcDdqk7FxXXh4+DzWD1xuGXEtrzOuMeE6cq01OIZrSSgabhcB5PPrIyIioliDWKyhG+zskhIkkgzUxQQnp4vfETk6Zm92cMjeLBZnxxOJRNnxQmH2JiJ7++w4e/scdcUS2dnRytuopm9bKj/G1lalbxiKFgpzlsnl29HB2f8AQvkHoInKWyIAAAAASUVORK5CYII=" width="40"/></a> <b>Warning:</b> If a guest image file is mounted and the image is compromised by malware, a user's system can be infected. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p>
 </div>
 <p>Required user knowledge:
@@ -940,9 +948,21 @@ This is perhaps due to an old bug.</span>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://forums.gentoo.org/viewtopic-t-822672-start-0.html" href="https://forums.gentoo.org/viewtopic-t-822672-start-0.html" rel="noreferrer noopener" target="_blank">https://forums.gentoo.org/viewtopic-t-822672-start-0.html</a> <sup><a data-href="https://web.archive.org/web/https://forums.gentoo.org/viewtopic-t-822672-start-0.html" href="https://web.archive.org/web/https://forums.gentoo.org/viewtopic-t-822672-start-0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" href="http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" rel="noreferrer noopener" target="_blank">http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/</a> <sup><a data-href="https://web.archive.org/web/http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" href="https://web.archive.org/web/http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+A malicious guest can flash the low level firmware of your USB thumbdrive turning it into an attack vehicle against any machine you plug it into.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" href="https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" rel="noreferrer noopener" target="_blank">https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/</a> <sup><a data-href="https://web.archive.org/web/https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" href="https://web.archive.org/web/https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+Does <b>not</b> require VirtualBox Guest Additions.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+Otherwise VirtualBox GUI will show <code>no devices available</code>.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+Or re-login.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" href="http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" rel="noreferrer noopener" target="_blank">http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/</a> <sup><a data-href="https://web.archive.org/web/http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" href="https://web.archive.org/web/http://sourceforge.net/p/whonix/discussion/general/thread/c2429909/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" href="https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" rel="noreferrer noopener" target="_blank">https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/</a> <sup><a data-href="https://web.archive.org/web/https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" href="https://web.archive.org/web/https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -952,7 +972,7 @@ This is perhaps due to an old bug.</span>
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about Whonix on your website, blog or social media.
+<p>Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/Whonix" href="https://web.archive.org/web/https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> <sup><a data-href="https://web.archive.org/web/https://www.facebook.com/Whonix" href="https://web.archive.org/web/https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/File_Transfer" href="https://www.Whonix.org/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/File_Transfer" href="https://web.archive.org/web/https://www.Whonix.org/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/File_Transfer" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -972,35 +992,35 @@ This is perhaps due to an old bug.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118123918
+Cached time: 20191120152348
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.204 seconds
-Real time usage: 0.227 seconds
-Preprocessor visited node count: 1205/1000000
-Preprocessor generated node count: 3278/1000000
-Post‐expand include size: 12401/2097152 bytes
-Template argument size: 3235/2097152 bytes
+CPU time usage: 0.203 seconds
+Real time usage: 0.245 seconds
+Preprocessor visited node count: 1273/1000000
+Preprocessor generated node count: 3442/1000000
+Post‐expand include size: 12495/2097152 bytes
+Template argument size: 3267/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2896/5000000 bytes
+Unstrip post‐expand size: 4153/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  176.513      1 -total
- 64.02%  113.011     65 Template:CodeSelect
-  5.88%   10.386      1 Template:Footer
-  4.03%    7.110      1 Template:Header
-  3.83%    6.757      1 Template:Reflist
-  3.13%    5.524      1 Template:Non-q-project
-  1.69%    2.976     46 Template:Project_name
-  1.59%    2.800     29 Template:Workstation_product_name
-  1.51%    2.665     17 Template:Gateway_product_name
-  1.46%    2.577     12 Template:Project_name_short
+100.00%  197.755      1 -total
+ 72.15%  142.673     66 Template:CodeSelect
+  5.18%   10.252      1 Template:Footer
+  3.73%    7.377      1 Template:Reflist
+  2.27%    4.487      1 Template:Non-q-project
+  1.57%    3.110      1 Template:Header
+  1.45%    2.866      1 Template:Update
+  1.00%    1.983     29 Template:Workstation_product_name
+  0.96%    1.894      1 Template:Share
+  0.95%    1.880      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=48486" dir="ltr" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=48486">https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=48486</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=52897" dir="ltr" href="https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=52897">https://www.whonix.org/w/index.php?title=File_Transfer&amp;oldid=52897</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -1011,7 +1031,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Tran
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 18 June 2019, at 04:22.</li>
+<li id="footer-lastmod"> This page was last edited on 20 November 2019, at 14:11.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1032,5 +1052,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=File_Tran
 </div>
 
 </body>
-<!-- Cached/compressed 20191118123918 -->
+<!-- Cached/compressed 20191120152348 -->
 </html>
