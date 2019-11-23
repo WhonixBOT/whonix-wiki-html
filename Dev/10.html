@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Physical Isolation - Whonix
  url: ../Dev/Build_Documentation/Physical_Isolation/10
- date: Fri Nov 22 07:35:28 2019
+ date: Sat Nov 23 07:35:41 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -790,10 +790,10 @@ a.freelink
 <p>Verify the chosen tag to build. Replace with tag you want to build.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-tag 15.0.0.4.9-stable</pre>
+<pre>git verify-tag 15.0.0.6.6-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 15.0.0.4.9-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 15.0.0.6.6-stable</textarea>
 </div>
 </div>
 <p>The output should look similar to this.
@@ -801,7 +801,7 @@ a.freelink
 <blockquote>
 <p>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22<br/>
 type commit<br/>
-tag 15.0.0.4.9<br/>
+tag 15.0.0.6.6<br/>
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000<br/>
 <br/>
 .<br/>
@@ -821,13 +821,13 @@ gpg:          There is no indication that the signature belongs to the owner.<br
 </p>
 </blockquote>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace 15.0.0.4.9 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace 15.0.0.6.6 with the actual git tag being verified).
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-commit 15.0.0.4.9-stable^{commit}</pre>
+<pre>git verify-commit 15.0.0.6.6-stable^{commit}</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 15.0.0.4.9-stable^{commit}</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 15.0.0.6.6-stable^{commit}</textarea>
 </div>
 </div>
 <p>The output should look similar to this.
@@ -854,13 +854,13 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 <p>Use <i>git checkout</i> to select the preferred version to build.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git checkout --recursive-submodules 15.0.0.4.9-stable</pre>
+<pre>git checkout --recursive-submodules 15.0.0.6.6-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.4.9-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.6.6-stable</textarea>
 </div>
 </div>
-<p>Replace <code>15.0.0.4.9-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
+<p>Replace <code>15.0.0.6.6-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
 </p><p>Check if you really got the version you want.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -872,7 +872,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 </div>
 <p>Should show:
 </p><p><code>
-15.0.0.4.9-stable
+15.0.0.6.6-stable
 </code>
 </p><p><br/>
 </p>
@@ -1623,7 +1623,7 @@ Type each command below, followed by the <code>ENTER</code> key.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> <sup><a data-href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a> <sup><a data-href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) or <a class="external text" data-href="https://t.me/Whonix_Chat" href="https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">Telegram Chat</a> <sup><a data-href="https://web.archive.org/web/https://t.me/Whonix_Chat" href="https://web.archive.org/web/https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="../Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1838,7 +1838,7 @@ All attempts to fix this long-standing issue have failed. Help is welcome to fix
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please consider a <a class="external text" data-href="../Donate" href="../Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/../Donate" href="https://web.archive.org/web/../Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1858,32 +1858,32 @@ All attempts to fix this long-standing issue have failed. Help is welcome to fix
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191122063526
+Cached time: 20191123063539
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.342 seconds
-Real time usage: 0.373 seconds
-Preprocessor visited node count: 2376/1000000
-Preprocessor generated node count: 5866/1000000
-Post‐expand include size: 81413/2097152 bytes
+CPU time usage: 0.349 seconds
+Real time usage: 0.497 seconds
+Preprocessor visited node count: 2375/1000000
+Preprocessor generated node count: 5854/1000000
+Post‐expand include size: 81423/2097152 bytes
 Template argument size: 13081/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 34130/5000000 bytes
+Unstrip post‐expand size: 33386/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  201.572      1 -total
- 31.79%   64.075     41 Template:CodeSelect
- 23.92%   48.226      1 Template:Stay_tuned
- 14.02%   28.267      2 Template:Reflist
- 12.34%   24.884      1 Template:Build_Configuration
- 11.78%   23.738     15 Template:Box
- 10.88%   21.940      1 Template:Build_Documentation_Get_Source_Code
-  9.49%   19.125      2 Template:Footer
-  8.89%   17.910      1 Template:Known_bugs
-  4.29%    8.648      1 Template:Build_Documentation_Whonix_APT_Repository
+100.00%  336.067      1 -total
+ 52.56%  176.626     41 Template:CodeSelect
+ 38.32%  128.767     15 Template:Box
+ 32.92%  110.636      4 Template:Open_with_root_rights
+ 17.78%   59.769      1 Template:Stay_tuned
+ 10.02%   33.683      2 Template:Reflist
+  8.35%   28.052      1 Template:Build_Documentation_Get_Source_Code
+  8.07%   27.127      1 Template:Build_Configuration
+  5.28%   17.741      2 Template:Footer
+  5.09%   17.114      1 Template:Known_bugs
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709</a>"</div>

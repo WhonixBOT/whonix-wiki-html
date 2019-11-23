@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Upgrading Whonix Deb Packages from Source Code - Whonix
  url: ../Dev/Build_Documentation/14_deb
- date: Fri Nov 22 07:35:20 2019
+ date: Sat Nov 23 07:35:33 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -222,10 +222,10 @@ a.freelink
 <p>Verify the chosen tag to build. Replace with tag you want to build.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-tag 15.0.0.4.9-stable</pre>
+<pre>git verify-tag 15.0.0.6.6-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 15.0.0.4.9-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 15.0.0.6.6-stable</textarea>
 </div>
 </div>
 <p>The output should look similar to this.
@@ -233,7 +233,7 @@ a.freelink
 <blockquote>
 <p>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22<br/>
 type commit<br/>
-tag 15.0.0.4.9<br/>
+tag 15.0.0.6.6<br/>
 tagger Patrick Schleizer &lt;adrelanos@riseup.net&gt; 1392320095 +0000<br/>
 <br/>
 .<br/>
@@ -253,13 +253,13 @@ gpg:          There is no indication that the signature belongs to the owner.<br
 </p>
 </blockquote>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace 15.0.0.4.9 with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace 15.0.0.6.6 with the actual git tag being verified).
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-commit 15.0.0.4.9-stable^{commit}</pre>
+<pre>git verify-commit 15.0.0.6.6-stable^{commit}</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 15.0.0.4.9-stable^{commit}</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 15.0.0.6.6-stable^{commit}</textarea>
 </div>
 </div>
 <p>The output should look similar to this.
@@ -286,13 +286,13 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 <p>Use <i>git checkout</i> to select the preferred version to build.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git checkout --recursive-submodules 15.0.0.4.9-stable</pre>
+<pre>git checkout --recursive-submodules 15.0.0.6.6-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.4.9-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.6.6-stable</textarea>
 </div>
 </div>
-<p>Replace <code>15.0.0.4.9-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
+<p>Replace <code>15.0.0.6.6-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
 </p><p>Check if you really got the version you want.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -304,7 +304,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 </div>
 <p>Should show:
 </p><p><code>
-15.0.0.4.9-stable
+15.0.0.6.6-stable
 </code>
 </p><p><br/>
 </p>
@@ -440,7 +440,7 @@ Beginning from git tag 9.6 and above.</span>
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a> <sup><a data-href="https://web.archive.org/web/../Contribute#Answer_Questions" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -460,32 +460,32 @@ Beginning from git tag 9.6 and above.</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191122063519
+Cached time: 20191123063532
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.087 seconds
-Real time usage: 0.100 seconds
-Preprocessor visited node count: 557/1000000
-Preprocessor generated node count: 1701/1000000
-Post‐expand include size: 13711/2097152 bytes
+CPU time usage: 0.098 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 559/1000000
+Preprocessor generated node count: 1709/1000000
+Post‐expand include size: 13721/2097152 bytes
 Template argument size: 1730/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 5763/5000000 bytes
+Unstrip post‐expand size: 5480/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   66.602      1 -total
- 39.96%   26.611     17 Template:CodeSelect
- 37.44%   24.937      1 Template:Build_Documentation_Get_Source_Code
- 18.40%   12.258      1 Template:Footer
- 12.13%    8.080      1 Template:Build_Documentation_Get_Source
-  8.56%    5.704      1 Template:Build_Documentation_Choose_Version
-  7.87%    5.243      1 Template:Reflist
-  5.00%    3.331      1 Template:Build_Documentation_Cleanup
-  4.74%    3.154      1 Template:Gpg_signature_timestamp
-  3.62%    2.410      1 Template:Free
+100.00%   72.934      1 -total
+ 41.93%   30.584     17 Template:CodeSelect
+ 38.67%   28.203      1 Template:Build_Documentation_Get_Source_Code
+ 15.63%   11.397      1 Template:Footer
+ 12.66%    9.235      1 Template:Build_Documentation_Get_Source
+  8.73%    6.365      1 Template:Build_Documentation_Choose_Version
+  8.10%    5.909      1 Template:Reflist
+  4.68%    3.413      1 Template:Build_Documentation_Cleanup
+  4.39%    3.204      1 Template:Gpg_signature_timestamp
+  3.36%    2.448      1 Template:Free
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code&amp;oldid=52710" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code&amp;oldid=52710">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Upgrading_Whonix_Deb_Packages_from_Source_Code&amp;oldid=52710</a>"</div>
