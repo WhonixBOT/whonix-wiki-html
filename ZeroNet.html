@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: ZeroNet: Decentralized Censorship-resistant Network - Whonix
  url: ./ZeroNet
- date: Sat Nov 23 08:09:28 2019
+ date: Sun Nov 24 08:07:39 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -206,10 +206,9 @@ Users can publish static or dynamic websites in ZeroNet and visitors can choose 
 <p><b>1.</b> <b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Workstation ™ AppVM.
-</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+In Whonix-Workstation ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
@@ -218,25 +217,17 @@ In Whonix-Workstation ™ AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">anon-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
+</p><p>Open <code>/etc/whonix_firewall.d/50_user.conf</code> with root rights.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
-</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -244,8 +235,8 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
-</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code>.
+</p><p>The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -259,14 +250,14 @@ In Whonix-Workstation ™ AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -502,7 +493,7 @@ ZeroNet dependencies are not available in Debian.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/ZeroNet" href="https://www.Whonix.org/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/ZeroNet" href="https://web.archive.org/web/https://www.Whonix.org/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/ZeroNet" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -522,32 +513,32 @@ ZeroNet dependencies are not available in Debian.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118131258
+Cached time: 20191123161923
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.123 seconds
-Real time usage: 0.134 seconds
-Preprocessor visited node count: 804/1000000
-Preprocessor generated node count: 2375/1000000
-Post‐expand include size: 32900/2097152 bytes
-Template argument size: 16793/2097152 bytes
+CPU time usage: 0.185 seconds
+Real time usage: 0.240 seconds
+Preprocessor visited node count: 778/1000000
+Preprocessor generated node count: 2324/1000000
+Post‐expand include size: 32507/2097152 bytes
+Template argument size: 16633/2097152 bytes
 Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 10443/5000000 bytes
+Unstrip post‐expand size: 9895/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   88.427      1 -total
- 68.78%   60.819     12 Template:Box
- 30.67%   27.122     19 Template:CodeSelect
- 15.39%   13.611      1 Template:Firewall_Settings_Workstation
- 14.02%   12.399      1 Template:Footer
- 12.37%   10.942      1 Template:Reflist
-  8.08%    7.145      1 Template:Control_Port_Filter_Python_Profile_Add
-  7.81%    6.906      1 Template:Onion-grater-warning
-  7.49%    6.626      4 Template:Mbox
-  3.36%    2.971      1 Template:Tor_Browser_Start
+100.00%  192.280      1 -total
+ 85.53%  164.464     12 Template:Box
+ 49.34%   94.876     18 Template:CodeSelect
+ 26.40%   50.756      1 Template:Control_Port_Filter_Python_Profile_Add
+ 17.21%   33.092      1 Template:Firewall_Settings_Workstation
+  6.40%   12.313      1 Template:Footer
+  5.64%   10.851      1 Template:Reflist
+  4.50%    8.652      4 Template:Mbox
+  4.45%    8.548      1 Template:Onion-grater-warning
+  3.74%    7.192      1 Template:Reload_Firewall_ws
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=51415" dir="ltr" href="https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=51415">https://www.whonix.org/w/index.php?title=ZeroNet&amp;oldid=51415</a>"</div>
@@ -582,5 +573,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=ZeroNet&a
 </div>
 
 </body>
-<!-- Cached/compressed 20191118131259 -->
+<!-- Cached/compressed 20191123161923 -->
 </html>

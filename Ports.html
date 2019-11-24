@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Ports - Whonix
  url: ./Ports
- date: Sat Nov 23 07:57:21 2019
+ date: Sun Nov 24 07:55:54 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -162,21 +162,31 @@ Whonix requires Donations to stay alive.
 <ul><li><a class="external free" data-href="https://github.com/Whonix/whonix-firewall/blob/95bbe7fd32fef12ee8544a9e9132973532d6a41d/etc/whonix_firewall.d/30_whonix_gateway_default.conf#L75-L84" href="https://github.com/Whonix/whonix-firewall/blob/95bbe7fd32fef12ee8544a9e9132973532d6a41d/etc/whonix_firewall.d/30_whonix_gateway_default.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-firewall/blob/95bbe7fd32fef12ee8544a9e9132973532d6a41d/etc/whonix_firewall.d/30_whonix_gateway_default.conf#L75-L84</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-firewall/blob/95bbe7fd32fef12ee8544a9e9132973532d6a41d/etc/whonix_firewall.d/30_whonix_gateway_default.conf#L75-L84" href="https://web.archive.org/web/https://github.com/Whonix/whonix-firewall/blob/95bbe7fd32fef12ee8544a9e9132973532d6a41d/etc/whonix_firewall.d/30_whonix_gateway_default.conf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a data-href="/wiki/Access_Gateway_Port_From_Host" href="./Access_Gateway_Port_From_Host.html" title="Access Gateway Port From Host">Access Gateway Port From Host</a></li></ul>
 <h2><span id="Open_Whonix-Gateway_™_Port"></span><span class="mw-headline" id="Open_Whonix-Gateway_.E2.84.A2_Port">Open Whonix-Gateway ™ Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Ports&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Ports&amp;action=edit&amp;section=3.html" title="Edit section: Open Whonix-Gateway ™ Port">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Modify Whonix User Firewall Settings.
+<p><b>Modify Whonix-Gateway ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-15</code> → <code>Whonix User Firewall Settings</code>
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+In Whonix-Gateway ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+</div>
+</div>
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">sys-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
-</p><div class="codeContainerNew">
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -184,7 +194,8 @@ Whonix requires Donations to stay alive.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code>.
+</p><p><b>Note</b>: The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -199,12 +210,13 @@ Whonix requires Donations to stay alive.
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -243,10 +255,9 @@ Whonix requires Donations to stay alive.
 <p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Workstation ™ AppVM.
-</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+In Whonix-Workstation ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
@@ -255,25 +266,17 @@ In Whonix-Workstation ™ AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">anon-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
+</p><p>Open <code>/etc/whonix_firewall.d/50_user.conf</code> with root rights.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
-</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -281,8 +284,8 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
-</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code>.
+</p><p>The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -296,14 +299,14 @@ In Whonix-Workstation ™ AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -361,7 +364,7 @@ In Whonix-Workstation ™ AppVM.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Have you read our <a class="external text" data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank">Documentation</a> <sup><a data-href="https://web.archive.org/web/./Documentation" href="https://web.archive.org/web/./Documentation" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, <a class="external text" data-href="./Design" href="./Design" rel="noreferrer noopener" target="_blank">Technical Design</a> <sup><a data-href="https://web.archive.org/web/./Design" href="https://web.archive.org/web/./Design" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="./Dev/Developer_Portal" href="./Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> <sup><a data-href="https://web.archive.org/web/./Dev/Developer_Portal" href="https://web.archive.org/web/./Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">[archive]</a></sup> links yet?
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Ports" href="https://www.Whonix.org/wiki/Ports" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Ports" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Ports" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Ports" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -381,32 +384,32 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118115953
+Cached time: 20191123153838
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.095 seconds
-Real time usage: 0.123 seconds
-Preprocessor visited node count: 472/1000000
-Preprocessor generated node count: 1496/1000000
-Post‐expand include size: 25674/2097152 bytes
-Template argument size: 11349/2097152 bytes
+CPU time usage: 0.082 seconds
+Real time usage: 0.117 seconds
+Preprocessor visited node count: 453/1000000
+Preprocessor generated node count: 1458/1000000
+Post‐expand include size: 26530/2097152 bytes
+Template argument size: 11915/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1823/5000000 bytes
+Unstrip post‐expand size: 1617/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   84.458      1 -total
- 47.67%   40.259      9 Template:Box
- 20.46%   17.282     10 Template:CodeSelect
- 18.87%   15.934      1 Template:Firewall_Settings_Gateway
- 17.16%   14.490      1 Template:Footer
- 15.77%   13.315      1 Template:Firewall_Settings_Workstation
- 11.37%    9.607      1 Template:Header
-  6.19%    5.226      1 Template:Mbox
-  4.65%    3.930     10 Template:Project_name_short
-  3.48%    2.936      1 Template:Reload_Firewall
+100.00%   80.495      1 -total
+ 73.90%   59.483      9 Template:Box
+ 49.68%   39.989     10 Template:CodeSelect
+ 46.13%   37.135      1 Template:Firewall_Settings_Gateway
+ 16.20%   13.038      1 Template:Footer
+ 10.77%    8.673      1 Template:Firewall_Settings_Workstation
+  3.94%    3.174      1 Template:Reload_Firewall_ws
+  3.34%    2.686      1 Template:Reload_Firewall
+  2.97%    2.388      1 Template:Share
+  2.91%    2.345      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Ports&amp;oldid=46832" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Ports&amp;oldid=46832">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Ports&amp;oldid=46832</a>"</div>
@@ -441,5 +444,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Po
 </div>
 
 </body>
-<!-- Cached/compressed 20191118115953 -->
+<!-- Cached/compressed 20191123153838 -->
 </html>

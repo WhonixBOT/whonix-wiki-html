@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Entropy - Whonix
  url: ../Dev/Entropy
- date: Sat Nov 23 07:36:54 2019
+ date: Sun Nov 24 07:36:37 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -22,18 +22,18 @@
 <link data-href="/w/index.php?title=Dev/Entropy&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Entropy" property="og:title"/>
-<meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" property="og:url"/>
+<meta content="../Dev/Entropy" property="og:url"/>
 <meta content="Dev/Entropy - Whonix" property="og:title"/>
-<meta content="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" property="og:url"/>
+<meta content="../Dev/Entropy" property="og:url"/>
 <meta content="Technical Design Documentation about Entropy" property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2019-09-16T23:43:17Z" property="article:modified_time"/>
-<meta content="2019-09-16T23:43:17Z" property="article:published_time"/>
+<meta content="2019-11-23T11:22:23Z" property="article:modified_time"/>
+<meta content="2019-11-23T11:22:23Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Entropy - Whonix" property="twitter:title"/>
 <meta content="Technical Design Documentation about Entropy" property="twitter:description"/>
@@ -246,17 +246,28 @@ All 2 tests passed
 <p>jitterentropy is a RNG designed in the spirit of haveged (using CPU timer jitter as entropy source) except it made up of a kernel module - mainlined since Linux 4.2 and a userspace daemon (jitterentropy-rngd*) to prevent /dev/random from blocking. The advantage of jitterentropy is by taking advantage of a loaded kernel module, it can ensure randomness is being collected before the CSPRNG is initialized. So, when CSPRNG initialization happens, we can ensure that it is properly seeded on first boot, minimizing the likelihood that exact keys will be created on distinct systems. This is something haveged can't provide, as it runs entirely in userspace.
 </p><p>It is a good alternative to haveged, especially for hypervisors that don't support virtio-RNG and so don't have access to entropy sources early during boot process. jitterentropy-rngd is now included in Debian Buster and has been available since Whonix ™ 15.<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
 </p><p>Links:
-</p><p><br/>
-<a class="external free" data-href="http://www.chronox.de/jent.html" href="http://www.chronox.de/jent.html" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent.html</a> <sup><a data-href="https://web.archive.org/web/http://www.chronox.de/jent.html" href="https://web.archive.org/web/http://www.chronox.de/jent.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</p><p><a class="external free" data-href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf</a> <sup><a data-href="https://web.archive.org/web/http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" href="https://web.archive.org/web/http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</p><p><a class="external free" data-href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" rel="noreferrer noopener" target="_blank">https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/</a> <sup><a data-href="https://web.archive.org/web/https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" href="https://web.archive.org/web/https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</p><p><a class="external free" data-href="https://packages.debian.org/sid/jitterentropy-rngd" href="https://packages.debian.org/sid/jitterentropy-rngd" rel="noreferrer noopener" target="_blank">https://packages.debian.org/sid/jitterentropy-rngd</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/sid/jitterentropy-rngd" href="https://web.archive.org/web/https://packages.debian.org/sid/jitterentropy-rngd" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-</p><p><br/>
-Playing devil's advocate here: Ted Ts'o <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> expresses strong skepticism about the efficacy of RNGs that rely on CPU jitter. summary: CPU jitter may not be random as thought to someone who designed the CPU cache and know how its internals "tick" <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>. So while these RNGs may not harm, another solution for RNG-less platforms may be a good idea.
-</p><p><br/>
 </p>
-<pre>It may be that there is some very complex state which is hidden inside the the CPU execution pipeline, the L1 cache, etc., etc. But just because *you* can't figure it out, and just because *I* can't figure it out doesn't mean that it is ipso facto something which a really bright NSA analyst working in Fort Meade can't figure out. (Or heck, a really clever Intel engineer who has full visibility into the internal design of an Intel CPU....)
-</pre>
+<ul><li><a class="external free" data-href="http://www.chronox.de/jent.html" href="http://www.chronox.de/jent.html" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent.html</a> <sup><a data-href="https://web.archive.org/web/http://www.chronox.de/jent.html" href="https://web.archive.org/web/http://www.chronox.de/jent.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" href="http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" rel="noreferrer noopener" target="_blank">http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf</a> <sup><a data-href="https://web.archive.org/web/http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" href="https://web.archive.org/web/http://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" href="https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" rel="noreferrer noopener" target="_blank">https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/</a> <sup><a data-href="https://web.archive.org/web/https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" href="https://web.archive.org/web/https://pthree.org/2016/05/24/cpu-jitter-entropy-for-the-linux-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://packages.debian.org/sid/jitterentropy-rngd" href="https://packages.debian.org/sid/jitterentropy-rngd" rel="noreferrer noopener" target="_blank">https://packages.debian.org/sid/jitterentropy-rngd</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/sid/jitterentropy-rngd" href="https://web.archive.org/web/https://packages.debian.org/sid/jitterentropy-rngd" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<p>Playing devil's advocate here: Ted Ts'o <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> expresses strong skepticism about the efficacy of RNGs that rely on CPU jitter. summary: CPU jitter may not be random as thought to someone who designed the CPU cache and know how its internals "tick" <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>. So while these RNGs may not harm, another solution for RNG-less platforms may be a good idea.
+</p>
+<blockquote>
+<p>It may be that there is some very complex state which is hidden inside the the CPU execution pipeline, the L1 cache, etc., etc. But just because *you* can't figure it out, and just because *I* can't figure it out doesn't mean that it is ipso facto something which a really bright NSA analyst working in Fort Meade can't figure out. (Or heck, a really clever Intel engineer who has full visibility into the internal design of an Intel CPU....)
+</p>
+</blockquote>
+<ul><li><a class="external free" data-href="https://forums.whonix.org/t/jitterentropy-rngd/7204" href="https://forums.whonix.org/t/jitterentropy-rngd/7204" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/jitterentropy-rngd/7204</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/jitterentropy-rngd/7204" href="https://web.archive.org/web/https://forums.whonix.org/t/jitterentropy-rngd/7204" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>Debian bug report: <a class="external text" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=927972" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=927972" rel="noreferrer noopener" target="_blank">set jitterentropy_rng.ko to built-in</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=927972" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=927972" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/4174" href="https://github.com/QubesOS/qubes-issues/issues/4174" rel="noreferrer noopener" target="_blank">ask Xen developers about Efficacy of jitterentropy RNG in Xen</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4174" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4174" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://lists.xen.org/archives/html/xen-users/2019-04/msg00017.html" href="https://lists.xen.org/archives/html/xen-users/2019-04/msg00017.html" rel="noreferrer noopener" target="_blank">Xen-users - Efficacy of jitterentropy RNG in Xen</a> <sup><a data-href="https://web.archive.org/web/https://lists.xen.org/archives/html/xen-users/2019-04/msg00017.html" href="https://web.archive.org/web/https://lists.xen.org/archives/html/xen-users/2019-04/msg00017.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://lists.nongnu.org/archive/html/qemu-devel/2018-08/msg00368.html" href="https://lists.nongnu.org/archive/html/qemu-devel/2018-08/msg00368.html" rel="noreferrer noopener" target="_blank">Qemu-devel - Efficacy of jitterentropy RNG on qemu-kvm Guests (asks about Xen too)</a> <sup><a data-href="https://web.archive.org/web/https://lists.nongnu.org/archive/html/qemu-devel/2018-08/msg00368.html" href="https://web.archive.org/web/https://lists.nongnu.org/archive/html/qemu-devel/2018-08/msg00368.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>Qubes feature request: <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/4169" href="https://github.com/QubesOS/qubes-issues/issues/4169" rel="noreferrer noopener" target="_blank">consider installing jitterentropy-rngd to improve entropy collection</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4169" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4169" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://github.com/smuellerDD/jitterentropy-rngd/issues/6#issuecomment-483191719" href="https://github.com/smuellerDD/jitterentropy-rngd/issues/6" rel="noreferrer noopener" target="_blank">Answer by jitterentropy developer</a> <sup><a data-href="https://web.archive.org/web/https://github.com/smuellerDD/jitterentropy-rngd/issues/6#issuecomment-483191719" href="https://web.archive.org/web/https://github.com/smuellerDD/jitterentropy-rngd/issues/6" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://github.com/smuellerDD/jitterentropy-rngd/issues/6#issuecomment-489428226" href="https://github.com/smuellerDD/jitterentropy-rngd/issues/6" rel="noreferrer noopener" target="_blank">Efficacy test results for VirtualBox, KVM, Xen</a> <sup><a data-href="https://web.archive.org/web/https://github.com/smuellerDD/jitterentropy-rngd/issues/6#issuecomment-489428226" href="https://web.archive.org/web/https://github.com/smuellerDD/jitterentropy-rngd/issues/6" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<p>kernel module added (Whonix ™ 15.0.0.7.2) and above:
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/security-misc/commit/fe1f1b73a77d11c136cedcdb3efcb57f4c68c6af" href="https://github.com/Whonix/security-misc/commit/fe1f1b73a77d11c136cedcdb3efcb57f4c68c6af" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/security-misc/commit/fe1f1b73a77d11c136cedcdb3efcb57f4c68c6af</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/commit/fe1f1b73a77d11c136cedcdb3efcb57f4c68c6af" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/commit/fe1f1b73a77d11c136cedcdb3efcb57f4c68c6af" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <h1><span class="mw-headline" id="Hardware_Entropy_Keys">Hardware Entropy Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=11.html" title="Edit section: Hardware Entropy Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Entropy_Key">Entropy Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;action=edit&amp;section=12.html" title="Edit section: Entropy Key">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="http://www.entropykey.co.uk/" href="http://www.entropykey.co.uk/" rel="noreferrer noopener" target="_blank">Entropy Key</a> <sup><a data-href="https://web.archive.org/web/http://www.entropykey.co.uk/" href="https://web.archive.org/web/http://www.entropykey.co.uk/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>; Hardware not fully open source. Some resources say, it is okay as an additional source of entropy. Where to add it? Since Whonix ™ depends on a host operating system, the Whonix-Gateway ™ and the Whonix-Workstation ™, where it does make most sense to add it? Perhaps adding it to the host and using a entropy broker could be the most effective method. Better than buying three entropy keys.
@@ -286,7 +297,7 @@ Playing devil's advocate here: Ted Ts'o <sup class="reference" id="cite_ref-12">
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Join us in testing our new <a class="external text" data-href="../AppArmor" href="../AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> <sup><a data-href="https://web.archive.org/web/../AppArmor" href="https://web.archive.org/web/../AppArmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
+<p>Are you proficient with <b>iptables</b>? Want to contribute? Check out possible <a class="external text" data-href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">improvements to iptables</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22#R" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/?statuses=open%28%29&amp;projects=PHID-PROJ-aanxoadr5ziixgbisy22" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Please come and introduce yourself in the <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Entropy" href="https://www.Whonix.org/wiki/Dev/Entropy" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Entropy" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Entropy" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Entropy" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -334,35 +345,35 @@ Since Whonix ™ 0.5.5 and above.</span>
 </ol></div>
 <!-- 
 NewPP limit report
-Cached time: 20191118140708
+Cached time: 20191123112455
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.075 seconds
-Real time usage: 0.103 seconds
-Preprocessor visited node count: 384/1000000
-Preprocessor generated node count: 924/1000000
-Post‐expand include size: 4120/2097152 bytes
+CPU time usage: 0.078 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 378/1000000
+Preprocessor generated node count: 912/1000000
+Post‐expand include size: 4130/2097152 bytes
 Template argument size: 0/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 3467/5000000 bytes
+Unstrip post‐expand size: 3240/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   82.615      1 -total
- 42.78%   35.346      1 Template:Footer
-  3.73%    3.081      1 Template:RandomNews
-  3.47%    2.863      1 Template:Share
-  2.82%    2.330      1 Template:Header
-  2.75%    2.274      1 Template:Edit_it
-  1.51%    1.246     14 Template:Project_name
-  1.36%    1.120      1 Template:Bitcoin_Pay
-  1.34%    1.103      1 Template:Project_onion
-  1.23%    1.019      9 Template:Project_name_short
+100.00%   58.113      1 -total
+ 23.72%   13.782      1 Template:Footer
+  4.84%    2.814      1 Template:Share
+  4.23%    2.460      1 Template:Edit_it
+  3.62%    2.101      1 Template:Header
+  3.52%    2.046      1 Template:RandomNews
+  1.42%    0.823     15 Template:Project_name
+  1.29%    0.751      9 Template:Project_name_short
+  1.28%    0.742      2 Template:Name
+  1.21%    0.706      2 Template:Gateway_product_name
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Entropy&amp;oldid=51210" dir="ltr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Entropy&amp;oldid=51210">http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/w/index.php?title=Dev/Entropy&amp;oldid=51210</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=52970" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=52970">https://www.whonix.org/w/index.php?title=Dev/Entropy&amp;oldid=52970</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -373,7 +384,7 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 17 September 2019, at 00:43.</li>
+<li id="footer-lastmod"> This page was last edited on 23 November 2019, at 12:22.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -394,5 +405,5 @@ Retrieved from "<a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbf
 </div>
 
 </body>
-<!-- Cached/compressed 20191118140708 -->
+<!-- Cached/compressed 20191123112455 -->
 </html>

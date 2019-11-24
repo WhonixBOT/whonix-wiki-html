@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Onion Services - Whonix
  url: ./Hidden_Services
- date: Sat Nov 23 07:43:15 2019
+ date: Sun Nov 24 07:42:40 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -444,10 +444,9 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Workstation ™ AppVM.
-</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+In Whonix-Workstation ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
@@ -456,25 +455,17 @@ In Whonix-Workstation ™ AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">anon-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
+</p><p>Open <code>/etc/whonix_firewall.d/50_user.conf</code> with root rights.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
-</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -482,8 +473,8 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
-</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code>.
+</p><p>The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -497,14 +488,14 @@ In Whonix-Workstation ™ AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -1054,15 +1045,15 @@ Application Layer]</span>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191123064313
+Cached time: 20191124064239
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.213 seconds
-Real time usage: 0.229 seconds
-Preprocessor visited node count: 1298/1000000
-Preprocessor generated node count: 3401/1000000
-Post‐expand include size: 41822/2097152 bytes
-Template argument size: 14693/2097152 bytes
+CPU time usage: 0.173 seconds
+Real time usage: 0.190 seconds
+Preprocessor visited node count: 1272/1000000
+Preprocessor generated node count: 3350/1000000
+Post‐expand include size: 41432/2097152 bytes
+Template argument size: 14537/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
@@ -1070,16 +1061,16 @@ Unstrip post‐expand size: 16871/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  146.276      1 -total
- 46.82%   68.484     15 Template:Box
- 39.86%   58.302     33 Template:CodeSelect
- 21.17%   30.960      1 Template:Reflist
- 11.63%   17.016      3 Template:Install_Package
- 10.88%   15.908      1 Template:Footer
-  7.75%   11.340      1 Template:Firewall_Settings_Workstation
-  5.25%    7.685      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  4.05%    5.931      3 Template:Reload_Tor
-  3.71%    5.422      1 Template:Backups_Tor_Onion_Service_private_key
+100.00%  114.617      1 -total
+ 51.15%   58.624     15 Template:Box
+ 41.13%   47.141     32 Template:CodeSelect
+ 17.48%   20.035      1 Template:Reflist
+ 12.08%   13.842      3 Template:Install_Package
+ 10.32%   11.823      1 Template:Footer
+  7.01%    8.037      1 Template:Firewall_Settings_Workstation
+  5.64%    6.469      3 Template:Reload_Tor
+  5.56%    6.372      3 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  4.75%    5.441      1 Template:Backups_Tor_Onion_Service_private_key
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=50902</a>"</div>

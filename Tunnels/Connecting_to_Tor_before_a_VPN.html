@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to Tor before a VPN - Whonix
  url: ../Tunnels/Connecting_to_Tor_before_a_VPN
- date: Sat Nov 23 08:04:59 2019
+ date: Sun Nov 24 08:03:20 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -499,10 +499,9 @@ Tor is not working in this browser.
 <p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Workstation ™ AppVM.
-</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+In Whonix-Workstation ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
@@ -511,25 +510,17 @@ In Whonix-Workstation ™ AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">anon-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
+</p><p>Open <code>/etc/whonix_firewall.d/50_user.conf</code> with root rights.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
-</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -537,8 +528,8 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
-</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code>.
+</p><p>The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -552,14 +543,14 @@ In Whonix-Workstation ™ AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -1350,7 +1341,7 @@ The IP <i><span style="background-color:#FBFBFB">138.201.14.212</span></i> might
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/Whonix" href="https://web.archive.org/web/https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> <sup><a data-href="https://web.archive.org/web/https://www.facebook.com/Whonix" href="https://web.archive.org/web/https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/../Authorship" href="https://web.archive.org/web/../Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_Tor_before_a_VPN" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1370,32 +1361,32 @@ The IP <i><span style="background-color:#FBFBFB">138.201.14.212</span></i> might
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118133253
+Cached time: 20191123174548
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.232 seconds
-Real time usage: 0.266 seconds
-Preprocessor visited node count: 1970/1000000
-Preprocessor generated node count: 4638/1000000
-Post‐expand include size: 107935/2097152 bytes
-Template argument size: 39661/2097152 bytes
+CPU time usage: 0.323 seconds
+Real time usage: 0.352 seconds
+Preprocessor visited node count: 1943/1000000
+Preprocessor generated node count: 4579/1000000
+Post‐expand include size: 107543/2097152 bytes
+Template argument size: 39505/2097152 bytes
 Highest expansion depth: 16/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 20816/5000000 bytes
+Unstrip post‐expand size: 20949/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  184.392      1 -total
- 64.91%  119.689     30 Template:Box
- 41.71%   76.913     53 Template:CodeSelect
- 20.79%   38.339      1 Template:Prevent_Bypassing_the_Tunnel-Link
- 17.28%   31.868      1 Template:Disable_Stream_Isolation_Easy
- 12.76%   23.532     12 Template:Open_with_root_rights
- 12.05%   22.216      1 Template:Reflist
-  8.21%   15.130      1 Template:Tor_Browser_Remove_Proxy_Settings
-  6.34%   11.697      1 Template:Footer
-  6.20%   11.437      1 Template:VPN-Firewall/Troubleshooting
+100.00%  236.942      1 -total
+ 57.45%  136.122     30 Template:Box
+ 43.11%  102.142     52 Template:CodeSelect
+ 18.72%   44.355      1 Template:Prevent_Bypassing_the_Tunnel-Link
+ 15.62%   37.003      1 Template:Disable_Stream_Isolation_Easy
+ 13.28%   31.470      1 Template:Reflist
+ 12.68%   30.052     12 Template:Open_with_root_rights
+  7.50%   17.759      1 Template:Tor_Browser_Remove_Proxy_Settings
+  6.87%   16.278      1 Template:VPN-Firewall/Troubleshooting
+  5.61%   13.299      1 Template:Footer
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_VPN&amp;oldid=47675" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_VPN&amp;oldid=47675">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_Tor_before_a_VPN&amp;oldid=47675</a>"</div>
@@ -1430,5 +1421,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20191118133253 -->
+<!-- Cached/compressed 20191123174548 -->
 </html>

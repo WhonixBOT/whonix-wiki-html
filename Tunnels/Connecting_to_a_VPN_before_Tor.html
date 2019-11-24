@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Connecting to a VPN before Tor - Whonix
  url: ../Tunnels/Connecting_to_a_VPN_before_Tor
- date: Sat Nov 23 08:05:02 2019
+ date: Sun Nov 24 08:03:23 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -332,21 +332,31 @@ Too difficult to set up? Provider specific automation can be created for you by 
 <li>Research how to set up a VPN using OpenVPN on the command line. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup></li>
 <li>Search for help with general VPN setup in the <a href="#VPN_Setup">#VPN Setup</a> chapter or on the <a class="mw-redirect" data-href="/wiki/TestVPN" href="../TestVPN.html" title="TestVPN">TestVPN</a> page. <a data-href="/wiki/Support" href="../Support.html" title="Support">Help</a> is available from various sources, and the VPN provider may also be of assistance.</li></ol>
 <h5><span class="mw-headline" id="Firewall_Settings">Firewall Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;action=edit&amp;section=13.html" title="Edit section: Firewall Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p>Modify Whonix User Firewall Settings.
+<p><b>Modify Whonix-Gateway ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-15</code> → <code>Whonix User Firewall Settings</code>
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+In Whonix-Gateway ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+</div>
+</div>
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">sys-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
-</p><div class="codeContainerNew">
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -354,7 +364,8 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code>.
+</p><p><b>Note</b>: The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -369,12 +380,13 @@ Too difficult to set up? Provider specific automation can be created for you by 
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -985,7 +997,7 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contribute</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> by helping to <a class="external text" data-href="../Contribute#Answer_Questions" href="../Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a> <sup><a data-href="https://web.archive.org/web/../Contribute#Answer_Questions" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Have you read our <a class="external text" data-href="../Documentation" href="../Documentation" rel="noreferrer noopener" target="_blank">Documentation</a> <sup><a data-href="https://web.archive.org/web/../Documentation" href="https://web.archive.org/web/../Documentation" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, <a class="external text" data-href="../Design" href="../Design" rel="noreferrer noopener" target="_blank">Technical Design</a> <sup><a data-href="https://web.archive.org/web/../Design" href="https://web.archive.org/web/../Design" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="../Dev/Developer_Portal" href="../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">Developer Portal</a> <sup><a data-href="https://web.archive.org/web/../Dev/Developer_Portal" href="https://web.archive.org/web/../Dev/Developer_Portal" rel="noreferrer noopener" target="_blank">[archive]</a></sup> links yet?
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tunnels/Connecting_to_a_VPN_before_Tor" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1005,32 +1017,32 @@ It should list the drop-in file <i><span style="background-color:#FBFBFB">/etc/s
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118121347
+Cached time: 20191123151733
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.177 seconds
-Real time usage: 0.203 seconds
-Preprocessor visited node count: 1336/1000000
-Preprocessor generated node count: 3450/1000000
-Post‐expand include size: 47929/2097152 bytes
-Template argument size: 14619/2097152 bytes
+CPU time usage: 0.200 seconds
+Real time usage: 0.227 seconds
+Preprocessor visited node count: 1343/1000000
+Preprocessor generated node count: 3467/1000000
+Post‐expand include size: 49174/2097152 bytes
+Template argument size: 15340/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 10225/5000000 bytes
+Unstrip post‐expand size: 10495/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  136.364      1 -total
- 27.11%   36.962     27 Template:CodeSelect
- 21.05%   28.709     15 Template:Box
-  9.94%   13.558      1 Template:Reflist
-  8.00%   10.906      1 Template:VPN-Firewall/Troubleshooting
-  7.88%   10.748      1 Template:Footer
-  7.20%    9.819      7 Template:CodeSelect2
-  6.65%    9.067      1 Template:Firewall_Settings
-  6.17%    8.418      1 Template:Tunnels_Introduction
-  5.35%    7.294      4 Template:Open_with_root_rights
+100.00%  157.500      1 -total
+ 30.03%   47.300     28 Template:CodeSelect
+ 26.96%   42.467     15 Template:Box
+ 10.19%   16.056      1 Template:Reflist
+  9.40%   14.801      1 Template:Footer
+  8.87%   13.971      1 Template:Firewall_Settings
+  8.12%   12.787      1 Template:VPN-Firewall/Troubleshooting
+  7.47%   11.761      7 Template:CodeSelect2
+  5.82%    9.170      4 Template:Open_with_root_rights
+  5.32%    8.381      1 Template:VPN/Setup/Systemd
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=47616" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=47616">https://www.whonix.org/w/index.php?title=Tunnels/Connecting_to_a_VPN_before_Tor&amp;oldid=47616</a>"</div>
@@ -1065,5 +1077,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tunnels/C
 </div>
 
 </body>
-<!-- Cached/compressed 20191118121347 -->
+<!-- Cached/compressed 20191123151733 -->
 </html>

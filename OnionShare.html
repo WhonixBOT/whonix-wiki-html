@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: OnionShare - Whonix
  url: ./OnionShare
- date: Sat Nov 23 07:49:50 2019
+ date: Sun Nov 24 07:48:39 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -214,10 +214,9 @@ Whonix requires Donations to stay alive.
 </p><p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Workstation ™ AppVM.
-</p><p>Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+In Whonix-Workstation ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
@@ -226,25 +225,17 @@ In Whonix-Workstation ™ AppVM.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
 </div>
 </div>
-<p>Open <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d/50_user.conf</span></i> with root rights.
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">anon-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
+</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
+</p><p>Open <code>/etc/whonix_firewall.d/50_user.conf</code> with root rights.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
-</div>
-</div>
-<p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step. 
-</p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -252,8 +243,8 @@ In Whonix-Workstation ™ AppVM.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note: This is for informational purposes only!</b> Do not edit /etc/whonix_firewall.d/30_default.conf
-</p><p>The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code>.
+</p><p>The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_workstation_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -267,14 +258,14 @@ In Whonix-Workstation ™ AppVM.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
-</p><p><u>If using <a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>, complete this step.
+</p><p><u>If using a terminal-only Whonix-Workstation ™</u>, complete these steps.
 </p><p>In Whonix-Workstation ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_workstation_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -409,7 +400,7 @@ Will be fixed after upgrades: <a class="external free" data-href="https://forums
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/./Donate" href="https://web.archive.org/web/./Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/OnionShare" href="https://www.Whonix.org/wiki/OnionShare" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/OnionShare" href="https://web.archive.org/web/https://www.Whonix.org/wiki/OnionShare" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/OnionShare" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -429,32 +420,32 @@ Will be fixed after upgrades: <a class="external free" data-href="https://forums
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118151245
+Cached time: 20191123160939
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.096 seconds
-Real time usage: 0.120 seconds
-Preprocessor visited node count: 594/1000000
-Preprocessor generated node count: 2017/1000000
-Post‐expand include size: 24501/2097152 bytes
-Template argument size: 12337/2097152 bytes
+CPU time usage: 0.092 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 565/1000000
+Preprocessor generated node count: 1946/1000000
+Post‐expand include size: 24108/2097152 bytes
+Template argument size: 12177/2097152 bytes
 Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8587/5000000 bytes
+Unstrip post‐expand size: 8377/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-105.64%   85.444      7 Template:Box
-100.00%   80.879      1 -total
- 35.47%   28.690     11 Template:CodeSelect
- 24.21%   19.580      1 Template:Control_Port_Filter_Python_Profile_Add
- 16.83%   13.615      1 Template:Firewall_Settings_Workstation
- 13.35%   10.801      1 Template:Footer
- 12.21%    9.878      1 Template:Reflist
-  9.24%    7.474      1 Template:Onion-grater-warning
-  7.81%    6.314      1 Template:Mbox
-  4.02%    3.248      1 Template:Reload_Firewall_ws
+100.00%   69.253      1 -total
+ 82.99%   57.470      7 Template:Box
+ 22.93%   15.881     10 Template:CodeSelect
+ 16.67%   11.547      1 Template:Reflist
+ 15.93%   11.032      1 Template:Firewall_Settings_Workstation
+ 15.50%   10.732      1 Template:Footer
+ 11.81%    8.176      1 Template:Control_Port_Filter_Python_Profile_Add
+ 11.78%    8.157      1 Template:Onion-grater-warning
+  9.93%    6.875      1 Template:Mbox
+  4.39%    3.043      1 Template:Reload_Firewall_ws
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=52678" dir="ltr" href="https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=52678">https://www.whonix.org/w/index.php?title=OnionShare&amp;oldid=52678</a>"</div>
@@ -489,5 +480,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=OnionShar
 </div>
 
 </body>
-<!-- Cached/compressed 20191118151245 -->
+<!-- Cached/compressed 20191123160939 -->
 </html>

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix-Gateway Security Hardening - Whonix
  url: ./Whonix-Gateway_Security_Hardening
- date: Sat Nov 23 08:07:41 2019
+ date: Sun Nov 24 08:05:57 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -43,7 +43,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Whonix-Gateway_Security_Hardening rootpage-Whonix-Gateway_Security_Hardening skin-foreground action-view"><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Whonix-Gateway_Security_Hardening rootpage-Whonix-Gateway_Security_Hardening skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -156,21 +156,31 @@ Whonix requires Donations to stay alive.
 <h2><span id="Whonix-Gateway_™"></span><span class="mw-headline" id="Whonix-Gateway_.E2.84.A2">Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=3.html" title="Edit section: Whonix-Gateway ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Deactivate_onion-grater_in_Firewall">Deactivate onion-grater in Firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;action=edit&amp;section=4.html" title="Edit section: Deactivate onion-grater in Firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> Modify Whonix User Firewall Settings.
+<p><b>1.</b> <b>Modify Whonix-Gateway ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/50_user.conf</span></i> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-gw-15</code> → <code>Whonix User Firewall Settings</code>
+</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+In Whonix-Gateway ™ AppVM. Make sure folder <i><span style="background-color:#FBFBFB">/rw/config/whonix_firewall.d</span></i> exists.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+</div>
+</div>
+<p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ AppVM (commonly called <i><span style="background-color:#FBFBFB">sys-whonix</span></i>)</code> → <code>Whonix User Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>User Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
-</p><div class="codeContainerNew">
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo nano /etc/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
@@ -178,7 +188,8 @@ Whonix requires Donations to stay alive.
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: The Whonix Global Firewall Settings File <i><span style="background-color:#FBFBFB">/etc/whonix_firewall.d/30_default.conf</span></i> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
+<p><b>Note: This is for informational purposes only!</b> Do not edit <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code>.
+</p><p><b>Note</b>: The Whonix Global Firewall Settings File <code>/etc/whonix_firewall.d/30_whonix_gateway_default.conf</code> contains default settings and explanatory comments about their purpose. By default, the file is opened read-only and is not meant to be directly edited. Below, it is recommended to open the file without root rights. The file contains an explanatory comment on how to change firewall settings.
 </p>
 <pre>## Please use "/etc/whonix_firewall.d/50_user.conf" for your custom configuration,
 ## which will override the defaults found here. When Whonix is updated, this
@@ -193,12 +204,13 @@ Whonix requires Donations to stay alive.
 </p><p><u>If using a graphical Whonix-Gateway ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
 </p><p><u>If using a terminal-only Whonix-Gateway ™</u>, complete these steps.
+</p><p>In Whonix-Gateway ™, open the whonix_firewall configuration file in an editor.
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>nano /etc/whonix_firewall.d/30_default.conf</pre>
+<pre>nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_default.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">nano /etc/whonix_firewall.d/30_whonix_gateway_default.conf</textarea>
 </div>
 </div>
 </div>
@@ -410,7 +422,7 @@ exit 0</textarea>
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> <sup><a data-href="https://web.archive.org/web/./AppArmor" href="https://web.archive.org/web/./AppArmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> <sup><a data-href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a> <sup><a data-href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) or <a class="external text" data-href="https://t.me/Whonix_Chat" href="https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">Telegram Chat</a> <sup><a data-href="https://web.archive.org/web/https://t.me/Whonix_Chat" href="https://web.archive.org/web/https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Whonix-Gateway_Security_Hardening" href="https://www.Whonix.org/wiki/Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix-Gateway_Security_Hardening" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix-Gateway_Security_Hardening" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -430,32 +442,32 @@ exit 0</textarea>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191118134056
+Cached time: 20191123145803
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.089 seconds
-Real time usage: 0.100 seconds
-Preprocessor visited node count: 500/1000000
-Preprocessor generated node count: 1566/1000000
-Post‐expand include size: 26000/2097152 bytes
-Template argument size: 13326/2097152 bytes
+CPU time usage: 0.106 seconds
+Real time usage: 0.112 seconds
+Preprocessor visited node count: 517/1000000
+Preprocessor generated node count: 1605/1000000
+Post‐expand include size: 28101/2097152 bytes
+Template argument size: 14729/2097152 bytes
 Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1959/5000000 bytes
+Unstrip post‐expand size: 2208/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   60.766      1 -total
- 86.73%   52.702     13 Template:Box
- 37.56%   22.824     16 Template:CodeSelect
- 20.79%   12.635      1 Template:Footer
- 18.67%   11.343      1 Template:Firewall_Settings
-  9.52%    5.786      3 Template:Open_with_root_rights
-  6.98%    4.242      1 Template:Reflist
-  4.84%    2.942      1 Template:Reload_Firewall
-  4.07%    2.471      1 Template:Share
-  3.86%    2.345      1 Template:Edit_it
+100.00%   66.207      1 -total
+ 99.33%   65.764     13 Template:Box
+ 43.87%   29.046     17 Template:CodeSelect
+ 21.75%   14.401      1 Template:Firewall_Settings
+ 18.63%   12.334      1 Template:Footer
+  9.30%    6.154      3 Template:Open_with_root_rights
+  5.93%    3.923      1 Template:Reflist
+  4.74%    3.136      1 Template:Reload_Firewall
+  3.65%    2.419      1 Template:Share
+  3.41%    2.261      1 Template:Edit_it
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=49227" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=49227">https://www.whonix.org/w/index.php?title=Whonix-Gateway_Security_Hardening&amp;oldid=49227</a>"</div>
@@ -490,5 +502,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix-Ga
 </div>
 
 </body>
-<!-- Cached/compressed 20191118134057 -->
+<!-- Cached/compressed 20191123145803 -->
 </html>

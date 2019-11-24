@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Build Documentation/Physical Isolation - Whonix
  url: ../Dev/Build_Documentation/Physical_Isolation/11
- date: Sat Nov 23 07:35:44 2019
+ date: Sun Nov 24 07:35:28 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -33,8 +33,8 @@
 <meta content="../Dev/Build_Documentation/Physical_Isolation" property="og:url"/>
 <meta content="Security by Isolation. Using Whonix ™ with Physical Isolation on Bare Metal for Better Security." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/9/98/Digital-art-191226640.jpg" property="og:image"/>
-<meta content="2019-11-17T17:26:18Z" property="article:modified_time"/>
-<meta content="2019-11-17T17:26:18Z" property="article:published_time"/>
+<meta content="2019-11-23T15:40:09Z" property="article:modified_time"/>
+<meta content="2019-11-23T15:40:09Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Build Documentation/Physical Isolation - Whonix" property="twitter:title"/>
 <meta content="Security by Isolation. Using Whonix ™ with Physical Isolation on Bare Metal for Better Security." property="twitter:description"/>
@@ -367,10 +367,10 @@ a.freelink
 <p>After login run:
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</pre>
+<pre>sudoedit /etc/network/interfaces.d/30_non-qubes-whonix</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /etc/network/interfaces.d/30_non-qubes-whonix</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/network/interfaces.d/30_non-qubes-whonix</textarea>
 </div>
 </div>
 <p>and change the address and the gateway of eth0 corresponding to your local network / upstream router. 
@@ -854,10 +854,10 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 <p>Use <i>git checkout</i> to select the preferred version to build.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git checkout --recursive-submodules 15.0.0.6.6-stable</pre>
+<pre>git checkout --recurse-submodules 15.0.0.6.6-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recursive-submodules 15.0.0.6.6-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recurse-submodules 15.0.0.6.6-stable</textarea>
 </div>
 </div>
 <p>Replace <code>15.0.0.6.6-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
@@ -1330,7 +1330,7 @@ iface eth0 inet static
 <h4><span id="NAT_(RECOMMENDED)"></span><span class="mw-headline" id="NAT_.28RECOMMENDED.29">NAT (RECOMMENDED)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=34" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=34.html" title="Edit section: NAT (RECOMMENDED)">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>If you use NAT you will have to edit the <i>/etc/network/interfaces</i> in Whonix-Workstation ™ to use DHCP (easier, shown in the example below) or a static IP for VirtualBox NAT.
 </p>
-<pre>sudo nano /etc/network/interfaces
+<pre>sudoedit /etc/network/interfaces
 </pre>
 <p>Replace it with.
 </p>
@@ -1623,7 +1623,7 @@ Type each command below, followed by the <code>ENTER</code> key.
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1838,7 +1838,7 @@ All attempts to fix this long-standing issue have failed. Help is welcome to fix
 </div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="../Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1858,35 +1858,35 @@ All attempts to fix this long-standing issue have failed. Help is welcome to fix
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191123063542
+Cached time: 20191124063526
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.310 seconds
-Real time usage: 0.327 seconds
-Preprocessor visited node count: 2373/1000000
+CPU time usage: 0.329 seconds
+Real time usage: 0.346 seconds
+Preprocessor visited node count: 2370/1000000
 Preprocessor generated node count: 5846/1000000
 Post‐expand include size: 81413/2097152 bytes
-Template argument size: 13081/2097152 bytes
+Template argument size: 13057/2097152 bytes
 Highest expansion depth: 13/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 33132/5000000 bytes
+Unstrip post‐expand size: 33613/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  173.360      1 -total
- 33.45%   57.991     41 Template:CodeSelect
- 26.00%   45.069      1 Template:Stay_tuned
- 16.26%   28.181      2 Template:Reflist
- 13.61%   23.593     15 Template:Box
- 12.15%   21.057      1 Template:Build_Configuration
- 10.52%   18.245      1 Template:Build_Documentation_Get_Source_Code
-  9.78%   16.959      1 Template:Known_bugs
-  9.23%   15.997      2 Template:Footer
-  4.73%    8.202      1 Template:Build_Documentation_Whonix_APT_Repository
+100.00%  183.462      1 -total
+ 33.22%   60.944     41 Template:CodeSelect
+ 26.12%   47.911      1 Template:Stay_tuned
+ 15.56%   28.553      2 Template:Reflist
+ 12.72%   23.344     15 Template:Box
+ 11.12%   20.400      1 Template:Build_Configuration
+ 11.03%   20.232      1 Template:Build_Documentation_Get_Source_Code
+  9.00%   16.507      2 Template:Footer
+  8.07%   14.803      1 Template:Known_bugs
+  4.25%    7.793      4 Template:Open_with_root_rights
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=52709</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=53000" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=53000">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;oldid=53000</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1897,7 +1897,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 17 November 2019, at 18:26.</li>
+<li id="footer-lastmod"> This page was last edited on 23 November 2019, at 16:40.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
