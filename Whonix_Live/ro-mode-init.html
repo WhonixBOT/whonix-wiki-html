@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix ™ Live-mode - Alternative ro-mode-init Configuration - Whonix
  url: ../Whonix_Live/ro-mode-init
- date: Wed Dec  4 08:07:30 2019
+ date: Thu Dec  5 08:06:30 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="../Whonix_Live/ro-mode-init" property="og:url"/>
 <meta content="Whonix ™ Live System" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/f/ff/Whonixlive.jpg" property="og:image"/>
-<meta content="2019-11-29T12:16:47Z" property="article:modified_time"/>
-<meta content="2019-11-29T12:16:47Z" property="article:published_time"/>
+<meta content="2019-12-04T14:51:44Z" property="article:modified_time"/>
+<meta content="2019-12-04T14:51:44Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix ™ Live-mode - Alternative ro-mode-init Configuration - Whonix" property="twitter:title"/>
 <meta content="Whonix ™ Live System" property="twitter:description"/>
@@ -166,8 +166,9 @@ Whonix requires Donations to stay alive.
 </li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-9"><a href="#Debugging.2FErrors"><span class="tocnumber">3</span> <span class="toctext">Debugging/Errors</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Footnotes"><span class="tocnumber">4</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Live_Mode_Indicator_Systray"><span class="tocnumber">3</span> <span class="toctext">Live Mode Indicator Systray</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Debugging"><span class="tocnumber">4</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Preliminary_Steps">Preliminary Steps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=1.html" title="Edit section: Preliminary Steps">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -292,7 +293,12 @@ Whonix requires Donations to stay alive.
 <ol><li>Power off the machine.</li>
 <li>Set the hard disk to read-write in the virt-manager GUI.</li>
 <li>Power on the machine and boot into read-write mode.</li></ol>
-<h1><span id="Debugging/Errors"></span><span class="mw-headline" id="Debugging.2FErrors">Debugging/Errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=9.html" title="Edit section: Debugging/Errors">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Live_Mode_Indicator_Systray">Live Mode Indicator Systray</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=9.html" title="Edit section: Live Mode Indicator Systray">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Does not support ro-mode-init yet.
+</p><p><a data-href="/wiki/Reporting_Bugs#Patches_are_Welcome" href="../Reporting_Bugs.html" title="Reporting Bugs">Patches welcome</a>.
+</p><p><a class="external free" data-href="https://github.com/Whonix/whonix-xfce-desktop-config/blob/master/usr/share/livecheck/livecheck.sh" href="https://github.com/Whonix/whonix-xfce-desktop-config/blob/master/usr/share/livecheck/livecheck.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-xfce-desktop-config/blob/master/usr/share/livecheck/livecheck.sh</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-xfce-desktop-config/blob/master/usr/share/livecheck/livecheck.sh" href="https://web.archive.org/web/https://github.com/Whonix/whonix-xfce-desktop-config/blob/master/usr/share/livecheck/livecheck.sh" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=10.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>An inconsistent filesystem will likely result in errors during booting in live mode. For instance, inconsistencies can arise when the VM is killed instead of performing a normal shutdown in persistent mode. Therefore to ensure it is consistent, run <code>fsck</code> in persistent mode. Debian automatically does this during boot. VMs running in live mode can be killed without problems.
 </p><p>In the case of non-<code>fsck</code> related errors using <code>ro-mode-init</code> (like dropping to an initramfs shell), add the following to the kernel command line/GRUB menu for easier debugging:
 </p><p></p><div class="codeContainerNew">
@@ -303,7 +309,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">debug=1 break=init-premount</textarea>
 </div>
 </div>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=10.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -325,7 +331,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Whonix_Live/ro-mode-init" href="https://facebook.com/sharer.php?u=../Whonix_Live/ro-mode-init">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Please consider a <a class="external text" data-href="../Donate" href="../Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/../Donate" href="https://web.archive.org/web/../Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Whonix_Live/ro-mode-init" href="https://www.Whonix.org/wiki/Whonix_Live/ro-mode-init" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix_Live/ro-mode-init" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Whonix_Live/ro-mode-init" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/ro-mode-init" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/ro-mode-init" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/ro-mode-init" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Live/ro-mode-init" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -339,35 +345,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191204070729
+Cached time: 20191204150542
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.061 seconds
-Real time usage: 0.068 seconds
-Preprocessor visited node count: 321/1000000
-Preprocessor generated node count: 1236/1000000
+CPU time usage: 0.068 seconds
+Real time usage: 0.097 seconds
+Preprocessor visited node count: 328/1000000
+Preprocessor generated node count: 1260/1000000
 Post‐expand include size: 9653/2097152 bytes
 Template argument size: 3096/2097152 bytes
 Highest expansion depth: 9/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 1015/5000000 bytes
+Unstrip post‐expand size: 663/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   41.443      1 -total
- 48.19%   19.971      4 Template:Box
- 32.95%   13.657      9 Template:CodeSelect
- 29.91%   12.394      1 Template:Footer
- 17.57%    7.282      1 Template:VirtualBox_Read_Only_Disk
- 12.80%    5.304      1 Template:Install_Package
-  8.21%    3.404      1 Template:Project_name_Live_Backup
-  5.54%    2.296      1 Template:Share
-  5.39%    2.234      1 Template:Edit_it
-  5.17%    2.142      1 Template:Reflist
+100.00%   65.595      1 -total
+ 63.86%   41.891      4 Template:Box
+ 51.74%   33.936      9 Template:CodeSelect
+ 35.19%   23.080      1 Template:Project_name_Live_Backup
+ 18.14%   11.899      1 Template:Footer
+ 12.78%    8.381      1 Template:VirtualBox_Read_Only_Disk
+  8.77%    5.753      1 Template:Install_Package
+  5.19%    3.406      1 Template:Mbox
+  4.05%    2.656      1 Template:Header
+  3.74%    2.455      1 Template:Maintainer
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53159" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53159">https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53159</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53245" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53245">https://www.whonix.org/w/index.php?title=Whonix_Live/ro-mode-init&amp;oldid=53245</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -378,7 +384,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 29 November 2019, at 13:16.</li>
+<li id="footer-lastmod"> This page was last edited on 4 December 2019, at 15:51.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -399,5 +405,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Whonix_Li
 </div>
 
 </body>
-<!-- Cached/compressed 20191204070729 -->
+<!-- Cached/compressed 20191204150542 -->
 </html>

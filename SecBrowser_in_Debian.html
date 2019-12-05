@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: SecBrowser ™: A Security-hardened, Non-anonymous Browser - Whonix
  url: ./SecBrowser_in_Debian
- date: Wed Dec  4 07:59:06 2019
+ date: Thu Dec  5 07:58:13 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -33,8 +33,8 @@
 <meta content="./SecBrowser" property="og:url"/>
 <meta content="SecBrowser ™ is a security-hardened browser that provides better protection from exploits, thereby reducing the risk of drive-by virus infections. (Tor Browser without Tor)" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/thumb/d/d5/Secbrowser31123.png/470px-Secbrowser31123.png" property="og:image"/>
-<meta content="2019-11-29T08:29:17Z" property="article:modified_time"/>
-<meta content="2019-11-29T08:29:17Z" property="article:published_time"/>
+<meta content="2019-12-04T07:11:03Z" property="article:modified_time"/>
+<meta content="2019-12-04T07:11:03Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="SecBrowser ™: A Security-hardened, Non-anonymous Browser - Whonix" property="twitter:title"/>
 <meta content="SecBrowser ™ is a security-hardened browser that provides better protection from exploits, thereby reducing the risk of drive-by virus infections. (Tor Browser without Tor)" property="twitter:description"/>
@@ -139,7 +139,7 @@ a.freelink
 <li class="toclevel-1 tocsection-2"><a href="#Security_Enhancements"><span class="tocnumber">2</span> <span class="toctext">Security Enhancements</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Privacy_and_Fingerprinting_Resistance"><span class="tocnumber">3</span> <span class="toctext">Privacy and Fingerprinting Resistance</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#SecBrowser_.E2.84.A2_Configuration_Guides"><span class="tocnumber">4</span> <span class="toctext">SecBrowser ™ Configuration Guides</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Disclaimer"><span class="tocnumber">5</span> <span class="toctext">Disclaimer</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Non-Affiliation_with_The_Tor_Project"><span class="tocnumber">5</span> <span class="toctext">Non-Affiliation with The Tor Project</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
@@ -167,16 +167,16 @@ a.freelink
 <th scope="col"><b>Description</b>
 </th></tr>
 <tr>
+<th scope="row">Security Slider
+</th>
+<td>Enables improved security by disabling certain web features that can be used as attack vectors.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</td></tr>
+<tr>
 <th scope="row">Default Tor Browser Add-ons
 </th>
 <td>
-<ul><li><u>HTTPS Everywhere</u>: This browser extension encrypts communications with many major websites, making your browsing more secure.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <br/></li>
-<li><u>NoScript</u>: NoScript can provide significant protection with the correct configuration.<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> NoScript blocks active (executable) web content and protects against <a class="external text" data-href="https://en.wikipedia.org/wiki/Cross-site_scripting" href="https://en.wikipedia.org/wiki/Cross-site_scripting" rel="noreferrer noopener" target="_blank">cross-site scripting</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Cross-site_scripting" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Cross-site_scripting" rel="noreferrer noopener" target="_blank">[archive]</a></sup> (XSS). "The add-on also offers specific countermeasures against security exploits".</li></ul>
-</td></tr>
-<tr>
-<th scope="row">DNS and Proxy Configuration Obedience
-</th>
-<td>Proxy obedience is achieved through custom patches, Firefox proxy settings, and build flags. Plugins which can bypass proxy setting are disabled.<sup class="reference" id="cite_ref-proxy_obedience_4-0"><a href="#cite_note-proxy_obedience-4">[4]</a></sup>
+<ul><li><u>HTTPS Everywhere</u>: This browser extension encrypts communications with many major websites, making your browsing more secure.<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <br/></li>
+<li><u>NoScript</u>: NoScript can provide significant protection with the correct configuration.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> NoScript blocks active (executable) web content and protects against <a class="external text" data-href="https://en.wikipedia.org/wiki/Cross-site_scripting" href="https://en.wikipedia.org/wiki/Cross-site_scripting" rel="noreferrer noopener" target="_blank">cross-site scripting</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Cross-site_scripting" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Cross-site_scripting" rel="noreferrer noopener" target="_blank">[archive]</a></sup> (XSS). "The add-on also offers specific countermeasures against security exploits".</li></ul>
 </td></tr>
 <tr>
 <th scope="row">Firejail (Linux only)
@@ -184,29 +184,30 @@ a.freelink
 <td>Firejail will be used as a sandboxing measure to restrict the SecBrowser process. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </td></tr>
 <tr>
-<th scope="row">Reproducible Builds
+<th scope="row">Homograph Attack Protection
 </th>
-<td>Build security is achieved through a reproducible build process that enables anyone to produce byte-for-byte identical binaries to the ones the Tor Project releases.<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+<td>Fixes the <a class="external text" data-href="https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/" href="https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/" rel="noreferrer noopener" target="_blank">internationalized domain name (IDN) homograph attack vulnerability</a> <sup><a data-href="https://web.archive.org/web/https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/" href="https://web.archive.org/web/https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> present in standard Firefox and Tor Browser releases. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </td></tr>
 <tr>
-<th scope="row">Security Slider
+<th scope="row">Reproducible Builds
 </th>
-<td>Enables improved security by disabling certain web features that can be used as attack vectors.<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-proxy_obedience_4-1"><a href="#cite_note-proxy_obedience-4">[4]</a></sup>
+<td>Build security is achieved through a reproducible build process that enables anyone to produce byte-for-byte identical binaries to the ones the Tor Project releases.<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
 </td></tr>
 <tr>
 <th scope="row">WebRTC Disabled by Default
 </th>
-<td>WebRTC can compromise the security of VPN tunnels, by exposing the external (real) IP address of a user.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
-</td></tr></tbody></table>
+<td>WebRTC can compromise the security of VPN tunnels, by exposing the external (real) IP address of a user.<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</td></tr>
+</tbody></table>
 <h1><span class="mw-headline" id="Privacy_and_Fingerprinting_Resistance">Privacy and Fingerprinting Resistance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SecBrowser&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;action=edit&amp;section=3.html" title="Edit section: Privacy and Fingerprinting Resistance">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Research from a pool of 500,000 Internet users has shown that the vast majority (84%) have unique browser configurations and version information which makes them trackable across the Internet. When Java or Flash is installed, this figures rises to 94%.<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> SecBrowser ™ shares the fingerprint with around <a class="external text" data-href="https://metrics.torproject.org/userstats-relay-country.html" href="https://metrics.torproject.org/userstats-relay-country.html" rel="noreferrer noopener" target="_blank">three million</a> <sup><a data-href="https://web.archive.org/web/https://metrics.torproject.org/userstats-relay-country.html" href="https://web.archive.org/web/https://metrics.torproject.org/userstats-relay-country.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> other Tor Browser users, which allows people who use SecBrowser ™ to "blend in" with the larger population and better protect their privacy. 
+<p>Research from a pool of 500,000 Internet users has shown that the vast majority (84%) have unique browser configurations and version information which makes them trackable across the Internet. When Java or Flash is installed, this figures rises to 94%.<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> SecBrowser ™ shares the fingerprint with around <a class="external text" data-href="https://metrics.torproject.org/userstats-relay-country.html" href="https://metrics.torproject.org/userstats-relay-country.html" rel="noreferrer noopener" target="_blank">three million</a> <sup><a data-href="https://web.archive.org/web/https://metrics.torproject.org/userstats-relay-country.html" href="https://web.archive.org/web/https://metrics.torproject.org/userstats-relay-country.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> other Tor Browser users, which allows people who use SecBrowser ™ to "blend in" with the larger population and better protect their privacy. 
 </p><p>The <a class="external text" data-href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">EFF has found</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">[archive]</a></sup> that while most browsers are uniquely fingerprintable, resistance is afforded via four methods:
 </p>
 <ul><li>Disabling JavaScript with tools like NoScript.</li>
 <li>Use of Torbutton, which is bundled with SecBrowser ™ and enabled by default.</li>
 <li>Use of mobile devices like Android and iPhone.</li>
 <li>Corporate desktop machines which are clones of one another.</li></ul>
-<p>With JavaScript disabled, SecBrowser ™ provides significant resistance to browser fingerprinting.<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>With JavaScript disabled, SecBrowser ™ provides significant resistance to browser fingerprinting.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p>
 <ul><li>The User Agent is uniform for all Torbutton users.</li>
 <li>Plugins are blocked.</li>
@@ -218,7 +219,7 @@ a.freelink
 </p>
 <ul><li>SecBrowser ™ conveys 6.26 bits of identifying information.</li>
 <li>One in 76.46 browsers have the same fingerprint.</li>
-<li>Browsers that convey lower bits of identification are better at resisting fingerprinting.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li></ul>
+<li>Browsers that convey lower bits of identification are better at resisting fingerprinting.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li></ul>
 <p>When Tor Browser's and SecBrowser ™'s HTTP headers are compared using <a class="external text" data-href="https://fpcentral.irisa.fr/" href="https://fpcentral.irisa.fr/" rel="noreferrer noopener" target="_blank">Fingerprint central's test suite</a> <sup><a data-href="https://web.archive.org/web/https://fpcentral.irisa.fr/" href="https://web.archive.org/web/https://fpcentral.irisa.fr/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> the results are near identical.
 </p><p><b>Table:</b> <i>Tor Browser vs SecBrowser ™ HTTP headers comparison.</i>
 </p><p><i>Percentage (%) out of 1652 with fingerprints tags [Firefox,Windows]:</i>
@@ -339,7 +340,7 @@ a.freelink
 <li><a data-href="/wiki/SecBrowser/Qubes" href="./SecBrowser/Qubes.html" title="SecBrowser/Qubes">SecBrowser ™ in Qubes OS</a></li>
 <li><a data-href="/wiki/SecBrowser/Windows" href="./SecBrowser/Windows.html" title="SecBrowser/Windows">SecBrowser ™ in Microsoft Windows</a></li>
 <li><a data-href="/wiki/SecBrowser/macOS" href="./SecBrowser/macOS.html" title="SecBrowser/macOS">SecBrowser ™ in macOS</a></li></ul>
-<h1><span class="mw-headline" id="Disclaimer">Disclaimer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SecBrowser&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;action=edit&amp;section=5.html" title="Edit section: Disclaimer">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Non-Affiliation_with_The_Tor_Project">Non-Affiliation with The Tor Project</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SecBrowser&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;action=edit&amp;section=5.html" title="Edit section: Non-Affiliation with The Tor Project">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>SecBrowser ™ is a derivative of Tor® Browser, produced independently from the Tor® anonymity software and carries no guarantee from <a class="external text" data-href="https://www.torproject.org" href="https://www.torproject.org" rel="noreferrer noopener" target="_blank">The Tor® Project</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org" href="https://web.archive.org/web/https://www.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about quality, suitability or anything else.
 </p>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SecBrowser&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;action=edit&amp;section=6.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -347,30 +348,32 @@ a.freelink
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-design-1"><span class="mw-cite-backlink"><a href="#cite_ref-design_1-0">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://2019.www.torproject.org/projects/torbrowser/design/" href="https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">https://2019.www.torproject.org/projects/torbrowser/design/</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/https-everywhere" href="https://www.eff.org/https-everywhere" rel="noreferrer noopener" target="_blank">https://www.eff.org/https-everywhere</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/https-everywhere" href="https://web.archive.org/web/https://www.eff.org/https-everywhere" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tb-manual.torproject.org/security-slider/" href="https://tb-manual.torproject.org/security-slider/" rel="noreferrer noopener" target="_blank">https://tb-manual.torproject.org/security-slider/</a> <sup><a data-href="https://web.archive.org/web/https://tb-manual.torproject.org/security-slider/" href="https://web.archive.org/web/https://tb-manual.torproject.org/security-slider/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/NoScript" href="https://en.wikipedia.org/wiki/NoScript" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/NoScript</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/NoScript" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/NoScript" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/https-everywhere" href="https://www.eff.org/https-everywhere" rel="noreferrer noopener" target="_blank">https://www.eff.org/https-everywhere</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/https-everywhere" href="https://web.archive.org/web/https://www.eff.org/https-everywhere" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-proxy_obedience-4"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-proxy_obedience_4-0">4.0</a></sup> <sup><a href="#cite_ref-proxy_obedience_4-1">4.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://2019.www.torproject.org/projects/torbrowser/design/#proxy-obedience" href="https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">https://2019.www.torproject.org/projects/torbrowser/design/#proxy-obedience</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/#proxy-obedience" href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/NoScript" href="https://en.wikipedia.org/wiki/NoScript" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/NoScript</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/NoScript" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/NoScript" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767" href="https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767" href="https://web.archive.org/web/https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://2019.www.torproject.org/projects/torbrowser/design/" href="https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">https://2019.www.torproject.org/projects/torbrowser/design/</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">For further information, see: <a class="external text" data-href="https://forums.whonix.org/t/very-hard-to-notice-phishing-scam-firefox-tor-browser-url-not-showing-real-domain-name-homograph-attack-punycode/8373" href="https://forums.whonix.org/t/very-hard-to-notice-phishing-scam-firefox-tor-browser-url-not-showing-real-domain-name-homograph-attack-punycode/8373" rel="noreferrer noopener" target="_blank">very hard to notice Phishing Scam - Firefox / Tor Browser URL not showing real Domain Name - Homograph attack (Punycode)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/very-hard-to-notice-phishing-scam-firefox-tor-browser-url-not-showing-real-domain-name-homograph-attack-punycode/8373" href="https://web.archive.org/web/https://forums.whonix.org/t/very-hard-to-notice-phishing-scam-firefox-tor-browser-url-not-showing-real-domain-name-homograph-attack-punycode/8373" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Without this change, URLs can be spoofed so users are deceived about what remote server they are communicating with, via substitution of characters that look alike ('homographs').</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/deterministic-builds-part-two-technical-details" href="https://blog.torproject.org/deterministic-builds-part-two-technical-details" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/deterministic-builds-part-two-technical-details</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/deterministic-builds-part-two-technical-details" href="https://web.archive.org/web/https://blog.torproject.org/deterministic-builds-part-two-technical-details" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugzilla.mozilla.org/show_bug.cgi?id=1332714" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1332714" rel="noreferrer noopener" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=1332714</a> <sup><a data-href="https://web.archive.org/web/https://bugzilla.mozilla.org/show_bug.cgi?id=1332714" href="https://web.archive.org/web/https://bugzilla.mozilla.org/show_bug.cgi?id=1332714" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://tb-manual.torproject.org/security-slider/" href="https://tb-manual.torproject.org/security-slider/" rel="noreferrer noopener" target="_blank">https://tb-manual.torproject.org/security-slider/</a> <sup><a data-href="https://web.archive.org/web/https://tb-manual.torproject.org/security-slider/" href="https://web.archive.org/web/https://tb-manual.torproject.org/security-slider/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://2019.www.torproject.org/projects/torbrowser/design/" href="https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">https://2019.www.torproject.org/projects/torbrowser/design/</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" href="https://web.archive.org/web/https://2019.www.torproject.org/projects/torbrowser/design/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/WebRTC#Concerns" href="https://en.wikipedia.org/wiki/WebRTC" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/WebRTC#Concerns</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WebRTC#Concerns" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WebRTC" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/deterministic-builds-part-two-technical-details" href="https://blog.torproject.org/deterministic-builds-part-two-technical-details" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/deterministic-builds-part-two-technical-details</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/deterministic-builds-part-two-technical-details" href="https://web.archive.org/web/https://blog.torproject.org/deterministic-builds-part-two-technical-details" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" href="https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" rel="noreferrer noopener" target="_blank">https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/</a> <sup><a data-href="https://web.archive.org/web/https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" href="https://web.archive.org/web/https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/WebRTC#Concerns" href="https://en.wikipedia.org/wiki/WebRTC" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/WebRTC#Concerns</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WebRTC#Concerns" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WebRTC" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" href="https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" rel="noreferrer noopener" target="_blank">https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/</a> <sup><a data-href="https://web.archive.org/web/https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" href="https://web.archive.org/web/https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/effs-panopticlick-and-torbutton" href="https://blog.torproject.org/effs-panopticlick-and-torbutton" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/effs-panopticlick-and-torbutton</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/effs-panopticlick-and-torbutton" href="https://web.archive.org/web/https://blog.torproject.org/effs-panopticlick-and-torbutton" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2010/05/every-browser-unique-results-fom-panopticlick" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://33bits.wordpress.com/about/" href="https://33bits.wordpress.com/about/" rel="noreferrer noopener" target="_blank">https://33bits.wordpress.com/about/</a> <sup><a data-href="https://web.archive.org/web/https://33bits.wordpress.com/about/" href="https://web.archive.org/web/https://33bits.wordpress.com/about/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://blog.torproject.org/effs-panopticlick-and-torbutton" href="https://blog.torproject.org/effs-panopticlick-and-torbutton" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/effs-panopticlick-and-torbutton</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/effs-panopticlick-and-torbutton" href="https://web.archive.org/web/https://blog.torproject.org/effs-panopticlick-and-torbutton" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://33bits.wordpress.com/about/" href="https://33bits.wordpress.com/about/" rel="noreferrer noopener" target="_blank">https://33bits.wordpress.com/about/</a> <sup><a data-href="https://web.archive.org/web/https://33bits.wordpress.com/about/" href="https://web.archive.org/web/https://33bits.wordpress.com/about/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -388,7 +391,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./SecBrowser" href="https://facebook.com/sharer.php?u=./SecBrowser">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please consider a <a class="external text" data-href="./Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/./Donate" href="https://web.archive.org/web/./Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>There are <a class="external text" data-href="./Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> <sup><a data-href="https://web.archive.org/web/./Dev/git#subscribe_to_code_changes" href="https://web.archive.org/web/./Dev/git" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for subscribing to Whonix source code changes.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/SecBrowser" href="https://www.Whonix.org/wiki/SecBrowser" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/SecBrowser" href="https://web.archive.org/web/https://www.Whonix.org/wiki/SecBrowser" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SecBrowser" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SecBrowser" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SecBrowser" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SecBrowser" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -402,35 +405,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191204065905
+Cached time: 20191205065811
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.070 seconds
-Real time usage: 0.077 seconds
-Preprocessor visited node count: 275/1000000
-Preprocessor generated node count: 1067/1000000
-Post‐expand include size: 10142/2097152 bytes
+CPU time usage: 0.069 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 276/1000000
+Preprocessor generated node count: 1057/1000000
+Post‐expand include size: 10218/2097152 bytes
 Template argument size: 70/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 8231/5000000 bytes
+Unstrip post‐expand size: 8991/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   34.374      1 -total
- 37.82%   13.001      1 Template:Footer
- 25.38%    8.724      1 Template:Reflist
- 11.61%    3.991      1 Template:SecBrowser_Table_Security_Enhancements
-  7.20%    2.476      1 Template:Share
-  6.90%    2.372      1 Template:Edit_it
-  5.65%    1.943      1 Template:Header
-  5.27%    1.813      1 Template:SecBrowser_Privacy_and_Fingerprinting_Resistance
-  4.21%    1.448      1 Template:RandomNews
-  3.03%    1.042      1 Template:Title
+100.00%   37.202      1 -total
+ 30.02%   11.169      1 Template:Footer
+ 22.42%    8.341      1 Template:Reflist
+ 11.57%    4.303      1 Template:SecBrowser_Table_Security_Enhancements
+  5.79%    2.154      1 Template:Share
+  5.62%    2.091      1 Template:SecBrowser_Privacy_and_Fingerprinting_Resistance
+  5.11%    1.900      1 Template:Header
+  4.84%    1.801      1 Template:Edit_it
+  4.02%    1.496      1 Template:SecBrowser_Supported_Platforms_Icons
+  3.15%    1.173      1 Template:RandomNews
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53136" dir="ltr" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53136">https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53136</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53237" dir="ltr" href="https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53237">https://www.whonix.org/w/index.php?title=SecBrowser&amp;oldid=53237</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -441,7 +444,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=SecBrowse
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 29 November 2019, at 09:29.</li>
+<li id="footer-lastmod"> This page was last edited on 4 December 2019, at 08:11.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
