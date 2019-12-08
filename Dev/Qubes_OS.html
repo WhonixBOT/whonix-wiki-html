@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes - Whonix
  url: ../Dev/Qubes_OS
- date: Sat Dec  7 07:38:07 2019
+ date: Sun Dec  8 07:38:53 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="../Dev/Qubes" property="og:url"/>
 <meta content="https://www.facebook.com/Whonix" property="article:author"/>
 <meta content="" property="og:image"/>
-<meta content="2019-11-23T12:08:42Z" property="article:modified_time"/>
-<meta content="2019-11-23T12:08:42Z" property="article:published_time"/>
+<meta content="2019-12-07T16:33:11Z" property="article:modified_time"/>
+<meta content="2019-12-07T16:33:11Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Qubes - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -252,8 +252,9 @@ Whonix requires Donations to stay alive.
 <li class="toclevel-1 tocsection-85"><a href="#Major_Version_Bump"><span class="tocnumber">49</span> <span class="toctext">Major Version Bump</span></a></li>
 <li class="toclevel-1 tocsection-86"><a href="#DD_Backup_Mount"><span class="tocnumber">50</span> <span class="toctext">DD Backup Mount</span></a></li>
 <li class="toclevel-1 tocsection-87"><a href="#Qubes_VM_Kernel"><span class="tocnumber">51</span> <span class="toctext">Qubes VM Kernel</span></a></li>
-<li class="toclevel-1 tocsection-88"><a href="#See_Also"><span class="tocnumber">52</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-89"><a href="#Footnotes"><span class="tocnumber">53</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-88"><a href="#Debug_initramfs"><span class="tocnumber">52</span> <span class="toctext">Debug initramfs</span></a></li>
+<li class="toclevel-1 tocsection-89"><a href="#See_Also"><span class="tocnumber">53</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-90"><a href="#Footnotes"><span class="tocnumber">54</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Qubes_Persistence">Qubes Persistence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=1.html" title="Edit section: Qubes Persistence">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -1371,10 +1372,17 @@ whonix-gw-15 $anyvm deny</textarea>
 </div>
 <p><sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=88" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=88.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Debug_initramfs">Debug initramfs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=88" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=88.html" title="Edit section: Debug initramfs">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/5490#issuecomment-562263712" href="https://github.com/QubesOS/qubes-issues/issues/5490" rel="noreferrer noopener" target="_blank">Quote Marek</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5490#issuecomment-562263712" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5490" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote>
+<p>Adding `debug=vc` to the kernel command line should make initramfs produce debug messages. Apparently it is also necessary to remove `console=tty0`, or at least make `console=hvc0` the last one. Otherwise the messages will end up on VGA, which isn't really present in PVH VM.
+</p>
+</blockquote>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=89" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=89.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Dev/Test" href="../Dev/Test.html" title="Dev/Test">Dev/Test - How to "UnWhonix" - Instructions on how to remove Whonix ™ Tor default networking for Whonix-Gateway ™. After applying these instructions, Whonix-Gateway ™ will connect to clearnet.</a></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-15-sys-firewall-sys-net" href="https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-15-sys-firewall-sys-net" rel="noreferrer noopener" target="_blank">How to add a ProxyVM between anon-whonix and sys-whonix? (whonix-ws-email → sys-fw-whonix → whonix-gw-15 → sys-firewall → sys-net)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-15-sys-firewall-sys-net" href="https://web.archive.org/web/https://forums.whonix.org/t/how-to-add-a-proxyvm-between-anon-whonix-and-sys-whonix-whonix-ws-email-sys-fw-whonix-whonix-gw-15-sys-firewall-sys-net" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=89" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=89.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=90" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;action=edit&amp;section=90.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Upon creation.</span>
@@ -1477,7 +1485,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Qubes" href="https://facebook.com/sharer.php?u=../Dev/Qubes">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Have you <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/../Authorship" href="https://web.archive.org/web/../Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Qubes" href="https://www.Whonix.org/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Qubes" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Qubes" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -1491,35 +1499,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191207063806
+Cached time: 20191208063852
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.194 seconds
-Real time usage: 0.207 seconds
-Preprocessor visited node count: 1969/1000000
-Preprocessor generated node count: 4614/1000000
-Post‐expand include size: 13268/2097152 bytes
+CPU time usage: 0.198 seconds
+Real time usage: 0.209 seconds
+Preprocessor visited node count: 1971/1000000
+Preprocessor generated node count: 4610/1000000
+Post‐expand include size: 13258/2097152 bytes
 Template argument size: 2681/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 29893/5000000 bytes
+Unstrip post‐expand size: 29358/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  102.740      1 -total
- 39.79%   40.884     27 Template:CodeSelect
- 14.08%   14.462      1 Template:Reflist
- 12.34%   12.680      1 Template:Footer
-  7.90%    8.113      3 Template:Open_with_root_rights
-  5.55%    5.698      3 Template:Box
-  2.44%    2.508      1 Template:Share
-  2.37%    2.435      1 Template:Qubes_persistence
-  2.30%    2.367      1 Template:Edit_it
-  2.07%    2.124      8 Template:Whonix-gw
+100.00%  103.149      1 -total
+ 42.72%   44.068     27 Template:CodeSelect
+ 16.72%   17.249      1 Template:Reflist
+  9.83%   10.137      1 Template:Footer
+  6.84%    7.057      3 Template:Open_with_root_rights
+  4.85%    5.005      3 Template:Box
+  2.45%    2.528      1 Template:Qubes_persistence
+  1.95%    2.011      1 Template:Header
+  1.92%    1.979      1 Template:Share
+  1.88%    1.941      8 Template:Whonix-gw
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=52975" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=52975">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=52975</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=53372" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=53372">https://www.whonix.org/w/index.php?title=Dev/Qubes&amp;oldid=53372</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1530,7 +1538,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 November 2019, at 13:08.</li>
+<li id="footer-lastmod"> This page was last edited on 7 December 2019, at 17:33.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
