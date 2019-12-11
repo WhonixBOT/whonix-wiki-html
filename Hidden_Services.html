@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Onion Services - Whonix
  url: ./Hidden_Services
- date: Tue Dec 10 07:42:54 2019
+ date: Wed Dec 11 07:43:01 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -33,8 +33,8 @@
 <meta content="./Onion_Services" property="og:url"/>
 <meta content="Anonymously host any server with Whonix ™ and Tor onion services" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/12/Fly-agaric808110640.jpg" property="og:image"/>
-<meta content="2019-12-09T15:04:51Z" property="article:modified_time"/>
-<meta content="2019-12-09T15:04:51Z" property="article:published_time"/>
+<meta content="2019-12-10T13:59:24Z" property="article:modified_time"/>
+<meta content="2019-12-10T13:59:24Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Onion Services - Whonix" property="twitter:title"/>
 <meta content="Anonymously host any server with Whonix ™ and Tor onion services" property="twitter:description"/>
@@ -195,7 +195,8 @@ Whonix requires Donations to stay alive.
 <p>On your Whonix-Gateway ™:
 </p>
 <h6><span class="mw-headline" id="Step_1:_open_Tor_config">Step 1: open Tor config</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=7.html" title="Edit section: Step 1: open Tor config">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>Open <code>/usr/local/etc/torrc.d/50_user.conf</code>.
+<p>On your Whonix-Gateway ™.
+</p><p>Open <code>/usr/local/etc/torrc.d/50_user.conf</code>.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
@@ -215,7 +216,8 @@ Whonix requires Donations to stay alive.
 </div>
 <h6><span class="mw-headline" id="Step_2:_edit_Tor_config">Step 2: edit Tor config</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=8.html" title="Edit section: Step 2: edit Tor config">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>(all Whonix ™ platforms)
+<p>On your Whonix-Gateway ™.
+</p><p>(all Whonix ™ platforms)
 </p><p>You need to add two settings to <code>/usr/local/etc/torrc.d/50_user.conf</code>.
 </p>
 <ul><li>A <code>HiddenServiceDir</code> configuration directive declaring where onion services files (hostname file and private key file) should be stored.</li>
@@ -225,7 +227,8 @@ Whonix requires Donations to stay alive.
 <li><code>HiddenServiceVersion</code> configuration directive declaring which onion service versino to use (<code>2</code> or <code>3</code>).</li></ul>
 </div>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>To do that, add the following three lines.
+<p>On your Whonix-Gateway ™.
+</p><p>To do that, add the following three lines.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: 
@@ -270,6 +273,7 @@ HiddenServiceVersion 3</textarea>
 <p><b>Optional</b>: authenticated onion services.
 </p><p>Do this only if this should not be a public onion service. I.e. if it will only have a limited amount of visitors. Each visitor needs to be provided with a key file. This chapter describes the server side. The client side is described below in chapter <a href="#Onion_Service_Authentication_Client_Setup">Onion Service Authentication Client Setup</a>.
 </p><p>These instructions are based on <a class="external text" data-href="https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" href="https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" rel="noreferrer noopener" target="_blank">this</a> <sup><a data-href="https://web.archive.org/web/https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" href="https://web.archive.org/web/https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> These instruction can be quite difficult but this is not specific to Whonix ™. These instructions are quite difficult anywhere. <a data-href="/wiki/About#Based_on_Debian" href="./About.html" title="About">Whonix is based on Debian</a> and <a class="mw-redirect" data-href="/wiki/Free_Support_Principle" href="./Free_Support_Principle.html" title="Free Support Principle">Free Support Principle</a>. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
+</p><p>On your Whonix-Gateway ™.
 </p><p>Install <code>basez</code>.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -432,7 +436,8 @@ HiddenServiceVersion 3</textarea>
 </div>
 </div>
 <h6><span class="mw-headline" id="Step_4:_make_changes_to_Tor_config_take_effect">Step 4: make changes to Tor config take effect</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=10.html" title="Edit section: Step 4: make changes to Tor config take effect">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>Reload Tor.
+<p>On your Whonix-Gateway ™.
+</p><p>Reload Tor.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>After editing <i><span style="background-color:#FBFBFB">/usr/local/etc/torrc.d/50_user.conf</span></i>, Tor must be reloaded for changes to take effect. 
@@ -488,7 +493,8 @@ Configuration was valid</pre>
 </div>
 </div>
 <h6><span class="mw-headline" id="Step_5:_get_your_onion_hostname">Step 5: get your onion hostname</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=11.html" title="Edit section: Step 5: get your onion hostname">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>To get your Tor onion service url.
+<p>On your Whonix-Gateway ™.
+</p><p>To get your Tor onion service url.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo cat /var/lib/tor/hidden_service/hostname</pre>
@@ -498,7 +504,8 @@ Configuration was valid</pre>
 </div>
 </div>
 <h6><span class="mw-headline" id="Step_5:_backup_your_Tor_onion_service_private_key">Step 5: backup your Tor onion service private key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=12.html" title="Edit section: Step 5: backup your Tor onion service private key">edit</a><span class="mw-editsection-bracket">]</span></span></h6>
-<p>Reminder: Always backup the onion service key. This is necessary in order to restore it on another machine, on a newer Whonix-Gateway ™, after HDD/SSD failure, etc. Follow the instructions below to find its location; root permission is required to access it.
+<p>On your Whonix-Gateway ™.
+</p><p>Reminder: Always backup the onion service key. This is necessary in order to restore it on another machine, on a newer Whonix-Gateway ™, after HDD/SSD failure, etc. Follow the instructions below to find its location; root permission is required to access it.
 </p><p><code>
 /var/lib/tor/hidden_service/hs_ed25519_secret_key
 </code>
@@ -534,7 +541,8 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 <p>On your Whonix-Workstation ™:
 </p>
 <h5><span class="mw-headline" id="Step_1:_Install_Server_Software">Step 1: Install Server Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=14.html" title="Edit section: Step 1: Install Server Software">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p>Either,
+<p>On your Whonix-Workstation ™.
+</p><p>Either,
 </p><p><b>A)</b> Run the following commands to install micro-httpd. <u>OR</u>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -602,7 +610,8 @@ Also see: <a data-href="/wiki/File_Transfer" href="./File_Transfer.html" title="
 </p>
 </div>
 <h5><span id="Step_2:_Open_Whonix-Workstation_™_Firewall_Port"></span><span class="mw-headline" id="Step_2:_Open_Whonix-Workstation_.E2.84.A2_Firewall_Port">Step 2: Open Whonix-Workstation ™ Firewall Port</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=15.html" title="Edit section: Step 2: Open Whonix-Workstation ™ Firewall Port">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
-<p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
+<p>On your Whonix-Workstation ™.
+</p><p><b>Modify Whonix-Workstation ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
@@ -1125,15 +1134,15 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191210064253
+Cached time: 20191211064300
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.185 seconds
-Real time usage: 0.207 seconds
-Preprocessor visited node count: 1406/1000000
-Preprocessor generated node count: 3760/1000000
-Post‐expand include size: 44470/2097152 bytes
-Template argument size: 18658/2097152 bytes
+CPU time usage: 0.188 seconds
+Real time usage: 0.208 seconds
+Preprocessor visited node count: 1427/1000000
+Preprocessor generated node count: 3832/1000000
+Post‐expand include size: 44727/2097152 bytes
+Template argument size: 18745/2097152 bytes
 Highest expansion depth: 10/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
@@ -1141,19 +1150,19 @@ Unstrip post‐expand size: 16194/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  143.602      1 -total
- 60.56%   86.972     17 Template:Box
- 49.13%   70.548     48 Template:CodeSelect
- 15.27%   21.921      1 Template:Reflist
- 13.06%   18.755      4 Template:Install_Package
-  8.42%   12.096      1 Template:Footer
-  6.04%    8.673      1 Template:Firewall_Settings_Workstation
-  4.90%    7.033      2 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  4.28%    6.147      2 Template:Reload_Tor
-  3.59%    5.153      1 Template:Backups_Tor_Onion_Service_private_key
+100.00%  143.181      1 -total
+ 60.47%   86.577     17 Template:Box
+ 49.87%   71.400     48 Template:CodeSelect
+ 14.95%   21.409      1 Template:Reflist
+ 13.67%   19.570      4 Template:Install_Package
+  8.41%   12.042      1 Template:Footer
+  5.90%    8.448      1 Template:Firewall_Settings_Workstation
+  4.71%    6.742      2 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  4.35%    6.232      2 Template:Reload_Tor
+  3.85%    5.511      1 Template:Backups_Tor_Onion_Service_private_key
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53436" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53436">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53436</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53487" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53487">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=53487</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1164,7 +1173,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Onion_Ser
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 9 December 2019, at 16:04.</li>
+<li id="footer-lastmod"> This page was last edited on 10 December 2019, at 14:59.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>

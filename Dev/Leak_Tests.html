@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Leak Tests - Whonix
  url: ../Dev/Leak_Tests
- date: Tue Dec 10 07:37:41 2019
+ date: Wed Dec 11 07:37:42 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -22,18 +22,18 @@
 <link data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="article" property="og:type"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="Dev/Leak Tests" property="og:title"/>
-<meta content="../Dev/Leak_Tests" property="og:url"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Dev/Leak_Tests" property="og:url"/>
 <meta content="Dev/Leak Tests - Whonix" property="og:title"/>
-<meta content="../Dev/Leak_Tests" property="og:url"/>
+<meta content="http://kkkkkkkkkk63ava6.onion/wiki/Dev/Leak_Tests" property="og:url"/>
 <meta content="Testing for IP/DNS Leaks" property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2019-08-30T09:34:53Z" property="article:modified_time"/>
-<meta content="2019-08-30T09:34:53Z" property="article:published_time"/>
+<meta content="2019-12-10T13:52:38Z" property="article:modified_time"/>
+<meta content="2019-12-10T13:52:38Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Leak Tests - Whonix" property="twitter:title"/>
 <meta content="Testing for IP/DNS Leaks" property="twitter:description"/>
@@ -221,13 +221,10 @@ Whonix requires Donations to stay alive.
 </pre>
 <p>Tor also does not support DNSSEC yet. Running.
 </p>
-<pre>dig +dnssec check.torproject.org @localhost</pre>
-<p>Should reply.
-</p>
-<pre>; &lt;&lt;&gt;&gt; DiG 9.8.1-P1 &lt;&lt;&gt;&gt; +dnssec check.torproject.org @localhost
-;; global options: +cmd
-;; connection timed out; no servers could be reached
+<pre>dig +multiline . DNSKEY
 </pre>
+<p>It should now show DNS cryptographic keys. <a data-href="/wiki/Alternative_DNS_Resolver#DNSSec" href="../Alternative_DNS_Resolver.html" title="Alternative DNS Resolver">See example output from here</a>.
+</p>
 <h2><span class="mw-headline" id="Using_nslookup">Using nslookup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=9.html" title="Edit section: Using nslookup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Running.
 </p>
@@ -431,7 +428,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Leak_Tests" href="https://facebook.com/sharer.php?u=../Dev/Leak_Tests">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="../Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
+<p>Bored? Want to chat with other Whonix users? Join us in <a class="external text" data-href="http://irc://irc.oftc.net/whonix" href="http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">IRC</a> <sup><a data-href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" href="https://web.archive.org/web/http://irc://irc.oftc.net/whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> chat (<a class="external text" data-href="https://webirc.oftc.net:8443/?channels=Whonix" href="https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">Webchat</a> <sup><a data-href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" href="https://web.archive.org/web/https://webirc.oftc.net:8443/?channels=Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) or <a class="external text" data-href="https://t.me/Whonix_Chat" href="https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">Telegram Chat</a> <sup><a data-href="https://web.archive.org/web/https://t.me/Whonix_Chat" href="https://web.archive.org/web/https://t.me/Whonix_Chat" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Dev/Leak_Tests" href="https://www.Whonix.org/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Leak_Tests" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="../Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -445,35 +442,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191204103610
+Cached time: 20191211005514
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.125 seconds
-Real time usage: 0.178 seconds
-Preprocessor visited node count: 626/1000000
-Preprocessor generated node count: 1775/1000000
-Post‐expand include size: 6764/2097152 bytes
+CPU time usage: 0.088 seconds
+Real time usage: 0.094 seconds
+Preprocessor visited node count: 615/1000000
+Preprocessor generated node count: 1747/1000000
+Post‐expand include size: 6754/2097152 bytes
 Template argument size: 561/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 4317/5000000 bytes
+Unstrip post‐expand size: 4641/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  131.150      1 -total
- 45.61%   59.812      6 Template:CodeSelect
- 41.11%   53.922      1 Template:Open_with_root_rights
- 36.32%   47.636      1 Template:Box
-  9.75%   12.788      1 Template:Footer
-  5.76%    7.551      1 Template:Header
-  4.58%    6.003      1 Template:Reflist
-  2.64%    3.468      1 Template:Whonix-gw
-  2.27%    2.972      1 Template:Gateway_product_name_short
-  2.09%    2.746      9 Template:Project_name_short
+100.00%   51.997      1 -total
+ 24.42%   12.696      1 Template:Footer
+ 21.76%   11.314      6 Template:CodeSelect
+ 14.95%    7.776      1 Template:Open_with_root_rights
+  8.69%    4.520      1 Template:Reflist
+  8.60%    4.474      1 Template:Box
+  7.36%    3.827      1 Template:Header
+  4.73%    2.457      1 Template:RandomNews
+  4.26%    2.213      1 Template:Edit_it
+  4.11%    2.137      1 Template:Share
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=50682" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=50682">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=50682</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=53485" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=53485">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Dev/Leak_Tests&amp;oldid=53485</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -484,7 +481,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 30 August 2019, at 10:34.</li>
+<li id="footer-lastmod"> This page was last edited on 10 December 2019, at 14:52.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -505,5 +502,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 </div>
 
 </body>
-<!-- Cached/compressed 20191204103610 -->
+<!-- Cached/compressed 20191211005514 -->
 </html>
