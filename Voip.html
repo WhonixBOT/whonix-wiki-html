@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Voice over IP (VoIP) - Whonix
  url: ./Voip
- date: Thu Dec 12 08:06:14 2019
+ date: Fri Dec 13 08:05:41 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -33,8 +33,8 @@
 <meta content="./VoIP" property="og:url"/>
 <meta content="Anonymous Voice over IP (VoIP). Encrypted, anonymous phone calls using the Tor Anonymity Network." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/f/f9/Sound-856771640.png" property="og:image"/>
-<meta content="2019-08-08T01:24:14Z" property="article:modified_time"/>
-<meta content="2019-08-08T01:24:14Z" property="article:published_time"/>
+<meta content="2019-12-12T20:14:03Z" property="article:modified_time"/>
+<meta content="2019-12-12T20:14:03Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Voice over IP (VoIP) - Whonix" property="twitter:title"/>
 <meta content="Anonymous Voice over IP (VoIP). Encrypted, anonymous phone calls using the Tor Anonymity Network." property="twitter:description"/>
@@ -369,27 +369,27 @@ Configuration was valid</pre>
 </div>
 <p>Reminder: Always backup the onion service key. This is necessary in order to restore it on another machine, on a newer Whonix-Gateway ™, after HDD/SSD failure, etc. Follow the instructions below to find its location; root permission is required to access it.
 </p><p><code>
-/var/lib/tor/hidden_service/private_key
+/var/lib/tor/hidden_service/hs_ed25519_secret_key
 </code>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u><a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>
-</p><p>Use the usual Qubes tools. The following example shows how to copy the <i><span style="background-color:#FBFBFB">/var/lib/tor/hidden_service/private_key</span></i> from the <i><span style="background-color:#FBFBFB">sys-whonix</span></i> VM to the <i><span style="background-color:#FBFBFB">vault</span></i> VM (which should be started beforehand) using <i><span style="background-color:#FBFBFB">qvm-copy-to-vm</span></i>.
+</p><p>Use the usual Qubes tools. The following example shows how to copy the <i><span style="background-color:#FBFBFB">/var/lib/tor/hidden_service/hs_ed25519_secret_key</span></i> from the <i><span style="background-color:#FBFBFB">sys-whonix</span></i> VM to the <i><span style="background-color:#FBFBFB">vault</span></i> VM (which should be started beforehand) using <i><span style="background-color:#FBFBFB">qvm-copy-to-vm</span></i>.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/private_key</pre>
+<pre>sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/hs_ed25519_secret_key</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/private_key</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo qvm-copy-to-vm vault /var/lib/tor/hidden_service/hs_ed25519_secret_key</textarea>
 </div>
 </div>
 <p>The above step copies the Tor onion service private key file to the <i><span style="background-color:#FBFBFB">QubesIncoming</span></i> folder of the <i><span style="background-color:#FBFBFB">vault</span></i> VM.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>/home/user/QubesIncoming/sys-whonix/private_key</pre>
+<pre>/home/user/QubesIncoming/sys-whonix/hs_ed25519_secret_key</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">/home/user/QubesIncoming/sys-whonix/private_key</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">/home/user/QubesIncoming/sys-whonix/hs_ed25519_secret_key</textarea>
 </div>
 </div>
 <p>Consider moving the file from the <i><span style="background-color:#FBFBFB">QubesIncoming</span></i> folder to another preferred location.
@@ -753,7 +753,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./VoIP" href="https://facebook.com/sharer.php?u=./VoIP">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/Whonix" href="https://web.archive.org/web/https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> <sup><a data-href="https://web.archive.org/web/https://www.facebook.com/Whonix" href="https://web.archive.org/web/https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Join us in testing our new <a class="external text" data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> <sup><a data-href="https://web.archive.org/web/./AppArmor" href="https://web.archive.org/web/./AppArmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/VoIP" href="https://www.Whonix.org/wiki/VoIP" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/VoIP" href="https://web.archive.org/web/https://www.Whonix.org/wiki/VoIP" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VoIP" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -767,35 +767,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191212070613
+Cached time: 20191213070539
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.155 seconds
-Real time usage: 0.168 seconds
+CPU time usage: 0.152 seconds
+Real time usage: 0.167 seconds
 Preprocessor visited node count: 1261/1000000
 Preprocessor generated node count: 3324/1000000
-Post‐expand include size: 37300/2097152 bytes
-Template argument size: 20609/2097152 bytes
+Post‐expand include size: 37348/2097152 bytes
+Template argument size: 20720/2097152 bytes
 Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 25592/5000000 bytes
+Unstrip post‐expand size: 25676/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  103.663      1 -total
- 73.23%   75.912      9 Template:Box
- 27.75%   28.765     21 Template:CodeSelect
- 18.63%   19.308      1 Template:Reflist
- 10.81%   11.206      1 Template:Footer
-  7.78%    8.067      1 Template:Firewall_Settings_Workstation
-  6.36%    6.595      1 Template:Backups_Tor_Onion_Service_private_key
-  6.29%    6.519      1 Template:Reload_Tor
-  4.75%    4.927      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
-  2.67%    2.771      1 Template:Reload_Firewall_ws
+100.00%  107.547      1 -total
+ 78.53%   84.451      9 Template:Box
+ 28.52%   30.677     21 Template:CodeSelect
+ 17.85%   19.200      1 Template:Reflist
+  9.78%   10.518      1 Template:Footer
+  8.07%    8.679      1 Template:Firewall_Settings_Workstation
+  6.65%    7.152      1 Template:Backups_Tor_Onion_Service_private_key
+  6.35%    6.826      1 Template:Reload_Tor
+  5.63%    6.060      1 Template:Open_/usr/local/etc/torrc.d/50_user.conf
+  2.90%    3.118      1 Template:Reload_Firewall_ws
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=49815" dir="ltr" href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=49815">https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=49815</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=53595" dir="ltr" href="https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=53595">https://www.whonix.org/w/index.php?title=VoIP&amp;oldid=53595</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -806,7 +806,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VoIP&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 8 August 2019, at 02:24.</li>
+<li id="footer-lastmod"> This page was last edited on 12 December 2019, at 21:14.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
