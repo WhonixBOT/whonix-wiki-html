@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: How-to: Use Wickr in Whonix ™ - Whonix
  url: ./Wickr
- date: Mon Dec 16 08:08:11 2019
+ date: Tue Dec 17 08:09:03 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="./Wickr" property="og:url"/>
 <meta content="How-to: Use Wickr in Whonix ™" property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2019-11-23T16:05:52Z" property="article:modified_time"/>
-<meta content="2019-11-23T16:05:52Z" property="article:published_time"/>
+<meta content="2019-12-17T06:22:07Z" property="article:modified_time"/>
+<meta content="2019-12-17T06:22:07Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="How-to: Use Wickr in Whonix ™ - Whonix" property="twitter:title"/>
 <meta content="How-to: Use Wickr in Whonix ™" property="twitter:description"/>
@@ -133,8 +133,9 @@ Whonix requires Donations to stay alive.
 </ul>
 </li>
 <li class="toclevel-1 tocsection-8"><a href="#Start"><span class="tocnumber">2</span> <span class="toctext">Start</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Forum_Discussion"><span class="tocnumber">3</span> <span class="toctext">Forum Discussion</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Footnotes"><span class="tocnumber">4</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Troubleshooting"><span class="tocnumber">3</span> <span class="toctext">Troubleshooting</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Forum_Discussion"><span class="tocnumber">4</span> <span class="toctext">Forum Discussion</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="Install">Install</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=1.html" title="Edit section: Install">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -199,12 +200,78 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">wickrme</textarea>
 </div>
 </div>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=9.html" title="Edit section: Troubleshooting">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If running
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>wickrme</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">wickrme</textarea>
+</div>
+</div>
+Above resulted in the terminal displaying this message:
+
+<pre>realpath: '': No such file or directory
+realpath: '': No such file or directory
+realpath: '': No such file or directory
+realpath: '': No such file or directory
+Could not create NETLINK socket: Operation not permitted (1)
+Failed to initialize udev, possibly due to an invalid system configuration. Various device-related browser features may be broken.
+</pre>
+<p>With Wickr still starting and showing an error during sign in that it could not connect to the Wickr Me Network (attempting to reconnect), it could be caused during the original installation of Wickr through "snap install wickrme". Try reinstalling Wickr with the "--devmode" flag enabled and it should fix the issue,
+</p><p>Removing Wickr.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>snap remove wickrme</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">snap remove wickrme</textarea>
+</div>
+</div>
+<p>The command needs to be run twice. The first run will disable the "wickrme" package, the second time will remove "wickrme".
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>snap remove wickrme</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">snap remove wickrme</textarea>
+</div>
+</div>
+<p>To verify Wickr is no longer installed, run.
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>snap list</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">snap list</textarea>
+</div>
+</div>
+<p>It should no longer show wickrme.
+</p><p>Reinstall using this command:
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>snap install --devmode wickrme</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">snap install --devmode wickrme</textarea>
+</div>
+</div>
+<p>Now try running
+</p><p></p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>wickrme</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">wickrme</textarea>
+</div>
+</div>
 <p>Or if you did not reboot yet, see footnote. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Forum_Discussion">Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=9.html" title="Edit section: Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Forum_Discussion">Forum Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=10.html" title="Edit section: Forum Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external free" data-href="https://forums.whonix.org/t/wickr-problem-help/7552" href="https://forums.whonix.org/t/wickr-problem-help/7552" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/wickr-problem-help/7552</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/wickr-problem-help/7552" href="https://web.archive.org/web/https://forums.whonix.org/t/wickr-problem-help/7552" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=10.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Wickr&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Wickr&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">For better security and stability Wickr.com would to provide Debian downloads or even better an apt repository for Debian.</span>
@@ -241,7 +308,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Wickr" href="https://facebook.com/sharer.php?u=./Wickr">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Wickr" href="https://www.Whonix.org/wiki/Wickr" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Wickr" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Wickr" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Wickr" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Wickr" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Wickr" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Wickr" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -255,35 +322,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191211032234
+Cached time: 20191217070902
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.062 seconds
-Real time usage: 0.095 seconds
-Preprocessor visited node count: 274/1000000
-Preprocessor generated node count: 997/1000000
-Post‐expand include size: 5737/2097152 bytes
-Template argument size: 499/2097152 bytes
+CPU time usage: 0.073 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 341/1000000
+Preprocessor generated node count: 1141/1000000
+Post‐expand include size: 6227/2097152 bytes
+Template argument size: 590/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2276/5000000 bytes
+Unstrip post‐expand size: 2342/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   66.980      1 -total
- 51.09%   34.220      1 Template:Footer
- 35.06%   23.481      1 Template:Edit_it
- 15.68%   10.504      5 Template:CodeSelect
-  8.49%    5.687      1 Template:Open_a_product_ws_terminal
-  7.15%    4.787      1 Template:Reflist
-  6.08%    4.073      1 Template:Title
-  6.00%    4.021      1 Template:Box
-  4.34%    2.908      1 Template:Header
-  3.50%    2.346      1 Template:Share
+100.00%   50.694      1 -total
+ 34.24%   17.356     11 Template:CodeSelect
+ 30.24%   15.329      1 Template:Footer
+ 10.13%    5.136      1 Template:Reflist
+  7.12%    3.607      1 Template:Open_a_product_ws_terminal
+  6.11%    3.097      1 Template:Edit_it
+  5.74%    2.909      1 Template:Share
+  4.99%    2.528      1 Template:Title
+  4.83%    2.448      1 Template:Header
+  4.77%    2.419      1 Template:Box
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53021" dir="ltr" href="https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53021">https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53021</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53662" dir="ltr" href="https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53662">https://www.whonix.org/w/index.php?title=Wickr&amp;oldid=53662</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -294,7 +361,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Wickr&amp
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 November 2019, at 17:05.</li>
+<li id="footer-lastmod"> This page was last edited on 17 December 2019, at 07:22.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -315,5 +382,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Wickr&amp
 </div>
 
 </body>
-<!-- Cached/compressed 20191211032234 -->
+<!-- Cached/compressed 20191217070902 -->
 </html>
