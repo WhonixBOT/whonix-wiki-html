@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Recovery - Whonix
  url: ./Recovery
- date: Mon Dec 30 07:57:37 2019
+ date: Tue Dec 31 07:57:39 2019
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="http://kkkkkkkkkk63ava6.onion/wiki/Recovery" property="og:url"/>
 <meta content="Recovery Mode, Emergency, Chroot, Debugging, Capturing Diagnostic Output from Serial Console" property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2019-11-09T04:05:59Z" property="article:modified_time"/>
-<meta content="2019-11-09T04:05:59Z" property="article:published_time"/>
+<meta content="2019-12-30T17:57:51Z" property="article:modified_time"/>
+<meta content="2019-12-30T17:57:51Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Recovery - Whonix" property="twitter:title"/>
 <meta content="Recovery Mode, Emergency, Chroot, Debugging, Capturing Diagnostic Output from Serial Console" property="twitter:description"/>
@@ -363,7 +363,7 @@ Whonix requires Donations to stay alive.
 <li><u>Port Mode</u>: <code>Host Pipe</code></li>
 <li><u>Option</u>: <b>un</b>check <code>Connect to existing pipe/socket</code></li>
 <li><u>Path/Address</u>: <code>/home/user/vbox-socket-file</code></li></ul>
-<p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p><b>2.</b> Connect to the relevant unix domain socket file.
 </p><p>On the host, run the following socat command to connect to the unix domain socket file which is connected to the operating system running inside the virtual machine.
 </p><p></p><div class="codeContainerNew">
@@ -414,6 +414,24 @@ Interface: IConsole {872da645-4a9b-1727-bee2-5585105b9eed}
 <p>Then you must <u>un</u>check <code>Connect to existing pipe/socket</code>.
 </p>
 </span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>vboxmanage modifyvm Whonix-Gateway-XFCE --uart1 0x3F8 4 --uartmode1=server /home/user/vbox-socket-file</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">vboxmanage modifyvm Whonix-Gateway-XFCE --uart1 0x3F8 4 --uartmode1=server /home/user/vbox-socket-file</textarea>
+</div>
+</div>
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>vboxmanage modifyvm Whonix-Workstation-XFCE --uart1 0x3F8 4 --uartmode1=server /home/user/vbox-socket-file</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">vboxmanage modifyvm Whonix-Workstation-XFCE --uart1 0x3F8 4 --uartmode1=server /home/user/vbox-socket-file</textarea>
+</div>
+</div></span>
+</li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -430,7 +448,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Recovery" href="https://facebook.com/sharer.php?u=./Recovery">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
 </p>
 </div>
 <p><a class="external text" data-href="https://www.Whonix.org/wiki/Recovery" href="https://www.Whonix.org/wiki/Recovery" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Recovery" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Recovery" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Recovery" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
@@ -444,35 +462,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191216145619
+Cached time: 20191231053413
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.072 seconds
-Real time usage: 0.076 seconds
-Preprocessor visited node count: 412/1000000
-Preprocessor generated node count: 1329/1000000
-Post‐expand include size: 12426/2097152 bytes
-Template argument size: 5525/2097152 bytes
+CPU time usage: 0.080 seconds
+Real time usage: 0.093 seconds
+Preprocessor visited node count: 436/1000000
+Preprocessor generated node count: 1393/1000000
+Post‐expand include size: 12612/2097152 bytes
+Template argument size: 5765/2097152 bytes
 Highest expansion depth: 7/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 1182/5000000 bytes
+Unstrip post‐expand size: 1514/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   41.090      1 -total
- 55.32%   22.729      7 Template:Box
- 47.71%   19.605     14 Template:CodeSelect
- 25.65%   10.540      1 Template:Footer
- 23.14%    9.507      2 Template:Install_Package
-  5.33%    2.189      1 Template:Reflist
-  5.10%    2.095      1 Template:Share
-  4.87%    2.003      1 Template:Edit_it
-  4.18%    1.716      1 Template:Header
-  3.54%    1.455      1 Template:Mbox
+100.00%   57.855      1 -total
+ 57.79%   33.433      7 Template:Box
+ 55.19%   31.931     16 Template:CodeSelect
+ 21.23%   12.285      2 Template:Install_Package
+ 18.53%   10.718      1 Template:Footer
+ 10.84%    6.270      1 Template:Reflist
+  3.94%    2.278      1 Template:Header
+  3.87%    2.240      1 Template:Edit_it
+  3.63%    2.101      1 Template:Share
+  3.61%    2.086      1 Template:Mbox
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=52401" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=52401">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=52401</a>"</div>
+Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=53964" dir="ltr" href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=53964">http://kkkkkkkkkk63ava6.onion/w/index.php?title=Recovery&amp;oldid=53964</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -483,7 +501,7 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Re
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 9 November 2019, at 05:05.</li>
+<li id="footer-lastmod"> This page was last edited on 30 December 2019, at 18:57.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -504,5 +522,5 @@ Retrieved from "<a data-href="http://kkkkkkkkkk63ava6.onion/w/index.php?title=Re
 </div>
 
 </body>
-<!-- Cached/compressed 20191216145619 -->
+<!-- Cached/compressed 20191231053413 -->
 </html>
