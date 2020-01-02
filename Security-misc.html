@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Security-misc - Whonix
  url: ./Security-misc
- date: Wed Jan  1 07:58:29 2020
+ date: Thu Jan  2 07:59:03 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -32,8 +32,8 @@
 <meta content="./Security-misc" property="og:url"/>
 <meta content="Documentation for package security-misc." property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2019-12-31T07:29:23Z" property="article:modified_time"/>
-<meta content="2019-12-31T07:29:23Z" property="article:published_time"/>
+<meta content="2020-01-01T11:37:28Z" property="article:modified_time"/>
+<meta content="2020-01-01T11:37:28Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Security-misc - Whonix" property="twitter:title"/>
 <meta content="Documentation for package security-misc." property="twitter:description"/>
@@ -122,39 +122,49 @@ Whonix requires Donations to stay alive.
 <div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Stable_Features"><span class="tocnumber">1</span> <span class="toctext">Stable Features</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Experimental_Features"><span class="tocnumber">2</span> <span class="toctext">Experimental Features</span></a>
+<li class="toclevel-1 tocsection-2"><a href="#Testing_Features"><span class="tocnumber">2</span> <span class="toctext">Testing Features</span></a>
 <ul>
-<li class="toclevel-2 tocsection-3"><a href="#SUID_Disabling_and_Permission_Hardening"><span class="tocnumber">2.1</span> <span class="toctext">SUID Disabling and Permission Hardening</span></a>
-<ul>
-<li class="toclevel-3 tocsection-4"><a href="#Introduction"><span class="tocnumber">2.1.1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-3 tocsection-5"><a href="#Enable"><span class="tocnumber">2.1.2</span> <span class="toctext">Enable</span></a></li>
-<li class="toclevel-3 tocsection-6"><a href="#Debugging"><span class="tocnumber">2.1.3</span> <span class="toctext">Debugging</span></a></li>
-<li class="toclevel-3 tocsection-7"><a href="#Removal"><span class="tocnumber">2.1.4</span> <span class="toctext">Removal</span></a></li>
-<li class="toclevel-3 tocsection-8"><a href="#SUID_SGID_Hardening_Issues"><span class="tocnumber">2.1.5</span> <span class="toctext">SUID SGID Hardening Issues</span></a></li>
-<li class="toclevel-3 tocsection-9"><a href="#Permission_Hardening_Issues"><span class="tocnumber">2.1.6</span> <span class="toctext">Permission Hardening Issues</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Restrict_Hardware_Information_to_Root"><span class="tocnumber">2.1</span> <span class="toctext">Restrict Hardware Information to Root</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-10"><a href="#Console_Lockdown"><span class="tocnumber">2.2</span> <span class="toctext">Console Lockdown</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Remount_Secure"><span class="tocnumber">2.3</span> <span class="toctext">Remount Secure</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Experimental_Features"><span class="tocnumber">3</span> <span class="toctext">Experimental Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#SUID_Disabling_and_Permission_Hardening"><span class="tocnumber">3.1</span> <span class="toctext">SUID Disabling and Permission Hardening</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Introduction"><span class="tocnumber">3.1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Enable"><span class="tocnumber">3.1.2</span> <span class="toctext">Enable</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Debugging"><span class="tocnumber">3.1.3</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Removal"><span class="tocnumber">3.1.4</span> <span class="toctext">Removal</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#SUID_SGID_Hardening_Issues"><span class="tocnumber">3.1.5</span> <span class="toctext">SUID SGID Hardening Issues</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Permission_Hardening_Issues"><span class="tocnumber">3.1.6</span> <span class="toctext">Permission Hardening Issues</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Console_Lockdown"><span class="tocnumber">3.2</span> <span class="toctext">Console Lockdown</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Remount_Secure"><span class="tocnumber">3.3</span> <span class="toctext">Remount Secure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Stable_Features">Stable Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=1.html" title="Edit section: Stable Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external text" data-href="https://github.com/Whonix/security-misc#enhances-misc-security-settings" href="https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">Described here</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc#enhances-misc-security-settings" href="https://web.archive.org/web/https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h1><span class="mw-headline" id="Experimental_Features">Experimental Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=2.html" title="Edit section: Experimental Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Testing_Features">Testing Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=2.html" title="Edit section: Testing Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Restrict_Hardware_Information_to_Root">Restrict Hardware Information to Root</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=3.html" title="Edit section: Restrict Hardware Information to Root">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>See <a data-href="/wiki/Whonix-Workstation_Security_Hardening#Restrict_Hardware_Information_to_Root" href="./Whonix-Workstation_Security_Hardening.html" title="Whonix-Workstation Security Hardening">Restrict Hardware Information to Root</a>.
+</p><p><a class="external free" data-href="https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618" href="https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<h1><span class="mw-headline" id="Experimental_Features">Experimental Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=4.html" title="Edit section: Experimental Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Unreleased. (Developers only.) Will flow into other repositories as per usual.
 </p><p><span id="suid"></span>
 </p>
-<h2><span class="mw-headline" id="SUID_Disabling_and_Permission_Hardening">SUID Disabling and Permission Hardening</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=3.html" title="Edit section: SUID Disabling and Permission Hardening">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=4.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h2><span class="mw-headline" id="SUID_Disabling_and_Permission_Hardening">SUID Disabling and Permission Hardening</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=5.html" title="Edit section: SUID Disabling and Permission Hardening">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=6.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <ul><li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/etc/permission-hardening.d/30_default.conf" href="https://github.com/Whonix/security-misc/blob/master/etc/permission-hardening.d/30_default.conf" rel="noreferrer noopener" target="_blank">default config file</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/permission-hardening.d/30_default.conf" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/permission-hardening.d/30_default.conf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening" href="https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening" rel="noreferrer noopener" target="_blank"><code>/usr/lib/security-misc/permission-hardening</code></a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
 <li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening-undo" href="https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening-undo" rel="noreferrer noopener" target="_blank"><code>/usr/lib/security-misc/permission-hardening-undo</code></a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening-undo" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/lib/security-misc/permission-hardening-undo" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
 <li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/lib/systemd/system/permission-hardening.service" href="https://github.com/Whonix/security-misc/blob/master/lib/systemd/system/permission-hardening.service" rel="noreferrer noopener" target="_blank">systemd unit file</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/lib/systemd/system/permission-hardening.service" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/lib/systemd/system/permission-hardening.service" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h3><span class="mw-headline" id="Enable">Enable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=5.html" title="Edit section: Enable">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Enable">Enable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=7.html" title="Edit section: Enable">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Only required doing once.
 </p><p>Enable systemd unit.
 </p><p></p><div class="codeContainerNew">
@@ -174,7 +184,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl start permission-hardening.service</textarea>
 </div>
 </div>
-<h3><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=6.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=8.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Look what permission-hardening is actually doing. Most interesting during initial installation of security-misc.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -211,7 +221,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">meld /var/lib/permission-hardening/existing_mode/statoverride /var/lib/permission-hardening/new_mode/statoverride</textarea>
 </div>
 </div>
-<h3><span class="mw-headline" id="Removal">Removal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=7.html" title="Edit section: Removal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Removal">Removal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=9.html" title="Edit section: Removal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Undo all changes. The following command is is only efficient until upgrade of package security-misc or reboot. To disable entirely the subsequent systemctl commands are required as well.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -239,7 +249,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo systemctl mask permission-hardening.service</textarea>
 </div>
 </div>
-<h3><span class="mw-headline" id="SUID_SGID_Hardening_Issues">SUID SGID Hardening Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=8.html" title="Edit section: SUID SGID Hardening Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="SUID_SGID_Hardening_Issues">SUID SGID Hardening Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=10.html" title="Edit section: SUID SGID Hardening Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>This is a list of SUID / SGID programs which have their <code>set-user-id</code> bit and/or <code>set-group-id</code> bit removed. 
 </p><p>To use the following programs you need to:
 </p>
@@ -302,11 +312,11 @@ Whonix requires Donations to stay alive.
 <p><code>Network Information Server</code> (<code>NIS</code>):
 </p>
 <ul><li><code>unix_chkpwd</code> <a class="external text" data-href="https://manpages.debian.org/unix_chkpwd" href="https://manpages.debian.org/unix_chkpwd" rel="noreferrer noopener" target="_blank">man</a> <sup><a data-href="https://web.archive.org/web/https://manpages.debian.org/unix_chkpwd" href="https://web.archive.org/web/https://manpages.debian.org/unix_chkpwd" rel="noreferrer noopener" target="_blank">[archive]</a></sup> (Helper binary that verifies the password of the current user) Related to <code>Network Information Server</code> (<code>NIS</code>)? See <a class="external text" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=155583" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=155583" rel="noreferrer noopener" target="_blank">this discussion</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=155583" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=155583" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Does not look important.</li></ul>
-<h3><span class="mw-headline" id="Permission_Hardening_Issues">Permission Hardening Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=9.html" title="Edit section: Permission Hardening Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Permission_Hardening_Issues">Permission Hardening Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=11.html" title="Edit section: Permission Hardening Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>The following folders are only readable with root rights.
 </p>
 <ul><li><code>/boot</code>: breaks KVM direct kernel boot using kernel images located in <code>/boot</code>. I.e. when using KVM to boot a kernel from the host disk located in <code>/boot</code> this will not be possible by default. The safest alternative would be using another file location for kernel images or inside VM kernel images.</li></ul>
-<h2><span class="mw-headline" id="Console_Lockdown">Console Lockdown</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=10.html" title="Edit section: Console Lockdown">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Console_Lockdown">Console Lockdown</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=12.html" title="Edit section: Console Lockdown">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>TODO: document
 </p><p>Will be default in Whonix ™ build version <code>15.0.0.7.8</code> and above. Unreleased.
 </p><p>To enable for older builds of Whonix ™.
@@ -328,7 +338,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo pam-auth-update --enable console-lockdown-security-misc</textarea>
 </div>
 </div>
-<h2><span class="mw-headline" id="Remount_Secure">Remount Secure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=11.html" title="Edit section: Remount Secure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Remount_Secure">Remount Secure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=13.html" title="Edit section: Remount Secure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Feature not ready!
 </p>
 <ul><li><a class="external free" data-href="https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" href="https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" href="https://web.archive.org/web/https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -342,7 +352,7 @@ Whonix requires Donations to stay alive.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo touch /etc/noexec</textarea>
 </div>
 </div>
-<h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=12.html" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=14.html" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 </div>
 <hr/>
@@ -360,10 +370,10 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Security-misc" href="https://facebook.com/sharer.php?u=./Security-misc">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Have you <a class="external text" data-href="./Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="./Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/./Authorship" href="https://web.archive.org/web/./Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
-<p><a class="external text" data-href="https://www.Whonix.org/wiki/Security-misc" href="https://www.Whonix.org/wiki/Security-misc" rel="noreferrer noopener" target="_blank">https</a> <sup><a data-href="https://web.archive.org/web/https://www.Whonix.org/wiki/Security-misc" href="https://web.archive.org/web/https://www.Whonix.org/wiki/Security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup> | (<a data-href="/wiki/Forcing_.onion_on_Whonix.org" href="./Forcing_.onion_on_Whonix.org.html" title="Forcing .onion on Whonix.org">forcing</a>) <a class="external text" data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" rel="noreferrer noopener" target="_blank">onion</a> <sup><a data-href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" href="https://web.archive.org/web/http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup><br/>
+<p><a data-href="https://www.Whonix.org/wiki/Security-misc" href="https://www.Whonix.org/wiki/Security-misc" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" height="25" src="data:image/png;base64,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" width="25"/></a>
 </p><p><font size="-1">This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Security-misc&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit">Edit</a>! Edits are held for moderation.
 </font></p><p><font size="-1">Copyright (C) 2012 - 2019 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="https://www.openinventionnetwork.com/licensees.php" href="https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">[archive]</a></sup> of the <a class="external text" data-href="https://www.openinventionnetwork.com" href="https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">Open Invention Network</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com" href="https://web.archive.org/web/https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
 </font></p><p><font size="-1">Whonix ™ is a derivative of and not affiliated with <a class="external text" data-href="https://www.debian.org" href="https://www.debian.org" rel="noreferrer noopener" target="_blank">Debian</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org" href="https://web.archive.org/web/https://www.debian.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <a class="external text" data-href="https://www.debian.org/trademark" href="https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">Debian is a registered trademark</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org/trademark" href="https://web.archive.org/web/https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">[archive]</a></sup> owned by <a class="external text" data-href="https://www.spi-inc.org/" href="https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">Software in the Public Interest, Inc</a> <sup><a data-href="https://web.archive.org/web/https://www.spi-inc.org/" href="https://web.archive.org/web/https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
@@ -374,35 +384,35 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20191231095708
+Cached time: 20200101141336
 Cache expiry: 0
 Dynamic content: true
-CPU time usage: 0.081 seconds
-Real time usage: 0.095 seconds
-Preprocessor visited node count: 268/1000000
-Preprocessor generated node count: 950/1000000
-Post‐expand include size: 5263/2097152 bytes
+CPU time usage: 0.082 seconds
+Real time usage: 0.089 seconds
+Preprocessor visited node count: 276/1000000
+Preprocessor generated node count: 960/1000000
+Post‐expand include size: 5309/2097152 bytes
 Template argument size: 647/2097152 bytes
 Highest expansion depth: 5/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 116/5000000 bytes
+Unstrip post‐expand size: 651/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   54.031      1 -total
- 48.88%   26.409     12 Template:CodeSelect
- 25.47%   13.762      1 Template:Footer
- 11.24%    6.071      1 Template:Header
-  5.18%    2.797      1 Template:Anchor
-  4.98%    2.690      1 Template:Share
-  4.89%    2.644      1 Template:Edit_it
-  4.79%    2.586      9 Template:Project_name_short
-  3.12%    1.687      1 Template:Reflist
-  2.63%    1.421      1 Template:RandomNews
+100.00%   45.590      1 -total
+ 53.19%   24.250     12 Template:CodeSelect
+ 24.15%   11.012      1 Template:Footer
+ 10.45%    4.765      1 Template:Header
+  4.60%    2.095      1 Template:RandomNews
+  4.28%    1.953      1 Template:Share
+  4.17%    1.900      1 Template:Edit_it
+  3.47%    1.584      8 Template:Project_name_short
+  3.38%    1.543      1 Template:Anchor
+  2.70%    1.232      1 Template:Reflist
 -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54014" dir="ltr" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54014">https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54014</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54034" dir="ltr" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54034">https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=54034</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -413,7 +423,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 31 December 2019, at 08:29.</li>
+<li id="footer-lastmod"> This page was last edited on 1 January 2020, at 12:37.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -434,5 +444,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-
 </div>
 
 </body>
-<!-- Cached/compressed 20191231095708 -->
+<!-- Cached/compressed 20200101141336 -->
 </html>
