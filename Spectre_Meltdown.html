@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Spectre Meltdown - Whonix
  url: ./Spectre_Meltdown
- date: Tue Jan 28 07:57:32 2020
+ date: Wed Jan 29 07:56:28 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -188,7 +188,7 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 </p>
 <h1><span class="mw-headline" id="Processor_Microcode_Updates">Processor Microcode Updates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Spectre_Meltdown&amp;action=edit&amp;section=5.html" title="Edit section: Processor Microcode Updates">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>One recent example of a firmware vulnerability is the processor microcode update for modern chips to address <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3620" href="https://security-tracker.debian.org/tracker/CVE-2018-3620" rel="noreferrer noopener" target="_blank">speculative</a> <sup><a data-href="https://web.archive.org/web/https://security-tracker.debian.org/tracker/CVE-2018-3620" href="https://web.archive.org/web/https://security-tracker.debian.org/tracker/CVE-2018-3620" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <a class="external text" data-href="https://security-tracker.debian.org/tracker/CVE-2018-3646" href="https://security-tracker.debian.org/tracker/CVE-2018-3646" rel="noreferrer noopener" target="_blank">execution flaws</a> <sup><a data-href="https://web.archive.org/web/https://security-tracker.debian.org/tracker/CVE-2018-3646" href="https://web.archive.org/web/https://security-tracker.debian.org/tracker/CVE-2018-3646" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. The <a class="external text" data-href="https://www.debian.org/security/2018/dsa-4279" href="https://www.debian.org/security/2018/dsa-4279" rel="noreferrer noopener" target="_blank">Debian package</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org/security/2018/dsa-4279" href="https://web.archive.org/web/https://www.debian.org/security/2018/dsa-4279" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is non-free software, therefore only available in the Debian nonfree repository, meaning it is not installed by default in all Whonix variants. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> Whonix recommends to <a data-href="Avoid_nonfree_software" href="./Avoid_nonfree_software.html" title="Avoid nonfree software">avoid nonfree software</a> but in this case idealism would result in insecurity.
-</p><p>It is unnecessary to apply these updates in standard <a data-href="Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> and <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> guest VMs, as they do not have the ability to alter the microcode. However, processor microcode updates <u>should</u> always be applied on the host operating system (for processors by Intel or AMD) <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> and baremetal configurations like <a class="mw-redirect" data-href="Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p><p>It is unnecessary to apply these updates in standard <a data-href="Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> and <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> guest VMs, as they do not have the ability to alter the microcode. However, processor microcode updates <u>should</u> always be applied <u>on the host operating system</u> (for processors by Intel or AMD) <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> and baremetal configurations like <a class="mw-redirect" data-href="Physical_Isolation" href="./Physical_Isolation.html" title="Physical Isolation">Physical Isolation</a>. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <h3><span class="mw-headline" id="Microcode_Package_Check">Microcode Package Check</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>In the following checks, the package is not installed if there is no output.
@@ -218,22 +218,8 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 </p>
 <h3><span class="mw-headline" id="Install_Microcode_Package">Install Microcode Package</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-4" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-4.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <h4><span class="mw-headline" id="Intel">Intel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-5" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-5.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p><u>For Debian hosts</u>
-</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/intel-microcode" href="https://packages.debian.org/stretch-backports/intel-microcode" rel="noreferrer noopener" target="_blank"><code>intel-microcode</code></a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/stretch-backports/intel-microcode" href="https://web.archive.org/web/https://packages.debian.org/stretch-backports/intel-microcode" rel="noreferrer noopener" target="_blank">[archive]</a></sup> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_16-0"><a href="#cite_note-prefer_stable_apt_sources-16">[16]</a></sup>
-</p><p>Note: the following instructions apply only to the Debian <code>buster</code> host operating system using Whonix 15.0.0.6.6. Other host operating systems and other Whonix versions may use a codename different to <code>buster</code>.
-</p>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p><b>1.</b> Open a terminal on the host.
-</p><p><b>2.</b> Add the current Debian stable backports codename <code>buster-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb http://http.debian.net/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb http://http.debian.net/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div>
-<p><b>3.</b> <a data-href="Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
+<p><b>1.</b> <a class="mw-redirect" data-href="Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -242,44 +228,30 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p><b>4.</b> Install the selected software.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get -t buster-backports install intel-microcode</pre>
+<pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get -t buster-backports install intel-microcode</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>The procedure is now complete.
-</p><p><b>5.</b> Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>buster</code> to <code>bullseye</code>. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> To proceed, run.
+<p><b>3.</b> Install the <code>intel-microcode</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo rm /etc/apt/sources.list.d/backports.list</pre>
+<pre>sudo apt-get install intel-microcode</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo rm /etc/apt/sources.list.d/backports.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install intel-microcode</textarea>
 </div>
 </div>
+<p>The procedure is complete.
+</p>
 </div>
 <h4><span class="mw-headline" id="AMD">AMD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-6" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-6.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p><u>For Debian hosts</u>
-</p><p>Package <a class="external text" data-href="https://packages.debian.org/stretch-backports/amd64-microcode" href="https://packages.debian.org/stretch-backports/amd64-microcode" rel="noreferrer noopener" target="_blank"><code>amd64-microcode</code></a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/stretch-backports/amd64-microcode" href="https://web.archive.org/web/https://packages.debian.org/stretch-backports/amd64-microcode" rel="noreferrer noopener" target="_blank">[archive]</a></sup> can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-prefer_stable_apt_sources_16-1"><a href="#cite_note-prefer_stable_apt_sources-16">[16]</a></sup>
-</p><p>Note: the following instructions apply only to the Debian <code>buster</code> host operating system using Whonix 15.0.0.6.6. Other host operating systems and other Whonix versions may use a codename different to <code>buster</code>.
-</p>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p><b>1.</b> Open a terminal on the host.
-</p><p><b>2.</b> Add the current Debian stable backports codename <code>buster-backports</code> to Debian apt sources. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb http://http.debian.net/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb http://http.debian.net/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div>
-<p><b>3.</b> <a data-href="Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
+<p><b>1.</b> <a class="mw-redirect" data-href="Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -288,55 +260,33 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p><b>4.</b> Install the selected software.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get -t buster-backports install amd64-microcode</pre>
+<pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get -t buster-backports install amd64-microcode</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>The procedure is now complete.
-</p><p><b>5.</b> Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>buster</code> to <code>bullseye</code>. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup> To proceed, run.
+<p><b>3.</b> Install the <code>amd64-microcode</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo rm /etc/apt/sources.list.d/backports.list</pre>
+<pre>sudo apt-get install amd64-microcode</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo rm /etc/apt/sources.list.d/backports.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install amd64-microcode</textarea>
 </div>
 </div>
+<p>The procedure is complete.
+</p>
 </div>
 <h3><span class="mw-headline" id="spectre-meltdown-checker">spectre-meltdown-checker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-7" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-7.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>It is possible to check if the system is vulnerable to the <a class="external text" data-href="https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" href="https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" rel="noreferrer noopener" target="_blank">Spectre</a> <sup><a data-href="https://web.archive.org/web/https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" href="https://web.archive.org/web/https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://meltdownattack.com/" href="https://meltdownattack.com/" rel="noreferrer noopener" target="_blank">Meltdown</a> <sup><a data-href="https://web.archive.org/web/https://meltdownattack.com/" href="https://web.archive.org/web/https://meltdownattack.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> attacks, which use flaws in modern chip design to bypass system protections.
 </p>
 <h4><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-8.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p>{{{package_name}}} can be installed from Debian backports. This is non-ideal, see footnote. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
-</p><p><b>1.</b> Boot Whonix-Workstation ™ (<code>whonix-ws-15</code>) TemplateVM.
-</p><p><b>2.</b> Add the current Debian stable backports codename <code>buster-backports</code> to Debian apt sources.
-</p><p>Note: this applies to Whonix 15.0.0.6.6. Later Whonix versions may use a codename different to <code>buster</code>.
-</p><p>In Whonix-Workstation ™ (<code>whonix-ws-15</code>) TemplateVM, run.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb tor+https://deb.debian.org/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb tor+https://deb.debian.org/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div>
-<p>Alternatively, users who like <a data-href="Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a> can set the <i>.onion</i> mirror.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div>
-<p><b>3.</b> <a data-href="Operating_System_Software_and_Updates#Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Update</a> the package lists.
+<p><b>1.</b> <a class="mw-redirect" data-href="Update" href="./Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo apt-get update</pre>
@@ -345,26 +295,26 @@ VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get update</textarea>
 </div>
 </div>
-<p><b>4.</b> Install the select software.
+<p><b>2.</b> Upgrade the system.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get -t buster-backports install spectre-meltdown-checker</pre>
+<pre>sudo apt-get dist-upgrade</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get -t buster-backports install spectre-meltdown-checker</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p>The procedure is now complete.
-</p><p><b>5.</b> Undo.
-</p><p>On occasion it is necessary to undo this configuration, for example when upgrading from Debian <code>buster</code> to <code>bullseye</code>. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> To proceed, run.
+<p><b>3.</b> Install the <code>spectre-meltdown-checker</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo rm /etc/apt/sources.list.d/backports.list</pre>
+<pre>sudo apt-get install spectre-meltdown-checker</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo rm /etc/apt/sources.list.d/backports.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install spectre-meltdown-checker</textarea>
 </div>
 </div>
+<p>The procedure is complete.
+</p>
 </div>
 <h4><span class="mw-headline" id="Usage">Usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-9" href="https://www.whonix.org/w/index.php?title=Template:Processor_Microcode_Updates&amp;action=edit&amp;section=T-9.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p></p><div class="codeContainerNew">
@@ -461,40 +411,6 @@ According to this <a class="external text" data-href="https://www.virtualbox.org
 </li>
 <li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">This package is installed by default in Qubes to automatically protect users against hardware threats.</span>
 </li>
-<li id="cite_note-prefer_stable_apt_sources-16"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-prefer_stable_apt_sources_16-0">16.0</a></sup> <sup><a href="#cite_ref-prefer_stable_apt_sources_16-1">16.1</a></sup></span> <span class="reference-text">
-Users should <a data-href="Install_Software#Prefer_Packages_from_Debian_Stable_Repository" href="./Install_Software.html" title="Install Software">Prefer Packages from Debian Stable Repository</a>, but using backports is better than <a data-href="Install_Software#Avoid_Manual_Software_Installation" href="./Install_Software.html" title="Install Software">manual software installation</a> or <a data-href="Install_Software#Avoid_Third_Party_Package_Managers" href="./Install_Software.html" title="Install Software">using third party package managers</a> since this <a data-href="Install_Software#Prefer_APT" href="./Install_Software.html" title="Install Software">prefers APT</a>. To contain the risk, <a data-href="Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users might want to consider using <a data-href="Multiple_Whonix-Workstation" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a> and <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users might want to consider using <a data-href="Multiple_Whonix-Workstation#Multiple_Qubes-Whonix_.E2.84.A2_TemplateVMs" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Qubes-Whonix ™ TemplateVMs</a> or <a data-href="Install_Software#Install_Software_in_a_TemplateBasedVM" href="./Install_Software.html" title="Install Software">Software Installation in a TemplateBasedVM</a>.</span>
-</li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">
-Or alternatively use the <i>.onion</i> mirror.
-<div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div></span>
-</li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">Stay Tuned</a>).</span>
-</li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">
-Or alternatively use the <i>.onion</i> mirror.
-<div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo su -c "echo -e 'deb tor+http://vwakviie2ienjx6t.onion/debian buster-backports main contrib non-free' &gt; /etc/apt/sources.list.d/backports.list"</textarea>
-</div>
-</div></span>
-</li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">Stay Tuned</a>).</span>
-</li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">
-Users should <a data-href="Install_Software#Prefer_Packages_from_Debian_Stable_Repository" href="./Install_Software.html" title="Install Software">Prefer Packages from Debian Stable Repository</a>, but using backports is better than <a data-href="Install_Software#Avoid_Manual_Software_Installation" href="./Install_Software.html" title="Install Software">manual software installation</a> or <a data-href="Install_Software#Avoid_Third_Party_Package_Managers" href="./Install_Software.html" title="Install Software">using third party package managers</a> since this <a data-href="Install_Software#Prefer_APT" href="./Install_Software.html" title="Install Software">prefers APT</a>. To contain the risk, <a data-href="Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users might want to consider using <a data-href="Multiple_Whonix-Workstation" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a> and <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users might want to consider using <a data-href="Multiple_Whonix-Workstation#Multiple_Qubes-Whonix_.E2.84.A2_TemplateVMs" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Qubes-Whonix ™ TemplateVMs</a> or <a data-href="Install_Software#Install_Software_in_a_TemplateBasedVM" href="./Install_Software.html" title="Install Software">Software Installation in a TemplateBasedVM</a>.</span>
-</li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">Most often this step applies before attempting major Whonix upgrades; upgrade instructions are also made available at that time (see <a data-href="Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">Stay Tuned</a>).</span>
-</li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
@@ -511,7 +427,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Spectre_Meltdown" href="https://facebook.com/sharer.php?u=./Spectre_Meltdown">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Please consider a <a class="external text" data-href="Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/./Donate" href="https://web.archive.org/web/./Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a data-href="Spectre_Meltdown" href="./Spectre_Meltdown" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Spectre_Meltdown" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
