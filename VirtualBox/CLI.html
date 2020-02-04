@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix ™ for VirtualBox with CLI - Whonix
  url: ../VirtualBox/CLI
- date: Mon Feb  3 08:02:31 2020
+ date: Tue Feb  4 08:02:12 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -37,7 +37,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-VirtualBox_CLI rootpage-VirtualBox skin-foreground action-view"><noscript><meta content="0;url='../VirtualBox/CLI?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="../VirtualBox/CLI?PageSpeed=noscript" href="../VirtualBox/CLI?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div id="navwrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-VirtualBox_CLI rootpage-VirtualBox skin-foreground action-view"><noscript><meta content="0;url='../VirtualBox/CLI?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="../VirtualBox/CLI?PageSpeed=noscript" href="../VirtualBox/CLI?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
 
 </div>
 <div id="page-content">
@@ -498,18 +498,25 @@ ova
 </p><p>On the host. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p>
 <blockquote>
-<p>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off <br/>
+<p>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry o
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Gateway" --mds-clear-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --mds-clear-on-sched on
+</p>
+</blockquote>
+<blockquote>
+<p>VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --mds-clear-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --mds-clear-on-sched on
 </p>
 </blockquote>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
@@ -639,7 +646,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../VirtualBox/CLI" href="https://facebook.com/sharer.php?u=../VirtualBox/CLI">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a> <sup><a data-href="https://web.archive.org/web/../Why_Whonix_is_Freedom_Software" href="https://web.archive.org/web/../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Whonix" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/wikipedia-page-corrections" href="https://web.archive.org/web/https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a data-href="CLI" href="../VirtualBox/CLI" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/CLI" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/CLI" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>

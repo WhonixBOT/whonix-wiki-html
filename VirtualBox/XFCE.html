@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix ™ for VirtualBox with XFCE - Whonix
  url: ../VirtualBox/XFCE
- date: Mon Feb  3 08:02:44 2020
+ date: Tue Feb  4 08:02:25 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -14,6 +14,7 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 <meta content="MediaWiki 1.33.1" name="generator"/>
+<meta content="Whonix ™ for VirtualBox with XFCE Desktop Environment - Stable Version" name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=VirtualBox/XFCE&amp;action=edit" href="https://www.whonix.org/w/index.php?title=VirtualBox/XFCE&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=VirtualBox/XFCE&amp;action=edit" href="https://www.whonix.org/w/index.php?title=VirtualBox/XFCE&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -23,13 +24,14 @@
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="Whonix ™ for VirtualBox with XFCE - Whonix" property="og:title"/>
 <meta content="../VirtualBox/XFCE" property="og:url"/>
-<meta content="https://www.facebook.com/Whonix" property="article:author"/>
-<meta content="" property="og:image"/>
+<meta content="Whonix ™ for VirtualBox with XFCE Desktop Environment - Stable Version" property="og:description"/>
+<meta content="https://www.whonix.org/w/images/thumb/d/dc/Cli3.png/940px-Cli3.png" property="og:image"/>
 <meta content="2019-09-18T07:02:54Z" property="article:modified_time"/>
 <meta content="2019-09-18T07:02:54Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix ™ for VirtualBox with XFCE - Whonix" property="twitter:title"/>
-<meta content="" property="twitter:image"/>
+<meta content="Whonix ™ for VirtualBox with XFCE Desktop Environment - Stable Version" property="twitter:description"/>
+<meta content="https://www.whonix.org/w/images/thumb/d/dc/Cli3.png/940px-Cli3.png" property="twitter:image"/>
 <meta content="summary" property="twitter:card"/>
 
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
@@ -505,18 +507,25 @@ ova
 </p><p>On the host. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p>
 <blockquote>
-<p>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on <br/>
-VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on <br/>
-VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off <br/>
+<p>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry o
+VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Gateway" --spec-ctrl on
+VBoxManage modifyvm "Whonix-Gateway" --nestedpaging off
+VBoxManage modifyvm "Whonix-Gateway" --mds-clear-on-vm-entry on
+VBoxManage modifyvm "Whonix-Gateway" --mds-clear-on-sched on
+</p>
+</blockquote>
+<blockquote>
+<p>VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --ibpb-on-vm-exit on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --l1d-flush-on-sched on
+VBoxManage modifyvm "Whonix-Workstation" --spec-ctrl on
 VBoxManage modifyvm "Whonix-Workstation" --nestedpaging off
+VBoxManage modifyvm "Whonix-Workstation" --mds-clear-on-vm-entry on
+VBoxManage modifyvm "Whonix-Workstation" --mds-clear-on-sched on
 </p>
 </blockquote>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
@@ -646,7 +655,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../VirtualBox/XFCE" href="https://facebook.com/sharer.php?u=../VirtualBox/XFCE">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>We are looking for <a data-href="/wiki/Contribute#Maintainer" href="../Contribute.html" title="Contribute">maintainers and developers</a>.
+<p>Want to make Whonix safer and more usable? We're looking for helping hands. Check out the <a class="external text" data-href="https://phabricator.whonix.org/maniphest/query/open/" href="https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">Open Issues</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" href="https://web.archive.org/web/https://phabricator.whonix.org/maniphest/query/open/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">development forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/development" href="https://web.archive.org/web/https://forums.whonix.org/c/development" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a data-href="XFCE" href="../VirtualBox/XFCE" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/XFCE" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/XFCE" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
