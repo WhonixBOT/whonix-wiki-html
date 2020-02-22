@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes Remote Support - Whonix
  url: ../Dev/Qubes_Remote_Support
- date: Fri Feb 21 07:37:56 2020
+ date: Sat Feb 22 07:38:54 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -24,8 +24,8 @@
 <meta content="Dev/Qubes Remote Support - Whonix" property="og:title"/>
 <meta content="../Dev/Qubes_Remote_Support" property="og:url"/>
 <meta content="" property="og:image"/>
-<meta content="2020-02-15T16:25:45Z" property="article:modified_time"/>
-<meta content="2020-02-15T16:25:45Z" property="article:published_time"/>
+<meta content="2020-02-21T14:00:50Z" property="article:modified_time"/>
+<meta content="2020-02-21T14:00:50Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Qubes Remote Support - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -34,7 +34,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Qubes_Remote_Support rootpage-Dev skin-foreground action-view"><noscript><meta content="0;url='../Dev/Qubes_Remote_Support?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="../Dev/Qubes_Remote_Support?PageSpeed=noscript" href="../Dev/Qubes_Remote_Support?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Qubes_Remote_Support rootpage-Dev skin-foreground action-view"><noscript><meta content="0;url='../Dev/Qubes_Remote_Support?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="../Dev/Qubes_Remote_Support?PageSpeed=noscript" href="../Dev/Qubes_Remote_Support?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
 
 </div>
 <div id="page-content">
@@ -87,11 +87,13 @@ Whonix requires Donations to stay alive.
 <ul>
 <li class="toclevel-2 tocsection-11"><a href="#remote_support_provider"><span class="tocnumber">9.1</span> <span class="toctext">remote support provider</span></a></li>
 <li class="toclevel-2 tocsection-12"><a href="#remote_support_receiver"><span class="tocnumber">9.2</span> <span class="toctext">remote support receiver</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#qubes-remote-support-provider-gui"><span class="tocnumber">9.3</span> <span class="toctext">qubes-remote-support-provider-gui</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#notes"><span class="tocnumber">9.4</span> <span class="toctext">notes</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-13"><a href="#ssh_keys"><span class="tocnumber">10</span> <span class="toctext">ssh keys</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#send_access_into_to_gpg_agent"><span class="tocnumber">11</span> <span class="toctext">send access into to gpg agent</span></a></li>
-<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#ssh_keys"><span class="tocnumber">10</span> <span class="toctext">ssh keys</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#send_access_into_to_gpg_agent"><span class="tocnumber">11</span> <span class="toctext">send access into to gpg agent</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="goals">goals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=1.html" title="Edit section: goals">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -183,22 +185,28 @@ Whonix requires Donations to stay alive.
 <li>dom0 test connection to <code>.onion</code></li>
 <li>dom0 reverse ssh connect to remote support provider <code>.onion</code></li>
 <li>There is now an open port on remote support receiver machine over ssh and over <code>.onion</code> available to remote support provider.</li></ul>
-<h1><span class="mw-headline" id="ssh_keys">ssh keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13.html" title="Edit section: ssh keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="qubes-remote-support-provider-gui">qubes-remote-support-provider-gui</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13.html" title="Edit section: qubes-remote-support-provider-gui">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Not needed. Remote support provider can use CLI tools for connection setup. Would be encapsulated into a simple CLI call and telling the remote support receiver the wormhole code. Once the remote support receiver connected to the remote support provider (reverse SSH), the remote support provider can use a $VNC viewer (which is graphical) to connect.)
+</p>
+<h2><span class="mw-headline" id="notes">notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14.html" title="Edit section: notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Can use two wormhole codes if not avoidable.</li>
+<li>Automatically re-connect if reverse SSH is down.</li></ul>
+<h1><span class="mw-headline" id="ssh_keys">ssh keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15.html" title="Edit section: ssh keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>challenges:
 </p>
 <ul><li>Have to manage file <code>/root/.ssh/authorized_keys</code> using scripts.
 <ul><li>Use secure, long, script generated passwords instead?</li></ul></li></ul>
-<h1><span class="mw-headline" id="send_access_into_to_gpg_agent">send access into to gpg agent</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14.html" title="Edit section: send access into to gpg agent">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="send_access_into_to_gpg_agent">send access into to gpg agent</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=16.html" title="Edit section: send access into to gpg agent">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>&gt; optionally a feature to send access info to the support agent from the GUI (for example GPG encrypted email)
 </p><p>Patrick said: I would discourage that. Challanges:
 </p>
 <ul><li>calling e-mail / gpg from command line</li>
 <li>calling e-mail / gpg from dom0 or adminVM?</li></ul>
-<h1><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15.html" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=17.html" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="Qubes#ssh_into_Qubes_dom0" href="../Dev/Qubes.html" title="Dev/Qubes">Dev/Qubes#ssh_into_Qubes_dom0</a></li>
 <li><a class="external free" data-href="https://github.com/fepitre/qubes-remote-desktop" href="https://github.com/fepitre/qubes-remote-desktop" rel="noreferrer noopener" target="_blank">https://github.com/fepitre/qubes-remote-desktop</a> <sup><a data-href="https://web.archive.org/web/https://github.com/fepitre/qubes-remote-desktop" href="https://web.archive.org/web/https://github.com/fepitre/qubes-remote-desktop" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54631" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54631">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54631</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54750" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54750">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=54750</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -209,7 +217,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;ol
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 15 February 2020, at 17:25.</li>
+<li id="footer-lastmod"> This page was last edited on 21 February 2020, at 15:00.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
