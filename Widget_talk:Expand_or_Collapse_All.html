@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Widget talk:Expand or Collapse All - Whonix
  url: ./Widget_talk:Expand_or_Collapse_All
- date: Sun Feb 23 08:05:55 2020
+ date: Mon Feb 24 08:05:57 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -34,7 +34,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-275 ns-talk mw-editable page-Widget_talk_Expand_or_Collapse_All rootpage-Widget_talk_Expand_or_Collapse_All skin-foreground action-view"><noscript><meta content="0;url='./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript" href="./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>Last update: March 17, 2019. This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-275 ns-talk mw-editable page-Widget_talk_Expand_or_Collapse_All rootpage-Widget_talk_Expand_or_Collapse_All skin-foreground action-view"><noscript><meta content="0;url='./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript" href="./Widget_talk:Expand_or_Collapse_All?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
 
 </div>
 <div id="page-content">
@@ -69,7 +69,7 @@ Whonix requires Donations to stay alive.
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>This should fix it. Round about way
 </p>
-<pre style="white-space:pre-wrap">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
+<pre style="white-space: pre-wrap;">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
 &lt;button onclick="collapse()"&gt;Collapse all&lt;/button&gt;
 &lt;script&gt;
 function collapse() {
@@ -91,7 +91,7 @@ function expand() {
 &lt;/script&gt;
 </pre>
 <dl><dd>Hmm, on second thought, probably better to use mw.message and fetch it in plain() so the pages <a data-href="/wiki/MediaWiki:Collapsible-collapse" href="./MediaWiki:Collapsible-collapse.html" title="MediaWiki:Collapsible-collapse">MediaWiki:Collapsible-collapse</a> and <a data-href="/wiki/MediaWiki:Collapsible-expand" href="./MediaWiki:Collapsible-expand.html" title="MediaWiki:Collapsible-expand">MediaWiki:Collapsible-expand</a> can be tweaked. eg. Show instead of Expand and Hide instead of Collapse. This way it is less likely to break if someone changes those message values. For reference I did try an array with <code>childNode</code> but it was not reliable enough on the <code>click()</code> event.</dd></dl>
-<pre style="white-space:pre-wrap">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
+<pre style="white-space: pre-wrap;">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
 &lt;button onclick="collapse()"&gt;Collapse all&lt;/button&gt;
 &lt;script&gt;
 function collapse() {
