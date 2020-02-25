@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Widget talk:Expand or Collapse All - Whonix
  url: ./Widget_talk:Expand_or_Collapse_All
- date: Mon Feb 24 08:05:57 2020
+ date: Tue Feb 25 08:46:59 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -69,7 +69,7 @@ Whonix requires Donations to stay alive.
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>This should fix it. Round about way
 </p>
-<pre style="white-space: pre-wrap;">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
+<pre style="white-space:pre-wrap">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
 &lt;button onclick="collapse()"&gt;Collapse all&lt;/button&gt;
 &lt;script&gt;
 function collapse() {
@@ -91,7 +91,7 @@ function expand() {
 &lt;/script&gt;
 </pre>
 <dl><dd>Hmm, on second thought, probably better to use mw.message and fetch it in plain() so the pages <a data-href="/wiki/MediaWiki:Collapsible-collapse" href="./MediaWiki:Collapsible-collapse.html" title="MediaWiki:Collapsible-collapse">MediaWiki:Collapsible-collapse</a> and <a data-href="/wiki/MediaWiki:Collapsible-expand" href="./MediaWiki:Collapsible-expand.html" title="MediaWiki:Collapsible-expand">MediaWiki:Collapsible-expand</a> can be tweaked. eg. Show instead of Expand and Hide instead of Collapse. This way it is less likely to break if someone changes those message values. For reference I did try an array with <code>childNode</code> but it was not reliable enough on the <code>click()</code> event.</dd></dl>
-<pre style="white-space: pre-wrap;">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
+<pre style="white-space:pre-wrap">&lt;button onclick="expand()"&gt;Expand all&lt;/button&gt;
 &lt;button onclick="collapse()"&gt;Collapse all&lt;/button&gt;
 &lt;script&gt;
 function collapse() {

@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Hardened-kernel - Whonix
  url: ./Hardened-kernel
- date: Mon Feb 24 07:41:49 2020
+ date: Tue Feb 25 07:53:23 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -19,13 +19,13 @@
 <link data-href="/w/index.php?title=Hardened-kernel&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Hardened-kernel&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/w/images/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
-<link data-href="https://www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link data-href="http://www.kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" href="http://www.kkkkkkkkkk63ava6.onion/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="Hardened-kernel - Whonix" property="og:title"/>
-<meta content="./Hardened-kernel" property="og:url"/>
+<meta content="http://www.kkkkkkkkkk63ava6.onion/wiki/Hardened-kernel" property="og:url"/>
 <meta content="" property="og:image"/>
-<meta content="2020-02-21T18:58:20Z" property="article:modified_time"/>
-<meta content="2020-02-21T18:58:20Z" property="article:published_time"/>
+<meta content="2020-02-24T18:16:45Z" property="article:modified_time"/>
+<meta content="2020-02-24T18:16:45Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Hardened-kernel - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -110,15 +110,15 @@ Whonix requires Donations to stay alive.
 </p><p>Disables ACPI table upgrading. Loading arbitrary ACPI tables can be abused to jump into kernel code.
 </p><p>Disables hibernation. The kernel image can be replaced during hibernation.
 </p><p>Disables slab merging. Reduces the risk of kernel heap overflows.
-</p><p>Disables <code>userfaultfd()</code> syscall. Can be used to exploit use-after-free flaws.
-</p><p>Disables vivid. It's only required for testing and has been the cause of multiple vulnerabilities. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>Disables <code>userfaultfd()</code> syscall. Can make heap sprays easier. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>Disables vivid. It's only required for testing and has been the cause of multiple vulnerabilities. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p>Disables binfmt_misc. We don't need custom binary formats and they just add attack surface.
-</p><p>Disables legacy nouveau contexts. These aren't needed anymore and contain security holes. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>Disables legacy nouveau contexts. These aren't needed anymore and contain security holes. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p>Disables INET socket monitoring interface. Has helped heap memory attacks in the past.
 </p><p>Disables vsyscall emulation. Vsyscalls are in a fixed position in memory and can be used to bypass ASLR.
 </p><p>Disables crash dumps and coredumps. Can contain sensitive information.
 </p><p>Disables uselib. Only used in older libc versions and has been the cause of privilege escalation vulnerabilities in the past.
-</p><p>Disables 32-bit support and IA32 emulation. Doesn't have much attention upstream so it's full of bugs. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>Disables 32-bit support and IA32 emulation. Doesn't have much attention upstream so it's full of bugs. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p><p>Disables <code>modify_ldt()</code> syscall. Increases low-level kernel attack surface.
 </p><p>Disables KSM. This has various vulnerabilities described <a class="external text" data-href="KVM#KSM" href="./KVM" rel="noreferrer noopener" target="_blank">here</a> <sup><a data-href="https://web.archive.org/web/./KVM#KSM" href="https://web.archive.org/web/./KVM" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p><p>Disables unused networks protocols (DCCP, RDS, SCTP, bluetooth etc.).
@@ -206,15 +206,17 @@ Whonix requires Donations to stay alive.
 </p><p><code>CONFIG_INIT_STACK_ALL=y</code> - Requires clang compiler support.
 </p>
 <p><code>CONFIG_LOCAL_INIT=y</code> (linux-hardened) - Requires clang compiler support.</p><div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.openwall.com/lists/oss-security/2019/11/02/1" href="https://www.openwall.com/lists/oss-security/2019/11/02/1" rel="noreferrer noopener" target="_blank">https://www.openwall.com/lists/oss-security/2019/11/02/1</a> <sup><a data-href="https://web.archive.org/web/https://www.openwall.com/lists/oss-security/2019/11/02/1" href="https://web.archive.org/web/https://www.openwall.com/lists/oss-security/2019/11/02/1" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://duasynt.com/blog/linux-kernel-heap-spray" href="https://duasynt.com/blog/linux-kernel-heap-spray" rel="noreferrer noopener" target="_blank">https://duasynt.com/blog/linux-kernel-heap-spray</a> <sup><a data-href="https://web.archive.org/web/https://duasynt.com/blog/linux-kernel-heap-spray" href="https://web.archive.org/web/https://duasynt.com/blog/linux-kernel-heap-spray" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" rel="noreferrer noopener" target="_blank">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7</a> <sup><a data-href="https://web.archive.org/web/https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" href="https://web.archive.org/web/https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.openwall.com/lists/oss-security/2019/11/02/1" href="https://www.openwall.com/lists/oss-security/2019/11/02/1" rel="noreferrer noopener" target="_blank">https://www.openwall.com/lists/oss-security/2019/11/02/1</a> <sup><a data-href="https://web.archive.org/web/https://www.openwall.com/lists/oss-security/2019/11/02/1" href="https://web.archive.org/web/https://www.openwall.com/lists/oss-security/2019/11/02/1" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://seclists.org/oss-sec/2019/q4/98" href="https://seclists.org/oss-sec/2019/q4/98" rel="noreferrer noopener" target="_blank">https://seclists.org/oss-sec/2019/q4/98</a> <sup><a data-href="https://web.archive.org/web/https://seclists.org/oss-sec/2019/q4/98" href="https://web.archive.org/web/https://seclists.org/oss-sec/2019/q4/98" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" rel="noreferrer noopener" target="_blank">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7</a> <sup><a data-href="https://web.archive.org/web/https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" href="https://web.archive.org/web/https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b30a43ac7132cdda833ac4b13dd1ebd35ace14b7" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://seclists.org/oss-sec/2019/q4/98" href="https://seclists.org/oss-sec/2019/q4/98" rel="noreferrer noopener" target="_blank">https://seclists.org/oss-sec/2019/q4/98</a> <sup><a data-href="https://web.archive.org/web/https://seclists.org/oss-sec/2019/q4/98" href="https://web.archive.org/web/https://seclists.org/oss-sec/2019/q4/98" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Hardened-kernel&amp;oldid=54770" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hardened-kernel&amp;oldid=54770">https://www.whonix.org/w/index.php?title=Hardened-kernel&amp;oldid=54770</a>"</div>
+Retrieved from "<a data-href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Hardened-kernel&amp;oldid=54803" dir="ltr" href="http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Hardened-kernel&amp;oldid=54803">http://www.kkkkkkkkkk63ava6.onion/w/index.php?title=Hardened-kernel&amp;oldid=54803</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -225,7 +227,7 @@ Retrieved from "<a data-href="/w/index.php?title=Hardened-kernel&amp;oldid=54770
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 21 February 2020, at 19:58.</li>
+<li id="footer-lastmod"> This page was last edited on 24 February 2020, at 19:16.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
