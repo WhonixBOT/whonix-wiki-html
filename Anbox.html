@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Run Anbox inside Whonix-Workstation ™ - Whonix
  url: ./Anbox
- date: Mon Mar  2 07:32:00 2020
+ date: Tue Mar  3 07:32:05 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -26,8 +26,8 @@
 <meta content="./Anbox" property="og:url"/>
 <meta content="Anbox allows Android applications and mobile games to run inside Whonix ™." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/1e/Anbox_apps_short.png" property="og:image"/>
-<meta content="2019-12-12T05:45:06Z" property="article:modified_time"/>
-<meta content="2019-12-12T05:45:06Z" property="article:published_time"/>
+<meta content="2020-03-02T09:04:07Z" property="article:modified_time"/>
+<meta content="2020-03-02T09:04:07Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Run Anbox inside Whonix-Workstation ™ - Whonix" property="twitter:title"/>
 <meta content="Anbox allows Android applications and mobile games to run inside Whonix ™." property="twitter:description"/>
@@ -139,7 +139,7 @@ Whonix requires Donations to stay alive.
 </div>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
 <p>Download Anbox Android image.
-</p><p>If you want to do this inside a Qubes TemplateVM then parameter <code>--proxy <a class="external free" data-href="http://127.0.0.1:8082" href="http://127.0.0.1:8082" rel="noreferrer noopener" target="_blank">http://127.0.0.1:8082</a> <sup><a data-href="https://web.archive.org/web/http://127.0.0.1:8082" href="https://web.archive.org/web/http://127.0.0.1:8082" rel="noreferrer noopener" target="_blank">[archive]</a></sup></code> needs to be added to <code>scurl</code> as shown below.
+</p><p>If you want to do this inside a Qubes TemplateVM then parameter <code>--proxy http://127.0.0.1:8082</code> needs to be added to <code>scurl</code> as shown below.
 </p>
 <ul><li>Non-Qubes-Whonix or Qubes StandaloneVM: <div class="codeContainerNew">
 <div class="preDiv">
@@ -257,9 +257,9 @@ Move (rename) <code>android_amd64.img</code> to <code>/var/lib/anbox/android.img
 </div>
 <h2><span class="mw-headline" id="Qubes_Configuration">Qubes Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Anbox&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Anbox&amp;action=edit&amp;section=3.html" title="Edit section: Qubes Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a data-href="Qubes" href="./Qubes.html" title="Qubes">Qubes</a> users only.
-</p><p>Qubes-Whonix ™ requires using <a class="external text" data-href="https://www.qubes-os.org/doc/managing-vm-kernel/" href="https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">Qubes VM kernel</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> Users can follow the instructions from the Qubes website <a class="external text" data-href="https://www.qubes-os.org/doc/managing-vm-kernel/#installing-kernel-in-debian-vm" href="https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">Installing kernel in Debian VM</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/#installing-kernel-in-debian-vm" href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> which are equally functional in Qubes-Whonix ™.
-</p><p>The following steps are required to make changes in Anbox persist when using a TemplateBased AppVM. These are not required in a StandaloneVM.
-</p><p>Does not work yet. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Experimental instructions <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p>You probably want to use a StandaloneVM. Otherwise changes would be non-persistent, i.e. lost after VM restart. Instructions on how to make Anbox persistent using a TemplateBased AppVM are not existing yet. (See footnote for experimental instructions. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>)
+</p><p>Qubes-Whonix ™ requires using <a class="external text" data-href="https://www.qubes-os.org/doc/managing-vm-kernel/" href="https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">Qubes VM kernel</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Users can follow the instructions from the Qubes website <a class="external text" data-href="https://www.qubes-os.org/doc/managing-vm-kernel/#installing-kernel-in-debian-vm" href="https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">Installing kernel in Debian VM</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/#installing-kernel-in-debian-vm" href="https://web.archive.org/web/https://www.qubes-os.org/doc/managing-vm-kernel/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> which are equally functional in Qubes-Whonix ™.
+</p><p>It has been <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/2233#issuecomment-593137226" href="https://github.com/QubesOS/qubes-issues/issues/2233" rel="noreferrer noopener" target="_blank">reported</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2233#issuecomment-593137226" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2233" rel="noreferrer noopener" target="_blank">[archive]</a></sup> that it is required to enable <a class="external text" data-href="https://docs.anbox.io/userguide/advanced/software_rendering.html" href="https://docs.anbox.io/userguide/advanced/software_rendering.html" rel="noreferrer noopener" target="_blank">Anbox software rendering</a> <sup><a data-href="https://web.archive.org/web/https://docs.anbox.io/userguide/advanced/software_rendering.html" href="https://web.archive.org/web/https://docs.anbox.io/userguide/advanced/software_rendering.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> but how to do this in this guide is unknown at this point. The command from previous link probably won't work as this guide does not use snap and it shouldn't use snap either because that would break recommendation <a data-href="Warning#Always_Verify_Signatures" href="./Warning.html" title="Warning">Always Verify Signatures</a> since snap does not verify software signatures. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Start_Anbox">Start Anbox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Anbox&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Anbox&amp;action=edit&amp;section=4.html" title="Edit section: Start Anbox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="From_Start_Menu">From Start Menu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Anbox&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Anbox&amp;action=edit&amp;section=5.html" title="Edit section: From Start Menu">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
@@ -308,12 +308,12 @@ Move (rename) <code>android_amd64.img</code> to <code>/var/lib/anbox/android.img
 <p>Verify the fingerprint. Should show.
 </p>
 <blockquote>
-<p>gpg: key 41E7044E1DBA2E89: 42 signatures not checked due to missing keys<br/>
-pub rsa4096/41E7044E1DBA2E89 2014-04-25 [C]<br/>
-Key fingerprint = 37D2 C987 89D8 3119 4839 4E3E 41E7 044E 1DBA 2E89<br/>
-uid F-Droid &lt;admin@f-droid.org&gt;<br/>
-sub rsa3072/5DCCB667F9BF9046 2014-04-25 [E] [expires: 2021-04-24]<br/>
-sub rsa3072/7A029E54DD5DCE7A 2014-04-25 [S] [expires: 2021-04-24]<br/>
+<p>gpg: key 41E7044E1DBA2E89: 42 signatures not checked due to missing keys
+pub rsa4096/41E7044E1DBA2E89 2014-04-25 [C]
+Key fingerprint = 37D2 C987 89D8 3119 4839 4E3E 41E7 044E 1DBA 2E89
+uid F-Droid &lt;admin@f-droid.org&gt;
+sub rsa3072/5DCCB667F9BF9046 2014-04-25 [E] [expires: 2021-04-24]
+sub rsa3072/7A029E54DD5DCE7A 2014-04-25 [S] [expires: 2021-04-24]
 </p>
 </blockquote>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
@@ -474,21 +474,16 @@ This is because Anbox comes with its own bridged network. Whitelisted that inter
 To unload Whonix-Workstation ™ firewall rules and to make anbox load its firewall rules.</span>
 </li>
 <li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
-Using VM kernel may come with its own challenges currently.
-<a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012" href="https://github.com/QubesOS/qubes-issues/issues/5212" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5212" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
-Since Anbox is implemented using kernel modules.</span>
-</li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
-[ 2019-10-14 11:00:41] [launch.cpp:214@operator()] Session manager failed to become ready</span>
-</li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
-1) Increase VM private storage.
-Power off the VM.
-Add at least 2 GB more private storage to VM. This can be done using Qubes VM Manager (QVMM).
-Reboot the VM.
-2) Add <code>/var/lib/anbox</code> to <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">Qubes bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-Create folder <code>/rw/config/qubes-bind-dirs.d</code>.
-<div class="codeContainerNew">
+Does not work yet.
+<pre>[ 2019-10-14 11:00:41] [launch.cpp:214@operator()] Session manager failed to become ready
+</pre>
+<p>1) Increase VM private storage.
+</p><p>Power off the VM.
+</p><p>Add at least 2 GB more private storage to VM. This can be done using Qubes VM Manager (QVMM).
+</p><p>Reboot the VM.
+</p><p>2) Add <code>/var/lib/anbox</code> to <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">Qubes bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</p><p>Create folder <code>/rw/config/qubes-bind-dirs.d</code>.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo mkdir -p /rw/config/qubes-bind-dirs.d</pre>
 </div>
@@ -496,8 +491,8 @@ Create folder <code>/rw/config/qubes-bind-dirs.d</code>.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo mkdir -p /rw/config/qubes-bind-dirs.d</textarea>
 </div>
 </div>
-Create a new configuration file <code>/rw/config/qubes-bind-dirs.d/50_user.conf</code>.
-<div class="codeContainerNew">
+<p>Create a new configuration file <code>/rw/config/qubes-bind-dirs.d/50_user.conf</code>.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudoedit /rw/config/qubes-bind-dirs.d/50_user.conf</pre>
 </div>
@@ -505,8 +500,8 @@ Create a new configuration file <code>/rw/config/qubes-bind-dirs.d/50_user.conf<
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudoedit /rw/config/qubes-bind-dirs.d/50_user.conf</textarea>
 </div>
 </div>
-Paste.
-<div class="codeContainerNew">
+<p>Paste.
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>binds+=( '/var/lib/anbox' )</pre>
 </div>
@@ -514,12 +509,12 @@ Paste.
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">binds+=( '/var/lib/anbox' )</textarea>
 </div>
 </div>
-Save.
-Reboot the VM.
-This results in storing <code>/var/lib/anbox</code> in the private rather than root image. Thereby changes would persist rather than be lost after VM restart.
-Fix file permissions.
-Warning: might have security issues
-<div class="codeContainerNew">
+<p>Save.
+</p><p>Reboot the VM.
+</p><p>This results in storing <code>/var/lib/anbox</code> in the private rather than root image. Thereby changes would persist rather than be lost after VM restart.
+</p><p>Fix file permissions.
+</p><p>Warning: might have security issues
+</p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl stop anbox-container-manager.service</pre>
 </div>
@@ -527,7 +522,7 @@ Warning: might have security issues
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo systemctl stop anbox-container-manager.service</textarea>
 </div>
 </div>
-<div class="codeContainerNew">
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo chown --recursive user:user /var/lib/anbox</pre>
 </div>
@@ -535,14 +530,22 @@ Warning: might have security issues
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo chown --recursive user:user /var/lib/anbox</textarea>
 </div>
 </div>
-<div class="codeContainerNew">
+<p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo systemctl start anbox-container-manager.service</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo systemctl start anbox-container-manager.service</textarea>
 </div>
-</div></span>
+</div>
+</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+Using VM kernel may come with its own challenges currently.
+<a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012" href="https://github.com/QubesOS/qubes-issues/issues/5212" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5212#issuecomment-533873012" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/5212" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+Since Anbox is implemented using kernel modules.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://forums.whonix.org/t/snap-store-snaps-snapcraft-io-a-new-software-source/7631" href="https://forums.whonix.org/t/snap-store-snaps-snapcraft-io-a-new-software-source/7631" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/snap-store-snaps-snapcraft-io-a-new-software-source/7631</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/snap-store-snaps-snapcraft-io-a-new-software-source/7631" href="https://web.archive.org/web/https://forums.whonix.org/t/snap-store-snaps-snapcraft-io-a-new-software-source/7631" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
 <code>/usr/share/applications/anbox.desktop</code></span>
@@ -569,7 +572,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Anbox" href="https://facebook.com/sharer.php?u=./Anbox">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Please help us to improve the <a class="external text" data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">Whonix Wikipedia Page</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Whonix" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Also see the <a class="external text" data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">feedback thread</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/wikipedia-page-corrections" href="https://web.archive.org/web/https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Join us in testing our new <a class="external text" data-href="AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> <sup><a data-href="https://web.archive.org/web/./AppArmor" href="https://web.archive.org/web/./AppArmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
 </p>
 </div>
 <p><a data-href="Anbox" href="./Anbox" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Anbox" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Anbox" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
@@ -581,7 +584,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Anbox&amp;oldid=53576" dir="ltr" href="https://www.whonix.org/w/index.php?title=Anbox&amp;oldid=53576">https://www.whonix.org/w/index.php?title=Anbox&amp;oldid=53576</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Anbox&amp;oldid=54894" dir="ltr" href="https://www.whonix.org/w/index.php?title=Anbox&amp;oldid=54894">https://www.whonix.org/w/index.php?title=Anbox&amp;oldid=54894</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -592,7 +595,7 @@ Retrieved from "<a data-href="/w/index.php?title=Anbox&amp;oldid=53576" dir="ltr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 12 December 2019, at 06:45.</li>
+<li id="footer-lastmod"> This page was last edited on 2 March 2020, at 10:04.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
