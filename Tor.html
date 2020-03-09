@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tor - Whonix
  url: ./Tor
- date: Sun Mar  8 07:59:42 2020
+ date: Mon Mar  9 08:00:39 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -26,8 +26,8 @@
 <meta content="./Tor" property="og:url"/>
 <meta content="Notes about Tor (The Onion Router) on Log Analysis, Non-Persistent Entry Guards, Blacklist Certain Onion Services from Connecting, Additional SocksPorts, UDP and more." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/3/32/Menger-702837640.jpg" property="og:image"/>
-<meta content="2020-03-07T08:59:44Z" property="article:modified_time"/>
-<meta content="2020-03-07T08:59:44Z" property="article:published_time"/>
+<meta content="2020-03-09T06:56:11Z" property="article:modified_time"/>
+<meta content="2020-03-09T06:56:11Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Tor - Whonix" property="twitter:title"/>
 <meta content="Notes about Tor (The Onion Router) on Log Analysis, Non-Persistent Entry Guards, Blacklist Certain Onion Services from Connecting, Additional SocksPorts, UDP and more." property="twitter:description"/>
@@ -128,12 +128,13 @@ Please Donate!
 <li class="toclevel-2 tocsection-32"><a href="#Can_I_Speed_Up_Tor_or_the_Whonix-Gateway_.E2.84.A2.3F"><span class="tocnumber">7.2</span> <span class="toctext">Can I Speed Up Tor or the Whonix-Gateway ™?</span></a></li>
 <li class="toclevel-2 tocsection-33"><a href="#Does_Whonix_.E2.84.A2_Modify_Tor.3F"><span class="tocnumber">7.3</span> <span class="toctext">Does Whonix ™ Modify Tor?</span></a></li>
 <li class="toclevel-2 tocsection-34"><a href="#Can_Whonix_.E2.84.A2_Improve_Tor.3F"><span class="tocnumber">7.4</span> <span class="toctext">Can Whonix ™ Improve Tor?</span></a></li>
-<li class="toclevel-2 tocsection-35"><a href="#How_do_I_Change_Other_Tor_Settings.3F"><span class="tocnumber">7.5</span> <span class="toctext">How do I Change Other Tor Settings?</span></a></li>
-<li class="toclevel-2 tocsection-36"><a href="#How_do_I_Install_the_Latest_Tor_Version.3F"><span class="tocnumber">7.6</span> <span class="toctext">How do I Install the Latest Tor Version?</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Tor_Routing_Algorithm"><span class="tocnumber">7.5</span> <span class="toctext">Tor Routing Algorithm</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#How_do_I_Change_Other_Tor_Settings.3F"><span class="tocnumber">7.6</span> <span class="toctext">How do I Change Other Tor Settings?</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#How_do_I_Install_the_Latest_Tor_Version.3F"><span class="tocnumber">7.7</span> <span class="toctext">How do I Install the Latest Tor Version?</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-37"><a href="#Further_Reading"><span class="tocnumber">8</span> <span class="toctext">Further Reading</span></a></li>
-<li class="toclevel-1 tocsection-38"><a href="#Footnotes_.2F_References"><span class="tocnumber">9</span> <span class="toctext">Footnotes / References</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#Further_Reading"><span class="tocnumber">8</span> <span class="toctext">Further Reading</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#Footnotes_.2F_References"><span class="tocnumber">9</span> <span class="toctext">Footnotes / References</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Configuration">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=1.html" title="Edit section: Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -876,12 +877,16 @@ No error detected in your Tor configuration.
 </p>
 <h2><span id="Does_Whonix_™_Modify_Tor?"></span><span class="mw-headline" id="Does_Whonix_.E2.84.A2_Modify_Tor.3F">Does Whonix ™ Modify Tor?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=33" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=33.html" title="Edit section: Does Whonix ™ Modify Tor?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-pagespeed-lazy-src="/w/images/c/c8/Ambox_notice.png" data-pagespeed-url-hash="1943718830" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="40" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="40"/></a> <a class="external text" data-href="https://support.torproject.org/about/what-is-tor/" href="https://support.torproject.org/about/what-is-tor/" rel="noreferrer noopener" target="_blank">Tor</a> <sup><a data-href="https://web.archive.org/web/https://support.torproject.org/about/what-is-tor/" href="https://web.archive.org/web/https://support.torproject.org/about/what-is-tor/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is an anonymizer developed by The Tor Project. <a data-href="Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a> is a web browser <a class="external text" data-href="https://www.torproject.org/" href="https://www.torproject.org/" rel="noreferrer noopener" target="_blank">developed by the Tor Project</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/" href="https://web.archive.org/web/https://www.torproject.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> which is optimized for privacy. Please do not confuse <i><span style="background-color:#FBFBFB">Tor</span></i> with <i><span style="background-color:#FBFBFB">Tor Browser</span></i> when conversing about Whonix ™ topics.
+</p>
+</div>
+<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20130717195411&amp;"><img alt="Info" data-pagespeed-lazy-src="/w/images/c/c8/Ambox_notice.png" data-pagespeed-url-hash="1943718830" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="40" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="40"/></a> Whonix ™ does <u>not </u> modify the Tor package itself.
 </p>
 </div>
-<p>Although Whonix ™ does not modify Tor, the configuration file <i>has</i> been adapted for Whonix ™. To inspect the relevant files, check the following on Whonix-Gateway ™: <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<p>Although Whonix ™ does not modify Tor, the Tor configuration file <i>has</i> been adapted for Whonix ™. To inspect the relevant files, check the following on Whonix-Gateway ™: <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
-<ul><li><code>/etc/tor/torrc/</code> file.</li>
+<ul><li><code>/etc/tor/torrc</code> file.</li>
 <li><code>/etc/torrc.d</code> folder.</li>
 <li><code>/usr/local/etc/torrc.d/</code> folder.</li>
 <li><code>/usr/share/tor/tor-service-defaults-torrc</code> file.</li></ul>
@@ -893,27 +898,43 @@ No error detected in your Tor configuration.
 <p>As outlined in the <a href="#Does_Whonix_.E2.84.A2_modify_Tor.3F">previous section</a>, Whonix ™ will not implement any changes to Tor directly and any suggested improvements or bug fixes are proposed upstream on torproject.org. This has already <a data-href="Dev/Threat_Model#Design_Document.2C_innovations_and_research" href="./Dev/Threat_Model.html" title="Dev/Threat Model">happened</a> on occasion. Creating Whonix ™ is a difficult and time consuming endeavor, so Tor improvements are better left to dedicated, skilled developers who are more knowledgeable in this area.
 </p><p>Skilled coders can always provide upstream patches to Tor, or as a last resort, fork <sup class="reference" id="cite_ref-fork_16-1"><a href="#cite_note-fork-16">[16]</a></sup> it. Hypothetically, if a fork <sup class="reference" id="cite_ref-fork_16-2"><a href="#cite_note-fork-16">[16]</a></sup> developed a greater following than the original project due to proven security / anonymity benefits, then Whonix ™ would seriously consider making a switch.
 </p>
-<h2><span id="How_do_I_Change_Other_Tor_Settings?"></span><span class="mw-headline" id="How_do_I_Change_Other_Tor_Settings.3F">How do I Change Other Tor Settings?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=35" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=35.html" title="Edit section: How do I Change Other Tor Settings?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Tor_Routing_Algorithm">Tor Routing Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=35" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=35.html" title="Edit section: Tor Routing Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Quote Tor Project FAQ <a class="external text" data-href="https://2019.www.torproject.org/docs/faq.html.en#ChooseEntryExit" href="https://2019.www.torproject.org/docs/faq.html.en" rel="noreferrer noopener" target="_blank">Can I control which nodes (or country) are used for entry/exit?</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/faq.html.en#ChooseEntryExit" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/faq.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<blockquote><p>Yes. You can set preferred entry and exit nodes as well as inform Tor which nodes you do not want to use. The following options can be added to your config file torrc or specified on the command line:
+</p><p>[...]
+</p><p>
+We recommend you do not use these — they are intended for testing and may disappear in future versions. You get the best security that Tor can provide when you leave the route selection to Tor; overriding the entry / exit nodes can mess up your anonymity in ways we don't understand.</p></blockquote>
+<p>To make changes to the Tor routing algorithm which benefit anonymity and not actually worsen anonymity it is required to be more clever than the Tor developers. Many questions, suggestions and discussions online only scratch the surface and are unaware of the informational resources:
+</p>
+<ul><li><a class="external text" data-href="https://www.freehaven.net/anonbib/" href="https://www.freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">Anonymity Bibliography - Collection Anonymity Research</a> <sup><a data-href="https://web.archive.org/web/https://www.freehaven.net/anonbib/" href="https://web.archive.org/web/https://www.freehaven.net/anonbib/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>Read the <a class="external text" data-href="https://blog.torproject.org" href="https://blog.torproject.org" rel="noreferrer noopener" target="_blank">Tor blog</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org" href="https://web.archive.org/web/https://blog.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup> as there are often blog posts discussing anonymity research such as blog post <a class="external text" data-href="https://blog.torproject.org/new-low-cost-traffic-analysis-attacks-mitigations" href="https://blog.torproject.org/new-low-cost-traffic-analysis-attacks-mitigations" rel="noreferrer noopener" target="_blank">new low cost traffic analysis attacks and mitigations</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/new-low-cost-traffic-analysis-attacks-mitigations" href="https://web.archive.org/web/https://blog.torproject.org/new-low-cost-traffic-analysis-attacks-mitigations" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li></ul>
+<p>See also:
+</p>
+<ul><li><a href="#Does_Whonix_.E2.84.A2_Modify_Tor.3F">Does Whonix ™ Modify Tor?</a></li>
+<li><a href="#Can_Whonix_.E2.84.A2_Improve_Tor.3F">Can Whonix ™ Improve Tor?</a></li></ul>
+<h2><span id="How_do_I_Change_Other_Tor_Settings?"></span><span class="mw-headline" id="How_do_I_Change_Other_Tor_Settings.3F">How do I Change Other Tor Settings?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=36.html" title="Edit section: How do I Change Other Tor Settings?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Questions are often raised in forums about how other Tor-specific changes can be made in Whonix ™, such as excluding specific exit nodes. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p><p>In many cases, making such changes is already documented Whonix ™ <a data-href="Documentation" href="./Documentation.html" title="Documentation">Documentation</a>. In other cases such changes are discouraged.
 </p><p>In all instances:
 </p>
 <ol><li>Changes must be made to the Tor configuration file as per <a href="#Edit_Tor_Configuration">Edit Tor Configuration</a>.</li>
-<li>Refer to the <a class="external text" data-href="https://2019.www.torproject.org/docs/tor-manual.html.en" href="https://2019.www.torproject.org/docs/tor-manual.html.en" rel="noreferrer noopener" target="_blank">Tor Project Manual</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/tor-manual.html.en" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/tor-manual.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for specific configuration details. For example, to exclude exit nodes from the Five Eyes countries the Tor configuration would include the following lines:</li></ol>
-<p>Discouraged!
+<li>Refer to the <a class="external text" data-href="https://2019.www.torproject.org/docs/tor-manual.html.en" href="https://2019.www.torproject.org/docs/tor-manual.html.en" rel="noreferrer noopener" target="_blank">Tor Project Manual</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/tor-manual.html.en" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/tor-manual.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for specific configuration details.</li></ol>
+<p>For example, to exclude exit nodes from the Five Eyes countries the Tor configuration would include the following lines:
+</p><p>Discouraged!
 </p>
 <pre>ExcludeExitNodes {us},{au},{ca},{nz},{gb}
 StrictNodes 1
 </pre>
 <p>A <a href="#Configuration_Check">Configuration Check</a> should be run afterwards inside Whonix-Gateway ™ (<a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: <code>sys-whonix</code>) to confirm there are no Tor configuration syntax errors. As these configurations are specific to Tor (and not Whonix ™), the <a class="mw-redirect" data-href="Free_Support_Principle" href="./Free_Support_Principle.html" title="Free Support Principle">Free Support Principle</a> applies.
 </p>
-<h2><span id="How_do_I_Install_the_Latest_Tor_Version?"></span><span class="mw-headline" id="How_do_I_Install_the_Latest_Tor_Version.3F">How do I Install the Latest Tor Version?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=36.html" title="Edit section: How do I Install the Latest Tor Version?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="How_do_I_Install_the_Latest_Tor_Version?"></span><span class="mw-headline" id="How_do_I_Install_the_Latest_Tor_Version.3F">How do I Install the Latest Tor Version?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=37" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=37.html" title="Edit section: How do I Install the Latest Tor Version?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Follow the instructions <a data-href="Tor_Versioning" href="./Tor_Versioning.html" title="Tor Versioning">here</a> to install later Tor versions from either:
 </p>
 <ul><li>the Whonix ™ repository; or</li>
 <li>Tor Project APT repositories; or</li>
 <li>Tor Project source code.</li></ul>
-<h1><span class="mw-headline" id="Further_Reading">Further Reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=37" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=37.html" title="Edit section: Further Reading">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Further_Reading">Further Reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=38.html" title="Edit section: Further Reading">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
 <ul><li><a data-href="Why_does_Whonix_use_Tor" href="./Why_does_Whonix_use_Tor.html" title="Why does Whonix use Tor">Why does Whonix ™ use Tor?</a></li>
 <li><a data-href="Why_is_Tor_slow" href="./Why_is_Tor_slow.html" title="Why is Tor slow">Why is Tor slow?</a></li>
@@ -924,7 +945,7 @@ StrictNodes 1
 <li><a class="mw-redirect" data-href="Comparison_Of_Tor_Proxies_CGI_proxies_Proxy_Chains_And_VPN_Services" href="./Comparison_Of_Tor_Proxies_CGI_proxies_Proxy_Chains_And_VPN_Services.html" title="Comparison Of Tor Proxies CGI proxies Proxy Chains And VPN Services">Comparison of Tor with CGI Proxies, Proxy Chains and VPN Services</a></li>
 <li><a data-href="Tor_Versioning" href="./Tor_Versioning.html" title="Tor Versioning">Newer Tor Versions</a></li></ul>
 </div>
-<h1><span id="Footnotes_/_References"></span><span class="mw-headline" id="Footnotes_.2F_References">Footnotes / References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=38.html" title="Edit section: Footnotes / References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span id="Footnotes_/_References"></span><span class="mw-headline" id="Footnotes_.2F_References">Footnotes / References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Tor&amp;action=edit&amp;section=39.html" title="Edit section: Footnotes / References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type:decimal">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -1011,7 +1032,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Tor" href="https://facebook.com/sharer.php?u=./Tor">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Want to help create awesome, up-to-date <a data-href="Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix wiki? Help is most welcome!
 </p>
 </div>
 <p><a data-href="Tor" href="./Tor" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tor" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
@@ -1023,7 +1044,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Tor&amp;oldid=55033" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor&amp;oldid=55033">https://www.whonix.org/w/index.php?title=Tor&amp;oldid=55033</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Tor&amp;oldid=55092" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor&amp;oldid=55092">https://www.whonix.org/w/index.php?title=Tor&amp;oldid=55092</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1034,7 +1055,7 @@ Retrieved from "<a data-href="/w/index.php?title=Tor&amp;oldid=55033" dir="ltr" 
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 7 March 2020, at 09:59.</li>
+<li id="footer-lastmod"> This page was last edited on 9 March 2020, at 07:56.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
