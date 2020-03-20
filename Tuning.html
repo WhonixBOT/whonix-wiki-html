@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Tuning - Whonix
  url: ./Tuning
- date: Thu Mar 19 08:00:37 2020
+ date: Fri Mar 20 08:00:39 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -26,8 +26,8 @@
 <meta content="./Tuning" property="og:url"/>
 <meta content="Making Whonix ™ Faster. Tuning Whonix ™." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Gear-192875640.jpg" property="og:image"/>
-<meta content="2019-04-25T13:49:56Z" property="article:modified_time"/>
-<meta content="2019-04-25T13:49:56Z" property="article:published_time"/>
+<meta content="2020-03-19T17:09:31Z" property="article:modified_time"/>
+<meta content="2020-03-19T17:09:31Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Tuning - Whonix" property="twitter:title"/>
 <meta content="Making Whonix ™ Faster. Tuning Whonix ™." property="twitter:description"/>
@@ -37,7 +37,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=foreground&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Tuning rootpage-Tuning skin-foreground action-view"><noscript><meta content="0;url='./Tuning?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="./Tuning?PageSpeed=noscript" href="./Tuning?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>This website uses cookies. By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Tuning rootpage-Tuning skin-foreground action-view"><noscript><meta content="0;url='./Tuning?PageSpeed=noscript'" http-equiv="refresh"/><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a data-href="./Tuning?PageSpeed=noscript" href="./Tuning?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="Terms_of_Service" href="./Terms_of_Service">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper">
 
 </div>
 <div id="page-content">
@@ -53,7 +53,7 @@
 <a class="cn-full-banner-click" data-href="Donate" href="./Donate.html" title="">
 <div id="banner-logo"></div>
 <div id="black-text">
-Whonix requires Donations to stay alive.
+Please Donate!
 </div>
 </a>
 </div>
@@ -75,120 +75,88 @@ Whonix requires Donations to stay alive.
 </p>
 <div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Tuning"><span class="tocnumber">1</span> <span class="toctext">Tuning</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Increase_Virtual_Machine_RAM"><span class="tocnumber">1.2</span> <span class="toctext">Increase Virtual Machine RAM</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#More_CPU_cores"><span class="tocnumber">1.3</span> <span class="toctext">More CPU cores</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Removing_packages"><span class="tocnumber">1.4</span> <span class="toctext">Removing packages</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Replacing_Desktop_Environment"><span class="tocnumber">1.5</span> <span class="toctext">Replacing Desktop Environment</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Synthetic_CPU"><span class="tocnumber">1.6</span> <span class="toctext">Synthetic CPU</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Nested_paging_and_VPIDs"><span class="tocnumber">1.7</span> <span class="toctext">Nested paging and VPIDs</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Hardware-accelerated_graphics"><span class="tocnumber">1.8</span> <span class="toctext">Hardware-accelerated graphics</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#Memory_ballooning.2C_Page_Fusion.2C_Memory_overcommitment"><span class="tocnumber">1.9</span> <span class="toctext">Memory ballooning, Page Fusion, Memory overcommitment</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#64_bit_architecture"><span class="tocnumber">1.10</span> <span class="toctext">64 bit architecture</span></a></li>
-<li class="toclevel-2 tocsection-12"><a href="#Optimized_builds"><span class="tocnumber">1.11</span> <span class="toctext">Optimized builds</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#PCI_passthrough"><span class="tocnumber">1.12</span> <span class="toctext">PCI passthrough</span></a></li>
-</ul>
-</li>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Increase_Virtual_Machine_RAM"><span class="tocnumber">2</span> <span class="toctext">Increase Virtual Machine RAM</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#More_CPU_cores"><span class="tocnumber">3</span> <span class="toctext">More CPU cores</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Nested_paging_and_VPIDs"><span class="tocnumber">4</span> <span class="toctext">Nested paging and VPIDs</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Hardware-accelerated_graphics"><span class="tocnumber">5</span> <span class="toctext">Hardware-accelerated graphics</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Memory_ballooning.2C_Page_Fusion.2C_Memory_overcommitment"><span class="tocnumber">6</span> <span class="toctext">Memory ballooning, Page Fusion, Memory overcommitment</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Undocumented_Tuning_Settings"><span class="tocnumber">7</span> <span class="toctext">Undocumented Tuning Settings</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Optimized_builds"><span class="tocnumber">8</span> <span class="toctext">Optimized builds</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#PCI_passthrough"><span class="tocnumber">9</span> <span class="toctext">PCI passthrough</span></a></li>
 </ul>
 </div>
-<h1><span class="mw-headline" id="Tuning">Tuning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=1.html" title="Edit section: Tuning">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=2.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>Everything absolutely optional. Mostly largely untested!</b>
 </p><p>At the top of the <i>Tuning chapter</i> are the easier tuning steps. The farther you go down, the more skill will be required.
 </p>
-<h2><span class="mw-headline" id="Increase_Virtual_Machine_RAM">Increase Virtual Machine RAM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=3.html" title="Edit section: Increase Virtual Machine RAM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Increase_Virtual_Machine_RAM">Increase Virtual Machine RAM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=2.html" title="Edit section: Increase Virtual Machine RAM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If <a data-href="Protocol-Leak-Protection_and_Fingerprinting-Protection#Less_important_identifiers" href="./Protocol-Leak-Protection_and_Fingerprinting-Protection.html" title="Protocol-Leak-Protection and Fingerprinting-Protection">less important identifiers</a> are not important to you, and this is most likely very unimportant, you could use VirtualBox settings and increase the RAM for your Virtual Machine(s). Whonix-Workstation ™ will profit most, if you run into low RAM. Also Whonix-Gateway ™ could profit if you are creating big numbers of circuits and keep Tor busy. You can check how much RAM is free using <i>free -m</i> in Terminal.
 </p>
-<h2><span class="mw-headline" id="More_CPU_cores">More CPU cores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=4.html" title="Edit section: More CPU cores">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="More_CPU_cores">More CPU cores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=3.html" title="Edit section: More CPU cores">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>On systems with multi-core processors, if <a data-href="Protocol-Leak-Protection_and_Fingerprinting-Protection#Less_important_identifiers" href="./Protocol-Leak-Protection_and_Fingerprinting-Protection.html" title="Protocol-Leak-Protection and Fingerprinting-Protection">less important identifiers</a> are not important to you, and this is most likely unimportant, you could increase the number of cores available to the Virtual Machine(s) in VirtualBox settings.
 </p>
-<h2><span class="mw-headline" id="Removing_packages">Removing packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=5.html" title="Edit section: Removing packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>For example you could experiment with uninstalling Nepomuk and virtuoso.
-</p>
-<h2><span class="mw-headline" id="Replacing_Desktop_Environment">Replacing Desktop Environment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=6.html" title="Edit section: Replacing Desktop Environment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>See <a data-href="Other_Desktop_Environments" href="./Other_Desktop_Environments.html" title="Other Desktop Environments">Other Desktop Environments</a>.
-</p>
-<h2><span class="mw-headline" id="Synthetic_CPU">Synthetic CPU</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=7.html" title="Edit section: Synthetic CPU">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>If <a data-href="Protocol-Leak-Protection_and_Fingerprinting-Protection#Less_important_identifiers" href="./Protocol-Leak-Protection_and_Fingerprinting-Protection.html" title="Protocol-Leak-Protection and Fingerprinting-Protection">less important identifiers</a> are not important to you, you could try if deactivating the Synthetic CPU increases performance for you.
+<h2><span class="mw-headline" id="Nested_paging_and_VPIDs">Nested paging and VPIDs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=4.html" title="Edit section: Nested paging and VPIDs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>You could increase performance by using large and/or VPIDs. It is unknown, if that may decrease security or stability. See VirtualBox manual: <a class="external text" data-href="http://www.virtualbox.org/manual/ch10.html#nestedpaging" href="http://www.virtualbox.org/manual/ch10.html" rel="noreferrer noopener" target="_blank">Nested paging and VPIDs</a> <sup><a data-href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch10.html#nestedpaging" href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch10.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for more information.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Workstation" --synthcpu off</pre>
+<pre>vboxmanage modifyvm Whonix-Workstation-XFCE --largepages on</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">VBoxManage modifyvm "Whonix-Workstation" --synthcpu off</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Workstation-XFCE --largepages on</textarea>
 </div>
 </div>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>VBoxManage modifyvm "Whonix-Gateway" --synthcpu off</pre>
+<pre>vboxmanage modifyvm Whonix-Gateway-XFCE --largepages on</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">VBoxManage modifyvm "Whonix-Gateway" --synthcpu off</textarea>
-</div>
-</div>
-<h2><span class="mw-headline" id="Nested_paging_and_VPIDs">Nested paging and VPIDs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=8.html" title="Edit section: Nested paging and VPIDs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>You could increase performance by using Nested paging and/or VPIDs. It is unknown, if that may decrease security or stability. See VirtualBox manual: <a class="external text" data-href="http://www.virtualbox.org/manual/ch10.html#nestedpaging" href="http://www.virtualbox.org/manual/ch10.html" rel="noreferrer noopener" target="_blank">Nested paging and VPIDs</a> <sup><a data-href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch10.html#nestedpaging" href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch10.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for more information.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>vboxmanage modifyvm Whonix-Workstation --largepages on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Workstation --largepages on</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Gateway-XFCE --largepages on</textarea>
 </div>
 </div>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>vboxmanage modifyvm Whonix-Gateway --largepages on</pre>
+<pre>vboxmanage modifyvm Whonix-Workstation-XFCE --vtxvpid on</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Gateway --largepages on</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Workstation-XFCE --vtxvpid on</textarea>
 </div>
 </div>
 <p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>vboxmanage modifyvm Whonix-Workstation --vtxvpid on</pre>
+<pre>vboxmanage modifyvm Whonix-Gateway-XFCE --vtxvpid on</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Workstation --vtxvpid on</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Gateway-XFCE --vtxvpid on</textarea>
 </div>
 </div>
-<p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>vboxmanage modifyvm Whonix-Gateway --vtxvpid on</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage modifyvm Whonix-Gateway --vtxvpid on</textarea>
-</div>
-</div>
-<h2><span class="mw-headline" id="Hardware-accelerated_graphics">Hardware-accelerated graphics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=9.html" title="Edit section: Hardware-accelerated graphics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Requires Guest Additions, therefore not recommended, see above. Can increase performance.
+<h2><span class="mw-headline" id="Hardware-accelerated_graphics">Hardware-accelerated graphics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=5.html" title="Edit section: Hardware-accelerated graphics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Bad for security.
 </p><p>See VirtualBox manual: <a class="external text" data-href="https://www.virtualbox.org/manual/ch04.html#guestadd-3d" href="https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">Hardware-accelerated graphics</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html#guestadd-3d" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h2><span id="Memory_ballooning,_Page_Fusion,_Memory_overcommitment"></span><span class="mw-headline" id="Memory_ballooning.2C_Page_Fusion.2C_Memory_overcommitment">Memory ballooning, Page Fusion, Memory overcommitment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=10.html" title="Edit section: Memory ballooning, Page Fusion, Memory overcommitment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Requires Guest Additions, therefore not recommended, see above. Can increase performance.
-</p><p>See VirtualBox manual: <a class="external text" data-href="https://www.virtualbox.org/manual/ch04.html#idp18673360" href="https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">Memory overcommitment</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html#idp18673360" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<h2><span id="Memory_ballooning,_Page_Fusion,_Memory_overcommitment"></span><span class="mw-headline" id="Memory_ballooning.2C_Page_Fusion.2C_Memory_overcommitment">Memory ballooning, Page Fusion, Memory overcommitment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=6.html" title="Edit section: Memory ballooning, Page Fusion, Memory overcommitment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Memory ballooning is bad for security, see <a data-href="Dev/KVM#memory_balloon" href="./Dev/KVM.html" title="Dev/KVM">this reference</a> (it is written in context of KVM but the research also applies to any other virtualizer unless it has specific protection against that which would need to be stated somewhere).
+</p><p>Other settings for security?
+</p><p>See VirtualBox manual: <a class="external text" data-href="https://www.virtualbox.org/manual/ch04.html#guestadd-memory-usage" href="https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">Memory overcommitment</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html#guestadd-memory-usage" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch04.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h2><span class="mw-headline" id="64_bit_architecture">64 bit architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=11.html" title="Edit section: 64 bit architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Several methods. The last method is probably the most useful one.
-</p><p>Maybe it would enhance security and/or performance by using an amd64 kernel. How much sense that makes when the rest of the system is still 32 bit?
+<h2><span class="mw-headline" id="Undocumented_Tuning_Settings">Undocumented Tuning Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=7.html" title="Edit section: Undocumented Tuning Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are probably more tuning related settings. Undocumented at Whonix ™. Documented in VirtualBox manual but not bundled as a chapter "tuning".
+</p><p>View all settings.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get install linux-image-amd64</pre>
+<pre>vboxmanage showvminfo Whonix-Workstation-XFCE</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install linux-image-amd64</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">vboxmanage showvminfo Whonix-Workstation-XFCE</textarea>
 </div>
 </div>
-<p>You could try to <a class="external text" data-href="http://wiki.debian.org/Multiarch/HOWTO" href="http://wiki.debian.org/Multiarch/HOWTO" rel="noreferrer noopener" target="_blank">Debian Multiarch HOWTO</a> <sup><a data-href="https://web.archive.org/web/http://wiki.debian.org/Multiarch/HOWTO" href="https://web.archive.org/web/http://wiki.debian.org/Multiarch/HOWTO" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-</p><p>Or better create amd64 <a class="mw-redirect" data-href="BuildDocumentation" href="./BuildDocumentation.html" title="BuildDocumentation">builds yourself from source</a>.
+<p>Learn about all of these settings. Read <a class="external text" data-href="https://www.virtualbox.org/manual/" href="https://www.virtualbox.org/manual/" rel="noreferrer noopener" target="_blank">VirtualBox manual</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/" href="https://web.archive.org/web/https://www.virtualbox.org/manual/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h2><span class="mw-headline" id="Optimized_builds">Optimized builds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=12.html" title="Edit section: Optimized builds">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Since the concept behind Whonix ™ is not tied to anything, you could create your own implementation. Perhaps using Gentoo with optimized build flags for your system. See <a data-href="Dev/Technical_Introduction#Whonix_.E2.84.A2_Framework" href="./Dev/Technical_Introduction.html" title="Dev/Technical Introduction">Whonix ™ Framework</a>, <a class="mw-redirect" data-href="OneVM" href="./OneVM.html" title="OneVM">OneVM</a> and <a class="mw-redirect" data-href="Hardened_Gentoo_TG" href="./Hardened_Gentoo_TG.html" title="Hardened Gentoo TG">Hardened Gentoo TG</a>.
+<h2><span class="mw-headline" id="Optimized_builds">Optimized builds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=8.html" title="Edit section: Optimized builds">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Since the concept behind Whonix ™ is not tied to anything, you could create your own implementation. Perhaps using Gentoo with optimized build flags for your system. See <a data-href="Dev/Technical_Introduction#Whonix_.E2.84.A2_Framework" href="./Dev/Technical_Introduction.html" title="Dev/Technical Introduction">Whonix ™ Framework</a>, <a data-href="UniStation" href="./UniStation.html" title="UniStation">UniStation</a> and <a class="mw-redirect" data-href="Hardened_Gentoo_TG" href="./Hardened_Gentoo_TG.html" title="Hardened Gentoo TG">Hardened Gentoo TG</a>.
 </p>
-<h2><span class="mw-headline" id="PCI_passthrough">PCI passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=13.html" title="Edit section: PCI passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Might greatly improve graphics performance. Might have security implications.
+<h2><span class="mw-headline" id="PCI_passthrough">PCI passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tuning&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Tuning&amp;action=edit&amp;section=9.html" title="Edit section: PCI passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Might greatly improve graphics performance. Bad for security as VMs should not have direct access to physical hardware.
 </p><p>Essentially this feature allows to directly use physical PCI devices on the host by the guest even if host doesn't have drivers for this particular device. See VirtualBox Manual: <a class="external text" data-href="http://www.virtualbox.org/manual/ch09.html#pcipassthrough" href="http://www.virtualbox.org/manual/ch09.html" rel="noreferrer noopener" target="_blank">PCI passthrough</a> <sup><a data-href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch09.html#pcipassthrough" href="https://web.archive.org/web/http://www.virtualbox.org/manual/ch09.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 <hr/>
@@ -206,7 +174,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Tuning" href="https://facebook.com/sharer.php?u=./Tuning">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Please consider a <a class="external text" data-href="Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/./Donate" href="https://web.archive.org/web/./Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>Have you <a class="external text" data-href="Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="Authorship" href="./Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/./Authorship" href="https://web.archive.org/web/./Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a data-href="Tuning" href="./Tuning" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tuning" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Tuning" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -218,7 +186,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Tuning&amp;oldid=46273" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tuning&amp;oldid=46273">https://www.whonix.org/w/index.php?title=Tuning&amp;oldid=46273</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Tuning&amp;oldid=55319" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tuning&amp;oldid=55319">https://www.whonix.org/w/index.php?title=Tuning&amp;oldid=55319</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -229,7 +197,7 @@ Retrieved from "<a data-href="/w/index.php?title=Tuning&amp;oldid=46273" dir="lt
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 25 April 2019, at 14:49.</li>
+<li id="footer-lastmod"> This page was last edited on 19 March 2020, at 18:09.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
