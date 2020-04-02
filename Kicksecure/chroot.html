@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Install Kicksecure ™ inside a folder (chroot) - Whonix
  url: ../Kicksecure/chroot
- date: Wed Apr  1 07:45:05 2020
+ date: Thu Apr  2 07:45:08 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -26,8 +26,8 @@
 <meta content="../Kicksecure/chroot" property="og:url"/>
 <meta content="You can install Kicksecure ™ on top of your existing Debian (based) Linux installation inside a chroot (change root)." property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2020-03-31T22:14:35Z" property="article:modified_time"/>
-<meta content="2020-03-31T22:14:35Z" property="article:published_time"/>
+<meta content="2020-04-01T13:42:36Z" property="article:modified_time"/>
+<meta content="2020-04-01T13:42:36Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Install Kicksecure ™ inside a folder (chroot) - Whonix" property="twitter:title"/>
 <meta content="You can install Kicksecure ™ on top of your existing Debian (based) Linux installation inside a chroot (change root)." property="twitter:description"/>
@@ -117,13 +117,17 @@ Please Donate!
 </div>
 <h1><span class="mw-headline" id="chroot_Creation">chroot Creation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=1.html" title="Edit section: chroot Creation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Qubes_Notes">Qubes Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=2.html" title="Edit section: Qubes Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Only users of Qubes need to consider these notes in this chapter. TODO: elaborate
+<p>Only users of Qubes need to consider these notes in this chapter.
+</p><p>Users that don't use Qubes or don't know what Qubes is should skip this chapter.
+</p><p>TODO: elaborate
 </p>
 <ul><li>nosuid / nodev can cause issues?</li>
 <li>default private image size (/home folder) is too small for Kicksecure ™ XFCE</li></ul>
 <h2><span class="mw-headline" id="Install_Required_Tools">Install Required Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=3.html" title="Edit section: Install Required Tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p>Install <code>mmdebstrap</code>.
+<p>Install <code>mmdebstrap apt-transport-https apt-transport-tor tor curl</code>.
 </p><p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
@@ -142,16 +146,16 @@ Please Donate!
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
 </div>
 </div>
-<p><b>3.</b> Install the <code>mmdebstrap</code> package.
+<p><b>3.</b> Install the <code>mmdebstrap apt-transport-https apt-transport-tor tor curl</code> package.
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get install mmdebstrap</pre>
+<pre>sudo apt-get install mmdebstrap apt-transport-https apt-transport-tor tor curl</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install mmdebstrap</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install mmdebstrap apt-transport-https apt-transport-tor tor curl</textarea>
 </div>
 </div>
-<p>The procedure of installing <code>mmdebstrap</code> complete.
+<p>The procedure of installing <code>mmdebstrap apt-transport-https apt-transport-tor tor curl</code> complete.
 </p>
 </div>
 <h2><span class="mw-headline" id="Add_Signing_Key">Add Signing Key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=4.html" title="Edit section: Add Signing Key">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -159,43 +163,7 @@ Please Donate!
 <p>It is required to add the signing key on the host because <code>mmdebstrap</code> will need it.
 </p><p>(Users of Whonix ™ and Kicksecure ™ could skip this step since the signing key is there by default.)
 </p><p>Key could be removed at the end. (Except Whonix ™ and Kicksecure ™ should not do this unless they upgrade from source code.)
-</p><p>Complete the following steps to add the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> to the system's APT keyring. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
-</p><p>Open a terminal.
-</p><p>Install <code>curl</code>.
-</p>
-<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p>Install <code>curl</code>.
-</p><p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get update</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get update</textarea>
-</div>
-</div>
-<p><b>2.</b> Upgrade the system.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get dist-upgrade</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
-</div>
-</div>
-<p><b>3.</b> Install the <code>curl</code> package.
-</p><p></p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get install curl</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install curl</textarea>
-</div>
-</div>
-<p>The procedure of installing <code>curl</code> complete.
-</p>
-</div>
-<p>Download Whonix signing key.
+</p><p>Download <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a>.
 </p>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
 <p><u>If you are using a Qubes TemplateVM</u>, run.
@@ -231,7 +199,7 @@ Please Donate!
 </p>
 </div>
 <h2><span class="mw-headline" id="Set_Variables">Set Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=5.html" title="Edit section: Set Variables">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>File <code>/etc/hostname</code> must exist.
+<p>File <code>/etc/hostname</code> must exist. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo touch /etc/hostname</pre>
@@ -348,7 +316,7 @@ deb http://HTTPS///deb.whonix.org $repo main contrib non-free
 </div>
 </div>
 <h2><span class="mw-headline" id="Run_mmdebstrap">Run mmdebstrap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=9.html" title="Edit section: Run mmdebstrap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Run <code>mmdebstrap</code>. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>Run <code>mmdebstrap</code>. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo \
@@ -378,7 +346,7 @@ buster \
 </div>
 </div>
 <h2><span class="mw-headline" id="Chroot_Post_Processing">Chroot Post Processing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=10.html" title="Edit section: Chroot Post Processing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Delete the chroot's temporary <code>/etc/apt/sources.list</code>. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<p>Delete the chroot's temporary <code>/etc/apt/sources.list</code>. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p><p></p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>sudo rm "$path_to_chroot/etc/apt/sources.list"</pre>
@@ -445,7 +413,7 @@ buster \
 </div>
 </div>
 <h3><span class="mw-headline" id="Exit_systemd-nspawn_Chroot">Exit systemd-nspawn Chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=18.html" title="Edit section: Exit systemd-nspawn Chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>To leave the chroot press keep holding key <code>CTRL</code> and press key <code>5</code> quickly 3 times within 1 second. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p>To leave the chroot press keep holding key <code>CTRL</code> and press key <code>5</code> quickly 3 times within 1 second. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 <h3><span class="mw-headline" id="Limitations_of_systemd-nspawn_based_Chroot">Limitations of systemd-nspawn based Chroot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;action=edit&amp;section=19.html" title="Edit section: Limitations of systemd-nspawn based Chroot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Despite these limitations, <code>systemd-nspawn</code> should probably preferred over classic <code>chroot</code>. Depends on what you are trying to accomplish.
@@ -456,25 +424,54 @@ buster \
 <div class="reflist" style="list-style-type:decimal">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
-The following is unreliable due to <a class="external text" data-href="https://forums.whonix.org/t/gpg-fingerprint-command-obsolete/4819/11?u=patrick" href="https://forums.whonix.org/t/gpg-fingerprint-command-obsolete/4819/11?u=patrick" rel="noreferrer noopener" target="_blank">gpg connectivity bugs</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/gpg-fingerprint-command-obsolete/4819/11?u=patrick" href="https://web.archive.org/web/https://forums.whonix.org/t/gpg-fingerprint-command-obsolete/4819/11?u=patrick" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-<div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA</textarea>
-</div>
-</div></span>
-</li>
+<ul><li><code>apt-transport-https</code> is required for some older Debian based Linux distributions that have not integrated https support into APT yet. If not available in your distribution, can be safely ignored.</li>
+<li><code>apt-transport-tor</code> is required because <a class="external text" data-href="https://github.com/Whonix/anon-apt-sources-list/blob/master/etc/apt/sources.list.d/debian.list" href="https://github.com/Whonix/anon-apt-sources-list/blob/master/etc/apt/sources.list.d/debian.list" rel="noreferrer noopener" target="_blank">/etc/apt/sources.list.d/debian.list</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-apt-sources-list/blob/master/etc/apt/sources.list.d/debian.list" href="https://web.archive.org/web/https://github.com/Whonix/anon-apt-sources-list/blob/master/etc/apt/sources.list.d/debian.list" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is using <code>tor+https</code>. Otherwise we would see the following error.</li></ul>
+<pre>I: cleaning package lists and apt cache...
+Reading package lists...
+E: The method driver /usr/lib/apt/methods/tor+https could not be found.
+E: The method driver /usr/lib/apt/methods/tor+https could not be found.
+E: The method driver /usr/lib/apt/methods/tor+https could not be found.
+E: Failed to fetch tor+https://deb.debian.org/debian-security/dists/buster/updates/InRelease  
+E: Failed to fetch tor+https://deb.debian.org/debian/dists/buster/InRelease  
+E: Failed to fetch tor+https://deb.whonix.org/dists/buster-developers/InRelease  
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+E: apt-get --option Dir::Etc::SourceList=/dev/null update -oAPT::Status-Fd=&lt;$fd&gt; -oDpkg::Use-Pty=false failed
+</pre>
+<ul><li><code>tor</code> is required so <code>apt-transport-tor</code> can use Tor. Otherwise we would see the following error.</li></ul>
+<pre>I: cleaning package lists and apt cache...
+Err:1 tor+https://deb.debian.org/debian-security buster/updates InRelease
+  Could not connect to 127.0.0.1:9050 (127.0.0.1). - connect (111: Connection refused)
+Err:2 tor+https://deb.debian.org/debian buster InRelease
+  Unable to connect to 127.0.0.1:9050:
+Err:3 tor+https://deb.whonix.org buster-developers InRelease
+  Could not connect to 127.0.0.1:9050 (127.0.0.1). - connect (111: Connection refused)
+Reading package lists...
+W: Failed to fetch tor+https://deb.debian.org/debian-security/dists/buster/updates/InRelease  Could not connect to 127.0.0.1:9050 (127.0.0.1). - connect (111: Connection refused)
+W: Failed to fetch tor+https://deb.debian.org/debian/dists/buster/InRelease  Unable to connect to 127.0.0.1:9050:
+W: Failed to fetch tor+https://deb.whonix.org/dists/buster-developers/InRelease  Could not connect to 127.0.0.1:9050 (127.0.0.1). - connect (111: Connection refused)
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+</pre>
+<ul><li>Actually package <code>apt-transport-tor</code> recommends package <code>tor</code> but listing it here anyhow for those using APT with parameter <code>--no-install-recommends</code>.</li>
+<li><code>apt-transport-https</code> is suggested below to download the signing key.</li></ul>
+</span></li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
-<code>deboostrap</code> cannot be used since it is a single-mirror Debian chroot creation tool. I.e. it cannot use multiple APT repositories at the same time. And Kicksecure ™ APT repository does not ships no packages available from packages.debian.org. Therefore using <code>mmdebstrap</code> which is a multi-mirror Debian chroot creation. If you cannot use <code>mmdebstrap</code> either (cross platform builds?), you could first create a Debian chroot using <code>deboostrap</code> (or anything) and then install a Kicksecure ™ meta package manually inside the chroot.</span>
-</li>
+Fixed in <code>mmdebstrap</code> <code>0.5.0</code>. Quote <a class="external text" data-href="https://gitlab.mister-muffin.de/josch/mmdebstrap/blob/master/CHANGELOG.md" href="https://gitlab.mister-muffin.de/josch/mmdebstrap/blob/master/CHANGELOG.md" rel="noreferrer noopener" target="_blank">changelog</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.mister-muffin.de/josch/mmdebstrap/blob/master/CHANGELOG.md" href="https://web.archive.org/web/https://gitlab.mister-muffin.de/josch/mmdebstrap/blob/master/CHANGELOG.md" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+<blockquote>
+<p>do not copy /etc/resolv.conf or /etc/hostname if the host system doesn't have them
+</p>
+</blockquote>
+<p>Therefore no longer required in Debian <code>bullseye</code>.
+</p>
+</span></li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+<code>debootstrap</code> cannot be used since it is a single-mirror Debian chroot creation tool. I.e. it cannot use multiple APT repositories at the same time. And Kicksecure ™ APT repository does not ships no packages available from packages.debian.org. Therefore using <code>mmdebstrap</code> which is a multi-mirror Debian chroot creation. If you cannot use <code>mmdebstrap</code> either (cross platform builds?), you could first create a Debian chroot using <code>debootstrap</code> (or anything) and then install a Kicksecure ™ meta package manually inside the chroot.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
 During chroot build process the following files were already created.
 <ul><li><code>/etc/apt/sources.list.d/debian.list</code></li>
 <li><code>/etc/apt/sources.list.d/whonix.list</code></li></ul>
 </span></li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://unix.stackexchange.com/questions/577065/connected-to-container-mycontainer-press-three-times-within-1s-to-exit-sessi" href="https://unix.stackexchange.com/questions/577065/connected-to-container-mycontainer-press-three-times-within-1s-to-exit-sessi" rel="noreferrer noopener" target="_blank">https://unix.stackexchange.com/questions/577065/connected-to-container-mycontainer-press-three-times-within-1s-to-exit-sessi</a> <sup><a data-href="https://web.archive.org/web/https://unix.stackexchange.com/questions/577065/connected-to-container-mycontainer-press-three-times-within-1s-to-exit-sessi" href="https://web.archive.org/web/https://unix.stackexchange.com/questions/577065/connected-to-container-mycontainer-press-three-times-within-1s-to-exit-sessi" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
@@ -493,7 +490,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Kicksecure/chroot" href="https://facebook.com/sharer.php?u=../Kicksecure/chroot">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Do you wonder why Whonix will always be free? Check out <a class="external text" data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">Why Whonix is Freedom Software</a> <sup><a data-href="https://web.archive.org/web/../Why_Whonix_is_Freedom_Software" href="https://web.archive.org/web/../Why_Whonix_is_Freedom_Software" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a data-href="chroot" href="../Kicksecure/chroot" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" id="pagespeed_img_hq1WWafaaD14" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Kicksecure/chroot" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Kicksecure/chroot" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" id="pagespeed_img_n_u34nLBpv15" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -505,7 +502,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Kicksecure/chroot&amp;oldid=55668" dir="ltr" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;oldid=55668">https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;oldid=55668</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Kicksecure/chroot&amp;oldid=55680" dir="ltr" href="https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;oldid=55680">https://www.whonix.org/w/index.php?title=Kicksecure/chroot&amp;oldid=55680</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -516,7 +513,7 @@ Retrieved from "<a data-href="/w/index.php?title=Kicksecure/chroot&amp;oldid=556
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 April 2020, at 00:14.</li>
+<li id="footer-lastmod"> This page was last edited on 1 April 2020, at 15:42.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
