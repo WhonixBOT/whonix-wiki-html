@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/coding style - Whonix
  url: ../Dev/coding_style
- date: Sun Apr  5 07:38:29 2020
+ date: Mon Apr  6 07:38:49 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -24,8 +24,8 @@
 <meta content="Dev/coding style - Whonix" property="og:title"/>
 <meta content="../Dev/coding_style" property="og:url"/>
 <meta content="" property="og:image"/>
-<meta content="2020-03-27T18:26:25Z" property="article:modified_time"/>
-<meta content="2020-03-27T18:26:25Z" property="article:published_time"/>
+<meta content="2020-04-05T07:57:44Z" property="article:modified_time"/>
+<meta content="2020-04-05T07:57:44Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/coding style - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -77,11 +77,12 @@ Please Donate!
 <li class="toclevel-1 tocsection-2"><a href="#Feature_Removability"><span class="tocnumber">2</span> <span class="toctext">Feature Removability</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Default_Application_Policy"><span class="tocnumber">3</span> <span class="toctext">Default Application Policy</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#No_Trailing_Whitespaces"><span class="tocnumber">4</span> <span class="toctext">No Trailing Whitespaces</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Shell_Scripts"><span class="tocnumber">5</span> <span class="toctext">Shell Scripts</span></a>
+<li class="toclevel-1 tocsection-5"><a href="#Indentation"><span class="tocnumber">5</span> <span class="toctext">Indentation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Shell_Scripts"><span class="tocnumber">6</span> <span class="toctext">Shell Scripts</span></a>
 <ul>
-<li class="toclevel-2 tocsection-6"><a href="#avoid_sed_awk_whenever_possible"><span class="tocnumber">5.1</span> <span class="toctext">avoid sed awk whenever possible</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#use_str_replace_whenever_possible"><span class="tocnumber">5.2</span> <span class="toctext">use str_replace whenever possible</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#use_type_-P_instead_of_which"><span class="tocnumber">5.3</span> <span class="toctext">use type -P instead of which</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#avoid_sed_awk_whenever_possible"><span class="tocnumber">6.1</span> <span class="toctext">avoid sed awk whenever possible</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#use_str_replace_whenever_possible"><span class="tocnumber">6.2</span> <span class="toctext">use str_replace whenever possible</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#use_type_-P_instead_of_which"><span class="tocnumber">6.3</span> <span class="toctext">use type -P instead of which</span></a></li>
 </ul>
 </li>
 </ul>
@@ -100,14 +101,37 @@ Please Donate!
 <h1><span class="mw-headline" id="No_Trailing_Whitespaces">No Trailing Whitespaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=4.html" title="Edit section: No Trailing Whitespaces">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Get a decent editor and don’t leave whitespace at the end of lines.
 </p>
-<h1><span class="mw-headline" id="Shell_Scripts">Shell Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=5.html" title="Edit section: Shell Scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="avoid_sed_awk_whenever_possible">avoid sed awk whenever possible</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=6.html" title="Edit section: avoid sed awk whenever possible">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Indentation">Indentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=5.html" title="Edit section: Indentation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Do not use too deep levels of <code>if</code> and similar.
+</p><p>Bad example:
+</p>
+<pre>machine_id() {
+   if ! test -f /etc/machine-id ; then
+      existing_machine_id="$(cat /etc/machine-id)"
+      ## ...
+   fi
+}
+</pre>
+<p>In above example there is need need to put everything under the <code>if</code>. This is specifically important when there are several levels of conditionals.
+</p><p>Example good:
+</p>
+<pre>machine_id() {
+   if ! test -f /etc/machine-id ; then
+      return 0
+   fi
+
+   existing_machine_id="$(cat /etc/machine-id)"
+   ## ....
+}
+</pre>
+<h1><span class="mw-headline" id="Shell_Scripts">Shell Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=6.html" title="Edit section: Shell Scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="avoid_sed_awk_whenever_possible">avoid sed awk whenever possible</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=7.html" title="Edit section: avoid sed awk whenever possible">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>There might be some older code (before introduction of str_replace) that uses sed / awk. Patches welcome to port to str_replace.
 </p>
-<h2><span class="mw-headline" id="use_str_replace_whenever_possible">use str_replace whenever possible</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=7.html" title="Edit section: use str replace whenever possible">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="use_str_replace_whenever_possible">use str_replace whenever possible</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=8.html" title="Edit section: use str replace whenever possible">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://github.com/Whonix/helper-scripts/blob/master/usr/bin/str_replace" href="https://github.com/Whonix/helper-scripts/blob/master/usr/bin/str_replace" rel="noreferrer noopener" target="_blank">str_replace</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/helper-scripts/blob/master/usr/bin/str_replace" href="https://web.archive.org/web/https://github.com/Whonix/helper-scripts/blob/master/usr/bin/str_replace" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is installed in Whonix / Kicksecure by default. (<a class="external text" data-href="https://github.com/Whonix/helper-scripts/blob/master/man/str_replace.1.ronn" href="https://github.com/Whonix/helper-scripts/blob/master/man/str_replace.1.ronn" rel="noreferrer noopener" target="_blank">man page</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/helper-scripts/blob/master/man/str_replace.1.ronn" href="https://web.archive.org/web/https://github.com/Whonix/helper-scripts/blob/master/man/str_replace.1.ronn" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p>
-<h2><span class="mw-headline" id="use_type_-P_instead_of_which">use type -P instead of which</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=8.html" title="Edit section: use type -P instead of which">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="use_type_-P_instead_of_which">use type -P instead of which</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=9.html" title="Edit section: use type -P instead of which">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Please do not use <code>which</code>. Please use <code>type -P</code> instead.
 </p>
 <p><a class="external free" data-href="https://mywiki.wooledge.org/BashFAQ/081" href="https://mywiki.wooledge.org/BashFAQ/081" rel="noreferrer noopener" target="_blank">https://mywiki.wooledge.org/BashFAQ/081</a> <sup><a data-href="https://web.archive.org/web/https://mywiki.wooledge.org/BashFAQ/081" href="https://web.archive.org/web/https://mywiki.wooledge.org/BashFAQ/081" rel="noreferrer noopener" target="_blank">[archive]</a></sup></p><div class="mw-references-wrap"><ol class="references">
@@ -116,7 +140,7 @@ Please Donate!
 </li>
 </ol></div>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=55519" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55519">https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55519</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=55698" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55698">https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55698</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -127,7 +151,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=5551
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 27 March 2020, at 19:26.</li>
+<li id="footer-lastmod"> This page was last edited on 5 April 2020, at 09:57.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
