@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/coding style - Whonix
  url: ../Dev/coding_style
- date: Fri May  1 07:47:59 2020
+ date: Sat May  2 07:48:15 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -23,10 +23,10 @@
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="Dev/coding style - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
-<meta content="../Dev/coding_style" property="og:url"/>
+<meta content="http://www.whonix.org/wiki/Dev/coding_style" property="og:url"/>
 <meta content="" property="og:image"/>
-<meta content="2020-04-05T07:57:44Z" property="article:modified_time"/>
-<meta content="2020-04-05T07:57:44Z" property="article:published_time"/>
+<meta content="2020-05-01T17:05:52Z" property="article:modified_time"/>
+<meta content="2020-05-01T17:05:52Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/coding style - Whonix" property="twitter:title"/>
 <meta content="" property="twitter:image"/>
@@ -92,7 +92,7 @@
 <h1><span class="mw-headline" id="Brevity">Brevity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=1.html" title="Edit section: Brevity">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>It’s good to be innovative. Such as in case of Whonix shipping <a class="external text" data-href="https://github.com/Whonix/kloak" href="https://github.com/Whonix/kloak" rel="noreferrer noopener" target="_blank">kloak</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/kloak" href="https://web.archive.org/web/https://github.com/Whonix/kloak" rel="noreferrer noopener" target="_blank">[archive]</a></sup> by default is a win. That threat model has been demonstrated through a proof of concept already. Proactive yes, but in this case of remounting /etc with nosuid the benefit of the change doesn’t have a strong rationale.
 </p><p>In most cases goals should be reached by using 1 implementation. For example to remount /run etc. with more secure mount options an implementation should do this - if possible - either entirely in initramfs or entirely using systemd. It shouldn't do the exact same things twice in initramfs and systemd.
-</p><p>There’s a huge amount of things which users might potentially do which won’t make sense from Whonix developers point of view. For example there is the <a class="external text" data-href="https://packages.debian.org/search?keywords=hello" href="https://packages.debian.org/search?keywords=hello" rel="noreferrer noopener" target="_blank">hello</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/search?keywords=hello" href="https://web.archive.org/web/https://packages.debian.org/search?keywords=hello" rel="noreferrer noopener" target="_blank">[archive]</a></sup> package which most users won’t know and won’t install. I am using it as an example here. No need to pick on that particular maintainer of that Debian package. Why allow installation of that package? What if that maintainer turned evil and somehow included a backdoor in the hello package? To prevent such a backdoor from doing damage, there could be an apt wrapper that prevents installation of that and other packages which most users will probably never need. I am not supposing to invent an apt wrapper for this hypothetical scenario. It would be worse having that code than having that risk.
+</p><p>There’s a huge amount of things which users might potentially do which won’t make sense from Whonix developers point of view. For example there is the <a class="external text" data-href="https://packages.debian.org/search?keywords=hello" href="https://packages.debian.org/search?keywords=hello" rel="noreferrer noopener" target="_blank">hello</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/search?keywords=hello" href="https://web.archive.org/web/https://packages.debian.org/search?keywords=hello" rel="noreferrer noopener" target="_blank">[archive]</a></sup> package which most users won’t know and won’t install. I am using it as an example here. No need to pick on that particular contributor of that Debian package. Why allow installation of that package? What if that contributor turned evil and somehow included a backdoor in the hello package? To prevent such a backdoor from doing damage, there could be an apt wrapper that prevents installation of that and other packages which most users will probably never need. I am not supposing to invent an apt wrapper for this hypothetical scenario. It would be worse having that code than having that risk.
 </p>
 <h1><span class="mw-headline" id="Feature_Removability">Feature Removability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;action=edit&amp;section=2.html" title="Edit section: Feature Removability">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>In case a feature becomes unmaintainable there needs to be a possiblity to remove the feature for users who use upgrade their system using apt.
@@ -142,7 +142,7 @@
 </li>
 </ol></div>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=55698" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55698">https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=55698</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=56377" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=56377">https://www.whonix.org/w/index.php?title=Dev/coding_style&amp;oldid=56377</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -153,7 +153,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/coding_style&amp;oldid=5569
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 5 April 2020, at 09:57.</li>
+<li id="footer-lastmod"> This page was last edited on 1 May 2020, at 19:05.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
