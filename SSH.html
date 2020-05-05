@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: SSH - Whonix
+ title: Secure Shell (SSH)
  url: ./SSH
- date: Mon May  4 08:03:42 2020
+ date: Tue May  5 08:07:06 2020
 -->
 <head>
 <meta charset="utf-8"/>
-<title>SSH - Whonix</title>
+<title>Secure Shell (SSH)</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 
 
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 <meta content="MediaWiki 1.34.1" name="generator"/>
-<meta content="Secure Shell (SSH)" name="description"/>
+<meta content="Secure Shell (SSH): Recommended Client and Server Settings, SSH Hardening Tips" name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=SSH&amp;action=edit" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=SSH&amp;action=edit" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -22,16 +22,16 @@
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
 <link data-href="//www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
-<meta content="SSH - Whonix" property="og:title"/>
+<meta content="Secure Shell (SSH)" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="./SSH" property="og:url"/>
-<meta content="Secure Shell (SSH)" property="og:description"/>
+<meta content="Secure Shell (SSH): Recommended Client and Server Settings, SSH Hardening Tips" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/b/b3/SSH.jpg" property="og:image"/>
-<meta content="2020-02-14T11:48:55Z" property="article:modified_time"/>
-<meta content="2020-02-14T11:48:55Z" property="article:published_time"/>
+<meta content="2020-05-04T14:08:01Z" property="article:modified_time"/>
+<meta content="2020-05-04T14:08:01Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="SSH - Whonix" property="twitter:title"/>
-<meta content="Secure Shell (SSH)" property="twitter:description"/>
+<meta content="Secure Shell (SSH)" property="twitter:title"/>
+<meta content="Secure Shell (SSH): Recommended Client and Server Settings, SSH Hardening Tips" property="twitter:description"/>
 <meta content="https://www.whonix.org/w/images/b/b3/SSH.jpg" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
@@ -68,10 +68,10 @@
 <ul class="f-dropdown" data-dropdown-content="" id="actions">
 <li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="SSH" href="./SSH.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:SSH&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:SSH&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li class="selected" id="ca-view"><a data-href="/w/index.php?title=SSH&amp;stable=1" href="https://www.whonix.org/w/index.php?title=SSH&amp;stable=1">View</a></li><li class="collapsible" id="ca-current"><a accesskey="v" data-href="/w/index.php?title=SSH&amp;stable=0&amp;redirect=no" href="https://www.whonix.org/w/index.php?title=SSH&amp;stable=0&amp;redirect=no.html" title="View this page with the pending changes [v]">Pending changes</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=SSH&amp;action=edit" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=SSH&amp;action=history" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <div id="content">
-<h1 class="title" id="firstHeading">SSH</h1>
+<h1 class="title" id="firstHeading">Secure Shell (SSH)</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><div class="flaggedrevs_short flaggedrevs_stable_notsynced plainlinks noprint" id="mw-fr-revisiontag"><div class="flaggedrevs_short_basic"><span aria-disabled="false" class="flaggedrevs-icon oo-ui-widget oo-ui-widget-enabled oo-ui-iconElement-icon oo-ui-icon-eye oo-ui-iconElement oo-ui-labelElement-invisible oo-ui-iconWidget.html" title="This is a checked version of this page"></span><span aria-disabled="false" class="fr-toggle-arrow oo-ui-widget oo-ui-widget-enabled oo-ui-indicatorElement-indicator oo-ui-indicator-down oo-ui-indicatorElement oo-ui-labelElement-invisible oo-ui-indicatorWidget" id="mw-fr-revisiontoggle.html" title="show/hide details"></span></div>
-<div id="mw-fr-revisiondetails-wrapper" style="position:relative"><div class="flaggedrevs_short_details" id="mw-fr-revisiondetails" style="display:none">This is the <a data-href="/wiki/Help:Page_validation" href="./Help:Page_validation.html" title="Help:Page validation">stable version</a>, <a class="external text" data-href="/w/index.php?title=Special:Log&amp;type=review&amp;page=SSH" href="https://www.whonix.org/w/index.php?title=Special:Log&amp;type=review&amp;page=SSH" rel="noreferrer noopener" target="_blank">checked</a> on <i>14 February 2020</i>.
-<a class="external text" data-href="/w/index.php?title=SSH&amp;oldid=54585&amp;diff=cur" href="https://www.whonix.org/w/index.php?title=SSH&amp;oldid=54585&amp;diff=cur" rel="noreferrer noopener" target="_blank">1 pending change</a> awaits review.<p></p><table cellpadding="0" class="flaggedrevs-color-1" id="mw-fr-revisionratings-box" style="margin:auto"><tr><td class="fr-text" style="vertical-align:middle">Accuracy</td><td class="fr-value40" style="vertical-align:middle">Spot checked</td></tr>
+<div id="mw-fr-revisiondetails-wrapper" style="position:relative"><div class="flaggedrevs_short_details" id="mw-fr-revisiondetails" style="display:none">This is the <a data-href="/wiki/Help:Page_validation" href="./Help:Page_validation.html" title="Help:Page validation">stable version</a>, <a class="external text" data-href="/w/index.php?title=Special:Log&amp;type=review&amp;page=SSH" href="https://www.whonix.org/w/index.php?title=Special:Log&amp;type=review&amp;page=SSH" rel="noreferrer noopener" target="_blank">checked</a> on <i>4 May 2020</i>.
+<a class="external text" data-href="/w/index.php?title=SSH&amp;oldid=56704&amp;diff=cur" href="https://www.whonix.org/w/index.php?title=SSH&amp;oldid=56704&amp;diff=cur" rel="noreferrer noopener" target="_blank">4 pending changes</a> await review.<p></p><table cellpadding="0" class="flaggedrevs-color-1" id="mw-fr-revisionratings-box" style="margin:auto"><tr><td class="fr-text" style="vertical-align:middle">Accuracy</td><td class="fr-value40" style="vertical-align:middle">Spot checked</td></tr>
 <tr><td class="fr-text" style="vertical-align:middle">Depth</td><td class="fr-value40" style="vertical-align:middle">Basic</td></tr>
 <tr><td class="fr-text" style="vertical-align:middle">Readability</td><td class="fr-value40" style="vertical-align:middle">Acceptable</td></tr>
 </table></div>
@@ -80,16 +80,64 @@
 </h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p class="mw-empty-elt">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><br/>
 </p><p><br/>
 </p>
-<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,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" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Documentation for this is incomplete. Contributions are happily considered!
-</p>
+<div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#General_Hardening_Tips"><span class="tocnumber">2</span> <span class="toctext">General Hardening Tips</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Secure_SSH_Client_and_Server_Settings"><span class="tocnumber">3</span> <span class="toctext">Secure SSH Client and Server Settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Key_Generation"><span class="tocnumber">3.1</span> <span class="toctext">Key Generation</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Client_and_Server_Configuration_File_Settings"><span class="tocnumber">3.2</span> <span class="toctext">Client and Server Configuration File Settings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Client_Configuration_File"><span class="tocnumber">3.2.1</span> <span class="toctext">Client Configuration File</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Server_Configuration_File"><span class="tocnumber">3.2.2</span> <span class="toctext">Server Configuration File</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Notes"><span class="tocnumber">3.2.3</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Firewall_Settings_and_Rules"><span class="tocnumber">3.3</span> <span class="toctext">Firewall Settings and Rules</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#See_Also"><span class="tocnumber">4</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
 </div>
-<p>SSH is a core tool in a sysadmin's arsenal. It is mainly used to remotely control a machine.
-</p><p>Use stronger ssh keys.
-</p><p>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Secure Shell (SSH) is a core tool in a sysadmin's arsenal and provides a secure and encrypted connection and method of communication between a client user and a server. It is mainly used to remotely control a machine. In the Linux landscape, the package OpenSSH is one of the most popular and complete choices to enable communication via SSH. Newcomers to SSH should first consult the <a class="external text" data-href="https://wiki.debian.org/SSH" href="https://wiki.debian.org/SSH" rel="noreferrer noopener" target="_blank">Debian SSH wiki</a> <sup><a data-href="https://web.archive.org/web/https://wiki.debian.org/SSH" href="https://web.archive.org/web/https://wiki.debian.org/SSH" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to learn the basics.
+</p>
+<h1><span class="mw-headline" id="General_Hardening_Tips">General Hardening Tips</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=2.html" title="Edit section: General Hardening Tips">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>Table:</b> <i>SSH Hardening Recommendations</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Recommendation</b>
+</th>
+<th scope="col"><b>Description</b>
+</th></tr>
+<tr>
+<th scope="row">Keystroke and Mouse Fingerprinting
+</th>
+<td>Beware of keyboard keystroke and computer mouse-based deanonymization as explained in the <a data-href="Surfing_Posting_Blogging" href="./Surfing_Posting_Blogging.html" title="Surfing Posting Blogging">Surfing Posting Blogging</a> chapter.
+</td></tr>
+<tr>
+<th scope="row">Mobile Shell Roaming and Echo
+</th>
+<td><a class="external text" data-href="https://packages.debian.org/buster/mosh" href="https://packages.debian.org/buster/mosh" rel="noreferrer noopener" target="_blank">mosh</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/mosh" href="https://web.archive.org/web/https://packages.debian.org/buster/mosh" rel="noreferrer noopener" target="_blank">[archive]</a></sup> might be a useful addition. However, it requires UDP and it is therefore difficult to utilize over Tor, see: <a data-href="Tunnel_UDP_over_Tor" href="./Tunnel_UDP_over_Tor.html" title="Tunnel UDP over Tor">Tunnel UDP over Tor</a>.
+</td></tr>
+<tr>
+<th scope="row">SSH Breaks
+</th>
+<td>
+<ul><li>Any references to SSH breaks in the Snowden archives applied to some outdated ciphers.</li>
+<li>This has since been addressed by hardened OpenSSH settings (but are not included in Whonix ™) and upstream disabling vulnerable algorithms. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li></ul>
+</td></tr>
+<tr>
+<th scope="row">SSH Keys
+</th>
+<td>To generate stronger SSH keys, run.
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ssh-keygen -t ed25519</pre>
@@ -99,19 +147,301 @@
 </div>
 </div>
 <p>
-</p><p>Prefer SSH servers available through a <a data-href="Onion_Services" href="./Onion_Services.html" title="Onion Services">Tor Onion Service</a> for stronger encryption and authentication. Consider using <a data-href="Onion_Services#Onion_Service_Authentication" href="./Onion_Services.html" title="Onion Services">Onions Services Authentication</a>. Tor also provides NAT hole-punching so you don't need to register with a DNS service nor open up your LAN to outside access. If the server is known to the public (non-hidden) one could use single Tor hops for the server, see <a data-href="Non_Anonymous_Onion_Encryption_and_NAT_Traversal" href="./Non_Anonymous_Onion_Encryption_and_NAT_Traversal.html" title="Non Anonymous Onion Encryption and NAT Traversal">Non Anonymous Onion Encryption and NAT Traversal</a>.
-</p><p>Any references to SSH breaks in the Snowden archives applied to some outdated ciphers.
-</p><p><s>This has since been addressed by hardened OpenSSH settings (which are included in Whonix ™) and upstream disabling vulnerable algorithms.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></s>
-</p><p><a class="external text" data-href="https://packages.debian.org/jessie/mosh" href="https://packages.debian.org/jessie/mosh" rel="noreferrer noopener" target="_blank">mosh</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/jessie/mosh" href="https://web.archive.org/web/https://packages.debian.org/jessie/mosh" rel="noreferrer noopener" target="_blank">[archive]</a></sup> might be useful, however since it requires UDP, using it over Tor is non-trivial, see <a data-href="Tunnel_UDP_over_Tor" href="./Tunnel_UDP_over_Tor.html" title="Tunnel UDP over Tor">Tunnel UDP over Tor</a>.
-</p><p>Beware of keyboard keystroke and computer mouse based deanonymization as explained under <a data-href="Surfing_Posting_Blogging" href="./Surfing_Posting_Blogging.html" title="Surfing Posting Blogging">Surfing Posting Blogging</a>.
-</p><p>Can be combined with <a data-href="Two-factor_authentication_2FA" href="./Two-factor_authentication_2FA.html" title="Two-factor authentication 2FA">Two-factor authentication 2FA</a> (undocumented).
-</p><p>Configuration SSH servers to listen on non-default ports reduces noise (automated hacking attempts) as well might increase security from lesser skilled attackers.
-</p><p>Whonix forum discussion:<br/>
-<a class="external free" data-href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896" href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/locking-down-your-ssh-client/7896</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896" href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=1.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+</td></tr>
+<tr>
+<th scope="row">SSH Ports
+</th>
+<td>Configuring SSH servers to listen on non-default ports reduces noise (automated hacking attempts) and may also increase security from less skilled attackers.
+</td></tr>
+<tr>
+<th scope="row">SSH Servers
+</th>
+<td>
+<ul><li>Prefer SSH servers available through a <a data-href="Onion_Services" href="./Onion_Services.html" title="Onion Services">Tor Onion Service</a> for stronger encryption and authentication.</li>
+<li>Consider using <a data-href="/wiki/Onion_Services#Step_3:_Configure_Onion_Services_Authentication" href="./Onion_Services.html" title="Onion Services">Onions Services Authentication</a>.</li>
+<li>Tor also provides <a class="external text" data-href="https://en.wikipedia.org/wiki/Hole_punching_%28networking%29" href="https://en.wikipedia.org/wiki/Hole_punching_%28networking%29" rel="noreferrer noopener" target="_blank">NAT hole-punching</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Hole_punching_%28networking%29" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Hole_punching_%28networking%29" rel="noreferrer noopener" target="_blank">[archive]</a></sup> so it is unnecessary to register with a DNS service or open up the LAN to outside access.</li>
+<li>If the server is known to the public (non-hidden), single Tor hops can be used for the server, see: <a data-href="Non_Anonymous_Onion_Encryption_and_NAT_Traversal" href="./Non_Anonymous_Onion_Encryption_and_NAT_Traversal.html" title="Non Anonymous Onion Encryption and NAT Traversal">Non Anonymous Onion Encryption and NAT Traversal</a>.</li></ul>
+</td></tr>
+<tr>
+<th scope="row">Two-factor Authentication
+</th>
+<td>SSH can be combined with <a data-href="Two-factor_authentication_2FA" href="./Two-factor_authentication_2FA.html" title="Two-factor authentication 2FA">Two-factor Authentication (2FA)</a>, but this is undocumented at present.
+</td></tr>
+<tr>
+<th scope="row">Miscellaneous
+</th>
+<td>For additional tips, refer to the Whonix forum discussion: <a class="external text" data-href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896" href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896" rel="noreferrer noopener" target="_blank">Locking down your SSH client</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896" href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="Secure_SSH_Client_and_Server_Settings">Secure SSH Client and Server Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=3.html" title="Edit section: Secure SSH Client and Server Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>There is a client package and a server package, <code>openssh-client</code> and <code>openssh-server</code>. As the time of writing, Debian Buster is using OpenSSH version 7.9. That version will be the focus of these instructions. Covered topics include:
+</p>
+<ol><li>Key generation for authentication/sign-in purposes.</li>
+<li>Suggested secure settings for both the client and server configurations.</li>
+<li>A sample set of iptables rules to allow communication between client and server.</li></ol>
+<h2><span class="mw-headline" id="Key_Generation">Key Generation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=4.html" title="Edit section: Key Generation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Before you can connect to a server (or host) through SSH, a keypair is required. This consists of a public key, which you share with the server, and a private key which is used to verify that you are actually signing in. A passphrase (strongly recommended) can be added to your key which will be asked each time you sign into a server.
+</p><p>Once the server has your public key, it is placed into an <code>authorized_keys</code> file. The private key is not shared with anyone and should be kept in a safe place -- it typically resides at <code>/home/username/.ssh/private-key</code> on the client's machine with root permissions (0600). The private key is how the server authenticates your username.
+</p>
+<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
+<p><b>1.</b> Generate the SSH keypair.
+</p><p>Use a tool called "ssh-keygen". On the command line, type.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>user@host:~$ssh-keygen -o -a 75 -t ed_25519</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">user@host:~$ssh-keygen -o -a 75 -t ed_25519</textarea>
+</div>
+</div>
+<p>
+</p>
+<ul><li><code>-o</code> produces a key that is compatible with OpenSSH instead of the older style, .pem;</li>
+<li><code>-a</code> refers to the number of rounds of KDF (key derivation function). This strengthens the key against a brute force attack to break the passphrase if the (private) key were to be stolen. A value of 75 to 100 is more than adequate. Remember that the more rounds that are specified, the longer it takes to authenticate (sign in). This depends on your CPU, your workload at the time of sign in, the amount of cores, and available memory among other factors.</li>
+<li><code>-t</code> specifies what type of key to generate. The choices are: rsa, ecdsa and ed25519. RSA and ECDSA are older keys, and OpenSSH recommends ed25519 as the best choice.</li></ul>
+<p><b>2.</b> Store the SSH keypair.
+</p><p>Upon generation of your keypair, OpenSSH will ask if the keys should be stored at: <code>/home/your-username/.ssh</code>; reply <code>yes</code>. Permissions will be automatically set in Debian, but there have been reports of wrong permissions on certain other distributions. For reference, the correct permissions are as follows:
+</p>
+<ul><li>for the public key, a <code>0644</code> is needed; and</li>
+<li>for the private key <code>0600</code> (root) is vital.</li></ul>
+<p>Having too lax permissions will prevent logins and cause unwanted errors.
+</p><p><b>3.</b> Copy the key to the server you want to sign into.
+</p><p>This only needs to be done per server. The <code>ssh-copy-id</code> command works for this task, run.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>user@host:~$ssh-copy-id -i ~/.ssh/public-key.pub user@host</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">user@host:~$ssh-copy-id -i ~/.ssh/public-key.pub user@host</textarea>
+</div>
+</div>
+<p>
+</p><p><code>user</code> is your username and host is the name/address of the server. Only copy the public key. It ends with <code>.pub</code>.
+</p><p>The ssh-copy-id utility will check for the correct permissions before it allows the key to be transferred.
+</p><p><b>4.</b> Login to the server.
+</p><p>Once copied to the server, you can now login anytime with:
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>user@host:~$ssh user@host</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">user@host:~$ssh user@host</textarea>
+</div>
+</div>
+<p>
+</p><p>If you chose a passphrase for your key, you will be asked to enter it now.
+</p><p>The keypair generation procedure is now complete. You have successfully generated a keypair and sent your public key to your chosen server.
+</p>
+</div>
+<h2><span class="mw-headline" id="Client_and_Server_Configuration_File_Settings">Client and Server Configuration File Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=5.html" title="Edit section: Client and Server Configuration File Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The next step is to set up secure settings for the client and server configuration files. Examples will be given for both client and server. The relevant files are: <code>/etc/ssh/ssh_config</code> and <code>/etc/ssh/sshd_config</code>.
+</p>
+<h3><span class="mw-headline" id="Client_Configuration_File">Client Configuration File</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=6.html" title="Edit section: Client Configuration File">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAYAAADmOUiuAAAHT0lEQVRYw82XCVBTVxSGQwyIuMCAwUgQkM2wJAGiAYxSRUFwG0brnjJQqmIEgYJWx22qWJSWCmLB0aqtFpC27uIuYEUtAoJaxLogSAVcEBAVMYXTc5+89BFZFKj2zvyTmfdu3vvy33v+c8NiddOYp6sbf0ksboiTSFL8/f2NLCwsOKz/y7Bjs73KR4+G5xMnwsOxY2G1j8/OwMBAga6uLvuDwyGBVpKFRSGBo5UulT4PDwlZ5OXlpfd6Spff0Xl59OwZVD1uHDybMEGlWm9v+NrT8/yiRYuG8/l8Thff0fkv67BY+pkiURUTjtZlFxfl4sDAtdOnTzfU0ND4MIAB/frF1bUCR2uLm1tRaGiol0Ag0OoKYKeGIYslKHJ1VTL3Hi0CVzd+PNwcPhyW+vom+vn5mWlpab3fglnH46W1BfYU92AN7ssnHh6QLJVWfB4WNlMqleq8NzhbRqyoNGUKvExIgFofH6j29IQqjJtHY8ZAsasrrJwyZS/Gjm3fvn3Z7yNWOMxYoV1rSEoCMupTUuAxgj10d4cHo0ZBhZsbHBaL68JDQxUeHh79uiN22h1jtbSoWGmxpHI5NL54AQ8ePIC/8fPxzJlQ+dFHUD5yJPw1YgQUOzvDV56eZ4ODg114PB7nP8vBXoxYYe612zt2ALY2wDlgZmYG+fHxcB/hymQyKMUlLkHA0zY2ysUKxYqpU6e+a+y8PeCnJFYQjKjWy4vaa7UKBUSuWUPB0ZLPmQOVAQFQ6uICd6VSuDNsGNySSGCjTHYNY8fTyspKq9tjhsTKdWdnJbNCH2MhvCoogCVLlrQAHI8/oD4/H4oR7vbQoXDTyQluODjAOSsr+MLfP97X19dEU1Oze/fi2gED0mjX6AqtWbmSKox4XFIm4MKFC6nr5RER8KejI9wQi+G6SAR/2NvDVrG4LCws7GOJRKLdrbFSinuKco2uUIRUlpVRIJmZmS0At27dSl1vKC2FIlzaQqEQrtnZwRUbG7hgbg7Lp01LnT9/vqB3797sLhcJiZVdZmaFtGsPMf9Ihdaia01NTZSePn0KPXr0UAFevXpVda98/Xq4amsLBQh3ecgQyMNl3m1pWR0eFvaZu7t7vy7vwTEYKxWYZ8xcq8AqbqytBeZwxKUkcHp6etDY2Ki6rqyuhmu4Fy9bW0OupSVcQgezTE3hy3HjzgQFBQ3lcrmcTjtIYuWkQFBFu0bnWl1qqsohWphxFOAEhFe/V7l9O+RgDGUj3EWMofMmJpBqZNQQERS01MfHp3+nY8avT584AkZcu49gJNfKZ8yAplev3oDYs2cPBRgVFfXGvcaGBijA51xA584PGgTn+HzIHDgQ1ru65oeEhLibm5tz3nmJSazkicVK2rV7eDIpwVx7fvYstDZKsSAIYHp6eqv3Hx05AlnGxvBbM1z6gAGwV1+/cUlAQIxcLjfGPcx+pyVebWCQRrtGd4PyBQsoR1ob5LqBgQFUVla2eT9/8mTI4PHgjKEhnOZy4STOj7W1vYux4+Pg4KD91g7aaGh4knigXaO6AeplURG0N7Aq2/wBZNTk5FBwp/r3hxMIdxy1H4tq2YwZu+fOnWvdq1cvdocOklj5ns8vpF2ju0Hl6tVv7C11ZWRkdDjnCrZAAnZcXx+OoY6iEk1MqvDM6Ofm5tanQwfdNTUVt7B3MnvoLXRSiSeV7hjPS0rgBO7BowiZhjqCOoCQq7y9T2AHcsJtwm7TQRIrhwcPripGMGYPfZSY2KEzycnJgCcViIyMBKVS2e7colWrVHCHUYdQ2w0N6yOCgyMmTZqk36aDn+joxBEw4hrpoUXYQ29iByFnvfZeqN7qYmJi2p3/qqYGTmBwH8K9eBB1ALUPISNlshyMHTdTU1NOq7GSZW2tpF0jcKSHPtm/v8Nli46ObgFInOxoFGO/puH2E0DUjyR25s3bMGvWLCM2m81uscTL9fTSaNfok8dN/H/RxGhbbY3c3FzA56kAY2NjO/xOI4b9SVwtArYX9SvGzi/4GS0S3cHYmSwUCrVVS0xiJQ+bOe0affK4gblVf+cOvLx3j1K9uvA0Q2vftm3gj/O3rFsHL8i1+/f/VXn5a1VUqPQMg/0UZuxeBKPgUD+jdmPBLJ09e2dAQICltrY2m/oTlMDlFtKuUScPgUB18lDvoerdgASuKtcY0ZGGYhbBQVKtJPeal5NyDUVcI2CpqD2oFNRGc/NHGDtymUymwxrN4SgKEIp2LZ/AMU4evw8eTPXQrOYeetbISNUNCNjJ5sA91ixmfFBwjEJQwam5RsHh81JQyahdOGfFxImHFQqFiJXE41W06hqCvU/XklFJqJ8QcDdqk7FxXXh4+DzWD1xuGXEtrzOuMeE6cq01OIZrSSgabhcB5PPrIyIioliDWKyhG+zskhIkkgzUxQQnp4vfETk6Zm92cMjeLBZnxxOJRNnxQmH2JiJ7++w4e/scdcUS2dnRytuopm9bKj/G1lalbxiKFgpzlsnl29HB2f8AQvkHoInKWyIAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Warning: This is for <u><b>testers-only</b></u>!
+</p>
+</div>
+<p><a class="external text" data-href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" rel="noreferrer noopener" target="_blank">Review needed!</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" rel="noreferrer noopener" target="_blank">[archive]</a></sup> See also <a class="external free" data-href="https://manpages.debian.org/ssh_config" href="https://manpages.debian.org/ssh_config" rel="noreferrer noopener" target="_blank">https://manpages.debian.org/ssh_config</a> <sup><a data-href="https://web.archive.org/web/https://manpages.debian.org/ssh_config" href="https://web.archive.org/web/https://manpages.debian.org/ssh_config" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p><code>/etc/ssh/ssh_config</code>:
+</p>
+<pre>Host *
+
+## depends on local environment circumstances
+ForwardAgent yes
+
+## ipv4
+AddressFamily inet
+
+IdentityFile ~/.ssh/id_ed25519
+IdentitiesOnly yes
+
+Port 22
+Protocol 2
+ForwardX11 no
+PubkeyAuthentication yes
+StrictHostKeyChecking ask
+VisualHostKey yes
+HashKnownHosts yes
+User user
+Host host
+SendEnv LANG LC_*
+
+## Strongest ciphers:
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes256-ctr
+
+## Most secure MACs:
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-512,hmac-sha2-256-etm@openssh.com
+
+## Secure Kex algos:
+KexAlgorithms curve25519-sha256@libssh.org,curve25519-sha256,ecdh-sha2-nistp521,ecdh-sha2-nistp384
+
+Tunnel no
+#TunnelDevice any:any
+#PermitLocalCommand no
+#ProxyCommand ssh -q -W %h:%p gateway.example.com
+</pre>
+<h3><span class="mw-headline" id="Server_Configuration_File">Server Configuration File</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=7.html" title="Edit section: Server Configuration File">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,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" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Warning: This is for <u><b>testers-only</b></u>!
+</p>
+</div>
+<p><a class="external text" data-href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" href="https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" rel="noreferrer noopener" target="_blank">Review needed!</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" href="https://web.archive.org/web/https://forums.whonix.org/t/locking-down-your-ssh-client/7896/9" rel="noreferrer noopener" target="_blank">[archive]</a></sup> See also <a class="external free" data-href="https://manpages.debian.org/sshd_config" href="https://manpages.debian.org/sshd_config" rel="noreferrer noopener" target="_blank">https://manpages.debian.org/sshd_config</a> <sup><a data-href="https://web.archive.org/web/https://manpages.debian.org/sshd_config" href="https://web.archive.org/web/https://manpages.debian.org/sshd_config" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p><code>/etc/ssh/sshd_config</code>:
+</p>
+<pre>## Protocol 1 is dangerously outdated!
+Protocol 2
+
+## 22 is standard, you can make it anything. On commandline, when connecting as client, use the “-p” option if not port 22; example port 3243; ssh user@host -p 3243
+Port 22
+
+## means only ipv4, no v6 allowed
+AddressFamily inet
+
+## this is okay because of strict firewall/ AppArmor. For an onion-only server, you listen on 127.0.0.1
+ListenAddress 0.0.0.0
+
+## comment out if ipv6 is disabled via sysctl or iptables or both
+## comment in if ipv6 should be enabled
+#ListenAddress ::
+
+## location of server private key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+## Strongest ciphers:
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes256-ctr
+
+## Most secure MACs:
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-512,hmac-sha2-256-etm@openssh.com
+
+## Secure Kex algos:
+KexAlgorithms curve25519-sha256@libssh.org,curve25519-sha256,ecdh-sha2-nistp521,ecdh-sha2-nistp384
+
+## Logging - optional - okay to leave commented out
+#SyslogFacility AUTH (leave commented out if you do not require logging)
+
+# unless you need logging, leave commented out
+#LogLevel INFO
+
+# how long does the prompt stay if client has a passphrase to enter
+LoginGraceTime 2m
+
+# With keypairs, the "prohibit-password" option accomplishes the same thing so root is denied
+
+PermitRootLogin prohibit-password
+
+# Safer to deny root obviously
+#PermitRootLogin no
+
+## use public keys ed25519 so no password authentication. A passphrase is optional for the key, but that is not part of this option. This option refers to old style password-only authentication (not secure)
+PasswordAuthentication no
+
+StrictModes yes
+
+## number of allowed login attempts, if there is a passphrase associated with the key
+MaxAuthTries 3
+
+## number of allowed sessions with the same client
+MaxSessions 4
+
+## always use public keys, not passwords
+PubkeyAuthentication yes
+
+UsePAM yes
+
+## circumstance specific. This refers to the ssh-agent. Useful when running a local instance and client/server exist on same machine
+#AllowAgentForwarding yes
+
+## be careful with this. Avoid forwarding if you can. If you do not forward tcp, leave this commented out
+#AllowTcpForwarding
+
+## dependent on connection and network. Sometimes useful, sometimes not. An okay default is to say “no” and if it turns out you need it, then do “yes.”
+TCPKeepAlive yes
+
+## Forwarding X11 is not a good idea
+X11Forwarding no
+
+PrintMotd no
+
+## this prints the "Last login: Mon Dec 5 08:21:15 2019 from 192.33.4444" message
+#PrintLastLog yes
+
+#UseLogin no
+
+#PermitUserEnvironment no
+
+## second amount to keep connection alive
+ClientAliveInterval
+
+UseDNS no
+
+## this is a white space separated list of allowed user login names. Only user names on this list will be allowed to login
+AllowUsers user
+
+#Banner /etc/issue.net
+
+AcceptEnv LANG LC_*
+
+#Subsystem sftp /usr/lib/openssh/sftp-server
+
+GatewayPorts no
+
+#PermitTunnel no
+
+#ChrootDirectory none
+</pre>
+<h3><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=8.html" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Those are the completed SSH configuration files. Please note that the entries preceded by a <code>#</code> are not necessary for functional use; they are included only as examples of what is possible in SSH. If you do not have a specific use for any of the commented out options in either configuration file, do not use them at all.
+</p><p>The Ciphers, MACs and Kex algorithms are all the strongest possible at the time of writing with OpenSSH version 7.9 on Debian buster. The entries in the configuration files above are the most important and will establish a functional and well-guarded setup. Use ed25519 keys only -- rsa and ecdsa are outdated. Use the <code>ssh-keygen</code> command to generate the keys.
+</p><p>The <code>VisualHostKey yes</code> entry in the <code>/etc/ssh/ssh_config</code> file is so when you login, openssh shows you an ascii-generated picture of what the key looks like. In addition to all the other verifications, this is one last line of defense to alert you to a changed or wrong key.
+</p><p>Generally the newer OpenSSH's will choose the strongest cipher on their own when negotiating a connection, but the configuration files establish in what order they are parsed. Both sides need to have the same or compatible openssh versions and cipher, mac, and kex algorithm options.
+</p>
+<h2><span class="mw-headline" id="Firewall_Settings_and_Rules">Firewall Settings and Rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=9.html" title="Edit section: Firewall Settings and Rules">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,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" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Warning: This is for <u><b>testers-only</b></u>!
+</p>
+</div>
+<p>It is necessary to make specific firewall rules for your intended SSH activity. For example, if you wanted to connect to a server at <code>123.45.678</code> and both your configuration and the server's configuration specify port <code>4675</code> to communicate over:
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo iptables -A OUTPUT -p tcp -o [interface-name] -s [your client ssh ip] -d [ssh server ip] --dport 4675 --j ACCEPT</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo iptables -A OUTPUT -p tcp -o [interface-name] -s [your client ssh ip] -d [ssh server ip] --dport 4675 --j ACCEPT</textarea>
+</div>
+</div>
+<p>
+</p><p>Then to let them respond:
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo iptables -A INPUT -p tcp -i [interface-name] -s [ssh server ip] -d [your client ip] --dport 4675 --j ACCEPT</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo iptables -A INPUT -p tcp -i [interface-name] -s [ssh server ip] -d [your client ip] --dport 4675 --j ACCEPT</textarea>
+</div>
+</div>
+<p>
+</p><p>This assumes a default-deny policy for INPUT and OUTPUT. If you have a default-allow for OUTPUT, then the following rule must be added as the last one in the OUTPUT chain:
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo iptables -A OUTPUT --j DROP</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo iptables -A OUTPUT --j DROP</textarea>
+</div>
+</div>
+<p>
+</p><p>This ensures the outgoing rules you have are the only ones that allow traffic. Iptables parses in order, so when it does not see a rule matching a packet not on your list, it checks each one in the chain until it finds a match with the last rule and drops the packet. Also, SSH only uses the TCP protocol, so no UDP rules are explicitly needed.
+</p><p>This should complete the SSH setup. Some people also recommend re-generating the moduli file that comes in <code>/etc/ssh</code>. If you use the settings above, look at the kex algorithms. Since no diffie hellman group exchange kex algorithms are used to exchange keys, it is unnecessary to regenerate the moduli. The chosen kex algo is curve25519.
+</p>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=10.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="Remote_Administration" href="./Remote_Administration.html" title="Remote Administration">Remote Administration</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=2.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=SSH&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=SSH&amp;action=edit&amp;section=11.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys" href="https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys" rel="noreferrer noopener" target="_blank">https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys</a> <sup><a data-href="https://web.archive.org/web/https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys" href="https://web.archive.org/web/https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
@@ -136,7 +466,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./SSH" href="https://facebook.com/sharer.php?u=./SSH">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>We are looking for help in managing our <a data-href="Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>Follow us on <a class="external text" data-href="https://twitter.com/Whonix" href="https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">Twitter</a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/Whonix" href="https://web.archive.org/web/https://twitter.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://www.facebook.com/Whonix" href="https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">Facebook</a> <sup><a data-href="https://web.archive.org/web/https://www.facebook.com/Whonix" href="https://web.archive.org/web/https://www.facebook.com/Whonix" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a data-href="SSH" href="./SSH" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SSH" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/SSH" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -148,7 +478,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=SSH&amp;oldid=54585" dir="ltr" href="https://www.whonix.org/w/index.php?title=SSH&amp;oldid=54585">https://www.whonix.org/w/index.php?title=SSH&amp;oldid=54585</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=SSH&amp;oldid=56704" dir="ltr" href="https://www.whonix.org/w/index.php?title=SSH&amp;oldid=56704">https://www.whonix.org/w/index.php?title=SSH&amp;oldid=56704</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
