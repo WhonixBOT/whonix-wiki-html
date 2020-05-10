@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Broken/Documentation - Whonix
  url: ../Broken/Documentation
- date: Sat May  9 07:34:41 2020
+ date: Sun May 10 07:34:21 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -139,7 +139,7 @@ end
 for i = 1, lim do
 ret[#ret + 1] = select(i, ...)
 end
-return '<small style="font-style: normal;">(' .. table.concat(ret, ' | ') .. ')</small>'
+return '<small style="font-style:normal">(' .. table.concat(ret, ' | ') .. ')</small>'
 end
 </p><p>p.makeToolbar = makeToolbar
 </p>
@@ -187,7 +187,7 @@ root
 :wikitext(p.protectionTemplate(env))
 :wikitext(p.sandboxNotice(args, env))
 </p><p>
--- This div tag is from </p><div class="template-documentation iezoomfix" id="template-documentation"><div style="padding-bottom:3px;border-bottom:1px solid #aaa;margin-bottom:1ex"><span style="font-size: 150%">Documentation</span><span class="mw-editsection plainlinks" id="doc_editlinks">[<a class="new" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=edit&amp;redlink=1.html" title="Broken/Documentation/doc (page does not exist)">view</a>] [<a class="external text" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=edit" rel="noreferrer noopener" target="_blank">edit</a>] [<a class="external text" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=history" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=history" rel="noreferrer noopener" target="_blank">history</a>] [<span class="noprint plainlinks purgelink"><a class="external text" data-href="/w/index.php?title=Broken/Documentation&amp;action=purge" href="https://www.whonix.org/w/index.php?title=Broken/Documentation&amp;action=purge" rel="noreferrer noopener" target="_blank"><span title="Purge this page">purge</span></a></span>]</span></div>, but moving it here
+-- This div tag is from </p><div class="template-documentation iezoomfix" id="template-documentation"><div style="padding-bottom:3px;border-bottom:1px solid #aaa;margin-bottom:1ex"><span style="font-size:150%">Documentation</span><span class="mw-editsection plainlinks" id="doc_editlinks">[<a class="new" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=edit&amp;redlink=1.html" title="Broken/Documentation/doc (page does not exist)">view</a>] [<a class="external text" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=edit" rel="noreferrer noopener" target="_blank">edit</a>] [<a class="external text" data-href="/w/index.php?title=Broken/Documentation/doc&amp;action=history" href="https://www.whonix.org/w/index.php?title=Broken/Documentation/doc&amp;action=history" rel="noreferrer noopener" target="_blank">history</a>] [<span class="noprint plainlinks purgelink"><a class="external text" data-href="/w/index.php?title=Broken/Documentation&amp;action=purge" href="https://www.whonix.org/w/index.php?title=Broken/Documentation&amp;action=purge" rel="noreferrer noopener" target="_blank"><span title="Purge this page">purge</span></a></span>]</span></div>, but moving it here
 <p>	-- so that we don't have to worry about unclosed tags.
 :tag('div')
 :attr('id', message('main-div-id'))
@@ -434,7 +434,7 @@ end
 text = text .. makeCategoryLink(message('sandbox-category'))
 omargs.text = text
 </p>
-local ret = '<div style="clear: both;"></div>'
+local ret = '<div style="clear:both"></div>'
 <p>	ret = ret .. messageBox.main('ombox', omargs)
 return ret
 end
