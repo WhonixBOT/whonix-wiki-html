@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/git - Whonix
  url: ../Dev/git
- date: Thu Jun  4 07:42:46 2020
+ date: Fri Jun  5 07:43:04 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -193,8 +193,9 @@
 </div>
 <p>
 </p><p>Get source code including git submodules.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+<ul><li>Whonix ™ version <code>15.0.1.3.4</code> <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>:
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>git clone --branch 15.0.1.3.4-stable --jobs=4 --recursive https://github.com/Whonix/Whonix</pre>
 </div>
@@ -203,8 +204,19 @@
 </div>
 </div>
 <p>
-</p><p>Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.
-</p><p>Shift to the source folder.
+</p></li>
+<li>Whonix ™ version <code>15.0.1.3.8</code> and above <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>:
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>git clone --branch 15.0.1.3.8-developers-only --jobs=4 --recursive https://gitlab.com/whonix/Whonix.git</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">git clone --branch 15.0.1.3.8-developers-only --jobs=4 --recursive https://gitlab.com/whonix/Whonix.git</textarea>
+</div>
+</div>
+<p>
+</p></li></ul>
+<p>Shift to the source folder.
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -217,7 +229,7 @@
 <p>
 </p>
 <h3><span class="mw-headline" id="OpenPGP_Verify_the_Source_Code">OpenPGP Verify the Source Code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/git&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/git&amp;action=edit&amp;section=17.html" title="Edit section: OpenPGP Verify the Source Code">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><b>This chapter is recommended for better security, but is not strictly required.</b><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+<p><b>This chapter is recommended for better security, but is not strictly required.</b><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p>Change directly into source code folder.
 </p><p>
 </p><div class="codeContainerNew">
@@ -229,7 +241,7 @@
 </div>
 </div>
 <p>
-</p><p>Git fetch. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>Git fetch. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -264,7 +276,7 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@riseup.net&gt;" [ultim
 </p>
 </blockquote>
 <div style="background:#f8f8f8;border:2px;padding:5px;margin:10px;border-style:solid;border-color:#000;width:100%">
-<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-pagespeed-url-hash="86883119" decoding="async" id="pagespeed_img_60t2oMoI8a4" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x"/></a> Check the GPG signature timestamp makes sense. For example, if you previously saw a signature from 2020 and now see a signature from 2019, then this might be a targeted rollback (downgrade) or indefinite freeze attack. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="warning" data-pagespeed-url-hash="86883119" decoding="async" id="pagespeed_img_60t2oMoI8a4" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x"/></a> Check the GPG signature timestamp makes sense. For example, if you previously saw a signature from 2020 and now see a signature from 2019, then this might be a targeted rollback (downgrade) or indefinite freeze attack. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 </div>
 <p>The warning.
@@ -275,7 +287,7 @@ gpg: There is no indication that the signature belongs to the owner.
 </p>
 </blockquote>
 <p>Is explained on the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> (<a class="external text" data-href="/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace <code>15.0.1.3.4</code> with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> (<a class="external text" data-href="/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace <code>15.0.1.3.4</code> with the actual git tag being verified).
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -486,7 +498,7 @@ grep \
 </div>
 </div>
 <p>
-</p><p>Unless you want to use git for pushing changes to remotes which you probably won't in a testing VM you can use the following git config without using any real names or pseudonyms. (These are the git suggested defaults. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>)
+</p><p>Unless you want to use git for pushing changes to remotes which you probably won't in a testing VM you can use the following git config without using any real names or pseudonyms. (These are the git suggested defaults. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>)
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -542,7 +554,7 @@ grep \
 </div>
 </div>
 <p>
-</p><p>Commit all files to git. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Commit all files to git. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -648,7 +660,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Dev/git" href="https://facebook.com/sharer.php?u=../Dev/git">Facebook</a>
 </p>
 <div style="padding-bottom:1px;padding-top:6px;border:thin solid #000;background:#eee;text-align:center">
-<p>Have you <a class="external text" data-href="/wiki/Contribute" href="../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/../Contribute" href="https://web.archive.org/web/../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="/wiki/Authorship" href="../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/../Authorship" href="https://web.archive.org/web/../Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
+<p>Interested in becoming an author for the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup> or writing about anonymity, privacy and security? Please get in touch!
 </p>
 </div>
 <p><a data-href="git" href="../Dev/git" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" id="pagespeed_img_hq1WWafaaD19" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/git" href="http://dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/git" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" decoding="async" id="pagespeed_img_n_u34nLBpv20" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -659,20 +671,26 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a>.
 </font></p><p><font size="-1">
 </font></p><div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+Remember it is <b>W</b>honix, not <b>w</b>honix! If prompted for a username for github, you have mistyped the web address.</span>
 </li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+First <b>w</b>honix (lower case), second after slash is <b>W</b>honix (uppercase)! If prompted for a username for github, you have mistyped the web address. Better copy/paste.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">See <a data-href="/wiki/Trust" href="../Trust.html" title="Trust">Trust</a>.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
 Optional. [...]</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 As defined by TUF: Attacks and Weaknesses:
 <ul><li><a class="external free" data-href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md</a> <sup><a data-href="https://web.archive.org/web/https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://web.archive.org/web/https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="http://www.webcitation.org/6F7Io2ncN" href="http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">http://www.webcitation.org/6F7Io2ncN</a> <sup><a data-href="https://web.archive.org/web/http://www.webcitation.org/6F7Io2ncN" href="https://web.archive.org/web/http://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
 Beginning from git tag 9.6 and above.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 <pre>git commit -a -m .
 
 *** Please tell me who you are.
@@ -688,7 +706,7 @@ Omit --global to set the identity only in this repository.
 fatal: empty ident name (for &lt;(null)&gt;) not allowed
 </pre></span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
 Without any useful commit message. <code>.</code> is the commit message here.</span>
 </li>
 </ol></div>
