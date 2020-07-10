@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Section link - Whonix
  url: ./Section_link
- date: Sat Jun 13 07:56:03 2020
+ date: Fri Jul 10 07:51:55 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -169,7 +169,7 @@ local page
 local sections, options = {}, {}
 for k, v in pairs(args) do
 if k == 1 then
--- Doing this in the loop because of a bug in <a data-href="/wiki/Module:Arguments" href="./Module:Arguments.html" title="Module:Arguments">Module:Arguments</a>
+-- Doing this in the loop because of a bug in <a class="new" data-href="/w/index.php?title=Module:Arguments&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Module:Arguments&amp;action=edit&amp;redlink=1.html" title="Module:Arguments (page does not exist)">Module:Arguments</a>
 -- when using pairs with deleted arguments.
 page = mw.text.decode(v, decodeNamedEntities)
 elseif type(k) == 'number' then
