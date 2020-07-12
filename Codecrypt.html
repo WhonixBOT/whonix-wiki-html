@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Post-Quantum Cryptography (PQCrypto)
  url: ./Codecrypt
- date: Fri Jul 10 07:32:23 2020
+ date: Sun Jul 12 07:32:42 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -28,8 +28,8 @@
 <meta content="./PQCrypto#Codecrypt" property="og:url"/>
 <meta content="In ~10 years Quantum Computers will break todays common asymmetric public-key cryptography algorithms used for web encryption (https), e-mail encryption (gnupg...), ssh and others." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/2/21/Quantum-869533640.jpg" property="og:image"/>
-<meta content="2020-06-19T12:27:43Z" property="article:modified_time"/>
-<meta content="2020-06-19T12:27:43Z" property="article:published_time"/>
+<meta content="2020-07-11T03:08:15Z" property="article:modified_time"/>
+<meta content="2020-07-11T03:08:15Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Post-Quantum Cryptography (PQCrypto)" property="twitter:title"/>
 <meta content="In ~10 years Quantum Computers will break todays common asymmetric public-key cryptography algorithms used for web encryption (https), e-mail encryption (gnupg...), ssh and others." property="twitter:description"/>
@@ -84,7 +84,7 @@
 </div>
 <div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Quantum_Computers"><span class="tocnumber">1</span> <span class="toctext">Quantum Computers</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Broken_and_Impacted_Cryptographic_Algorithms"><span class="tocnumber">2</span> <span class="toctext">Broken and Impacted Cryptographic Algorithms</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Post-quantum_Cryptography"><span class="tocnumber">3</span> <span class="toctext">Post-quantum Cryptography</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Software"><span class="tocnumber">4</span> <span class="toctext">Software</span></a></li>
@@ -109,14 +109,14 @@
 <li class="toclevel-1 tocsection-14"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
-<h1><span class="mw-headline" id="Quantum_Computers">Quantum Computers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1.html" title="Edit section: Quantum Computers">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external text" data-href="https://en.wikipedia.org/wiki/Quantum_computer" href="https://en.wikipedia.org/wiki/Quantum_computer" rel="noreferrer noopener" target="_blank">Quantum computers</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_computer" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_computer" rel="noreferrer noopener" target="_blank">[archive]</a></sup> are based on the phenomena of <a class="external text" data-href="https://en.wikipedia.org/wiki/Quantum_mechanics" href="https://en.wikipedia.org/wiki/Quantum_mechanics" rel="noreferrer noopener" target="_blank">quantum mechanics</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_mechanics" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_mechanics" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, as opposed to familiar classical computers based on transistors which encode data into binary digits (bits). In traditional computing, this process always leads to one of two possible states (0 or 1). <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> However, quantum computation relies on <a class="external text" data-href="https://en.wikipedia.org/wiki/Qubit" href="https://en.wikipedia.org/wiki/Qubit" rel="noreferrer noopener" target="_blank">qubits</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Qubit" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Qubit" rel="noreferrer noopener" target="_blank">[archive]</a></sup> that can express many different states simultaneously ("superpositions"), meaning that when/if this technology is fully developed, it will be capable of solving some types of mathematical problems virtually instantaneously. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p>Assembling a quantum computer is now an engineering problem rather than one impeded by laws of physics -- a theoretically imperfect machine can still yield useful results. Military and government agencies have invested heavily in this area because of the implications for today's widely used public-key cryptography. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> Ciphertext that is invulnerable to classical computing will be shredded into ribbons by a large-scale quantum computer. Similarly, all Tor traffic will be vulnerable until quantum-resistant cryptography is implemented.
 </p><p>The Snowden documents reveal that all encrypted data traversing the internet is intercepted and stored indefinitely for cryptanalysis should there be a scientific breakthrough. A global arms race has ensued between the United States, EU, Russia, China, Israel and other global powers due to the immense geo-political, economic, intelligence and military advantages this technology would confer.
-</p><p>In 2018, the academic and corporate consensus is that a large quantum computer will be built in around 10-15 years. It is safe to assume that well-funded intelligence communities are capable of greatly reducing this development period.
+</p><p>The academic and corporate consensus is that a large quantum computer will be built in around 10-15 years. It is safe to assume that well-funded intelligence communities are capable of greatly reducing this development period.
 </p>
 <h1><span class="mw-headline" id="Broken_and_Impacted_Cryptographic_Algorithms">Broken and Impacted Cryptographic Algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=2.html" title="Edit section: Broken and Impacted Cryptographic Algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>The US National Institute of Standards and Technology has recently summarized the <a class="external text" data-href="http://csrc.nist.gov/publications/drafts/nistir-8105/nistir_8105_draft.pdf" href="http://csrc.nist.gov/publications/drafts/nistir-8105/nistir_8105_draft.pdf" rel="noreferrer noopener" target="_blank">impact of quantum computing</a> <sup><a data-href="https://web.archive.org/web/http://csrc.nist.gov/publications/drafts/nistir-8105/nistir_8105_draft.pdf" href="https://web.archive.org/web/http://csrc.nist.gov/publications/drafts/nistir-8105/nistir_8105_draft.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup> on common cryptographic algorithms.
+<p>The US National Institute of Standards and Technology has summarized the <a class="external text" data-href="https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf" href="https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf" rel="noreferrer noopener" target="_blank">impact of quantum computing</a> <sup><a data-href="https://web.archive.org/web/https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf" href="https://web.archive.org/web/https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup> on common cryptographic algorithms.
 </p><p><b>Table:</b> <i>Cryptographic Impacts of Quantum Computing</i>
 </p>
 <table class="wikitable">
@@ -190,7 +190,7 @@
 </p>
 <ul><li><a class="external text" data-href="https://github.com/exaexa/codecrypt" href="https://github.com/exaexa/codecrypt" rel="noreferrer noopener" target="_blank">Codecrypt</a> <sup><a data-href="https://web.archive.org/web/https://github.com/exaexa/codecrypt" href="https://web.archive.org/web/https://github.com/exaexa/codecrypt" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://www.cyph.com/" href="https://www.cyph.com/" rel="noreferrer noopener" target="_blank">Cyph</a> <sup><a data-href="https://web.archive.org/web/https://www.cyph.com/" href="https://web.archive.org/web/https://www.cyph.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
-<li><a class="external text" data-href="http://red-bean.com/onetime/" href="http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup><a data-href="https://web.archive.org/web/http://red-bean.com/onetime/" href="https://web.archive.org/web/http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external text" data-href="https://red-bean.com/onetime/" href="https://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup><a data-href="https://web.archive.org/web/https://red-bean.com/onetime/" href="https://web.archive.org/web/https://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://tinyssh.org/" href="https://tinyssh.org/" rel="noreferrer noopener" target="_blank">TinySSH (PQC planned)</a> <sup><a data-href="https://web.archive.org/web/https://tinyssh.org/" href="https://web.archive.org/web/https://tinyssh.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://github.com/open-quantum-safe/liboqs" href="https://github.com/open-quantum-safe/liboqs" rel="noreferrer noopener" target="_blank">liboqs</a> <sup><a data-href="https://web.archive.org/web/https://github.com/open-quantum-safe/liboqs" href="https://web.archive.org/web/https://github.com/open-quantum-safe/liboqs" rel="noreferrer noopener" target="_blank">[archive]</a></sup> - is a FLOSS implementation of many NIST candidates by Douglas Stebila, an Associate Professor of cryptography at the University of Waterloo. It provides pq for OpenSSL and OpenSSH using software.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup></li></ul>
 <p>Before adopting any software, first consider if: <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
@@ -200,14 +200,14 @@
 <li>The software has been widely adopted to help users blend in.</li></ul>
 <h1><span class="mw-headline" id="Setup_Guides">Setup Guides</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=5.html" title="Edit section: Setup Guides">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Codecrypt">Codecrypt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=6.html" title="Edit section: Codecrypt">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This is a GnuPG-like Unix program for encryption and signing that only uses quantum-resistant algorithms:<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>This is a GnuPG-like Unix program for encryption and signing that only uses quantum-resistant algorithms: <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
 <ul><li>McEliece cryptosystem (compact QC-MDPC variant) for encryption.</li>
 <li>Hash-based Merkle tree algorithm (FMTSeq variant) for digital signatures.</li></ul>
 <p>Codecrypt is free software. The code is licensed under terms of LGPL3 in order to make combinations with other tools easier.
 </p>
 <h3><span class="mw-headline" id="Use_Instructions">Use Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=7.html" title="Edit section: Use Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Since Whonix ™ 14, Codecrypt is included by default. See the <a class="external text" data-href="http://e-x-a.org/codecrypt/ccr.1.html" href="http://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">Codecrypt manual page</a> <sup><a data-href="https://web.archive.org/web/http://e-x-a.org/codecrypt/ccr.1.html" href="https://web.archive.org/web/http://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for common use-cases.
+<p>Whonix ™ includes Codecrypt by default. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> See the <a class="external text" data-href="https://e-x-a.org/codecrypt/ccr.1.html" href="https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">Codecrypt manual page</a> <sup><a data-href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for common use-cases.
 </p>
 <h4><span class="mw-headline" id="Basic_Commands">Basic Commands</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=8.html" title="Edit section: Basic Commands">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
 <p>Generate a strong(er) asymmetric encryption key.
@@ -234,9 +234,24 @@
 <p>
 </p>
 <h4><span class="mw-headline" id="Key_Management">Key Management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=9.html" title="Edit section: Key Management">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Back-up keys: It is easier to backup the ccr folder in the home directory, changing its name from/to <code>.ccr</code> upon restore. Enable hidden file view in the file browser to see it.
-</p><p>Export specified public key for sharing with contacts. If a signature key was also created, both types of keys will be exported for distribution in a single file if they share the same name.
-</p><p>
+<p><b>Table:</b> <i>Codecrypt Key Management Commands</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Category</b>
+</th>
+<th scope="col"><b>Command</b>
+</th></tr>
+<tr>
+<th scope="row">Back-up keys
+</th>
+<td>It is easier to backup the ccr folder in the home directory, changing its name from/to <code>.ccr</code> upon restore. Enable hidden file view in the file browser to see it.
+</td></tr>
+<tr>
+<th scope="row">Export specified public key for sharing with contacts
+</th>
+<td>If a signature key was also created, both types of keys will be exported for distribution in a single file if they share the same name.
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -F [keyname] -ap &gt; [keyname]</pre>
@@ -246,8 +261,13 @@
 </div>
 </div>
 <p>
-</p><p>Export specified private key. The <code>-F</code> parameter chooses the key to be used. To enumerate all keys in the keyring run <code>ccr -k</code> for public ones and <code>ccr -K</code> for private.
-</p><p>
+</p>
+</td></tr>
+<tr>
+<th scope="row">Export specified private key
+</th>
+<td>The <code>-F</code> parameter chooses the key to be used. To enumerate all keys in the keyring run <code>ccr -k</code> for public ones and <code>ccr -K</code> for private.
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -F [keyname] -aP &gt; [keyname]</pre>
@@ -257,9 +277,13 @@
 </div>
 </div>
 <p>
-</p><p>Import a public key.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+</td></tr>
+<tr>
+<th scope="row">Import a public key
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -ai &lt; [contactkey]</pre>
 </div>
@@ -268,9 +292,12 @@
 </div>
 </div>
 <p>
-</p><p>Import a private key.
-</p><p>
-</p><div class="codeContainerNew">
+</p></td></tr>
+<tr>
+<th scope="row">Import a private key
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -aI &lt; [myprivatekey]</pre>
 </div>
@@ -279,10 +306,21 @@
 </div>
 </div>
 <p>
-</p>
+</p></td></tr></tbody></table>
 <h4><span id="Encryption/Decryption,_Signing_and_Verification"></span><span class="mw-headline" id="Encryption.2FDecryption.2C_Signing_and_Verification">Encryption/Decryption, Signing and Verification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=10.html" title="Edit section: Encryption/Decryption, Signing and Verification">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Encrypt a plaintext message file only to an already imported contact key. Note this will be inaccessible to you. Save a plaintext copy for archival purposes.
-</p><p>
+<p><b>Table:</b> <i>Codecrypt Encryption/Decryption, Signing and Verification Commands</i>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Category</b>
+</th>
+<th scope="col"><b>Command</b>
+</th></tr>
+<tr>
+<th scope="row">Encrypt a plaintext message file only to an already imported contact key
+</th>
+<td>Note this will be inaccessible to you. Save a plaintext copy for archival purposes.
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -aer [contactkey] -R plaintext &gt; ciphertext</pre>
@@ -292,10 +330,13 @@
 </div>
 </div>
 <p>
-</p><p>Encrypt and sign a plaintext message file only to an already imported contact key.
 </p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,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" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Note: A FMTSeq master signature key has a limited number (65536) of subkeys each only used once to sign data. Reusing a subkey would break its security properties. Beware: Rolling back a VM snapshot or restoring a stale snapshot of the private key folder will result in key reuse. Codecrypt issues a warning after every time you sign "notice: 65535 signatures remaining". Backup/restore the private keys everytime after a signature is made.<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</td></tr>
+<tr>
+<th scope="row">Encrypt and sign a plaintext message file only to an already imported contact key
+</th>
+<td><div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-url-hash="86883119" data-src="data:image/png;base64,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" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,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"/></a> Note: A FMTSeq master signature key has a limited number (65536) of subkeys each only used once to sign data. Reusing a subkey would break its security properties. Beware: Rolling back a VM snapshot or restoring a stale snapshot of the private key folder will result in key reuse. Codecrypt issues a warning after every time you sign "notice: 65535 signatures remaining". Backup/restore the private keys everytime after a signature is made.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 </div>
 <p>
@@ -308,9 +349,13 @@
 </div>
 </div>
 <p>
-</p><p>Decrypt a ciphertext message creating plaintext output.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+</td></tr>
+<tr>
+<th scope="row">Decrypt a ciphertext message creating plaintext output
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -adR ciphertext &gt; plaintext</pre>
 </div>
@@ -319,8 +364,12 @@
 </div>
 </div>
 <p>
-</p><p>Decrypt and verify a signed ciphertext message creating plaintext output. A contact's public signature key must be imported beforehand.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
-</p><p>
+</p></td></tr>
+<tr>
+<th scope="row">Decrypt and verify a signed ciphertext message creating plaintext output
+</th>
+<td>A contact's public signature key must be imported beforehand.<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -advR ciphertext &gt; plaintext</pre>
@@ -330,9 +379,13 @@
 </div>
 </div>
 <p>
-</p><p>Create clearsigned text output.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+</td></tr>
+<tr>
+<th scope="row">Create clearsigned text output
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -s -C -R plaintext &gt; clearsigned</pre>
 </div>
@@ -352,9 +405,13 @@
 </div>
 </div>
 <p>
-</p><p>Create a detached signature for a binary such as a code package.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+</td></tr>
+<tr>
+<th scope="row">Create a detached signature for a binary such as a code package
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -sab package.ccr &lt; package</pre>
 </div>
@@ -363,9 +420,12 @@
 </div>
 </div>
 <p>
-</p><p>Verify detached signature.
-</p><p>
-</p><div class="codeContainerNew">
+</p></td></tr>
+<tr>
+<th scope="row">Verify detached signature
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -vab package.ccr &lt; package</pre>
 </div>
@@ -374,8 +434,12 @@
 </div>
 </div>
 <p>
-</p><p>Create hashfile from a large file. Contents are not signed asymmetrically in this case, but instead a file with cryptographic hashes that can later be used to verify if the contents of input was changed, is generated. The contents of the hashfile could then be clearsigned asymmetrically, making it act as a detached signature file.<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
-</p><p>
+</p></td></tr>
+<tr>
+<th scope="row">Create hashfile from a large file
+</th>
+<td>Contents are not signed asymmetrically in this case, but instead a file with cryptographic hashes that can later be used to verify if the contents of input was changed, is generated. The contents of the hashfile could then be clearsigned asymmetrically, making it act as a detached signature file. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+<p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -saS hashfile.ccr &lt; big_data.iso</pre>
@@ -385,9 +449,13 @@
 </div>
 </div>
 <p>
-</p><p>Verify the hashfile.
-</p><p>
-</p><div class="codeContainerNew">
+</p>
+</td></tr>
+<tr>
+<th scope="row">Verify the hashfile
+</th>
+<td>
+<div class="codeContainerNew">
 <div class="preDiv">
 <pre>ccr -vaS hashfile.ccr &lt; the_same_big_data.iso</pre>
 </div>
@@ -396,35 +464,38 @@
 </div>
 </div>
 <p>
-</p>
+</p></td></tr></tbody></table>
 <h4><span class="mw-headline" id="Message_Formatting">Message Formatting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=11.html" title="Edit section: Message Formatting">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>Even without direct Thunderbird support, it is still possible to format messages to account for replies. However users should be careful to not mistakenly send unencrypted replies. TorBirdy disables draft syncing on the host e-mail server, however it is still advisable to disable the Internet connection temporarily in case the send button is accidentally pressed before the message is encrypted with Codecrypt.
+<p>Even without direct Thunderbird support, it is still possible to format messages to account for replies. However users should be careful to not mistakenly send unencrypted replies. It is advisable to disable the Internet connection temporarily to prevent the accidental sending of messages before they are encrypted with Codecrypt, and because TorBirdy is no longer available to automatically disable draft syncing on the host email server.
 </p><p>Steps:
 </p>
-<ul><li>Click reply in Thunderbird and copy the string "John Doe:"</li>
+<ol><li>Disable the Internet connection.</li>
+<li>Click reply in Thunderbird and copy the string "John Doe:"</li>
 <li>Format the correspondent's text as a reply by pasting it: <code>Edit</code> → <code>Paste As Quotation</code></li>
 <li>Copy the result to the text editor window. Continue composing the message with your replies interspersed between the quotes.</li>
 <li>Save and encrypt.</li>
 <li>Paste the ciphertext into the Thunderbird reply window and completely replace the existing text.</li>
-<li>Re-establish the Internet connection, then press send.</li></ul>
+<li>Re-establish the Internet connection, then press send.</li></ol>
 <h2><span class="mw-headline" id="OneTime">OneTime</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=12.html" title="Edit section: OneTime">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>One-time pads are the only provably unbreakable encryption scheme ever invented, assuming a functional and non-backdoored random number generator (RNG). <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> <a class="external text" data-href="http://red-bean.com/onetime/" href="http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup><a data-href="https://web.archive.org/web/http://red-bean.com/onetime/" href="https://web.archive.org/web/http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> is a program that sets up a one-time pad on a user's computer, and helps to protect from reuse of pads which breaks the overall security model. OneTime is available in Debian. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+<p>One-time pads are the only provably unbreakable encryption scheme ever invented, assuming a functional and non-backdoored random number generator (RNG). <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> <a class="external text" data-href="http://red-bean.com/onetime/" href="http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">OneTime</a> <sup><a data-href="https://web.archive.org/web/http://red-bean.com/onetime/" href="https://web.archive.org/web/http://red-bean.com/onetime/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> is a program that sets up a one-time pad on a user's computer, and helps to protect from reuse of pads which breaks the overall security model. OneTime is available in Debian. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
 </p><p>OneTime can encrypt any kind of file -- it does not matter if the file's contents are Base64-encoded or not, because OneTime is not interpreting the contents. OneTime simply treats the file as a string of bits. Notably this is true for most encryption software; OneTime is not unique in this regard.
-</p><p>One-time pads should be completely secure against cryptographic attacks by quantum computers or other avenues. So long as the encryption key is truly random and the key is as long as the message, then all possible plaintexts are equally likely. Quantum computers are not telepathic, so messages properly encrypted with a one-time pad will remain impervious to cryptographic attacks. Of course, using the system is difficult in practice due to the logistics of key exchange, but quantum computing does not affect that reality. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+</p><p>One-time pads should be completely secure against cryptographic attacks by quantum computers or other avenues. So long as the encryption key is truly random and the key is as long as the message, then all possible plaintexts are equally likely. Quantum computers are not telepathic, so messages properly encrypted with a one-time pad will remain impervious to cryptographic attacks. Of course, using the system is difficult in practice due to the logistics of key exchange, but quantum computing does not affect that reality. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
 </p><p>One-time pads come with several limitations:
 </p>
 <ul><li>The message and the key are identical in size; this issue is negated by the large size of contemporary HDD/SSDs.</li>
 <li>It is impossible to securely contact strangers because the pad file must be exchanged in person or by other trustworthy peers. Sending the pad online only makes it as strong as the asymmetric cryptography that is in use.</li>
 <li>Message integrity cannot be verified, meaning there is no way for the recipient to discover if the ciphertext was tampered with during transit.</li>
-<li>The old pad material must never be reused to encrypt additional different messages. If this advice is ignored, the encryption is completely broken. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup></li></ul>
+<li>The old pad material must never be reused to encrypt additional different messages. If this advice is ignored, the encryption is completely broken. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup></li></ul>
+<p>See also: <a data-href="One_Time_Pad" href="./One_Time_Pad.html" title="One Time Pad">Physical One-time Pad</a>.
+</p>
 <h1><span class="mw-headline" id="Miscellaneous">Miscellaneous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=13.html" title="Edit section: Miscellaneous">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li><a class="external text" data-href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" rel="noreferrer noopener" target="_blank">Forum discussion about this wiki page</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/post-quantum-cryptography-pqc" href="https://web.archive.org/web/https://forums.whonix.org/t/post-quantum-cryptography-pqc" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<ul><li><a class="external text" data-href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" href="https://forums.whonix.org/t/post-quantum-cryptography-pqc" rel="noreferrer noopener" target="_blank">Forum discussion: post-quantum cryptography - PQC</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/post-quantum-cryptography-pqc" href="https://web.archive.org/web/https://forums.whonix.org/t/post-quantum-cryptography-pqc" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=PQCrypto&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;action=edit&amp;section=14.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Quantum_computer" href="https://en.wikipedia.org/wiki/Quantum_computer" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Quantum_computer</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_computer" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_computer" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">In 2018, the technology is still reported to be in its infancy and only capable of solving basic problems, but it is developing rapidly. No problems have <i>yet</i> been solved faster than with a classical computer.</span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">The technology is still reported to be in its infancy and only capable of solving basic problems, but it is developing rapidly. No problems have <i>yet</i> been solved faster than with a classical computer.</span>
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">For instance, a single qubit can represent a 0, 1, or <a class="external text" data-href="https://en.wikipedia.org/wiki/Quantum_superposition" href="https://en.wikipedia.org/wiki/Quantum_superposition" rel="noreferrer noopener" target="_blank">quantum superposition</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_superposition" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Quantum_superposition" rel="noreferrer noopener" target="_blank">[archive]</a></sup> of those two qubit states. A qubit pair can be in a superposition of 4 states, three qubits can be in a superposition of 8 states and so on. Quantum computers with <i>n</i> qubits can be in a superposition of 2^{n} different states simultaneously.</span>
 </li>
@@ -444,25 +515,27 @@
 </li>
 <li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://gitea.blesmrt.net/exa/codecrypt" href="https://gitea.blesmrt.net/exa/codecrypt" rel="noreferrer noopener" target="_blank">https://gitea.blesmrt.net/exa/codecrypt</a> <sup><a data-href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt" href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://e-x-a.org/codecrypt/" href="http://e-x-a.org/codecrypt/" rel="noreferrer noopener" target="_blank">http://e-x-a.org/codecrypt/</a> <sup><a data-href="https://web.archive.org/web/http://e-x-a.org/codecrypt/" href="https://web.archive.org/web/http://e-x-a.org/codecrypt/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://e-x-a.org/codecrypt/" href="https://e-x-a.org/codecrypt/" rel="noreferrer noopener" target="_blank">https://e-x-a.org/codecrypt/</a> <sup><a data-href="https://web.archive.org/web/https://e-x-a.org/codecrypt/" href="https://web.archive.org/web/https://e-x-a.org/codecrypt/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://e-x-a.org/codecrypt/ccr.1.html" href="https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">https://e-x-a.org/codecrypt/ccr.1.html</a> <sup><a data-href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">Since Whonix ™ 14.</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" rel="noreferrer noopener" target="_blank">https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf</a> <sup><a data-href="https://web.archive.org/web/https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" href="https://web.archive.org/web/https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://e-x-a.org/codecrypt/ccr.1.html" href="https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">https://e-x-a.org/codecrypt/ccr.1.html</a> <sup><a data-href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" href="https://web.archive.org/web/https://e-x-a.org/codecrypt/ccr.1.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" rel="noreferrer noopener" target="_blank">https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1</a> <sup><a data-href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" href="https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" rel="noreferrer noopener" target="_blank">https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf</a> <sup><a data-href="https://web.archive.org/web/https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" href="https://web.archive.org/web/https://archive.fosdem.org/2017/schedule/event/quantum/attachments/slides/1774/export/events/attachments/quantum/slides/1774/pqc.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/One-time_pad" href="https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/One-time_pad</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/One-time_pad" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" href="https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" rel="noreferrer noopener" target="_blank">https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1</a> <sup><a data-href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" href="https://web.archive.org/web/https://gitea.blesmrt.net/exa/codecrypt/src/branch/master/man/ccr.1" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">http://users.telenet.be/d.rijmenants/en/onetimepad.htm</a> <sup><a data-href="https://web.archive.org/web/http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="https://web.archive.org/web/http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/One-time_pad" href="https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/One-time_pad</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/One-time_pad" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/One-time_pad" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime" href="https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime</a> <sup><a data-href="https://web.archive.org/web/https://github.com/kfogel/OneTime" href="https://web.archive.org/web/https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">http://users.telenet.be/d.rijmenants/en/onetimepad.htm</a> <sup><a data-href="https://web.archive.org/web/http://users.telenet.be/d.rijmenants/en/onetimepad.htm" href="https://web.archive.org/web/http://users.telenet.be/d.rijmenants/en/onetimepad.htm" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">https://packages.debian.org/search?searchon=names&amp;keywords=onetime</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://web.archive.org/web/https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime" href="https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime</a> <sup><a data-href="https://web.archive.org/web/https://github.com/kfogel/OneTime" href="https://web.archive.org/web/https://github.com/kfogel/OneTime" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898</a> <sup><a data-href="https://web.archive.org/web/https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://web.archive.org/web/https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">https://packages.debian.org/search?searchon=names&amp;keywords=onetime</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/search?searchon=names&amp;keywords=onetime" href="https://web.archive.org/web/https://packages.debian.org/search?searchon=names&amp;keywords=onetime" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Venona_project#Decryption</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898</a> <sup><a data-href="https://web.archive.org/web/https://github.com/kfogel/OneTime/issues/14#issuecomment-218038898" href="https://web.archive.org/web/https://github.com/kfogel/OneTime/issues/14" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Venona_project#Decryption</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Venona_project#Decryption" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Venona_project" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
 <hr/>
@@ -499,7 +572,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./PQCrypto" href="https://facebook.com/sharer.php?u=./PQCrypto">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please <a class="external text" data-href="Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">contribute</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> by helping to <a class="external text" data-href="Contribute#Answer_Questions" href="./Contribute" rel="noreferrer noopener" target="_blank">answer Whonix questions</a> <sup><a data-href="https://web.archive.org/web/./Contribute#Answer_Questions" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a data-href="PQCrypto" href="./PQCrypto" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/PQCrypto" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/PQCrypto" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -512,7 +585,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=PQCrypto&amp;oldid=58117#Codecrypt" dir="ltr" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=58117">https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=58117#Codecrypt</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=PQCrypto&amp;oldid=58585#Codecrypt" dir="ltr" href="https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=58585">https://www.whonix.org/w/index.php?title=PQCrypto&amp;oldid=58585#Codecrypt</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -523,7 +596,7 @@ Retrieved from "<a data-href="/w/index.php?title=PQCrypto&amp;oldid=58117#Codecr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 19 June 2020, at 14:27.</li>
+<li id="footer-lastmod"> This page was last edited on 11 July 2020, at 05:08.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
