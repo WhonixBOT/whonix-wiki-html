@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Onion Services - Whonix
  url: ./Onion_Services
- date: Tue Aug 25 07:46:27 2020
+ date: Wed Aug 26 07:47:21 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -27,8 +27,8 @@
 <meta content="./Onion_Services" property="og:url"/>
 <meta content="Anonymously host any server with Whonix ™ and Tor onion services" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/12/Fly-agaric808110640.jpg" property="og:image"/>
-<meta content="2020-07-22T18:18:02Z" property="article:modified_time"/>
-<meta content="2020-07-22T18:18:02Z" property="article:published_time"/>
+<meta content="2020-08-25T16:49:12Z" property="article:modified_time"/>
+<meta content="2020-08-25T16:49:12Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Onion Services - Whonix" property="twitter:title"/>
 <meta content="Anonymously host any server with Whonix ™ and Tor onion services" property="twitter:description"/>
@@ -333,238 +333,31 @@ HiddenServiceVersion 3</textarea>
 <li>less resources needed by the Tor daemon</li>
 <li>less load on your guard(s) / bridge(s), thus more capacity and better experience for your clients / visitors (if you have multiple addresses you need to maintain active introduction point circuits for all of them, publish descriptors, etc.)</li></ul>
 </blockquote>
-<p>These instructions are based on <a class="external text" data-href="https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" href="https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" rel="noreferrer noopener" target="_blank">this reference</a> <sup><a data-href="https://web.archive.org/web/https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" href="https://web.archive.org/web/https://tor.stackexchange.com/questions/19221/how-to-setup-client-authorization-for-v3-onion-services" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> These instruction can be quite difficult, but this unspecific to Whonix ™; these instructions are quite difficult anywhere. <a data-href="About#Based_on_Debian" href="./About.html" title="About">Whonix is based on Debian</a> and the <a class="mw-redirect" data-href="Free_Support_Principle" href="./Free_Support_Principle.html" title="Free Support Principle">Free Support Principle</a>. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
-</p><p>On the Whonix-Gateway ™.
-</p><p>Install <code>basez</code>.
+<p>On the Whonix-Gateway ™.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo anon-auth-autogen</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo anon-auth-autogen</textarea>
+</div>
+</div>
+<p>
+</p><p>Read the output.
+</p><p>Example output. Will differ in your case.
 </p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>Install <code>basez</code>.
-</p><p><b>1.</b> <a class="mw-redirect" data-href="Update" href="./Update.html" title="Update">Update</a> the package lists.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get update</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get update</textarea>
-</div>
-</div>
-<p>
-</p><p><b>2.</b> Upgrade the system.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get dist-upgrade</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get dist-upgrade</textarea>
-</div>
-</div>
-<p>
-</p><p><b>3.</b> Install the <code>basez</code> package.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get install basez</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install basez</textarea>
-</div>
-</div>
-<p>
-</p><p>The procedure of installing <code>basez</code> is complete.
-</p>
-</div>
-<p>Create a temporary private key.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>openssl genpkey -algorithm x25519 -out private-key.pem</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">openssl genpkey -algorithm x25519 -out private-key.pem</textarea>
-</div>
-</div>
-<p>
-</p><p>Create a temporary public key.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>openssl pkey -in private-key.pem -pubout -outform PEM -out public-key.pem</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">openssl pkey -in private-key.pem -pubout -outform PEM -out public-key.pem</textarea>
-</div>
-</div>
-<p>
-</p><p>Create a temporary file.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>cat private-key.pem | \
-    grep -v " PRIVATE KEY" | \
-    basez --base64pem --decode | \
-    tail --bytes 32 | \
-    basez --base32 | \
-    tr -d '=' &gt; temp1</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">cat private-key.pem | \
-    grep -v " PRIVATE KEY" | \
-    basez --base64pem --decode | \
-    tail --bytes 32 | \
-    basez --base32 | \
-    tr -d '=' &gt; temp1</textarea>
-</div>
-</div>
-<p>
-</p><p>Steps towards <code>1.auth_private</code>.
-</p><p>Set the file path variable. Only modify the path below if you did not utilize the defaults specified earlier on in these instructions, namely <code>HiddenServiceDir /var/lib/tor/hidden_service/</code>. Otherwise, no change is required. If changes were made, you might want to change <code>hidden_service</code> to something else below.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>file_name="/var/lib/tor/hidden_service/hostname"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">file_name="/var/lib/tor/hidden_service/hostname"</textarea>
-</div>
-</div>
-<p>
-</p><p>Set the onion hostname variable.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>hostname="$(sudo cat "$file_name")"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">hostname="$(sudo cat "$file_name")"</textarea>
-</div>
-</div>
-<p>
-</p><p>View the onion hostname.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>echo "$hostname"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">echo "$hostname"</textarea>
-</div>
-</div>
-<p>
-</p><p>Something similar to the following should appear.
-</p>
-<pre>bvwxablxzabj4yudgzgooeg55sys2c3li7w5hhnongdm2p62l7hfnvid.onion
+<pre>INFO: Created torconffile '/usr/local/etc/torrc.d/43_hidden_service_hs_autogen.conf'.
+INFO: Reloading Tor.
+INFO: Giving Tor 5 seconds to create hidden service file.
+INFO: Installed ".auth" file (public key) '/var/lib/tor_autogen/hidden_service/1.auth' to '/var/lib/tor_autogen/hidden_service/1.auth' to allow client '1' to access hsname 'hidden_service' onion_url 'r3yzyxa2iptypjd2db7wl2ju62kyl5aq7mjmwl3wj4eim2y7kafztiid.onion'.
+INFO: Reloading Tor again to activate ".auth" (public key) file for client '1'.
+INFO: You need to provide client '1' with ".auth_private" file (private key) '/var/lib/tor_autogen/hidden_service/1.auth_private'.
+INFO: Visitors that use Whonix could store '/var/lib/tor_autogen/hidden_service/1.auth_private' in '/home/user/1.auth_private' and then run 'sudo sourcefile=/home/user/1.auth_private anon-server-to-client-install'.
 </pre>
-<p>Create variable <code>onionname</code> without appendix <code>.onion</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>onionname="$(echo "$hostname" | str_replace .onion "")"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">onionname="$(echo "$hostname" | str_replace .onion "")"</textarea>
-</div>
-</div>
-<p>
-</p><p>View the onion name.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>echo "$onionname"</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">echo "$onionname"</textarea>
-</div>
-</div>
-<p>
-</p><p>Something similar to the following should appear.
-</p>
-<pre>bvwxablxzabj4yudgzgooeg55sys2c3li7w5hhnongdm2p62l7hfnvid
-</pre>
-<p>Create final <code>1.auth_private</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>echo -n "$onionname:descriptor:x25519:" | \
-    cat - temp1 &gt; 1.auth_private</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">echo -n "$onionname:descriptor:x25519:" | \
-    cat - temp1 &gt; 1.auth_private</textarea>
-</div>
-</div>
-<p>
-</p><p>Steps towards <code>1.auth</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>cat public-key.pem | \
-    grep -v " PUBLIC KEY" | \
-    basez --base64pem --decode | \
-    tail --bytes 32 | \
-    basez --base32 | \
-    tr -d '=' &gt; temp2</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">cat public-key.pem | \
-    grep -v " PUBLIC KEY" | \
-    basez --base64pem --decode | \
-    tail --bytes 32 | \
-    basez --base32 | \
-    tr -d '=' &gt; temp2</textarea>
-</div>
-</div>
-<p>
-</p><p>Create the final <code>1.auth</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>echo -n "descriptor:x25519:" | cat - temp2 &gt; 1.auth</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">echo -n "descriptor:x25519:" | cat - temp2 &gt; 1.auth</textarea>
-</div>
-</div>
-<p>
-</p><p>Now two files are in existence:
-</p>
-<ul><li><code>1.auth</code> which belongs to onion server in folder <code>/var/lib/tor/hidden_service/authorized_clients/</code>.</li>
-<li><code>1.auth_private</code> which visitors need to be provided with.</li></ul>
-<p>It is of course possible to use different file names.
-</p><p>Create folder <code>/var/lib/tor/hidden_service/authorized_clients/</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo mkdir -p /var/lib/tor/hidden_service/authorized_clients/</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo mkdir -p /var/lib/tor/hidden_service/authorized_clients/</textarea>
-</div>
-</div>
-<p>
-</p><p>Copy <code>1.auth</code> to folder <code>/var/lib/tor/hidden_service/authorized_clients/</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo cp 1.auth /var/lib/tor/hidden_service/authorized_clients/</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo cp 1.auth /var/lib/tor/hidden_service/authorized_clients/</textarea>
-</div>
-</div>
-<p>
-</p><p>Fix owner permissions.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo chown --recursive debian-tor:debian-tor /var/lib/tor/hidden_service</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo chown --recursive debian-tor:debian-tor /var/lib/tor/hidden_service</textarea>
-</div>
-</div>
-<p>
+<p>In above example the onion hostname is <code>r3yzyxa2iptypjd2db7wl2ju62kyl5aq7mjmwl3wj4eim2y7kafztiid.onion</code> without any apostrophe ("<code>'</code>") at the beginning or end.
+</p><p>Send the ".auth_private" file (private key) file <code>/var/lib/tor_autogen/hidden_service/1.auth_private</code> to the intended visitor of the authenticated onion v3 service. Related: <a data-href="File_Transfer" href="./File_Transfer.html" title="File Transfer">File Transfer</a>. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
+</p><p>The visitor should follow instructions for the client side as described further below in chapter <a href="#Onion_Service_Authentication_Client_Setup">Onion Service Authentication Client Setup</a>.
 </p>
 </div>
 <h4><span class="mw-headline" id="Step_4:_Denial_of_Service_Mitigation_Options">Step 4: Denial of Service Mitigation Options</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=10.html" title="Edit section: Step 4: Denial of Service Mitigation Options">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
@@ -1018,15 +811,15 @@ We force-closed circuit 281934
 <li><a class="external text" data-href="https://forums.whonix.org/t/vanguards-additional-protections-for-tor-onion-services/8064" href="https://forums.whonix.org/t/vanguards-additional-protections-for-tor-onion-services/8064" rel="noreferrer noopener" target="_blank">vanguards - Additional protections for Tor Onion Services</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/vanguards-additional-protections-for-tor-onion-services/8064" href="https://web.archive.org/web/https://forums.whonix.org/t/vanguards-additional-protections-for-tor-onion-services/8064" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/onion-service-guard-protection-hslayer2nodes-hslayer3nodes/4855" href="https://forums.whonix.org/t/onion-service-guard-protection-hslayer2nodes-hslayer3nodes/4855" rel="noreferrer noopener" target="_blank">Onion Service Guard Protection - HSLayer2Nodes / HSLayer3Nodes</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/onion-service-guard-protection-hslayer2nodes-hslayer3nodes/4855" href="https://web.archive.org/web/https://forums.whonix.org/t/onion-service-guard-protection-hslayer2nodes-hslayer3nodes/4855" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <h2><span class="mw-headline" id="How_Onion_Services_Connections_Work">How Onion Services Connections Work</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=28.html" title="Edit section: How Onion Services Connections Work">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>To understand how onion services work, a simple overview of the process is outlined below. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
+<p>To understand how onion services work, a simple overview of the process is outlined below. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
 </p><p><b>Step 1.</b> Onion services advertise their existence in the Tor network. This is done by randomly picking some relays and building circuits, before asking these relays to act as introduction points by providing the service's public key. The onion server's location (IP address) is shielded.
-</p><p><b>Step 2.</b> The onion service generates an onion service descriptor containing the public key and a summary of introduction points. This is signed with its private key and then uploaded to a distributed hash table, so users can find the service when searching for a <i>.onion</i> resource. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup> This also forms an important verification mechanism for the user to confirm they are talking to the right onion service.
+</p><p><b>Step 2.</b> The onion service generates an onion service descriptor containing the public key and a summary of introduction points. This is signed with its private key and then uploaded to a distributed hash table, so users can find the service when searching for a <i>.onion</i> resource. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> This also forms an important verification mechanism for the user to confirm they are talking to the right onion service.
 </p><p><b>Step 3.</b> The user who learnt that the <i>.onion</i> resource exists requests more information from the database, by downloading the descriptor from the distributed hash table. If the descriptor exists, the user now knows the introduction points and the right public key to use. The user also creates a Tor circuit to another randomly picked relay to use as a rendezvous point (with a one-time secret).
 </p><p><b>Step 4.</b> If the descriptor is present and the rendezvous point is ready, the user assembles an "introduce message". This is encrypted to the onion service's public key and includes the rendezvous point address and the one-time secret. The user requests this be delivered to the onion service (via a Tor circuit) anonymously, so the IP address remains hidden.
 </p><p><b>Step 5.</b> The onion service decrypts the user's introduce message and finds the rendezvous point address and one-time secret in it. The service creates a circuit to the rendezvous point and sends the one-time secret to it in a rendezvous message. The onion service <i>must</i> use the same set of entry guards when creating circuits, to prevent attackers from forcing onion services to use corrupt relays as an entry node (and learning the onion server's IP address via timing analysis).
 </p><p><b>Step 6.</b> The rendezvous point notifies the user the successful connection has been established. Both the user and onion service use their circuits to the rendezvous point for communication. The rendezvous point relays end-to-end encrypted messages from user to service and vice versa.
 </p><p>Use of <i>.onion</i> addresses leads to a 6 relay arrangement: 3 picked by the user (with the third used as a rendezvous point), and 3 picked by the onion service. The final successful connection between a user and an onion service is represented in the picture below.
-</p><p><b>Figure:</b> <i>Alice (User) and Bob (Onion Service) Successful Connection</i> <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>
+</p><p><b>Figure:</b> <i>Alice (User) and Bob (Onion Service) Successful Connection</i> <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
 </p><p><a class="image" data-href="/w/index.php?title=File:Tor_Onion_Service_Connection_Success.png&amp;filetimestamp=20170426140808&amp;" href="https://www.whonix.org/w/index.php?title=File:Tor_Onion_Service_Connection_Success.png&amp;filetimestamp=20170426140808&amp;"><img alt="Tor Onion Service Connection Success.png" data-pagespeed-lazy-src="/w/images/c/cb/Tor_Onion_Service_Connection_Success.png" data-pagespeed-lazy-srcset="/w/images/c/cb/Tor_Onion_Service_Connection_Success.png.pagespeed.ce.-yOsfFlHNH.png 1.5x,/w/images/c/cb/Tor_Onion_Service_Connection_Success.png 3x,/w/images/c/cb/Tor_Onion_Service_Connection_Success.png.pagespeed.ce.-yOsfFlHNH.png 0.9483x" data-pagespeed-url-hash="3291852566" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="415" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="600"/></a>
 </p>
 <h2><span class="mw-headline" id="Onion_Services_Security">Onion Services Security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=29.html" title="Edit section: Onion Services Security">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -1070,89 +863,32 @@ hidden service *would* do that, if the adversary caused it to.
 </p>
 </blockquote>
 <p>At the time of writing there are no known attacks used in the wild that consistently deanonymize Tor onion services. However, there is a plethora of <a data-href="Speculative_Tor_Attacks" href="./Speculative_Tor_Attacks.html" title="Speculative Tor Attacks">Speculative Tor Attacks</a> against the ecosystem that have been highlighted in research settings, including those that specifically target the server or client and server in combination. Therefore, Tor processes and anonymity protection might be seriously degraded under specific conditions.
-</p><p>A number of serious onion service concerns <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup> have been mitigated since The Tor Project announced the release of v3 (<code>HiddenServiceVersion 3</code>) onions in 2017, succeeding the original v2 onion service design, see: <a class="external text" data-href="https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" href="https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" rel="noreferrer noopener" target="_blank">Tor's Fall Harvest: The Next Generation of Onion Services</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" href="https://web.archive.org/web/https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</p><p>A number of serious onion service concerns <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup> have been mitigated since The Tor Project announced the release of v3 (<code>HiddenServiceVersion 3</code>) onions in 2017, succeeding the original v2 onion service design, see: <a class="external text" data-href="https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" href="https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" rel="noreferrer noopener" target="_blank">Tor's Fall Harvest: The Next Generation of Onion Services</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" href="https://web.archive.org/web/https://blog.torproject.org/tors-fall-harvest-next-generation-onion-services" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p><p><span id="Hidden_Service_Authentication"></span>
 </p>
 <h2><span class="mw-headline" id="Onion_Service_Authentication_Client_Setup">Onion Service Authentication Client Setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Onion_Services&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;action=edit&amp;section=30.html" title="Edit section: Onion Service Authentication Client Setup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>Transfer <code>1.auth_private</code> from onion service provider to client.
-</p><p><b>1.</b> Create folder <code>/var/lib/tor/authdir</code>.
+<p><b>1.</b> Receive ".auth_private" file (private key) (for example: <code>1.auth_private</code>) from authenticated onion v3 service provider.
+</p><p><b>2.</b> Move to Whonix-Gateway ™ home folder <code>/home/user</code>.
+</p><p><b>3.</b> Install ".auth_private" file (private key).
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo mkdir -p /var/lib/tor/authdir</pre>
+<pre>sudo anon-server-to-client-install 1.auth_private</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo mkdir -p /var/lib/tor/authdir</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo anon-server-to-client-install 1.auth_private</textarea>
 </div>
 </div>
 <p>
-</p><p><b>2.</b> Fix ownership permissions. <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo chown --recursive debian-tor:debian-tor /var/lib/tor/authdir</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo chown --recursive debian-tor:debian-tor /var/lib/tor/authdir</textarea>
-</div>
-</div>
-<p>
-</p><p><b>3.</b> Open <code>/usr/local/etc/torrc.d/50_user.conf</code>.
+</p><p>Example output.
 </p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
-</p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Gateway ™ ProxyVM (commonly named sys-whonix)</code> → <code>Tor User Config (Torrc)</code>
-</p><p><u>If you are using a graphical Whonix-Gateway ™</u>, complete the following steps.
-</p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>/usr/local/etc/torrc.d/50_user.conf
-</code>
-</p><p><u>If you are using a terminal-only Whonix-Gateway ™</u>, complete the following steps.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /usr/local/etc/torrc.d/50_user.conf</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo nano /usr/local/etc/torrc.d/50_user.conf</textarea>
-</div>
-</div>
-<p>
-</p>
-</div>
-<p><b>4.</b> Paste the following text.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>ClientOnionAuthDir /var/lib/tor/authdir/</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">ClientOnionAuthDir /var/lib/tor/authdir/</textarea>
-</div>
-</div>
-<p>
-</p><p>Save.
-</p><p><b>5.</b> Copy <code>1.auth_private</code> to <code>/var/lib/tor/authdir/</code>.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo cp 1.auth_private /var/lib/tor/authdir/</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo cp 1.auth_private /var/lib/tor/authdir/</textarea>
-</div>
-</div>
-<p>
-</p><p><b>6.</b> Fix ownership permissions.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo chown --recursive debian-tor:debian-tor /var/lib/tor/authdir</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo chown --recursive debian-tor:debian-tor /var/lib/tor/authdir</textarea>
-</div>
-</div>
-<p>
-</p><p><b>7.</b> Reload Tor.
+<pre>INFO: Installed ".auth_private" file (private key) '/home/user/1.auth_private' to '/var/lib/tor/authdir/1.auth_private'.
+INFO: Created torconffile '/usr/local/etc/torrc.d/43_clientonionauthdir.conf'.
+INFO: Reloading Tor to activate ".auth_private" file (private key).
+INFO: Success.
+</pre>
+<p><b>4.</b> Reload Tor.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>After editing <code>/usr/local/etc/torrc.d/50_user.conf</code>, Tor must be reloaded for changes to take effect.
@@ -1357,18 +1093,27 @@ The purpose of Onion Services Authentication has been <a class="external text" d
 <li><a class="external free" data-href="https://forums.whonix.org/t/onion-services-authentication/975/14" href="https://forums.whonix.org/t/onion-services-authentication/975/14" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/onion-services-authentication/975/14</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/onion-services-authentication/975/14" href="https://web.archive.org/web/https://forums.whonix.org/t/onion-services-authentication/975/14" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
 <li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">
-But modified since instructions did not create files <code>1.auth_private</code>, <code>1.auth</code> for the user and only echoed these to the shell which most users would not know what to do with.</span>
+To use yourself locally for testing on the same Whonix-Gateway ™.
+On the Whonix-Gateway ™.
+Run as user. Do not run as root.
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>cp /var/lib/tor_autogen/hidden_service/1.auth_private ~/</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">cp /var/lib/tor_autogen/hidden_service/1.auth_private ~/</textarea>
+</div>
+</div>
+<p>
+</p></span>
 </li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">
-The only Whonix ™ specific thing below is <code>str_replace</code>, which is only available in Whonix ™. This is a tool which makes string search and replace easier.</span>
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.torproject.org/docs/hidden-services.html.en" href="https://www.torproject.org/docs/hidden-services.html.en" rel="noreferrer noopener" target="_blank">https://www.torproject.org/docs/hidden-services.html.en</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/docs/hidden-services.html.en" href="https://web.archive.org/web/https://www.torproject.org/docs/hidden-services.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.torproject.org/docs/hidden-services.html.en" href="https://www.torproject.org/docs/hidden-services.html.en" rel="noreferrer noopener" target="_blank">https://www.torproject.org/docs/hidden-services.html.en</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/docs/hidden-services.html.en" href="https://web.archive.org/web/https://www.torproject.org/docs/hidden-services.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text">This is currently a 16 character name, but will be increased to 54 characters in the near-medium term to upgrade the cryptographic strength of <i>.onion</i> services. See: <a class="external free" data-href="https://blog.torproject.org/blog/cooking-onions-names-your-onions" href="https://blog.torproject.org/blog/cooking-onions-names-your-onions" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/blog/cooking-onions-names-your-onions</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/blog/cooking-onions-names-your-onions" href="https://web.archive.org/web/https://blog.torproject.org/blog/cooking-onions-names-your-onions" rel="noreferrer noopener" target="_blank">[archive]</a></sup> </span>
 </li>
-<li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text">This is currently a 16 character name, but will be increased to 54 characters in the near-medium term to upgrade the cryptographic strength of <i>.onion</i> services. See: <a class="external free" data-href="https://blog.torproject.org/blog/cooking-onions-names-your-onions" href="https://blog.torproject.org/blog/cooking-onions-names-your-onions" rel="noreferrer noopener" target="_blank">https://blog.torproject.org/blog/cooking-onions-names-your-onions</a> <sup><a data-href="https://web.archive.org/web/https://blog.torproject.org/blog/cooking-onions-names-your-onions" href="https://web.archive.org/web/https://blog.torproject.org/blog/cooking-onions-names-your-onions" rel="noreferrer noopener" target="_blank">[archive]</a></sup> </span>
+<li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.torproject.org/images/THS-6.png" href="https://www.torproject.org/images/THS-6.png" rel="noreferrer noopener" target="_blank">https://www.torproject.org/images/THS-6.png</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/images/THS-6.png" href="https://web.archive.org/web/https://www.torproject.org/images/THS-6.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-25"><span class="mw-cite-backlink"><a href="#cite_ref-25">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.torproject.org/images/THS-6.png" href="https://www.torproject.org/images/THS-6.png" rel="noreferrer noopener" target="_blank">https://www.torproject.org/images/THS-6.png</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/images/THS-6.png" href="https://web.archive.org/web/https://www.torproject.org/images/THS-6.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-26"><span class="mw-cite-backlink"><a href="#cite_ref-26">↑</a></span> <span class="reference-text">Concerns with v2 onion services included:
+<li id="cite_note-25"><span class="mw-cite-backlink"><a href="#cite_ref-25">↑</a></span> <span class="reference-text">Concerns with v2 onion services included:
 <ul><li>80 bit name hash and RSA-1024 sized keys</li>
 <li>Quote Mike Perry (<span style="border:1px dotted #005cb9">Tor core people</span> <a class="external free" data-href="https://www.torproject.org/about/corepeople.html.en" href="https://www.torproject.org/about/corepeople.html.en" rel="noreferrer noopener" target="_blank">https://www.torproject.org/about/corepeople.html.en</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/about/corepeople.html.en" href="https://web.archive.org/web/https://www.torproject.org/about/corepeople.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup>): <a class="external free" data-href="http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05418.html" href="http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05418.html" rel="noreferrer noopener" target="_blank">http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05418.html</a> <sup><a data-href="https://web.archive.org/web/http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05418.html" href="https://web.archive.org/web/http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05418.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li>Quote Mike Perry: <a class="external free" data-href="http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05462.html" href="http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05462.html" rel="noreferrer noopener" target="_blank">http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05462.html</a> <sup><a data-href="https://web.archive.org/web/http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05462.html" href="https://web.archive.org/web/http://www.mail-archive.com/liberationtech@lists.stanford.edu/msg05462.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -1376,9 +1121,6 @@ The only Whonix ™ specific thing below is <code>str_replace</code>, which is o
 <li><a class="external text" data-href="https://conference.hitb.org/hitbsecconf2015ams/sessions/non-hidden-hidden-services-considered-harmful-attacks-and-detection" href="https://conference.hitb.org/hitbsecconf2015ams/sessions/non-hidden-hidden-services-considered-harmful-attacks-and-detection" rel="noreferrer noopener" target="_blank">Non-Hidden Onion Services Considered Harmful: Attacks and Detection</a> <sup><a data-href="https://web.archive.org/web/https://conference.hitb.org/hitbsecconf2015ams/sessions/non-hidden-hidden-services-considered-harmful-attacks-and-detection" href="https://web.archive.org/web/https://conference.hitb.org/hitbsecconf2015ams/sessions/non-hidden-hidden-services-considered-harmful-attacks-and-detection" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://forums.whonix.org/t/cryptolog-for-whonix-website/3369/12" href="https://forums.whonix.org/t/cryptolog-for-whonix-website/3369/12" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/cryptolog-for-whonix-website/3369/12</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/cryptolog-for-whonix-website/3369/12" href="https://web.archive.org/web/https://forums.whonix.org/t/cryptolog-for-whonix-website/3369/12" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-27"><span class="mw-cite-backlink"><a href="#cite_ref-27">↑</a></span> <span class="reference-text">
-This step is completed here just in case the user does not follow through with all instructions, thereby avoiding Tor from refusing to start due to broken file permissions. If a user follows through, this chown command could be omitted here and be done at the end.</span>
-</li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -1414,7 +1156,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Onion_Services" href="https://facebook.com/sharer.php?u=./Onion_Services">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+<p>Love Whonix and want to help spread the word? You can start by telling your friends or <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">posting news</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about Whonix on your website, blog or social media.
 </p>
 </div>
 <p><a data-href="Onion_Services" href="./Onion_Services" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png.pagespeed.ce.ujF1_TopG5.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Onion_Services" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png.pagespeed.ce.WMIdGTqyTd.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
@@ -1427,7 +1169,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Onion_Services&amp;oldid=58820" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=58820">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=58820</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Onion_Services&amp;oldid=59358" dir="ltr" href="https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=59358">https://www.whonix.org/w/index.php?title=Onion_Services&amp;oldid=59358</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1438,7 +1180,7 @@ Retrieved from "<a data-href="/w/index.php?title=Onion_Services&amp;oldid=58820"
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 July 2020, at 20:18.</li>
+<li id="footer-lastmod"> This page was last edited on 25 August 2020, at 18:49.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
