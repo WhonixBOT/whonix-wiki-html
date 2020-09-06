@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix ™ for KVM
  url: ./KVM
- date: Sat Sep  5 07:44:16 2020
+ date: Sun Sep  6 07:43:17 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -37,8 +37,8 @@ a.freelink
 <meta content="./KVM" property="og:url"/>
 <meta content="Using Whonix ™ with KVM (Kernel Virtual Machine)" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/b/be/234234234236kvm.png" property="og:image"/>
-<meta content="2020-08-27T14:23:05Z" property="article:modified_time"/>
-<meta content="2020-08-27T14:23:05Z" property="article:published_time"/>
+<meta content="2020-09-05T15:03:01Z" property="article:modified_time"/>
+<meta content="2020-09-05T15:03:01Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix ™ for KVM" property="twitter:title"/>
 <meta content="Using Whonix ™ with KVM (Kernel Virtual Machine)" property="twitter:description"/>
@@ -177,55 +177,56 @@ a.freelink
 <ul>
 <li class="toclevel-2 tocsection-39"><a href="#Multiple_Whonix-Gateway_.E2.84.A2s"><span class="tocnumber">5.1</span> <span class="toctext">Multiple Whonix-Gateway ™s</span></a></li>
 <li class="toclevel-2 tocsection-40"><a href="#Testing_Upcoming_Versions"><span class="tocnumber">5.2</span> <span class="toctext">Testing Upcoming Versions</span></a></li>
-<li class="toclevel-2 tocsection-41"><a href="#Magic_SysRq_Keys"><span class="tocnumber">5.3</span> <span class="toctext">Magic SysRq Keys</span></a></li>
-<li class="toclevel-2 tocsection-42"><a href="#DHCP"><span class="tocnumber">5.4</span> <span class="toctext">DHCP</span></a></li>
-<li class="toclevel-2 tocsection-43"><a href="#Snapshot_Migration"><span class="tocnumber">5.5</span> <span class="toctext">Snapshot Migration</span></a></li>
-<li class="toclevel-2 tocsection-44"><a href="#Nested_KVM_Virtualization"><span class="tocnumber">5.6</span> <span class="toctext">Nested KVM Virtualization</span></a></li>
-<li class="toclevel-2 tocsection-45"><a href="#Compressing_Disk_Images"><span class="tocnumber">5.7</span> <span class="toctext">Compressing Disk Images</span></a></li>
-<li class="toclevel-2 tocsection-46"><a href="#Adding_vCPUs"><span class="tocnumber">5.8</span> <span class="toctext">Adding vCPUs</span></a></li>
-<li class="toclevel-2 tocsection-47"><a href="#3D_Graphics_Acceleration"><span class="tocnumber">5.9</span> <span class="toctext">3D Graphics Acceleration</span></a></li>
-<li class="toclevel-2 tocsection-48"><a href="#Shared_Folders"><span class="tocnumber">5.10</span> <span class="toctext">Shared Folders</span></a>
+<li class="toclevel-2 tocsection-41"><a href="#Convert_Libvirt_Templates_to_QEMU_Commands"><span class="tocnumber">5.3</span> <span class="toctext">Convert Libvirt Templates to QEMU Commands</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="#Magic_SysRq_Keys"><span class="tocnumber">5.4</span> <span class="toctext">Magic SysRq Keys</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#DHCP"><span class="tocnumber">5.5</span> <span class="toctext">DHCP</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#Snapshot_Migration"><span class="tocnumber">5.6</span> <span class="toctext">Snapshot Migration</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="#Nested_KVM_Virtualization"><span class="tocnumber">5.7</span> <span class="toctext">Nested KVM Virtualization</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#Compressing_Disk_Images"><span class="tocnumber">5.8</span> <span class="toctext">Compressing Disk Images</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="#Adding_vCPUs"><span class="tocnumber">5.9</span> <span class="toctext">Adding vCPUs</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="#3D_Graphics_Acceleration"><span class="tocnumber">5.10</span> <span class="toctext">3D Graphics Acceleration</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#Shared_Folders"><span class="tocnumber">5.11</span> <span class="toctext">Shared Folders</span></a>
 <ul>
-<li class="toclevel-3 tocsection-49"><a href="#Mandatory_Access_Control"><span class="tocnumber">5.10.1</span> <span class="toctext">Mandatory Access Control</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="#Mandatory_Access_Control"><span class="tocnumber">5.11.1</span> <span class="toctext">Mandatory Access Control</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-50"><a href="#USB_Passthrough"><span class="tocnumber">5.11</span> <span class="toctext">USB Passthrough</span></a></li>
-<li class="toclevel-2 tocsection-51"><a href="#Editing_an_Imported_Machine.27s_XML_Configuration"><span class="tocnumber">5.12</span> <span class="toctext">Editing an Imported Machine's XML Configuration</span></a></li>
-<li class="toclevel-2 tocsection-52"><a href="#Disable_Microphone_Input"><span class="tocnumber">5.13</span> <span class="toctext">Disable Microphone Input</span></a></li>
-<li class="toclevel-2 tocsection-53"><a href="#Creating_Multiple_Internal_Networks"><span class="tocnumber">5.14</span> <span class="toctext">Creating Multiple Internal Networks</span></a></li>
-<li class="toclevel-2 tocsection-54"><a href="#Alternative_Configurations"><span class="tocnumber">5.15</span> <span class="toctext">Alternative Configurations</span></a></li>
-<li class="toclevel-2 tocsection-55"><a href="#How_to_Leave_KVM_when_no_X_is_Running"><span class="tocnumber">5.16</span> <span class="toctext">How to Leave KVM when no X is Running</span></a></li>
-<li class="toclevel-2 tocsection-56"><a href="#Setting_up_gdb_to_work_with_qemu-kvm_via_libvirt"><span class="tocnumber">5.17</span> <span class="toctext">Setting up gdb to work with qemu-kvm via libvirt</span></a></li>
-<li class="toclevel-2 tocsection-57"><a href="#Unsafe_Features"><span class="tocnumber">5.18</span> <span class="toctext">Unsafe Features</span></a>
+<li class="toclevel-2 tocsection-51"><a href="#USB_Passthrough"><span class="tocnumber">5.12</span> <span class="toctext">USB Passthrough</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="#Editing_an_Imported_Machine.27s_XML_Configuration"><span class="tocnumber">5.13</span> <span class="toctext">Editing an Imported Machine's XML Configuration</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="#Enable_Microphone_Input"><span class="tocnumber">5.14</span> <span class="toctext">Enable Microphone Input</span></a></li>
+<li class="toclevel-2 tocsection-54"><a href="#Creating_Multiple_Internal_Networks"><span class="tocnumber">5.15</span> <span class="toctext">Creating Multiple Internal Networks</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="#Alternative_Configurations"><span class="tocnumber">5.16</span> <span class="toctext">Alternative Configurations</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="#How_to_Leave_KVM_when_no_X_is_Running"><span class="tocnumber">5.17</span> <span class="toctext">How to Leave KVM when no X is Running</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="#Setting_up_gdb_to_work_with_qemu-kvm_via_libvirt"><span class="tocnumber">5.18</span> <span class="toctext">Setting up gdb to work with qemu-kvm via libvirt</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="#Unsafe_Features"><span class="tocnumber">5.19</span> <span class="toctext">Unsafe Features</span></a>
 <ul>
-<li class="toclevel-3 tocsection-58"><a href="#LVM_Storage"><span class="tocnumber">5.18.1</span> <span class="toctext">LVM Storage</span></a></li>
-<li class="toclevel-3 tocsection-59"><a href="#HugePages"><span class="tocnumber">5.18.2</span> <span class="toctext">HugePages</span></a></li>
-<li class="toclevel-3 tocsection-60"><a href="#Memory_Ballooning"><span class="tocnumber">5.18.3</span> <span class="toctext">Memory Ballooning</span></a></li>
-<li class="toclevel-3 tocsection-61"><a href="#Clipboard_Sharing"><span class="tocnumber">5.18.4</span> <span class="toctext">Clipboard Sharing</span></a></li>
-<li class="toclevel-3 tocsection-62"><a href="#KSM"><span class="tocnumber">5.18.5</span> <span class="toctext">KSM</span></a></li>
-<li class="toclevel-3 tocsection-63"><a href="#File-system_Dedupe"><span class="tocnumber">5.18.6</span> <span class="toctext">File-system Dedupe</span></a></li>
-<li class="toclevel-3 tocsection-64"><a href="#Device_Passthrough"><span class="tocnumber">5.18.7</span> <span class="toctext">Device Passthrough</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="#LVM_Storage"><span class="tocnumber">5.19.1</span> <span class="toctext">LVM Storage</span></a></li>
+<li class="toclevel-3 tocsection-60"><a href="#HugePages"><span class="tocnumber">5.19.2</span> <span class="toctext">HugePages</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="#Memory_Ballooning"><span class="tocnumber">5.19.3</span> <span class="toctext">Memory Ballooning</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="#Clipboard_Sharing"><span class="tocnumber">5.19.4</span> <span class="toctext">Clipboard Sharing</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="#KSM"><span class="tocnumber">5.19.5</span> <span class="toctext">KSM</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="#File-system_Dedupe"><span class="tocnumber">5.19.6</span> <span class="toctext">File-system Dedupe</span></a></li>
+<li class="toclevel-3 tocsection-65"><a href="#Device_Passthrough"><span class="tocnumber">5.19.7</span> <span class="toctext">Device Passthrough</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-65"><a href="#XML_Settings"><span class="tocnumber">5.19</span> <span class="toctext">XML Settings</span></a></li>
+<li class="toclevel-2 tocsection-66"><a href="#XML_Settings"><span class="tocnumber">5.20</span> <span class="toctext">XML Settings</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-66"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<li class="toclevel-1 tocsection-67"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
 <ul>
-<li class="toclevel-2 tocsection-67"><a href="#Reboot.3F"><span class="tocnumber">6.1</span> <span class="toctext">Reboot?</span></a></li>
-<li class="toclevel-2 tocsection-68"><a href="#Unable_to_connect_to_libvirt"><span class="tocnumber">6.2</span> <span class="toctext">Unable to connect to libvirt</span></a></li>
-<li class="toclevel-2 tocsection-69"><a href="#Unable_to_open_a_connection_to_the_libvirt_management_daemon"><span class="tocnumber">6.3</span> <span class="toctext">Unable to open a connection to the libvirt management daemon</span></a></li>
-<li class="toclevel-2 tocsection-70"><a href="#hda-duplex_not_supported_in_this_QEMU_binary"><span class="tocnumber">6.4</span> <span class="toctext">hda-duplex not supported in this QEMU binary</span></a></li>
-<li class="toclevel-2 tocsection-71"><a href="#process_exited_while_connecting_to_monitor:_ioctl.28KVM_CREATE_VM.29_failed"><span class="tocnumber">6.5</span> <span class="toctext">process exited while connecting to monitor: ioctl(KVM_CREATE_VM) failed</span></a></li>
-<li class="toclevel-2 tocsection-72"><a href="#Permissions"><span class="tocnumber">6.6</span> <span class="toctext">Permissions</span></a></li>
-<li class="toclevel-2 tocsection-73"><a href="#invalid_argument:_could_not_find_capabilities_for_domaintype.3Dkvm"><span class="tocnumber">6.7</span> <span class="toctext">invalid argument: could not find capabilities for domaintype=kvm</span></a></li>
-<li class="toclevel-2 tocsection-74"><a href="#Add_Version_Numbers_to_Support_Request"><span class="tocnumber">6.8</span> <span class="toctext">Add Version Numbers to Support Request</span></a></li>
-<li class="toclevel-2 tocsection-75"><a href="#User_Help_Forum"><span class="tocnumber">6.9</span> <span class="toctext">User Help Forum</span></a></li>
-<li class="toclevel-2 tocsection-76"><a href="#Alternative_Guides"><span class="tocnumber">6.10</span> <span class="toctext">Alternative Guides</span></a></li>
+<li class="toclevel-2 tocsection-68"><a href="#Reboot.3F"><span class="tocnumber">6.1</span> <span class="toctext">Reboot?</span></a></li>
+<li class="toclevel-2 tocsection-69"><a href="#Unable_to_connect_to_libvirt"><span class="tocnumber">6.2</span> <span class="toctext">Unable to connect to libvirt</span></a></li>
+<li class="toclevel-2 tocsection-70"><a href="#Unable_to_open_a_connection_to_the_libvirt_management_daemon"><span class="tocnumber">6.3</span> <span class="toctext">Unable to open a connection to the libvirt management daemon</span></a></li>
+<li class="toclevel-2 tocsection-71"><a href="#hda-duplex_not_supported_in_this_QEMU_binary"><span class="tocnumber">6.4</span> <span class="toctext">hda-duplex not supported in this QEMU binary</span></a></li>
+<li class="toclevel-2 tocsection-72"><a href="#process_exited_while_connecting_to_monitor:_ioctl.28KVM_CREATE_VM.29_failed"><span class="tocnumber">6.5</span> <span class="toctext">process exited while connecting to monitor: ioctl(KVM_CREATE_VM) failed</span></a></li>
+<li class="toclevel-2 tocsection-73"><a href="#Permissions"><span class="tocnumber">6.6</span> <span class="toctext">Permissions</span></a></li>
+<li class="toclevel-2 tocsection-74"><a href="#invalid_argument:_could_not_find_capabilities_for_domaintype.3Dkvm"><span class="tocnumber">6.7</span> <span class="toctext">invalid argument: could not find capabilities for domaintype=kvm</span></a></li>
+<li class="toclevel-2 tocsection-75"><a href="#Add_Version_Numbers_to_Support_Request"><span class="tocnumber">6.8</span> <span class="toctext">Add Version Numbers to Support Request</span></a></li>
+<li class="toclevel-2 tocsection-76"><a href="#User_Help_Forum"><span class="tocnumber">6.9</span> <span class="toctext">User Help Forum</span></a></li>
+<li class="toclevel-2 tocsection-77"><a href="#Alternative_Guides"><span class="tocnumber">6.10</span> <span class="toctext">Alternative Guides</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-77"><a href="#Development"><span class="tocnumber">7</span> <span class="toctext">Development</span></a></li>
-<li class="toclevel-1 tocsection-78"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-78"><a href="#Development"><span class="tocnumber">7</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-1 tocsection-79"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="General">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=1.html" title="Edit section: General">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -1195,7 +1196,30 @@ Alternatively,
 <ol><li>Rename the test Whonix ™ images to something unique, preferably by appending the version number to the name.</li>
 <li>Edit the XML templates and change the VM names.</li>
 <li>Import the images by following the <a href="#Importing_Whonix_VM_Templates">Importing Whonix</a> installation steps. Keep in mind the full name of the new images must be used and do not import the Network templates.</li></ol>
-<h2><span class="mw-headline" id="Magic_SysRq_Keys">Magic SysRq Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=41" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=41.html" title="Edit section: Magic SysRq Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Convert_Libvirt_Templates_to_QEMU_Commands">Convert Libvirt Templates to QEMU Commands</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=41" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=41.html" title="Edit section: Convert Libvirt Templates to QEMU Commands">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>First export the VM template as a file:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo virsh dumpxml Whonix-Gateway &gt; Whonix-Gateway.xml</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo virsh dumpxml Whonix-Gateway &gt; Whonix-Gateway.xml</textarea>
+</div>
+</div>
+<p>
+Convert it to the QEMU command:
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo virsh domxml-to-native qemu-argv Whonix-Gateway.xml &gt; Whonix-Gateway.args</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo virsh domxml-to-native qemu-argv Whonix-Gateway.xml &gt; Whonix-Gateway.args</textarea>
+</div>
+</div>
+<p>
+Repeat for the Whonix-Workstation
+</p>
+<h2><span class="mw-headline" id="Magic_SysRq_Keys">Magic SysRq Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=42" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=42.html" title="Edit section: Magic SysRq Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Magic SysRq keys are useful when the guest is unresponsive, especially in cases where VMs are running headless and a GUI console is not available for forcing them to shut off on the host.<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p><p>Example command to shut down Whonix Workstation from a host console. The <i>O</i> at the end of <i>KEY_O</i> can be substituted with any other <a class="external text" data-href="https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html" href="https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html" rel="noreferrer noopener" target="_blank">supported letter</a> <sup><a data-href="https://web.archive.org/web/https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html" href="https://web.archive.org/web/https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> listed in the kernel documentation. See also <a data-href="SysRq" href="./SysRq.html" title="SysRq">SysRq</a>.
 </p><p>
@@ -1209,7 +1233,7 @@ Alternatively,
 </div>
 <p>
 </p>
-<h2><span class="mw-headline" id="DHCP">DHCP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=42" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=42.html" title="Edit section: DHCP">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="DHCP">DHCP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=43" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=43.html" title="Edit section: DHCP">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Libvirt provides built-in DHCP functionality via a custom install of the minimalist Dnsmasq DNS/DHCP daemon. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> This is useful when running multiple Workstations concurrently that are attached to the same Gateway, and for custom Workstations running Android x86.
 </p><p>For privacy and traffic leak purposes Dnsmasq does not resolve DNS as implemented in Libvirt. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> DNS is not explicitly enabled for guests unless it is added to a network’s configuration. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup> <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> Even when DNS is enabled, the way Libvirt uses it does not increase the host's attack surface (by using raw sockets for example) nor does DHCP because it is bound to a specific NIC in this case. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> Trying to edit the Dnsmasq configuration files directly will fail as settings are rewritten and are enforced through Libvirt by design. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
 </p>
@@ -1297,7 +1321,7 @@ iface eth0 inet dhcp</textarea>
 </p><p>Libvirt also allows the pairing of a static IP from the DHCP server to a VM with a specific MAC address if services in the Workstation depend on predictable IPs. See the <a class="external text" data-href="https://libvirt.org/formatnetwork.html#elementsAddress" href="https://libvirt.org/formatnetwork.html" rel="noreferrer noopener" target="_blank">host attribute</a> <sup><a data-href="https://web.archive.org/web/https://libvirt.org/formatnetwork.html#elementsAddress" href="https://web.archive.org/web/https://libvirt.org/formatnetwork.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> under the dhcp element.
 </p>
 </div>
-<h2><span class="mw-headline" id="Snapshot_Migration">Snapshot Migration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=43" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=43.html" title="Edit section: Snapshot Migration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Snapshot_Migration">Snapshot Migration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=44" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=44.html" title="Edit section: Snapshot Migration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If the VM has snapshots that you wish to preserve, the snapshot xml-files of the source VM should be dumped with the following commands. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -1359,7 +1383,7 @@ iface eth0 inet dhcp</textarea>
 <p>
 </p>
 </div>
-<h2><span class="mw-headline" id="Nested_KVM_Virtualization">Nested KVM Virtualization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=44" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=44.html" title="Edit section: Nested KVM Virtualization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Nested_KVM_Virtualization">Nested KVM Virtualization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=45" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=45.html" title="Edit section: Nested KVM Virtualization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>It is possible to create nested KVM VMs on KVM hosts. As root...
 </p><p>Check the current setting on the host. If the result is <code>[Y]</code>, then it is okay.
 </p><p>
@@ -1408,7 +1432,7 @@ iface eth0 inet dhcp</textarea>
 <p>
 </p><p>Host CPU instructions that include the <code>svm</code> and <code>vmx</code> extensions are passed through to the Workstation by default.
 </p>
-<h2><span class="mw-headline" id="Compressing_Disk_Images">Compressing Disk Images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=45" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=45.html" title="Edit section: Compressing Disk Images">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Compressing_Disk_Images">Compressing Disk Images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=46" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=46.html" title="Edit section: Compressing Disk Images">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Some users find it easier to move the sparse image files when they are compressed in a tarball.
 </p><p>To re-compress files, run.
 </p><p>
@@ -1422,15 +1446,15 @@ iface eth0 inet dhcp</textarea>
 </div>
 <p>
 </p>
-<h2><span class="mw-headline" id="Adding_vCPUs">Adding vCPUs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=46" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=46.html" title="Edit section: Adding vCPUs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Adding_vCPUs">Adding vCPUs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=47" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=47.html" title="Edit section: Adding vCPUs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The pinning parameter <code>cpuset='1'</code> must be removed in the <code>vcpu</code> tag in the XML settings to allow adding more cores to a VM, otherwise performance issues and lockups will occur. CPU pinning is done to safeguard processes in other VMs that run cryptographic operations from side-channel attacks in case of a vulnerability in a cryptographic library.
 </p><p>To add more vcpus, increase the number in between the opening and closing <code>vcpu</code> tags. Alternatively, use the hardware 'Details' pane in virtual Machine Manager.
 </p><p>If preserving cpu pinning while increasing core count is desired, pin the vcpus to different numbered ones compared to other sensitive VMs. Map them in a 1:1 ratio to avoid over committing cores (which leads to performance problems).
 </p>
-<h2><span class="mw-headline" id="3D_Graphics_Acceleration">3D Graphics Acceleration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=47" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=47.html" title="Edit section: 3D Graphics Acceleration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="3D_Graphics_Acceleration">3D Graphics Acceleration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=48.html" title="Edit section: 3D Graphics Acceleration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a data-href="Dev/KVM#Virgl3D" href="./Dev/KVM.html" title="Dev/KVM">Not yet functional</a> as of Debian <code>buster</code> but this has been fixed upstream. Future enhancements for performance and security are planned. Will revisit in Bullseye.
 </p>
-<h2><span class="mw-headline" id="Shared_Folders">Shared Folders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=48" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=48.html" title="Edit section: Shared Folders">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Shared_Folders">Shared Folders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=49" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=49.html" title="Edit section: Shared Folders">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-lazy-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png.pagespeed.ce.1JRBW-YnKn.png" data-pagespeed-lazy-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" data-pagespeed-url-hash="86883119" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="35" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="40"/></a> <b>Warning:</b> Do not delete files from the shared folder from within the Workstation VM! The reason is they will reappear in the recycle bin across all snapshots with the same directory attached, causing a data leak across security levels. Use the file browser on the host to do cleanup instead.
 </p>
@@ -1476,7 +1500,7 @@ iface eth0 inet dhcp</textarea>
 </p><p>Whonix-Workstation should automatically find and mount the shared directory once its created and enabled on the Host.
 </p>
 </div>
-<h3><span class="mw-headline" id="Mandatory_Access_Control">Mandatory Access Control</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=49" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=49.html" title="Edit section: Mandatory Access Control">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Mandatory_Access_Control">Mandatory Access Control</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=50" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=50.html" title="Edit section: Mandatory Access Control">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><u>Note:</u> If your system is configured to use a Mandatory Access Control framework then it might be necessary to configure exceptions to allow the confined guests to communicate with the shared folder on the host.
 </p><p>Tests with Apparmor have shown it operates transparently with shared folders, without the need for a manual exception configuration.
 </p><p>On the host, chmod must be applied to the shared folder's contents to access the files.
@@ -1518,7 +1542,7 @@ iface eth0 inet dhcp</textarea>
     &lt;target dir='shared'/&gt;
 &lt;/filesystem&gt;
 </pre>
-<h2><span class="mw-headline" id="USB_Passthrough">USB Passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=50" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=50.html" title="Edit section: USB Passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="USB_Passthrough">USB Passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=51" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=51.html" title="Edit section: USB Passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-pagespeed-lazy-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png.pagespeed.ce.1JRBW-YnKn.png" data-pagespeed-lazy-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png.pagespeed.ce.OGLUfNwUqN.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png.pagespeed.ce.p3n3gZZUuJ.png 2x" data-pagespeed-url-hash="86883119" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="35" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="40"/></a> <b>Warning:</b> Only connect USB devices to Whonix-Workstation ™ when it is in a clean, trusted state! The only safe and recommended way to move files out of a VM is through Shared Folders.
 </p>
@@ -1579,7 +1603,7 @@ auto-redirect=false
 </p><p>The thumbdrive should be automatically seen in the guest only.
 </p>
 </div>
-<h2><span id="Editing_an_Imported_Machine's_XML_Configuration"></span><span class="mw-headline" id="Editing_an_Imported_Machine.27s_XML_Configuration">Editing an Imported Machine's XML Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=51" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=51.html" title="Edit section: Editing an Imported Machine's XML Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Editing_an_Imported_Machine's_XML_Configuration"></span><span class="mw-headline" id="Editing_an_Imported_Machine.27s_XML_Configuration">Editing an Imported Machine's XML Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=52" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=52.html" title="Edit section: Editing an Imported Machine's XML Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Eventually configure your favorite editor to make changes. Set visual as your favorite editor -- the relevant software must be installed, such as kwrite, leafpad, kate, vi, nano, vim and so on.
 </p>
 <pre>export VISUAL=kwrite
@@ -1596,24 +1620,24 @@ auto-redirect=false
 </div>
 <p>
 </p>
-<h2><span class="mw-headline" id="Disable_Microphone_Input">Disable Microphone Input</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=52" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=52.html" title="Edit section: Disable Microphone Input">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Enable_Microphone_Input">Enable Microphone Input</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=53" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=53.html" title="Edit section: Enable Microphone Input">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="mw-redirect" data-href="Microphone" href="./Microphone.html" title="Microphone">Microphone</a> input to guests is a nice feature for <a data-href="VoIP" href="./VoIP.html" title="VoIP">VoIP</a>, but it is dangerous to have on by default. It is <a class="mw-redirect" data-href="Pre_Install_Advice#Microphone" href="./Pre_Install_Advice.html" title="Pre Install Advice">good practice</a> to disable the microphone on your host system through sound settings when it is not in active use.
 </p><p>The shipped configuration only includes a speaker by default (without a microphone) to prevent malware in the VM from eavesdropping on the user. To enable microphone input for select guests, edit the configuration and change <code>&lt;codec type='output'/&gt;</code> -&gt; <code>&lt;codec type='micro'/&gt;</code>.
 </p>
-<h2><span class="mw-headline" id="Creating_Multiple_Internal_Networks">Creating Multiple Internal Networks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=53" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=53.html" title="Edit section: Creating Multiple Internal Networks">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Creating_Multiple_Internal_Networks">Creating Multiple Internal Networks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=54" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=54.html" title="Edit section: Creating Multiple Internal Networks">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Open the Whonix ™ network XML file and change the name attribute to something different than the internal network that is currently running, for example 'Whonix-Internal2', 'Whonix-Internal3' and so on. The default network name in use is 'Whonix-Internal'.
 </p>
-<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=54" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=54.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Alternative_Configurations">Alternative Configurations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=55" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=55.html" title="Edit section: Alternative Configurations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Libvirt can support a variety of containment mechanisms. Currently supported mechanisms include KVM on the x86_64 platform and QEMU, but more configurations might be added at a later date. If hardware virtualization extensions are available, always use the KVM one.
 </p><p>To use another configuration, import its XML file with virsh.
 </p>
-<h2><span class="mw-headline" id="How_to_Leave_KVM_when_no_X_is_Running">How to Leave KVM when no X is Running</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=55" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=55.html" title="Edit section: How to Leave KVM when no X is Running">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="How_to_Leave_KVM_when_no_X_is_Running">How to Leave KVM when no X is Running</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=56" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=56.html" title="Edit section: How to Leave KVM when no X is Running">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In the hypothetical situation whereby a user is "trapped" in a <a data-href="Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a> inside a VM without graphical desktop environment (X Window System) ("<code>sudo service lightdm stop</code>"), it is still possible to switch back to the host.
 </p><p>In other words, should the graphical desktop environment crash or be terminated, the user may be "trapped" inside a black VM window. It is possible to exit this.
 </p><p>The emulated tablet device handles this by not allowing the mouse to be captured by the guest, however this is still possible:
 </p><p>Press <code>Ctrl_L &amp; Alt_L</code>
 </p>
-<h2><span class="mw-headline" id="Setting_up_gdb_to_work_with_qemu-kvm_via_libvirt">Setting up gdb to work with qemu-kvm via libvirt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=56" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=56.html" title="Edit section: Setting up gdb to work with qemu-kvm via libvirt">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Setting_up_gdb_to_work_with_qemu-kvm_via_libvirt">Setting up gdb to work with qemu-kvm via libvirt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=57" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=57.html" title="Edit section: Setting up gdb to work with qemu-kvm via libvirt">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In order to debug a Linux kernel that is running as a KVM guest, the <code>-s</code> parameter must be specified for the command line of qemu-kvm. Unfortunately there is no (easy) way to do this when libvirt and virt-manager are used to manage your virtual machines (instead of using KVM directly). In this case it is necessary to change the XML configuration of the virtual machine so that the <code>-s</code> parameter is passed on to qemu-kvm.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -1655,45 +1679,45 @@ auto-redirect=false
 <p>Source: <sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup>
 </p>
 </div>
-<h2><span class="mw-headline" id="Unsafe_Features">Unsafe Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=57" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=57.html" title="Edit section: Unsafe Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Unsafe_Features">Unsafe Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=58" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=58.html" title="Edit section: Unsafe Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The features below have serious security implications and should not be used. This applies to all hypervisors in general.
 </p>
-<h3><span class="mw-headline" id="LVM_Storage">LVM Storage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=58" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=58.html" title="Edit section: LVM Storage">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="LVM_Storage">LVM Storage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=59" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=59.html" title="Edit section: LVM Storage">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>QCOW2 virtual disk images are the recommended and default storage format for KVM. LVM or any other storage mechanism must be avoided for security and privacy. LVM misconfiguration has serious security consequences and exposes the host filesystem to the processes running on the guest. <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>
 </p><p>In the event a virtual disk is no longer used -- where the low-level view of the storage can be controlled -- data created by VMs can easily be recovered and exfiltrated by malicious forensics tools run in a VM at a later time. This is extremely dangerous and can expose all kinds of information originally created in a VM of higher trust level. This leads to deanonymization, past session linking and theft of sensitive information and keys. <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup> <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup> This setting is disabled in cloud tenancy environments.
 </p>
-<h3><span class="mw-headline" id="HugePages">HugePages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=59" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=59.html" title="Edit section: HugePages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="HugePages">HugePages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=60" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=60.html" title="Edit section: HugePages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>THP/Hugepages aid rowhammer attacks <sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> and memory de-duplication attacks (see KSM below) and therefore must be disabled for the guest and on the host. Research suggests that Debian hosts do not enable this feature and it is also disabled in cloud tenancy environments.
 </p>
-<h3><span class="mw-headline" id="Memory_Ballooning">Memory Ballooning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=60" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=60.html" title="Edit section: Memory Ballooning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Memory_Ballooning">Memory Ballooning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=61" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=61.html" title="Edit section: Memory Ballooning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Memory ballooning can potentially be abused by malicious guests to mount rowhammer attacks on the host. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>
 </p>
-<h3><span class="mw-headline" id="Clipboard_Sharing">Clipboard Sharing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=61" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=61.html" title="Edit section: Clipboard Sharing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Clipboard_Sharing">Clipboard Sharing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=62" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=62.html" title="Edit section: Clipboard Sharing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>SPICE allows accelerated graphics and clipboard sharing. The clipboard is disabled by default for security reasons:
 </p>
 <ul><li>To prevent the accidental copying of a link to a website that was visited anonymously to the non-anonymous host browser (or vice versa).</li>
 <li>To stop malware in Whonix ™ Workstation from pilfering sensitive info from the clipboard.</li></ul>
 <p>If you still want to enable it, edit the VM config file and then change <code>&lt;clipboard copypaste='no'/&gt;</code> to 'yes', then save and restart.
 </p>
-<h3><span class="mw-headline" id="KSM">KSM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=62" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=62.html" title="Edit section: KSM">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="KSM">KSM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=63" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=63.html" title="Edit section: KSM">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>KSM is a memory de-deuplication feature that conserves memory by combining identical pages across VM RAM, but it is not enabled by default. Enabling this feature is dangerous because it allows cross-VM snooping by a malicious process. <sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup> It is capable of inferring what programs/pages are being visited outside the VM. <sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup> This feature is disabled in cloud tenancy environments and can also allow attackers to modify/steal APT keys and source lists of the host. <sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> <sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>
 </p>
-<h3><span class="mw-headline" id="File-system_Dedupe">File-system Dedupe</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=63" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=63.html" title="Edit section: File-system Dedupe">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="File-system_Dedupe">File-system Dedupe</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=64" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=64.html" title="Edit section: File-system Dedupe">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Similar to KSM memory dedupe, filesystem dedupe introduces data leaks that violate hypervisor boundaries. The presence of certain files can be confirmed. These may develop into more advanced attacks on security in the future just like KSM related attacks have. ZFS and Btrfs have dedupe features but they are not enabled by default and should be avoided for high security environments.<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup>
 </p>
-<h3><span class="mw-headline" id="Device_Passthrough">Device Passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=64" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=64.html" title="Edit section: Device Passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Device_Passthrough">Device Passthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=65" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=65.html" title="Edit section: Device Passthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>Both USB and PCI device passthrough permit advanced attackers to flash the firmware of those devices and infect the host or other VMs. <sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup>
 </p>
-<h2><span class="mw-headline" id="XML_Settings">XML Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=65" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=65.html" title="Edit section: XML Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="XML_Settings">XML Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=66" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=66.html" title="Edit section: XML Settings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>For more information on settings, please refer to the <a class="external text" data-href="https://libvirt.org/formatdomain.html" href="https://libvirt.org/formatdomain.html" rel="noreferrer noopener" target="_blank">Libvirt manual</a> <sup><a data-href="https://web.archive.org/web/https://libvirt.org/formatdomain.html" href="https://web.archive.org/web/https://libvirt.org/formatdomain.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
-<h1><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=66" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=66.html" title="Edit section: Troubleshooting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span id="Reboot?"></span><span class="mw-headline" id="Reboot.3F">Reboot?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=67" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=67.html" title="Edit section: Reboot?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Troubleshooting">Troubleshooting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=67" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=67.html" title="Edit section: Troubleshooting">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Reboot?"></span><span class="mw-headline" id="Reboot.3F">Reboot?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=68" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=68.html" title="Edit section: Reboot?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>Did you reboot after installing KVM?</li>
 <li>Did you reboot after adding users to groups?</li></ul>
 <p>Please add this information if making a support request.
 </p>
-<h2><span class="mw-headline" id="Unable_to_connect_to_libvirt">Unable to connect to libvirt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=68" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=68.html" title="Edit section: Unable to connect to libvirt">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Unable_to_connect_to_libvirt">Unable to connect to libvirt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=69" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=69.html" title="Edit section: Unable to connect to libvirt">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If the following error appears.
 </p>
 <pre>Unable to connect to libvirt.
@@ -1704,7 +1728,7 @@ Libvirt URI is: qemu:///system
 </pre>
 <p>Make sure you <a data-href="KVM#Addgroup" href="./KVM.html" title="KVM">added groups</a> and <a data-href="KVM#Reboot" href="./KVM.html" title="KVM">rebooted</a>.
 </p>
-<h2><span class="mw-headline" id="Unable_to_open_a_connection_to_the_libvirt_management_daemon">Unable to open a connection to the libvirt management daemon</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=69" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=69.html" title="Edit section: Unable to open a connection to the libvirt management daemon">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Unable_to_open_a_connection_to_the_libvirt_management_daemon">Unable to open a connection to the libvirt management daemon</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=70" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=70.html" title="Edit section: Unable to open a connection to the libvirt management daemon">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If the following error appears.
 </p>
 <pre>Unable to open a connection to the libvirt management daemon.
@@ -1736,7 +1760,7 @@ Running guests on default URI: no running guests.
 </pre>
 <p>In this case, it could be a permissions problem.
 </p>
-<h2><span class="mw-headline" id="hda-duplex_not_supported_in_this_QEMU_binary">hda-duplex not supported in this QEMU binary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=70" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=70.html" title="Edit section: hda-duplex not supported in this QEMU binary">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="hda-duplex_not_supported_in_this_QEMU_binary">hda-duplex not supported in this QEMU binary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=71" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=71.html" title="Edit section: hda-duplex not supported in this QEMU binary">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If this error appears you might be a member of the <span style="border:1px dotted #005cb9">libvirt</span> group, but lack membership of the <span style="border:1px dotted #005cb9">kvm</span> group.
 </p><p>In this case, it helps to change.
 </p>
@@ -1746,7 +1770,7 @@ Running guests on default URI: no running guests.
 </p>
 <pre>    &lt;sound model='ac97'&gt;
 </pre>
-<h2><span id="process_exited_while_connecting_to_monitor:_ioctl(KVM_CREATE_VM)_failed"></span><span class="mw-headline" id="process_exited_while_connecting_to_monitor:_ioctl.28KVM_CREATE_VM.29_failed">process exited while connecting to monitor: ioctl(KVM_CREATE_VM) failed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=71" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=71.html" title="Edit section: process exited while connecting to monitor: ioctl(KVM CREATE VM) failed">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="process_exited_while_connecting_to_monitor:_ioctl(KVM_CREATE_VM)_failed"></span><span class="mw-headline" id="process_exited_while_connecting_to_monitor:_ioctl.28KVM_CREATE_VM.29_failed">process exited while connecting to monitor: ioctl(KVM_CREATE_VM) failed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=72" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=72.html" title="Edit section: process exited while connecting to monitor: ioctl(KVM CREATE VM) failed">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If the following error appears.
 </p>
 <pre>Error starting domain: internal error: process exited while connecting to monitor: ioctl(KVM_CREATE_VM) failed: 16 Device or resource busy
@@ -1754,7 +1778,7 @@ failed to initialize KVM: Device or resource busy
 </pre>
 <p>Then it is not possible other non-KVM VMs (such as VirtualBox VMs) might already be running, since two concurrent hypervisor instances is not supported by KVM / VirtualBox.
 </p>
-<h2><span class="mw-headline" id="Permissions">Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=72" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=72.html" title="Edit section: Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Permissions">Permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=73" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=73.html" title="Edit section: Permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -1766,8 +1790,8 @@ failed to initialize KVM: Device or resource busy
 </div>
 <p>
 </p>
-<h2><span id="invalid_argument:_could_not_find_capabilities_for_domaintype=kvm"></span><span class="mw-headline" id="invalid_argument:_could_not_find_capabilities_for_domaintype.3Dkvm">invalid argument: could not find capabilities for domaintype=kvm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=73" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=73.html" title="Edit section: invalid argument: could not find capabilities for domaintype=kvm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h2><span class="mw-headline" id="Add_Version_Numbers_to_Support_Request">Add Version Numbers to Support Request</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=74" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=74.html" title="Edit section: Add Version Numbers to Support Request">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="invalid_argument:_could_not_find_capabilities_for_domaintype=kvm"></span><span class="mw-headline" id="invalid_argument:_could_not_find_capabilities_for_domaintype.3Dkvm">invalid argument: could not find capabilities for domaintype=kvm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=74" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=74.html" title="Edit section: invalid argument: could not find capabilities for domaintype=kvm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Add_Version_Numbers_to_Support_Request">Add Version Numbers to Support Request</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=75" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=75.html" title="Edit section: Add Version Numbers to Support Request">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>If problems are experienced, be sure to note what versions of libvirt-bin, qemu-kvm and virt-manager are in use as part of the support request. If you are using Debian, the following command will determine the software versions.
 </p><p>
 </p><div class="codeContainerNew">
@@ -1780,17 +1804,17 @@ failed to initialize KVM: Device or resource busy
 </div>
 <p>
 </p>
-<h2><span class="mw-headline" id="User_Help_Forum">User Help Forum</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=75" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=75.html" title="Edit section: User Help Forum">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="User_Help_Forum">User Help Forum</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=76" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=76.html" title="Edit section: User Help Forum">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://forums.whonix.org/c/kvm" href="https://forums.whonix.org/c/kvm" rel="noreferrer noopener" target="_blank">Whonix ™ KVM User Help Forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/kvm" href="https://web.archive.org/web/https://forums.whonix.org/c/kvm" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h2><span class="mw-headline" id="Alternative_Guides">Alternative Guides</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=76" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=76.html" title="Edit section: Alternative Guides">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Alternative_Guides">Alternative Guides</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=77" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=77.html" title="Edit section: Alternative Guides">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>For alternative installation guides contributed by community members, see: <a data-href="KVM/Installation_Screenshots" href="./KVM/Installation_Screenshots.html" title="KVM/Installation Screenshots">Installation Screenshots</a>.
 </p>
-<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=77" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=77.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=78" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=78.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="Dev/KVM" href="./Dev/KVM.html" title="Dev/KVM">KVM Development</a></li>
 <li><a class="external text" data-href="https://phabricator.whonix.org/tag/kvm/" href="https://phabricator.whonix.org/tag/kvm/" rel="noreferrer noopener" target="_blank">KVM Whonix ™ Bug Tracker</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/tag/kvm/" href="https://web.archive.org/web/https://phabricator.whonix.org/tag/kvm/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://github.com/Whonix/whonix-libvirt" href="https://github.com/Whonix/whonix-libvirt" rel="noreferrer noopener" target="_blank">whonix-libvirt github</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-libvirt" href="https://web.archive.org/web/https://github.com/Whonix/whonix-libvirt" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=78" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=78.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=KVM&amp;action=edit&amp;section=79" href="https://www.whonix.org/w/index.php?title=KVM&amp;action=edit&amp;section=79.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><button onclick="expand()">Expand all</button>
 <button onclick="collapse()">Collapse all</button>
 
@@ -1948,7 +1972,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./KVM" href="https://facebook.com/sharer.php?u=./KVM">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please consider a <a class="external text" data-href="Donate" href="./Donate" rel="noreferrer noopener" target="_blank">recurring donation</a> <sup><a data-href="https://web.archive.org/web/./Donate" href="https://web.archive.org/web/./Donate" rel="noreferrer noopener" target="_blank">[archive]</a></sup>!
+<p>Did you know that Whonix could provide protection against <a class="external text" data-href="https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">backdoors</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Backdoor_(computing)" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Backdoor_(computing)" rel="noreferrer noopener" target="_blank">[archive]</a></sup>? See <a class="external text" data-href="Verifiable_Builds" href="./Verifiable_Builds" rel="noreferrer noopener" target="_blank">Verifiable Builds</a> <sup><a data-href="https://web.archive.org/web/./Verifiable_Builds" href="https://web.archive.org/web/./Verifiable_Builds" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Help is wanted and welcomed.
 </p>
 </div>
 <p><a data-href="KVM" href="./KVM" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png.pagespeed.ce.ujF1_TopG5.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/KVM" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/KVM" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png.pagespeed.ce.WMIdGTqyTd.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
@@ -1961,7 +1985,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=KVM&amp;oldid=59362" dir="ltr" href="https://www.whonix.org/w/index.php?title=KVM&amp;oldid=59362">https://www.whonix.org/w/index.php?title=KVM&amp;oldid=59362</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=KVM&amp;oldid=59443" dir="ltr" href="https://www.whonix.org/w/index.php?title=KVM&amp;oldid=59443">https://www.whonix.org/w/index.php?title=KVM&amp;oldid=59443</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -1972,7 +1996,7 @@ Retrieved from "<a data-href="/w/index.php?title=KVM&amp;oldid=59362" dir="ltr" 
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 27 August 2020, at 16:23.</li>
+<li id="footer-lastmod"> This page was last edited on 5 September 2020, at 17:03.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
