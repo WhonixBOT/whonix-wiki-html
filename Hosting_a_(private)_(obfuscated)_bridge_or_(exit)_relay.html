@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Host a Bridge or Tor Relay - Whonix
  url: ./Hosting_a_(private)_(obfuscated)_bridge_or_(exit)_relay
- date: Thu Sep 10 07:42:52 2020
+ date: Fri Sep 11 07:43:01 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -106,16 +106,16 @@ For KVM, follow the NAT port forwarding instructions for Whonix-Gateway ™. <su
 </p><p><b>Modify Whonix-Gateway ™ User Firewall Settings</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/rw/config/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
+<p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/usr/local/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
 </p><p><u>If using <a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
-In Whonix-Gateway ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d</code> exists.
+In Whonix-Gateway ™ AppVM. Make sure folder <code>/usr/local/etc/whonix_firewall.d</code> exists.
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo mkdir -p /rw/config/whonix_firewall.d</pre>
+<pre>sudo mkdir -p /usr/local/etc/whonix_firewall.d</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo mkdir -p /rw/config/whonix_firewall.d</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo mkdir -p /usr/local/etc/whonix_firewall.d</textarea>
 </div>
 </div>
 <p>
@@ -127,10 +127,10 @@ In Whonix-Gateway ™ AppVM. Make sure folder <code>/rw/config/whonix_firewall.d
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudoedit /rw/config/whonix_firewall.d/50_user.conf</pre>
+<pre>sudoedit /usr/local/etc/whonix_firewall.d/50_user.conf</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudoedit /rw/config/whonix_firewall.d/50_user.conf</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudoedit /usr/local/etc/whonix_firewall.d/50_user.conf</textarea>
 </div>
 </div>
 <p>
