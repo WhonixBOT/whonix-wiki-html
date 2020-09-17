@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix ™ for VirtualBox with CLI
  url: ../VirtualBox/CLI
- date: Wed Sep 16 07:54:57 2020
+ date: Thu Sep 17 07:55:25 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -37,8 +37,8 @@ a.freelink
 <meta content="../VirtualBox/CLI" property="og:url"/>
 <meta content="Whonix ™ for VirtualBox with CLI - Command Line Interface - Text Terminal Only - Headless - No graphical user interface. (No GUI)" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/thumb/3/3d/Cli6.png/940px-Cli6.png" property="og:image"/>
-<meta content="2020-08-23T12:33:36Z" property="article:modified_time"/>
-<meta content="2020-08-23T12:33:36Z" property="article:published_time"/>
+<meta content="2020-09-16T08:11:15Z" property="article:modified_time"/>
+<meta content="2020-09-16T08:11:15Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix ™ for VirtualBox with CLI" property="twitter:title"/>
 <meta content="Whonix ™ for VirtualBox with CLI - Command Line Interface - Text Terminal Only - Headless - No graphical user interface. (No GUI)" property="twitter:description"/>
@@ -356,7 +356,7 @@ ova
 <p><u>Debian hosts:</u> <img alt="Debian.png" data-pagespeed-lazy-src="/w/images/thumb/3/30/Debian.png/15px-Debian.png.pagespeed.ce.gbPQQb2r9f.png" data-pagespeed-lazy-srcset="/w/images/thumb/3/30/Debian.png/23px-Debian.png.pagespeed.ce.e3X0Ol0fGG.png 1.5x, /w/images/thumb/3/30/Debian.png/30px-Debian.png.pagespeed.ce.aVLZ-9bhcX.png 2x" data-pagespeed-url-hash="2072779932" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="18" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="15"/>
 </p><p>These instructions are for Debian <code>buster</code>, which is recommended. Other Debian releases might work, but this is untested. In that case, replace <code>buster</code> with the actual codename your release.
 </p><p>Note: this applies to Whonix ™ <code>15</code>. Later Whonix ™ versions may use a codename different to <code>buster</code>.
-</p><p>Package <code>virtualbox</code> should be installed from Whonix repository. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>To acquire the <a data-href="Other_Versions#Recommended_VirtualBox_Version" href="../VirtualBox/Other_Versions.html" title="VirtualBox/Other Versions">Recommended VirtualBox version</a> tested with Whonix ™, package <code>virtualbox-6.1</code> should be installed from Whonix ™ repository. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p><b>1.</b> On the host.
 </p><p>Open a terminal.
 </p><p><b>2.</b> Add Whonix ™ repository.
@@ -413,10 +413,21 @@ ova
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get install virtualbox linux-headers-$(dpkg --print-architecture)</pre>
+<pre>sudo apt-get install virtualbox-6.1 linux-headers-$(dpkg --print-architecture)</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install virtualbox linux-headers-$(dpkg --print-architecture)</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt-get install virtualbox-6.1 linux-headers-$(dpkg --print-architecture)</textarea>
+</div>
+</div>
+<p>
+</p><p><b>5.</b> Add your current user to group <code>vboxusers</code>. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo adduser $(whoami) vboxusers</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo adduser $(whoami) vboxusers</textarea>
 </div>
 </div>
 <p>
@@ -452,7 +463,7 @@ ova
 </p><p>If you still need help, please check the <a data-href="/wiki/Support" href="../Support.html" title="Support">Support</a> page.
 </p>
 </div>
-<p>For command line import instructions, see footnote. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<p>For command line import instructions, see footnote. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 </div>
 </div>
@@ -528,10 +539,10 @@ ova
 <li>A host kernel upgrade.</li>
 <li>A VM kernel upgrade.</li>
 <li>A "not vulnerable" result from <a data-href="/wiki/Firmware_Security_and_Updates#spectre-meltdown-checker" href="../Firmware_Security_and_Updates.html" title="Firmware Security and Updates">spectre-meltdown-checker</a> run on the host.</li>
-<li>Installation of the latest VirtualBox version. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup></li>
+<li>Installation of the latest VirtualBox version. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup></li>
 <li>All Spectre/Meltdown-related VirtualBox settings are tuned for better security as documented below.</li></ol>
-<p>To learn more, see: <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox 5.2.18 vulnerable to spectre/meltdown despite microcode being installed</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and the associated <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">VirtualBox forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://web.archive.org/web/https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Users must patiently wait for VirtualBox developers to fix this bug.
-</p><p>On the host. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<p>To learn more, see: <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox 5.2.18 vulnerable to spectre/meltdown despite microcode being installed</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and the associated <a class="external text" data-href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">VirtualBox forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" href="https://web.archive.org/web/https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=89395" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Users must patiently wait for VirtualBox developers to fix this bug.
+</p><p>On the host. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <blockquote>
 <p>VBoxManage modifyvm "Whonix-Gateway" --ibpb-on-vm-entry o
@@ -573,13 +584,13 @@ VBoxManage modifyvm "Whonix-Workstation" --mds-clear-on-sched on
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">OpenPGP is a standard for data encryption that provides cryptographic privacy and authentication through the use of keys owned by its users.</span>
 </li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
-This is <a data-href="/wiki/Install_Software#Best_Practices" href="../Install_Software.html" title="Install Software">non-ideal</a> but required since VirtualBox in unavailable in Debian <code>buster</code> / <code>buster-backports</code>. And it will not become available anytime soon either. See <a data-href="/wiki/Dev/Virtualization_Platform#Unavailable_in_Debian_stable_and_backports_due_to_Licensing_Issues" href="../Dev/Virtualization_Platform.html" title="Dev/Virtualization Platform">Unavailable in Debian stable and backports due to Licensing Issues</a>. There is a chance VirtualBox will be available from <a class="external text" data-href="http://fasttrack.debian.net/" href="http://fasttrack.debian.net/" rel="noreferrer noopener" target="_blank">Debian fasttrack</a> <sup><a data-href="https://web.archive.org/web/http://fasttrack.debian.net/" href="https://web.archive.org/web/http://fasttrack.debian.net/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, see <a class="external text" data-href="https://salsa.debian.org/fasttrack-team/support/issues/10" href="https://salsa.debian.org/fasttrack-team/support/issues/10" rel="noreferrer noopener" target="_blank">please add VirtualBox to fasttrack</a> <sup><a data-href="https://web.archive.org/web/https://salsa.debian.org/fasttrack-team/support/issues/10" href="https://web.archive.org/web/https://salsa.debian.org/fasttrack-team/support/issues/10" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-Alternatively you could
-<ul><li>install VirtualBox from the <a data-href="Other_Versions#Install_from_Oracle_Repository" href="../VirtualBox/Other_Versions.html" title="VirtualBox/Other Versions">Oracle Repository</a>, or</li>
-<li>install <a class="external free" data-href="https://people.debian.org/~lucas/virtualbox-buster/" href="https://people.debian.org/~lucas/virtualbox-buster/" rel="noreferrer noopener" target="_blank">https://people.debian.org/~lucas/virtualbox-buster/</a> <sup><a data-href="https://web.archive.org/web/https://people.debian.org/~lucas/virtualbox-buster/" href="https://web.archive.org/web/https://people.debian.org/~lucas/virtualbox-buster/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-but this comes with different <a data-href="/wiki/Install_Software#Foreign_Sources" href="../Install_Software.html" title="Install Software">risks</a>.</span>
+This is <a data-href="/wiki/Install_Software#Best_Practices" href="../Install_Software.html" title="Install Software">non-ideal</a> but required since VirtualBox in unavailable in official Debian <code>buster</code> repository and difficult to install due to <a data-href="/wiki/Dev/VirtualBox#VirtualBox_Installation_Challenges" href="../Dev/VirtualBox.html" title="Dev/VirtualBox">VirtualBox Installation Challenges</a>.
+Alternatively you could install VirtualBox from the <a data-href="Other_Versions#Install_from_Oracle_Repository" href="../VirtualBox/Other_Versions.html" title="VirtualBox/Other Versions">Oracle (virtualbox.org) Repository</a>, but this comes with different <a data-href="/wiki/Install_Software#Foreign_Sources" href="../Install_Software.html" title="Install Software">risks</a>. VirtualBox might be updated by VirtualBox developers before being tested with Whonix ™ which could then lead to issues. (Described in footnote <a data-href="Other_Versions#Recommended_VirtualBox_Version" href="../VirtualBox/Other_Versions.html" title="VirtualBox/Other Versions">here</a>.)</span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+Optional: See: <a class="external free" data-href="https://www.virtualbox.org/manual/ch02.html#install-linux-vboxusers" href="https://www.virtualbox.org/manual/ch02.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch02.html#install-linux-vboxusers</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch02.html#install-linux-vboxusers" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch02.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 On the Linux platform.<br/>
 <b>1.</b> Read <a class="mw-redirect" data-href="/wiki/License_Agreement" href="../License_Agreement.html" title="License Agreement">License Agreement</a>:
 <div class="codeContainerNew">
@@ -603,12 +614,12 @@ On the Linux platform.<br/>
 <p>
 </p></span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
 VirtualBox version <code>5.2.18</code> or above is required since only that version comes with Spectre/Meltdown defenses. See <a class="external free" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages/5739/22" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Also see the following Whonix forum discussion: <a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" rel="noreferrer noopener" target="_blank">Whonix vulerable due to missing processor microcode packages? spectre / meltdown / retpoline / L1 Terminal Fault (L1TF)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">Also see the following Whonix forum discussion: <a class="external text" data-href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" href="https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" rel="noreferrer noopener" target="_blank">Whonix vulerable due to missing processor microcode packages? spectre / meltdown / retpoline / L1 Terminal Fault (L1TF)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-vulerable-due-to-missing-processor-microcode-packages-spectre-meltdown-retpoline-l1-terminal-fault-l1tf/5739" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--ibpb-on-vm-[enter|exit] on|off: Enables flushing of the indirect branch prediction buffers on every VM enter or exit respectively. This could be enabled by users overly worried about possible spectre attacks by the VM. Please note that these options may have sever impact on performance.
 <br/>
@@ -618,14 +629,14 @@ VirtualBox version <code>5.2.18</code> or above is required since only that vers
 <p>There is a mistake in the VirtualBox manual stating <code>enter</code> which does not work. It is actually <code>entry</code>.
 </p>
 </span></li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch08.html" href="https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch08.html</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch08.html" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch08.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 <blockquote>
 <p>--l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, “CVE-2018-3646”.
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, “<a class="external text" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">CVE-2018-3646</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>”.
 <br/>
@@ -633,7 +644,7 @@ VirtualBox version <code>5.2.18</code> or above is required since only that vers
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646" href="https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 <blockquote>
 <p>For users not concerned by this security issue, the default mitigation can be disabled using<br/>
@@ -652,7 +663,7 @@ VirtualBox version <code>5.2.18</code> or above is required since only that vers
 <p>Since we want to enable the security feature we set <code>--l1d-flush-on-sched on</code>.
 </p>
 </span></li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--spec-ctrl on|off: This setting enables/disables exposing speculation control interfaces to the guest, provided they are available on the host. Depending on the host CPU and workload, enabling speculation control may significantly reduce performance.
 <br/>
@@ -660,10 +671,10 @@ VirtualBox version <code>5.2.18</code> or above is required since only that vers
 </p>
 </blockquote></span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 According to this <a class="external text" data-href="https://www.virtualbox.org/ticket/17987" href="https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">VirtualBox ticket</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" href="https://web.archive.org/web/https://www.virtualbox.org/ticket/17987" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <code>--spec-ctrl</code> should be set to <code>on</code>.</span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 <blockquote>
 <p>--nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, “Nested paging and VPIDs” and Section 13.4.1, “CVE-2018-3646”.
 </p>
@@ -710,7 +721,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../VirtualBox/CLI" href="https://facebook.com/sharer.php?u=../VirtualBox/CLI">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>There are <a class="external text" data-href="/wiki/Dev/git#subscribe_to_code_changes" href="../Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> <sup><a data-href="https://web.archive.org/web/../Dev/git#subscribe_to_code_changes" href="https://web.archive.org/web/../Dev/git" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for subscribing to Whonix source code changes.
 </p>
 </div>
 <p><a data-href="CLI" href="../VirtualBox/CLI" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-lazy-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png.pagespeed.ce.ujF1_TopG5.png" data-pagespeed-lazy-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" data-pagespeed-url-hash="2451531401" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="12" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/CLI" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VirtualBox/CLI" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-lazy-src="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/25px-Iconfinder_tor_386502.svg.png.pagespeed.ce.WMIdGTqyTd.png" data-pagespeed-lazy-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png.pagespeed.ce.9SNawyMab4.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png.pagespeed.ce.qNxaNc8Hdt.png 2x" data-pagespeed-url-hash="3726897143" data-src="/pagespeed_static/1.JiBnMqyl6S.gif" decoding="async" height="25" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH+BnBzYV9sbAAh+QQBCgABACwAAAAAAQABAAACAkwBADs=" width="25"/></a>
@@ -723,7 +734,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=VirtualBox/CLI&amp;oldid=59321" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/CLI&amp;oldid=59321">https://www.whonix.org/w/index.php?title=VirtualBox/CLI&amp;oldid=59321</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=VirtualBox/CLI&amp;oldid=59742" dir="ltr" href="https://www.whonix.org/w/index.php?title=VirtualBox/CLI&amp;oldid=59742">https://www.whonix.org/w/index.php?title=VirtualBox/CLI&amp;oldid=59742</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -734,7 +745,7 @@ Retrieved from "<a data-href="/w/index.php?title=VirtualBox/CLI&amp;oldid=59321"
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 August 2020, at 14:33.</li>
+<li id="footer-lastmod"> This page was last edited on 16 September 2020, at 10:11.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
