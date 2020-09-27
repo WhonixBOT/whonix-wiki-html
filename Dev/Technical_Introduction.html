@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Technical Introduction - Whonix
  url: ../Dev/Technical_Introduction
- date: Sat Sep 26 07:39:49 2020
+ date: Sun Sep 27 07:40:23 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -27,8 +27,8 @@
 <meta content="../Dev/Technical_Introduction" property="og:url"/>
 <meta content="Introduction into Whonix ™ Technical Design." property="og:description"/>
 <meta content="" property="og:image"/>
-<meta content="2020-09-22T12:28:00Z" property="article:modified_time"/>
-<meta content="2020-09-22T12:28:00Z" property="article:published_time"/>
+<meta content="2020-09-26T12:35:15Z" property="article:modified_time"/>
+<meta content="2020-09-26T12:35:15Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Technical Introduction - Whonix" property="twitter:title"/>
 <meta content="Introduction into Whonix ™ Technical Design." property="twitter:description"/>
@@ -292,7 +292,7 @@
 <li>Avoid major networking changes like using non-Tor, <a class="mw-redirect" data-href="/wiki/Secondary_DNS_Resolver" href="../Secondary_DNS_Resolver.html" title="Secondary DNS Resolver">secondary DNS resolvers</a> or establishing permanent Tor exit relays. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup></li></ul>
 <h1><span class="mw-headline" id="Forensics">Forensics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=16.html" title="Edit section: Forensics">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Forensic_Considerations">Forensic Considerations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=17.html" title="Edit section: Forensic Considerations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>In the past, a number of ideas have been put forward to try and make Whonix ™ an amnesic system:
+<p>In the past, a number of ideas have been put forward as anti-forensics.
 </p>
 <ul><li>Shredding the Whonix ™ hard disk images.</li>
 <li>Having a zip archive of Whonix ™ hard disk images and restoring them every time Whonix ™ is used.</li>
@@ -300,8 +300,8 @@
 <li>Running Whonix ™ <a class="external text" data-href="https://forums.whonix.org/t/whonix-and-truecrypt/293/6" href="https://forums.whonix.org/t/whonix-and-truecrypt/293/6" rel="noreferrer noopener" target="_blank">completely in ramdisks</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-and-truecrypt/293/6" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-and-truecrypt/293/6" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
 <li>Using <a data-href="/wiki/Full_Disk_Encryption" href="../Full_Disk_Encryption.html" title="Full Disk Encryption">full disk encryption</a>.</li>
 <li>And so on.</li></ul>
-<p>Unfortunately, none of these methods are a substitute for a true amnesic system. Amnesic live systems have a superior design insofar as sensitive (or unencrypted) data is never stored on storage media in the first place. It is manifestly unsafe to try and deal with data by wiping it after it has already been stored, so this is a poor design principle to implement.
-</p><p>Using full disk encryption is still useful to protect against forensic analysis, but in some parts of the world this is illegal or draws unwanted attention. Therefore, full disk encryption is not an applicable stopgap for some Whonix ™ users and this cohort requires an amnesic version of Whonix ™ in all instances.
+<p>Unfortunately, these methods are not a sufficient substitute. It is manifestly unsafe to try and deal with data by wiping it after it has already been stored, so this is a poor design principle to implement. Use <a data-href="/wiki/Grub-live" href="../Grub-live.html" title="Grub-live">grub-live</a> on the host instead. The advantage is that sensitive (or unencrypted) data is never stored on storage media in the first place.
+</p><p>Using full disk encryption is still useful to protect against forensic analysis, but in some parts of the world this is illegal or draws unwanted attention.
 </p>
 <h2><span class="mw-headline" id="Anti-forensic_Claims">Anti-forensic Claims</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=18.html" title="Edit section: Anti-forensic Claims">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The reader should always be cautious regarding claims made about the ability to defeat disk forensics. For example, the Whonix ™ team are not experts in matters related to:
@@ -319,7 +319,7 @@
 <li>Run Whonix ™ and perform a range of normal user activities.</li>
 <li>Make another image of the HDD/SSD.</li>
 <li>Compare the images.</li></ol>
-<p>Unless these basics steps are performed, the setup may seem ingenious but fail against contemporary forensic tools. Users concerned about local forensics should at least use full disk encryption. When established open source encryption solutions like Linux dmcrypt are used correctly, they live up to their promises. However, always remember this approach is inferior to an amnesic system, particularly if the user can be forced to surrender their password under certain circumstances.
+<p>Unless these basics steps are performed, the setup may seem ingenious but fail against contemporary forensic tools. Users concerned about local forensics should at least use full disk encryption. When established open source encryption solutions like Linux dmcrypt are used correctly, they live up to their promises. However, always remember this approach is inferior, particularly if the user can be forced to surrender their password under certain circumstances. Use <a data-href="/wiki/Grub-live" href="../Grub-live.html" title="Grub-live">grub-live</a> on the host instead.
 </p>
 <h1><span class="mw-headline" id="Images">Images</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=19.html" title="Edit section: Images">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h3><span id="Why_are_Whonix_™_Images_so_Large?"></span><span class="mw-headline" id="Why_are_Whonix_.E2.84.A2_Images_so_Large.3F">Why are Whonix ™ Images so Large?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=20.html" title="Edit section: Why are Whonix ™ Images so Large?">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
@@ -336,11 +336,12 @@
 </p><p>Alternatively, users can follow the recommendations to run Whonix ™ with the <a data-href="/wiki/System_Configuration_and_Access#Use_a_Dedicated_Host_Operating_System_and_Computer" href="../System_Configuration_and_Access.html" title="System Configuration and Access">dedicated host operating system</a> installed on <a data-href="/wiki/Whonix_on_USB" href="../Whonix_on_USB.html" title="Whonix on USB">external media</a> in combination with <a data-href="/wiki/Full_Disk_Encryption" href="../Full_Disk_Encryption.html" title="Full Disk Encryption">full disk encryption</a>.
 </p>
 <h2><span id="Is_there_a_Whonix_™_Amnesic_Feature_/_Live_CD_/_Live_DVD?_What_about_Forensics?"></span><span class="mw-headline" id="Is_there_a_Whonix_.E2.84.A2_Amnesic_Feature_.2F_Live_CD_.2F_Live_DVD.3F_What_about_Forensics.3F">Is there a Whonix ™ Amnesic Feature / Live CD / Live DVD? What about Forensics?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=23.html" title="Edit section: Is there a Whonix ™ Amnesic Feature / Live CD / Live DVD? What about Forensics?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>As noted in the previous entry, Whonix ™ allows <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users to optionally run Whonix ™ as a live system. Writes go to RAM instead of the HDD/SSD, meaning everything that is created, changed or downloaded in the VM during that session does not persist after shutdown. However, neither <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> or <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> offers an amnesic system at the time of writing. <a data-href="Technical_Introduction#Will_there_be_a_Whonix_.E2.84.A2_Live_CD_or_DVD.3F" href="../Dev/Technical_Introduction.html" title="Dev/Technical Introduction">This might change in future.</a>
+<p>Amnesic Feature: See <a data-href="/wiki/Grub-live" href="../Grub-live.html" title="Grub-live">grub-live</a>.
+</p><p>Live: See <a data-href="/wiki/Whonix-Host" href="../Whonix-Host.html" title="Whonix-Host">Whonix-Host</a>.
 </p><p><span id="future-live-dvd"></span>
 </p>
 <h2><span id="Will_there_be_a_Whonix_™_Live_CD_or_DVD?"></span><span class="mw-headline" id="Will_there_be_a_Whonix_.E2.84.A2_Live_CD_or_DVD.3F">Will there be a Whonix ™ Live CD or DVD?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=24.html" title="Edit section: Will there be a Whonix ™ Live CD or DVD?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Probably yes.
+<p>Probably yes. See <a data-href="/wiki/Whonix-Host" href="../Whonix-Host.html" title="Whonix-Host">Whonix-Host</a>.
 </p>
 <h3><span id="Non-Qubes-Whonix_™"></span><span class="mw-headline" id="Non-Qubes-Whonix_.E2.84.A2">Non-Qubes-Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;action=edit&amp;section=25.html" title="Edit section: Non-Qubes-Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p><a data-href="/wiki/Whonix-Host" href="../Whonix-Host.html" title="Whonix-Host">possibly in future</a>.
@@ -464,7 +465,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59822" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59822">https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59822</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59890" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59890">https://www.whonix.org/w/index.php?title=Dev/Technical_Introduction&amp;oldid=59890</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -475,7 +476,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Technical_Introduction&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 September 2020, at 14:28.</li>
+<li id="footer-lastmod"> This page was last edited on 26 September 2020, at 14:35.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
