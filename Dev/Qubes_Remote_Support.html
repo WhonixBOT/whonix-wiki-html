@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Qubes Remote Support - Whonix
  url: ../Dev/Qubes_Remote_Support
- date: Wed Sep 30 07:39:33 2020
+ date: Thu Oct  1 07:38:48 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -51,7 +51,7 @@
 
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
-<meta content="MediaWiki 1.34.1" name="generator"/>
+<meta content="MediaWiki 1.35.0" name="generator"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -62,12 +62,12 @@
 <meta content="Dev/Qubes Remote Support - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="../Dev/Qubes_Remote_Support" property="og:url"/>
-<meta content="" property="og:image"/>
-<meta content="2020-09-22T15:19:06Z" property="article:modified_time"/>
-<meta content="2020-09-22T15:19:06Z" property="article:published_time"/>
+<meta content="https://www.whonix.org/w/resources/assets/wiki.png" property="og:image"/>
+<meta content="2020-09-30T10:05:12Z" property="article:modified_time"/>
+<meta content="2020-09-30T10:05:12Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Qubes Remote Support - Whonix" property="twitter:title"/>
-<meta content="" property="twitter:image"/>
+<meta content="https://www.whonix.org/w/resources/assets/wiki.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
@@ -109,7 +109,7 @@
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>QubesOS to be remotely manageable from on-demand, ephemeral, hidden onion service to dom0/AdminVM.
 </p>
-<div class="toc" id="toc"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#challenges"><span class="tocnumber">1</span> <span class="toctext">challenges</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#goals"><span class="tocnumber">2</span> <span class="toctext">goals</span></a></li>
@@ -695,30 +695,42 @@ qvm-run --user root --pass-io "$1" "cat $2" &gt; "$3"
 </p>
 <pre>qubes-remote-support-receiver-start
 </pre>
-<p>Will show something like this wormhole_code: 9-support-concert
+<p>Will show something like this:
+</p>
+<blockquote>
+<p>wormhole_code: 9-support-concert
+</p>
+</blockquote>
+<p>Give the wormhole code <code>9-support-concert</code> to the remote support provider.
 </p>
 <h2><span class="mw-headline" id="qubes-remote-support-provider">qubes-remote-support-provider</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=39.html" title="Edit section: qubes-remote-support-provider">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>1) Open a whonix-ws-15 based VM. Recommended but optional: DispVM. This will be refereed to as <code>qubes-remote-support-provider</code> VM.
+<p>SoonSimplified - This step won't be neccessary anymore once package qubes-remote-support is uploaded to Qubes repository
+</p><p>1) Open a whonix-ws-15 based VM. Recommended but optional: DispVM. This will be refereed to as <code>qubes-remote-support-provider</code> VM.
 </p><p>2) Dependency installation.
 </p><p>In <code>qubes-remote-support-provider</code> VM.
 </p>
 <pre>sudo apt update
 </pre>
-<pre>sudo apt install openssh-client
+<pre>sudo apt install --no-install-recommends openssh-client
 </pre>
-<p>3) Run <code>qubes-remote-support-provider</code> script in <code>qubes-remote-support-provider</code> VM.
+<p>3) <code>qubes-remote-support-provider</code> version choice. [SoonSimplified]
+</p><p>You could either:
+</p>
+<ul><li>use the already existing script <code>/usr/bin/qubes-remote-support-provider</code> <u>or</u>,</li>
+<li>download a newer version with slightly improved usability from github <a class="external text" data-href="https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" href="https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" rel="noreferrer noopener" target="_blank">qubes-remote-support-provider</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, store it in the home folder or anywhere else, <code>chmod +x qubes-remote-support-provider</code> and execute that instead.</li></ul>
+<p>4) Run <code>qubes-remote-support-provider</code> script in <code>qubes-remote-support-provider</code> VM.
 </p><p>It is an interactive script. Read what it says. Continue by pressing enter.
-</p><p>4) When it says:
+</p><p>5) When it says:
 </p>
 <blockquote>
 <p>INFO: Install authenticated Tor onion v3 service private key with the following command in sys-whonix.<br/>
 sudo sourcefile=~/QubesIncoming/disp4522/1.auth_private anon-server-to-client-install
 </p>
 </blockquote>
-<p>Do as instructed in <code>sys-whonix</code> VM. Do not copy the command from here. Copy the command from <code>qubes-remote-support-provider</code> VM, then paste and run in <code>sys-whonix</code> VM. Then press enter to continue in <code>qubes-remote-support-provider</code> VM.
-</p><p>5) Done.
+<p>Do as instructed in <code>sys-whonix</code> VM. Do not copy the command from here. Copy the command from <code>qubes-remote-support-provider</code> VM script output, then paste and run in <code>sys-whonix</code> VM. Then press enter to continue in <code>qubes-remote-support-provider</code> VM.
+</p><p>6) Done.
 </p><p>Should now be connected by SSH.
-</p><p>6) Optional: Connect by VNC alike x2go server.
+</p><p>7) Optional: Connect by graphical remote support (x2go).
 </p><p>As per these <a data-href="Qubes_Remote_Support#x2goclient" href="../Dev/Qubes_Remote_Support.html" title="Dev/Qubes Remote Support">instructions</a>.
 </p>
 <h1><span class="mw-headline" id="Archive">Archive</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=40" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=40.html" title="Edit section: Archive">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -851,7 +863,7 @@ cutoff is 60 seconds.
 </li>
 </ol></div>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=59842" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=59842">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=59842</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60080" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60080">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60080</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -862,7 +874,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;ol
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 22 September 2020, at 17:19.</li>
+<li id="footer-lastmod"> This page was last edited on 30 September 2020, at 12:05.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -876,6 +888,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;ol
 </div>
 <div class="large-12 small-12 columns" id="footer-right-icons">
 <ul id="poweredby">
+<li class="copyright"> </li>
 </ul>
 </div>
 </div>
