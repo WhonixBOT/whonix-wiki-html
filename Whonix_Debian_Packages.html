@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Whonix Debian Packages - Whonix
  url: ./Whonix_Debian_Packages
- date: Wed Oct  7 07:59:44 2020
+ date: Thu Oct  8 07:58:55 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -65,8 +65,8 @@
 <meta content="./Whonix_Debian_Packages" property="og:url"/>
 <meta content="Which Whonix ™ Debian packages are safe to remove? What is a meta package? What other packages do Whonix ™ meta packages install? Which packages should never be removed? Why is package X installed?" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/a/aa/Box-158523640.png" property="og:image"/>
-<meta content="2020-06-20T00:56:25Z" property="article:modified_time"/>
-<meta content="2020-06-20T00:56:25Z" property="article:published_time"/>
+<meta content="2020-10-07T12:33:27Z" property="article:modified_time"/>
+<meta content="2020-10-07T12:33:27Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix Debian Packages - Whonix" property="twitter:title"/>
 <meta content="Which Whonix ™ Debian packages are safe to remove? What is a meta package? What other packages do Whonix ™ meta packages install? Which packages should never be removed? Why is package X installed?" property="twitter:description"/>
@@ -117,21 +117,22 @@
 <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#When_is_it_safe_to_run_sudo_apt-get_autoremove.3F"><span class="tocnumber">1</span> <span class="toctext">When is it safe to run sudo apt-get autoremove?</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Changed_Configuration_Files"><span class="tocnumber">2</span> <span class="toctext">Changed Configuration Files</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Non-Issues"><span class="tocnumber">3</span> <span class="toctext">Non-Issues</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Advanced_Topics"><span class="tocnumber">4</span> <span class="toctext">Advanced Topics</span></a>
+<li class="toclevel-1 tocsection-2"><a href="#re-install_meta_package_and_safely_run_sudo_apt-get_autoremove"><span class="tocnumber">2</span> <span class="toctext">re-install meta package and safely run sudo apt-get autoremove</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Changed_Configuration_Files"><span class="tocnumber">3</span> <span class="toctext">Changed Configuration Files</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Non-Issues"><span class="tocnumber">4</span> <span class="toctext">Non-Issues</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Advanced_Topics"><span class="tocnumber">5</span> <span class="toctext">Advanced Topics</span></a>
 <ul>
-<li class="toclevel-2 tocsection-5"><a href="#What_is_the_disadvantage_of_removing_a_meta_package.3F"><span class="tocnumber">4.1</span> <span class="toctext">What is the disadvantage of removing a meta package?</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Which_meta_packages_are_safe_to_remove.3F"><span class="tocnumber">4.2</span> <span class="toctext">Which meta packages are safe to remove?</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Which_packages_do_Whonix_.E2.84.A2_meta_packages_install.3F"><span class="tocnumber">4.3</span> <span class="toctext">Which packages do Whonix ™ meta packages install?</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Which_meta_packages_should_never_be_removed.3F"><span class="tocnumber">4.4</span> <span class="toctext">Which meta packages should never be removed?</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Why_is_package_X_installed.3F"><span class="tocnumber">4.5</span> <span class="toctext">Why is package X installed?</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#Removal_Instructions"><span class="tocnumber">4.6</span> <span class="toctext">Removal Instructions</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Technical_Stuff"><span class="tocnumber">4.7</span> <span class="toctext">Technical Stuff</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#What_is_the_disadvantage_of_removing_a_meta_package.3F"><span class="tocnumber">5.1</span> <span class="toctext">What is the disadvantage of removing a meta package?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Which_meta_packages_are_safe_to_remove.3F"><span class="tocnumber">5.2</span> <span class="toctext">Which meta packages are safe to remove?</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Which_packages_do_Whonix_.E2.84.A2_meta_packages_install.3F"><span class="tocnumber">5.3</span> <span class="toctext">Which packages do Whonix ™ meta packages install?</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Which_meta_packages_should_never_be_removed.3F"><span class="tocnumber">5.4</span> <span class="toctext">Which meta packages should never be removed?</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Why_is_package_X_installed.3F"><span class="tocnumber">5.5</span> <span class="toctext">Why is package X installed?</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Removal_Instructions"><span class="tocnumber">5.6</span> <span class="toctext">Removal Instructions</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Technical_Stuff"><span class="tocnumber">5.7</span> <span class="toctext">Technical Stuff</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-12"><a href="#See_Also"><span class="tocnumber">5</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_Also"><span class="tocnumber">6</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span id="When_is_it_safe_to_run_sudo_apt-get_autoremove?"></span><span class="mw-headline" id="When_is_it_safe_to_run_sudo_apt-get_autoremove.3F">When is it safe to run sudo apt-get autoremove?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=1.html" title="Edit section: When is it safe to run sudo apt-get autoremove?">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -147,7 +148,45 @@
 <p><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p><p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
-<h1><span class="mw-headline" id="Changed_Configuration_Files">Changed Configuration Files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=2.html" title="Edit section: Changed Configuration Files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="re-install_meta_package_and_safely_run_sudo_apt-get_autoremove">re-install meta package and safely run sudo apt-get autoremove</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=2.html" title="Edit section: re-install meta package and safely run sudo apt-get autoremove">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>1)</b> <a class="mw-redirect" data-href="Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt update</textarea>
+</div>
+</div>
+<p>
+</p><p><b>2)</b> Make sure a proper meta package is installed.
+</p><p><a data-href="Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> XFCE:
+</p>
+<ul><li>Whonix-Gateway ™: <code>sudo apt install non-qubes-whonix-gateway-xfce</code></li>
+<li>Whonix-Workstation ™: <code>sudo apt install non-qubes-whonix-workstation-xfce</code></li></ul>
+<p><a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>:
+</p>
+<ul><li>Whonix-Gateway ™: <code>sudo apt install qubes-whonix-gateway</code></li>
+<li>Whonix-Workstation ™: <code>sudo apt install qubes-whonix-workstation</code></li></ul>
+<p><b>3)</b> Make sure a proper meta package is installed.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt autoremove</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo apt autoremove</textarea>
+</div>
+</div>
+<p>
+</p><p><b>4)</b> Make again sure a proper meta package is installed.
+</p><p>Repeat step 2).
+</p><p><b>5)</b> Done.
+</p><p>The procedure of safely running <code>sudo apt autoremove</code> is complete.
+</p><p>Related: <a data-href="Factory_Reset" href="./Factory_Reset.html" title="Factory Reset">Whonix ™ Factory Reset</a>
+</p>
+<h1><span class="mw-headline" id="Changed_Configuration_Files">Changed Configuration Files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=3.html" title="Edit section: Changed Configuration Files">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <pre>Configuration file '/etc/apparmor.d/usr.bin.sdwdate'
 Configuration file '/etc/apparmor.d/whonix-firewall'
  ==&gt; Modified (by you or by a script) since installation.
@@ -165,9 +204,9 @@ Configuration file '/etc/apparmor.d/whonix-firewall'
 </p>
 <ul><li><code>/etc/apparmor.d/usr.bin.sdwdate</code></li>
 <li><code>/etc/apparmor.d/whonix-firewall</code></li></ul>
-<p>Install. Press <code>I</code>. These files are not an an exception. These are following the general rule. Same as above link.
+<p>Install. Press <code>I</code>. These files are not an an exception. These are following the <a data-href="Operating_System_Software_and_Updates#Changed_Configuration_Files" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">general rule. Same as above link</a>.
 </p>
-<h1><span class="mw-headline" id="Non-Issues">Non-Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=3.html" title="Edit section: Non-Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Non-Issues">Non-Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=4.html" title="Edit section: Non-Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The following are expected and ok.
 </p>
 <pre>The following packages were automatically installed and are no longer required:
@@ -178,7 +217,7 @@ Configuration file '/etc/apparmor.d/whonix-firewall'
 </pre>
 <p>Autoremoving those is safe.
 </p>
-<h1><span class="mw-headline" id="Advanced_Topics">Advanced Topics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=4.html" title="Edit section: Advanced Topics">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Advanced_Topics">Advanced Topics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5.html" title="Edit section: Advanced Topics">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><span id="Disadvantage"></span>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -186,13 +225,13 @@ Configuration file '/etc/apparmor.d/whonix-firewall'
 Advanced users only!
 </p>
 </div>
-<h2><span id="What_is_the_disadvantage_of_removing_a_meta_package?"></span><span class="mw-headline" id="What_is_the_disadvantage_of_removing_a_meta_package.3F">What is the disadvantage of removing a meta package?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=5.html" title="Edit section: What is the disadvantage of removing a meta package?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="What_is_the_disadvantage_of_removing_a_meta_package?"></span><span class="mw-headline" id="What_is_the_disadvantage_of_removing_a_meta_package.3F">What is the disadvantage of removing a meta package?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=6.html" title="Edit section: What is the disadvantage of removing a meta package?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Then changes in package dependencies will not be automatically processed by your system when you <a data-href="Security_Guide#Updates" href="./Security_Guide.html" title="Security Guide">upgrade your system</a>.
 </p><p>For example the <i><span style="background-color:#FBFBFB">anon-workstation-packages-recommended</span></i> meta package depends <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> on <i><span style="background-color:#FBFBFB"><a class="external text" data-href="https://github.com/Whonix/tb-updater" href="https://github.com/Whonix/tb-updater" rel="noreferrer noopener" target="_blank">tb-updater</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/tb-updater" href="https://web.archive.org/web/https://github.com/Whonix/tb-updater" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span></i>. When you do not have the <i><span style="background-color:#FBFBFB">anon-workstation-packages-recommended</span></i> package installed, you would not notice if we <a class="external text" data-href="https://phabricator.whonix.org/T18" href="https://phabricator.whonix.org/T18" rel="noreferrer noopener" target="_blank">replace</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/T18" href="https://web.archive.org/web/https://phabricator.whonix.org/T18" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <i><span style="background-color:#FBFBFB">tb-updater</span></i> with <a class="external text" data-href="https://github.com/micahflee/torbrowser-launcher" href="https://github.com/micahflee/torbrowser-launcher" rel="noreferrer noopener" target="_blank"><i><span style="background-color:#FBFBFB">torbrowser-launcher</span></i></a> <sup><a data-href="https://web.archive.org/web/https://github.com/micahflee/torbrowser-launcher" href="https://web.archive.org/web/https://github.com/micahflee/torbrowser-launcher" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <i><span style="background-color:#FBFBFB">tb-updater</span></i> might become unmaintained, broken or even have unfixed security issues. We'll try to <a data-href="Stay_Tuned" href="./Stay_Tuned.html" title="Stay Tuned">keep you up to date</a> should we deprecate (security relevant) packages. If we do that, you could simply <i><span style="background-color:#FBFBFB">sudo apt-get purge tb-updater</span></i> and consider installing what our meta package recommends as replacement.
 </p><p>See also <a href="#Technical_Stuff">#Technical_Stuff</a>.
 </p><p><span id="Which_ones_are_safe_to_remove.3F"></span>
 </p>
-<h2><span id="Which_meta_packages_are_safe_to_remove?"></span><span class="mw-headline" id="Which_meta_packages_are_safe_to_remove.3F">Which meta packages are safe to remove?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=6.html" title="Edit section: Which meta packages are safe to remove?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Which_meta_packages_are_safe_to_remove?"></span><span class="mw-headline" id="Which_meta_packages_are_safe_to_remove.3F">Which meta packages are safe to remove?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=7.html" title="Edit section: Which meta packages are safe to remove?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Use apt-cache to see the package description.
 </p>
 <ul><li>Replace <code>package-name</code> with the package you actually want to install.</li></ul>
@@ -212,7 +251,7 @@ Advanced users only!
 <li><code>Do not remove.</code></li></ul>
 <p>Note the <a href="#Removal_Instructions">#Removal Instructions</a> below! When you understood those, feel free to remove the following desktop specific meta packages.
 </p>
-<h2><span id="Which_packages_do_Whonix_™_meta_packages_install?"></span><span class="mw-headline" id="Which_packages_do_Whonix_.E2.84.A2_meta_packages_install.3F">Which packages do Whonix ™ meta packages install?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=7.html" title="Edit section: Which packages do Whonix ™ meta packages install?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Which_packages_do_Whonix_™_meta_packages_install?"></span><span class="mw-headline" id="Which_packages_do_Whonix_.E2.84.A2_meta_packages_install.3F">Which packages do Whonix ™ meta packages install?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=8.html" title="Edit section: Which packages do Whonix ™ meta packages install?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>See <i><span style="background-color:#FBFBFB">debian/control</span></i> in Whonix ™ <a class="external text" data-href="https://github.com/Whonix/anon-meta-packages" href="https://github.com/Whonix/anon-meta-packages" rel="noreferrer noopener" target="_blank">anon-meta-packages</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-meta-packages" href="https://web.archive.org/web/https://github.com/Whonix/anon-meta-packages" rel="noreferrer noopener" target="_blank">[archive]</a></sup> source code folder or <a class="external text" data-href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" href="https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" rel="noreferrer noopener" target="_blank">on github</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" href="https://web.archive.org/web/https://github.com/Whonix/anon-meta-packages/blob/master/debian/control" rel="noreferrer noopener" target="_blank">[archive]</a></sup> (choose the correct branch!).
 </p><p>Or use for example.
 </p><p>
@@ -227,17 +266,19 @@ Advanced users only!
 <p>
 </p><p><span id="Which_packages_should_never_be_removed.3F"></span>
 </p>
-<h2><span id="Which_meta_packages_should_never_be_removed?"></span><span class="mw-headline" id="Which_meta_packages_should_never_be_removed.3F">Which meta packages should never be removed?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=8.html" title="Edit section: Which meta packages should never be removed?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Which_meta_packages_should_never_be_removed?"></span><span class="mw-headline" id="Which_meta_packages_should_never_be_removed.3F">Which meta packages should never be removed?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=9.html" title="Edit section: Which meta packages should never be removed?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Do not remove <i><span style="background-color:#FBFBFB">...-dependencies</span></i> packages, unless you really know what you are doing.
 </p><p>TODO: document
 </p>
-<h2><span id="Why_is_package_X_installed?"></span><span class="mw-headline" id="Why_is_package_X_installed.3F">Why is package X installed?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=9.html" title="Edit section: Why is package X installed?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Why_is_package_X_installed?"></span><span class="mw-headline" id="Why_is_package_X_installed.3F">Why is package X installed?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=10.html" title="Edit section: Why is package X installed?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Look up the package in question in developer documentation, packages documentation:
 </p>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Shared_packages" href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Shared_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Shared_packages</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Shared_packages" href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Shared_packages" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Gateway_packages" href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Gateway_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Gateway_packages</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Gateway_packages" href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Gateway_packages" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Workstation_packages" href="https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Workstation_packages" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Workstation_packages</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Workstation_packages" href="https://web.archive.org/web/https://github.com/Whonix/whonix-developer-meta-files/blob/master/package_documentation/Whonix-Workstation_packages" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h2><span class="mw-headline" id="Removal_Instructions">Removal Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=10.html" title="Edit section: Removal Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Removal_Instructions">Removal Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=11.html" title="Edit section: Removal Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>These are instructions for safe removal of a package (in this example package <code>uwt</code>) which would result in meta package removal without breaking the whole system when next time running <code>sudo apt-get autoremove</code>.
+</p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Upgrade. <br/>
 <a data-href="Operating_System_Software_and_Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Upgrade your system.</a>
@@ -298,7 +339,7 @@ Make sure you understood the <a href="#Disadvantage">#Disadvantage</a>.
 <p>Alternatively, there might be a very crude workaround which can be seen and discussed here:<br/>
 <a class="external free" data-href="https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders/653/9" href="https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders/653/9" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders/653/9</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders/653/9" href="https://web.archive.org/web/https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders/653/9" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h2><span class="mw-headline" id="Technical_Stuff">Technical Stuff</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=11.html" title="Edit section: Technical Stuff">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Technical_Stuff">Technical Stuff</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=12.html" title="Edit section: Technical Stuff">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Technical explanations why stuff is as is. Users can skip this chapter.
 </p><p>The underlying technical issues with meta packages are not caused by Whonix ™, are general issues Whonix ™ inherited from Debian. Those are also described here:
 </p>
@@ -314,12 +355,15 @@ Make sure you understood the <a href="#Disadvantage">#Disadvantage</a>.
 </p><p>Forum discussion:<br/>
 <a class="external text" data-href="https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders" href="https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders" rel="noreferrer noopener" target="_blank">issues with removal of specific packages by users / builders</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders" href="https://web.archive.org/web/https://forums.whonix.org/t/issues-with-removal-of-specific-packages-by-users-builders" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=12.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li><a data-href="Whonix_Packages_for_Debian_Hosts" href="./Whonix_Packages_for_Debian_Hosts.html" title="Whonix Packages for Debian Hosts">Whonix Packages for Debian Hosts</a></li>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=13.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="Configuration_Files" href="./Configuration_Files.html" title="Configuration Files">modular flexible <code>.d</code> style configuration folders</a></li>
+<li><a data-href="Configuration_Files#Reset_Configuration_Files_to_Vendor_Default" href="./Configuration_Files.html" title="Configuration Files">Reset Configuration Files to Vendor Default</a></li>
+<li><a data-href="Factory_Reset" href="./Factory_Reset.html" title="Factory Reset">Whonix ™ Factory Reset</a></li>
+<li><a data-href="Whonix_Packages_for_Debian_Hosts" href="./Whonix_Packages_for_Debian_Hosts.html" title="Whonix Packages for Debian Hosts">Whonix Packages for Debian Hosts</a></li>
 <li><a class="mw-redirect" data-href="Whonix-APT-Repository" href="./Whonix-APT-Repository.html" title="Whonix-APT-Repository">Whonix ™ APT Repository, how to enable/disable it?</a></li>
 <li><a class="mw-redirect" data-href="Dev/BuildDocumentation" href="./Dev/BuildDocumentation.html" title="Dev/BuildDocumentation">Building/upgrading Whonix ™ debian packages from source code</a></li>
 <li><a data-href="Dev/Installation_from_Repository" href="./Dev/Installation_from_Repository.html" title="Dev/Installation from Repository">Development Discussion - Installing Whonix ™ from repository</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=13.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;action=edit&amp;section=14.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -406,7 +450,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Whonix_Debian_Packages" href="https://facebook.com/sharer.php?u=./Whonix_Debian_Packages">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to get involved with Whonix ™? Check out our <a class="external text" data-href="Contribute" href="./Contribute" rel="noreferrer noopener" target="_blank">Contribute</a> <sup><a data-href="https://web.archive.org/web/./Contribute" href="https://web.archive.org/web/./Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
+<p>Check out the <a class="external text" data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">Whonix News Blog</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/news" href="https://web.archive.org/web/https://forums.whonix.org/c/news" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
 </div>
 <p><a data-href="Whonix_Debian_Packages" href="./Whonix_Debian_Packages" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" id="pagespeed_img_hq1WWafaaD24" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Debian_Packages" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Whonix_Debian_Packages" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" id="pagespeed_img_n_u34nLBpv25" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -419,7 +463,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;oldid=58197" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=58197">https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=58197</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;oldid=60215" dir="ltr" href="https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=60215">https://www.whonix.org/w/index.php?title=Whonix_Debian_Packages&amp;oldid=60215</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -430,7 +474,7 @@ Retrieved from "<a data-href="/w/index.php?title=Whonix_Debian_Packages&amp;oldi
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 20 June 2020, at 02:56.</li>
+<li id="footer-lastmod"> This page was last edited on 7 October 2020, at 14:33.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
