@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Dev/Chromium - Whonix
  url: ../Dev/Chromium
- date: Thu Oct  8 07:37:01 2020
+ date: Fri Oct  9 07:37:35 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -52,7 +52,7 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 <meta content="MediaWiki 1.35.0" name="generator"/>
-<meta content="This Page Describing Why Chromium Is Bad For Privacy" name="description"/>
+<meta content="Development Considerations regarding default installation of Chromium in Kicksecure" name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Dev/Chromium&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Dev/Chromium&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -63,13 +63,13 @@
 <meta content="Dev/Chromium - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="../Dev/Chromium" property="og:url"/>
-<meta content="This Page Describing Why Chromium Is Bad For Privacy" property="og:description"/>
+<meta content="Development Considerations regarding default installation of Chromium in Kicksecure" property="og:description"/>
 <meta content="https://www.whonix.org/w/resources/assets/wiki.png" property="og:image"/>
-<meta content="2020-08-28T16:05:08Z" property="article:modified_time"/>
-<meta content="2020-08-28T16:05:08Z" property="article:published_time"/>
+<meta content="2020-10-08T16:20:01Z" property="article:modified_time"/>
+<meta content="2020-10-08T16:20:01Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Chromium - Whonix" property="twitter:title"/>
-<meta content="This Page Describing Why Chromium Is Bad For Privacy" property="twitter:description"/>
+<meta content="Development Considerations regarding default installation of Chromium in Kicksecure" property="twitter:description"/>
 <meta content="https://www.whonix.org/w/resources/assets/wiki.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
@@ -112,7 +112,8 @@
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p class="mw-empty-elt">
 </p><p><br/>
-</p><p><b>This is only a collection of user contributed notes. It will be reviewed, commented at a later time.</b>
+</p><p><b>DISCLAIMER: This is only a collection of mostly user contributed notes. It will be reviewed, commented at a later time.</b>
+</p><p>This page is a collection of notes, issues, criticism, advantages of Chromium. Development Considerations regarding default installation of Chromium in <a data-href="/wiki/Kicksecure" href="../Kicksecure.html" title="Kicksecure">Kicksecure</a>.
 </p>
 <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
@@ -127,14 +128,25 @@
 <li class="toclevel-1 tocsection-9"><a href="#Questionable_Chromium_Privacy"><span class="tocnumber">9</span> <span class="toctext">Questionable Chromium Privacy</span></a></li>
 <li class="toclevel-1 tocsection-10"><a href="#Google_Chrome_and_.28weird.29_DNS_requests"><span class="tocnumber">10</span> <span class="toctext">Google Chrome and (weird) DNS requests</span></a></li>
 <li class="toclevel-1 tocsection-11"><a href="#What_Chromium_features_are_removed_for_privacy.2Fsecurity_reasons.3F_.28Done_by_Brave_Browser.29"><span class="tocnumber">11</span> <span class="toctext">What Chromium features are removed for privacy/security reasons? (Done by Brave Browser)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Chromium_Forks"><span class="tocnumber">12</span> <span class="toctext">Chromium Forks</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Development_Discussion"><span class="tocnumber">13</span> <span class="toctext">Development Discussion</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Footnotes"><span class="tocnumber">14</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h2><span class="mw-headline" id="Firefox_and_Chromium_Security">Firefox and Chromium Security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=1.html" title="Edit section: Firefox and Chromium Security">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external free" data-href="https://madaidans-insecurities.github.io/firefox-chromium.html" href="https://madaidans-insecurities.github.io/firefox-chromium.html" rel="noreferrer noopener" target="_blank">https://madaidans-insecurities.github.io/firefox-chromium.html</a> <sup><a data-href="https://web.archive.org/web/https://madaidans-insecurities.github.io/firefox-chromium.html" href="https://web.archive.org/web/https://madaidans-insecurities.github.io/firefox-chromium.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Chromium_Doesnt_give_your_Freedom_of_Modifications">Chromium Doesnt give your Freedom of Modifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=2.html" title="Edit section: Chromium Doesnt give your Freedom of Modifications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Chromium doesnt has the easiness of about:config in Firefox for e.g if you want to disable certain TLS ciphers its not possible because its not there, This will force the users to only stick to whatever comes by default.
+<blockquote>
+<p>Chromium doesnt has the easiness of <code>about:config</code> in Firefox for e.g if you want to disable certain TLS ciphers its not possible because its not there, This will force the users to only stick to whatever comes by default.
 </p>
+</blockquote>
+<p>Answer:
+</p>
+<blockquote>
+<p>Chromium has chrome://flags which is similar to about:config. For the example mentioned, there is the #legacy-tls-enforced option.
+</p>
+</blockquote>
 <h2><span class="mw-headline" id="Chromium_and_Google_API_keys">Chromium and Google API keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=3.html" title="Edit section: Chromium and Google API keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Chromium uses API resides in google, only keys shipped within Debian/Chromium <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>.
 </p><p>Someone suggested this <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>:
@@ -154,7 +166,11 @@ by the keys.</p></blockquote>
 <p>Many of them comes with free software, but there is no indication all of them are <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>. (+10 years ticket)
 </p>
 <h2><span id='Distribution_of_Adobe_"Pepper"_Flash_Player_proprietary_plugin'></span><span class="mw-headline" id="Distribution_of_Adobe_.22Pepper.22_Flash_Player_proprietary_plugin">Distribution of Adobe "Pepper" Flash Player proprietary plugin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=5.html" title='Edit section: Distribution of Adobe "Pepper" Flash Player proprietary plugin'>edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<blockquote>
 <p>Chromium comes with proprietary abilities within itself one of them is Adobe Flash Player <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>.
+</p>
+</blockquote>
+<p>This was resolved a long time ago. pepperflashplugin-nonfree is now its own separate package. <a class="external free" data-href="https://packages.debian.org/buster/pepperflashplugin-nonfree" href="https://packages.debian.org/buster/pepperflashplugin-nonfree" rel="noreferrer noopener" target="_blank">https://packages.debian.org/buster/pepperflashplugin-nonfree</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/pepperflashplugin-nonfree" href="https://web.archive.org/web/https://packages.debian.org/buster/pepperflashplugin-nonfree" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Chromium_reduced_capabilities_to_plugin_with_adblocker">Chromium reduced capabilities to plugin with adblocker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=6.html" title="Edit section: Chromium reduced capabilities to plugin with adblocker">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <blockquote>
@@ -167,25 +183,77 @@ by the keys.</p></blockquote>
 </p><p>But Google's planned Manifest V3 changes are being added to the Chromium base, meaning they'll also likely impact other Chromium-based browsers as well.
 </p>
 </blockquote><p><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
-</p><h2><span class="mw-headline" id="Chromium:_secretly_stores_referrer_and_URL_for_downloaded_files">Chromium: secretly stores referrer and URL for downloaded files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=7.html" title="Edit section: Chromium: secretly stores referrer and URL for downloaded files">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Can have impact on privacy and security <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>, Bug was fixed later <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>.
+</p><p>Reply by madaidan: <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
+<blockquote>
+<p>The goal of manifest v3 is not to neuter ad blockers. It allows content filtering in a more secure way while also not allowing extensions to spy on users extensively. It doesn’t kill ad blocking - it only provides a safer way of doing it. Manifest v3 removes the legacy webRequest and replaces it with declarativeNetRequest.
+</p><p><a class="external free" data-href="https://developer.chrome.com/extensions/declarativeNetRequest" href="https://developer.chrome.com/extensions/declarativeNetRequest" rel="noreferrer noopener" target="_blank">https://developer.chrome.com/extensions/declarativeNetRequest</a> <sup><a data-href="https://web.archive.org/web/https://developer.chrome.com/extensions/declarativeNetRequest" href="https://web.archive.org/web/https://developer.chrome.com/extensions/declarativeNetRequest" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p><a class="external free" data-href="https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html" href="https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html" rel="noreferrer noopener" target="_blank">https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html</a> <sup><a data-href="https://web.archive.org/web/https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html" href="https://web.archive.org/web/https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p>Besides, this hasn’t even been implemented yet and likely won’t be for a long time. Other browsers will probably follow suit too. For example, this is how it already works in Safari.
+</p>
+</blockquote>
+<p>Reply by Patrick:
+</p>
+<blockquote>
+<p>Technically too difficult to compare the old API with the new API. It cannot be deduced from media reports. Developers of existing adblocking extensions might also be less than happy if they have to rewrite their extensions, i.e. trash a lot of previous work.
+</p><p>In conclusion, it remains to be seen if the new API will result in a significantly worse adblocking experience for Chromium versus lets say Firefox users. Should that be the case, it would a a disadvantage. Until that happens, it doesn't speak against Chromium.
+</p>
+</blockquote>
+<h2><span class="mw-headline" id="Chromium:_secretly_stores_referrer_and_URL_for_downloaded_files">Chromium: secretly stores referrer and URL for downloaded files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=7.html" title="Edit section: Chromium: secretly stores referrer and URL for downloaded files">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Can have impact on privacy and security <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>, Bug was fixed later <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>.
+</p><p>Reply by Patrick:
+</p>
+<blockquote>
+<p>Bug happen. If now fixed, not sure it's even worth mentioning it.
+</p>
+</blockquote>
 <h2><span class="mw-headline" id="Chromium:_unconditionally_downloads_binary_blob">Chromium: unconditionally downloads binary blob</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=8.html" title="Edit section: Chromium: unconditionally downloads binary blob">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Nasty bug,Got fixed <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>.
+<p>Nasty bug,Got fixed <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>.
 </p><p><br/>
 </p>
+<blockquote>
+<p>Bug happen. If now fixed, not sure it's even worth mentioning it.
+</p>
+</blockquote>
 <h2><span class="mw-headline" id="Questionable_Chromium_Privacy">Questionable Chromium Privacy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=9.html" title="Edit section: Questionable Chromium Privacy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Chromium privacy infrastructure is basically Google <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>:
+<p>Chromium privacy infrastructure is basically Google <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>:
 </p>
-<blockquote><p>"Additional Information on Chromium, Google Chrome, and Privacy
-Features that communicate with Google made available through the compilation of code in Chromium are subject to the Google Privacy Policy."</p></blockquote>
+<blockquote>
+<p>"Additional Information on Chromium, Google Chrome, and Privacy
+Features that communicate with Google made available through the compilation of code in Chromium are subject to the Google Privacy Policy."
+</p>
+</blockquote>
+<p>Reply by madaidan:
+</p>
+<blockquote>
+<p>Chromium has some telemetry by default but it can all be disabled in the settings. By default, it's actually *less* invasive than others like Firefox.
+</p><p><a class="external free" data-href="https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf" href="https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf" rel="noreferrer noopener" target="_blank">https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf</a> <sup><a data-href="https://web.archive.org/web/https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf" href="https://web.archive.org/web/https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+</blockquote>
 <h2><span id="Google_Chrome_and_(weird)_DNS_requests"></span><span class="mw-headline" id="Google_Chrome_and_.28weird.29_DNS_requests">Google Chrome and (weird) DNS requests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=10.html" title="Edit section: Google Chrome and (weird) DNS requests">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This is part of chromium/chrome design <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>:
+<p>This is part of chromium/chrome design <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>:
 </p>
-<blockquote><p>When Chrome is started it will lookup domain names for previously opened web pages early in the startup process so if the user clicks on one of those links Chrome can connect to the target site immediately.</p></blockquote>
-<p><br/>
+<blockquote>
+<p>When Chrome is started it will lookup domain names for previously opened web pages early in the startup process so if the user clicks on one of those links Chrome can connect to the target site immediately.
 </p>
+</blockquote>
+<p>madaidan reply:
+</p>
+<blockquote>
+<p>This isn’t weird. It improves page load time and is a standard thing that’s done in other browsers like Firefox. It can also be disabled.
+</p><p><a class="external free" data-href="https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" href="https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" rel="noreferrer noopener" target="_blank">https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections</a> <sup><a data-href="https://web.archive.org/web/https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" href="https://web.archive.org/web/https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+</blockquote>
+<p>Patrick reply:
+</p>
+<blockquote>
+<p>This is called DNS Prefetching.
+</p><p>chromium does it: <a class="external free" data-href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching</a> <sup><a data-href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p><p>firefox also does it: <a class="external free" data-href="https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" href="https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" rel="noreferrer noopener" target="_blank">https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections</a> <sup><a data-href="https://web.archive.org/web/https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" href="https://web.archive.org/web/https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+</blockquote>
 <h2><span id="What_Chromium_features_are_removed_for_privacy/security_reasons?_(Done_by_Brave_Browser)"></span><span class="mw-headline" id="What_Chromium_features_are_removed_for_privacy.2Fsecurity_reasons.3F_.28Done_by_Brave_Browser.29">What Chromium features are removed for privacy/security reasons? (Done by Brave Browser)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=11.html" title="Edit section: What Chromium features are removed for privacy/security reasons? (Done by Brave Browser)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<blockquote>
 <p>- Disable google services in privacy settings <a class="external text" data-href="https://github.com/brave/brave-core/pull/244" href="https://github.com/brave/brave-core/pull/244" rel="noreferrer noopener" target="_blank">#244</a> <sup><a data-href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/244" href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/244" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p><p>- Disable Prediction Service - DNS prefetching <a class="external text" data-href="https://github.com/brave/brave-core/pull/340" href="https://github.com/brave/brave-core/pull/340" rel="noreferrer noopener" target="_blank">#340</a> <sup><a data-href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/340" href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/340" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p><p>- Disable Chrome Google URL Tracker <a class="external text" data-href="https://github.com/brave/brave-core/pull/248" href="https://github.com/brave/brave-core/pull/248" rel="noreferrer noopener" target="_blank">#248</a> <sup><a data-href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/248" href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/248" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
@@ -199,6 +267,62 @@ Features that communicate with Google made available through the compilation of 
 </p><p>- Disabling metrics reporting; Updating ad-block deps to fix audit_deps error; Updating crypto deps to fix audit_deps error; <a class="external text" data-href="https://github.com/brave/brave-core/pull/2029" href="https://github.com/brave/brave-core/pull/2029" rel="noreferrer noopener" target="_blank">#2029</a> <sup><a data-href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/2029" href="https://web.archive.org/web/https://github.com/brave/brave-core/pull/2029" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p><p>And Others you can check them here <a class="external text" data-href="https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)#what-chromium-features-are-removed-for-privacysecurity-reasons" href="https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)" rel="noreferrer noopener" target="_blank">here</a> <sup><a data-href="https://web.archive.org/web/https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)#what-chromium-features-are-removed-for-privacysecurity-reasons" href="https://web.archive.org/web/https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p>
+</blockquote>
+<p>Patrick reply:
+</p>
+<blockquote>
+<p>Please sort this list according to different lists:
+</p>
+<ul><li>privacy impact only</li>
+<li>security impact only</li>
+<li>security and privacy impact (optional category)</li></ul>
+</blockquote>
+<h1><span class="mw-headline" id="Chromium_Forks">Chromium Forks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=12.html" title="Edit section: Chromium Forks">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a class="external free" data-href="https://github.com/GrapheneOS/Vanadium" href="https://github.com/GrapheneOS/Vanadium" rel="noreferrer noopener" target="_blank">https://github.com/GrapheneOS/Vanadium</a> <sup><a data-href="https://web.archive.org/web/https://github.com/GrapheneOS/Vanadium" href="https://web.archive.org/web/https://github.com/GrapheneOS/Vanadium" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://www.bromite.org/" href="https://www.bromite.org/" rel="noreferrer noopener" target="_blank">https://www.bromite.org/</a> <sup><a data-href="https://web.archive.org/web/https://www.bromite.org/" href="https://web.archive.org/web/https://www.bromite.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/bromite/bromite" href="https://github.com/bromite/bromite" rel="noreferrer noopener" target="_blank">https://github.com/bromite/bromite</a> <sup><a data-href="https://web.archive.org/web/https://github.com/bromite/bromite" href="https://web.archive.org/web/https://github.com/bromite/bromite" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<h1><span class="mw-headline" id="Development_Discussion">Development Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=13.html" title="Edit section: Development Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a class="external text" data-href="https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" href="https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" rel="noreferrer noopener" target="_blank">Chromium Browser for Kicksecure Discussions (not Whonix)</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" href="https://web.archive.org/web/https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;action=edit&amp;section=14.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.debian.org/debian-legal/2013/10/msg00021.html" href="https://lists.debian.org/debian-legal/2013/10/msg00021.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/10/msg00021.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00021.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00021.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.debian.org/debian-legal/2013/10/msg00023.html" href="https://lists.debian.org/debian-legal/2013/10/msg00023.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/10/msg00023.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00023.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00023.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugs.chromium.org/p/chromium/issues/detail?id=28291" href="https://bugs.chromium.org/p/chromium/issues/detail?id=28291" rel="noreferrer noopener" target="_blank">https://bugs.chromium.org/p/chromium/issues/detail?id=28291</a> <sup><a data-href="https://web.archive.org/web/https://bugs.chromium.org/p/chromium/issues/detail?id=28291" href="https://web.archive.org/web/https://bugs.chromium.org/p/chromium/issues/detail?id=28291" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://lists.debian.org/debian-legal/2013/02/msg00010.html" href="https://lists.debian.org/debian-legal/2013/02/msg00010.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/02/msg00010.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/02/msg00010.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/02/msg00010.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" href="https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" rel="noreferrer noopener" target="_blank">https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6</a> <sup><a data-href="https://web.archive.org/web/https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" href="https://web.archive.org/web/https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" href="https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" rel="noreferrer noopener" target="_blank">https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/</a> <sup><a data-href="https://web.archive.org/web/https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" href="https://web.archive.org/web/https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" href="https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" href="https://web.archive.org/web/https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" href="https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" rel="noreferrer noopener" target="_blank">https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html</a> <sup><a data-href="https://web.archive.org/web/https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" href="https://web.archive.org/web/https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.chromium.org/Home/chromium-privacy" href="https://www.chromium.org/Home/chromium-privacy" rel="noreferrer noopener" target="_blank">https://www.chromium.org/Home/chromium-privacy</a> <sup><a data-href="https://web.archive.org/web/https://www.chromium.org/Home/chromium-privacy" href="https://web.archive.org/web/https://www.chromium.org/Home/chromium-privacy" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" href="https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" rel="noreferrer noopener" target="_blank">https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312</a> <sup><a data-href="https://web.archive.org/web/https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" href="https://web.archive.org/web/https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching</a> <sup><a data-href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+</ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
 <p>Whonix ™ is <a data-href="https://evolution-host.com/vps-hosting.php" href="https://evolution-host.com/vps-hosting.php">Supported by Evolution Host DDoS
@@ -249,37 +373,11 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a>.
 </font>
 </p>
-<div class="mw-references-wrap mw-references-columns"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.debian.org/debian-legal/2013/10/msg00021.html" href="https://lists.debian.org/debian-legal/2013/10/msg00021.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/10/msg00021.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00021.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00021.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.debian.org/debian-legal/2013/10/msg00023.html" href="https://lists.debian.org/debian-legal/2013/10/msg00023.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/10/msg00023.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00023.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/10/msg00023.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugs.chromium.org/p/chromium/issues/detail?id=28291" href="https://bugs.chromium.org/p/chromium/issues/detail?id=28291" rel="noreferrer noopener" target="_blank">https://bugs.chromium.org/p/chromium/issues/detail?id=28291</a> <sup><a data-href="https://web.archive.org/web/https://bugs.chromium.org/p/chromium/issues/detail?id=28291" href="https://web.archive.org/web/https://bugs.chromium.org/p/chromium/issues/detail?id=28291" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://lists.debian.org/debian-legal/2013/02/msg00010.html" href="https://lists.debian.org/debian-legal/2013/02/msg00010.html" rel="noreferrer noopener" target="_blank">https://lists.debian.org/debian-legal/2013/02/msg00010.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/02/msg00010.html" href="https://web.archive.org/web/https://lists.debian.org/debian-legal/2013/02/msg00010.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" href="https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" rel="noreferrer noopener" target="_blank">https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6</a> <sup><a data-href="https://web.archive.org/web/https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" href="https://web.archive.org/web/https://www.businessinsider.com.au/former-google-exec-launches-sourcepoint-with-10-million-series-a-funding-2015-6" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" href="https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" rel="noreferrer noopener" target="_blank">https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/</a> <sup><a data-href="https://web.archive.org/web/https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" href="https://web.archive.org/web/https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" href="https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" rel="noreferrer noopener" target="_blank">https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html</a> <sup><a data-href="https://web.archive.org/web/https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" href="https://web.archive.org/web/https://green-possum-today.blogspot.com/2018/09/chromechromium-is-storing-url-and.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=883746" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=786909" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.chromium.org/Home/chromium-privacy" href="https://www.chromium.org/Home/chromium-privacy" rel="noreferrer noopener" target="_blank">https://www.chromium.org/Home/chromium-privacy</a> <sup><a data-href="https://web.archive.org/web/https://www.chromium.org/Home/chromium-privacy" href="https://web.archive.org/web/https://www.chromium.org/Home/chromium-privacy" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" href="https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" rel="noreferrer noopener" target="_blank">https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312</a> <sup><a data-href="https://web.archive.org/web/https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" href="https://web.archive.org/web/https://isc.sans.edu/diary/Google+Chrome+and+%28weird%29+DNS+requests/10312" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching</a> <sup><a data-href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" href="https://web.archive.org/web/https://sites.google.com/a/chromium.org/dev/developers/design-documents/dns-prefetching" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
-</li>
-</ol></div>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/Chromium&amp;oldid=59388" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;oldid=59388">https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;oldid=59388</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/Chromium&amp;oldid=60252" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;oldid=60252">https://www.whonix.org/w/index.php?title=Dev/Chromium&amp;oldid=60252</a>"</div>
 <div class="clear_both"></div>
 </div>
-<div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
 </div>
 </div>
 </div>
@@ -287,7 +385,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Chromium&amp;oldid=59388" d
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 28 August 2020, at 18:05.</li>
+<li id="footer-lastmod"> This page was last edited on 8 October 2020, at 18:20.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
