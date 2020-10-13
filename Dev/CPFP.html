@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation
  url: ../Dev/CPFP
- date: Mon Oct 12 07:37:25 2020
+ date: Tue Oct 13 07:38:27 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -66,8 +66,8 @@
 <meta content="../Dev/Control_Port_Filter_Proxy" property="og:url"/>
 <meta content="onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation" property="og:description"/>
 <meta content="https://www.whonix.org/w/resources/assets/wiki.png" property="og:image"/>
-<meta content="2020-08-23T15:16:10Z" property="article:modified_time"/>
-<meta content="2020-08-23T15:16:10Z" property="article:published_time"/>
+<meta content="2020-10-12T16:05:42Z" property="article:modified_time"/>
+<meta content="2020-10-12T16:05:42Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation" property="twitter:title"/>
 <meta content="onion-grater, a Tor Control Port Filter Proxy - filtering dangerous Tor Control Port commands - Design Documentation" property="twitter:description"/>
@@ -476,7 +476,34 @@ Configuration was valid</pre>
 <ul><li><a class="external free" data-href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png</a> <sup><a data-href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/tor_circuit_diagram_screenshot.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" href="https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png</a> <sup><a data-href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/raw-attachment/ticket/8641/mockup_torCircuitStatus.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul></li>
 <li>The Tor Project source code: <a class="external free" data-href="https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" href="https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" rel="noreferrer noopener" target="_blank">https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js</a> <sup><a data-href="https://web.archive.org/web/https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" href="https://web.archive.org/web/https://gitweb.torproject.org/torbutton.git/tree/src/chrome/content/tor-circuit-display.js" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
-<li>Requires "setevents stream" which we do not want because we do not wish the workstation to know its Tor entry and/or Tor middle relay.</li></ul>
+<li>Requires "setevents stream" which we do not want because we do not wish the workstation to know its Tor entry and/or Tor middle relay. The type and variation of messages makes a catch all solution too difficult to implement. It allows way too much information about what Tor is doing to be safe<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li><a class="external text" data-href="https://forums.whonix.org/t/tbb-sanitized-circuit-path-diagram-support/10284" href="https://forums.whonix.org/t/tbb-sanitized-circuit-path-diagram-support/10284" rel="noreferrer noopener" target="_blank">Stalled</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/tbb-sanitized-circuit-path-diagram-support/10284" href="https://web.archive.org/web/https://forums.whonix.org/t/tbb-sanitized-circuit-path-diagram-support/10284" rel="noreferrer noopener" target="_blank">[archive]</a></sup> onion-grater profile for enabling the circuit path diagram support.</li></ul>
+<pre>---
+- exe-paths:
+    - '*'
+  users:
+    - '*'
+  hosts:
+    - '*'
+  commands:
+    SIGNAL:
+      - 'NEWNYM'
+    GETINFO:
+      - pattern: 'circuit-status'
+        response:
+        - pattern: '250(.+)circuit-status=(\S+) (\S+) (.+) (\S+) (\S+)'
+        - replacement: '250+circuit-status='
+    GETCONF:
+      - pattern: 'bridge'
+        response:
+        - pattern:     '250-Bridge=(.+) (\S+) (\S+) (\S+) (\S+)'
+          replacement: '250-Bridge='
+        - pattern:     '250 Bridge=(.+) (\S+) (\S+) (\S+) (\S+)'
+          replacement: '250 Bridge='
+  events:
+    STREAM:
+  restrict-stream-events: true
+</pre>
 <h1><span class="mw-headline" id="UI_for_ExitNode_country_selection_in_tor-launcher">UI for ExitNode country selection in tor-launcher</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=19.html" title="Edit section: UI for ExitNode country selection in tor-launcher">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><a class="external free" data-href="https://trac.torproject.org/projects/tor/ticket/11406" href="https://trac.torproject.org/projects/tor/ticket/11406" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/ticket/11406</a> <sup><a data-href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/ticket/11406" href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/ticket/11406" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
@@ -600,7 +627,7 @@ Configuration was valid</pre>
 <li>Debian packaging</li>
 <li>systemd unit file</li>
 <li>systemd-notify support - <a class="external text" data-href="https://mailman.boum.org/pipermail/tails-dev/2017-March/011327.html" href="https://mailman.boum.org/pipermail/tails-dev/2017-March/011327.html" rel="noreferrer noopener" target="_blank">submitted patch upstream</a> <sup><a data-href="https://web.archive.org/web/https://mailman.boum.org/pipermail/tails-dev/2017-March/011327.html" href="https://web.archive.org/web/https://mailman.boum.org/pipermail/tails-dev/2017-March/011327.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
-<li>systemd seccomp hardening <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li>systemd seccomp hardening <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup></li>
 <li>AppArmor profile</li></ul>
 <hr/>
 <h2><span id="legacy_control-port-filter-python_by_Whonix_™"></span><span class="mw-headline" id="legacy_control-port-filter-python_by_Whonix_.E2.84.A2">legacy control-port-filter-python by Whonix ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=29.html" title="Edit section: legacy control-port-filter-python by Whonix ™">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -608,7 +635,7 @@ Configuration was valid</pre>
 </p>
 <ul><li>A fork of (very early) <a class="external text" data-href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" href="https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" rel="noreferrer noopener" target="_blank">tor-controlport-filter</a> <sup><a data-href="https://web.archive.org/web/https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" href="https://web.archive.org/web/https://git-tails.immerda.ch/tails/plain/config/chroot_local-includes/usr/local/sbin/tor-controlport-filter" rel="noreferrer noopener" target="_blank">[archive]</a></sup> by Tails. (See above.)</li>
 <li>Written in python2.7.</li>
-<li>Configurable by dropping .d-style<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> configuration snippets into <i><span style="background-color:#FBFBFB">/etc/cpfpy.d</span></i>.</li>
+<li>Configurable by dropping .d-style<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> configuration snippets into <i><span style="background-color:#FBFBFB">/etc/cpfpy.d</span></i>.</li>
 <li>Support to answer <i><span style="background-color:#FBFBFB">getinfo net/listeners/socks</span></i> with the lie '250-net/listeners/socks="127.0.0.1:9150"'.</li>
 <li>Supports logging.</li>
 <li>Honors signals sigterm, sigint, keyboard interrupt.</li>
@@ -617,7 +644,7 @@ Configuration was valid</pre>
 <li>Injects workstation IP into <code>add_onion</code>. For example will transform from / to:
 <ul><li><code>add_onion new:best port=80,17600</code></li>
 <li><code>add_onion new:best port=80,10.137.6.41:17600</code></li></ul></li>
-<li>Support subscribing Tor ControlPort events (<i><span style="background-color:#FBFBFB">setevent</span></i>). (Whonix ™ 14 and above.) <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li>
+<li>Support subscribing Tor ControlPort events (<i><span style="background-color:#FBFBFB">setevent</span></i>). (Whonix ™ 14 and above.) <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></li>
 <li>Complete systemd unit file.</li>
 <li>Lintian clean <i><span style="background-color:#FBFBFB">/debian</span></i> packaging folder.</li>
 <li>Will be deprecated when Whonix ™ 14 get released.</li></ul>
@@ -641,7 +668,7 @@ Configuration was valid</pre>
 <ul><li><a class="external text" data-href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" href="https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" rel="noreferrer noopener" target="_blank">Tor Control Protocol</a> <sup><a data-href="https://web.archive.org/web/https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" href="https://web.archive.org/web/https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=control-spec.txt" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=32" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;action=edit&amp;section=32.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
-<div class="mw-references-wrap"><ol class="references">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh" href="https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh" href="https://web.archive.org/web/https://github.com/Whonix/anon-ws-disable-stacked-tor/blob/master/usr/lib/anon-ws-disable-stacked-tor/torbrowser.sh" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
@@ -678,11 +705,18 @@ Find out what <code>status/circuit-established</code> answers yourself in Whonix
 <a class="external free" data-href="https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" href="https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" href="https://web.archive.org/web/https://github.com/Whonix/whonix-gw-network-conf/blob/master/lib/systemd/system/onion-grater.service.d/30_cpfpy.conf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://git-tails.immerda.ch/onion-grater/commit/?id=33ae20850329930bd1a3686cca2a9ac4dc766aea" href="https://git-tails.immerda.ch/onion-grater/commit/?id=33ae20850329930bd1a3686cca2a9ac4dc766aea" rel="noreferrer noopener" target="_blank">https://git-tails.immerda.ch/onion-grater/commit/?id=33ae20850329930bd1a3686cca2a9ac4dc766aea</a> <sup><a data-href="https://web.archive.org/web/https://git-tails.immerda.ch/onion-grater/commit/?id=33ae20850329930bd1a3686cca2a9ac4dc766aea" href="https://web.archive.org/web/https://git-tails.immerda.ch/onion-grater/commit/?id=33ae20850329930bd1a3686cca2a9ac4dc766aea" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
++* **events**: Tor Browser is subscribed to all STREAM events for its
++ implementation of the circuit view. This means it will know
++ basically everything Tor is doing which is pretty bad in case Tor
++ Browser is compromised.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://phabricator.whonix.org/T631" href="https://phabricator.whonix.org/T631" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T631</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/T631" href="https://web.archive.org/web/https://phabricator.whonix.org/T631" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text"><a class="mw-redirect" data-href="/wiki/Whonix_Configuration_Files#.d_Style_Configuration_Folders" href="../Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix_Configuration_Files#.d_Style_Configuration_Folders</a></span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text"><a class="mw-redirect" data-href="/wiki/Whonix_Configuration_Files#.d_Style_Configuration_Folders" href="../Whonix_Configuration_Files.html" title="Whonix Configuration Files">Whonix_Configuration_Files#.d_Style_Configuration_Folders</a></span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://phabricator.whonix.org/T448" href="https://phabricator.whonix.org/T448" rel="noreferrer noopener" target="_blank">https://phabricator.whonix.org/T448</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/T448" href="https://web.archive.org/web/https://phabricator.whonix.org/T448" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
@@ -724,7 +758,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../Dev/Control_Port_Filter_Proxy" href="https://facebook.com/sharer.php?u=../Dev/Control_Port_Filter_Proxy">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="../Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <p><a data-href="Control_Port_Filter_Proxy" href="../Dev/Control_Port_Filter_Proxy" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" id="pagespeed_img_hq1WWafaaD23" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Control_Port_Filter_Proxy" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" id="pagespeed_img_n_u34nLBpv24" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -737,7 +771,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=59349" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=59349">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=59349</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=60409" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=60409">https://www.whonix.org/w/index.php?title=Dev/Control_Port_Filter_Proxy&amp;oldid=60409</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -748,7 +782,7 @@ Retrieved from "<a data-href="/w/index.php?title=Dev/Control_Port_Filter_Proxy&a
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 23 August 2020, at 17:16.</li>
+<li id="footer-lastmod"> This page was last edited on 12 October 2020, at 18:05.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
