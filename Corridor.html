@@ -3,7 +3,7 @@
  single html processed by https://github.com/zTrix/webpage2html
  title: Using corridor, a Tor traffic whitelisting gateway with Whonix ™
  url: ./Corridor
- date: Sun Nov 22 07:33:45 2020
+ date: Mon Nov 23 07:33:25 2020
 -->
 <head>
 <meta charset="utf-8"/>
@@ -65,8 +65,8 @@
 <meta content="./Corridor" property="og:url"/>
 <meta content="Using corridor, a Tor traffic whitelisting gateway with Whonix" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/9/9b/Corridor.jpg" property="og:image"/>
-<meta content="2020-08-07T08:19:11Z" property="article:modified_time"/>
-<meta content="2020-08-07T08:19:11Z" property="article:published_time"/>
+<meta content="2020-11-22T15:08:18Z" property="article:modified_time"/>
+<meta content="2020-11-22T15:08:18Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Using corridor, a Tor traffic whitelisting gateway with Whonix ™" property="twitter:title"/>
 <meta content="Using corridor, a Tor traffic whitelisting gateway with Whonix" property="twitter:description"/>
@@ -126,23 +126,26 @@
 <li class="toclevel-2 tocsection-6"><a href="#sys-corridor_Setup"><span class="tocnumber">2.4</span> <span class="toctext">sys-corridor Setup</span></a>
 <ul>
 <li class="toclevel-3 tocsection-7"><a href="#Install_corridor"><span class="tocnumber">2.4.1</span> <span class="toctext">Install corridor</span></a></li>
-<li class="toclevel-3 tocsection-8"><a href="#Optional:_BridgeFirewall_corridor_Configuration"><span class="tocnumber">2.4.2</span> <span class="toctext">Optional: BridgeFirewall corridor Configuration</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Configuration"><span class="tocnumber">2.4.2</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Optional:_BridgeFirewall_corridor_Configuration"><span class="tocnumber">2.4.3</span> <span class="toctext">Optional: BridgeFirewall corridor Configuration</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-9"><a href="#Test_corridor"><span class="tocnumber">2.5</span> <span class="toctext">Test corridor</span></a>
+<li class="toclevel-2 tocsection-10"><a href="#Daemon_Status_Test"><span class="tocnumber">2.5</span> <span class="toctext">Daemon Status Test</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Restart_corridor"><span class="tocnumber">2.6</span> <span class="toctext">Restart corridor</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Test_corridor"><span class="tocnumber">2.7</span> <span class="toctext">Test corridor</span></a>
 <ul>
-<li class="toclevel-3 tocsection-10"><a href="#Test_Preparation"><span class="tocnumber">2.5.1</span> <span class="toctext">Test Preparation</span></a></li>
-<li class="toclevel-3 tocsection-11"><a href="#Testing_Steps"><span class="tocnumber">2.5.2</span> <span class="toctext">Testing Steps</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Test_Preparation"><span class="tocnumber">2.7.1</span> <span class="toctext">Test Preparation</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Testing_Steps"><span class="tocnumber">2.7.2</span> <span class="toctext">Testing Steps</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-12"><a href="#Test_Logging"><span class="tocnumber">2.6</span> <span class="toctext">Test Logging</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#Interpreting_the_Results"><span class="tocnumber">2.7</span> <span class="toctext">Interpreting the Results</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#Configure_sys-whonix"><span class="tocnumber">2.8</span> <span class="toctext">Configure sys-whonix</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Test_Logging"><span class="tocnumber">2.8</span> <span class="toctext">Test Logging</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Interpreting_the_Results"><span class="tocnumber">2.9</span> <span class="toctext">Interpreting the Results</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Configure_sys-whonix"><span class="tocnumber">2.10</span> <span class="toctext">Configure sys-whonix</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-15"><a href="#Debugging"><span class="tocnumber">3</span> <span class="toctext">Debugging</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Credits"><span class="tocnumber">4</span> <span class="toctext">Credits</span></a></li>
-<li class="toclevel-1 tocsection-17"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Debugging"><span class="tocnumber">3</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Credits"><span class="tocnumber">4</span> <span class="toctext">Credits</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Footnotes"><span class="tocnumber">5</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -400,34 +403,17 @@
 </p>
 </div>
 </div>
-<p>While these instructions remain experimental, it is advised to run the following systemctl commands to check everything is functioning correctly.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo systemctl --no-pager status corridor-data
-sudo systemctl --no-pager status corridor-init-forwarding 
-sudo systemctl --no-pager status corridor-init-logged 
-sudo systemctl --no-pager status corridor-init-snat</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo systemctl --no-pager status corridor-data
-sudo systemctl --no-pager status corridor-init-forwarding 
-sudo systemctl --no-pager status corridor-init-logged 
-sudo systemctl --no-pager status corridor-init-snat</textarea>
-</div>
-</div>
-<p>
-</p><p>Reboot <i><span style="background-color:#FBFBFB">sys-corridor</span></i>.
+<h3><span class="mw-headline" id="Configuration">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=8.html" title="Edit section: Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Optional:_BridgeFirewall_corridor_Configuration">Optional: BridgeFirewall corridor Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=9.html" title="Edit section: Optional: BridgeFirewall corridor Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>TODO: BridgeFirewall corridor configuration is currently <a data-href="Unsupported" href="./Unsupported.html" title="Unsupported">untested</a>.
 </p>
-<h3><span class="mw-headline" id="Optional:_BridgeFirewall_corridor_Configuration">Optional: BridgeFirewall corridor Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=8.html" title="Edit section: Optional: BridgeFirewall corridor Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;"><img alt="Info" data-pagespeed-url-hash="1227936950" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAALpQTFRFAAAAM2bMNGbLM2bMMmbMM2bMM2bMM2bMM2bMM2XMM2bLM2bMM2bMM2bLM2bMMmbMM2bMM2bMM2XLM2bMMmXMMmbMM2bMMmbMM2bMM2bMMmbMM2bMMmXMM2bMM2XLM2bLM2bMM2bMM2bLM2bMM2bMM2bMMmXMMmbMM2bMM2bMM2bMM2bMMmXMMmbMM2bMM2bMM2bMM2bLMmbMM2bMMmXMMmXMM2XMM2bMM2bMM2XLM2bLM2bLM2XMM2bMN46y5gAAAD10Uk5TAAUGCxISExQVGhsfKSoqND5LTFJTU1xgYWtscHFxfHyFj5aWmJmdnaSsrcLDw8zX4ebn6+/w8PT19/f6+zDHh3sAAAEOSURBVDjLrdXbUoMwFIXhX1FbBbVarYdaLVpqNZqiVIuH/f6v5YXaIRBgX3RdZr4hswNZgJNwkBj78mZtMoyoTXBhpZD0uutno0xKyeNO1R3OxZOsX3ZXUpO7TcclUhsT6JwjR9KY+9Uc7jqAu3L+dy7zNpjveTeuQpkBBFk7lAi4FEUSwGrgMiAUVY4Z6GDseSm+YeQZo4MLzyxeKLxq4bsW2jXDD+3xWIY6OCHSwRNINfBrB2408AHo5grYA4jboQGgk7XCg99r2G+D4/+Lfdv80ZpVU2yYJpduF7qxQaah06LT2n23SgV5lnvduFq5uzPP4/a9LR4ly6L6fuzV/xeO4qeFiMinnZy6Rf8Dd+wYGsJK72gAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/c/c8/Ambox_notice.png/x60px-Ambox_notice.png.pagespeed.ic.Drinn_QlxP.png 1.5x, /w/images/thumb/c/c8/Ambox_notice.png/x80px-Ambox_notice.png.pagespeed.ic.Kstqk9O1_A.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAALpQTFRFAAAAM2bMNGbLM2bMMmbMM2bMM2bMM2bMM2bMM2XMM2bLM2bMM2bMM2bLM2bMMmbMM2bMM2bMM2XLM2bMMmXMMmbMM2bMMmbMM2bMM2bMMmbMM2bMMmXMM2bMM2XLM2bLM2bMM2bMM2bLM2bMM2bMM2bMMmXMMmbMM2bMM2bMM2bMM2bMMmXMMmbMM2bMM2bMM2bMM2bLMmbMM2bMMmXMMmXMM2XMM2bMM2bMM2XLM2bLM2bLM2XMM2bMN46y5gAAAD10Uk5TAAUGCxISExQVGhsfKSoqND5LTFJTU1xgYWtscHFxfHyFj5aWmJmdnaSsrcLDw8zX4ebn6+/w8PT19/f6+zDHh3sAAAEOSURBVDjLrdXbUoMwFIXhX1FbBbVarYdaLVpqNZqiVIuH/f6v5YXaIRBgX3RdZr4hswNZgJNwkBj78mZtMoyoTXBhpZD0uutno0xKyeNO1R3OxZOsX3ZXUpO7TcclUhsT6JwjR9KY+9Uc7jqAu3L+dy7zNpjveTeuQpkBBFk7lAi4FEUSwGrgMiAUVY4Z6GDseSm+YeQZo4MLzyxeKLxq4bsW2jXDD+3xWIY6OCHSwRNINfBrB2408AHo5grYA4jboQGgk7XCg99r2G+D4/+Lfdv80ZpVU2yYJpduF7qxQaah06LT2n23SgV5lnvduFq5uzPP4/a9LR4ly6L6fuzV/xeO4qeFiMinnZy6Rf8Dd+wYGsJK72gAAAAASUVORK5CYII="/></a> "Bridges are less reliable and tend to have lower performance than other entry points. If you live in a uncensored area, they are not necessarily more secure than entry guards." <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p>
 </div>
 <p>In order to use corridor as a <a class="external text" data-href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" rel="noreferrer noopener" target="_blank">BridgeFirewall</a> <sup><a data-href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, configure Tor to use <a class="external text" data-href="https://www.torproject.org/docs/bridges.html.en" href="https://www.torproject.org/docs/bridges.html.en" rel="noreferrer noopener" target="_blank">bridges</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org/docs/bridges.html.en" href="https://web.archive.org/web/https://www.torproject.org/docs/bridges.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> before installing corridor. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
-</p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> Start <code>sys-corridor</code> and open a terminal using Qubes start menu.<br/>
+{{Box|text=
+<b>1.</b> Start <code>sys-corridor</code> and open a terminal using Qubes start menu.<br/>
 <b>2.</b> Create folder <i><span style="background-color:#FBFBFB">/etc/corridor.d</span></i> and configuration file <i><span style="background-color:#FBFBFB">/etc/corridor.d/21-bridges-user.conf</span></i> first. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <br/>
 <b>3.</b> Create a bridges configuration file.
 </p><p>Open file <code>/etc/corridor.d/21-bridges-user.conf</code> in an editor with root rights.
@@ -447,46 +433,66 @@ sudo systemctl --no-pager status corridor-init-snat</textarea>
 <p>
 </p>
 </div>
-<p><b>4.</b> Add the following text. (Syntax: like torrc) <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
-</p><p>TODO: This step is currently untested.
+<p><b>4.</b> Review Whonix-Gateway ™ (<code>sys-whonix</code>) <a data-href="Bridges" href="./Bridges.html" title="Bridges">Tor bridge</a> settings.
+</p><p>Depending on how Tor bridges are configured on Whonix-Gateway ™ (<code>sys-whonix</code>):
+</p>
+<ul><li>if <a data-href="Anon_Connection_Wizard" href="./Anon_Connection_Wizard.html" title="Anon Connection Wizard">Anon Connection Wizard</a> was used, see configuration file <code>/usr/local/etc/torrc.d/40_tor_control_panel.conf</code>.</li>
+<li>if <a data-href="Tor#Manual_Bridge_Configuration" href="./Tor.html" title="Tor">manual Tor bridge configuration</a> was done, see file <code>/usr/local/etc/torrc.d/50_user.conf</code>.</li></ul>
+<p><b>5.</b> Add the following text. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p><p>Syntax is similar as Tor configuration as reviewed in previous step. Replace the IPs and ports <code>1.2.3.4:443</code>, <code>2.3.4.5:443</code> with the actual IPs and ports of the bridges in use. All Tor bridges from Tor configuration on Whonix-Gateway ™ (<code>sys-whonix</code>) need to be added below too.
 </p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
 <pre>BRIDGES="\
 Bridge 1.2.3.4:443
 Bridge 2.3.4.5:443
+Bridge 3.4.5.6:443
 "</pre>
 </div>
 <div class="textareaDiv">
 <textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">BRIDGES="\
 Bridge 1.2.3.4:443
 Bridge 2.3.4.5:443
+Bridge 3.4.5.6:443
 "</textarea>
 </div>
 </div>
 <p>
 </p><p>Save.
+</p><p><b>6.</b> Done.
+</p><p>BridgeFirewall corridor configuration is complete.
 </p>
+<h2><span class="mw-headline" id="Daemon_Status_Test">Daemon Status Test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=10.html" title="Edit section: Daemon Status Test">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While these instructions remain experimental, it is advised to run the following systemctl commands to check everything is functioning correctly.
+</p><p>
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo systemctl --no-pager status corridor-data
+sudo systemctl --no-pager status corridor-init-forwarding 
+sudo systemctl --no-pager status corridor-init-logged 
+sudo systemctl --no-pager status corridor-init-snat</pre>
 </div>
-<h2><span class="mw-headline" id="Test_corridor">Test corridor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=9.html" title="Edit section: Test corridor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="Test_Preparation">Test Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=10.html" title="Edit section: Test Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo systemctl --no-pager status corridor-data
+sudo systemctl --no-pager status corridor-init-forwarding 
+sudo systemctl --no-pager status corridor-init-logged 
+sudo systemctl --no-pager status corridor-init-snat</textarea>
+</div>
+</div>
+<p>
+</p>
+<h2><span class="mw-headline" id="Restart_corridor">Restart corridor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=11.html" title="Edit section: Restart corridor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Reboot <i><span style="background-color:#FBFBFB">sys-corridor</span></i>.
+</p><p>Do another <a href="#Daemon_Status_Test">Daemon Status Test</a>.
+</p>
+<h2><span class="mw-headline" id="Test_corridor">Test corridor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=12.html" title="Edit section: Test corridor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Test_Preparation">Test Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=13.html" title="Edit section: Test Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <ol><li>Run the <a href="#Install_corridor">above systemctl commands</a> again. <br/></li>
 <li>Create or use an appropriate existing AppVM named <code>corridor-client</code> (or similar).<br/></li>
 <li>Install / run either system-tor (from Debian or Fedora package sources) or Tor Browser.<br/></li>
 <li>Set <code>Networking</code> of <code>corridor-client</code> to <code>sys-corridor</code>. Tor should be still able to connect.</li></ol>
-<h3><span class="mw-headline" id="Testing_Steps">Testing Steps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=11.html" title="Edit section: Testing Steps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>To test system-tor, start watching Tor's log.
-</p><p>
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo tail -f /var/log/tor/log</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudo tail -f /var/log/tor/log</textarea>
-</div>
-</div>
-<p>
-</p><p>Check if it made an initial, successful connection.
+<h3><span class="mw-headline" id="Testing_Steps">Testing Steps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=14.html" title="Edit section: Testing Steps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Run a <a data-href="Tor#Log_Analysis" href="./Tor.html" title="Tor">Tor log analysis</a>.
 </p><p>Then restart Tor.
 </p><p>
 </p><div class="codeContainerNew">
@@ -504,28 +510,20 @@ Bridge 2.3.4.5:443
 <ol><li>First check Tor Browser can make an initial connection to the Internet while <code>Networking</code> is still set to <code>sys-firewall</code>.</li>
 <li>Next set <code>Networking</code> to <code>sys-corridor</code> and confirm it is still able to connect. If so, that is a positive sign.</li>
 <li>Finally attempt an untorified connection by using an application like Chromium or Firefox browser. Untorified applications should fail to connect to the Internet.</li></ol>
-<h2><span class="mw-headline" id="Test_Logging">Test Logging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=12.html" title="Edit section: Test Logging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Test_Logging">Test Logging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=15.html" title="Edit section: Test Logging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Whenever corridor blocks attempted actions (like the <a href="#Test_corridor">tests above</a>), a message will appear in syslog. To inspect <i><span style="background-color:#FBFBFB">/var/log/syslog</span></i>
-</p><p>Open <i><span style="background-color:#FBFBFB">/var/log/syslog</span></i> in an editor as a regular, non-root user.
+</p><p>Open file <code>/var/log/syslog</code> in an editor with root rights.
+</p><p>(<a class="mw-redirect" data-href="Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using a graphical environment</u>, run.
+<p>This box uses <a class="external text" data-href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank"><code>sudoedit</code> for better security</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. This is an example and other tools could also achieve the same goal. If this example does not work for you or if you are not using Whonix, please refer to <a data-href="Software#Editor" href="./Software.html" title="Software">this link</a>.
+</p><p>
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>mousepad /var/log/syslog</pre>
+<pre>sudoedit /var/log/syslog</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">mousepad /var/log/syslog</textarea>
-</div>
-</div>
-<p>
-</p><p><u>If you are using a terminal</u>, run.
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>nano /var/log/syslog</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">nano /var/log/syslog</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="" rows="1">sudoedit /var/log/syslog</textarea>
 </div>
 </div>
 <p>
@@ -554,16 +552,17 @@ Bridge 2.3.4.5:443
 </div>
 <p>
 </p>
-<h2><span class="mw-headline" id="Interpreting_the_Results">Interpreting the Results</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=13.html" title="Edit section: Interpreting the Results">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Interpreting_the_Results">Interpreting the Results</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=16.html" title="Edit section: Interpreting the Results">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>The safest configuration is only setting <code>sys-whonix</code> to use <code>sys-corridor</code> for <code>Networking</code>. The reason is the <a class="external text" data-href="https://github.com/marmarek/qubes-core-agent-linux/blob/master/vm-systemd/qubes-update-check.service" href="https://github.com/marmarek/qubes-core-agent-linux/blob/master/vm-systemd/qubes-update-check.service" rel="noreferrer noopener" target="_blank">qubes-update-check.service</a> <sup><a data-href="https://web.archive.org/web/https://github.com/marmarek/qubes-core-agent-linux/blob/master/vm-systemd/qubes-update-check.service" href="https://web.archive.org/web/https://github.com/marmarek/qubes-core-agent-linux/blob/master/vm-systemd/qubes-update-check.service" rel="noreferrer noopener" target="_blank">[archive]</a></sup> will try to use the Internet without Tor, and <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1814" href="https://github.com/QubesOS/qubes-issues/issues/1814" rel="noreferrer noopener" target="_blank">other programs</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1814" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1814" rel="noreferrer noopener" target="_blank">[archive]</a></sup> may also try to use clearnet. Therefore, always shut down <code>corridor-client</code>.
 </p>
-<h2><span class="mw-headline" id="Configure_sys-whonix">Configure sys-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=14.html" title="Edit section: Configure sys-whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Configure_sys-whonix">Configure sys-whonix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=17.html" title="Edit section: Configure sys-whonix">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>To set <code>Networking</code> of <code>sys-whonix</code> to <code>sys-corridor</code>:
 </p><p><code>Qube Manager</code> → <code>left-click sys-whonix</code> → <code>right-click</code> → <code>Qube settings</code> → <code>Networking</code> → <code><i><span style="background-color:#FBFBFB">sys-corridor</span></i></code> → <code>OK</code>
 </p><p>The procedure is now complete.
 </p>
-<h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=15.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=18.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>If problems are encountered, this section provides tips on gathering useful information for debugging.
+</p><p>It is also possible to ignore everything said on this website. Pretend it does not exist. Then <a class="external text" data-href="https://github.com/rustybird/corridor" href="https://github.com/rustybird/corridor" rel="noreferrer noopener" target="_blank">acquire corridor from its original upstream</a> <sup><a data-href="https://web.archive.org/web/https://github.com/rustybird/corridor" href="https://web.archive.org/web/https://github.com/rustybird/corridor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://github.com/rustybird/corridor/issues" href="https://github.com/rustybird/corridor/issues" rel="noreferrer noopener" target="_blank">contact upstream for support</a> <sup><a data-href="https://web.archive.org/web/https://github.com/rustybird/corridor/issues" href="https://web.archive.org/web/https://github.com/rustybird/corridor/issues" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 </p><p>Check if the <i><span style="background-color:#FBFBFB">corridor_relays</span></i> ipset gets populated.
 </p><p>
 </p><div class="codeContainerNew">
@@ -620,10 +619,10 @@ COMMIT
 -A CORRIDOR_FILTER -j REJECT --reject-with icmp-host-prohibited
 COMMIT
 </pre>
-<h1><span class="mw-headline" id="Credits">Credits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=16.html" title="Edit section: Credits">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Credits">Credits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=19.html" title="Edit section: Credits">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The author of corridor is <a class="external text" data-href="https://github.com/rustybird" href="https://github.com/rustybird" rel="noreferrer noopener" target="_blank">rustybird</a> <sup><a data-href="https://web.archive.org/web/https://github.com/rustybird" href="https://web.archive.org/web/https://github.com/rustybird" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <a class="external text" data-href="https://github.com/adrelanos" href="https://github.com/adrelanos" rel="noreferrer noopener" target="_blank">Patrick Schleizer</a> <sup><a data-href="https://web.archive.org/web/https://github.com/adrelanos" href="https://web.archive.org/web/https://github.com/adrelanos" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is the author of the <a class="external text" data-href="https://github.com/adrelanos/corridor" href="https://github.com/adrelanos/corridor" rel="noreferrer noopener" target="_blank">corridor for Debian</a> <sup><a data-href="https://web.archive.org/web/https://github.com/adrelanos/corridor" href="https://web.archive.org/web/https://github.com/adrelanos/corridor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <a class="external text" data-href="https://en.wikipedia.org/wiki/Fork_%28software_development%29" href="https://en.wikipedia.org/wiki/Fork_%28software_development%29" rel="noreferrer noopener" target="_blank">fork</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Fork_%28software_development%29" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Fork_%28software_development%29" rel="noreferrer noopener" target="_blank">[archive]</a></sup> used in these Whonix ™ instructions.
 </p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Corridor&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Corridor&amp;action=edit&amp;section=20.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://phabricator.whonix.org/T524" href="https://phabricator.whonix.org/T524" rel="noreferrer noopener" target="_blank">Corridor for Whonix ™ KVM ticket</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/T524" href="https://web.archive.org/web/https://phabricator.whonix.org/T524" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
@@ -695,7 +694,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Corridor" href="https://facebook.com/sharer.php?u=./Corridor">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>There are <a class="external text" data-href="Dev/git#subscribe_to_code_changes" href="./Dev/git" rel="noreferrer noopener" target="_blank">five different options</a> <sup><a data-href="https://web.archive.org/web/./Dev/git#subscribe_to_code_changes" href="https://web.archive.org/web/./Dev/git" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for subscribing to Whonix source code changes.
+<p>Join us in testing our new <a class="external text" data-href="AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank">AppArmor profiles</a> <sup><a data-href="https://web.archive.org/web/./AppArmor" href="https://web.archive.org/web/./AppArmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for improved security! (<a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
 </p>
 </div>
 <p><a data-href="Corridor" href="./Corridor" rel="noreferrer noopener" target="_blank"><img alt="https link" data-pagespeed-url-hash="2451531401" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" data-srcset="/w/images/2/24/xHttps_long.png.pagespeed.ic.fyMhLB8JR4.jpg 1.5x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg=="/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Corridor" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Corridor" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-pagespeed-url-hash="3726897143" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII=" data-srcset="/w/images/thumb/0/05/Iconfinder_tor_386502.svg/38px-Iconfinder_tor_386502.svg.png 1.5x, /w/images/thumb/0/05/Iconfinder_tor_386502.svg/50px-Iconfinder_tor_386502.svg.png 2x" decoding="async" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZEAIAAAAbG853AAAE7klEQVRIx7WXaVBTVxiG49LSMrZYO1CnUKpiKeO0uMGPdlRqW6NMFRDBssUoFssqtAjSKiLbQIWYBAxZICGyhGSyEUgoELbIEhIgQmVLCEogiA2UzWDYqdPLDxgl3HDtmbnfn3vOe5577jnf9x7YkoFtMFJxVDNTIaF6SquotChnfjgu0P8cExWbcnpb5kPsFd9M+gXS8VB7rm+JCF9fr5PjJG4qzNLC0vzLB3SDgemk3NzcOHCT6BMyzmFHR8PhBIKh8Y6th3sOrSGdc/Kv25CwZkZ1PnMH6D3xi+XajaGsFdOQlxcYVpofVbajXQZgjZ//u+Q5Hr0LiaRh3yzQyhgnOMPPEvaxHwUP2a6D9XKFEHMH0buRl2hp0KfERfj7MnFgeqq/7U7UbF0Ti96bsKn8BRSgVA/vwDxEdUMeqcWCV43JEy1lbA9wYG3XPwpl7YPOh82Kp7FzylVYyrebWwZuQQFCSy66FOzsdZcx1cnDkf0NY+XkreFWvHTwCkI2pUHyeBUWERkyxSmEglVxKDteehJQ4zagOmvCNvbrp+5OWOnKYINRimOaWShAlLKItKJ/er+Sxat/bTOq/FzRCEWtLpP5e+s4rKKFipQ+gCJ0/95v9wUHgJzEP3xvd+0EpI/ccg1dhIBR6VGu/AgoQjwUBiHq5vEwGJFWldLOGHoCRS1m1rGNhIXhQv29mAbnp5hPTxGIA6X2xE6xJXlfuBePx9AlYoUdUzkTDjpJG6/KvMc5adR9D/XxxuBgsYzT9plPwQ9Aufm05u+t38eCt/mi1AhyPh5l5hOVp2Up/+BW7eLeQAXW2AEb/wVxMnsaVfBNLL+MazAW9qpvAd0PTNcEtYuMEiHyoslliOhSOIkgJtmEfsB1umuF0OVLctA3jAQ6TN+l3gItcJoAuHnr2cT5SXxBUBz7nAFYJHjoUe4VUHnlY7JWEgAcY9qWmInS4jjZma4sWcL7zhRyc/G2tFu1RgSTYFN2fvd5MbovfWWi7pt7pBwKNgCrpBYvrp8B0/XPtwjWDV+m5f10keEV/4NTMvlgSodXYe4UOgrZS+vKfi/yneL9VIfrFfw9crfGaZXPq5UuQeEiolzVP0u6md9mhgAmJ0m8VaByscAGF1PHJ1qG4Dk3ge2cQQ80YyUDb7neqGM15rjj/juZwYODCsXw2VexcBY/q5nOYHI97D+DtnjHzgOZw9Q/oOzrTEfxCEEeYs85gZ8LmmEvl+EMTWAEq5JzIaW92hXfHFTCDhvzfOY0KVsJBNS7aCz8MoGuf5Zh937CGHW5+ADJUP+AgoDYsbKHlMUIbfHeopa0zx50Jta7mmTb4PFBQWw4kLcq+NQjUs7EiWFjrdtKrMZU3kft6xRsZlgSo+J1DgIwaOvUPpPss9IvmElJTZU7qqS5ds3uZNPwIzxq+TC5SPJ9S3tpZrfDSs3+8I7nzzKAg6K/Gk5+OLJfq3sNlsZbdXhUrl8CiPTgeGR5VltRlUWPi+K6FN//3WjQ0/nJHctGckGTpzWvNKOKpfNg1Fo/EfYoTNZxp4BjBCMHPTY1CQSduQZ4efXJ7lTNu4BB+z/scqulULl6hQy4+QAnSFhIkUr6oK8f85ckVuWmSdORQ9qZN3AhAxpQUuqozNhWLcX4GrHI9zbMUU5a062nm/sZM8qEXEqj5MmwZz95LBf8XP8CwPS8RXMzF1EAAAAASUVORK5CYII="/></a>
@@ -708,7 +707,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font>
 </p>
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="/w/index.php?title=Corridor&amp;oldid=59071" dir="ltr" href="https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=59071">https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=59071</a>"</div>
+Retrieved from "<a data-href="/w/index.php?title=Corridor&amp;oldid=60773" dir="ltr" href="https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=60773">https://www.whonix.org/w/index.php?title=Corridor&amp;oldid=60773</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -719,7 +718,7 @@ Retrieved from "<a data-href="/w/index.php?title=Corridor&amp;oldid=59071" dir="
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 7 August 2020, at 09:19.</li>
+<li id="footer-lastmod"> This page was last edited on 22 November 2020, at 16:08.</li>
 <li id="footer-Imprint"><a data-href="Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
