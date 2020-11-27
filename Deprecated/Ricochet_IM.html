@@ -223,7 +223,7 @@ Ricochet should be fully functional in Whonix ™. If any problems are encounter
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>Note</b>: If no changes have yet been made to Whonix Firewall Settings, then the Whonix User Firewall Settings File <code>/etc/whonix_firewall.d/50_user.conf</code> appears empty (because it does not exist). This is expected.
-</p><p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.<br/>
+</p><p><u>If using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix ™</a></u>, complete these steps.<br/>
 In Whonix-Workstation ™ AppVM. Make sure folder <code>/usr/local/etc/whonix_firewall.d</code> exists.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
@@ -273,7 +273,7 @@ In Whonix-Workstation ™ AppVM. Make sure folder <code>/usr/local/etc/whonix_fi
 </p><p>To view the file, follow these instructions.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete these steps.
+<p><u>If using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix ™</a></u>, complete these steps.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Template:</code> <code>whonix-ws-15</code> → <code>Whonix Global Firewall Settings</code>
 </p><p><u>If using a graphical Whonix-Workstation ™</u>, complete these steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>Settings</code> → <code>Global Firewall Settings</code>
@@ -316,7 +316,7 @@ In Whonix-Workstation ™ AppVM. Make sure folder <code>/usr/local/etc/whonix_fi
 </p><p><b>Reload Whonix-Workstation ™ Firewall.</b>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><u>If you are using <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a></u>, complete the following steps.
+<p><u>If you are using <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix ™</a></u>, complete the following steps.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>Whonix-Workstation ™ AppVM (commonly named anon-whonix)</code> → <code>Reload Whonix Firewall</code>
 </p><p><u>If you are using a graphical Whonix-Workstation ™</u>, complete the following steps.
 </p><p><code>Start Menu</code> → <code>Applications</code> → <code>System</code> → <code>Reload Whonix Firewall</code>
@@ -410,7 +410,7 @@ Security considerations:
 In conclusion, Whonix ™ is the safest and correct choice for running this application.</span>
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
-Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> TemplateBased ProxyVMs i.e. Whonix-Gateway ™ (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users could also utilize <code>/etc/onion-grater-merger.d/</code>. <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a> users could also utilize <code>/etc/onion-grater-merger.d/</code> but then <code>/etc/onion-grater-merger.d/</code> must be made persistent, which means doing this procedure inside the Whonix-Gateway ™ TemplateVM (commonly called <code>whonix-gw-15</code>) and then restarting the Whonix-Gateway ™ ProxyVM or using <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Both techniques are more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code>, since it is persistent either way. Further, it even allows multiple Whonix-Gateway ™ ProxyVMs based on the same Whonix-Gateway ™ TemplateVM; for example, one Whonix-Gateway ™ ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ™ ProxyVM having the default onion-grater whitelist which is more restrictive.</span>
+Using <code>/usr/local/etc/onion-grater-merger.d/</code> because that onion-grater settings folder is persistent in <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix ™</a> TemplateBased ProxyVMs i.e. Whonix-Gateway ™ (commonly called <code>sys-whonix</code>). <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a> users could also utilize <code>/etc/onion-grater-merger.d/</code>. <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes-Whonix ™</a> users could also utilize <code>/etc/onion-grater-merger.d/</code> but then <code>/etc/onion-grater-merger.d/</code> must be made persistent, which means doing this procedure inside the Whonix-Gateway ™ TemplateVM (commonly called <code>whonix-gw-15</code>) and then restarting the Whonix-Gateway ™ ProxyVM or using <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Both techniques are more complicated than simply using <code>/usr/local/etc/onion-grater-merger.d/</code>, since it is persistent either way. Further, it even allows multiple Whonix-Gateway ™ ProxyVMs based on the same Whonix-Gateway ™ TemplateVM; for example, one Whonix-Gateway ™ ProxyVM extending and relaxing onion-grater's whitelist and the other Whonix-Gateway ™ ProxyVM having the default onion-grater whitelist which is more restrictive.</span>
 </li>
 <li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/ricochet-im/ricochet/issues/577" href="https://github.com/ricochet-im/ricochet/issues/577" rel="noreferrer noopener" target="_blank">https://github.com/ricochet-im/ricochet/issues/577</a> <sup><a data-href="https://web.archive.org/web/https://github.com/ricochet-im/ricochet/issues/577" href="https://web.archive.org/web/https://github.com/ricochet-im/ricochet/issues/577" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
@@ -460,15 +460,15 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20201126153415
+Cached time: 20201127063238
 Cache expiry: 0
 Dynamic content: true
 Complications: []
-CPU time usage: 0.107 seconds
-Real time usage: 0.124 seconds
-Preprocessor visited node count: 554/1000000
-Post‐expand include size: 20542/2097152 bytes
-Template argument size: 7743/2097152 bytes
+CPU time usage: 0.102 seconds
+Real time usage: 0.114 seconds
+Preprocessor visited node count: 546/1000000
+Post‐expand include size: 20426/2097152 bytes
+Template argument size: 7708/2097152 bytes
 Highest expansion depth: 11/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
@@ -476,16 +476,16 @@ Unstrip post‐expand size: 6370/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   81.547      1 -total
- 43.19%   35.223      6 Template:Box
- 35.83%   29.218      1 Template:Footer
- 25.38%   20.694     11 Template:CodeSelect
- 14.96%   12.197      1 Template:Firewall_Settings_Workstation
- 13.25%   10.802      6 Template:Link
- 11.90%    9.706      1 Template:Reflist
- 10.23%    8.343      1 Template:Control_Port_Filter_Python_Profile_Add
-  7.99%    6.519      1 Template:Onion-grater-warning
-  6.81%    5.550      1 Template:Mbox
+100.00%   74.345      1 -total
+ 38.67%   28.749      6 Template:Box
+ 36.89%   27.425      1 Template:Footer
+ 24.81%   18.442     11 Template:CodeSelect
+ 13.73%   10.211      6 Template:Link
+ 12.91%    9.601      1 Template:Firewall_Settings_Workstation
+ 11.61%    8.631      1 Template:Reflist
+ 10.37%    7.711      1 Template:Control_Port_Filter_Python_Profile_Add
+  8.67%    6.449      1 Template:Onion-grater-warning
+  7.39%    5.491      1 Template:Mbox
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Deprecated/Ricochet_IM&amp;oldid=47886" dir="ltr" href="https://www.whonix.org/w/index.php?title=Deprecated/Ricochet_IM&amp;oldid=47886">https://www.whonix.org/w/index.php?title=Deprecated/Ricochet_IM&amp;oldid=47886</a>"</div>

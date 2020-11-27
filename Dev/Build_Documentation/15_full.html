@@ -15,7 +15,7 @@
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
 <meta content="MediaWiki 1.35.0" name="generator"/>
-<meta content="Instructions to build Whonix ™ Virtual Machine Images from Source Code." name="description"/>
+<meta content="Instructions to build Whonix â¢ Virtual Machine Images from Source Code." name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
 <link data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
 <link data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" rel="edit.html" title="Edit"/>
@@ -26,20 +26,20 @@
 <meta content="Dev/Build Documentation/15 full - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="../../Dev/Build_Documentation/15_full" property="og:url"/>
-<meta content="Instructions to build Whonix ™ Virtual Machine Images from Source Code." property="og:description"/>
+<meta content="Instructions to build Whonix â¢ Virtual Machine Images from Source Code." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="2020-10-27T11:17:16Z" property="article:modified_time"/>
 <meta content="2020-10-27T11:17:16Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Build Documentation/15 full - Whonix" property="twitter:title"/>
-<meta content="Instructions to build Whonix ™ Virtual Machine Images from Source Code." property="twitter:description"/>
+<meta content="Instructions to build Whonix â¢ Virtual Machine Images from Source Code." property="twitter:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Build_Documentation_15_full rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span> <a data-href="/wiki/Terms_of_Service.html" href="../../Terms_of_Service.html">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Build_Documentation_15_full rootpage-Dev skin-foreground action-view"><div class="mw-cookiewarning-container banner-container"><div class="mw-cookiewarning-text"><span>By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span>Â <a data-href="/wiki/Terms_of_Service.html" href="../../Terms_of_Service.html">More information</a><form method="POST"><input class="mw-cookiewarning-dismiss" name="disablecookiewarning" type="submit" value="OK"/></form></div></div><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -138,43 +138,43 @@
 </ul>
 </div>
 <h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>This page documents how to build Whonix ™ <a data-href="/wiki/VirtualBox" href="../../VirtualBox.html" title="VirtualBox">VirtualBox</a> <i><span style="background-color:#FBFBFB">.ova</span></i> and <a data-href="/wiki/KVM" href="../../KVM.html" title="KVM">KVM</a> <i><span style="background-color:#FBFBFB">.qcow2</span></i> images. For <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>, see <a data-href="/wiki/Dev/Qubes#Build_Qubes-Whonix_.E2.84.A2_Templates" href="../../Dev/Qubes.html" title="Dev/Qubes">Qubes-Whonix ™ Build Documentation</a>.
+<p>This page documents how to build Whonix â¢ <a data-href="/wiki/VirtualBox" href="../../VirtualBox.html" title="VirtualBox">VirtualBox</a> <i><span style="background-color:#FBFBFB">.ova</span></i> and <a data-href="/wiki/KVM" href="../../KVM.html" title="KVM">KVM</a> <i><span style="background-color:#FBFBFB">.qcow2</span></i> images. For <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix â¢</a>, see <a data-href="/wiki/Dev/Qubes#Build_Qubes-Whonix_.E2.84.A2_Templates" href="../../Dev/Qubes.html" title="Dev/Qubes">Qubes-Whonix â¢ Build Documentation</a>.
 </p>
 <h2><span class="mw-headline" id="Host_Preparation">Host Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=2.html" title="Edit section: Host Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><button onclick="expand()">Expand all</button>
 <button onclick="collapse()">Collapse all</button>
 
 </p>
-<ul><li>You need to build on <b>Debian</b> <u><code>buster</code></u>, such as Whonix-Workstation ™ 15 or a Debian <code>buster</code> VM.</li>
+<ul><li>You need to build on <b>Debian</b> <u><code>buster</code></u>, such as Whonix-Workstation â¢ 15 or a Debian <code>buster</code> VM.</li>
 <li>You need ~ <code>30</code> GB free disk space.</li>
 <li>You need ~ <code>4</code> GB free RAM.
 <ul><li>Might actually work with a lot less RAM.</li>
 <li>Might actually work with less RAM if you have swap.</li></ul></li>
 <li>Do not build under user <code>root</code>. Login regular as user <code>user</code> and then use <code>sudo</code> as documented below.</li>
-<li>You cannot build on Whonix-Gateway ™ (due to networking issues).</li>
+<li>You cannot build on Whonix-Gateway â¢ (due to networking issues).</li>
 <li>It is recommended to set your terminal (for example xfce4-terminal) to unlimited scrollback, so you can watch the full build log.</li>
-<li><u><b>Short</b></u>: <b>Don't add private files to Whonix ™ source code folder! [...]</b></li></ul>
+<li><u><b>Short</b></u>: <b>Don't add private files to Whonix â¢ source code folder! [...]</b></li></ul>
 <div class="toccolours mw-collapsible mw-collapsed">
 <div class="mw-collapsible-content">
-<p><i>Long</i>: [...] Unless you know what you are doing. Technically, it would work. This is recommended against. Those files would get managed by the respective package. When you later update Whonix ™ debian packages, your files would get deleted by the package manager. Also adding private files to Whonix ™ source code folder, later contributing to Whonix ™ development and accidentally pushing the wrong git branch would be a disaster. Better add your private files to Whonix ™ after building Whonix ™. Or add a custom build step adding your files, which then get copied from a folder outside of Whonix ™ source folder. See "Source Code Changes" in "Optional Build Configuration" below.
+<p><i>Long</i>: [...] Unless you know what you are doing. Technically, it would work. This is recommended against. Those files would get managed by the respective package. When you later update Whonix â¢ debian packages, your files would get deleted by the package manager. Also adding private files to Whonix â¢ source code folder, later contributing to Whonix â¢ development and accidentally pushing the wrong git branch would be a disaster. Better add your private files to Whonix â¢ after building Whonix â¢. Or add a custom build step adding your files, which then get copied from a folder outside of Whonix â¢ source folder. See "Source Code Changes" in "Optional Build Configuration" below.
 </p>
 </div>
 </div>
 <p><br/>
 </p>
-<ul><li><u><b>Short</b></u>: <b>Make sure there aren't any VMs in VirtualBox (inside your build machine) already called Whonix-Gateway ™ or Whonix-Workstation ™!</b></li></ul>
+<ul><li><u><b>Short</b></u>: <b>Make sure there aren't any VMs in VirtualBox (inside your build machine) already called Whonix-Gateway â¢ or Whonix-Workstation â¢!</b></li></ul>
 <div class="toccolours mw-collapsible mw-collapsed">
 <div class="mw-collapsible-content">
-<p><i>Long</i>: Because the build script would fail, because it tries to create VMs either named Whonix-Gateway ™ or Whonix-Workstation ™. Running the clean script between builds will prevent this error.
+<p><i>Long</i>: Because the build script would fail, because it tries to create VMs either named Whonix-Gateway â¢ or Whonix-Workstation â¢. Running the clean script between builds will prevent this error.
 </p>
 </div>
 </div>
 <p><br/>
 </p>
-<ul><li><u><b>Short</b></u>: <b>Do not try to build Whonix-Gateway ™ and Whonix-Workstation ™ at the same time!</b></li></ul>
+<ul><li><u><b>Short</b></u>: <b>Do not try to build Whonix-Gateway â¢ and Whonix-Workstation â¢ at the same time!</b></li></ul>
 <div class="toccolours mw-collapsible mw-collapsed">
 <div class="mw-collapsible-content">
-<p><i>Long</i>: Building Whonix-Gateway ™ and Whonix-Workstation ™ at the same time is not supported due to limitations in the build script. In other words, do not try to run for example <span style="border:1px dotted #005cb9">sudo ~/Whonix/whonix_build --flavor whonix-gateway -- --build --target virtualbox</span> and <span style="border:1px dotted #005cb9">sudo ~/Whonix/whonix_build --flavor whonix-workstation -- --build --target virtualbox</span> at the same time. The build would probably fail.
+<p><i>Long</i>: Building Whonix-Gateway â¢ and Whonix-Workstation â¢ at the same time is not supported due to limitations in the build script. In other words, do not try to run for example <span style="border:1px dotted #005cb9">sudo ~/Whonix/whonix_build --flavor whonix-gateway -- --build --target virtualbox</span> and <span style="border:1px dotted #005cb9">sudo ~/Whonix/whonix_build --flavor whonix-workstation -- --build --target virtualbox</span> at the same time. The build would probably fail.
 </p>
 </div>
 </div>
@@ -432,7 +432,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000<br/>
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>Replace <code>15.0.1.5.1-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../../Stay_Tuned.html" title="Stay Tuned">Whonix ™ News Blog</a> as it might contain information.
+</p><p>Replace <code>15.0.1.5.1-stable</code> with the actual version chosen for the build: the stable, testers-only or developers version. Common sense is required when choosing the right version number. For example, the latest available version number is not necessarily the most stable or suitable. Follow the <a data-href="/wiki/Stay_Tuned" href="../../Stay_Tuned.html" title="Stay Tuned">Whonix â¢ News Blog</a> as it might contain information.
 </p><p>Check if you really got the version you want.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
@@ -538,7 +538,7 @@ nothing to commit, working tree clean
 <li><code>--flavor whonix-gateway-xfce</code></li>
 <li><code>--flavor whonix-workstation-cli</code></li>
 <li><code>--flavor whonix-workstation-cli</code></li></ul>
-<p>Optional. Enable <a data-href="/wiki/Project-APT-Repository" href="../../Project-APT-Repository.html" title="Project-APT-Repository">Whonix ™ APT repository</a> inside the images. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> See <a data-href="/wiki/Trust" href="../../Trust.html" title="Trust">Trust</a>. This is done for official Whonix ™ <a data-href="/wiki/Dev/Redistribution" href="../../Dev/Redistribution.html" title="Dev/Redistribution">redistributeable</a> builds.
+<p>Optional. Enable <a data-href="/wiki/Project-APT-Repository" href="../../Project-APT-Repository.html" title="Project-APT-Repository">Whonix â¢ APT repository</a> inside the images. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> See <a data-href="/wiki/Trust" href="../../Trust.html" title="Trust">Trust</a>. This is done for official Whonix â¢ <a data-href="/wiki/Dev/Redistribution" href="../../Dev/Redistribution.html" title="Dev/Redistribution">redistributeable</a> builds.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -553,10 +553,10 @@ nothing to commit, working tree clean
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p>See also <a data-href="/wiki/Build_Configuration" href="../../Build_Configuration.html" title="Build Configuration">Optional Build Configuration</a>.
-</p><p><b>Note: These instructions use VirtualBox as an example, assume you have the Whonix ™ source code in your home folder (at <code>~/</code>.)</b>
+</p><p><b>Note: These instructions use VirtualBox as an example, assume you have the Whonix â¢ source code in your home folder (at <code>~/</code>.)</b>
 </p>
 <hr/>
-<p>Delete any existing Whonix-Gateway ™ virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Gateway ™ from VirtualBox installed on your build machine!
+<p>Delete any existing Whonix-Gateway â¢ virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Gateway â¢ from VirtualBox installed on your build machine!
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -570,7 +570,7 @@ nothing to commit, working tree clean
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>Delete any existing Whonix-Workstation ™ virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Workstation ™ from VirtualBox installed on your build machine!
+</p><p>Delete any existing Whonix-Workstation â¢ virtual machine with the following command. <b>Warning</b>: This will delete any virtual machine named Whonix-Workstation â¢ from VirtualBox installed on your build machine!
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -586,7 +586,7 @@ nothing to commit, working tree clean
 <!-- Widget:CodeSelect end -->
 </p>
 <hr/>
-<p>Build a Whonix-Gateway ™ virtual machine image.
+<p>Build a Whonix-Gateway â¢ virtual machine image.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -600,7 +600,7 @@ nothing to commit, working tree clean
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>Build a Whonix-Workstation ™ virtual machine image.
+</p><p>Build a Whonix-Workstation â¢ virtual machine image.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -658,10 +658,10 @@ nothing to commit, working tree clean
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit&amp;section=10.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">â</a></span> <span class="reference-text">
 Due to technical challenges, see <a data-href="/wiki/Dev/VirtualBox#VirtualBox_Installation_Challenges" href="../../Dev/VirtualBox.html" title="Dev/VirtualBox">VirtualBox Installation Challenges</a>.</span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">â</a></span> <span class="reference-text">
 Optional <code>git</code> parameters:
 
 <ul><li><code>--depth=1</code>: Used to speed up download.</li>
@@ -671,20 +671,20 @@ Optional <code>git</code> parameters:
 
 Knowledgeable users of <code>git</code> are free to drop any of these optional parameters.</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">See <a data-href="/wiki/Trust" href="../../Trust.html" title="Trust">Trust</a>.</span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">â</a></span> <span class="reference-text">See <a data-href="/wiki/Trust" href="../../Trust.html" title="Trust">Trust</a>.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">â</a></span> <span class="reference-text">
 Optional. [...]</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">â</a></span> <span class="reference-text">
 As defined by TUF: Attacks and Weaknesses:
 <ul><li><a class="external free" data-href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md</a> <sup><a data-href="https://web.archive.org/web/https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" href="https://web.archive.org/web/https://github.com/theupdateframework/tuf/blob/develop/SECURITY.md" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://www.webcitation.org/6F7Io2ncN" href="https://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">https://www.webcitation.org/6F7Io2ncN</a> <sup><a data-href="https://web.archive.org/web/https://www.webcitation.org/6F7Io2ncN" href="https://web.archive.org/web/https://www.webcitation.org/6F7Io2ncN" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">â</a></span> <span class="reference-text">
 Beginning from git tag 9.6 and above.</span>
 </li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">â</a></span> <span class="reference-text">
 <code>--redistribute</code> will set <code>export whonix_build_redistribute="true"</code> which results in setting
 
 <pre>WHONIX_APT_REPOSITORY_OPTS="--enable --codename $whonix_build_apt_stable_release"
@@ -693,7 +693,7 @@ export WHONIX_APT_REPOSITORY_OPTS
 <p><code>whonix_build_apt_stable_release</code> defaults to <code>buster</code> and could optionally through a <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="../../Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a> set to <code>buster-proposed-updates</code>, <code>buster-testers</code> or <code>buster-developers</code>.
 </p>
 </span></li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">â</a></span> <span class="reference-text">
 This is sane since important VM settings were already configured in <a class="external free" data-href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2600_create-vbox-vm" href="https://github.com/Whonix/Whonix/blob/master/build-steps.d/2600_create-vbox-vm" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/Whonix/blob/master/build-steps.d/2600_create-vbox-vm</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/Whonix/blob/master/build-steps.d/2600_create-vbox-vm" href="https://web.archive.org/web/https://github.com/Whonix/Whonix/blob/master/build-steps.d/2600_create-vbox-vm" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
 
 <code>prepare_release</code> VM export does nothing special/important for privately used builds.</span>
@@ -701,7 +701,7 @@ This is sane since important VM settings were already configured in <a class="ex
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Whonix ™ is <a data-href="https://evolution-host.com/vps-hosting.php" href="https://evolution-host.com/vps-hosting.php">Supported by Evolution Host DDoS
+<p>Whonix â¢ is <a data-href="https://evolution-host.com/vps-hosting.php" href="https://evolution-host.com/vps-hosting.php">Supported by Evolution Host DDoS
 Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p>
 </div>
@@ -710,7 +710,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://jooble.org" href="https://jooble.org" rel="noreferrer" target="_blank"> Jobs in USA</a>
 </p>
 <hr/>
-<p>Search engines: <a data-href="https://search.yacy.net" href="https://search.yacy.net" rel="noreferrer" target="_blank"> YaCy</a> | <a data-href="https://www.qwant.com" href="https://www.qwant.com" rel="noreferrer" target="_blank"> Qwant</a> | <a data-href="https://www.ecosia.org" href="https://www.ecosia.org" rel="noreferrer" target="_blank"> ecosia</a> | <a data-href="https://metager.org" href="https://metager.org" rel="noreferrer" target="_blank"> MetaGer</a> | <a data-href="https://peekier.com" href="https://peekier.com" rel="noreferrer" target="_blank"> peekier</a> | <a data-href="/wiki/Special:Search" href="../../Special:Search.html" title="Special:Search">Whonix ™ Wiki</a>
+<p>Search engines: <a data-href="https://search.yacy.net" href="https://search.yacy.net" rel="noreferrer" target="_blank"> YaCy</a> | <a data-href="https://www.qwant.com" href="https://www.qwant.com" rel="noreferrer" target="_blank"> Qwant</a> | <a data-href="https://www.ecosia.org" href="https://www.ecosia.org" rel="noreferrer" target="_blank"> ecosia</a> | <a data-href="https://metager.org" href="https://metager.org" rel="noreferrer" target="_blank"> MetaGer</a> | <a data-href="https://peekier.com" href="https://peekier.com" rel="noreferrer" target="_blank"> peekier</a> | <a data-href="/wiki/Special:Search" href="../../Special:Search.html" title="Special:Search">Whonix â¢ Wiki</a>
 </p>
 <hr/>
 <p><a data-href="/wiki/Official_Whonix_Online_Profiles" href="../../Official_Whonix_Online_Profiles.html" title="Official Whonix Online Profiles">Follow</a>:
@@ -729,46 +729,46 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=../../Dev/Build_Documentation/15_full" href="https://facebook.com/sharer.php?u=../../Dev/Build_Documentation/15_full">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="../../Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
+<p>Have you <a class="external text" data-href="../../Contribute" href="../../Contribute" rel="noreferrer noopener" target="_blank">contributed</a> <sup><a data-href="https://web.archive.org/web/../../Contribute" href="https://web.archive.org/web/../../Contribute" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to Whonix â¢? If so, feel free to add your name and highlight what you did on the <a class="external text" data-href="../../Authorship" href="../../Authorship" rel="noreferrer noopener" target="_blank">Whonix authorship</a> <sup><a data-href="https://web.archive.org/web/../../Authorship" href="https://web.archive.org/web/../../Authorship" rel="noreferrer noopener" target="_blank">[archive]</a></sup> page.
 </p>
 </div>
 <p><a data-href="https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" href="https://www.Whonix.org/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/15_full" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
 </p><p><font size="-1">
-This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix ™</a>, then <a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit">Edit</a>! Edits are held for moderation. <a data-href="/wiki/Policy_of_Whonix_Website_and_Whonix_Chat" href="../../Policy_of_Whonix_Website_and_Whonix_Chat.html" title="Policy of Whonix Website and Whonix Chat">Policy of Whonix Website and Whonix Chat</a> and <a data-href="/wiki/Policy_On_Nonfreedom_Software" href="../../Policy_On_Nonfreedom_Software.html" title="Policy On Nonfreedom Software">Policy On Nonfreedom Software</a> applies.
-</font></p><p><font size="-1">Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix ™ is a trademark.</a> Whonix ™ is a <a class="external text" data-href="https://www.openinventionnetwork.com/licensees.php" href="https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">[archive]</a></sup> of the <a class="external text" data-href="https://www.openinventionnetwork.com" href="https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">Open Invention Network</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com" href="https://web.archive.org/web/https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix ™ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
-</font></p><p><font size="-1">Whonix ™ is a derivative of and not affiliated with <a class="external text" data-href="https://www.debian.org" href="https://www.debian.org" rel="noreferrer noopener" target="_blank">Debian</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org" href="https://web.archive.org/web/https://www.debian.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <a class="external text" data-href="https://www.debian.org/trademark" href="https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">Debian is a registered trademark</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org/trademark" href="https://web.archive.org/web/https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">[archive]</a></sup> owned by <a class="external text" data-href="https://www.spi-inc.org/" href="https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">Software in the Public Interest, Inc</a> <sup><a data-href="https://web.archive.org/web/https://www.spi-inc.org/" href="https://web.archive.org/web/https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
-</font></p><p><font size="-1">Whonix ™ is produced independently from the Tor<a class="external text" data-href="https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">®</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> anonymity software and carries no guarantee from <a class="external text" data-href="https://www.torproject.org" href="https://www.torproject.org" rel="noreferrer noopener" target="_blank">The Tor Project</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org" href="https://web.archive.org/web/https://www.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about quality, suitability or anything else.
-</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service.html" href="../../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../../Contact.html" title="Contact">Contact</a>.
+This is a wiki. Want to improve this page? Help is welcome and volunteer contributions are happily considered! Read, understand and agree to <a data-href="/wiki/Whonix:Copyrights#Conditions_for_Contributions_to_Whonix_.E2.84.A2" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">Conditions for Contributions to Whonix â¢</a>, then <a data-href="/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;action=edit">Edit</a>! Edits are held for moderation. <a data-href="/wiki/Policy_of_Whonix_Website_and_Whonix_Chat" href="../../Policy_of_Whonix_Website_and_Whonix_Chat.html" title="Policy of Whonix Website and Whonix Chat">Policy of Whonix Website and Whonix Chat</a> and <a data-href="/wiki/Policy_On_Nonfreedom_Software" href="../../Policy_On_Nonfreedom_Software.html" title="Policy On Nonfreedom Software">Policy On Nonfreedom Software</a> applies.
+</font></p><p><font size="-1">Copyright (C) 2012 - 2020 ENCRYPTED SUPPORT LP. <a data-href="/wiki/Whonix_Trademark_Policy" href="../../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">Whonix â¢ is a trademark.</a> Whonix â¢ is a <a class="external text" data-href="https://www.openinventionnetwork.com/licensees.php" href="https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">licensee</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" href="https://web.archive.org/web/https://www.openinventionnetwork.com/licensees.php" rel="noreferrer noopener" target="_blank">[archive]</a></sup> of the <a class="external text" data-href="https://www.openinventionnetwork.com" href="https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">Open Invention Network</a> <sup><a data-href="https://web.archive.org/web/https://www.openinventionnetwork.com" href="https://web.archive.org/web/https://www.openinventionnetwork.com" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Unless otherwise noted, the content of this page is <a data-href="/wiki/Whonix:Copyrights" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">copyrighted</a> and licensed under the same Freedom Software <a data-href="/wiki/Whonix:Copyrights#License" href="../../Whonix:Copyrights.html" title="Whonix:Copyrights">license</a> as Whonix â¢ itself. (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
+</font></p><p><font size="-1">Whonix â¢ is a derivative of and not affiliated with <a class="external text" data-href="https://www.debian.org" href="https://www.debian.org" rel="noreferrer noopener" target="_blank">Debian</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org" href="https://web.archive.org/web/https://www.debian.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <a class="external text" data-href="https://www.debian.org/trademark" href="https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">Debian is a registered trademark</a> <sup><a data-href="https://web.archive.org/web/https://www.debian.org/trademark" href="https://web.archive.org/web/https://www.debian.org/trademark" rel="noreferrer noopener" target="_blank">[archive]</a></sup> owned by <a class="external text" data-href="https://www.spi-inc.org/" href="https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">Software in the Public Interest, Inc</a> <sup><a data-href="https://web.archive.org/web/https://www.spi-inc.org/" href="https://web.archive.org/web/https://www.spi-inc.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</font></p><p><font size="-1">Whonix â¢ is produced independently from the Tor<a class="external text" data-href="https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">Â®</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> anonymity software and carries no guarantee from <a class="external text" data-href="https://www.torproject.org" href="https://www.torproject.org" rel="noreferrer noopener" target="_blank">The Tor Project</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org" href="https://web.archive.org/web/https://www.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about quality, suitability or anything else.
+</font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service.html" href="../../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix â¢ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../../Contact.html" title="Contact">Contact</a>.
 </font>
 </p>
 <!-- 
 NewPP limit report
-Cached time: 20201126153508
+Cached time: 20201126155319
 Cache expiry: 0
 Dynamic content: true
 Complications: []
-CPU time usage: 0.125 seconds
-Real time usage: 0.139 seconds
-Preprocessor visited node count: 784/1000000
-Post‐expand include size: 14541/2097152 bytes
+CPU time usage: 0.130 seconds
+Real time usage: 0.145 seconds
+Preprocessor visited node count: 786/1000000
+Postâexpand include size: 14551/2097152 bytes
 Template argument size: 2109/2097152 bytes
 Highest expansion depth: 8/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 1/20
-Unstrip post‐expand size: 4272/5000000 bytes
+Unstrip postâexpand size: 4807/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%   94.670      1 -total
- 41.07%   38.882     24 Template:CodeSelect
- 27.41%   25.945      1 Template:Footer
- 11.23%   10.629      1 Template:OpenPGP_Verify_the_Source_Code
- 10.32%    9.767      6 Template:Link
-  9.60%    9.093      1 Template:Build_Documentation_Get_Source
-  7.60%    7.192      1 Template:Build_Documentation_Choose_Version
-  5.05%    4.778      1 Template:Reflist
-  4.05%    3.836      1 Template:Build_Dependencies
-  3.41%    3.225      1 Template:Advertisement2
+100.00%  102.426      1 -total
+ 40.69%   41.682     24 Template:CodeSelect
+ 27.41%   28.072      1 Template:Footer
+ 11.76%   12.041      1 Template:OpenPGP_Verify_the_Source_Code
+ 10.41%   10.658      1 Template:Build_Documentation_Get_Source
+ 10.28%   10.529      6 Template:Link
+  7.45%    7.628      1 Template:Build_Documentation_Choose_Version
+  4.70%    4.810      1 Template:Reflist
+  4.29%    4.397      1 Template:Build_Dependencies
+  3.42%    3.499      1 Template:Advertisement2
 -->
 </div></div><div class="printfooter">
 Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=60601" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=60601">https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/15_full&amp;oldid=60601</a>"</div>
@@ -804,4 +804,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </div>
 
 </body>
+<!-- Cached 20201126155319 -->
 </html>
