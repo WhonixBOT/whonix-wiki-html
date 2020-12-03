@@ -28,8 +28,8 @@
 <meta content="./Login_spoofing" property="og:url"/>
 <meta content="Prevent Malware from Sniffing the Root Password. Using SysRq + r. (unraw)" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2020-12-01T13:37:38Z" property="article:modified_time"/>
-<meta content="2020-12-01T13:37:38Z" property="article:published_time"/>
+<meta content="2020-12-02T11:54:10Z" property="article:modified_time"/>
+<meta content="2020-12-02T11:54:10Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Login Spoofing" property="twitter:title"/>
 <meta content="Prevent Malware from Sniffing the Root Password. Using SysRq + r. (unraw)" property="twitter:description"/>
@@ -123,7 +123,12 @@
 </p><p><br/>
 </p><p><br/>
 </p><p><a data-href="/wiki/Malware" href="./Malware.html" title="Malware">Malware</a> might be masquerading as login prompt and stealing login passwords.
-</p><p>This supposes an advanced threat model; for instance a system where a limited user (user "<code>user</code>") is utilizing a graphical X Window System session that is different from the user with root/sudo permissions (user "<code>admin</code>"). The limited user account may be compromised by malware. Under many threat models this is already considered catastrophic, since running malware:
+</p><p>This supposes an advanced threat model:
+</p>
+<ul><li>A system where a limited user (user "<code>user</code>") is utilizing a graphical X Window System session that is different from the user with root/sudo permissions (user "<code>admin</code>").</li>
+<li>The limited user is expected to at some point being compromised by <a data-href="/wiki/Malware" href="./Malware.html" title="Malware">malware</a>.</li>
+<li>Otherwise, if there was only one user account which also has sudo/su access, malware could <a data-href="/wiki/Dev/Strong_Linux_User_Account_Isolation#sudo_password_sniffing" href="./Dev/Strong_Linux_User_Account_Isolation.html" title="Dev/Strong Linux User Account Isolation">sniff the administrative password</a> anyhow and would not need to resort the and advanced attack of login spoofing.</li></ul>
+<p>The limited user account being compromised is under many threat models already considered catastrophic, since running malware:
 </p>
 <ul><li>has full access to all user-accessible files</li>
 <li>can view all keyboard inputs and take over login sessions</li>
@@ -131,13 +136,20 @@
 <li>can perform other malicious actions - see: <a data-href="/wiki/Malware#The_Importance_of_a_Malware_Free_System" href="./Malware.html" title="Malware">The Importance of a Malware Free System</a></li></ul>
 <p>However, when using multiple (virtual) machines for compartmentalization the harmful impact of malware might not be catastrophic. In that case other goals include prevention of root compromise to help to protect the virtualizer and avoid host compromise, and similarly to avoid hardware compromise. This is elaborated in in <a data-href="/wiki/Root#Rationale" href="./Root.html" title="Root">chapter rationale on the Safely Use Root Commands wiki page</a>.
 </p><p>A broken X Window System can block switching to a virtual console. It logically follows that malware which compromised the X Window System could similarly do that. In this case the <code>SysRq</code> + <code>r</code> combination can take away control from the X Window System. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> This is a safer procedure, otherwise a compromised X Window System could just be simulating a virtual console login prompt in order to sniff a login password to an account with root access. (<a class="external text" data-href="https://en.wikipedia.org/wiki/Login_spoofing" href="https://en.wikipedia.org/wiki/Login_spoofing" rel="noreferrer noopener" target="_blank">login spoofing in Wikipedia</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Login_spoofing" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Login_spoofing" rel="noreferrer noopener" target="_blank">[archive]</a></sup>).
-</p><p><code>SysRq</code> + <code>r</code> (un<code>r</code>aw) can be used in this case to make sure the keyboard is disconnected from the X Window System.
-</p><p>Taking steps to defeat login spoofing probably only makes sense when also following steps to <a data-href="/wiki/Root#Prevent_Malware_from_Sniffing_the_Root_Password" href="./Root.html" title="Root">Prevent Malware from Sniffing the Root Password</a>.
+</p><p><code>SysRq</code> + <code>k</code> (Secure Access Key) can be used to defeat login spoofing. It will terminate all programs on that <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a>.
+</p><p><a class="external text" data-href="https://www.kernel.org/doc/html/v4.14/admin-guide/sysrq.html#okay-so-what-can-i-use-them-for" href="https://www.kernel.org/doc/html/v4.14/admin-guide/sysrq.html" rel="noreferrer noopener" target="_blank">Quote Linux Kernel Documentation</a> <sup><a data-href="https://web.archive.org/web/https://www.kernel.org/doc/html/v4.14/admin-guide/sysrq.html#okay-so-what-can-i-use-them-for" href="https://web.archive.org/web/https://www.kernel.org/doc/html/v4.14/admin-guide/sysrq.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote><p>Sak (Secure Access Key) is useful when you want to be sure there is no trojan program running at console which could grab your password when you would try to login. It will kill all programs on given console, thus letting you make sure that the login prompt you see is actually the one from init, not some trojan program.</p></blockquote>
+<p><a class="external text" data-href="https://www.kernel.org/doc/Documentation/SAK.txt" href="https://www.kernel.org/doc/Documentation/SAK.txt" rel="noreferrer noopener" target="_blank">Quote Linux Kernel Secure Attention Key Documentation</a> <sup><a data-href="https://web.archive.org/web/https://www.kernel.org/doc/Documentation/SAK.txt" href="https://web.archive.org/web/https://www.kernel.org/doc/Documentation/SAK.txt" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
+</p>
+<blockquote><p>An operating system's Secure Attention Key is a security tool which is provided as protection against trojan password capturing programs. It is an undefeatable way of killing all programs which could be masquerading as login applications. Users need to be taught to enter this key sequence before they log in to the system.</p></blockquote>
+<p>Taking steps to defeat login spoofing probably only makes sense when also following steps to <a data-href="/wiki/Root#Prevent_Malware_from_Sniffing_the_Root_Password" href="./Root.html" title="Root">Prevent Malware from Sniffing the Root Password</a>.
 </p>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Login_spoofing&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;action=edit&amp;section=1.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/SysRq" href="./SysRq.html" title="SysRq">System Recovery using SysRq Key</a></li>
 <li><a data-href="/wiki/Root" href="./Root.html" title="Root">Safely Use Root Commands</a></li>
-<li><a data-href="/wiki/Root#Prevent_Malware_from_Sniffing_the_Root_Password" href="./Root.html" title="Root">Prevent Malware from Sniffing the Root Password</a></li></ul>
+<li><a data-href="/wiki/Root#Prevent_Malware_from_Sniffing_the_Root_Password" href="./Root.html" title="Root">Prevent Malware from Sniffing the Root Password</a></li>
+<li><a data-href="/wiki/Dev/Strong_Linux_User_Account_Isolation" href="./Dev/Strong_Linux_User_Account_Isolation.html" title="Dev/Strong Linux User Account Isolation">Strong Linux User Account Isolation</a></li></ul>
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Login_spoofing&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;action=edit&amp;section=2.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
@@ -178,7 +190,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Login_spoofing" href="https://facebook.com/sharer.php?u=./Login_spoofing">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>We are looking for help in managing our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">social media</a> accounts. Are you interested?
+<p>We are looking for <a data-href="/wiki/Contribute#Videos" href="./Contribute.html" title="Contribute">video makers</a> to help create demonstration, promotional and conceptual videos or tutorials.
 </p>
 </div>
 <p><a data-href="https://www.Whonix.org/wiki/Login_spoofing" href="https://www.Whonix.org/wiki/Login_spoofing" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Login_spoofing" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Login_spoofing" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -190,7 +202,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61116" dir="ltr" href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61116">https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61116</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61160" dir="ltr" href="https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61160">https://www.whonix.org/w/index.php?title=Login_spoofing&amp;oldid=61160</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -201,7 +213,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Login_spo
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left">
-<li id="footer-lastmod"> This page was last edited on 1 December 2020, at 14:37.</li>
+<li id="footer-lastmod"> This page was last edited on 2 December 2020, at 12:54.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -223,5 +235,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Login_spo
 </div>
 
 </body>
-<!-- Cached 20201201134011 -->
+<!-- Cached 20201202122003 -->
 </html>
