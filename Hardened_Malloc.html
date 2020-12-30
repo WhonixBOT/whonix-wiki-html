@@ -29,8 +29,8 @@
 <meta content="./Hardened_Malloc" property="og:url"/>
 <meta content="Hardened Memory Allocator for many Applications to increase Security - installation from Whonix ™ repository" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/0/06/Malloc423.jpg" property="og:image"/>
-<meta content="2020-12-20T15:56:07Z" property="article:modified_time"/>
-<meta content="2020-12-20T15:56:07Z" property="article:published_time"/>
+<meta content="2020-12-29T12:54:47Z" property="article:modified_time"/>
+<meta content="2020-12-29T12:54:47Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Hardened Malloc" property="twitter:title"/>
 <meta content="Hardened Memory Allocator for many Applications to increase Security - installation from Whonix ™ repository" property="twitter:description"/>
@@ -157,10 +157,9 @@
 </ul>
 </li>
 <li class="toclevel-2 tocsection-18"><a href="#Notes"><span class="tocnumber">5.3</span> <span class="toctext">Notes</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#VirtualBox_Crash"><span class="tocnumber">5.4</span> <span class="toctext">VirtualBox Crash</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-20"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -404,32 +403,11 @@ Open file <code>/etc/ld.so.preload</code> in an editor with root rights.
 <ul><li><a class="external free" data-href="https://bugs.debian.org/971876" href="https://bugs.debian.org/971876" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/971876</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/971876" href="https://web.archive.org/web/https://bugs.debian.org/971876" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 <ul><li>TODO: needs to be certain that <a class="external free" data-href="https://bugs.debian.org/971876" href="https://bugs.debian.org/971876" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/971876</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/971876" href="https://web.archive.org/web/https://bugs.debian.org/971876" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is fixed in newer versions of chromium</li></ul></li></ul>
 <p>does it break <a class="external free" data-href="https://packages.debian.org/buster/gsmartcontrol" href="https://packages.debian.org/buster/gsmartcontrol" rel="noreferrer noopener" target="_blank">https://packages.debian.org/buster/gsmartcontrol</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/gsmartcontrol" href="https://web.archive.org/web/https://packages.debian.org/buster/gsmartcontrol" rel="noreferrer noopener" target="_blank">[archive]</a></sup>?
-</p><p><a href="#VirtualBox_Crash">VirtualBox Crash</a> issue (assigned to Patrick)
+</p><p><a class="external text" data-href="https://www.virtualbox.org/ticket/20107" href="https://www.virtualbox.org/ticket/20107" rel="noreferrer noopener" target="_blank">VirtualBox crashes with hardened memory allocator Hardened Malloc on the host</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/ticket/20107" href="https://web.archive.org/web/https://www.virtualbox.org/ticket/20107" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=18.html" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <ul><li>glibc feature request: <a class="external text" data-href="https://sourceware.org/bugzilla/show_bug.cgi?id=26723" href="https://sourceware.org/bugzilla/show_bug.cgi?id=26723" rel="noreferrer noopener" target="_blank">LD_ETC_IGNORE - environment variable to ignore /etc/ld.so.preload configuration file on a per-application basis</a> <sup><a data-href="https://web.archive.org/web/https://sourceware.org/bugzilla/show_bug.cgi?id=26723" href="https://web.archive.org/web/https://sourceware.org/bugzilla/show_bug.cgi?id=26723" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h2><span class="mw-headline" id="VirtualBox_Crash">VirtualBox Crash</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=19.html" title="Edit section: VirtualBox Crash">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>VirtualBox VM log:
-</p>
-<pre>all OK
-no more log entries for 30 minutes while VM is working OK
-then the only new log additions are these:
-00:18:45.237389 VirtualBoxClient: detected unresponsive VBoxSVC (rc=NS_ERROR_CALL_FAILED)
-00:19:16.904964 VirtualBoxClient: detected working VBoxSVC (rc=NS_OK)
-</pre>
-<p>VBoxSVC.log
-</p>
-<pre>tail -f ~/.config/VirtualBox/VBoxSVC.log
-</pre>
-<pre>all OK
-no more log entries for 30 minutes while VM is working OK
-no new log entry after crash
-The log ends there after crash then becomes
-~/.config/VirtualBox/VBoxSVC.log.1
-</pre>
-<p>Therefore a coredump needs to be created and submitted to upstream virtualbox.org developers.
-</p>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=20.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;action=edit&amp;section=19.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/GrapheneOS/hardened_malloc" href="https://github.com/GrapheneOS/hardened_malloc" rel="noreferrer noopener" target="_blank">https://github.com/GrapheneOS/hardened_malloc</a> <sup><a data-href="https://web.archive.org/web/https://github.com/GrapheneOS/hardened_malloc" href="https://web.archive.org/web/https://github.com/GrapheneOS/hardened_malloc" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
@@ -457,6 +435,10 @@ These browsers are all based on Firefox, therefore the following applies equally
 <li><a class="external free" data-href="https://lists.torproject.org/pipermail/tor-dev/2019-August/013990.html" href="https://lists.torproject.org/pipermail/tor-dev/2019-August/013990.html" rel="noreferrer noopener" target="_blank">https://lists.torproject.org/pipermail/tor-dev/2019-August/013990.html</a> <sup><a data-href="https://web.archive.org/web/https://lists.torproject.org/pipermail/tor-dev/2019-August/013990.html" href="https://web.archive.org/web/https://lists.torproject.org/pipermail/tor-dev/2019-August/013990.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </blockquote></span>
 </li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<ul><li><a class="external free" data-href="https://www.virtualbox.org/wiki/VBoxMainLogging" href="https://www.virtualbox.org/wiki/VBoxMainLogging" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/wiki/VBoxMainLogging</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/wiki/VBoxMainLogging" href="https://web.archive.org/web/https://www.virtualbox.org/wiki/VBoxMainLogging" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://www.virtualbox.org/wiki/Core_dump" href="https://www.virtualbox.org/wiki/Core_dump" rel="noreferrer noopener" target="_blank">https://www.virtualbox.org/wiki/Core_dump</a> <sup><a data-href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Core_dump" href="https://web.archive.org/web/https://www.virtualbox.org/wiki/Core_dump" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+</span></li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -491,7 +473,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Hardened_Malloc" href="https://facebook.com/sharer.php?u=./Hardened_Malloc">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Do you wonder why Whonix ™ will always be free? Check out <a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why Whonix ™ is Freedom Software</a>.
+<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
 </p>
 </div>
 <p><a data-href="./Hardened_Malloc" href="./Hardened_Malloc" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Hardened_Malloc" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Hardened_Malloc" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -503,7 +485,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61506" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61506">https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61506</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61910" dir="ltr" href="https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61910">https://www.whonix.org/w/index.php?title=Hardened_Malloc&amp;oldid=61910</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -514,7 +496,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardened_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 20 December 2020, at 16:56.</li>
+<li id="footer-lastmod"> This page was last edited on 29 December 2020, at 13:54.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -534,5 +516,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Hardened_
 </footer>
 </div>
  </body>
-<!-- Cached 20201222142852 -->
+<!-- Cached 20201229150647 -->
 </html>
