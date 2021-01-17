@@ -29,8 +29,8 @@
 <meta content="./Documentation" property="og:url"/>
 <meta content="A Crash Course in Anonymity and Security on the Internet." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/8/85/Documentation.jpg" property="og:image"/>
-<meta content="2020-12-31T02:14:48Z" property="article:modified_time"/>
-<meta content="2020-12-31T02:14:48Z" property="article:published_time"/>
+<meta content="2021-01-17T04:45:19Z" property="article:modified_time"/>
+<meta content="2021-01-17T04:45:19Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Whonix ™ Documentation" property="twitter:title"/>
 <meta content="A Crash Course in Anonymity and Security on the Internet." property="twitter:description"/>
@@ -212,7 +212,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 <ul><li><a data-href="/wiki/Basic_Security_Guide_Introduction" href="./Basic_Security_Guide_Introduction.html" title="Basic Security Guide Introduction">Introduction</a></li>
 <li><a data-href="/wiki/AppArmor" href="./AppArmor.html" title="AppArmor">AppArmor</a></li>
 <li><a data-href="/wiki/Host_Firewall" href="./Host_Firewall.html" title="Host Firewall">Host Firewall</a></li>
-<li><a data-href="/wiki/Host_Security" href="./Host_Security.html" title="Host Security">Host Security</a></li>
+<li><a data-href="/wiki/Basic_Host_Security" href="./Basic_Host_Security.html" title="Basic Host Security">Basic Host Security</a></li>
 <li><a data-href="/wiki/Metadata" href="./Metadata.html" title="Metadata">Metadata</a></li>
 <li><a data-href="/wiki/Onionizing_Repositories" href="./Onionizing_Repositories.html" title="Onionizing Repositories">Onionizing Repositories</a></li>
 <li><a data-href="/wiki/Operating_System_Software_and_Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">Operating System Software and Updates</a>
@@ -249,7 +249,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 <li><a data-href="/wiki/Full_Disk_Encryption" href="./Full_Disk_Encryption.html" title="Full Disk Encryption">Full Disk Encryption</a>
 <ul><li><a data-href="/wiki/Cold_Boot_Attack_Defense" href="./Cold_Boot_Attack_Defense.html" title="Cold Boot Attack Defense">Cold Boot Attack Defense</a></li></ul></li>
 <li><a data-href="/wiki/Hardened_Malloc" href="./Hardened_Malloc.html" title="Hardened Malloc">Hardened Malloc</a></li>
-<li><a data-href="/wiki/General_Host_Security" href="./General_Host_Security.html" title="General Host Security">Host Security</a></li>
+<li><a data-href="/wiki/Advanced_Host_Security" href="./Advanced_Host_Security.html" title="Advanced Host Security">Advanced Host Security</a></li>
 <li>Kernels
 <ul><li><a data-href="/wiki/Kernel" href="./Kernel.html" title="Kernel">Install Newer Kernels</a></li>
 <li><a data-href="/wiki/Linux_Kernel_Runtime_Guard_LKRG" href="./Linux_Kernel_Runtime_Guard_LKRG.html" title="Linux Kernel Runtime Guard LKRG">Linux Kernel Runtime Guard (LKRG)</a></li></ul></li>
@@ -600,7 +600,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Documentation" href="https://facebook.com/sharer.php?u=./Documentation">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Interested in becoming an author for the <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> Whonix ™ News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>We are looking for <a data-href="/wiki/Contribute#Contributor" href="./Contribute.html" title="Contribute">contributors and developers</a>.
 </p>
 </div>
 <p><a data-href="./Documentation" href="./Documentation" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Documentation" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Documentation" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -612,7 +612,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=61989" dir="ltr" href="https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=61989">https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=61989</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=62222" dir="ltr" href="https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=62222">https://www.whonix.org/w/index.php?title=Documentation&amp;oldid=62222</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -623,7 +623,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Documenta
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 31 December 2020, at 03:14.</li>
+<li id="footer-lastmod"> This page was last edited on 17 January 2021, at 05:45.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -643,5 +643,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Documenta
 </footer>
 </div>
  </body>
-<!-- Cached 20210111165205 -->
+<!-- Cached 20210117044603 -->
 </html>
