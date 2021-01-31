@@ -29,8 +29,8 @@
 <meta content="./Orca" property="og:url"/>
 <meta content="Using the Orca Screen Reader in Whonix ™ Virtual Machines" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2021-01-30T06:42:28Z" property="article:modified_time"/>
-<meta content="2021-01-30T06:42:28Z" property="article:published_time"/>
+<meta content="2021-01-30T10:39:40Z" property="article:modified_time"/>
+<meta content="2021-01-30T10:39:40Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Orca Screen Reader" property="twitter:title"/>
 <meta content="Using the Orca Screen Reader in Whonix ™ Virtual Machines" property="twitter:description"/>
@@ -129,66 +129,41 @@
 </div>
 <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Start"><span class="tocnumber">2</span> <span class="toctext">Start</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Autostart"><span class="tocnumber">3</span> <span class="toctext">Autostart</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Packages"><span class="tocnumber">4</span> <span class="toctext">Packages</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Issues"><span class="tocnumber">5</span> <span class="toctext">Issues</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#First_Start"><span class="tocnumber">3</span> <span class="toctext">First Start</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Initial_Start_of_Orca"><span class="tocnumber">3.1</span> <span class="toctext">Initial Start of Orca</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#autostart_orca"><span class="tocnumber">3.2</span> <span class="toctext">autostart orca</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#complete_whonixsetup"><span class="tocnumber">3.3</span> <span class="toctext">complete whonixsetup</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Functional"><span class="tocnumber">4</span> <span class="toctext">Functional</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Limitations"><span class="tocnumber">5</span> <span class="toctext">Limitations</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Packages"><span class="tocnumber">6</span> <span class="toctext">Packages</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Issues"><span class="tocnumber">7</span> <span class="toctext">Issues</span></a></li>
 </ul>
 </div>
-<h1><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=1.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Tested just now. Got speech support working in VMs: Whonix-Gateway, Whonix-Workstation and Kicksecure.
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>This documentation has been written by a sighted developer without any blind person nearby for testing. Therefore some written advice such as about <code>sudo</code> vs <code>dsudo</code> might be wrong.
 </p>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>Install <code>orca gstreamer1.0-plugins-good libatk-adaptor libgail-common non-qubes-audio</code>.
-</p><p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
-</p><p><!-- Widget:CodeSelect start -->
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get update</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
-</div>
-</div>
-<!-- open p tag -->
-<p>
-<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
-<!-- Widget:CodeSelect end -->
-</p><p><b>2.</b> Upgrade the system.
-</p><p><!-- Widget:CodeSelect start -->
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get dist-upgrade</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
-</div>
-</div>
-<!-- open p tag -->
-<p>
-<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
-<!-- Widget:CodeSelect end -->
-</p><p><b>3.</b> Install the <code>orca gstreamer1.0-plugins-good libatk-adaptor libgail-common non-qubes-audio</code> package.
-</p><p>Using <code>apt-get</code> command line parameter <code>--no-install-recommends</code> is in most cases optional.
-</p><p><!-- Widget:CodeSelect start -->
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo apt-get install --no-install-recommends orca gstreamer1.0-plugins-good libatk-adaptor libgail-common non-qubes-audio</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install --no-install-recommends orca gstreamer1.0-plugins-good libatk-adaptor libgail-common non-qubes-audio</textarea>
-</div>
-</div>
-<!-- open p tag -->
-<p>
-<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
-<!-- Widget:CodeSelect end -->
-</p><p>The procedure of installing <code>orca gstreamer1.0-plugins-good libatk-adaptor libgail-common non-qubes-audio</code> is complete.
+<h1><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=2.html" title="Edit section: Installation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>The orca screen reader will be installed by default in Whonix ™ <code>15.0.1.5.6</code>. Not yet available for download.
 </p>
-</div>
-<h1><span class="mw-headline" id="Start">Start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=2.html" title="Edit section: Start">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p><code>Alt</code> + <code>F2</code> and type
+<h1><span class="mw-headline" id="First_Start">First Start</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=3.html" title="Edit section: First Start">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Initial_Start_of_Orca">Initial Start of Orca</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=4.html" title="Edit section: Initial Start of Orca">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The orca (or any) screenreader needs to be already functional on the host. Start Whonix ™ using the VirtualBox user interface. If the VirtualBox user interface itself is accessible has not been tested and is out of scope. It is recommended to learn the basics of using VirtualBox outside of any reference to Whonix ™. I.e using VirtualBox with operating systems other than Whonix ™. Being a blind first time user of VirtualBox and Whonix ™ at the same time might be a challenging combination.
+</p><p>Start Whonix ™ normally. Note that depending on system performance that it could take up to three minutes or so until Whonix ™ started. Usually however on fast machines it boots much faster. On a reasonable fast developer machine, booting either Whonix-Gateway ™ or Whonix-Workstation ™ took approximately 30 seconds. An issue is that there is no audio feedback when the boot process has been completed. That is an optimization problem. Whonix ™ was originally designed with privacy in mind. Most users would not want to reveal that they are using Whonix ™ or just have started any operating system through an audio notification which might be noisy depending on host audio settings.
+</p><p><b>1.</b> Start Whonix-Gateway ™
+</p><p><b>2.</b> Wait for the boot process to be completed.
+</p><p><b>3.</b> Close <a data-href="/wiki/Anon_Connection_Wizard" href="./Anon_Connection_Wizard.html" title="Anon Connection Wizard">Anon Connection Wizard</a> / <a class="external text" data-href="https://github.com/Whonix/whonixsetup" href="https://github.com/Whonix/whonixsetup" rel="noreferrer noopener" target="_blank">whonixsetup</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/whonixsetup" href="https://web.archive.org/web/https://github.com/Whonix/whonixsetup" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</p><p>This is because Anon Connection Wizard GUI (graphical user interface) and whonixsetup GUI are unfortunately not compatible with screen readers. But this is is only a small issue because Anon Connection Wizard CLI (command line interface) and whonixsetup CLI can be used on the command line and are compatible with screen readers. Anon Connection Wizard / whonixsetup will be completed in a later step. Alternatively if the user has access to a sighted person, a sighted person could read these interfaces and click according to the user's instructions.
+</p><p>To close Anon Connection Wizard / whonixsetup, press the following keys.
+</p><p><code>Alt</code> + <code>F4</code>
+</p><p><b>4.</b> Start the Xfce application finder.
+</p><p>Press the following keys.
+</p><p><code>Alt</code> + <code>F2</code>
+</p><p><b>5.</b> Type on the keyboard.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -202,17 +177,70 @@
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>Press <code>Enter</code> key.
+</p><p><b>6.</b> Press <code>Enter</code> key.
+</p><p><b>7.</b> Done. Orca has been started.
+</p><p>To simplify this for the next boot, follow these instructions to enable autostart of orca.
 </p>
-<h1><span class="mw-headline" id="Autostart">Autostart</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=3.html" title="Edit section: Autostart">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>To autostart orca after reboot the following command.
+<h2><span class="mw-headline" id="autostart_orca">autostart orca</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=5.html" title="Edit section: autostart orca">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>1.</b> Start Xfce application finder.
+</p><p><code>Alt</code> + <code>F2</code>
+</p><p><b>2.</b> Type on the keyboard.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo sed -i '/OnlyShowIn/d' /etc/xdg/autostart/orca-autostart.desktop</pre>
+<pre>xfce4-terminal</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo sed -i '/OnlyShowIn/d' /etc/xdg/autostart/orca-autostart.desktop</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">xfce4-terminal</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><b>3.</b> Run the following command.
+</p><p>That is type the following words and press enter.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>dsudo orca-enable-autostart</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">dsudo orca-enable-autostart</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Above command uses <code>dsudo</code> instead of <code>sudo</code>. Not changing Whonix ™ default password, i.e. keeping Whonix ™ default password <code>changeme</code> as is and using <code>dsudo</code> instead of <code>sudo</code> might be simpler for blind users than using <code>sudo</code> and typing the password. Specifically during the initial setup. See also chapter <a data-href="/wiki/Root#dsudo_-_default_password_sudo" href="./Root.html" title="Root">dsudo</a>. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p><b>4.</b> Done.
+</p><p>After reboot, orca should be automatically starting. Once the boot process has been completed and orca has been started there will be audio feedback by orca.
+</p>
+<h2><span class="mw-headline" id="complete_whonixsetup">complete whonixsetup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=6.html" title="Edit section: complete whonixsetup">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>TODO: document
+</p><p>Only on both Whonix-Gateway ™ and Whonix-Workstation ™.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>dsudo whonixsetup-accept</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">dsudo whonixsetup-accept</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Only on Whonix-Gateway ™.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>dsudo whonixsetup-connect-public-tor</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">dsudo whonixsetup-connect-public-tor</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -220,7 +248,17 @@
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p>
-<h1><span class="mw-headline" id="Packages">Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=4.html" title="Edit section: Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Functional">Functional</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=7.html" title="Edit section: Functional">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Screen reader is at least functional in:
+</p>
+<ul><li><a data-href="/wiki/Tor_Browser" href="./Tor_Browser.html" title="Tor Browser">Tor Browser</a></li>
+<li>xfce4-terminal</li></ul>
+<h1><span class="mw-headline" id="Limitations">Limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=8.html" title="Edit section: Limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>whonixsetup GUI does not work. Use whonixsetup CLI instead as <a href="#complete_whonixsetup">documented above</a>.</li>
+<li><a data-href="/wiki/Anon_Connection_Wizard" href="./Anon_Connection_Wizard.html" title="Anon Connection Wizard">Anon Connection Wizard</a> does not work. That should not be an issue for public Tor network users. Users that require the use of bridges could configure these on the command line as documented on the <a data-href="/wiki/Bridges" href="./Bridges.html" title="Bridges">Bridges</a> page.</li>
+<li>systemcheck GUI (previously called whonixcheck) does not work. Use systemcheck CLI on the command line. Start <code>systemcheck</code> on the command line instead. See also page <a data-href="/wiki/Whonixcheck" href="./Whonixcheck.html" title="Whonixcheck">whonixcheck</a>.</li>
+<li>Whonix Repository Wizard (GUI) does not work. If needed, use <code>whonix_repository</code> CLI instead as documented on page <a data-href="/wiki/Project-APT-Repository" href="./Project-APT-Repository.html" title="Project-APT-Repository">Project-APT-Repository</a> in chapter Command Line Interface.</li></ul>
+<h1><span class="mw-headline" id="Packages">Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=9.html" title="Edit section: Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>libatk-adaptor libgail-common - required for Xfce settings menu screen reader support</li>
 <li>non-qubes-audio - required to add audio support to Whonix-Gateway ™</li>
 <li>gstreamer1.0-plugins-good - <a class="external text" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931687" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931687" rel="noreferrer noopener" target="_blank">missing dependency in Debian buster</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931687" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=931687" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -228,7 +266,7 @@
 <li>python3-gst-1.0 - <code>Recommends:</code> by <code>orca</code></li>
 <li>speech-dispatcher-espeak-ng - without it <code>spd-say test</code> fails</li>
 <li>sound-icons - might be optional</li></ul>
-<h1><span class="mw-headline" id="Issues">Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=5.html" title="Edit section: Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Issues">Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Orca&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Orca&amp;action=edit&amp;section=10.html" title="Edit section: Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>issues on Kicksecure host: <a class="external free" data-href="https://gitlab.gnome.org/GNOME/orca/-/issues/176" href="https://gitlab.gnome.org/GNOME/orca/-/issues/176" rel="noreferrer noopener" target="_blank">https://gitlab.gnome.org/GNOME/orca/-/issues/176</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.gnome.org/GNOME/orca/-/issues/176" href="https://web.archive.org/web/https://gitlab.gnome.org/GNOME/orca/-/issues/176" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -263,7 +301,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://facebook.com/sharer.php?u=./Orca" href="https://facebook.com/sharer.php?u=./Orca">Facebook</a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p><a data-href="https://mailman.whonix.org/postorius/lists/whonix-newsletter.mailman.whonix.org/" href="https://mailman.whonix.org/postorius/lists/whonix-newsletter.mailman.whonix.org/" rel="noreferrer noopener" target="_blank"><img alt="Iconfinder Apple Mail 2697658.png" data-src="/w/images/thumb/c/cc/Iconfinder_Apple_Mail_2697658.png/25px-Iconfinder_Apple_Mail_2697658.png" data-srcset="/w/images/thumb/c/cc/Iconfinder_Apple_Mail_2697658.png/38px-Iconfinder_Apple_Mail_2697658.png 1.5x, /w/images/thumb/c/cc/Iconfinder_Apple_Mail_2697658.png/50px-Iconfinder_Apple_Mail_2697658.png 2x" decoding="async" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAADSUlEQVRIiZ2W32tcRRTHP2dm9t40UGxDTYldQhBFYpdNRBb0oYivQkGKtD4pSgPiiy8++9p/wQdbHwRNShExvimIVMGHttJStrQxP5omaUuMNaWt65KZ04e5d/d2s9tsPDDM7Jkz3++cX3NXAENbQjabLutOXS8JnftSVDz31h/ODoy8DeZNkFFgANTsAApIAB6BrkA475sb59Z+ONzcRlI+casssmcWMVVBAEUBQVCUXJdLrsl/FW3RUFf97+jKzKGlnISRE1cTNzByEUzl6TfejYT6VuP2K7dnKk0HYPcOH8fYHQk0v1VfNvZlWxo+Bkw7wJDaI5idjv8PCfYN4KwDAqkpI3nMc7I8/r3IO227rNWMAiHzRAajPm5WRiwvPGsibw/4Qg1kS2VxQ7my6gsbMgDgALSkJg+XMfBOzfHamGV8uF25IoJqAblD5v5SLq96Pp0NhKybNMTyjw2WCpoNEuH9WolfbwZubBRK9ikE838rF9c8x6oOkgJWKgYIsdESgVQgJc7AVM3x44Jn/p4iIj3H0qby2y3Pu1UXGVNBcpxE8uAQwROiMmnf8OOa4/s/PYv/BFR121i+H/hpyfPehGsfSkBznDSqYrhankjLE4hl8EnNcerCFssPngzX6kM4dWGLk0WCzJPWiJ4EA7Ri2IplQc7Oe6aqjtPXPNc3I9HcpvJ5fYuTFceZ6/4J+25Y8RqJIFZiKRY4phcD4/sNE0PC5AHHlzc8X80r5UHhs1cdJQMlZzgz5/nwRUsLK3NafZEkBSztVhGYXg6M7xMmh2LaSgJTL1mko3mqQ4IKnF4IfPC8iVh5ZKOTJm/GoPmzIvDNSqDyjDC5b4cXPpOJ/QaVwBdLIeZBM54goeWJpiZIRuKBmbvKlYfw9R3fC7erXHug+KTwAYgpb+WkgW1vXmrApUa35uvjHS4WjpdHBRKWsf3cdZcvtWclJwm48LMm7qPdIfQhzXCe7BXG31v7zh4avdrPh6tvCaEeNtbPQcH/g5fvj8ngnlmMqWwPS7dc9MqPQgh1/bdx9G517wIdVmb495vOHDh4HGuPIFJGGCQo2T+WHiIBIwHVBsoy3v/i1+98u/76WLNoZQqjqOu27tR1nu02m8eJFTwJj6FYdAAAAABJRU5ErkJggg==" width="25"/></a> Subscribe to <a data-href="https://mailman.whonix.org/postorius/lists/whonix-newsletter.mailman.whonix.org/" href="https://mailman.whonix.org/postorius/lists/whonix-newsletter.mailman.whonix.org/" rel="noreferrer" target="_blank"> Whonix ™ Newsletter</a>.
+<p>Please <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">contribute</a> by helping to <a data-href="/wiki/Contribute#Answer_Questions" href="./Contribute.html" title="Contribute">answer Whonix ™ questions</a>.
 </p>
 </div>
 <p><a data-href="./Orca" href="./Orca" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Orca" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Orca" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -274,8 +312,13 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">Whonix ™ is produced independently from the Tor<a class="external text" data-href="https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">®</a> <sup><a data-href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" href="https://web.archive.org/web/https://2019.www.torproject.org/docs/trademark-faq.html.en" rel="noreferrer noopener" target="_blank">[archive]</a></sup> anonymity software and carries no guarantee from <a class="external text" data-href="https://www.torproject.org" href="https://www.torproject.org" rel="noreferrer noopener" target="_blank">The Tor Project</a> <sup><a data-href="https://web.archive.org/web/https://www.torproject.org" href="https://web.archive.org/web/https://www.torproject.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup> about quality, suitability or anything else.
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
-</p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62376" dir="ltr" href="https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62376">https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62376</a>"</div>
+</p>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<a class="external text" data-href="https://gitlab.com/whonix/usability-misc/blob/master/usr/sbin/orca-enable-autostart" href="https://gitlab.com/whonix/usability-misc/blob/master/usr/sbin/orca-enable-autostart" rel="noreferrer noopener" target="_blank"><code>orca-enable-autostart</code></a> <sup><a data-href="https://web.archive.org/web/https://gitlab.com/whonix/usability-misc/blob/master/usr/sbin/orca-enable-autostart" href="https://web.archive.org/web/https://gitlab.com/whonix/usability-misc/blob/master/usr/sbin/orca-enable-autostart" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+</ol></div></div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62399" dir="ltr" href="https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62399">https://www.whonix.org/w/index.php?title=Orca&amp;oldid=62399</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -286,7 +329,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Orca&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 30 January 2021, at 07:42.</li>
+<li id="footer-lastmod"> This page was last edited on 30 January 2021, at 11:39.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -306,4 +349,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Orca&amp;
 </footer>
 </div>
  </body>
+<!-- Cached 20210130234723 -->
 </html>
