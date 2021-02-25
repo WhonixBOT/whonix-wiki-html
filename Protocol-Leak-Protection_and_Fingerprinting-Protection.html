@@ -29,8 +29,8 @@
 <meta content="./Protocol-Leak-Protection_and_Fingerprinting-Protection" property="og:url"/>
 <meta content="Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/7/76/Leakprotection-840835.jpg" property="og:image"/>
-<meta content="2020-12-26T10:01:00Z" property="article:modified_time"/>
-<meta content="2020-12-26T10:01:00Z" property="article:published_time"/>
+<meta content="2021-02-24T22:39:30Z" property="article:modified_time"/>
+<meta content="2021-02-24T22:39:30Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Protocol Leak Protection and Fingerprinting Protection‎" property="twitter:title"/>
 <meta content="Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines." property="twitter:description"/>
@@ -138,30 +138,31 @@
 <li class="toclevel-2 tocsection-8"><a href="#Metadata"><span class="tocnumber">3.3</span> <span class="toctext">Metadata</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-9"><a href="#CPU_Output_Tests"><span class="tocnumber">4</span> <span class="toctext">CPU Output Tests</span></a>
+<li class="toclevel-1 tocsection-9"><a href="#Identifiers_Design_Goals"><span class="tocnumber">4</span> <span class="toctext">Identifiers Design Goals</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#CPU_Output_Tests"><span class="tocnumber">5</span> <span class="toctext">CPU Output Tests</span></a>
 <ul>
-<li class="toclevel-2 tocsection-10"><a href="#cpu_test_1:-_.28before_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall.29"><span class="tocnumber">4.1</span> <span class="toctext">cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#cpu_test_2_.28after_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall_.2B_shutdown_the_WS.29"><span class="tocnumber">4.2</span> <span class="toctext">cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)</span></a></li>
-<li class="toclevel-2 tocsection-12"><a href="#KVM_Whonix-Workstation_.E2.84.A2_12_.2Fproc.2Fcpuinfo"><span class="tocnumber">4.3</span> <span class="toctext">KVM Whonix-Workstation ™ 12 /proc/cpuinfo</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#KVM_Whonix-Workstation_.E2.84.A2_13_.2Fproc.2Fcpuinfo"><span class="tocnumber">4.4</span> <span class="toctext">KVM Whonix-Workstation ™ 13 /proc/cpuinfo</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#from_whonix_12_WS_-_qubes_Q3_.22cat_.2Fproc.2Fcpuinfo.22_.28.2A.2Adifferent_PC.2A.2A.29"><span class="tocnumber">4.5</span> <span class="toctext">from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)</span></a></li>
-<li class="toclevel-2 tocsection-15"><a href="#KVM_vs_Qubes"><span class="tocnumber">4.6</span> <span class="toctext">KVM vs Qubes</span></a>
+<li class="toclevel-2 tocsection-11"><a href="#cpu_test_1:-_.28before_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall.29"><span class="tocnumber">5.1</span> <span class="toctext">cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#cpu_test_2_.28after_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall_.2B_shutdown_the_WS.29"><span class="tocnumber">5.2</span> <span class="toctext">cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#KVM_Whonix-Workstation_.E2.84.A2_12_.2Fproc.2Fcpuinfo"><span class="tocnumber">5.3</span> <span class="toctext">KVM Whonix-Workstation ™ 12 /proc/cpuinfo</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#KVM_Whonix-Workstation_.E2.84.A2_13_.2Fproc.2Fcpuinfo"><span class="tocnumber">5.4</span> <span class="toctext">KVM Whonix-Workstation ™ 13 /proc/cpuinfo</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#from_whonix_12_WS_-_qubes_Q3_.22cat_.2Fproc.2Fcpuinfo.22_.28.2A.2Adifferent_PC.2A.2A.29"><span class="tocnumber">5.5</span> <span class="toctext">from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#KVM_vs_Qubes"><span class="tocnumber">5.6</span> <span class="toctext">KVM vs Qubes</span></a>
 <ul>
-<li class="toclevel-3 tocsection-16"><a href="#KVM"><span class="tocnumber">4.6.1</span> <span class="toctext">KVM</span></a></li>
-<li class="toclevel-3 tocsection-17"><a href="#Qubes"><span class="tocnumber">4.6.2</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#KVM"><span class="tocnumber">5.6.1</span> <span class="toctext">KVM</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Qubes"><span class="tocnumber">5.6.2</span> <span class="toctext">Qubes</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-18"><a href="#get-edid_output"><span class="tocnumber">5</span> <span class="toctext">get-edid output</span></a>
+<li class="toclevel-1 tocsection-19"><a href="#get-edid_output"><span class="tocnumber">6</span> <span class="toctext">get-edid output</span></a>
 <ul>
-<li class="toclevel-2 tocsection-19"><a href="#EDID"><span class="tocnumber">5.1</span> <span class="toctext">EDID</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Qubes_2"><span class="tocnumber">5.2</span> <span class="toctext">Qubes</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#VirtualBox"><span class="tocnumber">5.3</span> <span class="toctext">VirtualBox</span></a></li>
-<li class="toclevel-2 tocsection-22"><a href="#KVM_2"><span class="tocnumber">5.4</span> <span class="toctext">KVM</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#EDID"><span class="tocnumber">6.1</span> <span class="toctext">EDID</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Qubes_2"><span class="tocnumber">6.2</span> <span class="toctext">Qubes</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#VirtualBox"><span class="tocnumber">6.3</span> <span class="toctext">VirtualBox</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#KVM_2"><span class="tocnumber">6.4</span> <span class="toctext">KVM</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-23"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Footnotes"><span class="tocnumber">7</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -416,10 +417,25 @@
 <h2><span class="mw-headline" id="Metadata">Metadata</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=8.html" title="Edit section: Metadata">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>See <a data-href="/wiki/Metadata" href="./Metadata.html" title="Metadata">Metadata</a>.
 </p>
-<h1><span class="mw-headline" id="CPU_Output_Tests">CPU Output Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=9.html" title="Edit section: CPU Output Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Identifiers_Design_Goals">Identifiers Design Goals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=9.html" title="Edit section: Identifiers Design Goals">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>(In response to <a class="external text" data-href="https://www.reddit.com/r/Whonix/comments/lrk2v0/some_linux_systems_including_whonix_have_a_unique/" href="https://www.reddit.com/r/Whonix/comments/lrk2v0/some_linux_systems_including_whonix_have_a_unique/" rel="noreferrer noopener" target="_blank">Some Linux systems (including Whonix) have a unique identifier called machine-id that doesn't change. Here is how to change it.</a> <sup><a data-href="https://web.archive.org/web/https://www.reddit.com/r/Whonix/comments/lrk2v0/some_linux_systems_including_whonix_have_a_unique/" href="https://web.archive.org/web/https://www.reddit.com/r/Whonix/comments/lrk2v0/some_linux_systems_including_whonix_have_a_unique/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
+</p><p>Should identifiers such as <code>/etc/machine-id</code>:
+</p>
+<ul><li><b>A)</b> be shared among all Whonix ™ users all the time, OR</li>
+<li><b>B)</b> be unique per user per boot?</li></ul>
+<p>Whonix ™ design, at time of writing, it is A). <sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup> It may be possible that arguments for either option could be made. However, upon consideration it seems clear that A) is clearly better.
+</p><p>The threat model is here that software running inside Whonix-Workstation ™ might read machine id and send it to remote servers which would then use it to fingerprint the user. That could be considered privacy invasive software which should be avoided or even malicious software.
+</p><p>A) leaks "it is a Whonix ™ user". But the fact that "it is a Whonix ™ user" is being leaked is realistically unavoidable anyhow. For details, why that is, refer to the <a data-href="/wiki/VM_Fingerprinting" href="./VM_Fingerprinting.html" title="VM Fingerprinting">VM Fingerprinting</a> wiki page. This is a general issue and unspecific to Whonix ™. If an application or malware intents to track users, such applications in most cases could generate their own unique ID for tracking purposes. Therefore taming identifiers such as <code>/etc/machine-id</code> does not help much.
+</p><p>The approach of Tor and the Tor Browser Bundle is also similar to A). Tor and Tor Browser do not attempt to create a fresh, random pseudonym per session. Rather, Tor and Tor Browser attempt to make all users look the same. The Tor Project coined this <code>Anonymity Loves Company</code> (good web search term). Whonix ™ attempts to be an extension of Tor. Therefore follows similar design principles.
+</p><p>B) Would not leak "it is a Whonix ™ user" but then attempting to hide that is realistically impossible anyhow as per <a data-href="/wiki/VM_Fingerprinting" href="./VM_Fingerprinting.html" title="VM Fingerprinting">VM Fingerprinting</a>.
+</p><p>There is also an optimization conflict of perfect fingerprinting resistance against locally running malware versus security hardening settings. Security hardening of the system unfortunately leaks the fact (fingerprintable) that the system has been hardened. Once cannot have both, perfect fingerprinting resistance and security hardening at the same time. Since perfect local fingerprinting resistance cannot realistically be established, Whonix ™ will choose security hardening whenever there is such a conflict.
+</p><p>When not using VMs: locally running privacy invasive / malicious software has even more possibilities of fingerprinting users. Direct access to hardware identifiers.
+</p><p>Related wiki page on identifiers: This wiki page from the top, <a class="mw-selflink selflink">Protocol Leak Protection and Fingerprinting Protection‎</a>.
+</p>
+<h1><span class="mw-headline" id="CPU_Output_Tests">CPU Output Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=10.html" title="Edit section: CPU Output Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>TNT_BOM_BOM generated <code>/proc/cpuinfo</code> output which was posted to the Whonix ™ <a class="external text" data-href="https://forums.whonix.org/t/guest-systems-sees-cpu-of-the-host/1413/17" href="https://forums.whonix.org/t/guest-systems-sees-cpu-of-the-host/1413/17" rel="noreferrer noopener" target="_blank">forums</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/guest-systems-sees-cpu-of-the-host/1413/17" href="https://web.archive.org/web/https://forums.whonix.org/t/guest-systems-sees-cpu-of-the-host/1413/17" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and copied here.
 </p>
-<h2><span id="cpu_test_1:-_(before_VBoxManage_modifyvm_Whonix-Workstation_™_--cpuidremoveall)"></span><span class="mw-headline" id="cpu_test_1:-_.28before_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall.29">cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=10.html" title="Edit section: cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="cpu_test_1:-_(before_VBoxManage_modifyvm_Whonix-Workstation_™_--cpuidremoveall)"></span><span class="mw-headline" id="cpu_test_1:-_.28before_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall.29">cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=11.html" title="Edit section: cpu test 1:- (before VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>&gt;  
 processor       : 0
 vendor_id       : GenuineIntel
@@ -450,7 +466,7 @@ cache_alignment : 64
 address sizes   : 36 bits physical, 48 bits virtual
 power management:
 </pre>
-<h2><span id="cpu_test_2_(after_VBoxManage_modifyvm_Whonix-Workstation_™_--cpuidremoveall_+_shutdown_the_WS)"></span><span class="mw-headline" id="cpu_test_2_.28after_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall_.2B_shutdown_the_WS.29">cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=11.html" title="Edit section: cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="cpu_test_2_(after_VBoxManage_modifyvm_Whonix-Workstation_™_--cpuidremoveall_+_shutdown_the_WS)"></span><span class="mw-headline" id="cpu_test_2_.28after_VBoxManage_modifyvm_Whonix-Workstation_.E2.84.A2_--cpuidremoveall_.2B_shutdown_the_WS.29">cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12.html" title="Edit section: cpu test 2 (after VBoxManage modifyvm Whonix-Workstation ™ --cpuidremoveall + shutdown the WS)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>&gt;  
 processor       : 0
 vendor_id       : GenuineIntel
@@ -481,7 +497,7 @@ cache_alignment : 64
 address sizes   : 36 bits physical, 48 bits virtual
 power management:
 </pre>
-<h2><span id="KVM_Whonix-Workstation_™_12_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_12_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 12 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12.html" title="Edit section: KVM Whonix-Workstation ™ 12 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="KVM_Whonix-Workstation_™_12_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_12_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 12 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13.html" title="Edit section: KVM Whonix-Workstation ™ 12 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>&gt; processor       : 0
 vendor_id       : GenuineIntel
 cpu family      : 6
@@ -540,7 +556,7 @@ cache_alignment : 64
 address sizes   : 40 bits physical, 48 bits virtual
 power management:
 </pre>
-<h2><span id="KVM_Whonix-Workstation_™_13_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_13_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 13 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13.html" title="Edit section: KVM Whonix-Workstation ™ 13 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="KVM_Whonix-Workstation_™_13_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_13_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 13 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14.html" title="Edit section: KVM Whonix-Workstation ™ 13 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>&gt; processor : 0
 vendor_id : GenuineIntel
 cpu family : 6
@@ -597,7 +613,7 @@ cache_alignment : 32
 address sizes : 40 bits physical, 48 bits virtual
 power management:
 </pre>
-<h2><span id='from_whonix_12_WS_-_qubes_Q3_"cat_/proc/cpuinfo"_(**different_PC**)'></span><span class="mw-headline" id="from_whonix_12_WS_-_qubes_Q3_.22cat_.2Fproc.2Fcpuinfo.22_.28.2A.2Adifferent_PC.2A.2A.29">from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14.html" title='Edit section: from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)'>edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id='from_whonix_12_WS_-_qubes_Q3_"cat_/proc/cpuinfo"_(**different_PC**)'></span><span class="mw-headline" id="from_whonix_12_WS_-_qubes_Q3_.22cat_.2Fproc.2Fcpuinfo.22_.28.2A.2Adifferent_PC.2A.2A.29">from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15.html" title='Edit section: from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)'>edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>&gt; processor    : 0
 vendor_id    : GenuineIntel
 cpu family    : 6
@@ -814,8 +830,8 @@ cache_alignment    : 64
 address sizes    : 39 bits physical, 48 bits virtual
 power management:
 </pre>
-<h2><span class="mw-headline" id="KVM_vs_Qubes">KVM vs Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15.html" title="Edit section: KVM vs Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<h3><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h2><span class="mw-headline" id="KVM_vs_Qubes">KVM vs Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16.html" title="Edit section: KVM vs Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <pre>processor       : 0
 vendor_id       : GenuineIntel
 cpu family      : 6
@@ -823,7 +839,7 @@ model           : 6
 model name      : QEMU Virtual CPU version 2.1.2
 flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
 </pre>
-<h3><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <pre>processor    : 0
 vendor_id    : GenuineIntel
 cpu family   : 6
@@ -831,8 +847,8 @@ model        : 60
 model name   : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
 flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
 </pre>
-<h1><span class="mw-headline" id="get-edid_output">get-edid output</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18.html" title="Edit section: get-edid output">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="EDID">EDID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19.html" title="Edit section: EDID">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="get-edid_output">get-edid output</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19.html" title="Edit section: get-edid output">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="EDID">EDID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20.html" title="Edit section: EDID">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -860,7 +876,7 @@ flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p>
-<h2><span class="mw-headline" id="Qubes_2">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Qubes_2">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=21.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>This is read-edid version 3.0.1. Prepare for some fun.
 Attempting to use i2c interface
 Looks like no busses have an EDID. Sorry!
@@ -898,7 +914,7 @@ I'm sorry nothing was successful. Maybe try some other arguments
 if you played with them, or send an email to Matthew Kern &lt;pyrophobicman@gmail.com&gt;.
 1
 </pre>
-<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=21.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=22.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>get-edid: get-edid version 2.0.0
 
         Performing real mode VBE call
@@ -931,7 +947,7 @@ The EDID data should not be trusted as the VBE call failed
 Error: output block unchanged
 1
 </pre>
-<h2><span class="mw-headline" id="KVM_2">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=22.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="KVM_2">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=23.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <pre>get-edid: get-edid version 2.0.0                                                                                                               
                                                                                                                                                
         Performing real mode VBE call                                                                                                          
@@ -967,7 +983,7 @@ The EDID data should not be trusted as the VBE call failed
 Error: output block unchanged
 1
 </pre>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=23.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=24.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-one-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-one_1-0">1.0</a></sup> <sup><a href="#cite_ref-one_1-1">1.1</a></sup></span> <span class="reference-text">
@@ -1179,6 +1195,9 @@ sudo hdparm -i /dev/vda
 </span></li>
 <li id="cite_note-42"><span class="mw-cite-backlink"><a href="#cite_ref-42">↑</a></span> <span class="reference-text">See: <a href="#KVM">KVM EDID</a>.</span>
 </li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><a href="#cite_ref-43">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://github.com/Whonix/dist-base-files" href="https://github.com/Whonix/dist-base-files" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/dist-base-files</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/dist-base-files" href="https://web.archive.org/web/https://github.com/Whonix/dist-base-files" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -1213,7 +1232,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://t.me/share/url?url=./Protocol-Leak-Protection_and_Fingerprinting-Protection" href="https://t.me/share/url?url=./Protocol-Leak-Protection_and_Fingerprinting-Protection" rel="noreferrer noopener" target="_blank"><img alt="Telegram-share.png" data-src="/w/images/thumb/5/5a/Telegram-share.png/55px-Telegram-share.png" data-srcset="/w/images/thumb/5/5a/Telegram-share.png/83px-Telegram-share.png 1.5x, /w/images/thumb/5/5a/Telegram-share.png/110px-Telegram-share.png 2x" decoding="async" height="20" src="data:image/png;base64,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" width="55"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Interested in becoming an author for the <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> Whonix ™ News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>Please <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">contribute</a> by helping to <a data-href="/wiki/Contribute#Answer_Questions" href="./Contribute.html" title="Contribute">answer Whonix ™ questions</a>.
 </p>
 </div>
 <p><a data-href="./Protocol-Leak-Protection_and_Fingerprinting-Protection" href="./Protocol-Leak-Protection_and_Fingerprinting-Protection" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protocol-Leak-Protection_and_Fingerprinting-Protection" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protocol-Leak-Protection_and_Fingerprinting-Protection" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -1225,7 +1244,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=61570" dir="ltr" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=61570">https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=61570</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=62825" dir="ltr" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=62825">https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;oldid=62825</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Design" href="./Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -1236,7 +1255,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Protocol-
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 26 December 2020, at 11:01.</li>
+<li id="footer-lastmod"> This page was last edited on 24 February 2021, at 23:39.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -1256,5 +1275,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Protocol-
 </footer>
 </div>
  </body>
-<!-- Cached 20210221143407 -->
+<!-- Cached 20210224224031 -->
 </html>

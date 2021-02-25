@@ -29,8 +29,8 @@
 <meta content="./Root" property="og:url"/>
 <meta content="Tips on using sudo / root (privileged) commands safely" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/e/e2/Root123123.jpg" property="og:image"/>
-<meta content="2021-02-16T08:53:09Z" property="article:modified_time"/>
-<meta content="2021-02-16T08:53:09Z" property="article:published_time"/>
+<meta content="2021-02-24T08:38:33Z" property="article:modified_time"/>
+<meta content="2021-02-24T08:38:33Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Safely Use Root Commands" property="twitter:title"/>
 <meta content="Tips on using sudo / root (privileged) commands safely" property="twitter:description"/>
@@ -129,34 +129,35 @@
 <li class="toclevel-1 tocsection-1"><a href="#Rationale"><span class="tocnumber">1</span> <span class="toctext">Rationale</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Default_Passwords"><span class="tocnumber">2</span> <span class="toctext">Default Passwords</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#General_Security_Advice"><span class="tocnumber">3</span> <span class="toctext">General Security Advice</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Graphical_Applications_with_Root_Rights"><span class="tocnumber">4</span> <span class="toctext">Graphical Applications with Root Rights</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Root_Account"><span class="tocnumber">5</span> <span class="toctext">Root Account</span></a>
+<li class="toclevel-1 tocsection-4"><a href="#Inappropriate_Use_of_Root_Rights"><span class="tocnumber">4</span> <span class="toctext">Inappropriate Use of Root Rights</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Graphical_Applications_with_Root_Rights"><span class="tocnumber">5</span> <span class="toctext">Graphical Applications with Root Rights</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Root_Account"><span class="tocnumber">6</span> <span class="toctext">Root Account</span></a>
 <ul>
-<li class="toclevel-2 tocsection-6"><a href="#Enable_Root_Account"><span class="tocnumber">5.1</span> <span class="toctext">Enable Root Account</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Disable_Root_Account"><span class="tocnumber">5.2</span> <span class="toctext">Disable Root Account</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Enable_Root_Account"><span class="tocnumber">6.1</span> <span class="toctext">Enable Root Account</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Disable_Root_Account"><span class="tocnumber">6.2</span> <span class="toctext">Disable Root Account</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-8"><a href="#Unlock_User_Account:_Excessive_Wrong_Password_Entry_Attempts"><span class="tocnumber">6</span> <span class="toctext">Unlock User Account: Excessive Wrong Password Entry Attempts</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Console_Unlock"><span class="tocnumber">7</span> <span class="toctext">Console Unlock</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Advanced_Users"><span class="tocnumber">8</span> <span class="toctext">Advanced Users</span></a>
+<li class="toclevel-1 tocsection-9"><a href="#Unlock_User_Account:_Excessive_Wrong_Password_Entry_Attempts"><span class="tocnumber">7</span> <span class="toctext">Unlock User Account: Excessive Wrong Password Entry Attempts</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Console_Unlock"><span class="tocnumber">8</span> <span class="toctext">Console Unlock</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Advanced_Users"><span class="tocnumber">9</span> <span class="toctext">Advanced Users</span></a>
 <ul>
-<li class="toclevel-2 tocsection-11"><a href="#Prevent_Malware_from_Sniffing_the_Root_Password"><span class="tocnumber">8.1</span> <span class="toctext">Prevent Malware from Sniffing the Root Password</span></a>
+<li class="toclevel-2 tocsection-12"><a href="#Prevent_Malware_from_Sniffing_the_Root_Password"><span class="tocnumber">9.1</span> <span class="toctext">Prevent Malware from Sniffing the Root Password</span></a>
 <ul>
-<li class="toclevel-3 tocsection-12"><a href="#Non-GUI_Environment_Method"><span class="tocnumber">8.1.1</span> <span class="toctext">Non-GUI Environment Method</span></a></li>
-<li class="toclevel-3 tocsection-13"><a href="#Logout_Method"><span class="tocnumber">8.1.2</span> <span class="toctext">Logout Method</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Non-GUI_Environment_Method"><span class="tocnumber">9.1.1</span> <span class="toctext">Non-GUI Environment Method</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Logout_Method"><span class="tocnumber">9.1.2</span> <span class="toctext">Logout Method</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-14"><a href="#Substitute_User_.28su.29_Command"><span class="tocnumber">8.2</span> <span class="toctext">Substitute User (su) Command</span></a></li>
-<li class="toclevel-2 tocsection-15"><a href="#Root_Login"><span class="tocnumber">8.3</span> <span class="toctext">Root Login</span></a></li>
-<li class="toclevel-2 tocsection-16"><a href="#Recovery_Mode"><span class="tocnumber">8.4</span> <span class="toctext">Recovery Mode</span></a></li>
-<li class="toclevel-2 tocsection-17"><a href="#Qubes_Root_Console"><span class="tocnumber">8.5</span> <span class="toctext">Qubes Root Console</span></a></li>
-<li class="toclevel-2 tocsection-18"><a href="#Passwordless_Recovery_Mode_Security_Discussion"><span class="tocnumber">8.6</span> <span class="toctext">Passwordless Recovery Mode Security Discussion</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#dsudo_-_default_password_sudo"><span class="tocnumber">8.7</span> <span class="toctext">dsudo - default password sudo</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Substitute_User_.28su.29_Command"><span class="tocnumber">9.2</span> <span class="toctext">Substitute User (su) Command</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Root_Login"><span class="tocnumber">9.3</span> <span class="toctext">Root Login</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Recovery_Mode"><span class="tocnumber">9.4</span> <span class="toctext">Recovery Mode</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Qubes_Root_Console"><span class="tocnumber">9.5</span> <span class="toctext">Qubes Root Console</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Passwordless_Recovery_Mode_Security_Discussion"><span class="tocnumber">9.6</span> <span class="toctext">Passwordless Recovery Mode Security Discussion</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#dsudo_-_default_password_sudo"><span class="tocnumber">9.7</span> <span class="toctext">dsudo - default password sudo</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-20"><a href="#See_Also"><span class="tocnumber">9</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-21"><a href="#Development"><span class="tocnumber">10</span> <span class="toctext">Development</span></a></li>
-<li class="toclevel-1 tocsection-22"><a href="#Footnotes"><span class="tocnumber">11</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#See_Also"><span class="tocnumber">10</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Development"><span class="tocnumber">11</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Footnotes"><span class="tocnumber">12</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Rationale">Rationale</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=1.html" title="Edit section: Rationale">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -194,12 +195,25 @@
 </p>
 <ul><li>Do not login as root.</li>
 <li>Do not run <code>sudo su</code>.</li></ul>
-<h1><span class="mw-headline" id="Graphical_Applications_with_Root_Rights">Graphical Applications with Root Rights</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=4.html" title="Edit section: Graphical Applications with Root Rights">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Inappropriate_Use_of_Root_Rights">Inappropriate Use of Root Rights</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=4.html" title="Edit section: Inappropriate Use of Root Rights">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Do not think of root as a shortcut to fix issues.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> It is very much discouraged to establish the following behavior:<br/>
+<code>application problem</code> → "try <code>sudo</code> / root".
+</p><p>Only use <code>sudo</code> / <code>lxsudo</code> / root if there is a strong rationale for doing so. Otherwise...
+</p>
+</div>
+<p>Inappropriate Use of Root Rights:
+</p>
+<ul><li>Can cause additional non-security related issues. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> Related is also next chapter <a href="#Graphical_Applications_with_Root_Rights">Graphical Applications with Root Rights</a>.</li>
+<li>Security issue.</li></ul>
+<h1><span class="mw-headline" id="Graphical_Applications_with_Root_Rights">Graphical Applications with Root Rights</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=5.html" title="Edit section: Graphical Applications with Root Rights">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>It is discouraged to run <a class="external text" data-href="https://www.computerhope.com/jargon/g/gui.htm" href="https://www.computerhope.com/jargon/g/gui.htm" rel="noreferrer noopener" target="_blank">graphical user interface (GUI)</a> <sup><a data-href="https://web.archive.org/web/https://www.computerhope.com/jargon/g/gui.htm" href="https://web.archive.org/web/https://www.computerhope.com/jargon/g/gui.htm" rel="noreferrer noopener" target="_blank">[archive]</a></sup> applications with <code>sudo application</code>:
 </p>
 <ul><li>Never login as <code>root</code> as explained above.</li>
-<li>That is, never use <code>sudo su</code> and then start GUI applications.</li></ul>
-<p>This will fail and is a limitation inherited from Debian. If this action is attempted, error messages like those below will appear. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+<li>This includes, never use <code>sudo su</code> and then start GUI applications.</li></ul>
+<p>Doing so would be an <a href="#Inappropriate_Use_of_Root_Rights">Inappropriate Use of Root Rights</a>. That would fail and is a limitation inherited from Debian. If this action is attempted, error messages like those below will appear. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
 <pre>No protocol specified
 </pre>
@@ -226,8 +240,8 @@
 <!-- Widget:CodeSelect end -->
 </p>
 </div>
-<h1><span class="mw-headline" id="Root_Account">Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=5.html" title="Edit section: Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Enable_Root_Account">Enable Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=6.html" title="Edit section: Enable Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Root_Account">Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=6.html" title="Edit section: Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Enable_Root_Account">Enable Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=7.html" title="Edit section: Enable Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>For <a href="#Rationale">security reasons</a> the root account is locked and expired by default in Whonix ™ <code>15.0.0.3.6</code> and above. For most users there should be no need to use the root account. If it must be enabled for some reason, run the following commands.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: Whonix-Gateway ™ and Whonix-Workstation ™ TemplateVMs)
 </p><p>If you can use <code>sudo</code>, you can skip the following box.
@@ -267,7 +281,7 @@
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p>
-<h2><span class="mw-headline" id="Disable_Root_Account">Disable Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=7.html" title="Edit section: Disable Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Disable_Root_Account">Disable Root Account</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=8.html" title="Edit section: Disable Root Account">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a data-href="/wiki/Whonix_Old_Stable_and_Earlier_Releases" href="./Whonix_Old_Stable_and_Earlier_Releases.html" title="Whonix Old Stable and Earlier Releases">Earlier versions</a> of Whonix ™ (version numbers lower than <code>15.0.0.3.6</code>) come with the root account enabled by default. Most users should disable it by running the following commands.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: Whonix-Gateway ™ and Whonix-Workstation ™ TemplateVMs).
 </p><p>Lock the account.
@@ -284,11 +298,11 @@
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p><p>In the future, <a href="#General_Security_Advice">use <code>sudo</code> instead</a> when it is necessary.
 </p><p><span id="unlock"></span>
 </p>
-<h1><span class="mw-headline" id="Unlock_User_Account:_Excessive_Wrong_Password_Entry_Attempts">Unlock User Account: Excessive Wrong Password Entry Attempts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=8.html" title="Edit section: Unlock User Account: Excessive Wrong Password Entry Attempts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Unlock_User_Account:_Excessive_Wrong_Password_Entry_Attempts">Unlock User Account: Excessive Wrong Password Entry Attempts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=9.html" title="Edit section: Unlock User Account: Excessive Wrong Password Entry Attempts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>The following steps can be used in case the user entered the wrong password too many times which resulted in the user account being automatically locked.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -314,7 +328,7 @@
 </div>
 <p><span id="console"></span>
 </p>
-<h1><span class="mw-headline" id="Console_Unlock">Console Unlock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=9.html" title="Edit section: Console Unlock">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Console_Unlock">Console Unlock</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=10.html" title="Edit section: Console Unlock">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Launch a root terminal.
 </p>
@@ -336,9 +350,9 @@
 <!-- Widget:CodeSelect end -->
 </p>
 </div>
-<h1><span class="mw-headline" id="Advanced_Users">Advanced Users</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=10.html" title="Edit section: Advanced Users">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Prevent_Malware_from_Sniffing_the_Root_Password">Prevent Malware from Sniffing the Root Password</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=11.html" title="Edit section: Prevent Malware from Sniffing the Root Password">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Any graphical application can see what is typed in another graphical application, for any user. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> Therefore it is <a href="#Rationale">safer</a> to create a special, new user account that is less likely to have been compromised, since this reduces the chances of malware sniffing the password to gain root access.
+<h1><span class="mw-headline" id="Advanced_Users">Advanced Users</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=11.html" title="Edit section: Advanced Users">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Prevent_Malware_from_Sniffing_the_Root_Password">Prevent Malware from Sniffing the Root Password</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=12.html" title="Edit section: Prevent Malware from Sniffing the Root Password">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Any graphical application can see what is typed in another graphical application, for any user. <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> Therefore it is <a href="#Rationale">safer</a> to create a special, new user account that is less likely to have been compromised, since this reduces the chances of malware sniffing the password to gain root access.
 </p><p>This process is currently for advanced users only since it is quite cumbersome, i.e. has bad usability. The usability of this will be improved once proposal <a data-href="/wiki/Dev/boot_modes" href="./Dev/boot_modes.html" title="Dev/boot modes">Multiple Boot Modes for Better Security (an Implementation of Untrusted Root)</a> has been implemented.
 </p><p>To more securely perform administrative tasks that require root access:
 </p>
@@ -385,19 +399,19 @@
 </div>
 <p>Perform the following steps securely using <code>sudo</code>. Use <u>one</u> of the methods below.
 </p>
-<h3><span class="mw-headline" id="Non-GUI_Environment_Method">Non-GUI Environment Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=12.html" title="Edit section: Non-GUI Environment Method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Non-GUI_Environment_Method">Non-GUI Environment Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=13.html" title="Edit section: Non-GUI Environment Method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <ul><li>Advantage: can keep current user session(s) and/or graphical session (X Window System) running.</li>
-<li>Disadvantage: cannot use graphical session during administrative tasks. <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li></ul>
+<li>Disadvantage: cannot use graphical session during administrative tasks. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></li></ul>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> Make sure keyboard gets disconnected from X Window System to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>. (unra<code>w</code>) <sup class="reference" id="cite_ref-unraw-required-questionmark_11-0"><a href="#cite_note-unraw-required-questionmark-11">[11]</a></sup>
+<p><b>1.</b> Make sure keyboard gets disconnected from X Window System to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>. (unra<code>w</code>) <sup class="reference" id="cite_ref-unraw-required-questionmark_12-0"><a href="#cite_note-unraw-required-questionmark-12">[12]</a></sup>
 </p><p><a data-href="/wiki/SysRq" href="./SysRq.html" title="SysRq">SysRq</a> + <code>w</code>
 </p><p>(Press <code>Alt + SysRq + w</code>)
 </p><p><b>2.</b> Switch to another <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a>.
-</p><p>(Press <code>Alt + Crtl + F2</code>) <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p>(Press <code>Alt + Crtl + F2</code>) <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p><p><b>3.</b> Press Secure Access Key also to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>.
 </p><p><a data-href="/wiki/SysRq" href="./SysRq.html" title="SysRq">SysRq</a> + <code>k</code>
 </p><p>(Press <code>Alt + SysRq + k</code>)
-</p><p><b>4.</b> Login as user <code>admin</code> from that non-graphical environment (<a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a>). <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p><p><b>4.</b> Login as user <code>admin</code> from that non-graphical environment (<a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a>). <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p><p><b>5.</b> Perform any necessary administrative tasks.
 </p><p><b>6.</b> Remove user <code>user</code> from group <code>sudo</code>.
 </p><p><u>Note</u>: This only needs to be performed once.
@@ -436,14 +450,14 @@
 <p><b>9.</b> Re-login if needed and continue usual work as user <code>user</code>.
 </p>
 </div>
-<h3><span class="mw-headline" id="Logout_Method">Logout Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=13.html" title="Edit section: Logout Method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Logout_Method">Logout Method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=14.html" title="Edit section: Logout Method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <ul><li>Advantage: can use graphical session (X Window System) during administrative tasks using privileged user <code>admin</code>.</li>
-<li>Disadvantage: cannot keep graphical session of unprivileged user <code>user</code> running. In other words, simplified, all applications run under user <code>user</code> will be terminated. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li></ul>
+<li>Disadvantage: cannot keep graphical session of unprivileged user <code>user</code> running. In other words, simplified, all applications run under user <code>user</code> will be terminated. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup></li></ul>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Terminate all running applications in current graphical (X) session.
 </p><p><b>2.</b> Log out.
 </p><p>start menu -&gt; log out
-</p><p><b>3.</b> Make sure keyboard gets disconnected from X Window System to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>. (unra<code>w</code>) <sup class="reference" id="cite_ref-unraw-required-questionmark_11-1"><a href="#cite_note-unraw-required-questionmark-11">[11]</a></sup>
+</p><p><b>3.</b> Make sure keyboard gets disconnected from X Window System to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>. (unra<code>w</code>) <sup class="reference" id="cite_ref-unraw-required-questionmark_12-1"><a href="#cite_note-unraw-required-questionmark-12">[12]</a></sup>
 </p><p><a data-href="/wiki/SysRq" href="./SysRq.html" title="SysRq">SysRq</a> + <code>w</code>
 </p><p>(Press <code>Alt + SysRq + w</code>)
 </p><p><b>4.</b> Press Secure Access Key also to <a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">defeat login spoofing</a>.
@@ -471,11 +485,11 @@
 </p><p><b>10.</b> Continue usual work as user <code>user</code>.
 </p>
 </div>
-<h2><span id="Substitute_User_(su)_Command"></span><span class="mw-headline" id="Substitute_User_.28su.29_Command">Substitute User (su) Command</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=14.html" title="Edit section: Substitute User (su) Command">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The majority of users do not need to utilize the <code>su</code> command. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>.
+<h2><span id="Substitute_User_(su)_Command"></span><span class="mw-headline" id="Substitute_User_.28su.29_Command">Substitute User (su) Command</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=15.html" title="Edit section: Substitute User (su) Command">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The majority of users do not need to utilize the <code>su</code> command. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>.
 </p><p>In Kicksecure ™ (and Whonix ™), by default:
 </p>
-<ul><li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" href="https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" rel="noreferrer noopener" target="_blank">group <code>sudo</code> membership is required to use <code>su</code></a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup></li>
+<ul><li><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" href="https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" rel="noreferrer noopener" target="_blank">group <code>sudo</code> membership is required to use <code>su</code></a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/usr/share/pam-configs/wheel-security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup></li>
 <li>User <code>user</code> is a member of group <code>sudo</code>. ([Dev/boot_modes|This might change in a later release.]])</li></ul>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p>To permit the <code>su</code> command from user <code>user</code>, complete the following steps.
@@ -512,7 +526,7 @@ sudo /usr/lib/security-misc/permission-hardening-undo /usr/bin/su</textarea>
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p><sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
+</p><p><sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
 </p><p><b>4.</b> <a data-href="/wiki/SUID_Disabler_and_Permission_Hardener#Whitelist_Specific_SUID_Binaries" href="./SUID_Disabler_and_Permission_Hardener.html" title="SUID Disabler and Permission Hardener">Add SUID whitelisting</a>.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
@@ -570,12 +584,12 @@ sudo /usr/lib/security-misc/permission-hardening-undo /usr/bin/su</textarea>
 </div>
 <p><span id="login"></span>
 </p>
-<h2><span class="mw-headline" id="Root_Login">Root Login</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=15.html" title="Edit section: Root Login">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Root login within a <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a> will be disabled by default after upgrades. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+<h2><span class="mw-headline" id="Root_Login">Root Login</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=16.html" title="Edit section: Root Login">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Root login within a <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a> will be disabled by default after upgrades. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
 </p><p>To enable login from a <a data-href="/wiki/Desktop#Virtual_Console" href="./Desktop.html" title="Desktop">virtual console</a>, first apply the <a href="#Enable_Root_Account">Enable Root Account</a> instructions further above, then complete the steps below.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> To allow root login, <code>/etc/securetty</code> must be configured. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+<p><b>1.</b> To allow root login, <code>/etc/securetty</code> must be configured. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
 </p><p>Open file <code>$(realpath /etc/securetty)</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
 </p>
@@ -649,12 +663,12 @@ tty10</textarea>
 </p><p><b>3.</b> Save the file.
 </p>
 </div>
-<h2><span class="mw-headline" id="Recovery_Mode">Recovery Mode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=16.html" title="Edit section: Recovery Mode">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Root login is possible using <a data-href="/wiki/Recovery#Recovery_Mode" href="./Recovery.html" title="Recovery">recovery mode</a>. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
+<h2><span class="mw-headline" id="Recovery_Mode">Recovery Mode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=17.html" title="Edit section: Recovery Mode">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Root login is possible using <a data-href="/wiki/Recovery#Recovery_Mode" href="./Recovery.html" title="Recovery">recovery mode</a>. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
 </p><p>When the root account is disabled, passwordless root login using recovery mode is possible; see below for the security impact.
 </p><p><span id="qubes_root_console"></span>
 </p>
-<h2><span class="mw-headline" id="Qubes_Root_Console">Qubes Root Console</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=17.html" title="Edit section: Qubes Root Console">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Qubes_Root_Console">Qubes Root Console</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=18.html" title="Edit section: Qubes Root Console">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Open a dom0 terminal.
 </p><p><code>Qubes App Launcher (blue/grey "Q")</code> → <code>System Tools</code> → <code>Xfce Terminal
@@ -676,13 +690,13 @@ tty10</textarea>
 <!-- Widget:CodeSelect end -->
 </p>
 </div>
-<h2><span class="mw-headline" id="Passwordless_Recovery_Mode_Security_Discussion">Passwordless Recovery Mode Security Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=18.html" title="Edit section: Passwordless Recovery Mode Security Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Passwordless_Recovery_Mode_Security_Discussion">Passwordless Recovery Mode Security Discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=19.html" title="Edit section: Passwordless Recovery Mode Security Discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>This is only relevant on the host and not inside virtual machines.
-</p><p>Passwordless recovery mode is allowed because a locked root password would break the rescue and emergency shell. Therefore the <a class="external text" data-href="https://github.com/Whonix/security-misc" href="https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">security-misc</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup> package enables a passwordless rescue and emergency shell. This is the same solution that Debian will likely adapt for Debian installer. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
+</p><p>Passwordless recovery mode is allowed because a locked root password would break the rescue and emergency shell. Therefore the <a class="external text" data-href="https://github.com/Whonix/security-misc" href="https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">security-misc</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup> package enables a passwordless rescue and emergency shell. This is the same solution that Debian will likely adapt for Debian installer. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
 </p><p>With passwordless root login, using recovery mode is allowed (through use of the security-misc package) on the host. To prevent adverse security effects posed by lesser adversaries with physical access to the machine, set up BIOS password protection, bootloader grub password protection and/or <a data-href="/wiki/Full_Disk_Encryption" href="./Full_Disk_Encryption.html" title="Full Disk Encryption">full disk encryption</a>.
 </p><p><span id="dsudo"></span>
 </p>
-<h2><span class="mw-headline" id="dsudo_-_default_password_sudo">dsudo - default password sudo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=19.html" title="Edit section: dsudo - default password sudo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="dsudo_-_default_password_sudo">dsudo - default password sudo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=20.html" title="Edit section: dsudo - default password sudo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><code>dsudo</code> is a Whonix ™ and Kicksecure ™ specific feature.
 </p><p>As long as still using the <a href="#Default_Password">default password</a> (not having <a data-href="/wiki/Post_Install_Advice#Change_Passwords" href="./Post_Install_Advice.html" title="Post Install Advice">changed sudo password</a>), commands can be run as root without entering a password. This is useful for users having issues with <a data-href="/wiki/Keyboard_Layout" href="./Keyboard_Layout.html" title="Keyboard Layout">changing the keyboard layout</a> and for testing VMs.
 </p><p>Instead of using
@@ -715,15 +729,15 @@ tty10</textarea>
 <!-- Widget:CodeSelect end -->
 </p><p><a class="external free" data-href="https://forums.whonix.org/t/dsudo-default-password-sudo/8766" href="https://forums.whonix.org/t/dsudo-default-password-sudo/8766" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/dsudo-default-password-sudo/8766</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/dsudo-default-password-sudo/8766" href="https://web.archive.org/web/https://forums.whonix.org/t/dsudo-default-password-sudo/8766" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=20.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=21.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/SysRq" href="./SysRq.html" title="SysRq">System Recovery using SysRq Key</a></li>
 <li><a data-href="/wiki/Login_spoofing" href="./Login_spoofing.html" title="Login spoofing">Login spoofing</a></li>
 <li><a data-href="/wiki/Dev/Strong_Linux_User_Account_Isolation" href="./Dev/Strong_Linux_User_Account_Isolation.html" title="Dev/Strong Linux User Account Isolation">Strong Linux User Account Isolation</a></li></ul>
-<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=21.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=22.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>Whonix code: <a class="external text" data-href="https://github.com/Whonix/security-misc/pull/22" href="https://github.com/Whonix/security-misc/pull/22" rel="noreferrer noopener" target="_blank">Restrict access to the root account</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/pull/22" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/pull/22" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
 <li><a class="external free" data-href="https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079/68" href="https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079/68" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079/68</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079/68" href="https://web.archive.org/web/https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079/68" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://forums.whonix.org/t/should-lesser-adversaries-with-physical-access-be-part-of-the-threat-model-of-whonix-whonix-host-kicksecure/7997" href="https://forums.whonix.org/t/should-lesser-adversaries-with-physical-access-be-part-of-the-threat-model-of-whonix-whonix-host-kicksecure/7997" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/should-lesser-adversaries-with-physical-access-be-part-of-the-threat-model-of-whonix-whonix-host-kicksecure/7997</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/should-lesser-adversaries-with-physical-access-be-part-of-the-threat-model-of-whonix-whonix-host-kicksecure/7997" href="https://web.archive.org/web/https://forums.whonix.org/t/should-lesser-adversaries-with-physical-access-be-part-of-the-threat-model-of-whonix-whonix-host-kicksecure/7997" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=22.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Root&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Root&amp;action=edit&amp;section=23.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -742,10 +756,14 @@ An exploit or payload might require a function which is unavailable inside the s
 In new builds of Whonix version <code>15.0.0.3.6</code>. Earlier Whonix builds did not lock the root account by default and should be locked.</span>
 </li>
 <li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+<ul><li>Applications supposed to be run as user but run as root might create root owned files. These file permissions error can lead to additional issues.</li>
+<li>Inter process communications such as with dbus might be broken.</li></ul>
+</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
 <ul><li><a class="external free" data-href="https://help.ubuntu.com/community/RootSudo#Graphical_sudo" href="https://help.ubuntu.com/community/RootSudo" rel="noreferrer noopener" target="_blank">https://help.ubuntu.com/community/RootSudo#Graphical_sudo</a> <sup><a data-href="https://web.archive.org/web/https://help.ubuntu.com/community/RootSudo#Graphical_sudo" href="https://web.archive.org/web/https://help.ubuntu.com/community/RootSudo" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="http://www.psychocats.net/ubuntu/graphicalsudo" href="http://www.psychocats.net/ubuntu/graphicalsudo" rel="noreferrer noopener" target="_blank">http://www.psychocats.net/ubuntu/graphicalsudo</a> <sup><a data-href="https://web.archive.org/web/http://www.psychocats.net/ubuntu/graphicalsudo" href="https://web.archive.org/web/http://www.psychocats.net/ubuntu/graphicalsudo" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
 No longer expiring the root account since this broke adduser, see: <a class="external free" data-href="https://forums.whonix.org/t/restrict-root-access/7658/59" href="https://forums.whonix.org/t/restrict-root-access/7658/59" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-root-access/7658/59</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/59" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/59" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 
 (To prevent SSH login, see: <a class="external text" data-href="https://www.cyberciti.biz/faq/linux-locking-an-account/" href="https://www.cyberciti.biz/faq/linux-locking-an-account/" rel="noreferrer noopener" target="_blank">Linux Locking An Account</a> <sup><a data-href="https://web.archive.org/web/https://www.cyberciti.biz/faq/linux-locking-an-account/" href="https://web.archive.org/web/https://www.cyberciti.biz/faq/linux-locking-an-account/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. This might prevent other login methods but this requires further investigation.)
@@ -764,18 +782,18 @@ No longer expiring the root account since this broke adduser, see: <a class="ext
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end --></p></span>
 </li>
-<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
 <a class="external text" data-href="https://blog.invisiblethings.org/2011/04/23/linux-security-circus-on-gui-isolation.html" href="https://blog.invisiblethings.org/2011/04/23/linux-security-circus-on-gui-isolation.html" rel="noreferrer noopener" target="_blank">Quote</a> <sup><a data-href="https://web.archive.org/web/https://blog.invisiblethings.org/2011/04/23/linux-security-circus-on-gui-isolation.html" href="https://web.archive.org/web/https://blog.invisiblethings.org/2011/04/23/linux-security-circus-on-gui-isolation.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> Joanna Rutkowska, security researcher, founder and advisor (formerly architecture, security, and development) of Qubes OS: <blockquote><p>One application can sniff or inject keystrokes to another one, can take snapshots of the screen occupied by windows belonging to another one, etc.</p></blockquote></span>
 </li>
-<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">If an application is compromised with an exploit due to a security vulnerability, it can be used as malware by the attacker. Once/if the application is not effectively confined by a mandatory access control (MAC) framework like AppArmor or firejail, it can compromise the user account where it is running and then proceed from there.</span>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">If an application is compromised with an exploit due to a security vulnerability, it can be used as malware by the attacker. Once/if the application is not effectively confined by a mandatory access control (MAC) framework like AppArmor or firejail, it can compromise the user account where it is running and then proceed from there.</span>
 </li>
-<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
 Unless perhaps advanced users manage to run a different X server on a different virtual console. This might not be possible, secure. Depends on if the exclusive lock of X can be suspended while using an X server in a different virtual console. This has not been researched.</span>
 </li>
-<li id="cite_note-unraw-required-questionmark-11"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-unraw-required-questionmark_11-0">11.0</a></sup> <sup><a href="#cite_ref-unraw-required-questionmark_11-1">11.1</a></sup></span> <span class="reference-text">
+<li id="cite_note-unraw-required-questionmark-12"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-unraw-required-questionmark_12-0">12.0</a></sup> <sup><a href="#cite_ref-unraw-required-questionmark_12-1">12.1</a></sup></span> <span class="reference-text">
 This step might be unnecessary. Not researched yet.</span>
 </li>
-<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
 Pressing <code>Alt + Crtl + F7</code> results in <code>tty2</code>.
 
 This is to make these instructions compatible with most Linux distributions as well as Qubes.
@@ -784,13 +802,13 @@ This is to make these instructions compatible with most Linux distributions as w
 <li>Qubes X Window System by default runs on <code>tty1</code>. (<code>Alt + Crtl + F1</code>)</li></ul>
 <code>tty2</code> (<code>Alt + Crtl + F2</code>) will be most most users an unused virtual console which can be used for the purpose of this chapter.</span>
 </li>
-<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 A X Window System non-root user cannot sniff key strokes of different (non-)root users utilizing a different virtual console (<code>tty</code>).</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
 Non-simplified: applications run by user <code>user</code> in a different virtual console or run through systemd (user) services can be left running.</span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
 <code>su</code> is sometimes incorrectly referred to as the <i>superuser</i> command. <a class="external text" data-href="http://www.linfo.org/su.html" href="http://www.linfo.org/su.html" rel="noreferrer noopener" target="_blank">It allows</a> <sup><a data-href="https://web.archive.org/web/http://www.linfo.org/su.html" href="https://web.archive.org/web/http://www.linfo.org/su.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>:
 
 <blockquote>
@@ -801,10 +819,10 @@ Non-simplified: applications run by user <code>user</code> in a different virtua
 <p>By comparison, <code>sudo</code> makes it possible to execute system commands without the root password.
 </p>
 </span></li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">
 Implemented in package <a class="external text" data-href="https://github.com/Whonix/security-misc" href="https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">security-misc</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">
 <!-- Widget:CodeSelect start -->
 <div class="codeContainerNew">
 <div class="preDiv">
@@ -821,17 +839,17 @@ sudo chmod 4755 /usr/bin/su</textarea>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end --></p></span>
 </li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">security-misc <code><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" href="https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" rel="noreferrer noopener" target="_blank">/etc/securetty</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup></code> is empty by default.</span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">security-misc <code><a class="external text" data-href="https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" href="https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" rel="noreferrer noopener" target="_blank">/etc/securetty</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/blob/master/etc/securetty.security-misc" rel="noreferrer noopener" target="_blank">[archive]</a></sup></code> is empty by default.</span>
 </li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">When trying to login as root in a <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a> it will reply: <blockquote><p>
+<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text">When trying to login as root in a <a data-href="/wiki/Desktop#Virtual_Consoles" href="./Desktop.html" title="Desktop">virtual console</a> it will reply: <blockquote><p>
 Login incorrect.</p></blockquote> Without previously asking for a password. This is not the worst case for usability and is better than asking for password and then failing.</span>
 </li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text">
+<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">
 <code>sudoedit</code> will not follow symlinks, therefore <code>realpath</code> is used.</span>
 </li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://forums.whonix.org/t/restrict-root-access/7658/46" href="https://forums.whonix.org/t/restrict-root-access/7658/46" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-root-access/7658/46</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/46" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/46" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://forums.whonix.org/t/restrict-root-access/7658/46" href="https://forums.whonix.org/t/restrict-root-access/7658/46" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-root-access/7658/46</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/46" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-root-access/7658/46" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">
+<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text">
 <ul><li><a class="external free" data-href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=802211" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=802211" rel="noreferrer noopener" target="_blank">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=802211</a> <sup><a data-href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=802211" href="https://web.archive.org/web/https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=802211" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li>/etc/systemd/system/emergency.service.d/override.conf</li>
 <li>/etc/systemd/system/rescue.service.d/override.conf</li></ul>
@@ -870,7 +888,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://t.me/share/url?url=./Root" href="https://t.me/share/url?url=./Root" rel="noreferrer noopener" target="_blank"><img alt="Telegram-share.png" data-src="/w/images/thumb/5/5a/Telegram-share.png/55px-Telegram-share.png" data-srcset="/w/images/thumb/5/5a/Telegram-share.png/83px-Telegram-share.png 1.5x, /w/images/thumb/5/5a/Telegram-share.png/110px-Telegram-share.png 2x" decoding="async" height="20" src="data:image/png;base64,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" width="55"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">contribute</a> by helping to <a data-href="/wiki/Contribute#Answer_Questions" href="./Contribute.html" title="Contribute">answer Whonix ™ questions</a>.
+<p>Have you <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">contributed</a> to Whonix ™? If so, feel free to add your name and highlight what you did on the <a class="mw-redirect" data-href="/wiki/Authorship" href="./Authorship.html" title="Authorship">Whonix ™ authorship</a> page.
 </p>
 </div>
 <p><a data-href="./Root" href="./Root" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Root" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Root" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -882,7 +900,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Root&amp;oldid=62600" dir="ltr" href="https://www.whonix.org/w/index.php?title=Root&amp;oldid=62600">https://www.whonix.org/w/index.php?title=Root&amp;oldid=62600</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Root&amp;oldid=62691" dir="ltr" href="https://www.whonix.org/w/index.php?title=Root&amp;oldid=62691">https://www.whonix.org/w/index.php?title=Root&amp;oldid=62691</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -893,7 +911,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Root&amp;
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 16 February 2021, at 09:53.</li>
+<li id="footer-lastmod"> This page was last edited on 24 February 2021, at 09:38.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -913,5 +931,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Root&amp;
 </footer>
 </div>
  </body>
-<!-- Cached 20210221111626 -->
+<!-- Cached 20210224083843 -->
 </html>
