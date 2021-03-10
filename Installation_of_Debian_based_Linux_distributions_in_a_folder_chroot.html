@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: Online Profiles - Whonix
- url: ./Online_Profiles
+ title: Installation of Debian (based) Linux distributions in a folder (chroot)
+ url: ./Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot
 -->
 <head>
 <meta charset="utf-8"/>
-<title>Online Profiles - Whonix</title>
+<title>Installation of Debian (based) Linux distributions in a folder (chroot)</title>
 <link rel=stylesheet type=text/css href=style.css>
 
 
@@ -15,28 +15,31 @@
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
 <meta content="MediaWiki 1.35.1" name="generator"/>
+<meta content="How to create a chroot (change root) in a secure way using mmdebstrap and systemd-nspawn." name="description"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
-<link data-href="/w/index.php?title=Online_Profiles&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
-<link data-href="/w/index.php?title=Online_Profiles&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;action=edit" rel="edit.html" title="Edit"/>
+<link data-href="/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit" rel="alternate.html" title="Edit" type="application/x-wiki"/>
+<link data-href="/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit" rel="edit.html" title="Edit"/>
 <link data-href="/w/images/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4wC5q6j/xba0/8W2tP+3qab/4+PiBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+6rKr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALyurP/Ku7n/yru5/8CohP/VnhL/1Z4S/8CohP/Ku7n/yru5/7mrqf8AAAAAAAAAAAAAAAAAAAAAAAAAAI6Mi//Ku7n/yru5/8GRHP/iqhL/////////////////wJEd/8q7uf/Ku7n/xsXE/wAAAAAAAAAAAAAAAAAAAAC5q6n/yru5/8q7uf/hqRH//////0bcy/9G3Mv//////+GpEf/Ku7n/yru5/7qsqv8AAAAAAAAAAAAAAAAAAAAAxLW0/8q7uf/Ku7n/4qoS/////////////////0bcy//iqhL/yru5/8q7uf/Gt7T/AAAAAAAAAAAAAAAAAAAAAMKzsP/Ku7n/yru5/96lFf//////RtzL/0bcy///////3qUV/8q7uf/Ku7n/wrWy/wAAAAAAAAAAAAAAAAAAAACvo6D/yru5/8q7uf/Ku7n/4akQ//fnvP/57tD/4akQ/8q7uf/Ku7n/yru5/7Gkov8AAAAAAAAAAAAAAAAAAAAAAAAAAMq7uf/Ku7n/yru5/8q7uf/hqRD/4akQ/8q7uf/Ku7n/yru5/8q7uf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOjIv/yru5/8q7uf/Ku7n/yru5/8q7uf/Ku7n/yru5/8q7uf+Mioj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAISDgf/Iurj/yru5/8q7uf/Ku7n/yru5/8i5uP+EgoH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6rKr/q56c/wAAAACOjIv/joyL/wAAAACom5r/taim/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuqyp/66hnv8AAAAAAAAAAAAAAAAAAAAAqp2b/7SnpP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmcm/+9r6z/AAAAAAAAAAAAAAAAAAAAALmrqf+jl5b/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLOw/6uenP8AAAAAAAAAAKqenP+/sq//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtoJ7/vK2r/72vrP+sn57/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPAPAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA4AcAAPAPAADyTwAA888AAPPPAAD5nwAA/D8AAA==" rel="shortcut icon"/>
 <link data-href="/w/opensearch_desc.php" href="https://www.whonix.org/w/opensearch_desc.php" rel="search.html" title="Whonix (en)" type="application/opensearchdescription+xml"/>
 <link data-href="//www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="Online Profiles - Whonix" property="og:title"/>
+<meta content="Installation of Debian (based) Linux distributions in a folder (chroot)" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
-<meta content="./Online_Profiles" property="og:url"/>
-<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2019-04-23T17:14:44Z" property="article:modified_time"/>
-<meta content="2019-04-23T17:14:44Z" property="article:published_time"/>
+<meta content="http://www.whonix.org/wiki/Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot" property="og:url"/>
+<meta content="How to create a chroot (change root) in a secure way using mmdebstrap and systemd-nspawn." property="og:description"/>
+<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="2021-03-09T19:03:31Z" property="article:modified_time"/>
+<meta content="2021-03-09T19:03:31Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="Online Profiles - Whonix" property="twitter:title"/>
-<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
+<meta content="Installation of Debian (based) Linux distributions in a folder (chroot)" property="twitter:title"/>
+<meta content="How to create a chroot (change root) in a secure way using mmdebstrap and systemd-nspawn." property="twitter:description"/>
+<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Online_Profiles rootpage-Online_Profiles skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot rootpage-Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
 </div>
 <div id="page-content">
@@ -109,18 +112,15 @@
 <a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
 <!--RTL -->
 <ul class="f-dropdown" data-dropdown-content="" id="actions">
-<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Online_Profiles" href="./Online_Profiles.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Online_Profiles&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Online_Profiles&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Online_Profiles&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Online_Profiles&amp;action=history" href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot" href="./Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=history" href="https://www.whonix.org/w/index.php?title=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
-<h1 class="title" id="firstHeading">Online Profiles</h1>
+<h1 class="title" id="firstHeading">Design and Goals</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><ol><li>REDIRECT <a data-href="/wiki/Official_Whonix_Online_Profiles" href="./Official_Whonix_Online_Profiles.html" title="Official Whonix Online Profiles">Official Whonix Online Profiles</a></li></ol>
-<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:350-0!canonicalwww.whonix.org and timestamp 20210308064255 and revision id 45252
- -->
-</div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;oldid=45252" dir="ltr" href="https://www.whonix.org/w/index.php?title=Online_Profiles&amp;oldid=45252">https://www.whonix.org/w/index.php?title=Online_Profiles&amp;oldid=45252</a>"</div>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"></div><div class="printfooter">
+Retrieved from "<a data-href="./Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot" dir="ltr" href="./Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot">./Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -131,7 +131,6 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Online_Pr
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 23 April 2019, at 18:14.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -151,4 +150,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Online_Pr
 </footer>
 </div>
  </body>
+<!-- Cached 20210309202749 -->
 </html>

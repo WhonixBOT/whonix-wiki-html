@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: Dev/bash - Whonix
+ title: Design and Goals - Whonix
  url: ../Dev/bash
 -->
 <head>
 <meta charset="utf-8"/>
-<title>Dev/bash - Whonix</title>
+<title>Design and Goals - Whonix</title>
 <link rel=stylesheet type=text/css href=../style.css>
 
 
@@ -23,15 +23,15 @@
 <link data-href="//www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="Dev/bash - Whonix" property="og:title"/>
+<meta content="Design and Goals - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
-<meta content="../Dev/bash" property="og:url"/>
-<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="http://www.whonix.org/wiki/Dev/bash" property="og:url"/>
+<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="2020-03-27T07:14:26Z" property="article:modified_time"/>
 <meta content="2020-03-27T07:14:26Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="Dev/bash - Whonix" property="twitter:title"/>
-<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
+<meta content="Design and Goals - Whonix" property="twitter:title"/>
+<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
@@ -112,36 +112,12 @@
 <li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/bash" href="../Dev/bash.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/bash&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/bash&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/bash&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/bash&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/bash&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/bash&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
-<h1 class="title" id="firstHeading">Dev/bash</h1>
+<h1 class="title" id="firstHeading">Design and Goals</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><h1><span class="mw-headline" id="Proper_Whitespace_Handling">Proper Whitespace Handling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/bash&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/bash&amp;action=edit&amp;section=1.html" title="Edit section: Proper Whitespace Handling">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<pre>#!/bin/bash
-
-## https://yakking.branchable.com/posts/whitespace-safety/
-
-set -e
-
-app_user=user
-lib_dir="/tmp/test/lib/program with space/something spacy"
-main_app_dir="/tmp/test/home/user/folder with space/abc"
-mkdir -p "$lib_dir"
-mkdir -p "$main_app_dir"
-
-declare -a cmd
-
-cmd+=("cp")
-cmd+=("-r")
-cmd+=("${lib_dir}")
-cmd+=("${main_app_dir}/")
-
-"${cmd[@]}"
-</pre>
-<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:6994-0!canonicalwww.whonix.org and timestamp 20210307211143 and revision id 55516
- -->
-</div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/bash&amp;oldid=55516" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/bash&amp;oldid=55516">https://www.whonix.org/w/index.php?title=Dev/bash&amp;oldid=55516</a>"</div>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"></div><div class="printfooter">
+Retrieved from "<a data-href="../Dev/bash" dir="ltr" href="../Dev/bash">../Dev/bash</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -152,7 +128,6 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/bash&
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 27 March 2020, at 08:14.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -172,5 +147,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/bash&
 </footer>
 </div>
  </body>
-<!-- Cached 20210307211143 -->
+<!-- Cached 20210309202748 -->
 </html>
