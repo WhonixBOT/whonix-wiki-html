@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: Design and Goals - Whonix
+ title: Dev/Qubes Remote Support - Whonix
  url: ../Dev/Qubes_Remote_Support
 -->
 <head>
 <meta charset="utf-8"/>
-<title>Design and Goals - Whonix</title>
+<title>Dev/Qubes Remote Support - Whonix</title>
 <link rel=stylesheet type=text/css href=../style.css>
 
 
@@ -23,15 +23,15 @@
 <link data-href="//www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="Design and Goals - Whonix" property="og:title"/>
+<meta content="Dev/Qubes Remote Support - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
-<meta content="http://www.whonix.org/wiki/Dev/Qubes_Remote_Support" property="og:url"/>
-<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="../Dev/Qubes_Remote_Support" property="og:url"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="2021-03-09T10:49:59Z" property="article:modified_time"/>
 <meta content="2021-03-09T10:49:59Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="Design and Goals - Whonix" property="twitter:title"/>
-<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
+<meta content="Dev/Qubes Remote Support - Whonix" property="twitter:title"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
@@ -112,12 +112,655 @@
 <li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Qubes_Remote_Support" href="../Dev/Qubes_Remote_Support.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Qubes_Remote_Support&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Qubes_Remote_Support&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
-<h1 class="title" id="firstHeading">Design and Goals</h1>
+<h1 class="title" id="firstHeading">Dev/Qubes Remote Support</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"></div><div class="printfooter">
-Retrieved from "<a data-href="../Dev/Qubes_Remote_Support" dir="ltr" href="../Dev/Qubes_Remote_Support">../Dev/Qubes_Remote_Support</a>"</div>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>Development notes: QubesOS to be remotely manageable from on-demand, ephemeral, hidden onion service to dom0/AdminVM.
+</p><p>user documentation: <a data-href="/wiki/Remote_Administration#Qubes_-_SSH_or_VNC_into_Qubes_dom0" href="../Remote_Administration.html" title="Remote Administration">Qubes - SSH or VNC into Qubes dom0</a>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#challenges"><span class="tocnumber">1</span> <span class="toctext">challenges</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#goals"><span class="tocnumber">2</span> <span class="toctext">goals</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#desired_security_properties"><span class="tocnumber">3</span> <span class="toctext">desired security properties</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Implementation_Draft"><span class="tocnumber">4</span> <span class="toctext">Implementation Draft</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#sys-whonix_GUI"><span class="tocnumber">5</span> <span class="toctext">sys-whonix GUI</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Missing_parts"><span class="tocnumber">6</span> <span class="toctext">Missing parts</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Idea"><span class="tocnumber">7</span> <span class="toctext">Idea</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#general"><span class="tocnumber">7.1</span> <span class="toctext">general</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Draft_Concept"><span class="tocnumber">8</span> <span class="toctext">Draft Concept</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#remote-support-provider"><span class="tocnumber">8.1</span> <span class="toctext">remote-support-provider</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#remote-support-receiver"><span class="tocnumber">8.2</span> <span class="toctext">remote-support-receiver</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#qubes-remote-support-provider-gui"><span class="tocnumber">8.3</span> <span class="toctext">qubes-remote-support-provider-gui</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#notes"><span class="tocnumber">8.4</span> <span class="toctext">notes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#ssh_keys"><span class="tocnumber">9</span> <span class="toctext">ssh keys</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#send_access_into_to_gpg_agent"><span class="tocnumber">10</span> <span class="toctext">send access into to gpg agent</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Preliminary_Work_Done"><span class="tocnumber">11</span> <span class="toctext">Preliminary Work Done</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#x2go"><span class="tocnumber">13</span> <span class="toctext">x2go</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#pros"><span class="tocnumber">13.1</span> <span class="toctext">pros</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#x2go_bugs"><span class="tocnumber">13.2</span> <span class="toctext">x2go bugs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#magic-wormhole"><span class="tocnumber">14</span> <span class="toctext">magic-wormhole</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#CLI_GUI_Communication_Design"><span class="tocnumber">15</span> <span class="toctext">CLI GUI Communication Design</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#CLI_GUI_Timeout_Handling_Design"><span class="tocnumber">16</span> <span class="toctext">CLI GUI Timeout Handling Design</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Proof_of_Concept"><span class="tocnumber">17</span> <span class="toctext">Proof of Concept</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#ssh_and_VNC_into_Qubes_dom0"><span class="tocnumber">17.1</span> <span class="toctext">ssh and VNC into Qubes dom0</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="#remote-support-receiver_sys-whonix_setup"><span class="tocnumber">17.1.1</span> <span class="toctext">remote-support-receiver sys-whonix setup</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#remote-support-receiver_dom0_setup"><span class="tocnumber">17.1.2</span> <span class="toctext">remote-support-receiver dom0 setup</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#remote-support-provider_setup"><span class="tocnumber">17.1.3</span> <span class="toctext">remote-support-provider setup</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Usage"><span class="tocnumber">17.2</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Introduction"><span class="tocnumber">17.3</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="#ssh"><span class="tocnumber">17.3.1</span> <span class="toctext">ssh</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#x2goclient"><span class="tocnumber">17.3.2</span> <span class="toctext">x2goclient</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="#Test_Results"><span class="tocnumber">17.4</span> <span class="toctext">Test Results</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Debugging"><span class="tocnumber">17.5</span> <span class="toctext">Debugging</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="#Implementation"><span class="tocnumber">18</span> <span class="toctext">Implementation</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="#Debug_Scripts"><span class="tocnumber">19</span> <span class="toctext">Debug Scripts</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#Proof_of_Concept_Documentation"><span class="tocnumber">20</span> <span class="toctext">Proof of Concept Documentation</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#Archive"><span class="tocnumber">21</span> <span class="toctext">Archive</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#Footnotes"><span class="tocnumber">22</span> <span class="toctext">Footnotes</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="challenges">challenges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=1.html" title="Edit section: challenges">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>There are no Open Source remote support tools which are usable by laymen.
+<ul><li>There is teamviewer but it's proprietary and therefore the teamviewer company could take over any users who use it.</li></ul></li>
+<li>The existing Open Source tools do not account for that most users nowadays are behind common NAT routers which make it hard to receive unsolicited incoming connections, i.e. hard to run servers. Would require port forwardings which are difficult for users. The internet is full of users seeking help how and failing to create port forwardings. Users are also often on networks (3/4G) that do not even support incoming (server) connections.</li>
+<li>Even if some remote support instructions use Open Source software and work on Linux, these won't work easily in Qubes dom0 since non-networked by default.</li>
+<li>Most if not all existing remote support Open Source software does not use encryption by default.
+<ul><li>Therefore any man-in-the-middle could take over the connection and compromise the remote support receiver.
+<ul><li>It's possible to run VNC over encrypted/authenticated SSH but this is not something which laymen users that need remote support are capable to use.</li></ul></li></ul></li></ul>
+<h1><span class="mw-headline" id="goals">goals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=2.html" title="Edit section: goals">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>functional for users with reasonable slow internet connections</li>
+<li>reasonable security</li>
+<li>Open Source</li>
+<li>work behind NAT</li></ul>
+<h1><span class="mw-headline" id="desired_security_properties">desired security properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=3.html" title="Edit section: desired security properties">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>encrypted</li>
+<li>authenticated</li>
+<li>clear and reliable signaling to the user whether remote admin is enabled and whether it is currently in use</li>
+<li>Even after sys-whonix compromise the attacker should not be able to access dom0 through VNC.</li></ul>
+<h1><span class="mw-headline" id="Implementation_Draft">Implementation Draft</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=4.html" title="Edit section: Implementation Draft">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Command line tools (which can be called by any GUI).</li>
+<li>Whonix-Workstation script. (GUI and command line tools would run here.)</li>
+<li>Whonix-Gateway script. (Tor onion service)</li>
+<li>dom0 package (Qubes dom0 configuration, SSH/VNC server)</li>
+<li>Packaging of a (python) GUI [1] (the GUI itself to be written by Marek)</li></ul>
+<h1><span class="mw-headline" id="sys-whonix_GUI">sys-whonix GUI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=5.html" title="Edit section: sys-whonix GUI">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>able to see already existing hidden services per <code>sys-whonix</code> in a widget.
+</p><p>Adding remote support thought requirements:
+</p>
+<ul><li>List configured onion services.</li>
+<li>Delete them.</li>
+<li>Create new remote support related hidden onion service. When done, output onion address, port and shared secret for the user to copy paste to chosen secured communication channel.</li>
+<li>create time based or persistent remote support</li>
+<li><s>multiple remote support onions at the same time</s> remove?</li>
+<li>optionally a feature to send access info to the support agent from the GUI</li></ul>
+<h1><span class="mw-headline" id="Missing_parts">Missing parts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=6.html" title="Edit section: Missing parts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Avoidable?
+</p>
+<ul><li>Qubes dom0 salt</li>
+<li>Qubes dom0 GUI</li></ul>
+<h1><span class="mw-headline" id="Idea">Idea</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=7.html" title="Edit section: Idea">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="general">general</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=8.html" title="Edit section: general">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>x2go supports SSH.
+<ul><li>(Needless to say that SSH or any extra encryption complicates things.)</li>
+<li>TODO: test if x2go can work in acceptable speed over a Tor onion. FreeNX (maybe outdated), SPICE, x2go... x2go [in packages.debian.org: yes] seems most promising.</li></ul></li>
+<li>Run an SSH server in dom0.</li>
+<li>magic-wormhole?
+<ul><li>[in packages.debian.org: yes]</li>
+<li>(<a data-href="/wiki/File_Sharing#Magic-Wormhole" href="../File_Sharing.html" title="File Sharing">File_Sharing#Magic-Wormhole</a>)</li>
+<li>These code words are quite usable. Example: <code>7-crossover-clockwork</code> We'd need two of these.</li></ul></li></ul>
+<p>questions:
+</p>
+<ul><li>SSH server running in dom0 is OK?</li>
+<li>I guess running VNC (and perhaps SSH) in dom0 is OK?</li>
+<li>Things can always be more compartmentalized, secure but also getting more and more complicated, fragile.</li></ul>
+<p>I am considering to script this entirely from dom0 using `qvm-run`. Only expectation: installed (use salt?) and non-broken <code>sys-whonix</code>
+</p>
+<h1><span class="mw-headline" id="Draft_Concept">Draft Concept</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=9.html" title="Edit section: Draft Concept">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="remote-support-provider">remote-support-provider</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=10.html" title="Edit section: remote-support-provider">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On remote support provider machine.
+</p>
+<ul><li>dom0 <code>qvm-start</code> <code>sys-whonix</code></li>
+<li>dom0 <code>qvm-run</code> <code>sys-whonix</code> create <code>.onion</code> service config file in <code>/usr/local/etc/torrc.d/40_remote_support.conf</code>
+<ul><li><a class="external text" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" rel="noreferrer noopener" target="_blank"><code>anon-auth-autogen</code></a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul></li>
+<li>dom0 <code>qvm-run</code> <code>sys-whonix</code> restart Tor <sup class="reference" id="cite_ref-tor-reload-bug_1-0"><a href="#cite_note-tor-reload-bug-1">[1]</a></sup></li>
+<li>dom0 <code>qvm-start</code> <code>remote-support-provider-server</code> VM</li>
+<li>dom0 <code>qvm-run</code> <code>remote-support-provider-server</code> VM install openssh-server</li>
+<li>make openssh-server reachable through <code>.onion</code> running inside <code>sys-whonix</code> VM</li>
+<li>dom0 <code>wormhole send</code> <code>connection.zip</code>
+<ul><li>write wormhole code into script variable</li></ul></li>
+<li><code>connection.zip</code> contains
+<ul><li><code>.onion</code> hostname of remote support provider</li>
+<li><code>~/.ssh/known_hosts</code></li>
+<li><code>.auth_private</code> file (private key) for authenticated Tor onion service</li>
+<li>ssh key</li></ul></li>
+<li>tell remote support receiver out of band (telephone, chat, e-mail) the wormhole code</li>
+<li>wait for remote support receiver to start the remote support receiver tool and to enter the wormhole code</li>
+<li>inside <code>remote-support-provider-server</code> VM: x2go connect to remote support receiver localhost:port [reverse ssh]</li></ul>
+<h2><span class="mw-headline" id="remote-support-receiver">remote-support-receiver</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=11.html" title="Edit section: remote-support-receiver">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On remote support receiver machine.
+</p>
+<ul><li>dom0 <code>sudo dnf install x2go-server</code></li>
+<li>dom0 <code>qvm-start</code> <code>sys-whonix</code></li>
+<li>dom0 <code>wormhole receive</code> <code>connection.zip</code>
+<ul><li>Must be done in dom0. Not <code>sys-whonix</code>. Because goal is <code>sys-whonix</code> to be untrusted.</li></ul></li>
+<li>dom0 install <code>~/.ssh/known_hosts</code></li>
+<li>dom0 <code>qvm-run</code> <code>sys-whonix</code> install <code>.auth_private</code> file (private key)
+<ul><li><code>sudo sourcefile=~/user.auth_private anon-server-to-client-install</code> (adjust path)</li></ul></li>
+<li>dom0 <code>qvm-run</code> <code>sys-whonix</code> test connection to <code>.onion</code></li>
+<li>dom0 test connection to <code>.onion</code></li>
+<li>dom0 reverse ssh connect to remote support provider <code>.onion</code></li>
+<li>There is now an open port on remote support receiver machine over ssh and over <code>.onion</code> available to remote support provider.</li></ul>
+<h2><span class="mw-headline" id="qubes-remote-support-provider-gui">qubes-remote-support-provider-gui</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=12.html" title="Edit section: qubes-remote-support-provider-gui">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Not needed. Remote support provider can use CLI tools for connection setup. Would be encapsulated into a simple CLI call and telling the remote support receiver the wormhole code. Once the remote support receiver connected to the remote support provider (reverse SSH), the remote support provider can use a $VNC viewer (which is graphical) to connect.)
+</p>
+<h2><span class="mw-headline" id="notes">notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=13.html" title="Edit section: notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Can use two wormhole codes if not avoidable.</li>
+<li>Automatically re-connect if reverse SSH is down.</li></ul>
+<h1><span class="mw-headline" id="ssh_keys">ssh keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=14.html" title="Edit section: ssh keys">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>challenges:
+</p>
+<ul><li>Have to manage file <code>/root/.ssh/authorized_keys</code> using scripts.
+<ul><li>Use secure, long, script generated passwords instead?</li></ul></li></ul>
+<h1><span class="mw-headline" id="send_access_into_to_gpg_agent">send access into to gpg agent</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=15.html" title="Edit section: send access into to gpg agent">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>&gt; optionally a feature to send access info to the support agent from the GUI (for example GPG encrypted email)
+</p><p>Patrick said: I would discourage that. Challanges:
+</p>
+<ul><li>calling e-mail / gpg from command line</li>
+<li>calling e-mail / gpg from dom0 or adminVM?</li></ul>
+<h1><span class="mw-headline" id="Preliminary_Work_Done">Preliminary Work Done</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=16.html" title="Edit section: Preliminary Work Done">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-auth-autogen" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-auth-autogen" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-auth-autogen</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-auth-autogen" href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-auth-autogen" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://forums.whonix.org/t/onion-services-authentication/975/4" href="https://forums.whonix.org/t/onion-services-authentication/975/4" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/onion-services-authentication/975/4</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/onion-services-authentication/975/4" href="https://web.archive.org/web/https://forums.whonix.org/t/onion-services-authentication/975/4" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="../Onion_Services#Configure_Onion_Services_Authentication" href="../Onion_Services" rel="noreferrer noopener" target="_blank">../Onion_Services#Configure_Onion_Services_Authentication</a> <sup><a data-href="https://web.archive.org/web/../Onion_Services#Configure_Onion_Services_Authentication" href="https://web.archive.org/web/../Onion_Services" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-server-to-client-install" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-server-to-client-install" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-server-to-client-install</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-server-to-client-install" href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/usr/bin/anon-server-to-client-install" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn" href="https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn" href="https://web.archive.org/web/https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a data-href="/wiki/SSH" href="../SSH.html" title="SSH">SSH</a></li>
+<li><a data-href="/wiki/Remote_Administration" href="../Remote_Administration.html" title="Remote Administration">Remote Administration</a></li></ul>
+<h1><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=17.html" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a data-href="/wiki/Dev/Qubes#ssh_into_Qubes_dom0" href="../Dev/Qubes.html" title="Dev/Qubes">Dev/Qubes#ssh_into_Qubes_dom0</a></li>
+<li><a class="external free" data-href="https://github.com/fepitre/qubes-remote-desktop" href="https://github.com/fepitre/qubes-remote-desktop" rel="noreferrer noopener" target="_blank">https://github.com/fepitre/qubes-remote-desktop</a> <sup><a data-href="https://web.archive.org/web/https://github.com/fepitre/qubes-remote-desktop" href="https://web.archive.org/web/https://github.com/fepitre/qubes-remote-desktop" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<h1><span class="mw-headline" id="x2go">x2go</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=18.html" title="Edit section: x2go">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="pros">pros</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=19.html" title="Edit section: pros">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Easy to use, built-in support for using over SSH.</li>
+<li>Connection settings for slow/high latency connections (i.e. hopefully useful over Tor).</li></ul>
+<h2><span class="mw-headline" id="x2go_bugs">x2go bugs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=20.html" title="Edit section: x2go bugs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Happening with hardened SSH config file.
+</p><p><a class="external free" data-href="https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1349" href="https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1349" rel="noreferrer noopener" target="_blank">https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1349</a> <sup><a data-href="https://web.archive.org/web/https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1349" href="https://web.archive.org/web/https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1349" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<pre>NXPROXY - Version 3.5.99.19
+
+Copyright (c) 2001, 2011 NoMachine (http://www.nomachine.com)
+Copyright (c) 2008-2014 Oleksandr Shneyder &lt;o.shneyder@phoca-gmbh.de&gt;
+Copyright (c) 2014-2016 Ulrich Sibiller &lt;uli42@gmx.de&gt;
+Copyright (c) 2014-2016 Mihai Moldovan &lt;ionic@ionic.de&gt;
+Copyright (c) 2011-2016 Mike Gabriel &lt;mike.gabriel@das-netzwerkteam.de&gt;
+Copyright (c) 2015-2016 Qindel Group (http://www.qindel.com)
+
+NXCOMP, NX protocol compression and NX extensions to this software
+are copyright of the aforementioned persons and companies.
+
+Redistribution and use of the present software is allowed according
+to terms specified in the file LICENSE.nxcomp which comes in the
+source distribution.
+
+All rights reserved.
+
+NOTE: This software has received contributions from various other
+contributors, only the core maintainers and supporters are listed as
+copyright holders. Please contact us, if you feel you should be listed
+as copyright holder, as well.
+
+NX protocol compression is derived from DXPC project.
+
+Copyright (c) 1995,1996 Brian Pane
+Copyright (c) 1996,1997 Zachary Vonler and Brian Pane
+Copyright (c) 1999 Kevin Vigor and Brian Pane
+Copyright (c) 2000,2003 Gian Filippo Pinzari and Brian Pane
+
+All rights reserved.
+
+See https://github.com/ArcticaProject/nx-libs for more information.
+
+Info: Proxy running in server mode with pid '5072'.
+Session: Starting session at 'Mon Jul  6 18:19:31 2020'.
+Info: Using errors file '/home/user/.x2go/S-user-50-1594059610_stDXFCE_dp24/sessions'.
+Info: Using stats file '/home/user/.x2go/S-50/stats'.
+Loop: WARNING! Overriding auxiliary X11 port with new value '1'.
+Warning: Overriding auxiliary X11 port with new value '1'.
+Info: Using abstract X11 socket in kernel namespace for accessing DISPLAY=:0.
+Info: Connecting to remote host 'localhost:51683'.
+Info: Connected to remote proxy on FD#5.
+Loop: WARNING! Non printable character decimal '10' received in remote data from FD#5.
+Warning: Non printable character decimal '10' received in remote data from FD#5.
+Connection timeout, abortingInfo: Aborting the procedure due to signal '15'.
+Session: Session terminated at 'Mon Jul  6 18:20:01 2020'.
+</pre>
+<ul><li><a class="external free" data-href="https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1417" href="https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1417" rel="noreferrer noopener" target="_blank">https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1417</a> <sup><a data-href="https://web.archive.org/web/https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1417" href="https://web.archive.org/web/https://bugs.x2go.org/cgi-bin/bugreport.cgi?bug=1417" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>can connect to local desktop but cannot spawn new session</li>
+<li>TODO: Qubes R4.1 testing version</li></ul>
+<pre>Unable to execute: rdesktop  -g 800x600  
+</pre>
+<h1><span class="mw-headline" id="magic-wormhole">magic-wormhole</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=21.html" title="Edit section: magic-wormhole">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>A challenge is to get magic-wormhole into Qubes R4.0 dom0 since Fedora 25 (which Qubes R4.0 dom0 is based on) has no package for magic-wormhole and Fedora does not offer backports.
+</p>
+<ul><li>there is no appimage / flatpak / standalone / statically compiled / portable version of magic-wormhole for Linux available for download - <a class="external free" data-href="https://github.com/warner/magic-wormhole/issues/204" href="https://github.com/warner/magic-wormhole/issues/204" rel="noreferrer noopener" target="_blank">https://github.com/warner/magic-wormhole/issues/204</a> <sup><a data-href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/204" href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/204" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>pyinstaller: not in packages.debian.org</li>
+<li>magic-wormhole bug report: <a class="external text" data-href="https://github.com/warner/magic-wormhole/issues/390" href="https://github.com/warner/magic-wormhole/issues/390" rel="noreferrer noopener" target="_blank">Debian pyinstaller ModuleNotFoundError: No module named '__main__.cli'; '__main__' is not a package</a> <sup><a data-href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/390" href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/390" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>nuitka: packages.debian.org. <a class="external free" data-href="https://github.com/warner/magic-wormhole/issues/255" href="https://github.com/warner/magic-wormhole/issues/255" rel="noreferrer noopener" target="_blank">https://github.com/warner/magic-wormhole/issues/255</a> <sup><a data-href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/255" href="https://web.archive.org/web/https://github.com/warner/magic-wormhole/issues/255" rel="noreferrer noopener" target="_blank">[archive]</a></sup> TODO</li>
+<li>cx_Freeze: not in packages.debian.org</li>
+<li>bbFreeze: not in packages.debian.org</li>
+<li>alternative <a class="external text" data-href="https://github.com/schollz/croc" href="https://github.com/schollz/croc" rel="noreferrer noopener" target="_blank">croc</a> <sup><a data-href="https://web.archive.org/web/https://github.com/schollz/croc" href="https://web.archive.org/web/https://github.com/schollz/croc" rel="noreferrer noopener" target="_blank">[archive]</a></sup> (standalone, no dependency hell) but <a class="external text" data-href="https://github.com/schollz/croc/issues/225" href="https://github.com/schollz/croc/issues/225" rel="noreferrer noopener" target="_blank">no signed git tags yet</a> <sup><a data-href="https://web.archive.org/web/https://github.com/schollz/croc/issues/225" href="https://web.archive.org/web/https://github.com/schollz/croc/issues/225" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<h1><span class="mw-headline" id="CLI_GUI_Communication_Design">CLI GUI Communication Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=22.html" title="Edit section: CLI GUI Communication Design">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>TODO: plan how this CLI script would interact with the GUI
+</p><p>idea:
+</p><p>1) stdout could just show the wormhole password (currently implemented)
+</p><p>2) stderr could contain debug information (the bash xtrace) (currently implemented)
+</p><p>3) Or better communicate with the GUI thorugh the file system?
+The GUI could watch for a file /path/to/wormhole_password and once
+created, show that to the user.
+Also /path/to/error_output could contain human readable error summaries.
+Then stdout/stderr could be shown in GUI when a user clicks "show debug
+information". (Suggested method.)
+</p>
+<h1><span class="mw-headline" id="CLI_GUI_Timeout_Handling_Design">CLI GUI Timeout Handling Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=23.html" title="Edit section: CLI GUI Timeout Handling Design">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>How should timeouts be handled?
+</p>
+<ul><li>One way would be using a lot command `timeout` inside this script. That would make this script look more complex.</li>
+<li>This script could stay as is and another wrapper script could handle timeouts.</li>
+<li>Or the GUI could handle timeouts. If timeout is reached, just show debug info. This is hopefully only required in development.</li></ul>
+<h1><span class="mw-headline" id="Proof_of_Concept">Proof of Concept</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=24.html" title="Edit section: Proof of Concept">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="ssh_and_VNC_into_Qubes_dom0">ssh and VNC into Qubes dom0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=25.html" title="Edit section: ssh and VNC into Qubes dom0">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Using the term VNC loosely here as these instructions are using x2go.
+</p>
+<h3><span class="mw-headline" id="remote-support-receiver_sys-whonix_setup">remote-support-receiver sys-whonix setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=26.html" title="Edit section: remote-support-receiver sys-whonix setup">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p><b>1.</b> <code>sys-whonix</code> <code>qvm-connect-tcp</code> listener setup
+</p><p>Inside <code>sys-whonix</code> VM. Start <code>socat</code> listener. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p>
+<pre>qvm-connect-tcp 22:dom0:22
+</pre>
+<p>Should show:
+</p>
+<blockquote>
+<p>Binding TCP 'dom0:22' to 'localhost:22'...
+</p>
+</blockquote>
+<p><b>3.</b> setup authenticated onion v3
+</p><p><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Inside <code>sys-whonix</code> VM.
+</p>
+<pre>sudo virtport=22 hsport=22 hsname=remote_support client=1 anon-auth-autogen
+</pre>
+<p>Will show.
+</p>
+<blockquote>
+<p>INFO: Created torconffile '/usr/local/etc/torrc.d/43_remote_support_hs_autogen.conf'.<br/>
+INFO: Reloading Tor.<br/>
+INFO: Giving Tor 5 seconds to create hidden service file.<br/>
+INFO: Installed ".auth" file (public key) '/var/lib/tor_autogen/remote_support/1.auth' to '/var/lib/tor_autogen/remote_support/1.auth' to allow client '1' to access hsname 'remote_support' onion_url 'xxx.onion'.<br/>
+INFO: Reloading Tor again to activate ".auth" (public key) file for client '1'.<br/>
+INFO: You need to provide client '1' with ".auth_private" file (private key) '/var/lib/tor_autogen/remote_support/1.auth_private'.<br/>
+INFO: Visitors that use Whonix could store '/var/lib/tor_autogen/remote_support/1.auth_private' in '/home/user/1.auth_private' and then run 'sudo sourcefile=/home/user/1.auth_private anon-server-to-client-install'.<br/>
+</p>
+</blockquote>
+<p><b>4.</b> restart Tor
+</p><p>Inside <code>sys-whonix</code> VM.
+</p><p><sup class="reference" id="cite_ref-tor-reload-bug_1-1"><a href="#cite_note-tor-reload-bug-1">[1]</a></sup>
+</p>
+<pre>sudo systemctl restart tor@default
+</pre>
+<p><b>5.</b> get onion v3 domain name
+</p><p>Inside <code>sys-whonix</code> VM.
+</p>
+<pre>sudo cat /var/lib/tor/remote_support/hostname
+</pre>
+<h3><span class="mw-headline" id="remote-support-receiver_dom0_setup">remote-support-receiver dom0 setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=27.html" title="Edit section: remote-support-receiver dom0 setup">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>1.</b> In dom0. Install packages.
+</p><p>Optional. Some tool to simplify copying files from a VM to dom0 will later greatly simplify the setup.
+</p>
+<pre>mkdir -p ~/bin
+</pre>
+<pre>nano ~/bin/qubes-copy-from-vm 
+</pre>
+<pre>#!/bin/bash
+qvm-run --user root --pass-io "$1" "cat $2" &gt; "$3"
+</pre>
+<pre>chmod +x ~/bin/qubes-copy-from-vm
+</pre>
+<p><b>2.</b> In dom0. Install packages. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p>
+<pre>sudo qubes-dom0-update openssh-server x2goserver x2goserver-xsession
+</pre>
+<p><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</p><p><b>3.</b> dom0 SSH server configuration hardening
+</p><p>In dom0.
+</p><p>Optional.
+</p><p><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-brokenx2go_10-0"><a href="#cite_note-brokenx2go-10">[10]</a></sup>
+</p><p><b>4.</b> ssh PasswordAuthentication No
+</p><p>At least the following should be set.
+</p><p><code>/etc/ssh/sshd_config</code>
+</p>
+<pre>PasswordAuthentication No
+</pre>
+<p><b>5.</b> enable sshd
+</p><p>In dom0.
+</p>
+<pre>sudo systemctl enable sshd
+</pre>
+<p><b>6.</b> start sshd
+</p><p>In dom0.
+</p>
+<pre>sudo systemctl start sshd
+</pre>
+<p><b>7.</b> reload sshd
+</p><p>In dom0.
+</p><p><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p>
+<pre>sudo systemctl reload sshd
+</pre>
+<p><b>8.</b> check sshd status
+</p><p>In dom0.
+</p>
+<pre>sudo systemctl status sshd
+</pre>
+<p><b>9.</b> dom0 x2go setup
+</p>
+<pre>sudo x2godbadmin --createdb
+</pre>
+<pre>sudo systemctl enable x2gocleansessions.service
+</pre>
+<pre>sudo systemctl start x2gocleansessions.service
+</pre>
+<p><b>10.</b> dom0 qrexec policy setup
+</p><p>In dom0.
+</p><p><sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p><p>Open file <code>/etc/qubes-rpc/policy/qubes.ConnectTCP</code> in an editor with root rights. 
+</p><p>Append.
+</p>
+<pre>sys-whonix dom0 allow,target=dom0
+</pre>
+<p>Save.
+</p><p><b>11.</b> dom0 ssh authorized_keys setup
+</p><p>Contents of <code>remote-support-provider</code> file <code>/home/user/.ssh/id_ed25519.pub</code> need to be transferred to dom0 <code>/home/user/.ssh/id_ed25519.pub</code>.
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p><p>In dom0. As user. Not root!
+</p>
+<pre>qubes-copy-from-vm sys-whonix /home/user/.ssh/id_ed25519.pub
+</pre>
+<p>In dom0. As user. Not root!
+</p>
+<pre>mkdir -p ~/.ssh
+</pre>
+<p>In dom0. As user. Not root!
+</p><p>WARNING: If you used ssh previously, you might want to append instead. The following command would overwrite your <code>~/.ssh/authorized_keys</code>.
+</p>
+<pre>mv id_ed25519.pub ~/.ssh/authorized_keys
+</pre>
+<p>In dom0. As user. Not root! <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p>
+<pre>sudo chmod --recursive og-rwx ~/.ssh
+</pre>
+<h3><span class="mw-headline" id="remote-support-provider_setup">remote-support-provider setup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=28" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=28.html" title="Edit section: remote-support-provider setup">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>remote-support-provider <code>sys-whonix</code> setup</b>
+</p><p><b>1.</b> get <code>1.auth_private</code>
+</p><p>Get <code>/var/lib/tor_autogen/remote_support/1.auth_private</code> from remote-support-receiver <code>sys-whonix</code> and copy to remote-support-provider <code>sys-whonix</code>.
+</p><p>Could use for example in remote-support-provider <code>sys-whonix</code> <code>sudo wormhole send /var/lib/tor_autogen/remote_support/1.auth_private</code> and in remote-support-provider <code>sys-whonix</code> <code>wormhole receive</code>.
+</p><p><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p><p><b>2.</b> authenticated onion v3 key installation
+</p><p>Move <code>1.auth_private</code> key to Tor onion v3 private key folder.
+</p><p>Inside remote-support-provider <code>sys-whonix</code> VM.
+</p>
+<pre>sudo sourcefile=/home/user/1.auth_private anon-server-to-client-install
+</pre>
+<p><b>remote-support-provider AppVM setup</b>
+</p><p><b>3.</b> <code>remote-support-provider</code> VM creation.
+</p><p>Create a VM named <code>remote-support-provider</code> (or any other name) based on <code>whonix-ws-15</code> TemplateVM with networking set to <code>sys-whonix</code>. Usual instructions for <a data-href="/wiki/Multiple_Whonix-Workstation" href="../Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation</a>. Could even skip VM creation and use an already existing VM <code>anon-whonix</code> instead.
+</p><p><b>4.</b> Install SSH client and x2go client.
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p>
+<pre>sudo apt install --no-install-recommends openssh-client x2goclient
+</pre>
+<p><b>5.</b> Create SSH key.
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p>
+<pre>ssh-keygen -t ed25519
+</pre>
+<p><b>6.</b> View id_ed25519 public key.
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p>
+<pre>cat /home/user/.ssh/id_ed25519.pub
+</pre>
+<p><b>7.</b> ssh client configuration hardening
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p><p>Optional. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> <sup class="reference" id="cite_ref-brokenx2go_10-1"><a href="#cite_note-brokenx2go-10">[10]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=29" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=29.html" title="Edit section: Usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=30" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=30.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>After making an SSH server available in Qubes dom0 as per above instructions it will be accessible through an anonymous <a data-href="/wiki/Onion_Services" href="../Onion_Services.html" title="Onion Services">onion service</a>.
+</p>
+<h3><span class="mw-headline" id="ssh">ssh</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=31" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=31.html" title="Edit section: ssh">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Test this first.
+</p><p>Inside <code>remote-support-provider</code> VM.
+</p><p>Qubes dom0 requires the SSH key being added to Qubes dom0 <code>~/.ssh/authorized_keys</code> as documented earlier on this page.
+</p>
+<pre>ssh xxx.onion
+</pre>
+<h3><span class="mw-headline" id="x2goclient">x2goclient</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=32" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=32.html" title="Edit section: x2goclient">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Moved to <a data-href="/wiki/Remote_Administration#x2goclient" href="../Remote_Administration.html" title="Remote Administration">Remote_Administration#x2goclient</a>.
+</p>
+<h2><span class="mw-headline" id="Test_Results">Test Results</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=33" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=33.html" title="Edit section: Test Results">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>All times are created with an external stopwatch and should have +/- 2 seconds human caused inaccuracy. 
+</p>
+<ul><li>Qubes R4.0
+<ul><li>ssh:
+<ul><li>ssh connection initialization takes 12 seconds.</li>
+<li>There is a 2 second delay after each simple command such as <code>ls</code>.</li>
+<li>Running a simple command such as <code>ls -la</code> in a folder with 60 files takes 2 seconds until results are drawn.</li>
+<li>Comparable to a SSH connection over clearnet.</li></ul></li>
+<li>x2go session type terminal:
+<ul><li>connection speed setting "modem":
+<ul><li>Establishing a connection takes 90 seconds.</li>
+<li>There is an two seconds delay between a keypress on inside <code>remote-support-provider</code> VM until it gets visible in the remote terminal.</li>
+<li>Running a simple command such as <code>ls -la</code> in a folder with 60 files takes 18 seconds until results are drawn.</li>
+<li>from opening the x2go viewer to having the full desktop contents drawn it takes 180 seconds</li></ul></li>
+<li>connection speed setting "WAN":
+<ul><li>time to open x2go viewer: 100 seconds</li>
+<li>delay from clicking menu bar to actually seeing menu bar: 6 seconds</li>
+<li>Running a simple command such as <code>ls -la</code> in a folder with 60 files takes 18 seconds until results are drawn.</li>
+<li>Redraw screen after pressing enter: 18 seconds</li></ul></li></ul></li>
+<li>This is <a data-href="/wiki/Remote_Administration#Test_Results" href="../Remote_Administration.html" title="Remote Administration">much faster</a> with <a data-href="/wiki/Non-Qubes-Whonix" href="../Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix</a> when following instructions for <a data-href="/wiki/Remote_Administration#SSH_into_Whonix_.E2.84.A2" href="../Remote_Administration.html" title="Remote Administration">SSH into Whonix</a> with <a data-href="/wiki/Remote_Administration#Graphical" href="../Remote_Administration.html" title="Remote Administration">x2go</a>. This might be because Qubes R4.0 dom0 is based Fedora 25 which ships an older version of x2go. It could also be because the x2go version of Qubes dom0 Fedora 25 is older than the x2go version in Debian buster based Whonix 15. The speed issues might be fixed with the release of Qubes R4.1 which will come with a more newer dom0 version of Fedora and thereby with a newer version of x2go.</li></ul></li>
+<li>Qubes R4.1
+<ul><li>Moved to <a data-href="/wiki/Remote_Administration#Test_Results_2" href="../Remote_Administration.html" title="Remote Administration">Remote_Administration#Test_Results_2</a>.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Debugging">Debugging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=34" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=34.html" title="Edit section: Debugging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Perhaps Exercise setting up a simple <a data-href="/wiki/Onion_Services" href="../Onion_Services.html" title="Onion Services">onion service</a> web server first.</li>
+<li><a data-href="/wiki/Remote_Administration#SSH_into_Whonix-Gateway" href="../Remote_Administration.html" title="Remote Administration">SSH into Whonix-Gateway</a> (conflicts with above Tor configuration)</li>
+<li>Could copy <code>remote-support-provider</code> folder <code>~/.ssh</code> key to <code>sys-whonix</code> and then use <code>ssh 127.0.0.1</code> directly inside <code>sys-whonix</code> to test if the SSH connection is functional. This was successfully tested during development. Useful to exclude any potential Tor connectivity issues.
+<ul><li>Same as above but can also be done using <code>x2goclient</code>.</li></ul></li>
+<li>dom0: <code>sudo journalctl -f -u sshd</code></li>
+<li>dom0: journalctl to watch qrexec logs</li></ul>
+<h1><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=35" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=35.html" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a class="external free" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system-preset/50-qubes-whonix.preset" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system-preset/50-qubes-whonix.preset" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system-preset/50-qubes-whonix.preset</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system-preset/50-qubes-whonix.preset" href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system-preset/50-qubes-whonix.preset" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-remote-support.service" href="https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-remote-support.service" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-remote-support.service</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-remote-support.service" href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/lib/systemd/system/qubes-whonix-remote-support.service" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-start" href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-start" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-start</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-start" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-start" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-stop" href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-stop" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-stop</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-stop" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-stop" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-status" href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-status" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-status</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-status" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-status" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-wormhole-helper" href="https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-wormhole-helper" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-wormhole-helper</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-wormhole-helper" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-remote-support/blob/master/qubes-remote-support-receiver-wormhole-helper" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" href="https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" href="https://web.archive.org/web/https://github.com/Whonix/qubes-whonix/blob/master/usr/bin/qubes-remote-support-provider" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<h1><span class="mw-headline" id="Debug_Scripts">Debug Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=36" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=36.html" title="Edit section: Debug Scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>As a connectivity test run <code>whonixcheck --leak-tests</code> in <code>sys-whonix</code> of remote-support-receiver and remote-support-provider due to Tor network issues. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup></li>
+<li><code>/var/lib/tor/remote_support</code></li>
+<li><code>/var/lib/tor_autogen/remote_support</code></li></ul>
+<h1><span class="mw-headline" id="Proof_of_Concept_Documentation">Proof of Concept Documentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=37" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=37.html" title="Edit section: Proof of Concept Documentation">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Moved to <a data-href="/wiki/Remote_Administration#Qubes_-_SSH_or_VNC_into_Qubes_dom0" href="../Remote_Administration.html" title="Remote Administration">Remote_Administration#Qubes_-_SSH_or_VNC_into_Qubes_dom0</a>.
+</p><p>(Latest version on this page was <a class="external free" data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60584#Proof_of_Concept_Documentation" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60584" rel="noreferrer noopener" target="_blank">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60584#Proof_of_Concept_Documentation</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60584#Proof_of_Concept_Documentation" href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=60584" rel="noreferrer noopener" target="_blank">[archive]</a></sup>].)
+</p>
+<h1><span class="mw-headline" id="Archive">Archive</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=38" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=38.html" title="Edit section: Archive">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Proof of concept, tested, functional version of this page using <code>socat</code> and unauthenticated Tor onion services: <a class="external free" data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" rel="noreferrer noopener" target="_blank">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>Proof of concept, tested, functional version of this page using <code>qvm-connect-tcp</code>and unauthenticated Tor onion services: <a class="external free" data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58610" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58610" rel="noreferrer noopener" target="_blank">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58610</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58610" href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58610" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;action=edit&amp;section=39.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-tor-reload-bug-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-tor-reload-bug_1-0">1.0</a></sup> <sup><a href="#cite_ref-tor-reload-bug_1-1">1.1</a></sup></span> <span class="reference-text">
+reload should be sufficient but probably some bug in Tor required restart instead.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+Useful for debugging.
+
+x) <code>sys-whonix</code> software installation
+
+Inside <code>sys-whonix</code> VM. Install ssh and x2go.
+
+<pre>sudo apt --no-install-recommends install openssh-client x2goclient
+</pre></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+Previously functional socat method.
+<pre>sudo socat TCP-LISTEN:22,fork EXEC:"qrexec-client-vm dom0 local.ssh"
+</pre>
+<p>Last tested, functional version of this page using <code>socat</code>: <a class="external free" data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" rel="noreferrer noopener" target="_blank">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" href="https://web.archive.org/web/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=58559" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+<pre>user@host:~$ qvm-connect-tcp
+Usage: /usr/bin/qvm-connect-tcp [localport]:[vmname]:[port]
+Bind localport to another VM port using the qubes.ConnectTCP RPC service.
+</pre></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+Symptom inside <code>sys-whonix</code> VM if refused/missing dom0 qrexec policy in dom0.
+
+<pre>2020/07/11 13:20:25 socat[2807] E waitpid(): child 2808 exited with status 126
+</pre></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
+See <a href="#Archive">archive</a> for unauthenticated onion v3.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">
+Initial proof of concept had <code>socat</code> added here too.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
+sftp-server required.
+
+<pre>Unable to find the sftp-server binary. Neither bundled, nor found in $PATH nor additional directories.
+
+If you are using a Linux-based operating system, please ask your system administrator to install the package containing the sftp-server binary. Common names are openssh, openssh-server or openssh-sftp-server depending upon distribution. 
+
+If the sftp-server binary is installed on your system, please report a bug mentioning its path on: 
+
+https://wiki.x2go.org/doku.php/wiki:bugs
+</pre></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">
+Currently broken.
+
+<s>Use <a data-href="/wiki/SSH#Server_Configuration_File" href="../SSH.html" title="SSH">this</a> file as <code>/etc/ssh/sshd_config</code>.</s></span>
+</li>
+<li id="cite_note-brokenx2go-10"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-brokenx2go_10-0">10.0</a></sup> <sup><a href="#cite_ref-brokenx2go_10-1">10.1</a></sup></span> <span class="reference-text">
+Currently broken due to <a href="#x2go_bugs">x2go bugs</a>.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">
+This should not be required only in cases where sshd was previously running.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">
+x) dom0 qrexec rpc setup
+
+In dom0. Setup qrexec rpc.
+
+Open file <code>/etc/qubes-rpc/local.ssh</code> in an editor with root rights. 
+
+Add.
+
+<pre>#!/bin/sh
+exec socat STDIO TCP-CONNECT:localhost:22
+</pre>
+<p>Save.
+</p><p>Make executable.
+</p><p>(Symptom if qubes-rpc is not executable.)
+</p>
+<pre>2020/07/10 14:00:35 socat[14462] E waitpid(): child 14463 exited with status 127
+</pre>
+<pre>sudo chmod +x /etc/qubes-rpc/local.ssh
+</pre>
+<p>Previous functional example using <code>socat</code>.
+</p><p>Open file <code>/etc/qubes-rpc/policy/local.ssh</code> in an editor with root rights.
+</p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="../Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>This box uses <a class="external text" data-href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank"><code>sudoedit</code> for better security</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. This is an example and other tools could also achieve the same goal. If this example does not work for you or if you are not using Whonix, please refer to <a data-href="/wiki/Software#Editor" href="../Software.html" title="Software">this link</a>.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudoedit /etc/qubes-rpc/policy/local.ssh</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /etc/qubes-rpc/policy/local.ssh</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
+</div>
+<p>Add.
+</p>
+<pre>sys-whonix dom0 allow
+</pre></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+<code>chmod og-rwx ~/.ssh/authorized_keys</code> was insufficient, sshd would refuse with insecure permissions error message.
+
+<code>chmod --recursive og-rwx ~/.ssh</code> was insufficient probably because file was owned by root, not user.</span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+During testing in remote-support-receiver <code>sys-whonix</code> VM.
+
+<pre>qvm-copy /var/lib/tor_autogen/remote_support/1.auth_private
+</pre>
+<p>In another <code>sys-whonix-two</code> remote-support-provider VM.
+</p>
+<pre>mv QubesIncoming/sys-whonix/1.auth_private ~/
+</pre></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+Currently broken.
+
+<s>Harden <code>/etc/ssh/ssh_config</code> as per <a data-href="/wiki/SSH#Client_Configuration_File" href="../SSH.html" title="SSH">here</a>.</s></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
+<blockquote>
+<p>[NOTICE] Guard guard-name ($fingerprint) is failing more circuits than
+usual. Most likely this means the Tor network is overloaded. Success counts are 200/300. Use counts are
+0/0. 294 circuits completed, 0 were unusable, 100 collapsed, and 280 timed out. For reference, your timeout
+cutoff is 60 seconds.
+</p>
+</blockquote></span>
+</li>
+</ol></div>
+<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:6712-0!canonicalwww.whonix.org and timestamp 20210310095608 and revision id 63168
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=63168" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=63168">https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&amp;oldid=63168</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -128,6 +771,7 @@ Retrieved from "<a data-href="../Dev/Qubes_Remote_Support" dir="ltr" href="../De
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
+<li id="footer-lastmod"> This page was last edited on 9 March 2021, at 11:49.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -147,5 +791,5 @@ Retrieved from "<a data-href="../Dev/Qubes_Remote_Support" dir="ltr" href="../De
 </footer>
 </div>
  </body>
-<!-- Cached 20210309202741 -->
+<!-- Cached 20210310095608 -->
 </html>

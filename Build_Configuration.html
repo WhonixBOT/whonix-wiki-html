@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="client-nojs" dir="ltr" lang="en"><!-- 
  single html processed by https://github.com/zTrix/webpage2html
- title: Design and Goals - Whonix
+ title: Build Configuration - Whonix
  url: ./Build_Configuration
 -->
 <head>
 <meta charset="utf-8"/>
-<title>Design and Goals - Whonix</title>
+<title>Build Configuration - Whonix</title>
 <link rel=stylesheet type=text/css href=style.css>
 
 
@@ -22,17 +22,17 @@
 <link data-href="//www.whonix.org/w/api.php?action=rsd" href="https://www.whonix.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="Design and Goals - Whonix" property="og:title"/>
+<meta content="Build Configuration - Whonix" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
-<meta content="http://www.whonix.org/wiki/Build_Configuration" property="og:url"/>
+<meta content="./Build_Configuration" property="og:url"/>
 <meta content="Non-Qubes-Whonix ™ Build Configuration. APT Repository, Onion Sources, APT Cache, VM Settings, Skip Steps, Source Code Changes" property="og:description"/>
-<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
 <meta content="2020-02-08T09:58:00Z" property="article:modified_time"/>
 <meta content="2020-02-08T09:58:00Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
-<meta content="Design and Goals - Whonix" property="twitter:title"/>
+<meta content="Build Configuration - Whonix" property="twitter:title"/>
 <meta content="Non-Qubes-Whonix ™ Build Configuration. APT Repository, Onion Sources, APT Cache, VM Settings, Skip Steps, Source Code Changes" property="twitter:description"/>
-<meta content="http://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
+<meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="twitter:image"/>
 <meta content="summary_large_image" property="twitter:card"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
@@ -114,15 +114,328 @@
 You can view its source [e]">View source</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Build_Configuration&amp;action=history" href="https://www.whonix.org/w/index.php?title=Build_Configuration&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
-<h1 class="title" id="firstHeading">Design and Goals</h1>
+<h1 class="title" id="firstHeading">Build Configuration</h1>
 <h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
-<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"></div><div class="printfooter">
-Retrieved from "<a data-href="./Build_Configuration" dir="ltr" href="./Build_Configuration">./Build_Configuration</a>"</div>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p><p>Note: All of the following build configuration steps are optional.
+</p><p><button onclick="expand()">Expand all</button>
+<button onclick="collapse()">Collapse all</button>
+
+</p><p><b>Introduction</b>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>Usually the build configuration does not need to be changed. Whonix ™ built from source code comes with safe defaults. Whonix's APT Repository will <b>not</b> be used.
+</p><p>The most interesting build configurations (Terminal-Only, NoDefaultApps etc.) are documented in the following chapters.
+</p><p>If you are interested, click on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<p>If build configurations were used earlier, it might be better to delete the build configuration folder. A few example filenames may have changed since the last build.
+</p>
+<pre>sudo rm -r /etc/whonix_buildconfig.d
+</pre>
+<p>Alternatively, experts can manually examine the <i><span style="background-color:#FBFBFB">/etc/whonix_buildconfig.d</span></i> folder and change its contents to suit their preferences.
+</p><p><i><span style="background-color:#FBFBFB">/etc/whonix_buildconfig.d</span></i> is a <a class="mw-redirect" data-href="/wiki/Whonix_Configuration_Files" href="./Whonix_Configuration_Files.html" title="Whonix Configuration Files">modular flexible .d style configuration folder</a>.
+</p><p>Less popular build configurations are documented in the <i><span style="background-color:#FBFBFB">buildconfig.d</span></i> folder and on the <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="./Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">Dev/Source_Code_Intro#Build_Configuration</a> page, but it is less user-friendly.
+</p><p>To avoid typos, it is best to copy and paste text when creating build configuration files. Take care that editors do not capitalize variable names which are supposed to be lower case during copy and paste procedures.
+</p>
+</div>
+</div>
+<p><b>Platforms Choice</b>
+</p><p>Advanced users can create 32-bit instead of 64-bit builds.
+</p><p>If you are interested, click on Expand on the right.
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<div class="mw-collapsible-content">
+<ul><li>Whonix ™ 14 and above is 64-bit by default. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li></ul>
+<p>To build Whonix ™ 14 32-bit, add the following build parameter.
+</p>
+<pre>--arch i386
+</pre>
+<ul><li>kFreeBSD is entirely untested and most likely needs additional work (see footnotes). <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li></ul>
+<ul><li>Whonix ™ for arm64 development discussion:<br/></li></ul>
+<p><a class="external free" data-href="https://forums.whonix.org/t/whonix-for-arm64" href="https://forums.whonix.org/t/whonix-for-arm64" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/whonix-for-arm64</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-for-arm64" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-for-arm64" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</p>
+<ul><li>Generally speaking, 64-bit builds cannot be created if running a 32-bit host kernel. See footnotes. <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup></li></ul>
+</div>
+</div>
+<p><span id="repository"></span>
+<b>Whonix ™ APT Repository</b>
+</p><p><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a>:<br/>
+<u>Whonix's APT Repository</u> is <u>disabled by default</u> since Whonix 7.3.3 for reasons of <a data-href="/wiki/Trust" href="./Trust.html" title="Trust">Trust</a>. Later on, users can decide to update Whonix Debian packages by building them from source code (greater security). Alternatively, Whonix's APT repository can be enabled right after building or after booting the build for the first time (greater convenience). To use the latter method which sacrifices security for convenience, click on Expand on the right side.
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<div class="mw-collapsible-content">
+<p>Do you want to <u>opt-in</u> for <u>Whonix's APT Repository</u>? This is set using an environment variable or <a data-href="/wiki/Dev/Source_Code_Intro#Build_Configuration" href="./Dev/Source_Code_Intro.html" title="Dev/Source Code Intro">build configuration</a>. Below is an example using an environment variable.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable'</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+<!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository testers'</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+<!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --repository developers'</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+<!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_APT_REPOSITORY_OPTS='--enable --codename buster'</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_APT_REPOSITORY_OPTS='--enable --codename buster'</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Add an environment variable as one normally does on that specific Linux platform. For example, to enable the Whonix stable repository during build, you could set <code>WHONIX_APT_REPOSITORY_OPTS</code> by interjecting it between <code>sudo</code> and the <code>./whonix_build</code> command. Below is an example. Do not use <code>[...]</code>. Replace it with other chosen build parameters (such as <code>--build</code>, <code>--target</code> etc.) after <code>./whonix_build</code>.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo WHONIX_APT_REPOSITORY_OPTS='--enable --repository stable' ./whonix_build [...]</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
+</div>
+</div>
+<p><b>APT Onion Build Sources</b>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>For better build security, you can also use onions apt sources for building Whonix ™.
+</p><p>If you are interested, click on Expand on the right. 
+</p>
+<div class="mw-collapsible-content">
+<p><b>This does not ensure all of Whonix's build process will be torified!</b>
+</p><p>Whonix ™ 14 and above only:
+</p>
+<pre>--connection onion
+</pre>
+</div>
+</div>
+<p><b>APT Cache</b>
+</p><p><br/>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>Using an apt cache will greatly improve build speed when building several times in a row (e.g. when debugging, during development).
+</p><p>If you are interested, click on Expand on the right.
+</p>
+<div class="mw-collapsible-content">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>torified apt-cacher-ng</b>
+</p><p>The following torified apt-cacher-ng setup only has to be applied, if you are building using onion apt sources using <code>--connection onion</code>.
+</p><p>However, if you are building behind a Tor transparent proxy such as Whonix-Gateway ™, you can use the simpler clearnet apt-cacher-ng instructions below instead. 
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;"><img alt="Ambox notice.png" data-src="/w/images/thumb/c/c8/Ambox_notice.png/40px-Ambox_notice.png" data-srcset="/w/images/thumb/c/c8/Ambox_notice.png/60px-Ambox_notice.png 1.5x, /w/images/thumb/c/c8/Ambox_notice.png/80px-Ambox_notice.png 2x" decoding="async" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAulBMVEUAAAAzZsw0ZsszZswyZswzZswzZswzZswzZswzZcwzZsszZswzZswzZsszZswyZswzZswzZswzZcszZswyZcwyZswzZswyZswzZswzZswyZswzZswyZcwzZswzZcszZsszZswzZswzZsszZswzZswzZswyZcwyZswzZswzZswzZswzZswyZcwyZswzZswzZswzZswzZssyZswzZswyZcwyZcwzZcwzZswzZswzZcszZsszZsszZcwzZsw3jrLmAAAAPXRSTlMABQYLEhITFBUaGx8pKio0PktMUlNTXGBha2xwcXF8fIWPlpaYmZ2dpKytwsPDzNfh5ufr7/Dw9PX39/r7MMeHewAAAQ1JREFUOMuN1dtSwjAUheFfq4K2KojiARGqFNFoqBalHvb7v5YXKtO0abvXZeab7kkyWQUn4TAx9uXN2mQUUZvg0koh6U3Xz8aZlJLHnao7Xoon2aDsrqUmd9uOS6Q2JtA5R46lMfebfbjrAO7Kxd+5LNtgfuAdXIWyAAiydigRcCWKJIDVwHVAqHEiJwx1MPZcim8z8ozRwZVnL14ovGrhuxaqRyvhh/Z4LCMdnBHp4CmkGvi1BxMNfAC6uQL2AOJ2aADoZK3w6PcZDtrg9P9h30pjzKYptkyTS3cL3dgg09Bp0Xnt3J1SQZ7nXjelkv2F53OH3haPknVRfT/26v8L/fhpJSLyaWdnbtH/AHfsGBrJbGMZAAAAAElFTkSuQmCC" width="40"/></a> If you skip these steps of setting up a torified apt-cacher-ng, you must below drop and not use <code>REPO_PROXY=<a class="external free" data-href="http://127.0.0.1:3142" href="http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">http://127.0.0.1:3142</a> <sup><a data-href="https://web.archive.org/web/http://127.0.0.1:3142" href="https://web.archive.org/web/http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">[archive]</a></sup></code>.
+</p>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> Note, this neither torifies all of the build script's connections nor hides Tor from your ISP!
+</p>
+</div>
+<p>Install apt-cacher-ng-, torsocks and tor.
+</p>
+<pre>sudo apt-get install apt-cacher-ng torsocks tor
+</pre>
+<p>Create folder apt-cacher-ng systemd drop-in folder <code>/lib/systemd/system/apt-cacher-ng.service.d</code>.
+</p>
+<pre>sudo mkdir -p /lib/systemd/system/apt-cacher-ng.service.d
+</pre>
+<p>Open file <code>/lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</code> in an editor with root rights.
+</p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>This box uses <a class="external text" data-href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank"><code>sudoedit</code> for better security</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" href="https://web.archive.org/web/https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation/7599" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. This is an example and other tools could also achieve the same goal. If this example does not work for you or if you are not using Whonix, please refer to <a data-href="/wiki/Software#Editor" href="./Software.html" title="Software">this link</a>.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudoedit /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudoedit /lib/systemd/system/apt-cacher-ng.service.d/50_user.conf</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
+</div>
+<p>Add.
+</p>
+<pre>[Service]
+ExecStart=torsocks /usr/sbin/apt-cacher-ng SocketPath=/run/apt-cacher-ng/socket -c /etc/apt-cacher-ng ForeGround=1
+</pre>
+<p>Save.
+</p><p>Reload systemd.
+</p>
+<pre>sudo systemctl daemon-reload
+</pre>
+<p>Restart apt-cacher-ng.
+</p>
+<pre>sudo systemctl apt-cacher-ng restart
+</pre>
+</div>
+</div>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p><b>clearnet apt-cacher-ng</b>
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<pre>sudo apt-get install apt-cacher-ng
+</pre>
+<p>Be sure to have a firewall, so the whole internet can not use the apt-cacher-ng service.
+</p><p>Prepend <code>REPO_PROXY=<a class="external free" data-href="http://127.0.0.1:3142" href="http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">http://127.0.0.1:3142</a> <sup><a data-href="https://web.archive.org/web/http://127.0.0.1:3142" href="https://web.archive.org/web/http://127.0.0.1:3142" rel="noreferrer noopener" target="_blank">[archive]</a></sup></code> before the build command.
+</p>
+<pre>sudo REPO_PROXY=http://127.0.0.1:3142 ./whonix_build ...
+</pre>
+<p>When building inside a non-Whonix VM, an apt cache can be used on the host. In that case, adjust the IP accordingly and manually test that it is reachable. When building inside a (Whonix ™) VM, just install the apt cache inside the VM and point to a localhost apt cache.
+</p><p>From 14.0.1.0.7-developers-only and above Whonix automatically uses apt-cacher-ng.
+</p>
+</div>
+</div>
+</div>
+</div>
+<p><br/>
+</p><p><b>VM Settings</b>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<div class="mw-collapsible-content">
+<p>This is only relevant for VM builds.
+</p><p>Several examples are below. Values can be changed to suit user preferences.
+</p><p>VirtualBox's --vmsize option (virtual RAM).
+</p>
+<pre>--vmram 128
+</pre>
+<p>VirtualBox's --vram option (virtual video RAM).
+</p>
+<pre>--vram 12
+</pre>
+<p>grml-debootstrap's --vmsize option.
+</p>
+<pre>--vmsize 200G
+</pre>
+<p>grml-debootstrap's --filesystem option.
+</p>
+<pre>--file-system ext4
+</pre>
+<p>grml-debootstrap's --hostname option. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p>
+<pre>--hostname host
+</pre>
+<p>grml-debootstrap's --password option.
+</p>
+<pre>--os-password changeme
+</pre>
+<p>grml-debootstrap's --debopt option.
+</p>
+<pre>--debopt "--verbose"
+</pre>
+<p><br/>
+</p>
+</div>
+</div>
+<p><b>Skip Steps</b>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<div class="mw-collapsible-content">
+<pre>--sanity-tests false
+</pre>
+</div>
+</div>
+<p><b>Source Code Changes</b>
+</p><p><b>This is only required if changes were made to the Whonix source folder! In that case click on Expand on the right.</b> <br/>
+<b>This is not required if only a customized build configuration was added to the <span style="border:1px dotted #005cb9">/etc/whonix_buildconfig.d</span> folder.</b>
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<div class="mw-collapsible-content">
+<p>If changes were made to the Whonix source code, it is the easiest to use the following build parameter.
+</p>
+<pre>--allow-uncommitted true
+</pre>
+<p>Or if not building from a git tag, it is the easiest to use the following build parameter.
+</p>
+<pre>--allow-untagged true
+</pre>
+<p>Otherwise, changes must be committed to git first, before creating a git tag.
+</p>
+</div>
+</div>
+<p><br/>
+</p>
+<h1><span class="mw-headline" id="Footntoes">Footntoes</span></h1>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<a class="external text" data-href="https://forums.whonix.org/t/state-of-offical-64-bit-builds" href="https://forums.whonix.org/t/state-of-offical-64-bit-builds" rel="noreferrer noopener" target="_blank">State of official 64-bit builds</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/state-of-offical-64-bit-builds" href="https://web.archive.org/web/https://forums.whonix.org/t/state-of-offical-64-bit-builds" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+Don't get confused by the term <code>amd64</code>. It runs on both, Intel and AMD. <code>amd64</code> is only how Debian names the kernel. It works equally well on Intel and AMD.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+
+kFreeBSD (32-bit). 
+
+<pre>--arch kfreebsd-i386 --kernel kfreebsd-image --headers kfreebsd-headers
+</pre>
+<p>kFreeBSD (64-bit).
+</p>
+<pre>--arch kfreebsd-amd64 --kernel kfreebsd-image --headers kfreebsd-headers
+</pre></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/grml/grml-debootstrap/pull/13" href="https://github.com/grml/grml-debootstrap/pull/13" rel="noreferrer noopener" target="_blank">https://github.com/grml/grml-debootstrap/pull/13</a> <sup><a data-href="https://web.archive.org/web/https://github.com/grml/grml-debootstrap/pull/13" href="https://web.archive.org/web/https://github.com/grml/grml-debootstrap/pull/13" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">In this case, try installing the packages <span style="border:1px dotted #005cb9">linux-image-amd64</span> and <span style="border:1px dotted #005cb9">linux-headers-amd64</span> on your host, then boot the amd64 kernel by choosing it in the boot menu. The whole system does not require re-installation; just be sure to boot with an amd64 kernel. Alternatively, consider to re-install your host using amd64.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">The <a class="external text" data-href="https://github.com/Whonix/anon-base-files" href="https://github.com/Whonix/anon-base-files" rel="noreferrer noopener" target="_blank">anon-base-files</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/anon-base-files" href="https://web.archive.org/web/https://github.com/Whonix/anon-base-files" rel="noreferrer noopener" target="_blank">[archive]</a></sup> package will change this later on.</span>
+</li>
+</ol></div></div>
+<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:483-0!canonicalwww.whonix.org and timestamp 20210310165950 and revision id 54502
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Build_Configuration&amp;oldid=54502" dir="ltr" href="https://www.whonix.org/w/index.php?title=Build_Configuration&amp;oldid=54502">https://www.whonix.org/w/index.php?title=Build_Configuration&amp;oldid=54502</a>"</div>
 <div class="clear_both"></div>
 </div>
-<div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
+<div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Development" href="./Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
 </div>
 </div>
 </div>
@@ -130,6 +443,7 @@ Retrieved from "<a data-href="./Build_Configuration" dir="ltr" href="./Build_Con
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
+<li id="footer-lastmod"> This page was last edited on 8 February 2020, at 10:58.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -149,5 +463,5 @@ Retrieved from "<a data-href="./Build_Configuration" dir="ltr" href="./Build_Con
 </footer>
 </div>
  </body>
-<!-- Cached 20210309202638 -->
+<!-- Cached 20210310165950 -->
 </html>
