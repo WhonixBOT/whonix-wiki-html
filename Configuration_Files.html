@@ -29,8 +29,8 @@
 <meta content="./Configuration_Files" property="og:url"/>
 <meta content="Everything you should know about Configuration Drop-in Folders and Files." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/3/3b/Five-elements-379106640.jpg" property="og:image"/>
-<meta content="2020-12-26T10:02:15Z" property="article:modified_time"/>
-<meta content="2020-12-26T10:02:15Z" property="article:published_time"/>
+<meta content="2021-03-11T19:47:42Z" property="article:modified_time"/>
+<meta content="2021-03-11T19:47:42Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Configuration Files - Whonix" property="twitter:title"/>
 <meta content="Everything you should know about Configuration Drop-in Folders and Files." property="twitter:description"/>
@@ -221,10 +221,10 @@ allowing the user to keep their settings after updating Whonix ™.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo debsums -ce | debsums -ce</pre>
+<pre>sudo debsums -ce</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo debsums -ce | debsums -ce</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo debsums -ce</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -240,14 +240,14 @@ allowing the user to keep their settings after updating Whonix ™.
 <pre>package-name: changed-configuration-file
 </pre>
 <p>To re-install:
-</p><p>(Replace <code>package-name</code> with the actual name of the package such as <code>sdwdate</code>.)
+</p><p>(Replace <code>package-name</code> with the actual name of the package such as <code>sdwdate</code>.) <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>apt-get -o Dpkg::Options::=--force-confnew,confmiss install --reinstall package-name</pre>
+<pre>sudo apt-get -o Dpkg::Options::=--force-confnew,confmiss install --reinstall package-name</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get -o Dpkg::Options::=--force-confnew,confmiss install --reinstall package-name</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get -o Dpkg::Options::=--force-confnew,confmiss install --reinstall package-name</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -263,16 +263,16 @@ Installing new config file as you requested.
 <p>Re-run <code>sudo debsums -ce</code> and see if only configuration files are changed which you intend to be changed.
 </p>
 <h1><span class="mw-headline" id="Qubes_Persistence">Qubes Persistence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Configuration_Files&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;action=edit&amp;section=5.html" title="Edit section: Qubes Persistence">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>In the Qubes TemplateVM model, <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> any changes made to a <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/2489" href="https://github.com/QubesOS/qubes-issues/issues/2489" rel="noreferrer noopener" target="_blank">root filesystem of a TemplateBasedVM</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2489" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2489" rel="noreferrer noopener" target="_blank">[archive]</a></sup> are lost upon reboot. This is advantageous for several reasons: it saves time and disk space, and allows faster, centralized updates for applications that are usually found inside the root filesystem. However, certain directories are designed to persist between reboots in order to store files and settings. These directories are stored in <code>/rw</code>, include <code>/home/user</code> and <code>/usr/local</code> as well as additional directories defined by "bind directory" settings. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>In the Qubes TemplateVM model, <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> any changes made to a <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/2489" href="https://github.com/QubesOS/qubes-issues/issues/2489" rel="noreferrer noopener" target="_blank">root filesystem of a TemplateBasedVM</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2489" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/2489" rel="noreferrer noopener" target="_blank">[archive]</a></sup> are lost upon reboot. This is advantageous for several reasons: it saves time and disk space, and allows faster, centralized updates for applications that are usually found inside the root filesystem. However, certain directories are designed to persist between reboots in order to store files and settings. These directories are stored in <code>/rw</code>, include <code>/home/user</code> and <code>/usr/local</code> as well as additional directories defined by "bind directory" settings. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p><p><b>Table:</b> <i>Qubes R4 Inheritance and Persistence</i>
 </p>
 <table class="wikitable">
 <tbody><tr>
 <th scope="col">
 </th>
-<th scope="col"><b>Inheritance</b> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<th scope="col"><b>Inheritance</b> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
 </th>
-<th scope="col"><b>Persistence</b> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+<th scope="col"><b>Persistence</b> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </th></tr>
 <tr>
 <th scope="row">TemplateVM
@@ -289,7 +289,7 @@ Installing new config file as you requested.
 <td><code><i>/rw/</i></code> (includes <code><i>/home/</i></code> and <a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank"><code>bind-dirs</code></a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>)
 </td></tr>
 <tr>
-<th scope="row"><a class="external text" data-href="https://www.qubes-os.org/doc/glossary/#disposablevm-template" href="https://www.qubes-os.org/doc/glossary/" rel="noreferrer noopener" target="_blank">DisposableVM Template</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/glossary/#disposablevm-template" href="https://web.archive.org/web/https://www.qubes-os.org/doc/glossary/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+<th scope="row"><a class="external text" data-href="https://www.qubes-os.org/doc/glossary/#disposablevm-template" href="https://www.qubes-os.org/doc/glossary/" rel="noreferrer noopener" target="_blank">DisposableVM Template</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/glossary/#disposablevm-template" href="https://web.archive.org/web/https://www.qubes-os.org/doc/glossary/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </th>
 <td><code><i>/etc/skel/</i></code> to <code><i>/home/</i></code>
 </td>
@@ -319,15 +319,32 @@ Installing new config file as you requested.
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Configuration_Files&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;action=edit&amp;section=7.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.qubes-os.org/getting-started" href="https://www.qubes-os.org/getting-started" rel="noreferrer noopener" target="_blank">AppVMs (qubes) and TemplateVMs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/getting-started" href="https://web.archive.org/web/https://www.qubes-os.org/getting-started" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+In near future, after upgrades. Wrapper:
+
+<!-- Widget:CodeSelect start -->
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>apt-get-reset</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">apt-get-reset</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end --></p></span>
 </li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">How to make any file in a TemplateBasedVM persistent using bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.qubes-os.org/getting-started" href="https://www.qubes-os.org/getting-started" rel="noreferrer noopener" target="_blank">AppVMs (qubes) and TemplateVMs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/getting-started" href="https://web.archive.org/web/https://www.qubes-os.org/getting-started" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Upon creation.</span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://www.qubes-os.org/doc/bind-dirs/" href="https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">How to make any file in a TemplateBasedVM persistent using bind-dirs</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/bind-dirs/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
-<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Following shutdown.</span>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Upon creation.</span>
 </li>
-<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">Following shutdown.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://github.com/QubesOS/qubes-issues/issues/4175" href="https://github.com/QubesOS/qubes-issues/issues/4175" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-issues/issues/4175</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4175" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4175" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
 </ol></div></div>
@@ -364,7 +381,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://t.me/share/url?url=./Configuration_Files" href="https://t.me/share/url?url=./Configuration_Files" rel="noreferrer noopener" target="_blank"><img alt="Telegram-share.png" data-src="/w/images/thumb/5/5a/Telegram-share.png/55px-Telegram-share.png" data-srcset="/w/images/thumb/5/5a/Telegram-share.png/83px-Telegram-share.png 1.5x, /w/images/thumb/5/5a/Telegram-share.png/110px-Telegram-share.png 2x" decoding="async" height="20" src="data:image/png;base64,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" width="55"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Have you read our <a data-href="/wiki/Documentation" href="./Documentation.html" title="Documentation">Documentation</a>, <a class="new" data-href="/w/index.php?title=Design_Technical&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Design_Technical&amp;action=edit&amp;redlink=1.html" title="Design Technical (page does not exist)">Design</a> and <a data-href="/wiki/Dev/Developer_Portal" href="./Dev/Developer_Portal.html" title="Dev/Developer Portal">Developer Portal</a> links yet?
+<p>Did you know that anyone can edit the <a data-href="/wiki/Documentation" href="./Documentation.html" title="Documentation">Whonix ™ wiki</a> to improve it?
 </p>
 </div>
 <p><a data-href="./Configuration_Files" href="./Configuration_Files" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Configuration_Files" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Configuration_Files" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -376,7 +393,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=61752" dir="ltr" href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=61752">https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=61752</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=63292" dir="ltr" href="https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=63292">https://www.whonix.org/w/index.php?title=Configuration_Files&amp;oldid=63292</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -387,7 +404,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Configura
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 26 December 2020, at 11:02.</li>
+<li id="footer-lastmod"> This page was last edited on 11 March 2021, at 20:47.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -407,5 +424,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Configura
 </footer>
 </div>
  </body>
-<!-- Cached 20210310121045 -->
+<!-- Cached 20210311204449 -->
 </html>
