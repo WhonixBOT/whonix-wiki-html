@@ -29,8 +29,8 @@
 <meta content="../Dev/Build_Anonymity" property="og:url"/>
 <meta content="Staying anonymous while building Whonix ™ from source code." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/6/6d/Building-1089861640.jpg" property="og:image"/>
-<meta content="2020-12-26T10:02:42Z" property="article:modified_time"/>
-<meta content="2020-12-26T10:02:42Z" property="article:published_time"/>
+<meta content="2021-03-19T17:35:04Z" property="article:modified_time"/>
+<meta content="2021-03-19T17:35:04Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="Dev/Build Anonymity - Whonix" property="twitter:title"/>
 <meta content="Staying anonymous while building Whonix ™ from source code." property="twitter:description"/>
@@ -136,12 +136,12 @@
 <h1><span class="mw-headline" id="Build_Anonymity">Build Anonymity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=1.html" title="Edit section: Build Anonymity">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>This does only apply, if you are going to build Whonix ™ from source, and/or if you are going to redistribute Whonix ™ and/or if you are going to use Physical Isolation. This is not a Whonix ™ specific problem. Most projects do not even have a chapter about build anonymity. While building Whonix ™, software has to be downloaded. It is a unique selection of software and there is no way to make it non-unique. Therefore your <b>i</b>nternet <b>s</b>ervice <b>p</b>rovider (ISP) could guess, that you are building Whonix ™. This should not be of any concern in a free country (free by your own definition), if the content of your traffic is not being observed or logged.
 </p><p>Especially, but not exclusively, in case you want to redistribute Whonix ™, you might be interested to hide the fact, you are building Whonix ™ (i.e. you want to stay anonymous).
-</p><p>To prevent any kind of personally identifiable or even fingerprintable information leaking from the build system into the Whonix ™ images, it is recommended to build inside of an already torified Virtual Machine. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> You can build Whonix ™ inside an existing Whonix-Workstation ™, but it can also be built on a headless server.
+</p><p>To prevent any kind of personally identifiable or even fingerprintable information leaking from the build system into the Whonix ™ images, it is recommended to build inside of an already torified Virtual Machine. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> You can build Whonix ™ inside an existing Whonix-Workstation ™, but it can also be built on a headless server.
 </p><p>It is also recommended to build in an already torified Virtual Machine, because that prevents leaks from the build system, which could help an attacker (with root access to the Whonix-Workstation ™), to gather identifiable information about that build system, that could ultimately lead back to your identity.
-</p><p>Beginning with Whonix ™ 0.4.0, we use grml-debootstrap and chroot for virtual machine image creation. The grml-debootstrap source code tells, that it copies /etc/network/interfaces and /etc/resolv.conf into the chroot. grml-debootstrap also mounts a lot devices (/dev, /proc etc.) inside the chroot and later Whonix ™ chroot also mounts some devices. That's why it is recommended to build inside an already torified virtual machine.
+</p><p>Beginning with Whonix ™ 0.4.0, grml-debootstrap and chroot is being used for virtual machine image creation. The grml-debootstrap source code tells, that it copies /etc/network/interfaces and /etc/resolv.conf into the chroot. grml-debootstrap also mounts a lot devices (/dev, /proc etc.) inside the chroot and later Whonix ™ chroot also mounts some devices. That's why it is recommended to build inside an already torified virtual machine.
 </p><p>Building from source code naturally also leaves local traces on the disk, such as the source code itself and build dependencies. If that is of concern to you, it can be more easily disposed, when it is contained in a Virtual Machine.
-</p><p>It would also be possible to build directly on the host and torify all connections the scripts make, but we don't know what other grml-debootstrap/chroot related leaks there might be.
-</p><p>We know it is not the best solution to build inside a VM.
+</p><p>It would also be possible to build directly on the host and torify all connections the scripts make, but it is unknown what other grml-debootstrap/chroot related leaks there might be.
+</p><p>It is a known issue the build anonymity requires building inside a VM.
 </p>
 <h2><span class="mw-headline" id="VirtualBox_inside_VirtualBox">VirtualBox inside VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=2.html" title="Edit section: VirtualBox inside VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>See <a data-href="/wiki/Nested_Virtualization" href="../Nested_Virtualization.html" title="Nested Virtualization">Nested Virtualization</a>.
@@ -152,7 +152,11 @@
 <h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;action=edit&amp;section=4.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Yes, this creates a bootstrap, chicken or egg problem. To solve it you can either download already existing Whonix ™ binary builds or if you prefer to build from source, build a minimal torified machine yourself first while running any network traffic over Tor. Any help required with that? <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a> us. See also <a data-href="/wiki/Manually_Creating_Whonix" href="../Manually_Creating_Whonix.html" title="Manually Creating Whonix">Manually Creating Whonix ™</a>.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+Yes, this creates a bootstrap, chicken or egg problem. To solve it you can either download already existing Whonix ™ binary builds or if you prefer to build from source, build a minimal torified machine yourself first while running any network traffic over Tor. Any help required with that? <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a> us. See also <a data-href="/wiki/Manually_Creating_Whonix" href="../Manually_Creating_Whonix.html" title="Manually Creating Whonix">Manually Creating Whonix ™</a>.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+Whonix ™ build process attempts to not leak anything (such as <code>/etc/resolv.conf</code>) from the host system into the VM image since that would also a bug hindering the implementation of <a class="external text" data-href="https://reproducible-builds.org" href="https://reproducible-builds.org" rel="noreferrer noopener" target="_blank">reproducible builds</a> <sup><a data-href="https://web.archive.org/web/https://reproducible-builds.org" href="https://web.archive.org/web/https://reproducible-builds.org" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. However, in software nothing can be guaranteed with absolute certainty. By using a VM, this risk is minimized.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -200,7 +204,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=61809" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=61809">https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=61809</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=63590" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=63590">https://www.whonix.org/w/index.php?title=Dev/Build_Anonymity&amp;oldid=63590</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li></ul></div></div></div>
@@ -211,7 +215,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 26 December 2020, at 11:02.</li>
+<li id="footer-lastmod"> This page was last edited on 19 March 2021, at 18:35.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -231,5 +235,4 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </footer>
 </div>
  </body>
-<!-- Cached 20210315043324 -->
 </html>
