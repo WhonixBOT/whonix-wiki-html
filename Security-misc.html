@@ -29,8 +29,8 @@
 <meta content="./Security-misc" property="og:url"/>
 <meta content="Documentation for package security-misc." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/7/71/Securitymisc.jpg" property="og:image"/>
-<meta content="2021-04-03T16:34:28Z" property="article:modified_time"/>
-<meta content="2021-04-03T16:34:28Z" property="article:published_time"/>
+<meta content="2021-04-04T19:02:08Z" property="article:modified_time"/>
+<meta content="2021-04-04T19:02:08Z" property="article:published_time"/>
 <meta content="@Whonix" property="twitter:site"/>
 <meta content="security-misc - Enhances Miscellaneous Security Settings" property="twitter:title"/>
 <meta content="Documentation for package security-misc." property="twitter:description"/>
@@ -131,22 +131,28 @@
 <ul>
 <li class="toclevel-2 tocsection-3"><a href="#Reduce_Kernel_Information_Leaks"><span class="tocnumber">2.1</span> <span class="toctext">Reduce Kernel Information Leaks</span></a>
 <ul>
-<li class="toclevel-3 tocsection-4"><a href="#Whitelisting_Applications"><span class="tocnumber">2.1.1</span> <span class="toctext">Whitelisting Applications</span></a></li>
-<li class="toclevel-3 tocsection-5"><a href="#Disable_the_Whitelist"><span class="tocnumber">2.1.2</span> <span class="toctext">Disable the Whitelist</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-6"><a href="#SUID_Disabler_and_Permission_Hardener"><span class="tocnumber">2.2</span> <span class="toctext">SUID Disabler and Permission Hardener</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#hidepid"><span class="tocnumber">2.3</span> <span class="toctext">hidepid</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-8"><a href="#Experimental_Features"><span class="tocnumber">3</span> <span class="toctext">Experimental Features</span></a>
+<li class="toclevel-3 tocsection-4"><a href="#Whitelisting_Applications"><span class="tocnumber">2.1.1</span> <span class="toctext">Whitelisting Applications</span></a>
 <ul>
-<li class="toclevel-2 tocsection-9"><a href="#Remount_Secure"><span class="tocnumber">3.1</span> <span class="toctext">Remount Secure</span></a></li>
+<li class="toclevel-4 tocsection-5"><a href="#addgroup_method"><span class="tocnumber">2.1.1.1</span> <span class="toctext">addgroup method</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="#systemd"><span class="tocnumber">2.1.1.2</span> <span class="toctext">systemd</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#setgid_method"><span class="tocnumber">2.1.1.3</span> <span class="toctext">setgid method</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-10"><a href="#Installation_of_security-misc"><span class="tocnumber">4</span> <span class="toctext">Installation of security-misc</span></a></li>
-<li class="toclevel-1 tocsection-11"><a href="#selinux"><span class="tocnumber">5</span> <span class="toctext">selinux</span></a></li>
-<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Disable_the_Whitelist"><span class="tocnumber">2.1.2</span> <span class="toctext">Disable the Whitelist</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#SUID_Disabler_and_Permission_Hardener"><span class="tocnumber">2.2</span> <span class="toctext">SUID Disabler and Permission Hardener</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#hidepid"><span class="tocnumber">2.3</span> <span class="toctext">hidepid</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Experimental_Features"><span class="tocnumber">3</span> <span class="toctext">Experimental Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Remount_Secure"><span class="tocnumber">3.1</span> <span class="toctext">Remount Secure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Installation_of_security-misc"><span class="tocnumber">4</span> <span class="toctext">Installation of security-misc</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#selinux"><span class="tocnumber">5</span> <span class="toctext">selinux</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Stable_Features">Stable Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=1.html" title="Edit section: Stable Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -182,14 +188,62 @@
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end --></p></li>
 <li>Reboot required.</li>
-<li>A whitelist that allows specific applications to access <code>/sys</code> and <code>/proc/cpuinfo</code> is enabled by default to maintain basic functionality. For example, this allows the launching of applications like XFCE.</li></ul></li>
+<li>A whitelist that allows specific applications to access <code>/sys</code> and <code>/proc/cpuinfo</code> is enabled by default to maintain basic functionality. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> For example, this allows the launching of applications like XFCE.</li></ul></li>
 <li><u>Limitations of Solution</u>:
 <ul><li>Attackers which gained root compromise and/or malicious/compromised whitelisted applications have access to this information.</li>
-<li>Cannot hide <a class="external text" data-href="https://en.wikipedia.org/wiki/CPUID" href="https://en.wikipedia.org/wiki/CPUID" rel="noreferrer noopener" target="_blank">CPUID</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/CPUID" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/CPUID" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li></ul></li>
+<li>Cannot hide <a class="external text" data-href="https://en.wikipedia.org/wiki/CPUID" href="https://en.wikipedia.org/wiki/CPUID" rel="noreferrer noopener" target="_blank">CPUID</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/CPUID" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/CPUID" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li></ul></li>
 <li><u>Possible Future Enhancements</u>: <a data-href="/wiki/Dev/boot_modes" href="./Dev/boot_modes.html" title="Dev/boot modes">untrusted root</a></li></ul>
 <h3><span class="mw-headline" id="Whitelisting_Applications">Whitelisting Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=4.html" title="Edit section: Whitelisting Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>To whitelist applications, they must be run under the <code>sysfs</code> group (if allowing access to <code>/sys</code>) or the <code>cpuinfo</code> group (if allowing access to <code>/proc/cpuinfo</code>).
-</p><p>For example, to run a systemd service as the <code>sysfs</code> group, create a <a data-href="/wiki/Configuration_Files#Configuration_Drop-In_Folders" href="./Configuration_Files.html" title="Configuration Files">drop-in directory</a> and add the following.
+<p>To whitelist applications, they must be run under the <code>sysfs</code> group (if allowing access to <code>/sys</code>) and/or the <code>cpuinfo</code> group (if allowing access to <code>/proc/cpuinfo</code>).
+</p><p>Remember that any whitelisted applications add to the attack surface. An attacker can attempt to exploit a vulnerability in the whitelisted application(s) to gain access to hardware information.
+</p>
+<h4><span class="mw-headline" id="addgroup_method">addgroup method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=5.html" title="Edit section: addgroup method">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For example, to add user <code>user</code> to group <code>cpuinfo</code>, run the following command. (Note, this is weakening protections.)
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo addgroup user cpuinfo</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo addgroup user cpuinfo</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>For example, to add user <code>user</code> to group <code>sysfs</code>, run the following command. (Note, this is weakening protections.)
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo addgroup user sysfs</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo addgroup user sysfs</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Re-login required after changing groups. Easiest: reboot. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>For example, after reboot it would be possible to run the <code>cpu-info</code> utility (from Debian package <code>cpuinfo</code>).
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cpu-info</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cpu-info</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
+<h4><span class="mw-headline" id="systemd">systemd</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=6.html" title="Edit section: systemd">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For example, to run a systemd service as the <code>sysfs</code> group, create a <a data-href="/wiki/Configuration_Files#Configuration_Drop-In_Folders" href="./Configuration_Files.html" title="Configuration Files">drop-in directory</a> and add the following.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -205,7 +259,9 @@ SupplementaryGroups=sysfs</textarea>
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>To run a specific binary as the <code>sysfs</code> group, the binary must be owned by the <code>sysfs</code> group and be made setgid. To achieve this, change the ownership of the binary by running the following.
+</p>
+<h4><span class="mw-headline" id="setgid_method">setgid method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=7.html" title="Edit section: setgid method">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To run a specific binary as the <code>sysfs</code> group, the binary must be owned by the <code>sysfs</code> group and be made setgid. To achieve this, change the ownership of the binary by running the following.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -235,9 +291,8 @@ SupplementaryGroups=sysfs</textarea>
 <!-- Widget:CodeSelect end -->
 </p><p>The binary will now run with the permissions of the <code>sysfs</code> group and have access to <code>/sys</code>.
 </p><p>All of these steps can also be applied to the <code>cpuinfo</code> group.
-</p><p>Remember that any whitelisted applications add to the attack surface. An attacker can attempt to exploit a vulnerability in the whitelisted application(s) to gain access to hardware information.
 </p>
-<h3><span class="mw-headline" id="Disable_the_Whitelist">Disable the Whitelist</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=5.html" title="Edit section: Disable the Whitelist">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Disable_the_Whitelist">Disable the Whitelist</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=8.html" title="Edit section: Disable the Whitelist">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>In order to reduce the attack surface as much as possible, optionally the whitelist can be disabled entirely.
 </p><p>Open file <code>/etc/hide-hardware-info.d/30_whitelist.conf</code> in an editor with root rights.
 </p><p>(<a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>: In TemplateVM)
@@ -262,18 +317,18 @@ SupplementaryGroups=sysfs</textarea>
 <p>Uncomment the <code>sysfs_whitelist=0</code> and <code>cpuinfo_whitelist=0</code> sections to disable the whitelist.
 </p><p>Note that this setting will break many applications; for example, the desktop environment will not even start. Do not perform this action unless you understand the implications and can reverse the change.
 </p>
-<h2><span class="mw-headline" id="SUID_Disabler_and_Permission_Hardener">SUID Disabler and Permission Hardener</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=6.html" title="Edit section: SUID Disabler and Permission Hardener">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="SUID_Disabler_and_Permission_Hardener">SUID Disabler and Permission Hardener</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=9.html" title="Edit section: SUID Disabler and Permission Hardener">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>See <a data-href="/wiki/SUID_Disabler_and_Permission_Hardener" href="./SUID_Disabler_and_Permission_Hardener.html" title="SUID Disabler and Permission Hardener">SUID Disabler and Permission Hardener</a>.
 </p>
-<h2><span class="mw-headline" id="hidepid">hidepid</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=7.html" title="Edit section: hidepid">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="hidepid">hidepid</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=10.html" title="Edit section: hidepid">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>TODO: document
 </p><p>sudo systemctl enable proc-hidepid.service
 </p>
-<h1><span class="mw-headline" id="Experimental_Features">Experimental Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=8.html" title="Edit section: Experimental Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Experimental_Features">Experimental Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=11.html" title="Edit section: Experimental Features">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Unreleased. (Developers only.) Will flow into other repositories as per usual.
 </p><p><span id="suid"></span>
 </p>
-<h2><span class="mw-headline" id="Remount_Secure">Remount Secure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=9.html" title="Edit section: Remount Secure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Remount_Secure">Remount Secure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=12.html" title="Edit section: Remount Secure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Feature not ready!
 </p>
 <ul><li><a class="external free" data-href="https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" href="https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" href="https://web.archive.org/web/https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -295,7 +350,7 @@ SupplementaryGroups=sysfs</textarea>
 <!-- Widget:CodeSelect end -->
 </p><p><span id="install"></span>
 </p>
-<h1><span class="mw-headline" id="Installation_of_security-misc">Installation of security-misc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=10.html" title="Edit section: Installation of security-misc">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Installation_of_security-misc">Installation of security-misc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=13.html" title="Edit section: Installation of security-misc">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;"><img alt="Whonix / Kicksecure default admin password is: changeme" data-src="/w/images/thumb/c/c8/Ambox_notice.png/40px-Ambox_notice.png" data-srcset="/w/images/thumb/c/c8/Ambox_notice.png/60px-Ambox_notice.png 1.5x, /w/images/thumb/c/c8/Ambox_notice.png/80px-Ambox_notice.png 2x" decoding="async" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAulBMVEUAAAAzZsw0ZsszZswyZswzZswzZswzZswzZswzZcwzZsszZswzZswzZsszZswyZswzZswzZswzZcszZswyZcwyZswzZswyZswzZswzZswyZswzZswyZcwzZswzZcszZsszZswzZswzZsszZswzZswzZswyZcwyZswzZswzZswzZswzZswyZcwyZswzZswzZswzZswzZssyZswzZswyZcwyZcwzZcwzZswzZswzZcszZsszZsszZcwzZsw3jrLmAAAAPXRSTlMABQYLEhITFBUaGx8pKio0PktMUlNTXGBha2xwcXF8fIWPlpaYmZ2dpKytwsPDzNfh5ufr7/Dw9PX39/r7MMeHewAAAQ1JREFUOMuN1dtSwjAUheFfq4K2KojiARGqFNFoqBalHvb7v5YXKtO0abvXZeab7kkyWQUn4TAx9uXN2mQUUZvg0koh6U3Xz8aZlJLHnao7Xoon2aDsrqUmd9uOS6Q2JtA5R46lMfebfbjrAO7Kxd+5LNtgfuAdXIWyAAiydigRcCWKJIDVwHVAqHEiJwx1MPZcim8z8ozRwZVnL14ovGrhuxaqRyvhh/Z4LCMdnBHp4CmkGvi1BxMNfAC6uQL2AOJ2aADoZK3w6PcZDtrg9P9h30pjzKYptkyTS3cL3dgg09Bp0Xnt3J1SQZ7nXjelkv2F53OH3haPknVRfT/26v8L/fhpJSLyaWdnbtH/AHfsGBrJbGMZAAAAAElFTkSuQmCC" width="40"/></a> This chapter is only required for users which aren't users of Whonix or Kicksecure. That is because security-misc is installed by default in Whonix and Kicksecure.
 </p>
@@ -304,7 +359,7 @@ SupplementaryGroups=sysfs</textarea>
 </p>
 <ul><li>Debian <code>buster</code> installed.</li>
 <li>User account <code>user</code> exists.</li></ul>
-<p>Become root. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<p>Become root. <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -583,7 +638,7 @@ SupplementaryGroups=sysfs</textarea>
 </p>
 </div>
 </div>
-<h1><span class="mw-headline" id="selinux">selinux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=11.html" title="Edit section: selinux">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="selinux">selinux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=14.html" title="Edit section: selinux">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p><span id="Community_Support"></span>
 </p>
 <table class="wikitable" style="background-color: #fff;text-align: center">
@@ -600,14 +655,80 @@ SupplementaryGroups=sysfs</textarea>
 </tbody></table>
 <ul><li><a class="external free" data-href="https://github.com/Whonix/security-misc/pull/100" href="https://github.com/Whonix/security-misc/pull/100" rel="noreferrer noopener" target="_blank">https://github.com/Whonix/security-misc/pull/100</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/security-misc/pull/100" href="https://web.archive.org/web/https://github.com/Whonix/security-misc/pull/100" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://forums.whonix.org/t/restrict-hardware-information-to-root/7329/88" href="https://forums.whonix.org/t/restrict-hardware-information-to-root/7329/88" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-hardware-information-to-root/7329/88</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root/7329/88" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root/7329/88" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=12.html" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Security-misc&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;action=edit&amp;section=15.html" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://gitlab.com/whonix/security-misc/-/blob/master/lib/systemd/system/user@.service.d/sysfs.conf" href="https://gitlab.com/whonix/security-misc/-/blob/master/lib/systemd/system/user@.service.d/sysfs.conf" rel="noreferrer noopener" target="_blank">https://gitlab.com/whonix/security-misc/-/blob/master/lib/systemd/system/user@.service.d/sysfs.conf</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.com/whonix/security-misc/-/blob/master/lib/systemd/system/user@.service.d/sysfs.conf" href="https://web.archive.org/web/https://gitlab.com/whonix/security-misc/-/blob/master/lib/systemd/system/user@.service.d/sysfs.conf" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
 <ul><li><a class="external free" data-href="https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/26" href="https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/26" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/26</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/26" href="https://web.archive.org/web/https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/26" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://security.stackexchange.com/questions/220357/fake-output-of-cpuid-instruction" href="https://security.stackexchange.com/questions/220357/fake-output-of-cpuid-instruction" rel="noreferrer noopener" target="_blank">https://security.stackexchange.com/questions/220357/fake-output-of-cpuid-instruction</a> <sup><a data-href="https://web.archive.org/web/https://security.stackexchange.com/questions/220357/fake-output-of-cpuid-instruction" href="https://web.archive.org/web/https://security.stackexchange.com/questions/220357/fake-output-of-cpuid-instruction" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+No reboot required: Use the execute command as different group ID command line utility <code>sg</code> to execute the <code>cpu-info</code> (from Debian package <code>cpuinfo</code>) application under group <code>cpuinfo</code>.
+
+<!-- Widget:CodeSelect start -->
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sg cpuinfo cpu-info</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sg cpuinfo cpu-info</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end --></p></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
+Also no reboot required:
+
+<!-- Widget:CodeSelect start -->
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -u user bash</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u user bash</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+<!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cpu-info</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cpu-info</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+
+Or.
+
+<!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -u user cpu-info</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -u user cpu-info</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end --></p></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">
 One way or another.</span>
 </li>
 </ol></div></div>
@@ -644,7 +765,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://t.me/share/url?url=./Security-misc" href="https://t.me/share/url?url=./Security-misc" rel="noreferrer noopener" target="_blank"><img alt="Telegram-share.png" data-src="/w/images/thumb/5/5a/Telegram-share.png/55px-Telegram-share.png" data-srcset="/w/images/thumb/5/5a/Telegram-share.png/83px-Telegram-share.png 1.5x, /w/images/thumb/5/5a/Telegram-share.png/110px-Telegram-share.png 2x" decoding="async" height="20" src="data:image/png;base64,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" width="55"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to help create awesome, up-to-date <a data-href="/wiki/Screenshots" href="./Screenshots.html" title="Screenshots">screenshots</a> for the Whonix ™ wiki? Help is most welcome!
+<p>Want to get involved with Whonix ™? Check out our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">Contribute</a> page.
 </p>
 </div>
 <p><a data-href="./Security-misc" href="./Security-misc" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Security-misc" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -656,7 +777,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64160" dir="ltr" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64160">https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64160</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64283" dir="ltr" href="https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64283">https://www.whonix.org/w/index.php?title=Security-misc&amp;oldid=64283</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -667,7 +788,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 3 April 2021, at 18:34.</li>
+<li id="footer-lastmod"> This page was last edited on 4 April 2021, at 21:02.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -687,5 +808,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Security-
 </footer>
 </div>
  </body>
-<!-- Cached 20210403163456 -->
+<!-- Cached 20210404193359 -->
 </html>
