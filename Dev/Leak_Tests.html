@@ -15,7 +15,7 @@
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
 <meta content="MediaWiki 1.35.2" name="generator"/>
-<meta content="Testing for IP/DNS Leaks" name="description"/>
+<meta content="Major leak tests for for IP/DNS Leaks. How to check if this application is leaking? How likely that application is leaking? Unsuitable Tests: Location Detection, Operating System Detection." name="description"/>
 <meta content="@Whonix" name="twitter:site"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="width=device-width, user-scalable=yes, initial-scale=1.0" name="viewport"/>
@@ -29,10 +29,10 @@
 <meta content="Dev/Leak Tests" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="../Dev/Leak_Tests" property="og:url"/>
-<meta content="Testing for IP/DNS Leaks" property="og:description"/>
+<meta content="Major leak tests for for IP/DNS Leaks. How to check if this application is leaking? How likely that application is leaking? Unsuitable Tests: Location Detection, Operating System Detection." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2021-02-16T13:09:16Z" property="article:modified_time"/>
-<meta content="2021-02-16T13:09:16Z" property="article:published_time"/>
+<meta content="2021-04-12T12:35:55Z" property="article:modified_time"/>
+<meta content="2021-04-12T12:35:55Z" property="article:published_time"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
@@ -109,19 +109,11 @@
 <a class="button small secondary radius" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" href="#" id="actions-button"><i class="fa fa-cog"><span class="show-for-medium-up"> Actions</span></i></a>
 <!--RTL -->
 <ul class="f-dropdown" data-dropdown-content="" id="actions">
-<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Leak_Tests" href="../Dev/Leak_Tests.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Leak_Tests&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Leak_Tests&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li class="selected" id="ca-view"><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;stable=1" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;stable=1">View</a></li><li class="collapsible" id="ca-current"><a accesskey="v" data-href="/w/index.php?title=Dev/Leak_Tests&amp;stable=0&amp;redirect=no" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;stable=0&amp;redirect=no.html" title="View this page with the pending changes [v]">Pending changes</a></li><li id="ca-edit"><a accesskey="e" data-href="//www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
+<li class="selected" id="ca-nstab-main"><a accesskey="c" data-href="/wiki/Dev/Leak_Tests" href="../Dev/Leak_Tests.html" title="View the content page [c]">Page</a></li><li class="new" id="ca-talk"><a accesskey="t" data-href="/w/index.php?title=Talk:Dev/Leak_Tests&amp;action=edit&amp;redlink=1" href="https://www.whonix.org/w/index.php?title=Talk:Dev/Leak_Tests&amp;action=edit&amp;redlink=1" rel="discussion.html" title="Discussion about the content page (page does not exist) [t]">Discussion</a></li><li id="ca-edit"><a accesskey="e" data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit.html" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=history" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=history.html" title="Past revisions of this page [h]">History</a></li> </ul>
 <!--RTL -->
 <div id="content">
 <h1 class="title" id="firstHeading">Leak Tests</h1>
-<h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span><div class="flaggedrevs_short flaggedrevs_stable_notsynced plainlinks noprint" id="mw-fr-revisiontag"><div class="flaggedrevs_short_basic"><span aria-disabled="false" class="flaggedrevs-icon oo-ui-widget oo-ui-widget-enabled oo-ui-iconElement-icon oo-ui-icon-eye oo-ui-iconElement oo-ui-labelElement-invisible oo-ui-iconWidget.html" title="This is a checked version of this page"></span><span aria-disabled="false" class="fr-toggle-arrow oo-ui-widget oo-ui-widget-enabled oo-ui-indicatorElement-indicator oo-ui-indicator-down oo-ui-indicatorElement oo-ui-labelElement-invisible oo-ui-indicatorWidget" id="mw-fr-revisiontoggle.html" title="show/hide details"></span></div>
-<div id="mw-fr-revisiondetails-wrapper" style="position:relative;"><div class="flaggedrevs_short_details" id="mw-fr-revisiondetails" style="display:none">This is the <a data-href="/wiki/Help:Page_validation" href="../Help:Page_validation.html" title="Help:Page validation">stable version</a>, <a class="external text" data-href="//www.whonix.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Dev/Leak_Tests" href="https://www.whonix.org/w/index.php?title=Special:Log&amp;type=review&amp;page=Dev/Leak_Tests" rel="noreferrer noopener" target="_blank">checked</a> on <i>16 February 2021</i>.
-<a class="external text" data-href="//www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=62601&amp;diff=cur" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=62601&amp;diff=cur" rel="noreferrer noopener" target="_blank">1 pending change</a> awaits review.<p></p><table cellpadding="0" class="flaggedrevs-color-1" id="mw-fr-revisionratings-box" style="margin: auto;"><tr><td class="fr-text" style="vertical-align: middle;">Accuracy</td><td class="fr-value40" style="vertical-align: middle;">Spot checked</td></tr>
-<tr><td class="fr-text" style="vertical-align: middle;">Depth</td><td class="fr-value40" style="vertical-align: middle;">Basic</td></tr>
-<tr><td class="fr-text" style="vertical-align: middle;">Readability</td><td class="fr-value40" style="vertical-align: middle;">Acceptable</td></tr>
-</table></div>
-</div>
-</div>
-</h5>
+<h3 id="tagline">From Whonix</h3> <h5 class="subtitle" id="siteSub"><span class="subpages">&lt; <a class="mw-redirect" data-href="/wiki/Dev" href="../Dev.html" title="Dev">Dev</a></span></h5>
 <div class="clear_both" id="contentSub"></div>
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p><br/>
@@ -155,20 +147,36 @@
 </ul>
 </li>
 <li class="toclevel-1 tocsection-20"><a href="#IP_Activity_Log_Test"><span class="tocnumber">14</span> <span class="toctext">IP Activity Log Test</span></a></li>
-<li class="toclevel-1 tocsection-21"><a href="#Unsuitable_Tests"><span class="tocnumber">15</span> <span class="toctext">Unsuitable Tests</span></a>
+<li class="toclevel-1 tocsection-21"><a href="#Packet_Analyzer"><span class="tocnumber">15</span> <span class="toctext">Packet Analyzer</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Application_Specific_Leak_Tests"><span class="tocnumber">16</span> <span class="toctext">Application Specific Leak Tests</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Unsuitable_Tests"><span class="tocnumber">17</span> <span class="toctext">Unsuitable Tests</span></a>
 <ul>
-<li class="toclevel-2 tocsection-22"><a href="#Location_Detection"><span class="tocnumber">15.1</span> <span class="toctext">Location Detection</span></a></li>
-<li class="toclevel-2 tocsection-23"><a href="#Operating_System_Detection"><span class="tocnumber">15.2</span> <span class="toctext">Operating System Detection</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Location_Detection"><span class="tocnumber">17.1</span> <span class="toctext">Location Detection</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Operating_System_Detection"><span class="tocnumber">17.2</span> <span class="toctext">Operating System Detection</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-24"><a href="#See_Also"><span class="tocnumber">16</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-25"><a href="#Footnotes"><span class="tocnumber">17</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#See_Also"><span class="tocnumber">18</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Footnotes"><span class="tocnumber">19</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>In past Whonix ™ documentation stated "in your own interest you should do the leak tests". That was from a time, where Whonix ™ was only useful for very advanced end users, because only textual instructions existed; there were no scripts, no source code and the Whonix ™ concept was brand new. It is unrealistic, that all download users do and understand the leak tests. That's why it was removed from the Readme.
-</p><p>You are still invited and encouraged to do the leak tests, in fact, at the moment, there are probably not many people auditing Whonix ™ security.
-</p><p>Unfortunately, leak testing is as complicated as programming. You can not learn it overnight and you won't find someone online, willing to teach you for free. That's really something you have to do on your own. We continue to list and document all leak tests we are aware of, but we can not educate everyone in the depths of networking.
+<p>This wiki page lists and document all major leak tests.
+</p><p>Common Questions:
+</p>
+<ul><li>How to check if <code>application</code> is leaking?</li>
+<li>How likely <code>application</code> is leaking?
+<ul><li>Note: Replace <code>application</code> in above question with an actual application or activity.</li></ul></li></ul>
+<p>Generic Answer:
+</p>
+<ul><li>See <a data-href="/wiki/Security_in_Real_World" href="../Security_in_Real_World.html" title="Security in Real World">Security in Real World</a> for a list of many past anonymity attacks where Whonix ™ kept its users safe.</li>
+<li>See <a data-href="/wiki/Dev/Technical_Introduction#multiple_security_layers" href="../Dev/Technical_Introduction.html" title="Dev/Technical Introduction">Whonix ™ uses multiple security layers</a> for reasons why leaks are highly unlikely.</li>
+<li>See this page <a class="mw-selflink selflink">Leak Tests</a> for testing for IP/DNS leaks generally.</li>
+<li>Chapter <a href="#Application_Specific_Leak_Tests">Application Specific Leak Tests</a>.</li>
+<li>See <a data-href="/wiki/Security_Reviews_and_Feedback" href="../Security_Reviews_and_Feedback.html" title="Security Reviews and Feedback">Security Reviews and Feedback</a> for a list of notable reviews and feedback about the security of Whonix ™.</li>
+<li>Consider using <a data-href="/wiki/Corridor" href="../Corridor.html" title="Corridor">corridor</a>, a Tor traffic whitelisting gateway.</li>
+<li>See <a data-href="/wiki/System_Audit" href="../System_Audit.html" title="System Audit">System Audit</a> for how users (cannot) verify the system is configured as intended.</li>
+<li>This might also be related to asking "How secure is Whonix ™?". →<a data-href="/wiki/Dev/Technical_Introduction" href="../Dev/Technical_Introduction.html" title="Dev/Technical Introduction">Technical Introduction</a></li></ul>
+<p>Unfortunately, leak testing is as complicated as programming. One cannot learn it in a short period of time and it is highly unlikely to find an online volunteer teacher. It is infeasible for the Whonix ™ project to educate everyone in the depths of networking.
 </p>
 <h1><span class="mw-headline" id="Knowledge_assumed">Knowledge assumed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=2.html" title="Edit section: Knowledge assumed">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://gitlab.torproject.org/legacy/trac/-/wikis/doc/build/BuildSignoff#expected-issues-with-popular-test-pages" href="https://gitlab.torproject.org/legacy/trac/-/wikis/doc/build/BuildSignoff" rel="noreferrer noopener" target="_blank">Expected issues with popular test pages</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.torproject.org/legacy/trac/-/wikis/doc/build/BuildSignoff#expected-issues-with-popular-test-pages" href="https://web.archive.org/web/https://gitlab.torproject.org/legacy/trac/-/wikis/doc/build/BuildSignoff" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -344,7 +352,7 @@ sudo leaktest
 <li>Perhaps useful for similar projects.</li>
 <li>Optional additional tests.</li></ul>
 <h1><span class="mw-headline" id="Integreated_whonixcheck_leaktest">Integreated whonixcheck leaktest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=14.html" title="Edit section: Integreated whonixcheck leaktest">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p>Please also run <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway ™ and Whonix-Workstation ™. whonixcheck's Tor SocksPort and Tor TransPort test (the latter only on Whonix-Workstation ™ <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
+<p>Please also run <a data-href="/wiki/Whonixcheck" href="../Whonixcheck.html" title="Whonixcheck">whonixcheck</a> on Whonix-Gateway ™ and Whonix-Workstation ™. whonixcheck's Tor <code>SocksPort</code> and Tor <code>TransPort</code> test (the latter only on Whonix-Workstation ™ <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>) are also doing leak testing. If <code>whonixcheck</code> would report a big warning, if check.torproject.org couldn't detect Tor.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -431,29 +439,41 @@ E: Failed to fetch http://security.debian.org/pool/updates/main/i/firefox/firefo
 <li>Compare with twitter activity log.</li></ol>
 <p>If real external IP isn't in twitter activity log, then real IP wasn't leaked.
 </p>
-<h1><span class="mw-headline" id="Unsuitable_Tests">Unsuitable Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21.html" title="Edit section: Unsuitable Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Location_Detection">Location Detection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=22.html" title="Edit section: Location Detection">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Packet_Analyzer">Packet Analyzer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=21.html" title="Edit section: Packet Analyzer">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>wireshark</li>
+<li>tshark</li></ul>
+<h1><span class="mw-headline" id="Application_Specific_Leak_Tests">Application Specific Leak Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=22" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=22.html" title="Edit section: Application Specific Leak Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Sorted roughly by difficulty. Easiest on top. More difficult on bottom.
+</p>
+<ol><li>Setup a server. Perhaps for simplicity, a server dedicated for leak testing only. Setup the server software used by the client software intended to leak check. Connect to self-hosted server using the client software intended to be leak checked. Monitor incoming connections to own server. This leak test while interesting might not catch all types of leaks such as DNS leaks.</li>
+<li>If source-available: Review the application source code.</li>
+<li>If closed source: <a data-href="/wiki/Avoid_nonfreedom_software" href="../Avoid_nonfreedom_software.html" title="Avoid nonfreedom software">Avoid Non-Freedom Software</a> or reverse engineering.</li>
+<li>Use a <a href="#Packet_Analyzer">Packet Analyzer</a>.</li></ol>
+<h1><span class="mw-headline" id="Unsuitable_Tests">Unsuitable Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=23.html" title="Edit section: Unsuitable Tests">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Location_Detection">Location Detection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=24.html" title="Edit section: Location Detection">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Location detection can be very inaccurate. Sometimes clearnet IP addresses are being detected several hundred miles away from the actual location. Source: personal experience of Whonix ™ developer Patrick. There are probably many people on search engines confirming the same. Please edit if you know any better sources and/or structured research in this topic.
 </p>
-<h2><span class="mw-headline" id="Operating_System_Detection">Operating System Detection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=23" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=23.html" title="Edit section: Operating System Detection">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Operating_System_Detection">Operating System Detection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=25.html" title="Edit section: Operating System Detection">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>Operating System Detection tests can be unreliable.
 </p><p>In the personal experience of Whonix ™ developer Patrick, for example <a class="external text" data-href="https://twitter.com/settings/sessions" href="https://twitter.com/settings/sessions" rel="noreferrer noopener" target="_blank">Twitter <code>/settings/sessions</code></a> <sup><a data-href="https://web.archive.org/web/https://twitter.com/settings/sessions" href="https://web.archive.org/web/https://twitter.com/settings/sessions" rel="noreferrer noopener" target="_blank">[archive]</a></sup> had shown <code>Windows</code> as operating system used as the only active session while in fact it was a browser running on a <code>Linux</code> based operating system. 
 </p><p>While Twitter <code>/settings/sessions</code> is not branded as a browser test it is effectively a browser test. Therefore issues described with these on the <a data-href="/wiki/Browser_Tests" href="../Browser_Tests.html" title="Browser Tests">Browser Tests</a> wiki page equally apply.
 </p>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=24" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=24.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=26" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=26.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Browser_Tests" href="../Browser_Tests.html" title="Browser Tests">Browser Tests</a></li>
 <li><a data-href="/wiki/Test" href="../Test.html" title="Test">Test</a></li>
 <li><a class="external free" data-href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" href="https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" rel="noreferrer noopener" target="_blank">https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall</a> <sup><a data-href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" href="https://web.archive.org/web/https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/BridgeFirewall" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://github.com/rustybird/corridor" href="https://github.com/rustybird/corridor" rel="noreferrer noopener" target="_blank">https://github.com/rustybird/corridor</a> <sup><a data-href="https://web.archive.org/web/https://github.com/rustybird/corridor" href="https://web.archive.org/web/https://github.com/rustybird/corridor" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=25" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=25.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=27" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;action=edit&amp;section=27.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Because Whonix-Gateway ™ does not have a TransPort by default.</span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
+Because Whonix-Gateway ™ does not have a <code>TransPort</code> by default.</span>
 </li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
 Those are assumed to be torified, i.e. having their NetVM set to sys-whonix.</span>
 </li>
-<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">With a small package you would not have a chance to easily and quickly disable Tor while it is downloading.</span>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
+With a small package you would not have a chance to easily and quickly disable Tor while it is downloading.</span>
 </li>
 <li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">
 Alternatively, you could also run <code>sudo apt-get update</code> instead of downloading a big package and interrupt that. However, it would be less conclusive, because then apt-get updating may only break due to broken DNS. A long running transfer that no longer depends on functional DNS resolution would be far easier to spot. (If the download was non-torified, it should not matter if we stop Tor during the transfer.)</span>
@@ -515,7 +535,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a class="image" data-href="/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;" href="https://www.whonix.org/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;.html" title="link=https://mastodon.technology/share?message=Dev/Leak Tests%20../Dev/Leak_Tests&amp;t=Dev/Leak Tests"><img alt="link=https://mastodon.technology/share?message=Dev/Leak Tests%20../Dev/Leak_Tests&amp;t=Dev/Leak Tests" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Love Whonix ™ and want to help spread the word? You can start by telling your friends or <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> posting news</a> about Whonix ™ on your website, blog or social media.
+<p>Want to make Whonix ™ safer and more usable? We're looking for helping hands. Check out the <a data-href="https://forums.whonix.org/search?expanded=true&amp;q=tags%3Astatus_open_issue_todo" href="https://forums.whonix.org/search?expanded=true&amp;q=tags%3Astatus_open_issue_todo" rel="noreferrer" target="_blank"> Open Issues</a> and <a data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer" target="_blank"> development forum</a>.
 </p>
 </div>
 <p><a data-href="../Dev/Leak_Tests" href="../Dev/Leak_Tests" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Leak_Tests" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -528,7 +548,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=62601" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=62601">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=62601</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=64462" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=64462">https://www.whonix.org/w/index.php?title=Dev/Leak_Tests&amp;oldid=64462</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -542,7 +562,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 16 February 2021, at 15:09.</li>
+<li id="footer-lastmod"> This page was last edited on 12 April 2021, at 14:35.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -562,5 +582,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Leak_
 </footer>
 </div>
  </body>
-<!-- Cached 20210411160757 -->
+<!-- Cached 20210412173538 -->
 </html>
