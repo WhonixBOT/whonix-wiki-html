@@ -163,12 +163,12 @@ a.freelink
 </p>
 </div>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>Complete the following steps to add the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> to the system's APT keyring. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+<p>Complete the following steps to add the <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix ™ Signing Key</a> to the system's APT keyring. <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
 </p><p>Open a terminal.
 </p><p>Install <code>curl</code>, <code>gpg</code>, <code>gpg-agent</code>. <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p>Install <code>curl gpg gpg-agent --no-install-recommends</code>.
+<p>Install <code>curl gpg gpg-agent</code>.
 </p><p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="../Update.html" title="Update">Update</a> the package lists.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
@@ -197,35 +197,35 @@ a.freelink
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p><b>3.</b> Install the <code>curl gpg gpg-agent --no-install-recommends</code> package.
+</p><p><b>3.</b> Install the <code>curl gpg gpg-agent</code> package.
 </p><p>Using <code>apt-get</code> command line parameter <code>--no-install-recommends</code> is in most cases optional.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>sudo apt-get install --no-install-recommends curl gpg gpg-agent --no-install-recommends</pre>
+<pre>sudo apt-get install --no-install-recommends curl gpg gpg-agent</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install --no-install-recommends curl gpg gpg-agent --no-install-recommends</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install --no-install-recommends curl gpg gpg-agent</textarea>
 </div>
 </div>
 <!-- open p tag -->
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>The procedure of installing <code>curl gpg gpg-agent --no-install-recommends</code> is complete.
+</p><p>The procedure of installing <code>curl gpg gpg-agent</code> is complete.
 </p>
 </div>
-<p>Download <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+<p>Download <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix ™ Signing Key</a>. <sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><u>If you are using a Qubes TemplateVM</u>, run.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>curl --proxy http://127.0.0.1:8082/ --tlsv1.2 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</pre>
+<pre>curl --proxy http://127.0.0.1:8082/ --tlsv1.3 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --proxy http://127.0.0.1:8082/ --tlsv1.2 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --proxy http://127.0.0.1:8082/ --tlsv1.3 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -236,10 +236,10 @@ a.freelink
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>curl --tlsv1.2 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</pre>
+<pre>curl --tlsv1.3 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.2 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">curl --tlsv1.3 --proto =https --max-time 180 --output ~/patrick.asc https://www.whonix.org/patrick.asc</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -248,8 +248,8 @@ a.freelink
 <!-- Widget:CodeSelect end -->
 </p>
 </div>
-<p>Users can <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key">check Whonix Signing Key</a> for better security.
-</p><p>Add Whonix signing key to APT trusted keys.
+<p>Users can <a data-href="/wiki/Whonix_Signing_Key" href="../Whonix_Signing_Key.html" title="Whonix Signing Key"><u>check</u> Whonix ™ Signing Key</a> for better security.
+</p><p>Add Whonix ™ signing key to APT trusted keys.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -263,7 +263,7 @@ a.freelink
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>The procedure of adding Whonix signing key is now complete.
+</p><p>The procedure of adding Whonix ™ signing key is now complete.
 </p>
 </div>
 <h1><span class="mw-headline" id="Add_Repository">Add Repository</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Linux_Kernel_Runtime_Guard_LKRG/Qubes&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Linux_Kernel_Runtime_Guard_LKRG/Qubes&amp;action=edit&amp;section=3.html" title="Edit section: Add Repository">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -490,7 +490,7 @@ gpg: can't connect to the agent: No such file or directory
 </pre></span>
 </li>
 <li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">
-See <a data-href="/wiki/Secure_Downloads" href="../Secure_Downloads.html" title="Secure Downloads">Secure Downloads</a> to understand why <code>curl</code> and the parameters <code>--tlsv1.2 --proto =https</code> are used instead of <code>wget</code>.</span>
+See <a data-href="/wiki/Secure_Downloads" href="../Secure_Downloads.html" title="Secure Downloads">Secure Downloads</a> to understand why <code>curl</code> and the parameters <code>--tlsv1.3 --proto =https</code> are used instead of <code>wget</code>.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -577,5 +577,4 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Linux_Ker
 </footer>
 </div>
  </body>
-<!-- Cached 20210425011729 -->
 </html>
