@@ -31,8 +31,8 @@
 <meta content="./Website_Tests" property="og:url"/>
 <meta content="Testing the Whonix ™ server with test websites such as hardenize.com / securityheaders.com / Mozilla Observatory / SSL Labs / hstspreload.org." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/0/0d/Websitetest.jpg" property="og:image"/>
-<meta content="2021-04-28T15:47:12Z" property="article:modified_time"/>
-<meta content="2021-04-28T15:47:12Z" property="article:published_time"/>
+<meta content="2021-05-02T16:19:52Z" property="article:modified_time"/>
+<meta content="2021-05-02T16:19:52Z" property="article:published_time"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
@@ -150,7 +150,7 @@
 </p><p>While website test websites such as hardenize.com are amazing tools for website owners helping to check security features, these tests say little about the security of the server. Such tests cannot check if kernel, operating system and web app upgrades are up to date or neglect, if SSH is configured for public key authentication only, if the server is <a data-href="/wiki/Kicksecure" href="./Kicksecure.html" title="Kicksecure">Kicksecure</a> hardened, backups are being made and so forth.
 </p><p>For example at time of writing the Microsoft website did not have a CSP, neither DNSSEC, nor DANE and a C level securityheaders.com rating. Does this mean that the Microsoft website gets hacked every year and spreads malicious software uploaded by unauthorized third parties? No. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p><p>As elaborated in the most comprehensive chapter <a href="#Content-Security-Policy_CSP">CSP</a> on this wiki page, the threat models are nuanced, imperfections exist, efforts are bound to available resourced, developer time and limited to reasonable efforts, not security theater. It it also important to put test results into perspective through <a href="#Comparison_with_Others">Comparison of Test Results with Others</a>.
-</p><p>See also <a data-href="/wiki/Privacy_Policy_Technical_Details" href="./Privacy_Policy_Technical_Details.html" title="Privacy Policy Technical Details">Privacy Policy Technical Details</a>, <a data-href="/wiki/Privacy_Policy_Technical_Details#website" href="./Privacy_Policy_Technical_Details.html" title="Privacy Policy Technical Details">Privacy on the Whonix ™ Website</a>, 
+</p><p>See also the <a class="external text" data-href="https://signal.org/" href="https://signal.org/" rel="noreferrer noopener" target="_blank">Signal project</a> <sup><a data-href="https://web.archive.org/web/https://signal.org/" href="https://web.archive.org/web/https://signal.org/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>'s blog post on this topic <a class="external text" data-href="https://signal.org/blog/certifiably-fine/" href="https://signal.org/blog/certifiably-fine/" rel="noreferrer noopener" target="_blank">Certifiably "F"ine</a> <sup><a data-href="https://web.archive.org/web/https://signal.org/blog/certifiably-fine/" href="https://web.archive.org/web/https://signal.org/blog/certifiably-fine/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, <a data-href="/wiki/Privacy_Policy_Technical_Details" href="./Privacy_Policy_Technical_Details.html" title="Privacy Policy Technical Details">Privacy Policy Technical Details</a>, <a data-href="/wiki/Privacy_Policy_Technical_Details#website" href="./Privacy_Policy_Technical_Details.html" title="Privacy Policy Technical Details">Privacy on the Whonix ™ Website</a>, 
 <a data-href="/wiki/Trust#Trusting_the_Whonix_.E2.84.A2_.E2.84.A2_Website" href="./Trust.html" title="Trust">Trusting the Whonix ™ Website</a> and <a data-href="/wiki/Trust#Distrusting_Infrastructure" href="./Trust.html" title="Trust">Distrusting Infrastructure</a>.
 </p>
 <h1><span class="mw-headline" id="hardenize.com">hardenize.com</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Website_Tests&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;action=edit&amp;section=2.html" title="Edit section: hardenize.com">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -204,10 +204,9 @@ Directives can be specified using HTTP response header (a server may send more t
 <blockquote>
 <ul><li>This policy contains 'unsafe-inline' which is dangerous in the script-src directive.</li>
 <li>This policy contains 'unsafe-eval' which is dangerous in the script-src directive.</li>
-<li>This policy contains 'unsafe-inline' which is dangerous in the style-src directive.</li></ul>
-</blockquote>
+<li>This policy contains 'unsafe-inline' which is dangerous in the style-src directive.</li></ul></blockquote>
 <p>Users who have NoScript in their browser enabled are unaffected.
-</p><p>Users are advised to use secure browsers, compartmentalize browsing in different virtual machines (VMs), <a class="mw-redirect" data-href="/wiki/Security_Hardening_Checklist" href="./Security_Hardening_Checklist.html" title="Security Hardening Checklist">harden</a> their operating system <a data-href="/wiki/Kicksecure" href="./Kicksecure.html" title="Kicksecure">Kicksecure</a>, use NoScript, rather than relying on websites to deploy CSP. Widespread, perfect deployment of CSP will never probably not happen anytime soon. <a data-href="/wiki/Kicksecure" href="./Kicksecure.html" title="Kicksecure">Kicksecure</a> and <a class="mw-redirect" data-href="/wiki/Whonix" href="./Whonix.html" title="Whonix">Whonix</a> are real efforts for security and privacy. Resources are, developer time is limited. Efforts spent on CSP are limited to reasonable efforts, not security theater.
+</p><p>Users are advised to use secure browsers, compartmentalize browsing in different virtual machines (VMs), <a data-href="/wiki/System_Hardening_Checklist" href="./System_Hardening_Checklist.html" title="System Hardening Checklist">harden</a> their operating system, use <a data-href="/wiki/Kicksecure" href="./Kicksecure.html" title="Kicksecure">Kicksecure</a>, use NoScript, rather than relying on websites to deploy CSP. Widespread, perfect deployment of CSP will probably not happen anytime soon. <a data-href="/wiki/Kicksecure" href="./Kicksecure.html" title="Kicksecure">Kicksecure</a> and <a class="mw-redirect" data-href="/wiki/Whonix" href="./Whonix.html" title="Whonix">Whonix</a> are real efforts for security and privacy. Resources are, developer time is limited. Efforts spent on CSP are limited to reasonable efforts, not security theater.
 </p>
 <h2><span class="mw-headline" id="Homepage">Homepage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Website_Tests&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;action=edit&amp;section=10.html" title="Edit section: Homepage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><a class="external text" data-href="https://securityheaders.com/?q=whonix.org&amp;followRedirects=on" href="https://securityheaders.com/?q=whonix.org&amp;followRedirects=on" rel="noreferrer noopener" target="_blank">Quote securityheaders.com</a> <sup><a data-href="https://web.archive.org/web/https://securityheaders.com/?q=whonix.org&amp;followRedirects=on" href="https://web.archive.org/web/https://securityheaders.com/?q=whonix.org&amp;followRedirects=on" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for Whonix ™ website component, homepage.
@@ -335,7 +334,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=64999" dir="ltr" href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=64999">https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=64999</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=65170" dir="ltr" href="https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=65170">https://www.whonix.org/w/index.php?title=Website_Tests&amp;oldid=65170</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -349,7 +348,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Website_T
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 28 April 2021, at 17:47.</li>
+<li id="footer-lastmod"> This page was last edited on 2 May 2021, at 18:19.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -369,4 +368,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Website_T
 </footer>
 </div>
  </body>
+<!-- Cached 20210502164030 -->
 </html>
