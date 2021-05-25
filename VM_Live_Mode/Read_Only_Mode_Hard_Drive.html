@@ -31,8 +31,8 @@
 <meta content="../VM_Live_Mode/Read_Only_Mode_Hard_Drive" property="og:url"/>
 <meta content="Set virtual machine (VM) hard drives to read only. Prevent write access to VM drives." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/1c/Read-live23231.jpg" property="og:image"/>
-<meta content="2021-04-28T15:47:40Z" property="article:modified_time"/>
-<meta content="2021-04-28T15:47:40Z" property="article:published_time"/>
+<meta content="2021-05-24T09:15:52Z" property="article:modified_time"/>
+<meta content="2021-05-24T09:15:52Z" property="article:published_time"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
@@ -141,7 +141,7 @@
 <h1><span class="mw-headline" id="Read-only_Mode_Configuration">Read-only Mode Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=2.html" title="Edit section: Read-only Mode Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=3.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><code>grub-live</code> is currently <a data-href="/wiki/Unsupported" href="../Unsupported.html" title="Unsupported">unsupported</a> on <a data-href="/wiki/Qubes" href="../Qubes.html" title="Qubes">Qubes</a>, but may become available in the future. Refer to the following <a class="external text" data-href="https://forums.whonix.org/t/whonix-live-mode/3894/31" href="https://forums.whonix.org/t/whonix-live-mode/3894/31" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-live-mode/3894/31" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-live-mode/3894/31" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for further information.
-</p><p>In Qubes R4, <a data-href="/wiki/Qubes/DisposableVM" href="../Qubes/DisposableVM.html" title="Qubes/DisposableVM">Qubes DisposableVMs</a> are a suitable alternative, as well as the <a class="external text" data-href="https://www.qubes-os.org/doc/live-usb/" href="https://www.qubes-os.org/doc/live-usb/" rel="noreferrer noopener" target="_blank">Qubes Live USB</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/live-usb/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/live-usb/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.
+</p><p>In Qubes R4, <a data-href="/wiki/Qubes/DisposableVM" href="../Qubes/DisposableVM.html" title="Qubes/DisposableVM">Qubes DisposableVMs</a> are a suitable alternative.
 </p>
 <h2><span class="mw-headline" id="VirtualBox">VirtualBox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=4.html" title="Edit section: VirtualBox">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -151,7 +151,7 @@
 <ul><li>Power off the virtual machine (VM).</li>
 <li>Set the disk to read-only.
 <ul><li>The name of the VM in the following example below is <code>Whonix-Workstation-XFCE</code>. It could be replaced with the name of any other VM such as <code>Whonix-Gateway-XFCE</code>.</li>
-<li>On the host, on the command line, run.</li></ul></li></ul>
+<li>On the host command line, run.</li></ul></li></ul>
 <p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -166,9 +166,9 @@
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p><b>2.</b> Remove VirtualBox virtual DVD drive.
-</p><p>Only required the the VM has a virtual DVD drive. Not required in Whonix ™ version <code>15.0.1.2.7</code> and above since it no longer comes with a virtual DVD drive by default. See footnote for Whonix ™ build version lower than <code>15.0.1.2.7</code>. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>This is only required if the VM has a virtual DVD drive. It is not required in Whonix ™ version <code>15.0.1.2.7</code> and above since it no longer comes with a virtual DVD drive by default. See footnote for a Whonix ™ build version lower than <code>15.0.1.2.7</code>. <sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
 </p><p><b>3.</b> Launch the live system.
-</p><p>Following reboot, a second boot entry called "VM Live Mode-mode" will be visible. Choose it. Then press <code>Enter</code> to boot the live system and use it as normal.
+</p><p>Following reboot, a second boot entry called "VM Live Mode-mode" will be visible. Select it and then press <code>Enter</code> to boot the live system and use it as normal.
 </p><p><b>4.</b> <i>Optional:</i> Revert the read-only change. 
 </p><p>To boot into normal mode again, run this command on the host to revert the change.
 </p><p><!-- Widget:CodeSelect start -->
@@ -185,11 +185,11 @@
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p>The normal boot option can now be selected in the GRUB menu.
-</p><p><b>5.</b> <i>Optional:</i> Re-add virtual DVD .
+</p><p><b>5.</b> <i>Optional:</i> Re-add the virtual DVD.
 </p><p>Only when you need this; see footnotes. <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 </p>
 </div>
-<p>Troubleshooting: If system does not boot, make sure you are using the <a data-href="/wiki/VirtualBox/Recommended_Version" href="../VirtualBox/Recommended_Version.html" title="VirtualBox/Recommended Version">Recommended VirtualBox Version</a> for Whonix ™ VirtualBox. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<p>Troubleshooting: If the system does not boot, check the <a data-href="/wiki/VirtualBox/Recommended_Version" href="../VirtualBox/Recommended_Version.html" title="VirtualBox/Recommended Version">Recommended VirtualBox Version</a> for Whonix ™ VirtualBox is in use. <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 </p>
 <h2><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;action=edit&amp;section=5.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -199,7 +199,7 @@
 <ul><li>Power off the machine.</li>
 <li>Set the hard disk to read-only in the virt-manager GUI before booting into live mode.</li></ul>
 <p><b>2.</b> Launch live-mode.
-</p><p>Following reboot, a second boot entry called "VM Live Mode-mode" will be visible. Choose it. Then press <code>Enter</code> to boot the live system and use it as normal.
+</p><p>Following reboot, a second boot entry called "VM Live Mode-mode" will be visible. Select it and then press <code>Enter</code> to boot the live system and use it as normal.
 </p><p><b>3.</b> <i>Optional:</i> Revert the read-only change. 
 </p><p>To boot into normal mode again, revert the change from step 1 and choose the normal boot option in the GRUB menu.
 </p>
@@ -219,32 +219,26 @@
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
-Careful. If you remove the wrong drive, your VM will no longer boot. If you are worried, clone the VM first before proceeding.
+Be careful. If the wrong drive is removed, the VM will no longer boot. If you are concerned, clone the VM first before proceeding.
 
 <ol><li>Power off the VM.</li>
 <li><code>VirtualBox</code> → <code>click a VM</code> → <code>Settings</code> → <code>Storage</code> → <code>click on DVD device symbol</code> → <code>click on disk removal symbol</code></li>
-<li>VirtualBox will ask</li></ol>
-<blockquote>
-<p>Are you sure you want to delete the optical drive?
-</p>
-</blockquote>
-<blockquote>
-<p>You will not be able to insert any optical disks or ISO images or install the Guest Additions without it!
-</p>
-</blockquote>
-<p>4. <code>click "Remove"</code>
+<li>VirtualBox will ask:</li></ol>
+<blockquote><p>Are you sure you want to delete the optical drive?</p></blockquote>
+<blockquote><p>You will not be able to insert any optical disks or ISO images or install the Guest Additions without it!</p></blockquote>
+<p>4. <code>Click "Remove"</code>
 </p><p><a class="external free" data-href="https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337" href="https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337" href="https://web.archive.org/web/https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
 </p>
 </span></li>
 <li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">
-Careful. If you remove the wrong drive, your VM will no longer boot. If you are worried, clone the VM first before proceeding.
+Be careful. If the wrong drive is removed, the VM will no longer boot. If you are concerned, clone the VM first before proceeding.
 
 <ol><li>Power off the VM.</li>
 <li><code>VirtualBox</code> → <code>click a VM</code> → <code>Settings</code> → <code>Storage</code> → <code>click on DVD device add symbol</code> → <code>click Leave Empty</code> → <code>click OK</code></li>
-<li>Usual way to add DVD's to VirtualBox VMs can now be used such as <code>VirtualBox</code> → <code>click a VM</code> → <code>click on [Optical Drive]</code></li></ol>
+<li>The usual method to add DVDs to VirtualBox VMs can now be used such as: <code>VirtualBox</code> → <code>click a VM</code> → <code>click on [Optical Drive]</code></li></ol>
 </span></li>
 <li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">
-A user reported on telegram that upgrading VirtualBox fixed this an issue which preventing booting the system in read-only mode.</span>
+A user reported on Telegram that upgrading VirtualBox fixed this issue which prevented booting the system in read-only mode.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -284,7 +278,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a class="image" data-href="/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;" href="https://www.whonix.org/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;.html" title="link=https://mastodon.technology/share?message=VM Live Mode/Read Only Mode Hard Drive%20../VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;t=VM Live Mode/Read Only Mode Hard Drive"><img alt="link=https://mastodon.technology/share?message=VM Live Mode/Read Only Mode Hard Drive%20../VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;t=VM Live Mode/Read Only Mode Hard Drive" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p><b>LIVE MODE</b>: Host operating system <u>or</u> VM can be booted into Live Mode, using <a data-href="/wiki/Host_Live_Mode" href="../Host_Live_Mode.html" title="Host Live Mode">Host Live Mode</a> <u>or</u> <a data-href="/wiki/VM_Live_Mode" href="../VM_Live_Mode.html" title="VM Live Mode">VM Live Mode</a>.
+<p>Do you wonder why Whonix ™ will always be free? Check out <a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why Whonix ™ is Freedom Software</a>.
 </p>
 </div>
 <p><a data-href="../VM_Live_Mode/Read_Only_Mode_Hard_Drive" href="../VM_Live_Mode/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VM_Live_Mode/Read_Only_Mode_Hard_Drive" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/VM_Live_Mode/Read_Only_Mode_Hard_Drive" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a>
@@ -297,7 +291,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="../Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="../E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="../Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="../Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65068" dir="ltr" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65068">https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65068</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65514" dir="ltr" href="https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65514">https://www.whonix.org/w/index.php?title=VM_Live_Mode/Read_Only_Mode_Hard_Drive&amp;oldid=65514</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="../Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -311,7 +305,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VM_Live_M
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 28 April 2021, at 17:47.</li>
+<li id="footer-lastmod"> This page was last edited on 24 May 2021, at 11:15.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="../Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="../Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="../Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -331,5 +325,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=VM_Live_M
 </footer>
 </div>
  </body>
-<!-- Cached 20210523191009 -->
+<!-- Cached 20210524113139 -->
 </html>
