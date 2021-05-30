@@ -31,8 +31,8 @@
 <meta content="./Tor_Browser" property="og:url"/>
 <meta content="Using Tor Browser in Whonix ™. Anonymity vs Pseudonymity, HTTPS Everywhere, Torbutton, Protection against dangerous JavaScript, NoScript, Tips, Update Tor Browser, Browser Plugins, Change Language" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/1/19/Torbrowser.png" property="og:image"/>
-<meta content="2021-05-05T05:48:04Z" property="article:modified_time"/>
-<meta content="2021-05-05T05:48:04Z" property="article:published_time"/>
+<meta content="2021-05-29T09:01:00Z" property="article:modified_time"/>
+<meta content="2021-05-29T09:01:00Z" property="article:published_time"/>
 
 <!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
@@ -676,7 +676,8 @@ For greater security, it is better to completely close Tor Browser and restart i
 <li>It is difficult for network adversaries to: <br/>
 <ul><li>Target specific individuals. <br/></li>
 <li>Determine where someone is connecting to/from.</li></ul></li></ul>
-</td></tr></tbody></table>
+</td></tr>
+</tbody></table>
 <h3><span class="mw-headline" id="Navigating_Tor_Browser_Downloads">Navigating Tor Browser Downloads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser&amp;action=edit&amp;section=39" href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;action=edit&amp;section=39.html" title="Edit section: Navigating Tor Browser Downloads">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>For those who regularly download Internet files, Tor Browser's default download folder is inconvenient. For example, if the sample image below was downloaded with Tor Browser, the download path is <code>/home/user/.tb/tor-browser/Browser/Downloads</code> by default. It is time-consuming to navigate to this folder so far down the directory tree.
 </p><p><b>Figure:</b> <i>Default Tor Browser Download Folder</i>
@@ -1400,7 +1401,7 @@ imgur.com blocks Tor uploads, to upload images on an imgur domain go to a stacke
 <tr>
 <th scope="row">Multiple Tab Isolation
 </th>
-<td>Do not assume that different tabs in Tor Browser are completely isolated and recognized as different pseudonyms by destination websites. Tor Browser has some first party isolation that isolates local storage such as cookies per-website. However, there are certain side channel attacks that can be used to bypass this. <sup class="reference" id="cite_ref-115"><a href="#cite_note-115">[115]</a></sup> Website x may also be able to exploit a vulnerability in the browser to see your activities in website y since Firefox's sandbox does not isolate websites from each other yet. <sup class="reference" id="cite_ref-116"><a href="#cite_note-116">[116]</a></sup> Better use <a data-href="/wiki/Multiple_Whonix-Workstation#Safety_Precautions" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a>.
+<td>Do not assume that different tabs in Tor Browser are completely isolated and recognized as different pseudonyms by destination websites. Tor Browser has some first party isolation that isolates local storage such as cookies per-website. However, there are certain side channel attacks that can be used to bypass this. <sup class="reference" id="cite_ref-115"><a href="#cite_note-115">[115]</a></sup> <a data-href="/wiki/Browser_Tests#FingerprintJS" href="./Browser_Tests.html" title="Browser Tests">FingerprintJS</a> (<a data-href="/wiki/Browser_Tests" href="./Browser_Tests.html" title="Browser Tests">Browser Tests</a>) demonstrates its capability of linking two different tabs in Tor Browser to the same identifier. A malicious or compromised website may also be able to exploit a vulnerability in the browser to see your activities in website y since Firefox's sandbox does not isolate websites from each other yet. <sup class="reference" id="cite_ref-116"><a href="#cite_note-116">[116]</a></sup> Better use <a data-href="/wiki/Multiple_Whonix-Workstation#Safety_Precautions" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a>.
 </td></tr>
 <tr>
 <th scope="row">Networking
@@ -1456,6 +1457,15 @@ imgur.com blocks Tor uploads, to upload images on an imgur domain go to a stacke
 <th scope="row">User Mentality
 </th>
 <td>Feel invincible running Tor Browser (irrespective of the platform), due to <a data-href="/wiki/Tor_Browser/Advanced_Users#Tor_Browser_Adversary_Model" href="./Tor_Browser/Advanced_Users.html" title="Tor Browser/Advanced Users">significant adversary capabilities</a> and interest in unmasking or infecting Tor users.
+</td></tr>
+<tr>
+<th scope="row">Virtual Machine (VM) Multiple Purpose Use
+</th>
+<td>Do not re-use the same VM for browsing and other applications.
+<ul><li><u><a data-href="/wiki/Qubes" href="./Qubes.html" title="Qubes">Qubes-Whonix ™</a></u>: Do not install additional applications in a TemplateVM that is intended to serve as base for AppVMs / DispVMs that run Tor Browser. Use multiple TemplateVMs. Use a dedicated TemplateVM, ideally <a data-href="/wiki/Operating_System_Software_and_Updates" href="./Operating_System_Software_and_Updates.html" title="Operating System Software and Updates">updated</a> and otherwise unmodified for AppVMs / DispVMs for browsing with Tor Browser.</li>
+<li><u><a data-href="/wiki/Non-Qubes-Whonix" href="./Non-Qubes-Whonix.html" title="Non-Qubes-Whonix">Non-Qubes-Whonix ™</a></u>: Use a dedicated or multiple Whonix-Workstation ™ for browsing with Tor Browser.</li></ul>
+<p>Consider using <a data-href="/wiki/Multiple_Whonix-Workstation" href="./Multiple_Whonix-Workstation.html" title="Multiple Whonix-Workstation">Multiple Whonix-Workstation ™</a> installing additional software. It is safer to compartmentalize discrete activities to minimize the threat of <a data-href="/wiki/VM_Fingerprinting" href="./VM_Fingerprinting.html" title="VM Fingerprinting">VM Fingerprinting</a>. This protects from the <a class="external text" data-href="https://forums.whonix.org/t/protocol-flooding-attack-scheme-flood-browser-fingerprinting/11729" href="https://forums.whonix.org/t/protocol-flooding-attack-scheme-flood-browser-fingerprinting/11729" rel="noreferrer noopener" target="_blank">schemeflood vulnerability</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/protocol-flooding-attack-scheme-flood-browser-fingerprinting/11729" href="https://web.archive.org/web/https://forums.whonix.org/t/protocol-flooding-attack-scheme-flood-browser-fingerprinting/11729" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, which could be used for browser fingerprinting / identity correlation among VM / browser restarts. See also <a data-href="/wiki/Browser_Tests#schemeflood.com" href="./Browser_Tests.html" title="Browser Tests">schemeflood.com</a> (<a data-href="/wiki/Browser_Tests" href="./Browser_Tests.html" title="Browser Tests">Browser Test</a>).
+</p>
 </td></tr>
 </tbody></table>
 <h1><span id="Whonix_™_Tor_Browser_Differences"></span><span class="mw-headline" id="Whonix_.E2.84.A2_Tor_Browser_Differences">Whonix ™ Tor Browser Differences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Tor_Browser&amp;action=edit&amp;section=63" href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;action=edit&amp;section=63.html" title="Edit section: Whonix ™ Tor Browser Differences">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -2133,7 +2143,7 @@ This is a wiki. Want to improve this page? Help is welcome and volunteer contrib
 </font></p><p><font size="-1">By using our website, you acknowledge that you have read, understood and agreed to our <a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a>, <a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a>, <a data-href="/wiki/Terms_of_Service" href="./Terms_of_Service.html" title="Terms of Service">Terms of Service</a>, and <a data-href="/wiki/E-Sign_Consent" href="./E-Sign_Consent.html" title="E-Sign Consent">E-Sign Consent</a>. Whonix ™ is provided by ENCRYPTED SUPPORT LP. See <a class="mw-redirect" data-href="/wiki/Impressum" href="./Impressum.html" title="Impressum">Imprint</a>, <a data-href="/wiki/Contact" href="./Contact.html" title="Contact">Contact</a>.
 </font>
 </p></div></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65254" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65254">https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65254</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65577" dir="ltr" href="https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65577">https://www.whonix.org/w/index.php?title=Tor_Browser&amp;oldid=65577</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="./Special:Categories.html" title="Special:Categories">Category</a>: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -2147,7 +2157,7 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Brows
 <div id="footer">
 <div class="small-12 large-centered columns text-center" id="footer-left">
 <ul id="footer-left-ul">
-<li id="footer-lastmod"> This page was last edited on 5 May 2021, at 07:48.</li>
+<li id="footer-lastmod"> This page was last edited on 29 May 2021, at 11:01.</li>
 <li id="footer-Imprint"><a data-href="/wiki/Imprint" href="./Imprint.html" title="Imprint">Imprint</a></li>
 <li id="footer-Privacy_Policy"><a data-href="/wiki/Privacy_Policy" href="./Privacy_Policy.html" title="Privacy Policy">Privacy Policy</a></li>
 <li id="footer-Cookie_Policy"><a data-href="/wiki/Cookie_Policy" href="./Cookie_Policy.html" title="Cookie Policy">Cookie Policy</a></li>
@@ -2167,5 +2177,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Tor_Brows
 </footer>
 </div>
  </body>
-<!-- Cached 20210528093625 -->
+<!-- Cached 20210529093125 -->
 </html>
