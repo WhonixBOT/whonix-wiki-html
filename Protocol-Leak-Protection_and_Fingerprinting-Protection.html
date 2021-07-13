@@ -14,7 +14,7 @@
 
 <meta content="" name="ResourceLoaderDynamicStyles"/>
 
-<meta content="MediaWiki 1.35.2" name="generator"/>
+<meta content="MediaWiki 1.36.1" name="generator"/>
 <meta content="Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines." name="description"/>
 <meta content="@Whonix" name="twitter:site"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -27,7 +27,7 @@
 <link data-href="/wiki/WgRightsPage" href="./WgRightsPage" rel="license"/>
 <link data-href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" href="https://www.whonix.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate.html" title="Whonix Atom feed" type="application/atom+xml"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="Protocol-Leak-Protection and Fingerprinting-Protection" property="og:title"/>
+<meta content="Protocol Leak and Fingerprinting Protection‎" property="og:title"/>
 <meta content="Whonix" property="og:site_name"/>
 <meta content="./Protocol-Leak-Protection_and_Fingerprinting-Protection" property="og:url"/>
 <meta content="Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines." property="og:description"/>
@@ -35,7 +35,6 @@
 <meta content="2021-07-09T13:59:21Z" property="article:modified_time"/>
 <meta content="2021-07-09T13:59:21Z" property="article:published_time"/>
 
-<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
 </head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Protocol-Leak-Protection_and_Fingerprinting-Protection rootpage-Protocol-Leak-Protection_and_Fingerprinting-Protection skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
 
@@ -448,125 +447,125 @@
 <p>These are the results before running <code>VBoxManage modifyvm Whonix-Workstation --cpuidremoveall</code>.
 </p>
 <pre>&gt;  
-processor       : 0
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 37
-model name      : Intel(R) Core(TM) i5 CPU       M 580  @ 2.67GHz
-stepping        : 5
-microcode       : 0x616
-cpu MHz         : 2659.899
-cache size      : 3072 KB
-physical id     : 0
-siblings        : 1
-core id         : 0
-cpu cores       : 1
-apicid          : 0
-initial apicid  : 0
-fdiv_bug        : no
-f00f_bug        : no
-coma_bug        : no
-fpu             : yes
-fpu_exception   : yes
-cpuid level     : 11
-wp              : yes
-flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc xtopology nonstop_tsc pni monitor lahf_lm
-bogomips        : 5319.79
-clflush size    : 64
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 37
+model name      : Intel(R) Core(TM) i5 CPU       M 580  @ 2.67GHz
+stepping        : 5
+microcode       : 0x616
+cpu MHz         : 2659.899
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 1
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fdiv_bug        : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 11
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc xtopology nonstop_tsc pni monitor lahf_lm
+bogomips        : 5319.79
+clflush size    : 64
 cache_alignment : 64
-address sizes   : 36 bits physical, 48 bits virtual
+address sizes   : 36 bits physical, 48 bits virtual
 power management:
 </pre>
 <h2><span class="mw-headline" id="CPU_Test_Two">CPU Test Two</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=12.html" title="Edit section: CPU Test Two">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>These are the results after running <code>VBoxManage modifyvm Whonix-Workstation --cpuidremoveall</code> and shutting down the workstation.
 </p>
 <pre>&gt;  
-processor       : 0
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 37
-model name      : Intel(R) Core(TM) i5 CPU       M 580  @ 2.67GHz
-stepping        : 5
-microcode       : 0x616
-cpu MHz         : 2660.690
-cache size      : 3072 KB
-physical id     : 0
-siblings        : 1
-core id         : 0
-cpu cores       : 1
-apicid          : 0
-initial apicid  : 0
-fdiv_bug        : no
-f00f_bug        : no
-coma_bug        : no
-fpu             : yes
-fpu_exception   : yes
-cpuid level     : 11
-wp              : yes
-flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc xtopology nonstop_tsc pni monitor lahf_lm
-bogomips        : 5321.38
-clflush size    : 64
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 37
+model name      : Intel(R) Core(TM) i5 CPU       M 580  @ 2.67GHz
+stepping        : 5
+microcode       : 0x616
+cpu MHz         : 2660.690
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 1
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fdiv_bug        : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 11
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc xtopology nonstop_tsc pni monitor lahf_lm
+bogomips        : 5321.38
+clflush size    : 64
 cache_alignment : 64
-address sizes   : 36 bits physical, 48 bits virtual
+address sizes   : 36 bits physical, 48 bits virtual
 power management:
 </pre>
 <h2><span id="KVM_Whonix-Workstation_™_12_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_12_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 12 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=13.html" title="Edit section: KVM Whonix-Workstation ™ 12 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<pre>&gt; processor       : 0
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 6
-model name      : QEMU Virtual CPU version 2.1.2
-stepping        : 3
-microcode       : 0x1
-cpu MHz         : 2659.914
-cache size      : 4096 KB
-physical id     : 0
-siblings        : 1
-core id         : 0
-cpu cores       : 1
-apicid          : 0
-initial apicid  : 0
-fdiv_bug        : no
-f00f_bug        : no
-coma_bug        : no
-fpu             : yes
-fpu_exception   : yes
-cpuid level     : 4
-wp              : yes
-flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
-bogomips        : 5319.82
-clflush size    : 64
+<pre>&gt; processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 6
+model name      : QEMU Virtual CPU version 2.1.2
+stepping        : 3
+microcode       : 0x1
+cpu MHz         : 2659.914
+cache size      : 4096 KB
+physical id     : 0
+siblings        : 1
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fdiv_bug        : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 4
+wp              : yes
+flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips        : 5319.82
+clflush size    : 64
 cache_alignment : 64
-address sizes   : 40 bits physical, 48 bits virtual
+address sizes   : 40 bits physical, 48 bits virtual
 power management:
 
-&gt; processor       : 1
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 6
-model name      : QEMU Virtual CPU version 2.1.2
-stepping        : 3
-microcode       : 0x1
-cpu MHz         : 2659.914
-cache size      : 4096 KB
-physical id     : 1
-siblings        : 1
-core id         : 0
-cpu cores       : 1
-apicid          : 1
-initial apicid  : 1
-fdiv_bug        : no
-f00f_bug        : no
-coma_bug        : no
-fpu             : yes
-fpu_exception   : yes
-cpuid level     : 4
-wp              : yes
-flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
-bogomips        : 1945.60
-clflush size    : 64
+&gt; processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 6
+model name      : QEMU Virtual CPU version 2.1.2
+stepping        : 3
+microcode       : 0x1
+cpu MHz         : 2659.914
+cache size      : 4096 KB
+physical id     : 1
+siblings        : 1
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fdiv_bug        : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 4
+wp              : yes
+flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips        : 1945.60
+clflush size    : 64
 cache_alignment : 64
-address sizes   : 40 bits physical, 48 bits virtual
+address sizes   : 40 bits physical, 48 bits virtual
 power management:
 </pre>
 <h2><span id="KVM_Whonix-Workstation_™_13_/proc/cpuinfo"></span><span class="mw-headline" id="KVM_Whonix-Workstation_.E2.84.A2_13_.2Fproc.2Fcpuinfo">KVM Whonix-Workstation ™ 13 /proc/cpuinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=14.html" title="Edit section: KVM Whonix-Workstation ™ 13 /proc/cpuinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -627,238 +626,238 @@ address sizes : 40 bits physical, 48 bits virtual
 power management:
 </pre>
 <h2><span id='from_whonix_12_WS_-_qubes_Q3_"cat_/proc/cpuinfo"_(**different_PC**)'></span><span class="mw-headline" id="from_whonix_12_WS_-_qubes_Q3_.22cat_.2Fproc.2Fcpuinfo.22_.28.2A.2Adifferent_PC.2A.2A.29">from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=15.html" title='Edit section: from whonix 12 WS - qubes Q3 "cat /proc/cpuinfo" (**different PC**)'>edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<pre>&gt; processor    : 0
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+<pre>&gt; processor    : 0
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 1
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 1
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 2
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 2
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 3
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 3
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 4
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 4
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 5
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 5
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 6
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 6
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 
-&gt; processor    : 7
-vendor_id    : GenuineIntel
-cpu family    : 6
-model        : 60
-model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-stepping    : 3
-microcode    : 0x17
-cpu MHz        : 2494.312
-cache size    : 6144 KB
-physical id    : 0
-siblings    : 8
-core id        : 2
-cpu cores    : 1
-apicid        : 4
-initial apicid    : 4
-fpu        : yes
-fpu_exception    : yes
-cpuid level    : 13
-wp        : yes
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
-bugs        :
-bogomips    : 4988.62
-clflush size    : 64
-cache_alignment    : 64
-address sizes    : 39 bits physical, 48 bits virtual
+&gt; processor    : 7
+vendor_id    : GenuineIntel
+cpu family    : 6
+model        : 60
+model name    : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+stepping    : 3
+microcode    : 0x17
+cpu MHz        : 2494.312
+cache size    : 6144 KB
+physical id    : 0
+siblings    : 8
+core id        : 2
+cpu cores    : 1
+apicid        : 4
+initial apicid    : 4
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 13
+wp        : yes
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+bugs        :
+bogomips    : 4988.62
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 39 bits physical, 48 bits virtual
 power management:
 </pre>
 <h2><span class="mw-headline" id="KVM_vs_Qubes">KVM vs Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=16.html" title="Edit section: KVM vs Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="KVM">KVM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=17.html" title="Edit section: KVM">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<pre>processor       : 0
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 6
-model name      : QEMU Virtual CPU version 2.1.2
-flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
+<pre>processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 6
+model name      : QEMU Virtual CPU version 2.1.2
+flags           : fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 syscall nx lm pni cx16 x2apic popcnt hypervisor lahf_lm
 </pre>
 <h3><span class="mw-headline" id="Qubes">Qubes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=18.html" title="Edit section: Qubes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<pre>processor    : 0
-vendor_id    : GenuineIntel
-cpu family   : 6
-model        : 60
-model name   : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
-flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
+<pre>processor    : 0
+vendor_id    : GenuineIntel
+cpu family   : 6
+model        : 60
+model name   : Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz
+flags        : fpu de tsc msr pae cx8 apic sep cmov pat clflush mmx fxsr sse sse2 ss ht syscall nx lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm ida arat epb pln pts dtherm fsgsbase bmi1 avx2 bmi2 erms xsaveopt
 </pre>
 <h1><span class="mw-headline" id="get-edid_output">get-edid output</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=19.html" title="Edit section: get-edid output">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="EDID">EDID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;action=edit&amp;section=20.html" title="Edit section: EDID">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -1268,7 +1267,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a class="image" data-href="/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;" href="https://www.whonix.org/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;.html" title="link=https://mastodon.technology/share?message=Protocol-Leak-Protection and Fingerprinting-Protection%20./Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;t=Protocol-Leak-Protection and Fingerprinting-Protection"><img alt="link=https://mastodon.technology/share?message=Protocol-Leak-Protection and Fingerprinting-Protection%20./Protocol-Leak-Protection_and_Fingerprinting-Protection&amp;t=Protocol-Leak-Protection and Fingerprinting-Protection" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Interested in becoming an author for the <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> Whonix ™ News Blog</a> or writing about anonymity, privacy and security? Please get in touch!
+<p>There are <a data-href="/wiki/Dev/git#subscribe_to_code_changes" href="./Dev/git.html" title="Dev/git">five different options</a> for subscribing to Whonix ™ source code changes.
 </p>
 </div>
 <p><a data-href="./Protocol-Leak-Protection_and_Fingerprinting-Protection" href="./Protocol-Leak-Protection_and_Fingerprinting-Protection" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protocol-Leak-Protection_and_Fingerprinting-Protection" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Protocol-Leak-Protection_and_Fingerprinting-Protection" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a> <a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a> | <a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a> | <a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a>
@@ -1307,5 +1306,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Protocol-
 </footer>
 </div>
  </body>
-<!-- Cached 20210710102940 -->
+<!-- Cached 20210712174827 -->
 </html>
