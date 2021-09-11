@@ -354,7 +354,7 @@ a.freelink
 <li><u>Virtual console</u>: Although optional, it is also useful to know how to open a second <a data-href="/wiki/Desktop#Virtual_Consoles" href="../../Desktop.html" title="Desktop">virtual console</a>.</li></ol>
 <h2><span class="mw-headline" id="Host_Preparation">Host Preparation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=11.html" title="Edit section: Host Preparation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> Prepare to build on Debian <code>buster</code>.
+<p><b>1.</b> Prepare to build on Debian <code>bullseye</code>.
 </p><p>To obtain Debian safely, see: <a data-href="/wiki/Debian_Tips#Download_and_Verification" href="../../Debian_Tips.html" title="Debian Tips">Debian ISO OpenPGP verification</a>. Around 15 GB of free space is required. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
 </p><p><b>2.</b> Adjust terminal settings.
 </p><p>It is recommended to set the terminal (such as Konsole) to unlimited scrollback, so it is possible to watch the full build log.
@@ -407,7 +407,7 @@ a.freelink
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Confirm prerequisites are met.
 </p>
-<ul><li>Debian <code>buster</code> is installed.</li>
+<ul><li>Debian <code>bullseye</code> is installed.</li>
 <li>User account <code>user</code> exists.</li></ul>
 <p><b>2.</b> Become root. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p><p><!-- Widget:CodeSelect start -->
@@ -533,11 +533,11 @@ a.freelink
 <h1><span id="How-to:_Install_Whonix-Gateway_™"></span><span class="mw-headline" id="How-to:_Install_Whonix-Gateway_.E2.84.A2">How-to: Install Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=13.html" title="Edit section: How-to: Install Whonix-Gateway ™">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Recommended:_On_Hardware">Recommended: On Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=14.html" title="Edit section: Recommended: On Hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h3><span class="mw-headline" id="Get_Debian">Get Debian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=15.html" title="Edit section: Get Debian">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Download a <a class="external text" data-href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" rel="noreferrer noopener" target="_blank">Debian <code>buster</code> 64-bit installation ISO</a> <sup><a data-href="https://web.archive.org/web/https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" href="https://web.archive.org/web/https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Detailed instructions for this procedure are not part of this chapter, but the <a data-href="/wiki/Debian_Tips#Download_and_Verification" href="../../Debian_Tips.html" title="Debian Tips">Debian Host Operating System Tips</a> chapter provides some steps.
-</p><p>It is possible to choose an ISO for any desktop environment (KDE, LXDE, Xfce, ...). However, because the command line is extensively used the Debian <code>buster</code> network install (netinst) version is recommended (it is the most minimal).
+<p>Download a <a class="external text" data-href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" rel="noreferrer noopener" target="_blank">Debian <code>bullseye</code> 64-bit installation ISO</a> <sup><a data-href="https://web.archive.org/web/https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" href="https://web.archive.org/web/https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. Detailed instructions for this procedure are not part of this chapter, but the <a data-href="/wiki/Debian_Tips#Download_and_Verification" href="../../Debian_Tips.html" title="Debian Tips">Debian Host Operating System Tips</a> chapter provides some steps.
+</p><p>It is possible to choose an ISO for any desktop environment (KDE, LXDE, Xfce, ...). However, because the command line is extensively used the Debian <code>bullseye</code> network install (netinst) version is recommended (it is the most minimal).
 </p>
 <h3><span class="mw-headline" id="Install_Debian">Install Debian</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=16.html" title="Edit section: Install Debian">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>In the installer boot menu of Debian <code>buster</code>, press "Install" and choose the following settings:
+<p>In the installer boot menu of Debian <code>bullseye</code>, press "Install" and choose the following settings:
 </p>
 <pre>Select a language: English
 Select your location: United States
@@ -564,7 +564,7 @@ Finish the installation: Continue
 </pre>
 <div class="toccolours mw-collapsible mw-collapsed">
 <h3><span class="mw-headline" id="Installation_Screenshots">Installation Screenshots</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=17.html" title="Edit section: Installation Screenshots">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>For a visual walk-through of the minimal Debian <code>buster</code> installation, click on Expand on the right. For up-to-date screenshots of this process, refer to the <a class="external text" data-href="https://debian-handbook.info/browse/stable/sect.installation-steps.html" href="https://debian-handbook.info/browse/stable/sect.installation-steps.html" rel="noreferrer noopener" target="_blank">The Debian Administrator's Handbook: 4.2. Installing, Step by Step</a> <sup><a data-href="https://web.archive.org/web/https://debian-handbook.info/browse/stable/sect.installation-steps.html" href="https://web.archive.org/web/https://debian-handbook.info/browse/stable/sect.installation-steps.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. If utilizing this guide, remember to set:
+<p>For a visual walk-through of the minimal Debian <code>bullseye</code> installation, click on Expand on the right. For up-to-date screenshots of this process, refer to the <a class="external text" data-href="https://debian-handbook.info/browse/stable/sect.installation-steps.html" href="https://debian-handbook.info/browse/stable/sect.installation-steps.html" rel="noreferrer noopener" target="_blank">The Debian Administrator's Handbook: 4.2. Installing, Step by Step</a> <sup><a data-href="https://web.archive.org/web/https://debian-handbook.info/browse/stable/sect.installation-steps.html" href="https://web.archive.org/web/https://debian-handbook.info/browse/stable/sect.installation-steps.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>. If utilizing this guide, remember to set:
 </p>
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 <ul><li>the English language</li>
@@ -682,7 +682,7 @@ Finish the installation: Continue
 </div>
 <div class="toccolours mw-collapsible mw-collapsed">
 <h3><span class="mw-headline" id="Optional:_Customizing_Full_Disk_Encryption">Optional: Customizing Full Disk Encryption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Dev/Build_Documentation/Physical_Isolation&amp;action=edit&amp;section=18.html" title="Edit section: Optional: Customizing Full Disk Encryption">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>If you wish to configure a custom encryption algorithm to enhance security during the minimal Debian <code>buster</code> installation, click on Expand on the right. 
+<p>If you wish to configure a custom encryption algorithm to enhance security during the minimal Debian <code>bullseye</code> installation, click on Expand on the right. 
 </p>
 <div class="mw-collapsible-content">
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -798,28 +798,28 @@ O2. Change "do not use" to "swap area", and press Enter. Then select "Done setti
 <p><b>1.</b> Install security updates.
 </p><p>Log on, install all security updates and reboot.
 </p><p><b>2.</b> Log in with "root".
-</p><p><b>3.</b> Add the <code>buster</code> main repository source.
+</p><p><b>3.</b> Add the <code>bullseye</code> main repository source.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>echo "deb http://deb.debian.org/debian buster main" &gt;&gt; /etc/apt/sources.list</pre>
+<pre>echo "deb http://deb.debian.org/debian bullseye main" &gt;&gt; /etc/apt/sources.list</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb http://deb.debian.org/debian buster main" &gt;&gt; /etc/apt/sources.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb http://deb.debian.org/debian bullseye main" &gt;&gt; /etc/apt/sources.list</textarea>
 </div>
 </div>
 <!-- open p tag -->
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p><b>4.</b> Add the <code>buster</code> updates repository source. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
+</p><p><b>4.</b> Add the <code>bullseye</code> updates repository source. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>echo "deb http://security.debian.org buster/updates main" &gt;&gt; /etc/apt/sources.list</pre>
+<pre>echo "deb http://security.debian.org bullseye/updates main" &gt;&gt; /etc/apt/sources.list</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb http://security.debian.org buster/updates main" &gt;&gt; /etc/apt/sources.list</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">echo "deb http://security.debian.org bullseye/updates main" &gt;&gt; /etc/apt/sources.list</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -950,14 +950,14 @@ a.freelink
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p>Get the source code including git submodules. <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup> <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
-</p><p>Note: Replace <code>15.0.1.9.3-stable</code> with the actual tag you want to build.
+</p><p>Note: Replace <code>16.0.2.7-stable</code> with the actual tag you want to build.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git clone --depth=1 --branch 15.0.1.9.3-stable --jobs=4 --recurse-submodules --shallow-submodules https://gitlab.com/whonix/Whonix.git</pre>
+<pre>git clone --depth=1 --branch 16.0.2.7-stable --jobs=4 --recurse-submodules --shallow-submodules https://gitlab.com/whonix/Whonix.git</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --depth=1 --branch 15.0.1.9.3-stable --jobs=4 --recurse-submodules --shallow-submodules https://gitlab.com/whonix/Whonix.git</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --depth=1 --branch 16.0.2.7-stable --jobs=4 --recurse-submodules --shallow-submodules https://gitlab.com/whonix/Whonix.git</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -985,14 +985,14 @@ a.freelink
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p>Verify the chosen tag to build. Replace with tag you want to build.
-</p><p>Note: Replace <code>15.0.1.9.3-stable</code> with the actual tag you want to build.
+</p><p>Note: Replace <code>16.0.2.7-stable</code> with the actual tag you want to build.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-tag 15.0.1.9.3-stable</pre>
+<pre>git verify-tag 16.0.2.7-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 15.0.1.9.3-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-tag 16.0.2.7-stable</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -1003,7 +1003,7 @@ a.freelink
 </p>
 <blockquote><p>object 1844108109a5f2f8bddcf2257b9f3675be5cfb22
 </p><p>type commit
-tag 15.0.1.9.3
+tag 16.0.2.7
 tagger Patrick Schleizer &lt;adrelanos@whonix.org&gt; 1392320095 +0000
 </p><p>.
 gpg: Signature made Thu 13 Feb 2014 07:34:55 PM UTC using RSA key ID 77BB3C48
@@ -1018,14 +1018,14 @@ gpg: Good signature from "Patrick Schleizer &lt;adrelanos@whonix.org&gt;" [ultim
 <blockquote><p>gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.</p></blockquote>
 <p>Is explained on the <a class="mw-redirect" data-href="/wiki/Whonix_Signing_Key" href="../../Whonix_Signing_Key.html" title="Whonix Signing Key">Whonix Signing Key</a> page and can be safely ignored.
-</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace <code>15.0.1.9.3</code> with the actual git tag being verified).
+</p><p>By convention, git tags should point to signed git commits. <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> (<a class="external text" data-href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">forum discussion</a> <sup><a data-href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" href="https://web.archive.org/web/https://www.whonix.org/old-forum/index.php/topic,538.0.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>) It is advisable to verify the signature of the git commit as well (replace <code>16.0.2.7</code> with the actual git tag being verified).
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git verify-commit 15.0.1.9.3-stable^{commit}</pre>
+<pre>git verify-commit 16.0.2.7-stable^{commit}</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 15.0.1.9.3-stable^{commit}</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git verify-commit 16.0.2.7-stable^{commit}</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -1057,14 +1057,14 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
 </p><p>Use <i>git checkout</i> to select the preferred version to build.
-</p><p>Note: Replace <code>15.0.1.9.3-stable</code> with the actual tag you want to build.
+</p><p>Note: Replace <code>16.0.2.7-stable</code> with the actual tag you want to build.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
-<pre>git checkout --recurse-submodules 15.0.1.9.3-stable</pre>
+<pre>git checkout --recurse-submodules 16.0.2.7-stable</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recurse-submodules 15.0.1.9.3-stable</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git checkout --recurse-submodules 16.0.2.7-stable</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -1089,7 +1089,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <!-- Widget:CodeSelect end -->
 </p><p>The output should show.
 </p><p><code>
-15.0.1.9.3-stable
+16.0.2.7-stable
 </code>
 </p><p>Check if the source folder is pristine.
 </p><p><!-- Widget:CodeSelect start -->
@@ -1107,7 +1107,7 @@ Date:   Sun Dec 7 01:22:22 2014 +0000
 <!-- Widget:CodeSelect end -->
 </p><p>The output should show nothing.
 </p><p><code>
-HEAD detached at 15.0.1.9.3-stable<br/>
+HEAD detached at 16.0.2.7-stable<br/>
 nothing to commit, working tree clean
 </code>
 </p><p>If it shows something else, do not continue.
@@ -1767,7 +1767,7 @@ user rights <code>PATH</code>:
 Optional <code>git</code> parameters:
 
 <ul><li><code>--depth=1</code>: Used to speed up download.</li>
-<li><code>--branch 15.0.1.9.3-stable</code> Usability. Used to speed up download.</li>
+<li><code>--branch 16.0.2.7-stable</code> Usability. Used to speed up download.</li>
 <li><code>--jobs=4</code>: Used to speed up download.</li>
 <li><code>--recurse-submodules --shallow-submodules</code>: Usability.</li></ul>
 
@@ -1779,10 +1779,10 @@ Alternatively, this can be achieved with the following commands in several steps
 <!-- Widget:CodeSelect start -->
 <div class="codeContainerNew">
 <div class="preDiv">
-<pre>git clone --depth=1 --branch 15.0.1.9.3-stable https://gitlab.com/whonix/Whonix.git</pre>
+<pre>git clone --depth=1 --branch 16.0.2.7-stable https://gitlab.com/whonix/Whonix.git</pre>
 </div>
 <div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --depth=1 --branch 15.0.1.9.3-stable https://gitlab.com/whonix/Whonix.git</textarea>
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git clone --depth=1 --branch 16.0.2.7-stable https://gitlab.com/whonix/Whonix.git</textarea>
 </div>
 </div>
 <!-- open p tag -->
@@ -1912,7 +1912,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a class="image" data-href="/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;" href="https://www.whonix.org/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;.html" title="link=https://mastodon.technology/share?message=Dev/Build Documentation/Physical Isolation%20../../Dev/Build_Documentation/Physical_Isolation&amp;t=Dev/Build Documentation/Physical Isolation"><img alt="link=https://mastodon.technology/share?message=Dev/Build Documentation/Physical Isolation%20../../Dev/Build_Documentation/Physical_Isolation&amp;t=Dev/Build Documentation/Physical Isolation" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to get involved with Whonix ™? Check out our <a data-href="/wiki/Contribute" href="../../Contribute.html" title="Contribute">Contribute</a> page.
+<p>Love Whonix ™ and want to help spread the word? You can start by telling your friends or <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> posting news</a> about Whonix ™ on your website, blog or social media.
 </p>
 </div>
 <p><a data-href="../../Dev/Build_Documentation/Physical_Isolation" href="../../Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Dev/Build_Documentation/Physical_Isolation" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a> <a data-href="/wiki/Priority_Support" href="../../Priority_Support.html" title="Priority Support">Priority Support</a> | <a data-href="/wiki/Investors" href="../../Investors.html" title="Investors">Investors</a> | <a data-href="/wiki/Professional_Support" href="../../Professional_Support.html" title="Professional Support">Professional Support</a>
@@ -1951,5 +1951,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Build
 </footer>
 </div>
  </body>
-<!-- Cached 20210909094320 -->
+<!-- Cached 20210910200947 -->
 </html>
