@@ -32,8 +32,8 @@
 <meta content="./Two-factor_authentication_2FA" property="og:url"/>
 <meta content='How novice and advanced users can benefit from Two-factor Authentication (2FA). Avoiding inaccessible online accounts/logins. Time-based One-time Password (TOTP). "Google Authenticator." Universal Second Factor (U2F) security/physical keys.' property="og:description"/>
 <meta content="https://www.whonix.org/w/images/3/3d/2FA.jpg" property="og:image"/>
-<meta content="2021-09-06T03:55:40Z" property="article:modified_time"/>
-<meta content="2021-09-06T03:55:40Z" property="article:published_time"/>
+<meta content="2021-09-11T08:27:39Z" property="article:modified_time"/>
+<meta content="2021-09-11T08:27:39Z" property="article:published_time"/>
 
 </head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Two-factor_authentication_2FA rootpage-Two-factor_authentication_2FA skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
@@ -133,22 +133,21 @@
 <ul>
 <li class="toclevel-2 tocsection-6"><a href="#Implementations"><span class="tocnumber">3.1</span> <span class="toctext">Implementations</span></a></li>
 <li class="toclevel-2 tocsection-7"><a href="#Backups"><span class="tocnumber">3.2</span> <span class="toctext">Backups</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Software_Choices"><span class="tocnumber">3.3</span> <span class="toctext">Software Choices</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Popularity"><span class="tocnumber">3.4</span> <span class="toctext">Popularity</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#Compartmentalization"><span class="tocnumber">3.5</span> <span class="toctext">Compartmentalization</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Authenticator_Software_Choices"><span class="tocnumber">3.3</span> <span class="toctext">Authenticator Software Choices</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Other_Factors"><span class="tocnumber">3.4</span> <span class="toctext">Other Factors</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-11"><a href="#Warnings"><span class="tocnumber">4</span> <span class="toctext">Warnings</span></a>
+<li class="toclevel-1 tocsection-10"><a href="#Warnings"><span class="tocnumber">4</span> <span class="toctext">Warnings</span></a>
 <ul>
-<li class="toclevel-2 tocsection-12"><a href="#Threat_Model"><span class="tocnumber">4.1</span> <span class="toctext">Threat Model</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#Security_Issues"><span class="tocnumber">4.2</span> <span class="toctext">Security Issues</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#Anonymity_Issues"><span class="tocnumber">4.3</span> <span class="toctext">Anonymity Issues</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Threat_Model"><span class="tocnumber">4.1</span> <span class="toctext">Threat Model</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Security_Issues"><span class="tocnumber">4.2</span> <span class="toctext">Security Issues</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Anonymity_Issues"><span class="tocnumber">4.3</span> <span class="toctext">Anonymity Issues</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-15"><a href="#Practical_2FA_Example"><span class="tocnumber">5</span> <span class="toctext">Practical 2FA Example</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Debian_Packages"><span class="tocnumber">6</span> <span class="toctext">Debian Packages</span></a></li>
-<li class="toclevel-1 tocsection-17"><a href="#See_Also"><span class="tocnumber">7</span> <span class="toctext">See Also</span></a></li>
-<li class="toclevel-1 tocsection-18"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Practical_2FA_Example"><span class="tocnumber">5</span> <span class="toctext">Practical 2FA Example</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Debian_Packages"><span class="tocnumber">6</span> <span class="toctext">Debian Packages</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#See_Also"><span class="tocnumber">7</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Footnotes"><span class="tocnumber">8</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -196,7 +195,7 @@
 <li>limit information shared over email</li>
 <li>avoid typing your email password on public WiFi networks</li></ul>
 <h1><span class="mw-headline" id="Common_Misconceptions">Common Misconceptions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=4.html" title="Edit section: Common Misconceptions">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<p><b>Table:</b> <i>Common 2FA Misconceptions</i> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+<p><b>Table:</b> <i>Common 2FA Misconceptions</i> <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> <sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <table class="wikitable">
 <tbody><tr>
@@ -240,7 +239,7 @@
 <tr>
 <th scope="row">All 2FA is equally strong
 </th>
-<td>This is incorrect. For example, SMS and mobile authenticator applications are vulnerable to SIM swapping, mobile malware, phishing scams, and <a data-href="/wiki/Warning#Man-in-the-middle_Attacks" href="./Warning.html" title="Warning">Man-in-the-middle Attacks</a>. On the other hand, Google researchers found that no users relying exclusively on physical security keys were victims of targeted phishing campaigns (since physical key access is required to log in). <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+<td>This is incorrect. For example, SMS and mobile authenticator applications are vulnerable to SIM swapping, mobile malware, phishing scams, and <a data-href="/wiki/Warning#Man-in-the-middle_Attacks" href="./Warning.html" title="Warning">Man-in-the-middle Attacks</a>. On the other hand, Google researchers found that no users relying exclusively on physical security keys were victims of targeted phishing campaigns (since physical key access is required to log in). <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </td></tr>
 <tr>
 <th scope="row">2FA is complicated and time-consuming
@@ -252,10 +251,17 @@
 </th>
 <td>This is incorrect. For example the TOTP authentication mechanism does not require an Internet connection.
 </td></tr>
+<tr>
+<th scope="row">TOTP and HMAC-based One-Time Passwords (HOTP) are identical
+</th>
+<td>TOTP and HOTP are distinct:
+<ul><li>TOTP codes are time-limited and generally remain active for 30 to 60 seconds. They become invalid if not used within that timeframe. Examples are Authy, Google Authenticator and others.</li>
+<li>HOTP codes are event-based; codes remain active until a new code is requested. One example is the YubiKey implementation.</li></ul>
+</td></tr>
 </tbody></table>
 <h1><span class="mw-headline" id="2FA_Configuration_and_Options">2FA Configuration and Options</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=5.html" title="Edit section: 2FA Configuration and Options">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Before configuring 2FA for online accounts, it is worth considering the most common methods in use by websites, the relative strengths and weaknesses of each implementation, and various configuration options. 
-</p><p>Depending on the consumer website, more than one 2FA method may be available. 2FA may also be referred to as "login verification" (Twitter), "login approvals" (Facebook), "SafePass" (Bank of America), "2-step verification" (Google and others). Most popular websites provide 2FA -- the Electronic Frontier Foundation (EFF) provides detailed guides for the following services: <sup class="reference" id="cite_ref-2FA_methods_16-0"><a href="#cite_note-2FA_methods-16">[16]</a></sup>
+</p><p>Depending on the consumer website, more than one 2FA method may be available. 2FA may also be referred to as "login verification" (Twitter), "login approvals" (Facebook), "SafePass" (Bank of America), "2-step verification" (Google and others). Most popular websites provide 2FA -- the Electronic Frontier Foundation (EFF) provides detailed guides for the following services: <sup class="reference" id="cite_ref-2FA_methods_17-0"><a href="#cite_note-2FA_methods-17">[17]</a></sup>
 </p>
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 <ul><li><a class="external text" data-href="https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-amazon" href="https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-amazon" rel="noreferrer noopener" target="_blank">Amazon</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-amazon" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-amazon" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
@@ -271,14 +277,14 @@
 <li><a class="external text" data-href="https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-yahoo-mail" href="https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-yahoo-mail" rel="noreferrer noopener" target="_blank">Yahoo Mail</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-yahoo-mail" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/how-enable-two-factor-authentication-yahoo-mail" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </div>
 <h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=6" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=6.html" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>2FA implementations can take several forms, including: <sup class="reference" id="cite_ref-2FA_methods_16-1"><a href="#cite_note-2FA_methods-16">[16]</a></sup>
+<p>2FA implementations can take several forms, including: <sup class="reference" id="cite_ref-2FA_methods_17-1"><a href="#cite_note-2FA_methods-17">[17]</a></sup>
 </p>
 <ul><li>a one-time verification code sent via SMS</li>
 <li>a TOTP generated by dedicated applications like <a class="external text" data-href="https://www.google.com/intl/en-US/landing/2step/features.html" href="https://www.google.com/intl/en-US/landing/2step/features.html" rel="noreferrer noopener" target="_blank">Google Authenticator</a> <sup><a data-href="https://web.archive.org/web/https://www.google.com/intl/en-US/landing/2step/features.html" href="https://web.archive.org/web/https://www.google.com/intl/en-US/landing/2step/features.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup>, <a class="external text" data-href="https://authy.com/" href="https://authy.com/" rel="noreferrer noopener" target="_blank">Authy</a> <sup><a data-href="https://web.archive.org/web/https://authy.com/" href="https://web.archive.org/web/https://authy.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://freeotp.github.io/" href="https://freeotp.github.io/" rel="noreferrer noopener" target="_blank">FreeOTP</a> <sup><a data-href="https://web.archive.org/web/https://freeotp.github.io/" href="https://web.archive.org/web/https://freeotp.github.io/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li>downloadable, printable, hardcopy backup codes</li>
 <li>hardware tokens such as a <a class="external text" data-href="https://www.yubico.com/" href="https://www.yubico.com/" rel="noreferrer noopener" target="_blank">YubiKey</a> <sup><a data-href="https://web.archive.org/web/https://www.yubico.com/" href="https://web.archive.org/web/https://www.yubico.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 <p>As outlined in the introduction, all these methods are verifying something you have (a smartphone, printed out codes, a piece of hardware) with something you know (your password). Each method has strengths and weakness as outlined in the table below. In general, while SMS verification is the most common 2FA method, it is not recommended because SMS messages can be intercepted in transit by malicious actors. Conversely, hardware tokens like YubiKey are the most secure method, but are not widely supported and could be lost. Authenticator applications are a <i>reasonably</i> secure middle ground, so long as you possess a smartphone.
-</p><p><b>Table:</b> <i>2FA Implementation Pros and Cons</i> <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
+</p><p><b>Table:</b> <i>2FA Implementation Pros and Cons</i> <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> <sup class="reference" id="cite_ref-2FA_risks_20-0"><a href="#cite_note-2FA_risks-20">[20]</a></sup>
 </p>
 <table class="wikitable">
 <tbody><tr>
@@ -287,7 +293,7 @@
 <th scope="col"><b>Pros and Cons</b>
 </th></tr>
 <tr>
-<th scope="row" style="vertical-align: top; text-decoration: underline;">FIDO U2F / physical keys (recommended) <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">FIDO U2F / physical keys (recommended) <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
 </th>
 <td>Pros:
 <ul><li>Both the physical key and password are required for logins -- accounts have strong protection against phishing attacks.</li>
@@ -299,17 +305,17 @@
 <li>Most sites supporting U2F also support TOTP and backup codes.</li></ul>
 <p>Cons:
 </p>
-<ul><li>A physical key must be purchased. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup></li>
+<ul><li>A physical key must be purchased. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup></li>
 <li>The key must be carried at all times.</li>
 <li>Devices without a USB port may prevent logins.</li>
 <li>Browser support can be limited -- the W3C is working on standardizing the U2F protocol.</li>
 <li>Only a handful of U2F devices work with smartphones over <a class="external text" data-href="https://techterms.com/definition/nfc" href="https://techterms.com/definition/nfc" rel="noreferrer noopener" target="_blank">Near Field Communication (NFC)</a> <sup><a data-href="https://web.archive.org/web/https://techterms.com/definition/nfc" href="https://web.archive.org/web/https://techterms.com/definition/nfc" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and Bluetooth.</li></ul>
 </td></tr>
 <tr>
-<th scope="row" style="vertical-align: top; text-decoration: underline;">Authenticator application / TOTP 2FA (recommended) <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">Authenticator application / TOTP 2FA (recommended) <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
 </th>
 <td>Pros:
-<ul><li>Easy to use and set up -- sites show <a class="external text" data-href="https://techterms.com/definition/qr_code" href="https://techterms.com/definition/qr_code" rel="noreferrer noopener" target="_blank">QR codes</a> <sup><a data-href="https://web.archive.org/web/https://techterms.com/definition/qr_code" href="https://web.archive.org/web/https://techterms.com/definition/qr_code" rel="noreferrer noopener" target="_blank">[archive]</a></sup> containing the secret key that can be scanned into the application. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup></li>
+<ul><li>Easy to use and set up -- sites show <a class="external text" data-href="https://techterms.com/definition/qr_code" href="https://techterms.com/definition/qr_code" rel="noreferrer noopener" target="_blank">QR codes</a> <sup><a data-href="https://web.archive.org/web/https://techterms.com/definition/qr_code" href="https://web.archive.org/web/https://techterms.com/definition/qr_code" rel="noreferrer noopener" target="_blank">[archive]</a></sup> containing the secret key that can be scanned into the application. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup></li>
 <li>Codes can be scanned into multiple smartphones.</li>
 <li>Codes can be saved in a safe place or printed out as a backup.</li>
 <li>It is possible to use even without Internet access.</li>
@@ -318,11 +324,11 @@
 </p>
 <ul><li>A smartphone is required.</li>
 <li>Account access can be lost if the phone dies or is stolen (unless a backup was saved/printed out).</li>
-<li>This is inconvenient if logging into multiple, different computers. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup></li>
+<li>This is inconvenient if logging into multiple, different computers. <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup></li>
 <li>This implementation is vulnerable to smartphone malware.</li></ul>
 </td></tr>
 <tr>
-<th scope="row" style="vertical-align: top; text-decoration: underline;">Push-based 2FA (recommended) <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">Push-based 2FA (recommended) <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>
 </th>
 <td>Pros:
 <ul><li>Prompts are sent to devices during a login -- it is easy to approve or deny the request and identify the estimated location for the login attempt.</li>
@@ -332,11 +338,11 @@
 </p>
 <ul><li>This implementation is not standardized -- it is not possible to choose from alternative authenticator applications.</li>
 <li>All push-based credentials cannot be consolidated into a single application.</li>
-<li>A working data connection is required on the phone. <sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup></li>
+<li>A working data connection is required on the phone. <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup></li>
 <li>This implementation is vulnerable to smartphone malware.</li></ul>
 </td></tr>
 <tr>
-<th scope="row" style="vertical-align: top; text-decoration: underline;">SMS-based text messages (unrecommended) <sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">SMS-based text messages and voice-based 2FA (unrecommended) <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>
 </th>
 <td>Pros:
 <ul><li>It is easy to set up.</li>
@@ -344,55 +350,232 @@
 <p>Cons:
 </p>
 <ul><li>Additional information (a phone number) is provided to a website/platform -- this makes anonymous use difficult and risks future potential breaches.</li>
-<li>Some websites use phone numbers for targeted advertising, conversion tracking and password resets. <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup></li>
-<li>Text messages are insecure: interception, redirection or forwarding of codes to other devices is possible. <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup></li>
+<li>Some websites use phone numbers for targeted advertising, conversion tracking and password resets. <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup></li>
+<li>Text messages are insecure: interception, redirection or forwarding of codes to other devices is possible. <sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup></li>
+<li>Voice calls can be intercepted.</li>
 <li>Extra costs may be incurred by connecting to telephone networks to receive messages.</li>
-<li>Logins are impossible if the phone is not charged or a mobile network is unavailable. <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup></li>
+<li>Logins are impossible if the phone is not charged or a mobile network is unavailable. <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup></li>
 <li>If the phone is lost, account recovery can be difficult or impossible.</li></ul>
 </td></tr>
 <tr>
-<th scope="row" style="vertical-align: top; text-decoration: underline;">Biometric IDs (unrecommended) <sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">Biometric IDs (unrecommended)
 </th>
 <td>Pros:
-<ul><li>Your own body is used as a physical token (always available).</li></ul>
+<ul><li>Your own body is used as a physical token, such as your face, retina, fingerprint or voice (always available). <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup></li></ul>
 <p>Cons:
 </p>
 <ul><li>Biometric IDs cannot ever be changed if compromised.</li>
-<li>Physical equipment is required.</li>
+<li>Physical equipment like scanners and cameras are required.</li>
 <li>Volunteering of biometric data is a privacy intrusion and risk.</li></ul>
+</td></tr>
+<tr>
+<th scope="row" style="vertical-align: top; text-decoration: underline;">Email-based 2FA (unrecommended)
+</th>
+<td>Pros:
+<ul><li>This is convenient because an automated message with a code/link is sent to a registered email address when there is a login attempt.</li>
+<li>This method is easy to implement, intuitive, and works with computers and phones.</li></ul>
+<p>Cons:
+</p>
+<ul><li>An Internet connection is required.</li>
+<li>This method is insecure:
+<ul><li>Many people use identical passwords across accounts/devices.</li>
+<li>Email accounts are vulnerable to <a class="external text" data-href="https://en.wikipedia.org/wiki/Brute-force_attack" href="https://en.wikipedia.org/wiki/Brute-force_attack" rel="noreferrer noopener" target="_blank">brute-force attacks</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Brute-force_attack" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Brute-force_attack" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li></ul></li>
+<li>Emails can end up in junk or spam folders.</li>
+<li>Hackers often have passwords for both online accounts and email passwords.</li></ul>
 </td></tr>
 </tbody></table>
 <h2><span class="mw-headline" id="Backups">Backups</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=7" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=7.html" title="Edit section: Backups">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Users tend to not backup 2FA backup codes since (popular) services do not enforce this procedure. <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> After configuring 2FA, it is strongly recommended to plan for the worst case scenario and have multiple 2FA backup codes. Otherwise account access will be lost if a smartphone is lost/stolen, or if a single copy of 2FA backup codes is misplaced.
-</p><p>Recommendations: <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup> <sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup> <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>
+<p>Users tend to not backup 2FA backup codes since (popular) services do not enforce this procedure. <sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup> After configuring 2FA, it is strongly recommended to plan for the worst case scenario and have multiple 2FA backup codes. Otherwise account access will be lost if a smartphone is lost/stolen, or if a single copy of 2FA backup codes is misplaced.
+</p><p>Recommendations: <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup> <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup> <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>
 </p>
 <ul><li>Always set up at least two devices which can generate 2FA one-time passwords.
 <ul><li>For example, open the 2FA page of the relevant website. Next scan the QR code with the authenticator application on the first phone, then scan the same code with the authenticator application on the second phone.</li></ul></li>
-<li>Always backup, print or write down 2FA backup codes in two different places -- these cannot be hacked or compromised without somebody breaking into your home. <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup></li>
+<li>Always backup, print or write down 2FA backup codes in two different places -- these cannot be hacked or compromised without somebody breaking into your home. <sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup></li>
 <li>Additional copies of 2FA backup codes can be stored in other locations:
 <ul><li>In an encrypted file on your computer (including snapshots of QR codes).</li>
-<li>In cloud storage if the option is available. <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup> This is less secure but more convenient -- if a smartphone is lost all codes can be easily restored without re-scanning all the sites again.</li></ul></li>
+<li>In cloud storage if the option is available. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup> This is less secure but more convenient -- if a smartphone is lost all codes can be easily restored without re-scanning all the sites again.</li></ul></li>
 <li>If services do not provide 2FA code backup options (like Apple), one workaround is to add a second, trusted phone number for the accounts, such as a spouse's phone, work phone etc.</li></ul>
 <p>Note: a common misconception is Google 2FA backup login codes cannot restore 2FA for services other than Google. This is incorrect, these codes allow logins into a Google account after having lost access to the 2FA device.
 </p>
-<h2><span class="mw-headline" id="Software_Choices">Software Choices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=8.html" title="Edit section: Software Choices">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Google authenticator doesn't have a backup function. Non-freedom software. Therefore not the best choice.
-</p><p>Google authenticator desktop application replacement:
+<h2><span class="mw-headline" id="Authenticator_Software_Choices">Authenticator Software Choices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=8" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=8.html" title="Edit section: Authenticator Software Choices">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Various factors should be considered before choosing an authenticator application, including: <sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup>
 </p>
-<ul><li><a data-href="/wiki/Keepassxc" href="./Keepassxc.html" title="Keepassxc">keepassxc</a> can be used as a replacement for Google Authenticator on desktop computers on Windows, Qubes OS (recommended), Linux (recommended) or Mac. Functional in offline virtual machine (VM).</li></ul>
-<h2><span class="mw-headline" id="Popularity">Popularity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=9.html" title="Edit section: Popularity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Most popular, most supported at most services:
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><u>Price</u>: prefer those which are free <sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup></li>
+<li><u>Offline access</u>: better applications do not require an Internet connection to generate codes <sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup></li>
+<li><u>Open source</u>: prefer open source code authenticators <sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup></li>
+<li><u>Password protection</u>: since authenticator applications protect security, preferably it can be locked with a PIN, passcode or similar</li>
+<li><u>Biometric lock</u>: depending on your circumstances this might be suitable - it is then unnecessary to remember a password</li>
+<li><u>Backup/restore functions</u>: good software should allow for secure backups of security codes and easy restoration</li>
+<li><u>Autofill and autologin</u>: for convenience, some applications can automatically enter TOTP codes and  log in to accounts</li>
+<li><u>Import entries</u>: some authenticators allow the importing of previous entries in another product</li>
+<li><u>Export entries</u>: this is useful if switching to another authenticator</li>
+<li><u>User interface</u>: this should be simple for setup, use and access</li>
+<li><u>Other security options</u>: the ability to change TOTP intervals and code length is useful</li>
+<li><u>Desktop application</u>: some software has this option - a mobile phone is not necessary for codes</li>
+<li><u>Multi-device sync</u>: syncing to laptops, mobiles, PCs etc. is a useful functionality</li>
+<li><u>Password manager</u>: some authenticators allow login credentials to also be stored for convenience</li></ul>
+</div>
+<p>While all of these features are useful, the strongest preference should be given to free and open source products. Therefore, while Google Authenticator is the most popular product on the market, it is non-freedom software and does not have a backup function; it is unrecommended for these reasons. 
+</p><p><a data-href="/wiki/Keepassxc" href="./Keepassxc.html" title="Keepassxc">KeePassXC</a> can be considered as a replacement for Google Authenticator on desktop computers such as Windows, Qubes OS (recommended), Linux (recommended) or macOS. It is also functional in an offline virtual machine (VM). Other possible options are outlined in the table below, although this is not a complete list; proper research should be conducted beforehand.
+</p><p><b>Table:</b> <i>Authenticator Products Comparison</i> <sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup> <sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup>
 </p>
-<ul><li>TOTP, Time based One Time Password (often called "Google Authenticator") although Google Authenticator is not specifically required. See <a href="#Software_Choices">#Software Choices</a> for Freedom Software applications.</li></ul>
-<p>Popular but not the most popular:
+<table class="wikitable">
+<tbody><tr>
+<th scope="col"><b>Software</b>
+</th>
+<th scope="col"><b>Features</b>
+</th></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://authy.com/" href="https://authy.com/" rel="noreferrer noopener" target="_blank">Authy</a> <sup><a data-href="https://web.archive.org/web/https://authy.com/" href="https://web.archive.org/web/https://authy.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>includes encrypted backups</li>
+<li>supports crypto-wallets</li>
+<li>easy to use / simple interface</li>
+<li>syncs across multiple devices</li>
+<li>can be used on mobile and desktop</li>
+<li>works without an Internet connection</li>
+<li>supports multiple services and password managers</li>
+<li>PIN or fingerprint locks are also available</li></ul>
+<p>Cons:
+</p>
+<ul><li>not open source</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en&amp;gl=US" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en&amp;gl=US" rel="noreferrer noopener" target="_blank">Google Authenticator</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en&amp;gl=US" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en&amp;gl=US" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>works with most services</li>
+<li>simple import / export functions</li>
+<li>easy to use</li>
+<li>works without an Internet connection</li>
+<li>feature for checking recent account activity</li>
+<li>available on iOS, Android and Blackberry</li></ul>
+<p>Cons:
+</p>
+<ul><li>not open source</li>
+<li>no syncing between devices</li>
+<li>no backup feature</li>
+<li>no PIN / password lock feature</li>
+<li>lacks various other features</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://github.com/andOTP/andOTP" href="https://github.com/andOTP/andOTP" rel="noreferrer noopener" target="_blank">andOTP</a> <sup><a data-href="https://web.archive.org/web/https://github.com/andOTP/andOTP" href="https://web.archive.org/web/https://github.com/andOTP/andOTP" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>open source</li>
+<li>supports HOTP</li>
+<li>supports any service using TOTP</li>
+<li>works without an Internet connection</li>
+<li>supports encrypted backups / restore options</li>
+<li>utilizes database encryption</li>
+<li>has a panic button <sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup></li>
+<li>supports rooted devices</li>
+<li>simple user interface</li></ul>
+<p>Cons:
+</p>
+<ul><li>no iOS support - only Android is supported</li>
+<li>no import and sync functions</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://lastpass.com/auth/" href="https://lastpass.com/auth/" rel="noreferrer noopener" target="_blank">LastPass</a> <sup><a data-href="https://web.archive.org/web/https://lastpass.com/auth/" href="https://web.archive.org/web/https://lastpass.com/auth/" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>encrypted backup support</li>
+<li>push notification verification</li>
+<li>supports TOTP and push-based notifications for various services</li>
+<li>supports backups</li></ul>
+<p>Cons:
+</p>
+<ul><li>not open source</li>
+<li>missing some application features</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_IN&amp;gl=US" href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">Duo Mobile</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_IN&amp;gl=US" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>security checkup feature</li>
+<li>supports numerous third-party resources <sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup></li>
+<li>encrypted backups</li>
+<li>push notifications</li></ul>
+<p>Cons:
+</p>
+<ul><li>not open source</li>
+<li>no offline feature is available</li>
+<li>limited utility user interface</li>
+<li>security keys cannot be manually entered</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&amp;hl=en_IN&amp;gl=US" href="https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">Aegis</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&amp;hl=en_IN&amp;gl=US" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>open source</li>
+<li>no Internet connection required</li>
+<li>security features including PIN, password and fingerprint lock</li>
+<li>tap to reveal function <sup class="reference" id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup></li>
+<li>supports HOTP and TOTP methods</li>
+<li>allows imports from other popular authenticator applications</li>
+<li>a simple, easy-to-use interface</li>
+<li>auto-backup and export options</li>
+<li>possible to alter the code length and time</li></ul>
+<p>Cons:
+</p>
+<ul><li>no sync features are available</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&amp;hl=en_IN&amp;gl=US" href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">FreeOTP</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&amp;hl=en_IN&amp;gl=US" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&amp;hl=en_IN&amp;gl=US" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>open source</li>
+<li>simple user interface</li>
+<li>supports TOTP and HOTP</li>
+<li>possible to select the length of the TOTP code and how long it remains active</li></ul>
+<p>Cons:
+</p>
+<ul><li>no security features like PIN, passcode etc. to unlock secure codes</li>
+<li>outdated application - no updates since 2016</li>
+<li>backups, multi-device sync and other simple functions are unavailable</li></ul>
+</td></tr>
+<tr>
+<th scope="row"><a class="external text" data-href="https://www.microsoft.com/en-us/account/authenticator" href="https://www.microsoft.com/en-us/account/authenticator" rel="noreferrer noopener" target="_blank">Microsoft Authenticator</a> <sup><a data-href="https://web.archive.org/web/https://www.microsoft.com/en-us/account/authenticator" href="https://web.archive.org/web/https://www.microsoft.com/en-us/account/authenticator" rel="noreferrer noopener" target="_blank">[archive]</a></sup>
+</th>
+<td>Pros:
+<ul><li>free</li>
+<li>available for Android, iOS and Windows 10 mobiles</li>
+<li>available as a desktop application</li>
+<li>supports passwordless authentication with Microsoft applications</li>
+<li>has an in-built password manager</li>
+<li>supports certificate-based authentication</li>
+<li>supports cloud backups / other backup and restore options</li>
+<li>has a PIN / biometric lock feature</li>
+<li>supports every TOTP service</li>
+<li>sends security notifications if your account is signed in from a new location / device, or if the password is changed</li>
+<li>possible to review recent account activity</li>
+<li>multi-device sync feature</li></ul>
+<p>Cons:
+</p>
+<ul><li>not open source</li>
+<li>no direct export option</li>
+<li>some features require Internet access</li></ul>
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Other_Factors">Other Factors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=9.html" title="Edit section: Other Factors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As noted in the previous section comparing common authenticator software, TOTP is the most commonly supported protocol; only a handful of free and open source alternatives support HOTP as well. As a reminder, prefer free and open source applications, even though Google dominates the market. <sup class="reference" id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup>
+</p><p>With respect to U2F hardware options that authenticate by using unique hardware tokens, <a class="external text" data-href="https://www.yubico.com/" href="https://www.yubico.com/" rel="noreferrer noopener" target="_blank">YubiKey</a> <sup><a data-href="https://web.archive.org/web/https://www.yubico.com/" href="https://web.archive.org/web/https://www.yubico.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is considered the best option. Although relatively expensive, YubiKey supports HOTP, TOTP and U2F. It also supports multiple connection options (USB-C, USB-A and Lightning) and can be used with most online services. It is virtually phishing-proof because the tokens are directly bound to the destination website/service. <sup class="reference" id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup> Other options like  <a class="external text" data-href="https://www.kensington.com" href="https://www.kensington.com" rel="noreferrer noopener" target="_blank">Kensington VeriMark USB</a> <sup><a data-href="https://web.archive.org/web/https://www.kensington.com" href="https://web.archive.org/web/https://www.kensington.com" rel="noreferrer noopener" target="_blank">[archive]</a></sup> and <a class="external text" data-href="https://store.google.com/product/titan_security_key" href="https://store.google.com/product/titan_security_key" rel="noreferrer noopener" target="_blank">Google Titan Security Key</a> <sup><a data-href="https://web.archive.org/web/https://store.google.com/product/titan_security_key" href="https://web.archive.org/web/https://store.google.com/product/titan_security_key" rel="noreferrer noopener" target="_blank">[archive]</a></sup> are unrecommended because they rely upon Windows devices and have limited functionality compared to YubiKey, such as only supporting U2F and not other protocols; far fewer services support U2F compared to TOTP.
+</p><p>For reasons of practicality, most users will prefer to utilize software authenticators relying upon TOTP when accessing real-life, non-anonymous accounts. For instance, bank accounts can be better secured via TOTP generation on multiple, non-anonymous devices such as Android and iPhone devices.
+</p><p>Further reading: 
 </p>
 <ul><li><a class="mw-redirect" data-href="/wiki/YubiKey" href="./YubiKey.html" title="YubiKey">YubiKey</a></li>
 <li><a class="external text" data-href="https://en.wikipedia.org/wiki/WYSIWYS" href="https://en.wikipedia.org/wiki/WYSIWYS" rel="noreferrer noopener" target="_blank"><i><b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>I</b>s <b>W</b>hat <b>Y</b>ou <b>S</b>ign</i> (<code>WYSIWYS</code>)</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WYSIWYS" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/WYSIWYS" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li></ul>
-<h2><span class="mw-headline" id="Compartmentalization">Compartmentalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=10.html" title="Edit section: Compartmentalization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>For reasons of practicality, users might consider for real life, non-anonymous accounts at for example banks could be secured through TOTP generation on multiple non-anonymous devices such as Android and iPhone devices.
-</p>
-<h1><span class="mw-headline" id="Warnings">Warnings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=11.html" title="Edit section: Warnings">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<h2><span class="mw-headline" id="Threat_Model">Threat Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=12.html" title="Edit section: Threat Model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h1><span class="mw-headline" id="Warnings">Warnings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=10.html" title="Edit section: Warnings">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Threat_Model">Threat Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=11.html" title="Edit section: Threat Model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p><b>Table:</b> <i>2FA Threat Model</i>
 </p>
 <table class="wikitable">
@@ -423,18 +606,21 @@
 <td>2FA is ineffective if the user's device is already infected by <a data-href="/wiki/Malware_and_Firmware_Trojans" href="./Malware_and_Firmware_Trojans.html" title="Malware and Firmware Trojans">malware</a>. In that case a trojan horse can simply take over the login session without the user's knowledge.
 </td></tr>
 </tbody></table>
-<h2><span class="mw-headline" id="Security_Issues">Security Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=13.html" title="Edit section: Security Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Avoid SMS-based 2FA due to <a data-href="/wiki/Account_and_Mobile_Security#SIM_Swap_Scam" href="./Account_and_Mobile_Security.html" title="Account and Mobile Security">SIM Swap Scam</a> and <a class="external text" data-href="https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" href="https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" rel="noreferrer noopener" target="_blank">malicious SMS re-routing</a> <sup><a data-href="https://web.archive.org/web/https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" href="https://web.archive.org/web/https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" rel="noreferrer noopener" target="_blank">[archive]</a></sup> as mentioned on the <a data-href="/wiki/Account_and_Mobile_Security" href="./Account_and_Mobile_Security.html" title="Account and Mobile Security">Account and Mobile Security</a> wiki page.
+<h2><span class="mw-headline" id="Security_Issues">Security Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=12.html" title="Edit section: Security Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In general, 2FA increases the difficulty of being hacked and it is considered the best practice for keeping accounts and systems secure. Users with higher security needs can employ MFA -- three or more levels of authentication -- to further decrease the chances of a successful attack. As noted in the <a href="#Implementations">Implementations</a> section, it is safest to rely on FIDO U2F / physical keys or if that is unavailable, authenticator applications / TOTP 2FA or push-based 2FA. All other methods are unrecommended.
+</p><p>It is worth reiterating that SMS-based 2FA should be avoided due to the risk of <a data-href="/wiki/Account_and_Mobile_Security#SIM_Swap_Scam" href="./Account_and_Mobile_Security.html" title="Account and Mobile Security">SIM Swap Scams</a> and <a class="external text" data-href="https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" href="https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" rel="noreferrer noopener" target="_blank">malicious SMS re-routing</a> <sup><a data-href="https://web.archive.org/web/https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" href="https://web.archive.org/web/https://www.vice.com/en/article/y3g8wb/hacker-got-my-texts-16-dollars-sakari-netnumber" rel="noreferrer noopener" target="_blank">[archive]</a></sup> as mentioned on the <a data-href="/wiki/Account_and_Mobile_Security" href="./Account_and_Mobile_Security.html" title="Account and Mobile Security">Account and Mobile Security</a> wiki page. Although SMS and automated phone calls with one-time codes remain a popular 2FA method, there are many examples where hackers tricked mobile phone carriers into transferring somebody else's phone to their own; they then have access to authentication for that phone number. <sup class="reference" id="cite_ref-2FA_risks_20-1"><a href="#cite_note-2FA_risks-20">[20]</a></sup>
+</p><p>For example, in 2019 the Twitter CEO had his account hacked while used a 2FA method. Around the same time, over 23 million YouTube users utilizing 2FA were hacked because a reverse proxy toolkit was built to intercept 2FA SMS codes. Similarly, the Binance cryptocurrency exchange had their 2FA system compromised and lost tens of millions in the process. These hacks reinforce the risk of SIM-swaps for 2FA; hackers use various methods to change a victim's phone number so that subsequent messages or phone calls are redirected to a new phone. All in all, SMS and phone call-based 2FA systems have too many weaknesses to warrant its recommendation. <sup class="reference" id="cite_ref-2FA_risks_20-2"><a href="#cite_note-2FA_risks-20">[20]</a></sup>
+</p><p>Historically, other 2FA breaches have resulted from malware compromises. For example in 2020 an authenticator application in Android was discovered to be malware, stealing 2FA codes in the process. TrickBot malware is another example where one-time codes utilized by banking applications (sent via SMS/push notifications) have been intercepted. Finally, social engineering situations can emerge whereby hackers contact targets and pose as the bank or other service, requesting the security code that was just sent to "confirm their identity." <sup class="reference" id="cite_ref-2FA_risks_20-3"><a href="#cite_note-2FA_risks-20">[20]</a></sup>
 </p>
-<h2><span class="mw-headline" id="Anonymity_Issues">Anonymity Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=14.html" title="Edit section: Anonymity Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Possible de-anonymization when using the following apps on a non-torified device:
+<h2><span class="mw-headline" id="Anonymity_Issues">Anonymity Issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=13" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=13.html" title="Edit section: Anonymity Issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Users risk possible de-anonymization if using the following applications on a non-torified device:
 </p>
-<ul><li>authy requires an internet connection</li>
-<li>Symantec VIP requires an internet connection</li>
-<li>Google authenticator / <a class="external text" data-href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" rel="noreferrer noopener" target="_blank">andOTP</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" rel="noreferrer noopener" target="_blank">[archive]</a></sup> do not use the internet at the time of writing to our current understanding but this might change with an (automatic) update.</li></ul>
-<p>If anonymity matters, it is strongly recommended to only run 2FA software in non-networked or torified machines.
+<ul><li><a class="external text" data-href="https://authy.com/" href="https://authy.com/" rel="noreferrer noopener" target="_blank">Authy</a> <sup><a data-href="https://web.archive.org/web/https://authy.com/" href="https://web.archive.org/web/https://authy.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> requires an Internet connection.</li>
+<li><a class="external text" data-href="https://vip.symantec.com/" href="https://vip.symantec.com/" rel="noreferrer noopener" target="_blank">Symantec VIP</a> <sup><a data-href="https://web.archive.org/web/https://vip.symantec.com/" href="https://web.archive.org/web/https://vip.symantec.com/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> requires an Internet connection.</li>
+<li><a class="external text" data-href="https://www.google.com/intl/en-US/landing/2step/features.html" href="https://www.google.com/intl/en-US/landing/2step/features.html" rel="noreferrer noopener" target="_blank">Google Authenticator</a> <sup><a data-href="https://web.archive.org/web/https://www.google.com/intl/en-US/landing/2step/features.html" href="https://web.archive.org/web/https://www.google.com/intl/en-US/landing/2step/features.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup> / <a class="external text" data-href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" rel="noreferrer noopener" target="_blank">andOTP</a> <sup><a data-href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" href="https://web.archive.org/web/https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp" rel="noreferrer noopener" target="_blank">[archive]</a></sup> did not use the Internet at the time of writing, but this might change with an (automatic) update.</li></ul>
+<p>If anonymity is required, it is strongly recommended to only run 2FA software in non-networked or torified machines.
 </p>
-<h1><span class="mw-headline" id="Practical_2FA_Example">Practical 2FA Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=15.html" title="Edit section: Practical 2FA Example">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Practical_2FA_Example">Practical 2FA Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=14.html" title="Edit section: Practical 2FA Example">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><a class="image" data-href="/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_notice.png&amp;filetimestamp=20200607145529&amp;"><img alt="Info" data-src="/w/images/thumb/c/c8/Ambox_notice.png/40px-Ambox_notice.png" data-srcset="/w/images/thumb/c/c8/Ambox_notice.png/60px-Ambox_notice.png 1.5x, /w/images/thumb/c/c8/Ambox_notice.png/80px-Ambox_notice.png 2x" decoding="async" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAulBMVEUAAAAzZsw0ZsszZswyZswzZswzZswzZswzZswzZcwzZsszZswzZswzZsszZswyZswzZswzZswzZcszZswyZcwyZswzZswyZswzZswzZswyZswzZswyZcwzZswzZcszZsszZswzZswzZsszZswzZswzZswyZcwyZswzZswzZswzZswzZswyZcwyZswzZswzZswzZswzZssyZswzZswyZcwyZcwzZcwzZswzZswzZcszZsszZsszZcwzZsw3jrLmAAAAPXRSTlMABQYLEhITFBUaGx8pKio0PktMUlNTXGBha2xwcXF8fIWPlpaYmZ2dpKytwsPDzNfh5ufr7/Dw9PX39/r7MMeHewAAAQ1JREFUOMuN1dtSwjAUheFfq4K2KojiARGqFNFoqBalHvb7v5YXKtO0abvXZeab7kkyWQUn4TAx9uXN2mQUUZvg0koh6U3Xz8aZlJLHnao7Xoon2aDsrqUmd9uOS6Q2JtA5R46lMfebfbjrAO7Kxd+5LNtgfuAdXIWyAAiydigRcCWKJIDVwHVAqHEiJwx1MPZcim8z8ozRwZVnL14ovGrhuxaqRyvhh/Z4LCMdnBHp4CmkGvi1BxMNfAC6uQL2AOJ2aADoZK3w6PcZDtrg9P9h30pjzKYptkyTS3cL3dgg09Bp0Xnt3J1SQZ7nXjelkv2F53OH3haPknVRfT/26v8L/fhpJSLyaWdnbtH/AHfsGBrJbGMZAAAAAElFTkSuQmCC" width="40"/></a> A 2FA setup for Discourse and KeePassXC (an open-source password manager) is shown in the following example. 2FA implementations are possible for a wide range of other web services, SSH logins and more.
 </p>
@@ -462,14 +648,14 @@
 </div>
 <p>Readers are welcome to add further practical examples of 2FA to this section.
 </p>
-<h1><span class="mw-headline" id="Debian_Packages">Debian Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=16.html" title="Edit section: Debian Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Debian_Packages">Debian Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=15.html" title="Edit section: Debian Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://packages.debian.org/buster/libpam-barada" href="https://packages.debian.org/buster/libpam-barada" rel="noreferrer noopener" target="_blank">libpam-barada</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-barada" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-barada" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: Pluggable authentication module (PAM) to provide two-factor authentication based on HMAC-Based One-time Password (HOTP).</li>
-<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-google-authenticator" href="https://packages.debian.org/buster/libpam-google-authenticator" rel="noreferrer noopener" target="_blank">libpam-google-authenticator</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-google-authenticator" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-google-authenticator" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: The Google Authenticator project has implementations of one-time passcode generators for several mobile platforms, as well as a PAM. <sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup></li>
+<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-google-authenticator" href="https://packages.debian.org/buster/libpam-google-authenticator" rel="noreferrer noopener" target="_blank">libpam-google-authenticator</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-google-authenticator" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-google-authenticator" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: The Google Authenticator project has implementations of one-time passcode generators for several mobile platforms, as well as a PAM. <sup class="reference" id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup></li>
 <li><a class="external text" data-href="https://packages.debian.org/buster/libpam-blue" href="https://packages.debian.org/buster/libpam-blue" rel="noreferrer noopener" target="_blank">libpam-blue</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-blue" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-blue" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: PAM module for local authentication with bluetooth devices.</li>
-<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-oath" href="https://packages.debian.org/buster/libpam-oath" rel="noreferrer noopener" target="_blank">libpam-oath</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-oath" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-oath" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: Open AuTHentication (OATH) Toolkit libpam_oath PAM module. <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup></li>
-<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-otpw" href="https://packages.debian.org/buster/libpam-otpw" rel="noreferrer noopener" target="_blank">libpam-otpw</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-otpw" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-otpw" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: OTPW for PAM authentication. <sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup></li>
+<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-oath" href="https://packages.debian.org/buster/libpam-oath" rel="noreferrer noopener" target="_blank">libpam-oath</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-oath" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-oath" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: Open AuTHentication (OATH) Toolkit libpam_oath PAM module. <sup class="reference" id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup></li>
+<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-otpw" href="https://packages.debian.org/buster/libpam-otpw" rel="noreferrer noopener" target="_blank">libpam-otpw</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-otpw" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-otpw" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: OTPW for PAM authentication. <sup class="reference" id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup></li>
 <li><a class="external text" data-href="https://packages.debian.org/buster/libpam-p11" href="https://packages.debian.org/buster/libpam-p11" rel="noreferrer noopener" target="_blank">libpam-p11</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-p11" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-p11" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: A PAM module for using PKCS#11 smart cards.</li>
-<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-poldi" href="https://packages.debian.org/buster/libpam-poldi" rel="noreferrer noopener" target="_blank">libpam-poldi</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-poldi" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-poldi" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: A PAM module allowing authentication using a OpenPGP smartcard. <sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup></li>
+<li><a class="external text" data-href="https://packages.debian.org/buster/libpam-poldi" href="https://packages.debian.org/buster/libpam-poldi" rel="noreferrer noopener" target="_blank">libpam-poldi</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-poldi" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-poldi" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: A PAM module allowing authentication using a OpenPGP smartcard. <sup class="reference" id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup></li>
 <li><a class="external text" data-href="https://packages.debian.org/buster/libpam-fprintd" href="https://packages.debian.org/buster/libpam-fprintd" rel="noreferrer noopener" target="_blank">libpam-fprintd</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-fprintd" href="https://web.archive.org/web/https://packages.debian.org/buster/libpam-fprintd" rel="noreferrer noopener" target="_blank">[archive]</a></sup>: A PAM module for fingerprint authentication through fprintd.</li></ul>
 <p>See also:
 </p>
@@ -477,10 +663,10 @@
 <li>YubiKey:
 <ul><li><a class="external text" data-href="https://www.qubes-os.org/doc/yubikey/" href="https://www.qubes-os.org/doc/yubikey/" rel="noreferrer noopener" target="_blank">Qubes wiki: YubiKey</a> <sup><a data-href="https://web.archive.org/web/https://www.qubes-os.org/doc/yubikey/" href="https://web.archive.org/web/https://www.qubes-os.org/doc/yubikey/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li>The <a class="external text" data-href="https://github.com/QubesOS/qubes-app-yubikey" href="https://github.com/QubesOS/qubes-app-yubikey" rel="noreferrer noopener" target="_blank">Qubes' YubiKey package</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-app-yubikey" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-app-yubikey" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for configuring YubiKey login support could be ported to Debian.</li></ul></li></ul>
-<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=17.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=16" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=16.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Phone_Number_Validation" href="./Phone_Number_Validation.html" title="Phone Number Validation">Phone Number Validation vs User Privacy</a></li>
 <li><a data-href="/wiki/Account_and_Mobile_Security" href="./Account_and_Mobile_Security.html" title="Account and Mobile Security">Account and Mobile Security</a></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=18.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;action=edit&amp;section=17.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://en.wikipedia.org/wiki/Multi-factor_authentication" href="https://en.wikipedia.org/wiki/Multi-factor_authentication" rel="noreferrer noopener" target="_blank">https://en.wikipedia.org/wiki/Multi-factor_authentication</a> <sup><a data-href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Multi-factor_authentication" href="https://web.archive.org/web/https://en.wikipedia.org/wiki/Multi-factor_authentication" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
@@ -513,59 +699,85 @@
 </li>
 <li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">See also: <a class="external text" data-href="https://www.wwpass.com/pdf/docs/2FAsCostlyMisnomersAndMisconceptions.pdf" href="https://www.wwpass.com/pdf/docs/2FAsCostlyMisnomersAndMisconceptions.pdf" rel="noreferrer noopener" target="_blank">2FA’s costly misnomers and misconceptions</a> <sup><a data-href="https://web.archive.org/web/https://www.wwpass.com/pdf/docs/2FAsCostlyMisnomersAndMisconceptions.pdf" href="https://web.archive.org/web/https://www.wwpass.com/pdf/docs/2FAsCostlyMisnomersAndMisconceptions.pdf" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" href="https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" rel="noreferrer noopener" target="_blank">https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html</a> <sup><a data-href="https://web.archive.org/web/https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" href="https://web.archive.org/web/https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://kripeshadwani.com/best-2fa-apps/" href="https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">https://kripeshadwani.com/best-2fa-apps/</a> <sup><a data-href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">Device-based challenges like SMS codes, security keys and on-device prompts were generally more effective against automated bots, bulk phishing attacks, and targeted phishing attacks. Less useful were knowledge-based challenges like a secondary email address, phone number, or last sign-in location.</span>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" href="https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" rel="noreferrer noopener" target="_blank">https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html</a> <sup><a data-href="https://web.archive.org/web/https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" href="https://web.archive.org/web/https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-2FA_methods-16"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-2FA_methods_16-0">16.0</a></sup> <sup><a href="#cite_ref-2FA_methods_16-1">16.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" href="https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">Device-based challenges like SMS codes, security keys and on-device prompts were generally more effective against automated bots, bulk phishing attacks, and targeted phishing attacks. Less useful were knowledge-based challenges like a secondary email address, phone number, or last sign-in location.</span>
 </li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" href="https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" rel="noreferrer noopener" target="_blank">https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png</a> <sup><a data-href="https://web.archive.org/web/https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" href="https://web.archive.org/web/https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-2FA_methods-17"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-2FA_methods_17-0">17.0</a></sup> <sup><a href="#cite_ref-2FA_methods_17-1">17.1</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" href="https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" href="https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" href="https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" rel="noreferrer noopener" target="_blank">https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png</a> <sup><a data-href="https://web.archive.org/web/https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" href="https://web.archive.org/web/https://www.accessnow.org/cms/assets/uploads/2017/09/Choose-the-Best-MFA-for-you.png" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">Universal Second Factor (U2F) uses small USB, NFC or Bluetooth devices aka "security keys".</span>
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" href="https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" rel="noreferrer noopener" target="_blank">https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web</a> <sup><a data-href="https://web.archive.org/web/https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" href="https://web.archive.org/web/https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text">Although they are relatively cheap and prices start from around 10-20 dollars.</span>
+<li id="cite_note-2FA_risks-20"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-2FA_risks_20-0">20.0</a></sup> <sup><a href="#cite_ref-2FA_risks_20-1">20.1</a></sup> <sup><a href="#cite_ref-2FA_risks_20-2">20.2</a></sup> <sup><a href="#cite_ref-2FA_risks_20-3">20.3</a></sup></span> <span class="reference-text"><a class="external free" data-href="https://brainstation.io/cybersecurity/two-factor-auth" href="https://brainstation.io/cybersecurity/two-factor-auth" rel="noreferrer noopener" target="_blank">https://brainstation.io/cybersecurity/two-factor-auth</a> <sup><a data-href="https://web.archive.org/web/https://brainstation.io/cybersecurity/two-factor-auth" href="https://web.archive.org/web/https://brainstation.io/cybersecurity/two-factor-auth" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">These are third party applications for smartphones that generate a new one-time password every 60 seconds. The implementation is part of the Open Authentication (OATH) architecture.</span>
+<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">Universal Second Factor (U2F) uses small USB, NFC or Bluetooth devices aka "security keys".</span>
 </li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">"Quick response" (QR) codes are a barcode with a matrix of dots. QR scanners or smartphone cameras can scan the barcode, and device software converts the dots into numbers or a string of characters. This can then be used for various activities, like opening a URL in a web browser.</span>
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">Although they are relatively cheap and prices start from around 10-20 dollars.</span>
 </li>
-<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text">Since it requires unlocking the phone, opening the application, and typing the code in each time.</span>
+<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text">These are third party applications for smartphones that generate a new one-time password every 60 seconds. The implementation is part of the Open Authentication (OATH) architecture.</span>
 </li>
-<li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text">Such as Duo Push and Apple's Trusted Devices implementation.</span>
+<li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text">"Quick response" (QR) codes are a barcode with a matrix of dots. QR scanners or smartphone cameras can scan the barcode, and device software converts the dots into numbers or a string of characters. This can then be used for various activities, like opening a URL in a web browser.</span>
 </li>
-<li id="cite_note-25"><span class="mw-cite-backlink"><a href="#cite_ref-25">↑</a></span> <span class="reference-text">In comparison, authenticator applications do not require a working connection.</span>
+<li id="cite_note-25"><span class="mw-cite-backlink"><a href="#cite_ref-25">↑</a></span> <span class="reference-text">Since it requires unlocking the phone, opening the application, and typing the code in each time.</span>
 </li>
-<li id="cite_note-26"><span class="mw-cite-backlink"><a href="#cite_ref-26">↑</a></span> <span class="reference-text">Account logins require both a password and the text message code to sign in.</span>
+<li id="cite_note-26"><span class="mw-cite-backlink"><a href="#cite_ref-26">↑</a></span> <span class="reference-text">Such as Duo Push and Apple's Trusted Devices implementation.</span>
 </li>
-<li id="cite_note-27"><span class="mw-cite-backlink"><a href="#cite_ref-27">↑</a></span> <span class="reference-text">Attackers who take over phone numbers are able to access accounts without knowing the password.</span>
+<li id="cite_note-27"><span class="mw-cite-backlink"><a href="#cite_ref-27">↑</a></span> <span class="reference-text">In comparison, authenticator applications do not require a working connection.</span>
 </li>
-<li id="cite_note-28"><span class="mw-cite-backlink"><a href="#cite_ref-28">↑</a></span> <span class="reference-text">SIM cards can also be copied, or attackers can potentially trick phone companies into assigning a phone number to a different SIM card (so they can receive 2FA codes). The SS7 telephony protocol has flaws that also allow this attack.</span>
+<li id="cite_note-28"><span class="mw-cite-backlink"><a href="#cite_ref-28">↑</a></span> <span class="reference-text">Account logins require both a password and the text message/automated phone call code to sign in.</span>
 </li>
-<li id="cite_note-29"><span class="mw-cite-backlink"><a href="#cite_ref-29">↑</a></span> <span class="reference-text">For instance, this is a problem for international travelers.</span>
+<li id="cite_note-29"><span class="mw-cite-backlink"><a href="#cite_ref-29">↑</a></span> <span class="reference-text">Attackers who take over phone numbers are able to access accounts without knowing the password.</span>
 </li>
-<li id="cite_note-30"><span class="mw-cite-backlink"><a href="#cite_ref-30">↑</a></span> <span class="reference-text">Such as fingerprints or retina scans.</span>
+<li id="cite_note-30"><span class="mw-cite-backlink"><a href="#cite_ref-30">↑</a></span> <span class="reference-text">SIM cards can also be copied, or attackers can potentially trick phone companies into assigning a phone number to a different SIM card (so they can receive 2FA codes). The SS7 telephony protocol has flaws that also allow this attack.</span>
 </li>
-<li id="cite_note-31"><span class="mw-cite-backlink"><a href="#cite_ref-31">↑</a></span> <span class="reference-text">Like bitcoin wallets enforce retyping the wallet mnemonic seed.</span>
+<li id="cite_note-31"><span class="mw-cite-backlink"><a href="#cite_ref-31">↑</a></span> <span class="reference-text">For instance, this is a problem for international travelers.</span>
 </li>
-<li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" href="https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" rel="noreferrer noopener" target="_blank">https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/</a> <sup><a data-href="https://web.archive.org/web/https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" href="https://web.archive.org/web/https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-32"><span class="mw-cite-backlink"><a href="#cite_ref-32">↑</a></span> <span class="reference-text">For example, iPhones have facial scanning technology and most modern phones allow for fingerprint scans for easy and quick access.</span>
 </li>
-<li id="cite_note-33"><span class="mw-cite-backlink"><a href="#cite_ref-33">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.guidingtech.com/backup-2fa-codes/" href="https://www.guidingtech.com/backup-2fa-codes/" rel="noreferrer noopener" target="_blank">https://www.guidingtech.com/backup-2fa-codes/</a> <sup><a data-href="https://web.archive.org/web/https://www.guidingtech.com/backup-2fa-codes/" href="https://web.archive.org/web/https://www.guidingtech.com/backup-2fa-codes/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-33"><span class="mw-cite-backlink"><a href="#cite_ref-33">↑</a></span> <span class="reference-text">Like bitcoin wallets enforce retyping the wallet mnemonic seed.</span>
 </li>
-<li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.protectimus.com/blog/google-authenticator-backup/" href="https://www.protectimus.com/blog/google-authenticator-backup/" rel="noreferrer noopener" target="_blank">https://www.protectimus.com/blog/google-authenticator-backup/</a> <sup><a data-href="https://web.archive.org/web/https://www.protectimus.com/blog/google-authenticator-backup/" href="https://web.archive.org/web/https://www.protectimus.com/blog/google-authenticator-backup/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-34"><span class="mw-cite-backlink"><a href="#cite_ref-34">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" href="https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" rel="noreferrer noopener" target="_blank">https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/</a> <sup><a data-href="https://web.archive.org/web/https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" href="https://web.archive.org/web/https://www.howtogeek.com/358723/psa-make-sure-you-have-a-backup-for-two-factor-authentication/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-35"><span class="mw-cite-backlink"><a href="#cite_ref-35">↑</a></span> <span class="reference-text">For instance, the Google Authenticator application has a "Back up codes" option for this purpose.</span>
+<li id="cite_note-35"><span class="mw-cite-backlink"><a href="#cite_ref-35">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.guidingtech.com/backup-2fa-codes/" href="https://www.guidingtech.com/backup-2fa-codes/" rel="noreferrer noopener" target="_blank">https://www.guidingtech.com/backup-2fa-codes/</a> <sup><a data-href="https://web.archive.org/web/https://www.guidingtech.com/backup-2fa-codes/" href="https://web.archive.org/web/https://www.guidingtech.com/backup-2fa-codes/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text">For example, the LastPass password manager and <a class="external text" data-href="https://authy.com/features/backup/" href="https://authy.com/features/backup/" rel="noreferrer noopener" target="_blank">Authy</a> <sup><a data-href="https://web.archive.org/web/https://authy.com/features/backup/" href="https://web.archive.org/web/https://authy.com/features/backup/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> websites offer this service.</span>
+<li id="cite_note-36"><span class="mw-cite-backlink"><a href="#cite_ref-36">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.protectimus.com/blog/google-authenticator-backup/" href="https://www.protectimus.com/blog/google-authenticator-backup/" rel="noreferrer noopener" target="_blank">https://www.protectimus.com/blog/google-authenticator-backup/</a> <sup><a data-href="https://web.archive.org/web/https://www.protectimus.com/blog/google-authenticator-backup/" href="https://web.archive.org/web/https://www.protectimus.com/blog/google-authenticator-backup/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-37"><span class="mw-cite-backlink"><a href="#cite_ref-37">↑</a></span> <span class="reference-text">This supports both the HOTP and TOTP algorithms.</span>
+<li id="cite_note-37"><span class="mw-cite-backlink"><a href="#cite_ref-37">↑</a></span> <span class="reference-text">For instance, the Google Authenticator application has a "Back up codes" option for this purpose.</span>
 </li>
-<li id="cite_note-38"><span class="mw-cite-backlink"><a href="#cite_ref-38">↑</a></span> <span class="reference-text">The OATH Toolkit has shared libraries, command line tools and a PAM module to enable easy  building of one-time password authentication systems.</span>
+<li id="cite_note-38"><span class="mw-cite-backlink"><a href="#cite_ref-38">↑</a></span> <span class="reference-text">For example, the LastPass password manager and <a class="external text" data-href="https://authy.com/features/backup/" href="https://authy.com/features/backup/" rel="noreferrer noopener" target="_blank">Authy</a> <sup><a data-href="https://web.archive.org/web/https://authy.com/features/backup/" href="https://web.archive.org/web/https://authy.com/features/backup/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> websites offer this service.</span>
 </li>
-<li id="cite_note-39"><span class="mw-cite-backlink"><a href="#cite_ref-39">↑</a></span> <span class="reference-text">OTPW is a one-time password system which protects against the password list being stolen and last digit attacks.</span>
+<li id="cite_note-39"><span class="mw-cite-backlink"><a href="#cite_ref-39">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://kripeshadwani.com/best-2fa-apps/" href="https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">https://kripeshadwani.com/best-2fa-apps/</a> <sup><a data-href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-40"><span class="mw-cite-backlink"><a href="#cite_ref-40">↑</a></span> <span class="reference-text">This PAM module allows logins, screenlock and service validation using a GnuPG smartcard.</span>
+<li id="cite_note-40"><span class="mw-cite-backlink"><a href="#cite_ref-40">↑</a></span> <span class="reference-text">Since 2FA is a relatively simple process, it is unnecessary to pay for a product.</span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><a href="#cite_ref-41">↑</a></span> <span class="reference-text">This is useful when signing into an account and there is no Internet access for your mobile.</span>
+</li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><a href="#cite_ref-42">↑</a></span> <span class="reference-text">This assists researchers and developers to find bugs/issues in the code.</span>
+</li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><a href="#cite_ref-43">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.cloudwards.net/best-2fa-apps/" href="https://www.cloudwards.net/best-2fa-apps/" rel="noreferrer noopener" target="_blank">https://www.cloudwards.net/best-2fa-apps/</a> <sup><a data-href="https://web.archive.org/web/https://www.cloudwards.net/best-2fa-apps/" href="https://web.archive.org/web/https://www.cloudwards.net/best-2fa-apps/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><a href="#cite_ref-44">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://kripeshadwani.com/best-2fa-apps/" href="https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">https://kripeshadwani.com/best-2fa-apps/</a> <sup><a data-href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" href="https://web.archive.org/web/https://kripeshadwani.com/best-2fa-apps/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-45"><span class="mw-cite-backlink"><a href="#cite_ref-45">↑</a></span> <span class="reference-text">This allows a wipe of everything on the device with a single tap.</span>
+</li>
+<li id="cite_note-46"><span class="mw-cite-backlink"><a href="#cite_ref-46">↑</a></span> <span class="reference-text">Like Facebook, Instagram, Dropbox, 1Password, Amazon etc.</span>
+</li>
+<li id="cite_note-47"><span class="mw-cite-backlink"><a href="#cite_ref-47">↑</a></span> <span class="reference-text">This allows the selection of a time interval (between 5-60 seconds) after which the TOTPs are hidden again.</span>
+</li>
+<li id="cite_note-48"><span class="mw-cite-backlink"><a href="#cite_ref-48">↑</a></span> <span class="reference-text">Many make the mistake of using Google Authenticator and the TOTP term interchangeably.</span>
+</li>
+<li id="cite_note-49"><span class="mw-cite-backlink"><a href="#cite_ref-49">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://www.cloudwards.net/best-2fa-apps/" href="https://www.cloudwards.net/best-2fa-apps/" rel="noreferrer noopener" target="_blank">https://www.cloudwards.net/best-2fa-apps/</a> <sup><a data-href="https://web.archive.org/web/https://www.cloudwards.net/best-2fa-apps/" href="https://web.archive.org/web/https://www.cloudwards.net/best-2fa-apps/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
+<li id="cite_note-50"><span class="mw-cite-backlink"><a href="#cite_ref-50">↑</a></span> <span class="reference-text">This supports both the HOTP and TOTP algorithms.</span>
+</li>
+<li id="cite_note-51"><span class="mw-cite-backlink"><a href="#cite_ref-51">↑</a></span> <span class="reference-text">The OATH Toolkit has shared libraries, command line tools and a PAM module to enable easy  building of one-time password authentication systems.</span>
+</li>
+<li id="cite_note-52"><span class="mw-cite-backlink"><a href="#cite_ref-52">↑</a></span> <span class="reference-text">OTPW is a one-time password system which protects against the password list being stolen and last digit attacks.</span>
+</li>
+<li id="cite_note-53"><span class="mw-cite-backlink"><a href="#cite_ref-53">↑</a></span> <span class="reference-text">This PAM module allows logins, screenlock and service validation using a GnuPG smartcard.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -614,14 +826,15 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a class="image" data-href="/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;" href="https://www.whonix.org/w/index.php?title=File:200px-Mastodon_Logotype_(Simple).svg.png&amp;filetimestamp=20200623163525&amp;.html" title="link=https://mastodon.technology/share?message=Two-factor authentication 2FA%20./Two-factor_authentication_2FA&amp;t=Two-factor authentication 2FA"><img alt="link=https://mastodon.technology/share?message=Two-factor authentication 2FA%20./Two-factor_authentication_2FA&amp;t=Two-factor authentication 2FA" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to get involved with Whonix ™? Check out our <a data-href="/wiki/Contribute" href="./Contribute.html" title="Contribute">Contribute</a> page.
+<p>Follow 
+<a data-href="https://t.me/Whonix_All_News" href="https://t.me/Whonix_All_News" rel="noreferrer noopener" target="_blank"><img alt="1024px-Telegram 2019 Logo.svg.png" data-src="/w/images/thumb/9/9a/1024px-Telegram_2019_Logo.svg.png/25px-1024px-Telegram_2019_Logo.svg.png" data-srcset="/w/images/thumb/9/9a/1024px-Telegram_2019_Logo.svg.png/38px-1024px-Telegram_2019_Logo.svg.png 1.5x, /w/images/thumb/9/9a/1024px-Telegram_2019_Logo.svg.png/50px-1024px-Telegram_2019_Logo.svg.png 2x" decoding="async" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAADzklEQVRIx5WWz29UVRTHP2f60kqBllYUE8o0lEKKglQK1BKiLEwMv5Mx0dQYgzFB7Z/QxAUu3JjAwsiKiCwabDRsJE0bjdFuaGdjDIUhQKkdWxKsbRlrf7f36+K9N/M6ndZykpd78u7N+dxz7r3fe43/scbr6QYgAToIPCesDtRvkAFLAl29iXjnajFspY4D3w0kzOxToN7MHxa2+SYYMrjQm4hfXBNk/7cP1mPWbmYnwsD5kJVgQJ/gZDIRH1wRsu/avWrDfjWjGiwA+MOigJxfcJ5TwLHeRLx7GWRv2931ht2OAjAwloIKQQtkNyU4kEzEUwCxbF2da5dctZOQHE4OucB3QhIu6juHgrF+63+BlRrcaLyeXp+FvHi1L+GkE05CzuG3IawQNAdYDg1hqgFas+Wq++bWb2bUGwZm/s+g9lk/r2zRUm4vK2HeiUdTC/mlnAJe8HZ9/XuD5OqRIQOTUBg89CUwQxiGEEZlsceZmjJOby+jpryY1Ngs7/00jBlICkAqBWv2JJeQDDNhsgAgCP0I1CT2bymleVcFR6s2UFKUXVIyc4vB+oSZKPBJeM7pkFkYlAggl1VpkXFqRznv736WmvISAMZnFnCCdZ4PGvp3HufkZ4I/YTMh2SFPcpv9oEExIllVl5fwbt1m3tpZwYbiouysOwYy/DCQ4cuj27L/7oxN+5lgmD/DMJMKT051OQCYidpN6/h43xbO1FYuOWVjMwuc73lEqRfj4mtVeLHc2RiamMNJmIgA/PXznFy/YS+Fi3VkazlXj+9cphc/pzOcvznM69vK+Oxw1bL+gcwsci5YxxzABJ6kTAiQoPvPJxz//jandlRypKqMmQXHldsj/DiY4YM9z9PauHUZYHJ+keGJ2dz2JwQImc16QBI4HBwgwLjz9ySp0Sm+SAbnwYzaTc8UBIRZOKnwrhTJGNC1RLaVO8EukAznHEMTs1xLjRSEpEaDRXcKlCGnFJLriqVbXu0UDBW8JyJyMTm3SGv3H5ztuMfo9PyScffGp3FZgHIA378cC7Tlwmo3W1QIf0k/4Y32PjoejmX774/nZRJompNru3t27+PsHoxf6rkF7GGNZma8ub2Cqo0lXOn7C1/3Qsk3zPjHzGrvf/jKiBeZ70mwO0DpWiCS6Hw4FgkanrVAt2TvPDi3f2TJfZJuaRoEjgU325otWsqI3H/Uf66hc8U7Pn7p5m6wG0ANT28TZvb24CeNS14vsfxR6ZamFPAy8PlTZtUG7MgHrPokAoh/1bMRoxlIIA5iVEbqNIv57y7Q5XRL0+OV4vwHuf5f997HDRwAAAAASUVORK5CYII=" width="25"/></a> <a data-href="https://t.me/Whonix_All_News" href="https://t.me/Whonix_All_News" rel="noreferrer" target="_blank"> Whonix ™ Telegram Announcement Channel</a>.
 </p>
 </div>
 <p><a data-href="./Two-factor_authentication_2FA" href="./Two-factor_authentication_2FA" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Two-factor_authentication_2FA" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Two-factor_authentication_2FA" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a> <a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a> | <a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a> | <a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a>
 </p><p><font size="-1">Whonix <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">™</a> | <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">©</a> ENCRYPTED SUPPORT LP | <a class="image" data-href="/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;" href="https://www.whonix.org/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;"><img alt="Heckert gnu.big.png" data-src="/w/images/thumb/a/a3/Heckert_gnu.big.png/25px-Heckert_gnu.big.png" data-srcset="/w/images/thumb/a/a3/Heckert_gnu.big.png/38px-Heckert_gnu.big.png 1.5x, /w/images/thumb/a/a3/Heckert_gnu.big.png/50px-Heckert_gnu.big.png 2x" decoding="async" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADCklEQVRIiZXWTYhWdRQG8J8zby8yToNMGKFhZvZBmEhF2WQFEiURJhUtLPqAmFVFi9xUu5ZRu6igTcTkooQWQSEtLERqMrKgD1ArJ8s0k2kc1CbTFueZ3ut8mB643Hv/7/mfj+d5/ue+c3Rsca4erMQCHMAObIvPCdOtC8uxEG0cxWEcxD7ojuNqXIYHMYD9uSZwHHfkfXRKghYew5+4EctwPdZk7Xz8AldgFXbhGazFhY0qe3OfzXoaCHRhBTbgS6zHslYCLsevgWZrI8DJVNfCEowFip9SXC8OBaKj2fN1nj/CbTjUCiQ34ftJDBu2GhfjhSSbyHOX4uyBPD+HudiZfbuDzCMYaqXa+anwt0aCVenwlQZc7SRZkM724kW8jifT6Q/xHQ+ErVYCHGzguV2Rd1UCbsvaAaWu95T6RvAJXg5sG1PkWDpeHGRa3bgURzCo+FiEe3EN7kknc9L6U+hPR1cG+y5swlt4I7+dhyfwWaAzkMr34xS+w+eKbIHl2vgsDU8rEvzxdLUyvoOJcUxJdw1uEOe7cTU+DixrG9x0pfrVeCf4t9GXAvfi/vjOz/uritO70NWdzCO4DlsUcUNZh3m4BF/F7wtF6ih+Dk8j+FEd3N3Yk262KmGdZj3qIDXtISWC2awXzweaixp7/jvA3VM2zFPy3BWnO/GtUsyR+LSVXPvS4Z4k+idJLsAfGmduklwJul6d1EEFST8+bPi2c5/ALXhTnaUtWbsVw1NbbSaZm2sgG95O25PW1/B7TY2jfp1T3pP3s7ZHc9+QzU1b13iexH0pnp5S9DSn2Wyrgq63sbZTyZPOSDqp1NaeKciMmZUU22oyv6/Ozbv5bSS/rVPyPaFgOqgziU+zqeqatH24WSlnXKlsoVIanY/XolxjivDxc0lyXEnx7wT4FPepT8IOJdfL8Xv8Ns2WgDNzMqwU1ORjIx5WHGxXH6zDZ4hx1jY39zZewmbcrubTB85Rtv9nSxQvQ2qOncJfeFbnP8GMNhsnM9moGi3DapgewzeKn806A3Wa/QtVyb6pMl4s4QAAAABJRU5ErkJggg==" width="25"/></a> Freedom Software / <a class="image" data-href="/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;" href="https://www.whonix.org/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;"><img alt="Osi standard logo 0.png" data-src="/w/images/thumb/0/09/Osi_standard_logo_0.png/25px-Osi_standard_logo_0.png" data-srcset="/w/images/thumb/0/09/Osi_standard_logo_0.png/38px-Osi_standard_logo_0.png 1.5x, /w/images/thumb/0/09/Osi_standard_logo_0.png/50px-Osi_standard_logo_0.png 2x" decoding="async" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAYAAADZ7LXbAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEC0lEQVRIid2Wy28bVRSHvxnb40liJ47zJOO2oQT6oEjApqlUUGDBY1PFbBASLGBBVIQQUhH8E2wrVKlIpZVYoEq2WAQJQQUVqkRJQYI0pCht0jA3CXFiJ357PPZlkUlkeyYtQcCCs5mZe8/5feeeM3PvwH9gyl6cY+MxVSL9gC2Sov6PQYy48aSC8rrWHXg20OEfUfyKVrdl2c7ZM9Zm9SuJ/FgkxG9/C2LEjUFfQD3bORJ6KXywA3+b3+VTzVfJzhXqufnChXqtfkYkxMZfhhhx43G9J/hF3/HoYKDdLd5qVrbK6vfpOWvTel4kxJ37QmLx2LDeF/xh4GRPr+pT7wvYtppVY+Xq2oKVqR43k+Zq41yTijFuqL4236X+0eieAAA+zUf/iZ5hVVPOtc61Kp2KHAmf9AV9ewJsW6DDT9eh8LgRN57eFeLXfafDwx2eApVNi9RU2l6+mlpM3cjYVq7q6Rd+KITqV097QmLxmK73B8cU1f0ulFJllq+kPssvFAfmzt0+kJ8v7Fu+sjpZ2bBcvr6Ait4XfMEYN3a0G1cyonUFNK/sMr9kF+p2/TUzYaYBzIS5UqvWX85MZ9e8/LXOQASIuSGSqKq5my2RVNLWdyIpmtIWCZGvpK3rXhBVU0Eh4oYoFGVNesXg09VBz3FNjXiNOzplF0RKeaeas10BCgrtQ21jRtw41jhuxI3RtiF91AtSzdu2IpVFF0QkRbq8VvlZ4l5N9LEuf/uA/q0RN14FiMVjb4f2t3/d/Winq74SSWW9ct1Mmu6VAFSz9iflVMUFUQMqkSOdUUUqg45QqHMk1O71wZaWy1QL9qWm+JYszmduZle8VpObL1jABefxYn6+6KqtlJKNX7OLSC7uChEJkS2nKhMbN7NNwTWrRsEsXTaT5prjt1QQpcm63XykZKY36+V1a0IkRbFx3LV/5GZzt7RevaCoPBfs1VBQyM4VKC6X3srN5naaGX4kXAyE/K8EIxoSycZMls3Z/DsiKT5t1fTcx82E+aHEWCqvWWcjR8OR/N3CtKIo15prw2T+bmEpEPYPZWay6dIf5QmREJe99O55Mhpxoxd4E5gRCZF0zY8bb6DQC5wXCZG+l9a/bo09OQx8BPQAHwAPAO8Dg8B7wDHgR+AMEAZeBA4AXcBTwABwyvE/BdwAbGh+u6JACHgY6AcOASOOzwKw3wkaAI6y1c8YMOZcrwG6c68Bu/7NRB2Bdx3HCNDuwEOOcK8DjrT44CSnOzo7tlvjDzvBUWDVWdGKk932mA4MAZ872ceADSAPzDSK7XbOHgSeAebZKkeArRqfYKtn+4Ap4AkgDjzoQL8Bfm8V2w3iAwrAHFACZtkq0/Z/1ZTzfAtYB74EuoGfwGNP+t/Yn/7Ihet0ifULAAAAAElFTkSuQmCC" width="25"/></a> Open Source (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
 </font></p><p><font size="-1">The personal opinions of <a data-href="https://forums.whonix.org/about" href="https://forums.whonix.org/about" rel="noreferrer" target="_blank"> moderators</a> or <a data-href="/wiki/Contributors" href="./Contributors.html" title="Contributors">contributors</a> to the <a class="mw-redirect" data-href="/wiki/Whonix" href="./Whonix.html" title="Whonix">Whonix ™</a> project do not represent the project as a whole.</font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67323" dir="ltr" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67323">https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67323</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67417" dir="ltr" href="https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67417">https://www.whonix.org/w/index.php?title=Two-factor_authentication_2FA&amp;oldid=67417</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden category: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
@@ -653,5 +866,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Two-facto
 </footer>
 </div>
  </body>
-<!-- Cached 20210911010932 -->
+<!-- Cached 20210911174058 -->
 </html>
