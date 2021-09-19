@@ -32,8 +32,8 @@
 <meta content="../Dev/Maintenance" property="og:url"/>
 <meta content="Design Documentation about Redistribution of Whonix ™" property="og:description"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2021-05-23T18:46:39Z" property="article:modified_time"/>
-<meta content="2021-05-23T18:46:39Z" property="article:published_time"/>
+<meta content="2021-09-18T08:15:35Z" property="article:modified_time"/>
+<meta content="2021-09-18T08:15:35Z" property="article:published_time"/>
 
 </head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_Maintenance rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
@@ -158,8 +158,20 @@
 <li>operating system updates</li>
 <li>testing on stage server before upgrades</li></ul>
 <h1><span class="mw-headline" id="package_stable_upgrade">package stable upgrade</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=2" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=2.html" title="Edit section: package stable upgrade">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<pre>WHONIX_BUILD_APT_CODENAME=jessie-proposed-updates make reprepro-add
-</pre>
+<p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_BUILD_APT_CODENAME=bullseye-proposed-updates make reprepro-add</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_BUILD_APT_CODENAME=bullseye-proposed-updates make reprepro-add</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
 <h1><span class="mw-headline" id="Tor_Browser_hardcoded_version_file">Tor Browser hardcoded version file</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=3" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=3.html" title="Edit section: Tor Browser hardcoded version file">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <p>Keep Tor Browser hardcoded version file up to date.
 </p>
@@ -167,17 +179,52 @@
 <li>check if it is already manually downloadable going through torproject.org</li>
 <li>keep <a class="external text" data-href="https://github.com/Whonix/tb-updater/blob/master/usr/share/tb-updater/tbb_hardcoded_version" href="https://github.com/Whonix/tb-updater/blob/master/usr/share/tb-updater/tbb_hardcoded_version" rel="noreferrer noopener" target="_blank">/usr/share/tb-updater/tbb_hardcoded_version</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix/tb-updater/blob/master/usr/share/tb-updater/tbb_hardcoded_version" href="https://web.archive.org/web/https://github.com/Whonix/tb-updater/blob/master/usr/share/tb-updater/tbb_hardcoded_version" rel="noreferrer noopener" target="_blank">[archive]</a></sup> updated</li>
 <li>to manually test from a Qubes AppVM</li></ul>
-<pre>CURL_PROXY=--fail tbb_version=6.5.2 qubes_vm_type=TemplateVM  update-torbrowser --postinst
-</pre>
-<pre>WHONIX_BUILD_APT_CODENAME=jessie-proposed-updates make reprepro-add
-</pre>
+<p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>CURL_PROXY=--fail tbb_version=6.5.2 qubes_vm_type=TemplateVM  update-torbrowser --postinst</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">CURL_PROXY=--fail tbb_version=6.5.2 qubes_vm_type=TemplateVM  update-torbrowser --postinst</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>WHONIX_BUILD_APT_CODENAME=bullseye-proposed-updates make reprepro-add</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">WHONIX_BUILD_APT_CODENAME=bullseye-proposed-updates make reprepro-add</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
 <h1><span id="Whonix_™_repository_TPO_packages"></span><span class="mw-headline" id="Whonix_.E2.84.A2_repository_TPO_packages">Whonix ™ repository TPO packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=4" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=4.html" title="Edit section: Whonix ™ repository TPO packages">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
-<ul><li>keep mirroring <a class="external free" data-href="http://deb.torproject.org/torproject.org/dists/jessie/" href="http://deb.torproject.org/torproject.org/dists/jessie/" rel="noreferrer noopener" target="_blank">http://deb.torproject.org/torproject.org/dists/jessie/</a> <sup><a data-href="https://web.archive.org/web/http://deb.torproject.org/torproject.org/dists/jessie/" href="https://web.archive.org/web/http://deb.torproject.org/torproject.org/dists/jessie/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to whonix.org repository
+<ul><li>keep mirroring <a class="external free" data-href="http://deb.torproject.org/torproject.org/dists/bullseye/" href="http://deb.torproject.org/torproject.org/dists/bullseye/" rel="noreferrer noopener" target="_blank">http://deb.torproject.org/torproject.org/dists/bullseye/</a> <sup><a data-href="https://web.archive.org/web/http://deb.torproject.org/torproject.org/dists/bullseye/" href="https://web.archive.org/web/http://deb.torproject.org/torproject.org/dists/bullseye/" rel="noreferrer noopener" target="_blank">[archive]</a></sup> to whonix.org repository
 <ul><li>do a developer test (upload to developers repository?)</li>
-<li>upload to stable-proposed-updates (currently: jessie-proposed-updates) for wider testing</li>
-<li>upload to stable (currently: jessie)</li></ul></li></ul>
-<pre>sudo -E ./build-steps.d/1200_create-debian-packages --build --allow-untagged true --allow-uncommitted true --internalrun --target root --function "get_tpo_packages ; create_whonix_repository"
-</pre>
+<li>upload to stable-proposed-updates (currently: bullseye-proposed-updates) for wider testing</li>
+<li>upload to stable (currently: bullseye)</li></ul></li></ul>
+<p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo -E ./build-steps.d/1200_create-debian-packages --build --allow-untagged true --allow-uncommitted true --internalrun --target root --function "get_tpo_packages ; create_whonix_repository"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo -E ./build-steps.d/1200_create-debian-packages --build --allow-untagged true --allow-uncommitted true --internalrun --target root --function "get_tpo_packages ; create_whonix_repository"</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
 <h1><span class="mw-headline" id="See_Also">See Also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=5" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;action=edit&amp;section=5.html" title="Edit section: See Also">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a data-href="/wiki/Dev/APT_Repository" href="../Dev/APT_Repository.html" title="Dev/APT Repository">Dev/APT Repository</a></li></ul>
 <div class="reflist" style="list-style-type: decimal;">
@@ -242,7 +289,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 </p><p><font size="-1">Whonix <a data-href="/wiki/Whonix_Trademark_Policy" href="../Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">™</a> | <a data-href="/wiki/Whonix:Copyrights" href="../Whonix:Copyrights.html" title="Whonix:Copyrights">©</a> ENCRYPTED SUPPORT LP | <a class="image" data-href="/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;" href="https://www.whonix.org/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;"><img alt="Heckert gnu.big.png" data-src="/w/images/thumb/a/a3/Heckert_gnu.big.png/25px-Heckert_gnu.big.png" data-srcset="/w/images/thumb/a/a3/Heckert_gnu.big.png/38px-Heckert_gnu.big.png 1.5x, /w/images/thumb/a/a3/Heckert_gnu.big.png/50px-Heckert_gnu.big.png 2x" decoding="async" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADCklEQVRIiZXWTYhWdRQG8J8zby8yToNMGKFhZvZBmEhF2WQFEiURJhUtLPqAmFVFi9xUu5ZRu6igTcTkooQWQSEtLERqMrKgD1ArJ8s0k2kc1CbTFueZ3ut8mB643Hv/7/mfj+d5/ue+c3Rsca4erMQCHMAObIvPCdOtC8uxEG0cxWEcxD7ojuNqXIYHMYD9uSZwHHfkfXRKghYew5+4EctwPdZk7Xz8AldgFXbhGazFhY0qe3OfzXoaCHRhBTbgS6zHslYCLsevgWZrI8DJVNfCEowFip9SXC8OBaKj2fN1nj/CbTjUCiQ34ftJDBu2GhfjhSSbyHOX4uyBPD+HudiZfbuDzCMYaqXa+anwt0aCVenwlQZc7SRZkM724kW8jifT6Q/xHQ+ErVYCHGzguV2Rd1UCbsvaAaWu95T6RvAJXg5sG1PkWDpeHGRa3bgURzCo+FiEe3EN7kknc9L6U+hPR1cG+y5swlt4I7+dhyfwWaAzkMr34xS+w+eKbIHl2vgsDU8rEvzxdLUyvoOJcUxJdw1uEOe7cTU+DixrG9x0pfrVeCf4t9GXAvfi/vjOz/uritO70NWdzCO4DlsUcUNZh3m4BF/F7wtF6ih+Dk8j+FEd3N3Yk262KmGdZj3qIDXtISWC2awXzweaixp7/jvA3VM2zFPy3BWnO/GtUsyR+LSVXPvS4Z4k+idJLsAfGmduklwJul6d1EEFST8+bPi2c5/ALXhTnaUtWbsVw1NbbSaZm2sgG95O25PW1/B7TY2jfp1T3pP3s7ZHc9+QzU1b13iexH0pnp5S9DSn2Wyrgq63sbZTyZPOSDqp1NaeKciMmZUU22oyv6/Ozbv5bSS/rVPyPaFgOqgziU+zqeqatH24WSlnXKlsoVIanY/XolxjivDxc0lyXEnx7wT4FPepT8IOJdfL8Xv8Ns2WgDNzMqwU1ORjIx5WHGxXH6zDZ4hx1jY39zZewmbcrubTB85Rtv9nSxQvQ2qOncJfeFbnP8GMNhsnM9moGi3DapgewzeKn806A3Wa/QtVyb6pMl4s4QAAAABJRU5ErkJggg==" width="25"/></a> Freedom Software / <a class="image" data-href="/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;" href="https://www.whonix.org/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;"><img alt="Osi standard logo 0.png" data-src="/w/images/thumb/0/09/Osi_standard_logo_0.png/25px-Osi_standard_logo_0.png" data-srcset="/w/images/thumb/0/09/Osi_standard_logo_0.png/38px-Osi_standard_logo_0.png 1.5x, /w/images/thumb/0/09/Osi_standard_logo_0.png/50px-Osi_standard_logo_0.png 2x" decoding="async" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAYAAADZ7LXbAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEC0lEQVRIid2Wy28bVRSHvxnb40liJ47zJOO2oQT6oEjApqlUUGDBY1PFbBASLGBBVIQQUhH8E2wrVKlIpZVYoEq2WAQJQQUVqkRJQYI0pCht0jA3CXFiJ357PPZlkUlkeyYtQcCCs5mZe8/5feeeM3PvwH9gyl6cY+MxVSL9gC2Sov6PQYy48aSC8rrWHXg20OEfUfyKVrdl2c7ZM9Zm9SuJ/FgkxG9/C2LEjUFfQD3bORJ6KXywA3+b3+VTzVfJzhXqufnChXqtfkYkxMZfhhhx43G9J/hF3/HoYKDdLd5qVrbK6vfpOWvTel4kxJ37QmLx2LDeF/xh4GRPr+pT7wvYtppVY+Xq2oKVqR43k+Zq41yTijFuqL4236X+0eieAAA+zUf/iZ5hVVPOtc61Kp2KHAmf9AV9ewJsW6DDT9eh8LgRN57eFeLXfafDwx2eApVNi9RU2l6+mlpM3cjYVq7q6Rd+KITqV097QmLxmK73B8cU1f0ulFJllq+kPssvFAfmzt0+kJ8v7Fu+sjpZ2bBcvr6Ait4XfMEYN3a0G1cyonUFNK/sMr9kF+p2/TUzYaYBzIS5UqvWX85MZ9e8/LXOQASIuSGSqKq5my2RVNLWdyIpmtIWCZGvpK3rXhBVU0Eh4oYoFGVNesXg09VBz3FNjXiNOzplF0RKeaeas10BCgrtQ21jRtw41jhuxI3RtiF91AtSzdu2IpVFF0QkRbq8VvlZ4l5N9LEuf/uA/q0RN14FiMVjb4f2t3/d/Winq74SSWW9ct1Mmu6VAFSz9iflVMUFUQMqkSOdUUUqg45QqHMk1O71wZaWy1QL9qWm+JYszmduZle8VpObL1jABefxYn6+6KqtlJKNX7OLSC7uChEJkS2nKhMbN7NNwTWrRsEsXTaT5prjt1QQpcm63XykZKY36+V1a0IkRbFx3LV/5GZzt7RevaCoPBfs1VBQyM4VKC6X3srN5naaGX4kXAyE/K8EIxoSycZMls3Z/DsiKT5t1fTcx82E+aHEWCqvWWcjR8OR/N3CtKIo15prw2T+bmEpEPYPZWay6dIf5QmREJe99O55Mhpxoxd4E5gRCZF0zY8bb6DQC5wXCZG+l9a/bo09OQx8BPQAHwAPAO8Dg8B7wDHgR+AMEAZeBA4AXcBTwABwyvE/BdwAbGh+u6JACHgY6AcOASOOzwKw3wkaAI6y1c8YMOZcrwG6c68Bu/7NRB2Bdx3HCNDuwEOOcK8DjrT44CSnOzo7tlvjDzvBUWDVWdGKk932mA4MAZ872ceADSAPzDSK7XbOHgSeAebZKkeArRqfYKtn+4Ap4AkgDjzoQL8Bfm8V2w3iAwrAHFACZtkq0/Z/1ZTzfAtYB74EuoGfwGNP+t/Yn/7Ihet0ifULAAAAAElFTkSuQmCC" width="25"/></a> Open Source (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="../Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
 </font></p><p><font size="-1">The personal opinions of <a data-href="https://forums.whonix.org/about" href="https://forums.whonix.org/about" rel="noreferrer" target="_blank"> moderators</a> or <a data-href="/wiki/Contributors" href="../Contributors.html" title="Contributors">contributors</a> to the <a class="mw-redirect" data-href="/wiki/Whonix" href="../Whonix.html" title="Whonix">Whonix ™</a> project do not represent the project as a whole.</font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=65503" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=65503">https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=65503</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=67866" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=67866">https://www.whonix.org/w/index.php?title=Dev/Maintenance&amp;oldid=67866</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a data-href="/wiki/Special:Categories" href="../Special:Categories.html" title="Special:Categories">Categories</a>: <ul><li><a data-href="/wiki/Category:Development" href="../Category:Development.html" title="Category:Development">Development</a></li><li><a data-href="/wiki/Category:Design" href="../Category:Design.html" title="Category:Design">Design</a></li></ul></div></div></div>
@@ -274,5 +321,4 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/Maint
 </footer>
 </div>
  </body>
-<!-- Cached 20210918024216 -->
 </html>
