@@ -32,8 +32,8 @@
 <meta content="./AppArmor" property="og:url"/>
 <meta content="AppArmor profiles (Security Hardening) for Whonix ™ and other Linux distributions." property="og:description"/>
 <meta content="https://www.whonix.org/w/images/f/f1/Coat-of-mail-948960640.jpg" property="og:image"/>
-<meta content="2021-09-18T07:59:13Z" property="article:modified_time"/>
-<meta content="2021-09-18T07:59:13Z" property="article:published_time"/>
+<meta content="2021-09-28T15:19:09Z" property="article:modified_time"/>
+<meta content="2021-09-28T15:19:09Z" property="article:published_time"/>
 
 </head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-AppArmor rootpage-AppArmor skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
@@ -156,11 +156,12 @@
 </ul>
 </li>
 <li class="toclevel-2 tocsection-16"><a href="#More_Profiles"><span class="tocnumber">3.4</span> <span class="toctext">More Profiles</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Fix_Profiles"><span class="tocnumber">3.5</span> <span class="toctext">Fix Profiles</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-17"><a href="#Support"><span class="tocnumber">4</span> <span class="toctext">Support</span></a></li>
-<li class="toclevel-1 tocsection-18"><a href="#Development"><span class="tocnumber">5</span> <span class="toctext">Development</span></a></li>
-<li class="toclevel-1 tocsection-19"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Support"><span class="tocnumber">4</span> <span class="toctext">Support</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Development"><span class="tocnumber">5</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
 </ul>
 </div>
 <h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=1" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=1.html" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
@@ -696,7 +697,7 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 </p>
 <h1><span class="mw-headline" id="Common_Operations">Common Operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=9" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=9.html" title="Edit section: Common Operations">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span class="mw-headline" id="Maintain_Tor_Browser_Functionality">Maintain Tor Browser Functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=10" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=10.html" title="Edit section: Maintain Tor Browser Functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Tor Browser upgrades frequently break the Whonix ™ AppArmor profile used to contain it. Even when AppArmor-related fixes are confirmed in Phabricator, most often the packages are not made available to Whonix ™ stable or even the developer version. This means manual profile fixes are often required until the <a data-href="/wiki/About#Whonix_.E2.84.A2_Version" href="./About.html" title="About">next Whonix ™ version is released</a>.
+<p>Tor Browser upgrades frequently break the Whonix ™ AppArmor profile used to contain it. Even when AppArmor-related fixes are confirmed in forums.whonix.org, most often updated, fixed packages are immediately made available to Whonix ™ stable or even the developer version.
 </p><p>If Tor Browser is non-functional with the available AppArmor profile, follow these steps to rectify the problem.
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -761,7 +762,8 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 </p><p><b>7.</b> Restart Whonix-Workstation ™ (<code>anon-whonix</code>).
 </p><p>Launch Tor Browser. If everything has been applied correctly, Tor Browser will have full functionality. If the following AppArmor warning appears, it can be safely ignored.
 </p>
-<pre>Profile: /etc/apparmor.d/home.tor-browser.firefox Operation: open Name: /dev/ Denied: r Logfile: /var/log/kern.log For more information, please see: https://wiki.ubuntu.com/DebuggingApparmor</pre>
+<pre>Profile: /etc/apparmor.d/home.tor-browser.firefox Operation: open Name: /dev/ Denied: r Logfile: /var/log/kern.log For more information, please see: https://wiki.ubuntu.com/DebuggingApparmor
+</pre>
 <p><b>8.</b> Manually check AppArmor is correctly running and enforced.
 </p><p>In a terminal, run.
 </p><p><!-- Widget:CodeSelect start -->
@@ -781,10 +783,10 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 </p>
 </div>
 <h2><span id="Correcting_Other_Whonix_™_AppArmor_Profiles"></span><span class="mw-headline" id="Correcting_Other_Whonix_.E2.84.A2_AppArmor_Profiles">Correcting Other Whonix ™ AppArmor Profiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=11" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=11.html" title="Edit section: Correcting Other Whonix ™ AppArmor Profiles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The same method can be used to resolve other AppArmor problems impacting full functionality of applications in Whonix ™. For instance, the <code>systemcheck</code> AppArmor profile previously caused continuous "denied" messages in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> Correcting this issue was quite simple: <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+<p>The same method can be used to resolve other AppArmor problems impacting full functionality of applications in Whonix ™. For instance, the [[<code>systemcheck</code>]] AppArmor profile previously caused continuous "denied" messages in <a class="mw-redirect" data-href="/wiki/Qubes-Whonix" href="./Qubes-Whonix.html" title="Qubes-Whonix">Qubes-Whonix ™</a>. <sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> Correcting this issue was quite simple: <sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
 </p>
-<ol><li>Navigate to the <a class="external text" data-href="https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" href="https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" rel="noreferrer noopener" target="_blank">raw, updated systemcheck profile</a> <sup><a data-href="https://web.archive.org/web/https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" href="https://web.archive.org/web/https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
-<li>Replace the existing content in <i>/etc/apparmor.d/usr.bin.systemcheck</i> with the updated github content, in both TemplateVMs <code>whonix-gw-16</code> and <code>whonix-ws-16</code>.</li>
+<ol><li>Navigate to the <a class="external text" data-href="https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" href="https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" rel="noreferrer noopener" target="_blank">raw, updated <code>systemcheck</code> profile</a> <sup><a data-href="https://web.archive.org/web/https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" href="https://web.archive.org/web/https://raw.githubusercontent.com/Whonix/systemcheck/master/etc/apparmor.d/usr.bin.systemcheck" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li>
+<li>Replace the existing content in <code>/etc/apparmor.d/usr.bin.systemcheck</code> with the updated github content, in both TemplateVMs <code>whonix-gw-16</code> and <code>whonix-ws-16</code>.</li>
 <li>Shut down both TemplateVMs and any running instances of <code>sys-whonix</code> and <code>anon-whonix</code>.</li>
 <li>Restart <code>sys-whonix</code> and <code>anon-whonix</code>.</li></ol>
 <h2><span class="mw-headline" id="AppArmor_Notifications">AppArmor Notifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=12" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=12.html" title="Edit section: AppArmor Notifications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -805,7 +807,7 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 <!-- Widget:CodeSelect end -->
 </p>
 <h3><span class="mw-headline" id="apparmor-notify">apparmor-notify</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=14" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=14.html" title="Edit section: apparmor-notify">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><a class="external text" data-href="https://packages.debian.org/bullseye/apparmor-notify" href="https://packages.debian.org/bullseye/apparmor-notify" rel="noreferrer noopener" target="_blank">apparmor-notify</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/bullseye/apparmor-notify" href="https://web.archive.org/web/https://packages.debian.org/bullseye/apparmor-notify" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is no longer installed by default. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> This means desktop notifications will not appear concerning AppArmor denied messages, which are stored in <code>/var/log/kern.log</code>. 
+<p><a class="external text" data-href="https://packages.debian.org/bullseye/apparmor-notify" href="https://packages.debian.org/bullseye/apparmor-notify" rel="noreferrer noopener" target="_blank">apparmor-notify</a> <sup><a data-href="https://web.archive.org/web/https://packages.debian.org/bullseye/apparmor-notify" href="https://web.archive.org/web/https://packages.debian.org/bullseye/apparmor-notify" rel="noreferrer noopener" target="_blank">[archive]</a></sup> is not installed by default. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> By installing it, desktop notifications would appear concerning AppArmor denied messages, which are stored in file <code>/var/log/kern.log</code>. 
 </p><p>To install:
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -874,6 +876,8 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 </p><p>To revert this change, reboot the VM.
 </p>
 <h3><span class="mw-headline" id="Manual_Notifications_Inspection">Manual Notifications Inspection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=15" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=15.html" title="Edit section: Manual Notifications Inspection">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Use of <a href="#apparmor-info"><code>apparmor-info</code></a> is simpler.
+</p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Manually inspect relevant logs.
 </p><p>Open file <code>/var/log/kern.log</code> in an editor with root rights.
@@ -949,13 +953,192 @@ Some even more experimental profiles are included in folder <code>/usr/share/app
 <!-- Widget:CodeSelect end -->
 </p><p>Then open the program and use it as normal. AppArmor detects which files need to be accessed and adds them to the profile if you choose. This is insufficient for high quality profiles though; refer to the <a class="external text" data-href="https://gitlab.com/apparmor/apparmor/-/wikis/Documentation" href="https://gitlab.com/apparmor/apparmor/-/wikis/Documentation" rel="noreferrer noopener" target="_blank">AppArmor documentation</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.com/apparmor/apparmor/-/wikis/Documentation" href="https://web.archive.org/web/https://gitlab.com/apparmor/apparmor/-/wikis/Documentation" rel="noreferrer noopener" target="_blank">[archive]</a></sup> for further details.
 </p>
-<h1><span class="mw-headline" id="Support">Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=17.html" title="Edit section: Support">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Fix_Profiles">Fix Profiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=17" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=17.html" title="Edit section: Fix Profiles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>1.</b> Put folder <code>/etc/apparmor.d</code> under git version control.
+</p><p>Git is a useful tool to record which files in a folder changed in what way.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Git setup for folder <code>/etc/apparmor.d</code>.
+</p>
+<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
+<p>Install <code>git</code>.
+</p><p><b>1.</b> <a class="mw-redirect" data-href="/wiki/Update" href="./Update.html" title="Update">Update</a> the package lists.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get update</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get update</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><b>2.</b> Upgrade the system.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get dist-upgrade</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get dist-upgrade</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><b>3.</b> Install the <code>git</code> package.
+</p><p>Using <code>apt-get</code> command line parameter <code>--no-install-recommends</code> is in most cases optional.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo apt-get install --no-install-recommends git</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo apt-get install --no-install-recommends git</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>The procedure of installing <code>git</code> is complete.
+</p>
+</div>
+<p>Change directory to folder <code>/etc/apparmor.d</code>
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>cd /etc/apparmor.d</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">cd /etc/apparmor.d</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Initialize git in that folder.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo git init</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git init</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Git needs an e-mail address. That e-mail address doesn't need to actually exist. That e-mail address would appear in git commit change logs if that git repository was ever pushed to any remote. If only used locally, the default <code>you@example.com</code> could be kept. Otherwise, the user may change <code>you@example.com</code> to any e-mail address of their choice.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo git config --global user.email "you@example.com"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git config --global user.email "you@example.com"</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Git needs an name. That name address doesn't need to actually exist. That name would appear in git commit change logs if that git repository was ever pushed to any remote. If only used locally, the default <code>Your Name</code> could be kept. Otherwise, the user may change <code>Your Name</code> to any name of their choice.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo git config --global user.name "Your Name"</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git config --global user.name "Your Name"</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Add all files in that folder to git.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo git add -A</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git add -A</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p>Commit all files to git. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo git commit -a -m .</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo git commit -a -m .</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p>
+</div>
+<p><b>2.</b> Use <code>aa-logprof</code> to correct any AppArmor denied or allowed messages. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo aa-logprof</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo aa-logprof</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><b>3.</b> Re-run any applications that had any AppArmor issues.
+</p><p><b>4.</b> Repeat step 2 and 3 until there are no new AppArmor denied or allowed messages.
+</p><p><b>5.</b> See which files were modified by <code>aa-logprof</code>.
+</p><p>From the same folder.
+</p><p><!-- Widget:CodeSelect start -->
+</p><div class="codeContainerNew">
+<div class="preDiv">
+<pre>git status</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">git status</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+</p><p><b>6.</b> Submit fixes to developers.
+</p><p>Ideally to github or gitlab.
+</p>
+<ul><li><a class="external free" data-href="https://github.com/Whonix?q=apparmor&amp;type=&amp;language=&amp;sort=" href="https://github.com/Whonix?q=apparmor&amp;type=&amp;language=&amp;sort=" rel="noreferrer noopener" target="_blank">https://github.com/Whonix?q=apparmor&amp;type=&amp;language=&amp;sort=</a> <sup><a data-href="https://web.archive.org/web/https://github.com/Whonix?q=apparmor&amp;type=&amp;language=&amp;sort=" href="https://web.archive.org/web/https://github.com/Whonix?q=apparmor&amp;type=&amp;language=&amp;sort=" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li><a class="external free" data-href="https://gitlab.com/whonix?filter=apparmor" href="https://gitlab.com/whonix?filter=apparmor" rel="noreferrer noopener" target="_blank">https://gitlab.com/whonix?filter=apparmor</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.com/whonix?filter=apparmor" href="https://web.archive.org/web/https://gitlab.com/whonix?filter=apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
+<li>Related: <a data-href="/wiki/Dev/git#Search_the_Source_Code" href="./Dev/git.html" title="Dev/git">Search the Source Code</a> and <a data-href="/wiki/Dev/git#Find_Files" href="./Dev/git.html" title="Dev/git">Find Files</a>.</li>
+<li>In doubt ask in <a class="external free" data-href="https://forums.whonix.org/c/apparmor/14" href="https://forums.whonix.org/c/apparmor/14" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/c/apparmor/14</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor/14" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor/14" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</li></ul>
+<h1><span class="mw-headline" id="Support">Support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=18.html" title="Edit section: Support">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li>Need help? Visit the <a class="external text" data-href="https://forums.whonix.org/c/apparmor" href="https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">Whonix ™ AppArmor Forum</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" href="https://web.archive.org/web/https://forums.whonix.org/c/apparmor" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://forums.whonix.org/t/profile-creation-advice/1127" href="https://forums.whonix.org/t/profile-creation-advice/1127" rel="noreferrer noopener" target="_blank">Profile Creation Advice</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/profile-creation-advice/1127" href="https://web.archive.org/web/https://forums.whonix.org/t/profile-creation-advice/1127" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=18" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=18.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Development">Development</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=19.html" title="Edit section: Development">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <ul><li><a class="external text" data-href="https://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108" href="https://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108" rel="noreferrer noopener" target="_blank">Whonix ™ AppArmor Profiles Development Discussion</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external text" data-href="https://phabricator.whonix.org/tag/apparmor/" href="https://phabricator.whonix.org/tag/apparmor/" rel="noreferrer noopener" target="_blank">Open Tasks</a> <sup><a data-href="https://web.archive.org/web/https://phabricator.whonix.org/tag/apparmor/" href="https://web.archive.org/web/https://phabricator.whonix.org/tag/apparmor/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
-<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=19" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=19.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=AppArmor&amp;action=edit&amp;section=20" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;action=edit&amp;section=20.html" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <div class="reflist" style="list-style-type: decimal;">
 <div class="mw-references-wrap mw-references-columns"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">
@@ -1010,6 +1193,12 @@ This issue was fixed in the Whonix ™ 14 release.</span>
 <li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 <a class="external free" data-href="https://forums.whonix.org/t/whonix-14-debian-stretch-apparmor-related-changes/3563" href="https://forums.whonix.org/t/whonix-14-debian-stretch-apparmor-related-changes/3563" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/whonix-14-debian-stretch-apparmor-related-changes/3563</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-14-debian-stretch-apparmor-related-changes/3563" href="https://web.archive.org/web/https://forums.whonix.org/t/whonix-14-debian-stretch-apparmor-related-changes/3563" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+Commits all files to git with commit message <code>.</code> for simplicity. Commit message could also be something else such as <code>{{{sudo_maybe}}} git commit -a -m "initial commit"</code>.</span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
+<a class="external free" data-href="https://gitlab.com/apparmor/apparmor/-/issues/200#note_685907209" href="https://gitlab.com/apparmor/apparmor/-/issues/200" rel="noreferrer noopener" target="_blank">https://gitlab.com/apparmor/apparmor/-/issues/200#note_685907209</a> <sup><a data-href="https://web.archive.org/web/https://gitlab.com/apparmor/apparmor/-/issues/200#note_685907209" href="https://web.archive.org/web/https://gitlab.com/apparmor/apparmor/-/issues/200" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+</li>
 </ol></div></div>
 <hr/>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
@@ -1057,17 +1246,20 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://mastodon.technology/share?message=AppArmor%20./AppArmor&amp;t=AppArmor" href="https://mastodon.technology/share?message=AppArmor%20./AppArmor&amp;t=AppArmor" rel="noreferrer noopener" target="_blank"><img alt="200px-Mastodon Logotype (Simple).svg.png" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Please help in testing <a data-href="/wiki/Contribute#Testing" href="./Contribute.html" title="Contribute">new features and bug fixes</a> in Whonix ™.
+<p>Check out the <a data-href="https://forums.whonix.org/c/news" href="https://forums.whonix.org/c/news" rel="noreferrer" target="_blank"> Whonix ™ News Blog</a>. <a data-href="https://forums.whonix.org/c/news.rss" href="https://forums.whonix.org/c/news.rss" rel="noreferrer noopener" target="_blank"><img alt="Rss.png" data-src="/w/images/thumb/0/09/Rss.png/25px-Rss.png" data-srcset="/w/images/thumb/0/09/Rss.png/38px-Rss.png 1.5x, /w/images/thumb/0/09/Rss.png/50px-Rss.png 2x" decoding="async" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAE5ElEQVRIx6WWa0wUVxTHJxvT9GM/9EPjByK78liWBSlUo8GItI3GplYbQ0lDKiogsCDyXuVRXstTKFCeoWCjVAqtqUipbCixVGurppDGFqTUqDFWcXdnZmd2hmV5nJ65A7ssRYt1kl9ucu45/3PvOXfuDEU94+FOeb1k6/xwt9if1ygOlFwXjWVTorFcEI2lFvFS0ajYp2+3nf3gfa7G62XqPx7FSrga1TrbuYNx4sWTd0VjJYgD5U/HWAFCb/Yj2xdRx6RFraa3PBEZucbtHkKP7ifhYj4G560dyb9Hd5Nv2qFcZQOujHzrLn9bd9JD4at0+N/0JE/xbXsCVu5ELlF96HpbZ+xDW2c8vDDn4h5xDTs83JLwVUoF3xE1yLcfBL79I7Df6IbZe7+C43cjTP/YBrbuVGJ/Lk5HXWELvV094Zr2R3CtkcA1HSA4JoZh+bOwsABzf49jk6uBa4kArvmAO02r0BIJfPPeaJKAyfJRWOv3/WateQeWcIwNEeHVmHv8J9i+TAbu0z3A1S9Sh3G1yCcuDULdu5OM3ncdxRRuD2ErdgFr2AlsKVK2E6yn3gaucT/WNgnL1YrCEyTB0q4WZmdAHKwGa3UY+iJVYcBWIhVhJJ7oSHplbwFbsi2cYgrCc5mcLcDkIvlIAVK4BdgipHgzOsnwZ45iycbcdjX9Q4s8L/kVyXEkXtLJQ2TdKsqS9kav5XggWNICgM5AMgNg+nI7zN4dAfsv3cB/rgP65Cag9VoyikNtbrsSzhcAna2VyZLjJR1Jj+imBFymzHHaUXOcGsxHkQQkUQ32671ujZ97cg8bmUDmJGxdxa5EDjswpe+BWaeWSVzUkfQk3TjNHcoU7T9hitaA6RByGDmiwTJ0w8Lc7L+aLnzXAegPkr/Q3+60OyZHwBQjxfqReKIj6RFd7RRlOuQ3ajqMkzFqMMUuZsdVWJKDwFofAzO3ht0SiZc+A7Pkl6CF2Qe3nXZrQ7xz9ZIO0ZN0j/hPUuYY9XkSJAkn+IIlEdEtkiRjO6vHE+Vw9oFriiN2rjHGWTbH2FU5RopHHZJQXvQgZYlX6y3xPjiBJCJJSLI3NjAIT8ybQB/3xgZ643HWL3tX7gCd6kvm5h7/JSefnwPmxFY5XifrmSXdJE0ZhVn9yYoTUUyHJHmDtXIfzAsMEZwZ6Qc6zYvguH3FmYhvicZEXngLNLhsHcdIPNGR9JL9gE7XhFJPotQKOk3zM52MQogFsV/tcusDWxKOghuBb4t1vSPDp4mNa452llEcaCTxS1pMVuAfdLqXfHcx+sDddBr2JEVFEL4xOI/vvMDK5z9lIzDZgViWebkHE9eIjS0Kc/rab15watDpamDzgyKdXxYmxUfB5L7eTaeiQ6qSlEa4YAD7tS68OvYSG7Ej9htfw8xoH0x/3yzb8CWdGf2WIPSWLvqpgPk42MgaVG5fRQWTo3qFyQ8ap9OkJJ4vgBLYwpD7bIHqtVU/v2yRrwdbEDRBZ2KiDM/nJ1Ml3WUP2BJf32f+VbAlylfZ4qA++gSeuIwNiOeycSUuO52jwVt38xDGr1/b30qdUsGWaSPYwoBbTI4aV7jhqTB5Wlx98Li1IjiKr/VUrOlvZfnI1SoV1lKvbdbyEANbHGhkC7XjbIH/fTIWbzJaK7carAafUK5GqVixaLcN/ANJCOc2tWHbbAAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 </div>
 <p><a data-href="./AppArmor" href="./AppArmor" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/AppArmor" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a> <a data-href="/wiki/Priority_Support" href="./Priority_Support.html" title="Priority Support">Priority Support</a> | <a data-href="/wiki/Investors" href="./Investors.html" title="Investors">Investors</a> | <a data-href="/wiki/Professional_Support" href="./Professional_Support.html" title="Professional Support">Professional Support</a>
 </p><p><font size="-1">Whonix <a data-href="/wiki/Whonix_Trademark_Policy" href="./Whonix_Trademark_Policy.html" title="Whonix Trademark Policy">™</a> | <a data-href="/wiki/Whonix:Copyrights" href="./Whonix:Copyrights.html" title="Whonix:Copyrights">©</a> ENCRYPTED SUPPORT LP | <a class="image" data-href="/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;" href="https://www.whonix.org/w/index.php?title=File:Heckert_gnu.big.png&amp;filetimestamp=20200117115310&amp;"><img alt="Heckert gnu.big.png" data-src="/w/images/thumb/a/a3/Heckert_gnu.big.png/25px-Heckert_gnu.big.png" data-srcset="/w/images/thumb/a/a3/Heckert_gnu.big.png/38px-Heckert_gnu.big.png 1.5x, /w/images/thumb/a/a3/Heckert_gnu.big.png/50px-Heckert_gnu.big.png 2x" decoding="async" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADCklEQVRIiZXWTYhWdRQG8J8zby8yToNMGKFhZvZBmEhF2WQFEiURJhUtLPqAmFVFi9xUu5ZRu6igTcTkooQWQSEtLERqMrKgD1ArJ8s0k2kc1CbTFueZ3ut8mB643Hv/7/mfj+d5/ue+c3Rsca4erMQCHMAObIvPCdOtC8uxEG0cxWEcxD7ojuNqXIYHMYD9uSZwHHfkfXRKghYew5+4EctwPdZk7Xz8AldgFXbhGazFhY0qe3OfzXoaCHRhBTbgS6zHslYCLsevgWZrI8DJVNfCEowFip9SXC8OBaKj2fN1nj/CbTjUCiQ34ftJDBu2GhfjhSSbyHOX4uyBPD+HudiZfbuDzCMYaqXa+anwt0aCVenwlQZc7SRZkM724kW8jifT6Q/xHQ+ErVYCHGzguV2Rd1UCbsvaAaWu95T6RvAJXg5sG1PkWDpeHGRa3bgURzCo+FiEe3EN7kknc9L6U+hPR1cG+y5swlt4I7+dhyfwWaAzkMr34xS+w+eKbIHl2vgsDU8rEvzxdLUyvoOJcUxJdw1uEOe7cTU+DixrG9x0pfrVeCf4t9GXAvfi/vjOz/uritO70NWdzCO4DlsUcUNZh3m4BF/F7wtF6ih+Dk8j+FEd3N3Yk262KmGdZj3qIDXtISWC2awXzweaixp7/jvA3VM2zFPy3BWnO/GtUsyR+LSVXPvS4Z4k+idJLsAfGmduklwJul6d1EEFST8+bPi2c5/ALXhTnaUtWbsVw1NbbSaZm2sgG95O25PW1/B7TY2jfp1T3pP3s7ZHc9+QzU1b13iexH0pnp5S9DSn2Wyrgq63sbZTyZPOSDqp1NaeKciMmZUU22oyv6/Ozbv5bSS/rVPyPaFgOqgziU+zqeqatH24WSlnXKlsoVIanY/XolxjivDxc0lyXEnx7wT4FPepT8IOJdfL8Xv8Ns2WgDNzMqwU1ORjIx5WHGxXH6zDZ4hx1jY39zZewmbcrubTB85Rtv9nSxQvQ2qOncJfeFbnP8GMNhsnM9moGi3DapgewzeKn806A3Wa/QtVyb6pMl4s4QAAAABJRU5ErkJggg==" width="25"/></a> Freedom Software / <a class="image" data-href="/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;" href="https://www.whonix.org/w/index.php?title=File:Osi_standard_logo_0.png&amp;filetimestamp=20200102092414&amp;"><img alt="Osi standard logo 0.png" data-src="/w/images/thumb/0/09/Osi_standard_logo_0.png/25px-Osi_standard_logo_0.png" data-srcset="/w/images/thumb/0/09/Osi_standard_logo_0.png/38px-Osi_standard_logo_0.png 1.5x, /w/images/thumb/0/09/Osi_standard_logo_0.png/50px-Osi_standard_logo_0.png 2x" decoding="async" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAYAAADZ7LXbAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEC0lEQVRIid2Wy28bVRSHvxnb40liJ47zJOO2oQT6oEjApqlUUGDBY1PFbBASLGBBVIQQUhH8E2wrVKlIpZVYoEq2WAQJQQUVqkRJQYI0pCht0jA3CXFiJ357PPZlkUlkeyYtQcCCs5mZe8/5feeeM3PvwH9gyl6cY+MxVSL9gC2Sov6PQYy48aSC8rrWHXg20OEfUfyKVrdl2c7ZM9Zm9SuJ/FgkxG9/C2LEjUFfQD3bORJ6KXywA3+b3+VTzVfJzhXqufnChXqtfkYkxMZfhhhx43G9J/hF3/HoYKDdLd5qVrbK6vfpOWvTel4kxJ37QmLx2LDeF/xh4GRPr+pT7wvYtppVY+Xq2oKVqR43k+Zq41yTijFuqL4236X+0eieAAA+zUf/iZ5hVVPOtc61Kp2KHAmf9AV9ewJsW6DDT9eh8LgRN57eFeLXfafDwx2eApVNi9RU2l6+mlpM3cjYVq7q6Rd+KITqV097QmLxmK73B8cU1f0ulFJllq+kPssvFAfmzt0+kJ8v7Fu+sjpZ2bBcvr6Ait4XfMEYN3a0G1cyonUFNK/sMr9kF+p2/TUzYaYBzIS5UqvWX85MZ9e8/LXOQASIuSGSqKq5my2RVNLWdyIpmtIWCZGvpK3rXhBVU0Eh4oYoFGVNesXg09VBz3FNjXiNOzplF0RKeaeas10BCgrtQ21jRtw41jhuxI3RtiF91AtSzdu2IpVFF0QkRbq8VvlZ4l5N9LEuf/uA/q0RN14FiMVjb4f2t3/d/Winq74SSWW9ct1Mmu6VAFSz9iflVMUFUQMqkSOdUUUqg45QqHMk1O71wZaWy1QL9qWm+JYszmduZle8VpObL1jABefxYn6+6KqtlJKNX7OLSC7uChEJkS2nKhMbN7NNwTWrRsEsXTaT5prjt1QQpcm63XykZKY36+V1a0IkRbFx3LV/5GZzt7RevaCoPBfs1VBQyM4VKC6X3srN5naaGX4kXAyE/K8EIxoSycZMls3Z/DsiKT5t1fTcx82E+aHEWCqvWWcjR8OR/N3CtKIo15prw2T+bmEpEPYPZWay6dIf5QmREJe99O55Mhpxoxd4E5gRCZF0zY8bb6DQC5wXCZG+l9a/bo09OQx8BPQAHwAPAO8Dg8B7wDHgR+AMEAZeBA4AXcBTwABwyvE/BdwAbGh+u6JACHgY6AcOASOOzwKw3wkaAI6y1c8YMOZcrwG6c68Bu/7NRB2Bdx3HCNDuwEOOcK8DjrT44CSnOzo7tlvjDzvBUWDVWdGKk932mA4MAZ872ceADSAPzDSK7XbOHgSeAebZKkeArRqfYKtn+4Ap4AkgDjzoQL8Bfm8V2w3iAwrAHFACZtkq0/Z/1ZTzfAtYB74EuoGfwGNP+t/Yn/7Ihet0ifULAAAAAElFTkSuQmCC" width="25"/></a> Open Source (<a data-href="/wiki/Why_Whonix_is_Freedom_Software" href="./Why_Whonix_is_Freedom_Software.html" title="Why Whonix is Freedom Software">Why?</a>)
 </font></p><p><font size="-1">The personal opinions of <a data-href="https://forums.whonix.org/about" href="https://forums.whonix.org/about" rel="noreferrer" target="_blank"> moderators</a> or <a data-href="/wiki/Contributors" href="./Contributors.html" title="Contributors">contributors</a> to the <a class="mw-redirect" data-href="/wiki/Whonix" href="./Whonix.html" title="Whonix">Whonix ™</a> project do not represent the project as a whole.</font>
 </p></div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=67854" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=67854">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=67854</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=68241" dir="ltr" href="https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=68241">https://www.whonix.org/w/index.php?title=AppArmor&amp;oldid=68241</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden category: <ul><li><a data-href="/wiki/Category:Documentation" href="./Category:Documentation.html" title="Category:Documentation">Documentation</a></li></ul></div></div></div>
+<div id="mw-data-after-content">
+<div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>By using our website, you acknowledge that you have read, understood and agreed to our Privacy Policy, Cookie Policy, Terms of Service, and E-Sign Consent.</span></div><form method="POST"><div class="oo-ui-layout oo-ui-horizontalLayout"><span aria-disabled="false" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-buttonWidget"><a aria-disabled="false" class="oo-ui-buttonElement-button" data-href="/wiki/Terms_of_Service" href="./Terms_of_Service" rel="nofollow" role="button" tabindex="0"><span class="oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-progressive"></span><span class="oo-ui-labelElement-label">More information</span><span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-progressive"></span></a></span><span aria-disabled="false" class="oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget"><button aria-disabled="false" class="oo-ui-inputWidget-input oo-ui-buttonElement-button" name="disablecookiewarning" tabindex="0" type="submit" value="OK"><span class="oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert"></span><span class="oo-ui-labelElement-label">OK</span><span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert"></span></button></span></div></form></div>
+</div>
 </div>
 </div>
 </div>
@@ -1093,5 +1285,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=AppArmor&
 </footer>
 </div>
  </body>
-<!-- Cached 20210927095434 -->
+<!-- Cached 20210928173056 -->
 </html>
