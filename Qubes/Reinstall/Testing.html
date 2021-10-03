@@ -348,33 +348,19 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 </div>
 </div>
 <h2><span id="Adjust_Whonix_™_Version_Number"></span><span class="mw-headline" id="Adjust_Whonix_.E2.84.A2_Version_Number">Adjust Whonix ™ Version Number</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-9" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-9.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><b>1.</b> In <code>dom0</code> open file <code>whonix.jinja</code> with root rights. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
-</p><p><!-- Widget:CodeSelect start -->
-</p><div class="codeContainerNew">
-<div class="preDiv">
-<pre>sudo nano /srv/formulas/base/virtual-machines-formula/qvm/whonix.jinja</pre>
-</div>
-<div class="textareaDiv">
-<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /srv/formulas/base/virtual-machines-formula/qvm/whonix.jinja</textarea>
-</div>
-</div>
-<!-- open p tag -->
-<p>
-<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
-<!-- Widget:CodeSelect end -->
-</p><p><b>2.</b> Change <code>15</code> to <code>16</code>.
-</p><p><b>3.</b> Save the file.
+<p>See contents of file <code>/srv/formulas/base/virtual-machines-formula/qvm/whonix.jinja</code>.
+</p><p>Should show:
 </p>
-</div>
-<p><br/>
+<pre>16
+</pre>
+<p>If it shows something else, then Qubes dom0 is outdated. In that case, not possible to continue. <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
 </p>
 <h2><span class="mw-headline" id="Reinstall">Reinstall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-10.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <p>In the instructions below, a check is first made for a newer version of the Template.
 </p>
 <ul><li>If a newer Template version exists, install it (<code>--action=upgrade</code>).</li>
 <li>If no newer Template version is available, reinstall the existing version (<code>--action=reinstall</code>).</li></ul>
-<p>Unfortunately there is no combined upgrade and reinstall command. <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+<p>Unfortunately there is no combined upgrade and reinstall command. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
 </p>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
 <p><b>1.</b> Launch a <code>dom0</code> terminal. <br/>
@@ -482,10 +468,10 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 </div>
 <h2><span class="mw-headline" id="Settings">Settings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-11" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-11.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
-<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> This step is mandatory. <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+<p><a class="image" data-href="/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;" href="https://www.whonix.org/w/index.php?title=File:Ambox_warning_pn.svg.png&amp;filetimestamp=20130717200816&amp;"><img alt="Ambox warning pn.svg.png" data-src="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/40px-Ambox_warning_pn.svg.png" data-srcset="/w/images/thumb/f/f7/Ambox_warning_pn.svg.png/60px-Ambox_warning_pn.svg.png 1.5x, /w/images/thumb/f/f7/Ambox_warning_pn.svg.png/80px-Ambox_warning_pn.svg.png 2x" decoding="async" height="35" src="data:image/png;base64,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" width="40"/></a> This step is mandatory. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
 </p>
 </div>
-<p>Use <code>salt</code> to configure <code>dom0</code> settings. <sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+<p>Use <code>salt</code> to configure <code>dom0</code> settings. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -502,7 +488,7 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 </p>
 <h1><span class="mw-headline" id="Optional_Steps">Optional Steps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-12" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-12.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
 <h2><span id="Whonix_™_Disposable_Template"></span><span class="mw-headline" id="Whonix_.E2.84.A2_Disposable_Template">Whonix ™ Disposable Template</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-13" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-13.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>In Qubes R4 and above a <code>whonix-ws-16-dvm</code> Disposable Template can optionally be set up as a base for <a class="mw-redirect" data-href="/wiki/Qubes/Disposable_VM" href="../../Qubes/Disposable_VM.html" title="Qubes/Disposable VM">Disposables</a>. <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
+<p>In Qubes R4 and above a <code>whonix-ws-16-dvm</code> Disposable Template can optionally be set up as a base for <a class="mw-redirect" data-href="/wiki/Qubes/Disposable_VM" href="../../Qubes/Disposable_VM.html" title="Qubes/Disposable VM">Disposables</a>. <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>
 </p><p>In <code>dom0</code>, run.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
@@ -520,7 +506,7 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 </p>
 <h2><span class="mw-headline" id="Updates_over_Tor">Updates over Tor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-14" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-14.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <h4><span class="mw-headline" id="Templates">Templates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>To force <u>all</u> Template updates over Tor, <sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> use salt in <code>dom0</code>.
+<p>To force <u>all</u> Template updates over Tor, <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> use salt in <code>dom0</code>.
 </p><p><!-- Widget:CodeSelect start -->
 </p><div class="codeContainerNew">
 <div class="preDiv">
@@ -534,13 +520,13 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 <p>
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end -->
-</p><p>To undo this setting, modify <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code> in <code>dom0</code>. <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> See also <a data-href="/wiki/Qubes/UpdatesProxy" href="../../Qubes/UpdatesProxy.html" title="Qubes/UpdatesProxy">How-to: Fix dom0 Qubes-Whonix ™ UpdatesProxy Settings</a>.
+</p><p>To undo this setting, modify <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code> in <code>dom0</code>. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup> See also <a data-href="/wiki/Qubes/UpdatesProxy" href="../../Qubes/UpdatesProxy.html" title="Qubes/UpdatesProxy">How-to: Fix dom0 Qubes-Whonix ™ UpdatesProxy Settings</a>.
 </p>
 <h4><span class="mw-headline" id="dom0">dom0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2" href="https://www.whonix.org/w/index.php?title=Template:Qubes_Install_Updates_over_Tor&amp;action=edit&amp;section=T-2.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
-<p>To force <code>dom0</code> updates over Tor, set Qubes' <code>dom0</code> UpdateVM to <code>sys-whonix</code>. <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+<p>To force <code>dom0</code> updates over Tor, set Qubes' <code>dom0</code> UpdateVM to <code>sys-whonix</code>. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
 </p>
 <ul><li><code>Qube Manager</code> → <code><u>S</u>ystem</code> → <code><u>G</u>lobal Settings</code> → <code>Dom0 UpdateVM:</code> <code>sys-whonix</code> → <code>OK</code></li></ul>
-<p>To revert this change, set Qubes' <code>dom0</code> UpdateVM to <code>sys-firewall</code> or another preferred VM. <sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
+<p>To revert this change, set Qubes' <code>dom0</code> UpdateVM to <code>sys-firewall</code> or another preferred VM. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
 </p>
 <ul><li><code>Qubes Manager</code> → <code><u>S</u>ystem</code> → <code><u>G</u>lobal Settings</code> → <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> → <code>OK</code></li></ul>
 <h2><span class="mw-headline" id="Enable_AppArmor">Enable AppArmor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-15" href="https://www.whonix.org/w/index.php?title=Template:Qubes/Reinstall&amp;action=edit&amp;section=T-15.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
@@ -548,8 +534,8 @@ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-$releasever-templates-communi
 <p>If you are interested, click on Expand on the right.
 </p>
 <div class="mw-collapsible-content">
-<p>The following steps should be completed in <code>dom0</code> for <u>both</u> <code>whonix-gw-16</code> and <code>whonix-ws-16</code> Templates. <sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup> After these settings are applied to the Whonix ™ templates, the <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (App Qube) will inherit the AppArmor kernel settings. 
-</p><p>It is unnecessary to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> App Qubes to benefit from the new kernel parameters. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> It is also important to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
+<p>The following steps should be completed in <code>dom0</code> for <u>both</u> <code>whonix-gw-16</code> and <code>whonix-ws-16</code> Templates. <sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> After these settings are applied to the Whonix ™ templates, the <code>sys-whonix</code> (ProxyVM) and <code>anon-whonix</code> (App Qube) will inherit the AppArmor kernel settings. 
+</p><p>It is unnecessary to recreate the <code>sys-whonix</code> and <code>anon-whonix</code> App Qubes to benefit from the new kernel parameters. <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup> It is also important to verify AppArmor is active in the <code>sys-whonix</code> and <code>anon-whonix</code> VMs after making these changes.
 </p>
 <h3><span id="Whonix-Gateway_™"></span><span class="mw-headline" id="Whonix-Gateway_.E2.84.A2">Whonix-Gateway ™</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a data-href="/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1" href="https://www.whonix.org/w/index.php?title=Template:Qubes_AppArmor&amp;action=edit&amp;section=T-1.html" title="Edit section: ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <div style="background: #F8F8F8; border: 2px; padding: 5px; margin: 10px; border-style: solid; border-color: black; width: 100%">
@@ -801,32 +787,56 @@ TODO</span>
 <li id="cite_note-12"><span class="mw-cite-backlink"><a href="#cite_ref-12">↑</a></span> <span class="reference-text">Note the file extension <code>.repo.rpmnew</code>.</span>
 </li>
 <li id="cite_note-13"><span class="mw-cite-backlink"><a href="#cite_ref-13">↑</a></span> <span class="reference-text">
+Testers-only:
+
+It shouldn't be required to manually update that file since the Qubes dom0 stable package should have updated that file already. If it didn't, then that's general issues <a data-href="/wiki/Unspecific" href="../../Unspecific.html" title="Unspecific">unspecific</a> to Whonix ™.
+
+<b>1.</b> In <code>dom0</code> open file <code>whonix.jinja</code> with root rights.
+
+<!-- Widget:CodeSelect start -->
+<div class="codeContainerNew">
+<div class="preDiv">
+<pre>sudo nano /srv/formulas/base/virtual-machines-formula/qvm/whonix.jinja</pre>
+</div>
+<div class="textareaDiv">
+<textarea class="codeBoxAreaNew" onfocus="this.select()" readonly="readonly" rows="1">sudo nano /srv/formulas/base/virtual-machines-formula/qvm/whonix.jinja</textarea>
+</div>
+</div>
+<!-- open p tag -->
+<p>
+<!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
+<!-- Widget:CodeSelect end -->
+<b>2.</b> Change <code>15</code> to <code>16</code>.
+
+<b>3.</b> Save the file.</p></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
 <s>
 <ul><li><a class="external free" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/17" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/17" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/17</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/17" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/pull/17" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/updates-status/issues/1184" href="https://github.com/QubesOS/updates-status/issues/1184" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/updates-status/issues/1184</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/updates-status/issues/1184" href="https://web.archive.org/web/https://github.com/QubesOS/updates-status/issues/1184" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://forums.whonix.org/t/14-15-issues-uninstall-install/7652" href="https://forums.whonix.org/t/14-15-issues-uninstall-install/7652" rel="noreferrer noopener" target="_blank">https://forums.whonix.org/t/14-15-issues-uninstall-install/7652</a> <sup><a data-href="https://web.archive.org/web/https://forums.whonix.org/t/14-15-issues-uninstall-install/7652" href="https://web.archive.org/web/https://forums.whonix.org/t/14-15-issues-uninstall-install/7652" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </s></span>
 </li>
-<li id="cite_note-14"><span class="mw-cite-backlink"><a href="#cite_ref-14">↑</a></span> <span class="reference-text">
+<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
 <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/4518" href="https://github.com/QubesOS/qubes-issues/issues/4518" rel="noreferrer noopener" target="_blank">qubes-dom0-update combined --action=upgrade --action=reinstall command</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4518" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/4518" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-15"><span class="mw-cite-backlink"><a href="#cite_ref-15">↑</a></span> <span class="reference-text">
+<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
 <a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/3447" href="https://github.com/QubesOS/qubes-issues/issues/3447" rel="noreferrer noopener" target="_blank">phase out manual use of qubes-dom0-update by user / replace it by salt</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/3447" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/3447" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-16"><span class="mw-cite-backlink"><a href="#cite_ref-16">↑</a></span> <span class="reference-text">
+<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text">
 <a data-href="/wiki/Dev/Qubes#salt" href="../../Dev/Qubes.html" title="Dev/Qubes">Dev/Qubes#salt</a></span>
 </li>
-<li id="cite_note-17"><span class="mw-cite-backlink"><a href="#cite_ref-17">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/whonix-ws-16-dvm.sls" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-18"><span class="mw-cite-backlink"><a href="#cite_ref-18">↑</a></span> <span class="reference-text">
+<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text">
 <ul><li>In Qubes-R4 and above, RPC/qrexec UpdatesProxy is used to update Templates</li>
 <li>doc/software-update-vm/#technical-details-r40</li>
 <li><a class="external text" data-href="https://qubes-os.org/doc/salt/" href="https://qubes-os.org/doc/salt/" rel="noreferrer noopener" target="_blank">salt</a> <sup><a data-href="https://web.archive.org/web/https://qubes-os.org/doc/salt/" href="https://web.archive.org/web/https://qubes-os.org/doc/salt/" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li>
 <li><a class="external free" data-href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/updates-via-whonix.sls" href="https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/updates-via-whonix.sls" rel="noreferrer noopener" target="_blank">https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/updates-via-whonix.sls</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/updates-via-whonix.sls" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/updates-via-whonix.sls" rel="noreferrer noopener" target="_blank">[archive]</a></sup></li></ul>
 </span></li>
-<li id="cite_note-19"><span class="mw-cite-backlink"><a href="#cite_ref-19">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA" href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA</a> <sup><a data-href="https://web.archive.org/web/https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA" href="https://web.archive.org/web/https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
+<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text"><a class="external free" data-href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA" href="https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA" rel="noreferrer noopener" target="_blank">https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA</a> <sup><a data-href="https://web.archive.org/web/https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA#!topic/qubes-users/_jI2uWPPMMA" href="https://web.archive.org/web/https://groups.google.com/forum/?_escaped_fragment_=topic/qubes-users/_jI2uWPPMMA" rel="noreferrer noopener" target="_blank">[archive]</a></sup></span>
 </li>
-<li id="cite_note-20"><span class="mw-cite-backlink"><a href="#cite_ref-20">↑</a></span> <span class="reference-text">
+<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">
 Or manually set the torified UpdateVM in <code>dom0</code> terminal.
 
 <!-- Widget:CodeSelect start -->
@@ -843,7 +853,7 @@ Or manually set the torified UpdateVM in <code>dom0</code> terminal.
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end --></p></span>
 </li>
-<li id="cite_note-21"><span class="mw-cite-backlink"><a href="#cite_ref-21">↑</a></span> <span class="reference-text">
+<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">
 To revert this change in <code>dom0</code> terminal, run.
 
 <!-- Widget:CodeSelect start -->
@@ -860,10 +870,10 @@ To revert this change in <code>dom0</code> terminal, run.
 <!-- but do not close p tag since something unidentified (widgets extension maybe) adds an extraneous closing p tag -->
 <!-- Widget:CodeSelect end --></p></span>
 </li>
-<li id="cite_note-22"><span class="mw-cite-backlink"><a href="#cite_ref-22">↑</a></span> <span class="reference-text">
+<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text">
 Debian has enabled AppArmor by default since the <code>buster</code> release, but Fedora has not. This matters because Qubes is Fedora-based and therefore uses the <code>dom0</code> (not VM) kernel by default. Therefore this step is still required even though Whonix ™ is based on a recent enough Debian version.</span>
 </li>
-<li id="cite_note-23"><span class="mw-cite-backlink"><a href="#cite_ref-23">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, App Qubes inherit the kernelopts setting of their Template</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1091" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
+<li id="cite_note-24"><span class="mw-cite-backlink"><a href="#cite_ref-24">↑</a></span> <span class="reference-text"><a class="external text" data-href="https://github.com/QubesOS/qubes-issues/issues/1091" href="https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">Since Qubes R3.0, App Qubes inherit the kernelopts setting of their Template</a> <sup><a data-href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1091" href="https://web.archive.org/web/https://github.com/QubesOS/qubes-issues/issues/1091" rel="noreferrer noopener" target="_blank">[archive]</a></sup>.</span>
 </li>
 </ol></div></div>
 <hr/>
@@ -910,7 +920,7 @@ Protected VPS. Stay private and get your VPS with Bitcoin or Monero.</a>
 <a data-href="https://mastodon.technology/share?message=Qubes/Reinstall/Testing%20../../Qubes/Reinstall/Testing&amp;t=Qubes/Reinstall/Testing" href="https://mastodon.technology/share?message=Qubes/Reinstall/Testing%20../../Qubes/Reinstall/Testing&amp;t=Qubes/Reinstall/Testing" rel="noreferrer noopener" target="_blank"><img alt="200px-Mastodon Logotype (Simple).svg.png" data-src="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/25px-200px-Mastodon_Logotype_%28Simple%29.svg.png" data-srcset="/w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/38px-200px-Mastodon_Logotype_%28Simple%29.svg.png 1.5x, /w/images/thumb/a/a2/200px-Mastodon_Logotype_%28Simple%29.svg.png/50px-200px-Mastodon_Logotype_%28Simple%29.svg.png 2x" decoding="async" height="27" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAADpklEQVRIibWVT2xUVRjFf+fxZhg6TWkbWilggyWxY0cNiUZQA4FIYuTf1oUbDQs2ajp7iRo3JkZb0QVxyYItMWCMiRHTDQ1g2DjYllAqkNIApbUt03bameNi7PBmOkVA/F5u8vKde875vnvfvU9URbp3MAHsBG8HpYHNNuvBjZLqMCGwaMgBkxK3wCNYA8hnMb9mM6lcVFNLL109A3FJRzAfWjRUmz9syOSMj4GOXMp05som6Z6BONJJ23sfV3yZGeoDv5XNpHIBEFj6FLNXPLkH2In4AgjU1TPQjrgsFI9WEgawbVMdG9fGmJgtcPZajpl8sYzXxcSr7UnW1a1idHqR/us5Fgqu6MZQBNKhpHeN4+b+hPa1cb49uIEtzavLubuzi2RO3+TCaI4XnlrDNwc20JIMy/i1yTzvnxrlyt35qE+AORRg3sBiaQSInn1tdDTFsV0eTYlVfLWvjbb6GD372lhXt6oCf3ptjKP7NxAL7mthAewJLboU6eKljXWkWhIATM0VOHZunOn5Iu9sbSTVkuDE2+201odcGZ/n+MVJEjFx+JVmmteEbG6K81p7kr6RmWg3qVDQGM10ta7GLpl+d/4uxy9OANB/PcdP7z1DS7LUQeaHmwxPlJZmsWA+2t1a5leZJALj0KVNwkAyFpTRkYl8OT86vcDte4sAzOSLDEewqxP5MicZD4jqGQhFdLEAgaSlr4PIeSVfMJLIF1yBFX2fQxUHIMTVqcqQHy2/DBPFkBouS3tSS62MrZSvxqyZEJQ3VBzEaOuOVHD+xiwjyQWm5wsV+QdxBHdCy3NUmVRUFdmxIz+PsVKsxDEaDYAplRxr7o0eYjyY4+EQcwdp09KEvqv3GM8VABi6M7+CTGX8OZnnszO3ABi8XcURZ5XuHTwF7P9XpccIw++CbQF46P8wwD4n+81sd+dcgPXbkxXnGvgDw45sJjUGEFr+RaaICGpQDoEaDc8JOqD0rwfFMXPgSaQx4xsyl5H6QP3Z7s7FqEjp99s7eAa8q4bJgWx36vR/bW6p+i+rL7V/7qbD6aOXanX4SCEg2PL1ZRLF4knDweUTfALxMdZwNtNZgaV7/ghM8KxgNJvpnHqgSYkw0GDpR5ntK8wdQ74BmgEwNAt3YNUDr2cznf0rmZSXIptJTcnsBn8OztU42utBLwO7gF2CF0H1yBjHa6pHOlkW6d6BBmCPYQewVdBhqxWRkMkDtyyGZPqB7/lr4UL2k+eLtbQA/gbtzpIDbpD6agAAAABJRU5ErkJggg==" width="25"/></a>
 </p>
 <div style="padding-bottom:1px; padding-top:6px; border:thin solid black; background:#EEEEEE; text-align:center;">
-<p>Want to make Whonix ™ safer and more usable? We're looking for helping hands. Check out the <a data-href="https://forums.whonix.org/search?expanded=true&amp;q=tags%3Astatus_open_issue_todo" href="https://forums.whonix.org/search?expanded=true&amp;q=tags%3Astatus_open_issue_todo" rel="noreferrer" target="_blank"> Open Issues</a> and <a data-href="https://forums.whonix.org/c/development" href="https://forums.whonix.org/c/development" rel="noreferrer" target="_blank"> development forum</a>.
+<p>Please help us to improve the <a data-href="https://en.wikipedia.org/wiki/Whonix" href="https://en.wikipedia.org/wiki/Whonix" rel="noreferrer" target="_blank"> Whonix ™ Wikipedia Page</a>. Also see the <a data-href="https://forums.whonix.org/t/wikipedia-page-corrections" href="https://forums.whonix.org/t/wikipedia-page-corrections" rel="noreferrer" target="_blank"> feedback thread</a>.
 </p>
 </div>
 <p><a data-href="../../Qubes/Reinstall/Testing" href="../../Qubes/Reinstall/Testing" rel="noreferrer noopener" target="_blank"><img alt="https link" data-src="/w/images/thumb/2/24/Https_long.png/50px-Https_long.png" data-srcset="/w/images/2/24/Https_long.png 1.5x" decoding="async" height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAMAAAAXkR5eAAABpFBMVEUHlQAHlQcHlQ8HmBcHmCcHmC8HmE8Hmz8Hm18HolcHoo8HpZcOlQAOnlcWlQAemy8mlQAtrHdMog9Mxr9MzbdM1+dM2udRjTtTjz1UlQBUxr9XlUFZl0Nczb9c5PddnUdfn0lkqBdkzadk0K9rzadxo11zrydzzZ9z5/d7vG9/g59/h6uBgYGDf5eHf5OKtjeLs+OPu+uRkZGS2r+Tf4eTx++auS+bf4Obm5ubz/OduBei5+ejg3+j2/ej4nip13ep69+q6X+rh3+r3/us3ouw5o2xrACxrwex4b+zi3+27JO29Iy44525rAC5uRe52pe53a+5+P+5+//A9p3B+//D7//IuRfIvBfI58/I+/fI+//P8//P+rLQwB/Q01/S0tLT09PW+73X19fX9//YwyfY2Njf39/f+//g8d/g///n4Zfq6urvy5fv3Ufv///w8PDz05vz+fD0+fH3z2/326f34U/352f3+/X3//f3///746/7///9/vz+/v7/68P/7pf/78f/88//97//99f/+N//+7//+8//+9//++f//+f///f///+A4O6nAAABOUlEQVQoU5WQB09CMRRGK25Fxb33VnCg4MKJey+sW8SBW95z4BMcOBDf96dtSwgkmBhP8qW5uTm9tyX4NwQO4/m13RisaJI4zk6DiaLTilcrQbddrz/ei1TUnVWRaJqduHAS6B1PLCGlUpt9tUYI6WXZoINZ8aVAXXpspmj7+uHrumHKEUSEoqlajMn7mB864VFpWt+uTvEndyw04rnNA9cBXE1vxL2/zalwCyUBGE8NLabSJeCuwZ9Yo4gL3y2ApQdEXpnhlMvBxYC5lLDC3nNfhlZdXBHv3hoAwxaIND3MKZHCCg6XwaPSXHxPsEn4LORzRkz4MrFPlsYGOMWRymXOusLyQDOqzVrlpX7SrOFvabHh0caV2VFOgYQoVLoZWQbaPYEpD1PkfEGt/KcSgnhlieP2/tb9lR/QjwDL9lYMPQAAAABJRU5ErkJggg==" width="50"/></a> <a data-href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall/Testing" href="http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/wiki/Qubes/Reinstall/Testing" rel="noreferrer noopener" target="_blank"><img alt="onion link" data-src="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/25px-Iconfinder_tor_386502.png" data-srcset="/w/images/thumb/a/a8/Iconfinder_tor_386502.png/38px-Iconfinder_tor_386502.png 1.5x, /w/images/thumb/a/a8/Iconfinder_tor_386502.png/50px-Iconfinder_tor_386502.png 2x" decoding="async" height="25" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAZABkDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQgABgcE/8QANRAAAQMDAgMDCAsAAAAAAAAAAQIDBAUGEQAhBxIxE0FCFBUiM1J0gZEyNTdRU1VhcZOxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQMG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAwQREyExQRSBsf/aAAwDAQACEQMRAD8A0jjvxZqMaryLXteUYojns5kxs4cK+9CD4cdCRvnYYxvj9Ep9ar8iZPTMWEwmu3lTX3yOyTnAJUdySdgBuToe+iXPrTjbuTMkSSFcxxlxSt8/E6v/AA5pECtvv2SuVIbYqIz5Unwvo9JKijvT6JTg7+kSSDsOnWtM1XC/Z/TLIVaU7Qnwf4u1ajVdikXJPcn0h5YbD76ipyMScBXMdyj7weg6dMFnudHtJ+ekXu2hTLauObQ6gUmREc5FKT9FQIBSofoQQfjo55/vb8WZ8jpbThS4h6yBzMrsy2EMp4lz45cPanbt0u3dRIipFMef8qcCElXkzueZXMB4CdwegzjbbIawb0tW260K67CqjstCSURkJbKOflKfWFWcYPs9SdNk56tX7HSZ3T9pDnvP+6DHd8hDW/oQc9nVUq3qWW1bYrvFziDIuSpRFRaS8+FyXgCE8iQEhpB8SuVIGe7qe4FmvM1J/LYn8Q1Ld+oYHu6P6Gu/U7Tpa1gB2A8CKXXFzx4An//Z" width="25"/></a> <a data-href="/wiki/Priority_Support" href="../../Priority_Support.html" title="Priority Support">Priority Support</a> | <a data-href="/wiki/Investors" href="../../Investors.html" title="Investors">Investors</a> | <a data-href="/wiki/Professional_Support" href="../../Professional_Support.html" title="Professional Support">Professional Support</a>
@@ -949,5 +959,5 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Qubes/Rei
 </footer>
 </div>
  </body>
-<!-- Cached 20211001101817 -->
+<!-- Cached 20211003074033 -->
 </html>
