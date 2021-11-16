@@ -30,8 +30,8 @@
 <meta content="Whonix" property="og:site_name"/>
 <meta content="../Dev/grsecurity" property="og:url"/>
 <meta content="https://www.whonix.org/w/images/4/47/Whonix_Facebook_Social_Share.png" property="og:image"/>
-<meta content="2019-05-27T10:07:15Z" property="article:modified_time"/>
-<meta content="2019-05-27T10:07:15Z" property="article:published_time"/>
+<meta content="2021-11-15T22:57:06Z" property="article:modified_time"/>
+<meta content="2021-11-15T22:57:06Z" property="article:published_time"/>
 
 </head>
 <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dev_grsecurity rootpage-Dev skin-foreground action-view"><div id="navwrapper"><!-- START FOREGROUNDTEMPLATE -->
@@ -116,7 +116,7 @@
 <div class="mw-bodytext" id="bodyContent">
 <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>original idea:
 </p><p>grsecurity compilation VM, so we would not decrease usability too much, by taking a lot compilation time per updated per TemplateVM. Doing it per VM, would be even worse usability wise (takes even longer to update).
-</p><p>We would like to have a Debian source grsecurity package in offical Debian repository, that we can use to compile a grsecurity kernel. Compilation would happen on user's machines in a yet to be invented grsecurity compilation VM. The purpose of that VM is to spare the user from having to compile its kernel multiple times for multiple templates. Compiling the kernel on the user's machine provides better security due to grsecurity compile time features such as randomization. User upgrades → new grsecurity source package upgrade found by apt-get → grsecurity compilation VM starts → downloads upgraded grsecurity source package → perhaps minor automated configuration changes (Xen...) → grsecurity kernel gets compiled → sent to dom0 → used after dom0 / VM restart respectively.
+</p><p>We would like to have a Debian source grsecurity package in offical Debian repository, that we can use to compile a grsecurity kernel. Compilation would happen on user's machines in a yet to be invented grsecurity compilation VM. The purpose of that VM is to spare the user from having to compile its kernel multiple times for multiple templates. Compiling the kernel on the user's machine provides better security due to grsecurity compile time features such as randomization. User upgrades → new grsecurity source package upgrade found by APT → grsecurity compilation VM starts → downloads upgraded grsecurity source package → perhaps minor automated configuration changes (Xen...) → grsecurity kernel gets compiled → sent to dom0 → used after dom0 / VM restart respectively.
 </p><p>contra:
 </p><p>grsecurity compilation VM could be compromised:
 </p><p>Two ways:
@@ -137,7 +137,7 @@ somewhere... - Using bind-dirs or have it stored in a per VM folder in dom0?
 </p><p>- all automated, event based, non-blocking, and in background [to not
 block the actual update process] → may not be great, user upgrades but
 the grsecurity kernel upgrade is not guaranteed to be installed after
-apt-get finished, but at some later point
+APT finished, but at some later point
 </p><p>- would still result in lots of CPU [and hdd] usage over a long time
 [perhaps for 5 - 20 VMs for average users] [user wondering about
 mysterious systemd load, loud cpu fan]
@@ -150,10 +150,10 @@ perhaps solvable by introducing states
 </p><p>In summary, it sounds rather hacky and complex. Anyhow, perhaps it is
 worth something as inspiration.
 </p>
-<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:5462-0!canonicalwww.whonix.org and timestamp 20211114010142 and revision id 47584. Serialized with JSON.
+<!-- Saved in parser cache with key www.whonix.org:stable-pcache:idhash:5462-0!canonicalwww.whonix.org and timestamp 20211116073910 and revision id 70320. Serialized with JSON.
  -->
 </div></div><div class="printfooter">
-Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=47584" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=47584">https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=47584</a>"</div>
+Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=70320" dir="ltr" href="https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=70320">https://www.whonix.org/w/index.php?title=Dev/grsecurity&amp;oldid=70320</a>"</div>
 <div class="clear_both"></div>
 </div>
 <div class="group"><div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div></div>
@@ -185,5 +185,4 @@ Retrieved from "<a data-href="https://www.whonix.org/w/index.php?title=Dev/grsec
 </footer>
 </div>
  </body>
-<!-- Cached 20211114165704 -->
 </html>
